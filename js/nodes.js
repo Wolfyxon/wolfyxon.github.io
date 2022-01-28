@@ -1,3 +1,4 @@
+try {
 const canvas = document.getElementById("nodes");
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -93,6 +94,7 @@ class Node
 
     addMoveVector(xcomp, ycomp)
     {
+        if(canvas != null && this != null){
         this.x += xcomp;
         this.y += ycomp;
 
@@ -111,14 +113,19 @@ class Node
 
         //Check if we need to move it
         let newChunk = this.getChunkCoord();
+        if(newChunk != null){
         if (newChunk[0] != this.chunk[0] || newChunk[1] != this.chunk[1])
         {
             //Get old chunk and remove this from it
             let _chunk = CHUNK_GRID[this.chunk[0]][this.chunk[1]];
+            if(_chunk != null && this != null){
             _chunk.remove(this);
 
             //Now reassign chunk and add it to the new chunk
             this.addToChunk(...newChunk);
+            }
+            }
+        }
         }
     }
 
@@ -129,8 +136,10 @@ class Node
 
     addToChunk(xcoord, ycoord)
     {
+        if(CHUNK_GRID){
         this.chunk = [xcoord, ycoord];
         CHUNK_GRID[xcoord][ycoord].containedNodes.push(this);
+        }
     }
 
     equals(node)
@@ -240,6 +249,7 @@ class Plexus
 
         for (let _node of this.nodes)
         {
+            if(_node == null){return}
             _node.addMoveVector(
                 Math.cos(_node.modifier) * this.speed * (dt/1000.0),
                 Math.sin(_node.modifier) * this.speed * (dt/1000.0)
@@ -361,3 +371,8 @@ window.onresize = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 };
+
+}
+catch {
+    
+}
