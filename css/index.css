@@ -32,6 +32,10 @@ body {
   font-size: 20px;
   color: red;
 }
+.social_link {
+  color: darkgrey;
+  margin-right: 3px;
+}
 
 .shake {
     animation:  shake 0.1s linear infinite;;
