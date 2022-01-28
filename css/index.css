@@ -24,6 +24,15 @@ body {
     height:400px;
 }
 
+.list tr{
+    background-color: rgb(61, 61, 61);
+}
+
+.list_link {
+  font-size: 20px;
+  color: red;
+}
+
 .shake {
     animation:  shake 0.1s linear infinite;;
   }

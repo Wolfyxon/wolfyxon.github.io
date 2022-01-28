@@ -6,6 +6,8 @@ canvas.height = window.innerHeight;
 var t0 = Date.now();
 var dt = 0;
 
+
+
 const CHUNK_SIZE = 150;
 const MAX_CHUNK_X = Math.ceil(window.innerWidth / CHUNK_SIZE) + 1;
 const MAX_CHUNK_Y = Math.ceil(window.innerHeight / CHUNK_SIZE) + 1;
