@@ -351,8 +351,8 @@ function drawBoard(){
 const NodesInst = new Plexus({
     width: window.innerWidth + 150,
     height: window.innerHeight + 150,
-    particleColor: "rgba(255,255,255, 0)", //"rgba(255,255,255,0.9)",
-    lineColor: "255,255,255",
+    particleColor: "rgba(255,0,0, 0)", //"rgba(255,255,255,0.9)",
+    lineColor: "255,0,0",
     particleSize: 5,
     lineSize: 1,
     amountNodes: 180,

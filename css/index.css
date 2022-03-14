@@ -1,61 +1,33 @@
-body {
-    background-color: black;
-    color: white;
+.title {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 7px rgb(255, 0, 0),
+    0 0 10px rgb(255, 0, 0),
+    0 0 21px rgb(255, 0, 0),
+    0 0 42px rgb(255, 0, 0),
+    0 0 82px rgb(255, 0, 0),
+    0 0 92px rgb(255, 0, 0),
+    0 0 102px rgb(255, 0, 0),
+    0 0 151px rgb(255, 0, 0);
+
+    font-size: 40px;
 }
 
-#window_container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 10%;
+#main_window {
+    margin: 0 auto;
+    width: 98%;
+    height: 300px;
 
 }
-
 .window {
-    background-color: rgb(44, 44, 44);
-    display: block;
-    border:2px solid red;
+    background-color: rgb(68, 68, 68);
     border-radius: 10px;
+    font-family: "Noto Sans";
+    color: red;
+    padding: 15px;
 }
 
-.window_content {
-    overflow-y:scroll; 
-    overflow-x:hidden; 
-    height:400px;
+.title_link {
+    color: red;
+    text-underline-color: red;
+    font-family: Hubballi;
 }
-
-.list tr{
-    background-color: rgb(61, 61, 61);
-}
-
-.list_link {
-  font-size: 20px;
-  color: red;
-}
-.social_link {
-  color: darkgrey;
-  margin-right: 3px;
-}
-
-.shake {
-    animation:  shake 0.1s linear infinite;;
-  }
-  
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-  
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  }
-
