@@ -38,6 +38,17 @@ body {
 .windows_projects div {
     width: 99%;
 }
+.contributor {
+    color: black;
+    padding-left: 2px;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #c9c9c9;
+    width: 95%;
+    border-radius: 5px;
+}
+
 
 #tbl_projects {
     width: 90%;
