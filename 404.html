@@ -1,34 +1,20 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
     <title>404</title>
   </head>
   <body>
-    <center><h1>Hold on.. nothing is gonna happen =)</h1></center>
-	
+  <center><h1 style="font-size: 500%; font-weight: bold">404</h1></center>
+    <center><h2 id="h"></h2></center>
+	<noscript>
+        <center><h2>Page not found, btw don't turn JavaScript on</h2></center>
+    </noscript>
 	<script>
 window.onload = function(){
-    document.getElementsByName("h1")[0].innerHTML = "Just kidding"
-  window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-}
-	</script>
-  </body>
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>404</title>
-  </head>
-  <body>
-	  
-    <center><h1>Hold on.. nothing is gonna happen =)</h1></center>
-	<noscript>Ah... very clever. You have JavaScript disabled. I can't rickroll you</noscript>
-	<script>
-window.onload = function(){
-  window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-}
-	</script>
-  </body>
-</html>
+    document.getElementById("h").innerHTML = "Page not found, get rickrolled then"
+    setTimeout(function (){window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"},100)
 
+}
+	</script>
+  </body>
+</html>
