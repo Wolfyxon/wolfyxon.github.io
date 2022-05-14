@@ -1,0 +1,55 @@
+body {
+    font-family: "Noto Sans"
+    /*background: linear-gradient(90deg, rgb(159, 159, 159) 0%, rgb(206, 186, 161) 35%, rgb(255, 159, 0) 100%);*/
+}
+
+.separator {
+    background-color: #ff8300;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formula_window {
+    border-style: dotted;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.formula_window_separator {
+    background-color: lightgray;
+}
+
+.formula {
+    background-color: #ddd3b6;
+    /*width: 10%;*/
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 5px 5px darkgray;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.important {
+    color: red;
+    font-size: 90%;
+}
+
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    background-color: #a39f5e;
+    border-radius: 5px;
+    padding-left: 15px;
+
+    font-weight: bold;
+}
+#spistresci {
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #9a6036;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color: white;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <link rel="stylesheet" href="/css/other/math.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hubballi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+<body background="/assets/img/textures/wood.png"> <!-- css url() returns 404-->
+<a href="/index.html"><- Go back to the home page</a>
+<div id="header"><h1>
+    Math
+</h1>
+<h3 style="color: white">Gotowy na egzamin z matematyki? Ja nie za bardzo bo nie pamiętam wzorów! Dlatego przygotowałem tutaj jak najwięcej wzorów i sposobów liczenia. Mam nadzieję że ci się przydadzą również :)</h3>
+<h5 style="color: red">This page is available only in Polish language, if you seriously need it in English open an issue <a href="https://github.com/Wolfyxon/wolfyxon.github.io/issues">here</a> and I'll make it ASAP</h5>
+</div>
+Nie przykładałem się specjalnie do designu tej strony ale chciałem głównie żeby była czytelna i łatwa do ogarnięcia.<br>
+<b>Moim głównym celem bylo upchanie wszystkich informacji i ich łatwe wytłumaczenie bez zbędnego gadania.</b>
+
+<br><br>
+<div id="spistresci" >
+    <h1>SPIS TREŚCI</h1>
+    <ol>
+        <li><a href="#spistresci">Spis treści</a></li>
+
+        <li><a href="#wzory">Wzory</a> (przekątne, pola, objętości,)
+        <ol>
+            <li><a href="twierdzeniepitagorasa">Twierdzenie Pitagorasa</a></li>
+            <li><a href="">Figury płaskie</a></li>
+            <li><a href="">Graniastosłupy i ostrosłupy</a></li>
+        </ol></li>
+        <li><a href="">Sposoby liczenia</a> <ol>
+            <li><a href="">Działania na ułamkach</a> (dodawanie, odejmowanie, mnożenie dzielenie)</li>
+            <li><a href="">Liczenie w słupkach</a></li>
+            <li><a href="">Wyrażenia algebraiczne</a> (np. obliczanie X)</li>
+            <li><a href="">Potęgowanie</a></li>
+            <li><a href="">Pierwiastki</a></li>
+        </ol></li>
+        <li><a href="">Definicje</a> <ol>
+            <li><a href="">Przyprostokątne i przeciwprostokątne</a></li>
+            <li><a href="">Liczby pierwsze</a></li>
+            <li><a href="">Liczby naturalne</a></li>
+            <li><a href="">Liczby przeciwne i odwrotne</a></li>
+        </ol></li>
+
+    </ol>
+</div>
+
+<br><div class="separator" id="wzory">WZORY</div><br>
+
+<div class="formula_window" id="twierdzeniepitagorasa">
+    <h3>Twierdzenie pitagorasa</h3>
+    <p>Za pomocą tego wzoru możesz obliczyć przeciwprostokątną trójkąta prostokątnego (w tym wypadku bok <b>c</b>). Brzmi ono tak:</p>
+    <h4 class="formula">
+        $$ a^2 + b^2 = c^2 $$
+    </h4><br>
+    By obliczyć <b>c</b> użyj:
+    <h4 class="formula">
+        $$ c = \sqrt{a^2 + b^2} $$
+    </h4>
+
+    <p class="important">UWAGA: Pamiętaj że <b>c</b> trzeba spierwiastkować (patrz: sposoby liczenia -> pierwiastki) oraz że tym wzorem można liczyć TYLKO I WYŁĄCZNIE PRZECIWPROSTOKĄTNĄ</p>
+
+    <img src="/assets/img/math/pitagoras.png">
+</div><br>
+
+<div class="formula_window">
+    <h3>Podstawowe figury płaskie</h3>
+    Za pomocą tych figur możesz obliczyć pole KAŻDEJ innej figury, np, składa się z 2 trójkątów więc obliczasz te trójkąty. Wystarczy troszkę pomyśleć.
+
+    <h2 class="formula_window_separator">Kwadrat</h2>
+    <p>Kwadrat ma wszystkie boki równe. Zauważ że składa się z 2 trójkątów równoramiennych.</p>
+
+    Obliczanie obwodu z boku <b>a</b>:
+    <h4 class="formula">
+        $$ Obw = 4a $$
+    </h4><br>
+
+    Obliczanie pola z boku <b>a</b>:
+    <h4 class="formula">
+        $$ P = a^2 $$
+    </h4><br>
+
+    Uzyskiwanie przekątnej <b>d</b> z boku <b>a</b>:
+    <h4 class="formula">
+        $$ d = a \sqrt 2 $$
+    </h4><br>
+
+    Uzyskiwanie boku <b>a</b> z przekątnej <b>d</b>:
+    <h4 class="formula">
+        $$ d\over \sqrt 2 $$
+    </h4>
+
+    <br>
+    <img src="/assets/img/math/square.png">
+
+    <!-- ============================================== -->
+    <h2 class="formula_window_separator">Prostokąt</h2>
+    <p>Prostokąt to figura która ma 2 pary takich samych boków. Zauważ że składa się z 2 trójkątów równoramiennych.</p>
+    Obliczanie obwodu z boku <b>a</b> i <b>b</b>:
+    <h4 class="formula">
+        $$ Obw = 2a + 2b $$
+    </h4><br>
+
+    Obliczanie pola z boku <b>a</b> i <b>b</b>:
+    <h4 class="formula">
+        $$ P = a * b $$
+    </h4><br>
+
+    Uzyskiwanie przekątnej <b>d</b> z boku <b>a</b> i <b>b</b>:
+    <h4 class="formula">
+        $$ d = \sqrt{a^2 + b^2} $$
+    </h4><br>
+    <br>
+    <img src="/assets/img/math/rectangle.png">
+
+    <!-- ============================================== -->
+    <h2 class="formula_window_separator">Trójkąt prostokątny</h2>
+    <p>To trójkąt który ma 2 prostopadłe boki i 1 przeciwprostokątną.</p>
+    Obliczanie obwodu z boku <b>a</b>:
+    <h4 class="formula">
+        $$ Obw = a + b + c $$
+    </h4><br>
+    Obliczanie pola z boku <b>a</b> i <b>b</b>:
+    <h4 class="formula">
+        $$ P = {ab\over 2} $$
+    </h4><br>
+    Obliczanie przeciwprostokątnej <b>c</b>:
+    <h4 class="formula">
+        $$ c = \sqrt{a^2 + b^2} $$
+    </h4><br>
+
+    <img src="/assets/img/math/pitagoras.png">
+
+    <br>
+    TODO: Finish the rest of figures
+    <!-- ============================================== -->
+    <h2 class="formula_window_separator">Trójkąt prostokątny równoramienny</h2>
+    <p>To trójkąt taki sam jak powyższy tylko ramiona (<b>a</b> i <b>b</b>) są równe.</p>
+
+    <!-- ============================================== -->
+    <h2 class="formula_window_separator">Trójkąt prostokątny równoboczny</h2>
+    <p>Ten trójkąt ma wszystkie boki równej długości, 2 są prostopadłe.</p>
+</div>
+
+</body>
+</html>
