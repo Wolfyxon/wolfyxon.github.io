@@ -3,6 +3,10 @@ body {
     /*background: linear-gradient(90deg, rgb(159, 159, 159) 0%, rgb(206, 186, 161) 35%, rgb(255, 159, 0) 100%);*/
 }
 
+img {
+    width: 200px;
+}
+
 .separator {
     background-color: #ff8300;
     padding: 5px;
@@ -15,6 +19,7 @@ body {
     background-color: white;
     border-radius: 5px;
     padding-left: 10px;
+    font-size: 85%;
 }
 .formula_window_separator {
     background-color: lightgray;
@@ -28,7 +33,14 @@ body {
     box-shadow: 5px 5px darkgray;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 150%;
 }
+
+.yellow_note {
+    color: gold;
+    font-size: 150%;
+}
+
 .important {
     color: red;
     font-size: 90%;
