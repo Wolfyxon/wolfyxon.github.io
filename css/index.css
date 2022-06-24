@@ -31,14 +31,65 @@ body {
     height: 300px;
 
 }
+
+
 .windows_projects {
     width: 100%;
+
+}
+.project_zone_div {
+    text-align: center;
+    background-color: #403e48;
 }
 
-
-.windows_projects div {
-    width: 99%;
+.project_div {
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+    max-width: 200px;
+    max-height: 340px;
+    /*height: 330px;*/
+    margin-right: 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    background-color: white;
+    box-shadow: 0 0 10px 0px white, 0 0 10px 10px gray, 0px 0px 10px 0px white;
+    border-radius: 10px;
 }
+.project_div img {
+    padding-top: 10px;
+}
+
+.project_div a {
+    text-decoration: none;
+}
+
+.project_div:hover {
+    transition-duration: 0.2s;
+    scale: 1.1;
+    background-color: red;
+    box-shadow: 0 0 20px 0px red, 0 0 20px 10px darkred, 0px 0px 20px 0px red;
+}
+
+.project_div p {
+    transition-duration: 0.2s;
+    color: white;
+    position: relative;
+}
+
+.project_div h2 {
+    transition-duration: 0.2s;
+    color: black;
+    text-shadow: red;
+}
+.project_div:hover h2 {
+    color: white;
+    transition-duration: 0.2s;
+    scale: 1.2;
+    float: top;
+}
+
 .contributor {
     color: black;
     padding-left: 2px;
@@ -48,6 +99,7 @@ body {
     background-color: #c9c9c9;
     width: 95%;
     border-radius: 5px;
+    box-shadow: 0 0 20px 0px red, 0 0 20px 10px darkred, 0px 0px 20px 0px red;
 }
 
 
@@ -76,6 +128,12 @@ body {
 .redlink {
     color: red;
     text-underline-color: red;
+    transition-duration: 0.1s;
+}
+.redlink:hover {
+    color: #ff7373;
+    text-underline-color: #ff7373;
+    transition-duration: 0.1s;
 }
 
 body {
