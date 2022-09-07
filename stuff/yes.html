@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>Saul Godman</title>
 
+    <style>
+        body {
+            background-image: url("/assets/img/saulgodman.gif");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+
     <script>
 
         window.onload = function (){
-            var video = document.getElementById("yes");
-            video.play();
-            video.loop = true;
-            video.muted = false;
-
+            var audio = new Audio('/assets/audio/saulgodman.mp3');
+            audio.loop = true;
+            audio.play();
         }
     </script>
 </head>
-<body bgcolor="black">
-<video id="yes" width="100%" height="80%" loop>
-    <source src="/assets/video/saul_godman.mp4" type="video/mp4">
-    No Saul Godman ;-;
-</video>
+<body>
+
 </body>
 </html>
