@@ -62,7 +62,6 @@ body {
 
 }
 
-
 .windows_projects {
     width: 100%;
 
@@ -157,7 +156,8 @@ body {
     font-weight: bold;
 }
 .redlink {
-    color: red;
+    color: #ff3030;
+    font-weight: bold;
     text-underline-color: red;
     transition-duration: 0.1s;
 }
@@ -229,6 +229,19 @@ body {
     text-underline-color: red;
     font-family: Hubballi;
     font-weight: bold;
+}
+
+.lang_icon {
+    width: 50px;
+    height: 50px;
+    background-color: #35333c;
+    border-radius: 10%;
+    padding: 5px;
+    transition: 0.1s;
+}
+.lang_icon:hover {
+    scale: 1.1;
+    transition: 0.1s;
 }
 
 .footer {
