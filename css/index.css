@@ -42,6 +42,10 @@ body {
     /*border: red solid 1px;*/
 }
 
+.text-separator {
+    color: white;
+}
+
 
 .tbl_jobs h3 {
     color: red;
@@ -129,12 +133,25 @@ body {
     padding-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fffdfd;
+    background-color: #babcff;
     width: 95%;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0px red, 0 0 20px 10px darkred, 0px 0px 10px 0px red;
+    /*box-shadow: 0 0 10px 0px red, 0 0 20px 10px darkred, 0px 0px 10px 0px red;*/
+}
+.contributor div {
+    display: inline-block;
+    margin-left: 1%;
 }
 
+.contributor img {
+    width: 3%;
+    scale: 1.4;
+    display: inline;
+    border-radius: 20%;
+}
+.contributor div h2 {
+    display: inline;
+}
 
 #tbl_projects {
     width: 90%;
