@@ -81,7 +81,8 @@ body {
 
 .project_div {
     text-align: center;
-    vertical-align: 0;
+    vertical-align: top;
+
     position: relative;
     max-width: 200px;
     max-height: 340px;
