@@ -1,0 +1,14 @@
+# Info about my currently used Linux distribution
+
+Distro: Arch
+display manager: Xorg/X11
+DE/WM: i3-gaps
+    additions:
+        - polybar
+        - dmenu
+compositor: picom
+shell: sh
+terminal: kitty
+.bashrc PS1: PS1='[\[\033[31m\]\u\[\033[37m\]@\[\033[35m\]\h \[\033[0m\]\W]\$ '
+terminal text editor: nano
+graphical text editor: mousepad
