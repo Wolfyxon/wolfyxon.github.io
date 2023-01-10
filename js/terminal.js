@@ -1,3 +1,5 @@
+//This code is a complete mess
+
 const mainDir = "assets/terminal/"
 const fileTree = {
     "home": {
