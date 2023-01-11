@@ -1,7 +1,33 @@
+
+/*
+@keyframes bg-anim {
+    0%{
+        background-size: 110% 110%;
+    }
+    50% {
+        background-size: 200% 200%;
+    }
+    100% {
+        background-size: 110% 110%;
+    }
+}*/
 body {
     height: 97%;
     background-color: var(--bg-dark-color);
+
+    /*background-image: url("../assets/img/cringe_background.png");*/
+    background-size: cover;
+    backdrop-filter: blur(10px);
+
+    /*
+    animation: bg-anim;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-fill-mode: backwards;
+     */
+
 }
+
 #tab-container {
     height: 75%;
     width: 70%;
