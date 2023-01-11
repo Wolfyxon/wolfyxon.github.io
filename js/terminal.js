@@ -269,9 +269,10 @@ window.addEventListener("load", async function () {
 
     var pressed_keys = []
 
+
     input.onkeydown = function (event) {
         input.scrollIntoView()
-        if (event.code == "Enter") {
+        if (event.code == "Enter" || event.keyCode === 13) {
             const html = prefix.innerHTML.replace("id=\"terminal-path\"", "")
             const content = input.textContent
             echo(html + " <span id='tmp_command'></span>", true)
