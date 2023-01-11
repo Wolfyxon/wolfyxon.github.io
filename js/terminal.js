@@ -291,11 +291,12 @@ window.addEventListener("load", async function () {
     terminal.onclick = function (){
         input.focus()
     }
+    /*
     setInterval(function () {
         if (terminal.style.visibility != "hidden") {
             if (input.innerHTML.includes("<br>")) input.innerHTML = input.innerHTML.replaceAll("<br>", "")
         }
 
-    }, 1)
+    }, 1)*/
 
 })
