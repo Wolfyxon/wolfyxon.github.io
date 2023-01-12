@@ -12,9 +12,8 @@
     }
 }*/
 body {
-    height: 97%;
+    height: 90%;
     background-color: var(--bg-dark-color);
-
     /*background-image: url("../assets/img/cringe_background.png");*/
     background-size: cover;
     backdrop-filter: blur(10px);

@@ -283,8 +283,6 @@ window.addEventListener("load", async function () {
             setTimeout(function () {
                 run_command(content)
             }, 10)
-
-
         }
     }
     input.focus()

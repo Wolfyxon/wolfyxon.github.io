@@ -68,10 +68,9 @@ iframe {
 #terminal-input:focus {
     outline: none;
 }
-/*
 #terminal-input br {
     display: none;
-}*/
+}
 
 #terminal-console a {
     color: white;
