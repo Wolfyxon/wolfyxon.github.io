@@ -2,16 +2,32 @@ body {
     background-color: var(--bg-color);
 }
 
+#left,#main {
+    vertical-align: top;
+    display: inline-block;
+}
+#main {
+    width: 94%;
+}
+.hover-img div {
+    font-size: 80% !important;
+}
 #left {
     background: linear-gradient(black,#2f2d35);
-    width: 100px;
+    width: 5%;
     text-align: center;
     height: 100%;
 }
 #left img {
-
+    width: 100%;
 }
 #left h1 {
     transform: rotate(90deg);
     color: var(--special-text-color);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--special-text-color);
+    text-decoration: underline;
 }
