@@ -1,0 +1,17 @@
+body {
+    background-color: var(--bg-color);
+}
+
+#left {
+    background: linear-gradient(black,#2f2d35);
+    width: 100px;
+    text-align: center;
+    height: 100%;
+}
+#left img {
+
+}
+#left h1 {
+    transform: rotate(90deg);
+    color: var(--special-text-color);
+}
