@@ -8,7 +8,8 @@ const fileTree = {
             "example.html":"/home/user/example.html",
             "tools":"/home/user/tools",
             "rules_of_the_universe":"/home/user/rules_of_the_universe",
-            "linux":"/home/user/linux"
+            "linux":"/home/user/linux",
+            "interests":"/home/user/interests"
         }
     }
 }
