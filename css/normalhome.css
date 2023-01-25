@@ -8,12 +8,14 @@ body {
 }
 #main {
     width: 94%;
+    height: 100%;
 }
 .hover-img div {
     font-size: 80% !important;
 }
 #left {
-    background: linear-gradient(black,#2f2d35);
+    /*background: linear-gradient(black,#2f2d35);*/
+    background-color: #751414;
     width: 5%;
     text-align: center;
     height: 100%;
@@ -30,4 +32,34 @@ body {
 h1 {
     color: var(--special-text-color);
     text-decoration: underline;
+}
+section {
+    background-color: #252424;
+    padding: 1%;
+}
+
+
+.contributor img {
+    background-color: #8102f6;
+    padding: 1px;
+    border-radius: 10px;
+}
+.contributor {
+    margin-top: 0.5%;
+    background-color: #2d2d2d;
+}
+.contributor p {
+    margin: 0;
+}
+.contributor div {
+    padding-left: 1%;
+}
+.contributor-title {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.contributor div,img {
+    vertical-align: top;
+    display: inline-block;
 }
