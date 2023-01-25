@@ -117,6 +117,10 @@ window.addEventListener("load", async function () {
     const tconsole = document.getElementById("terminal-console")
     const prefix = document.getElementById("terminal-prefix")
 
+    function scrollToInput(){
+        input.scrollIntoView({block: "nearest"})
+    }
+
     function echo(text, allowHTML = false, color = "white") {
         if (text.includes("\n")) {
             const split = text.split("\n")
@@ -134,11 +138,7 @@ window.addEventListener("load", async function () {
         } else {
             elem.textContent = text
         }
-
-        setTimeout(function () {
-
-        }, 50)
-
+        scrollToInput()
     }
 
     const commands = {
@@ -254,6 +254,7 @@ window.addEventListener("load", async function () {
                 ctx.drawImage(video,0, 0, video.videoWidth/1.5, video.videoHeight/2)
                 ascii.innerHTML = canvasToASCII(canvas)
             },10)
+            scrollToInput()
         }]
     }
 
@@ -271,7 +272,7 @@ window.addEventListener("load", async function () {
     var pressed_keys = []
 
     input.onkeydown = function (event) {
-        input.scrollIntoView()
+        scrollToInput()
         if (event.code == "Enter" || event.keyCode == 13) {
             const html = prefix.innerHTML.replace("id=\"terminal-path\"", "")
             const content = input.textContent
