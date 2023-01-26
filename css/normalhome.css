@@ -1,8 +1,6 @@
 body {
     background-color: var(--bg-color);
-    height: 100%;
 }
-
 #left,#main {
     vertical-align: top;
     display: inline-block;
@@ -10,6 +8,7 @@ body {
 #main {
     width: 94%;
     height: 100%;
+    float: right;
 }
 .hover-img div {
     font-size: 80% !important;
@@ -19,7 +18,8 @@ body {
     background-color: #751414;
     width: 5%;
     text-align: center;
-    height: 100%;
+    height: 150%;
+    float: left;
 }
 #left img {
     width: 100%;
