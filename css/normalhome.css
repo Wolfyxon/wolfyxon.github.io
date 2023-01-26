@@ -40,8 +40,27 @@ section {
 }
 
 
+
+.social {
+    display: inline-block;
+    vertical-align: top;
+}
+.social img {
+    width: 30px;
+    height: 30px;
+}
+.yt {
+    content: url("../assets/img/social/yt.svg");
+}
+.twitter {
+    content: url("../assets/img/social/twitter.svg");
+}
+.github {
+    content: url("../assets/img/social/github.svg")
+}
+
 .contributor img {
-    background-color: #8102f6;
+    /*background-color: #8102f6;*/
     padding: 1px;
     border-radius: 10px;
 }
@@ -54,6 +73,7 @@ section {
 }
 .contributor div {
     padding-left: 1%;
+    width: 50%;
 }
 .contributor-title {
     font-weight: bold;
