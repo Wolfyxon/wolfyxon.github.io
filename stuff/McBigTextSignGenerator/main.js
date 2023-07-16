@@ -198,7 +198,7 @@ window.addEventListener("load", async(event) => {
                 if(char === undefined) {
                     const sign = addAndGetSign();
                     sign.style.color = "darkred";
-                    sign.innerHTML = "<br>Missing<br>character"
+                    sign.innerHTML = "⚠<br>Missing<br>character"
                 }
                 else addAndGetSign().innerHTML = n2br(char)
             }
