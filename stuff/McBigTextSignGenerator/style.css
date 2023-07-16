@@ -43,6 +43,12 @@ header {
 }
 
 #text-input {
-    width: 100%;
+    width: 96%;
+    margin-left: 1%;
+    margin-top: 1%;
     font-size: x-large;
+    border-radius: 5px;
+    border: none;
+    padding: 1%;
+
 }
