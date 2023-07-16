@@ -184,7 +184,7 @@ window.addEventListener("load", async(event) => {
     }
 
     async function setText(input){
-        await removeSigns();
+        await clear();
         if(input.length == 0) return;
 
         input = inline(input);
