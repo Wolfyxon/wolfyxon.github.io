@@ -189,13 +189,14 @@ window.addEventListener("load", async(event) => {
         setText(initText)
     }
     //reset();
-
+    /*
     inputElem.addEventListener("mouseleave", () => {
         setText(inputElem.value.toUpperCase());
-    })
+    })*/
+    setText("yo".toUpperCase())
     setTimeout(function (){
-        removeSigns();
-    },5000)
+        //removeSigns();
+    },1000)
 
 
 });
