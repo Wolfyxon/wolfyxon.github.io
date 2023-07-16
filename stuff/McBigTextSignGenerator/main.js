@@ -3,7 +3,7 @@ const chars = {
     "A":"██\n" + //It looks like R with a non-minecraft font
         "█  █\n" +
         "███\n" +
-        "█   █",
+        "█  █",
 
     "B":"████   \n" +
         "█████ \n" +
