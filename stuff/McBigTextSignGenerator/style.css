@@ -21,7 +21,7 @@ body,html {
 .sign {
     text-align: center;
     font-family: Minecraftia;
-    background-image: url("sign.png");
+    background-image: url("img/sign.png");
     background-size: 50% 100%;
     width: 200px;
     height: 110px;
