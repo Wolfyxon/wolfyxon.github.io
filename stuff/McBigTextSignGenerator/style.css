@@ -14,20 +14,26 @@ body,html {
 
 header {
     text-align: center;
-    background-image: url("img/deepslate_tiles.png");
+    background-color: #212121;
 }
 #logo {
     width: 50%;
-    background-color: green;
+    background-image: url("img/deepslate_tiles.png");
     padding: 1%;
     border-radius: 10px;
 }
 
 #signs {
-    width: 100%;
+    width: 96%;
+    margin-top: 1%;
+    margin-left: 2%;
+    min-height: 110px;
+    max-height: 500px;
+    border: 3px solid goldenrod;
     background-image: url("img/spruce_planks.png");
     padding: 0.5%;
     text-align: center;
+    overflow: scroll;
 }
 
 .sign {
