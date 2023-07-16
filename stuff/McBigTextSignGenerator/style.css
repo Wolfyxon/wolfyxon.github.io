@@ -9,11 +9,12 @@
 body,html {
     margin: 0;
     padding: 0;
+    background-image: url("img/deepslate_tiles.png");
 }
 
 #signs {
     width: 100%;
-    background-color: silver;
+    background-image: url("img/spruce_planks.png");
     padding: 0.5%;
     text-align: center;
 }
