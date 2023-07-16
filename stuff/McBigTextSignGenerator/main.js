@@ -163,12 +163,19 @@ window.addEventListener("load", async(event) => {
     }
 
     async function removeSigns(){
-
         const signs = getSigns();
         for(var i=0;i<signs.length;i++){
             signs[i].remove();
         }
     }
+    async function clear(){
+        removeSigns()
+        const brs = signsElem.getElementsByTagName("br")
+        for(var i=0;i<brs.length;i++){
+            brs[i].remove();
+        }
+    }
+
     function addAndGetSign(){
         const sign = mainSign.cloneNode();
         sign.style.display = "inline-block"
