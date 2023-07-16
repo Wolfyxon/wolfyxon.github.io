@@ -184,7 +184,6 @@ window.addEventListener("load", async(event) => {
     }
 
     async function setText(input){
-        console.log(getSigns());
         await removeSigns();
         if(input.length == 0) return;
 
