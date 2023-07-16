@@ -193,8 +193,16 @@ window.addEventListener("load", async(event) => {
         mainSign.style.display = "none"
         for(var i=0;i<split.length;i++){
             var char = chars[split[i]];
-            if(char === undefined) signsElem.appendChild(document.createElement("br"));
-            else addAndGetSign().innerHTML = n2br(char)
+            if(split[i] == " ") signsElem.appendChild(document.createElement("br"));
+            else {
+                if(char === undefined) {
+                    const sign = addAndGetSign();
+                    sign.style.color = "darkred";
+                    sign.innerHTML = "<br>Missing<br>character"
+                }
+                else addAndGetSign().innerHTML = n2br(char)
+            }
+
         }
     }
 
