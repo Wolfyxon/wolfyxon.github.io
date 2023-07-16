@@ -177,7 +177,6 @@ window.addEventListener("load", async(event) => {
         mainSign.style.display = "none"
         for(var i=0;i<split.length;i++){
             var char = chars[split[i]];
-            console.log(char)
             if(char === undefined) signsElem.appendChild(document.createElement("br"));
             else addAndGetSign().innerHTML = n2br(char)
         }
