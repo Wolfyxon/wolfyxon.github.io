@@ -152,12 +152,21 @@ window.addEventListener("load", async(event) => {
     const mainSign = document.getElementsByClassName("sign")[0]
     const emptySignText = mainSign.innerHTML;
 
-    function getSigns(){ return document.getElementsByClassName("sign"); }
+    function getSigns(){
+        const allSigns = document.getElementsByClassName("sign");
+        var ret = []
+        for(var i=0;i<allSigns.length;i++){
+            const sign = allSigns[i];
+            if(sign !== mainSign) ret.push(sign)
+        }
+        return ret
+    }
+
     async function removeSigns(){
+
         const signs = getSigns();
         for(var i=0;i<signs.length;i++){
-            const sign = signs[i];
-            if(sign !== mainSign) sign.remove();
+            signs[i].remove();
         }
     }
     function addAndGetSign(){
@@ -168,6 +177,7 @@ window.addEventListener("load", async(event) => {
     }
 
     async function setText(input){
+        console.log(getSigns());
         await removeSigns();
         if(input.length == 0) return;
 
@@ -189,14 +199,9 @@ window.addEventListener("load", async(event) => {
         setText(initText)
     }
     //reset();
-    /*
-    inputElem.addEventListener("mouseleave", () => {
-        setText(inputElem.value.toUpperCase());
-    })*/
-    setText("yo".toUpperCase())
-    setTimeout(function (){
-        //removeSigns();
-    },1000)
 
+    inputElem.addEventListener("input", () => {
+        setText(inputElem.value.toUpperCase());
+    })
 
 });
