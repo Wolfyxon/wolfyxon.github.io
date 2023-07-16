@@ -9,7 +9,18 @@
 body,html {
     margin: 0;
     padding: 0;
+    background-color: #38363A;
+}
+
+header {
+    text-align: center;
     background-image: url("img/deepslate_tiles.png");
+}
+#logo {
+    width: 50%;
+    background-color: green;
+    padding: 1%;
+    border-radius: 10px;
 }
 
 #signs {
