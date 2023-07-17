@@ -76,6 +76,15 @@ body,html {
     transition: 0.1s;
 }
 
+#custom-font-error {
+    font-size: 80%;
+    color: red;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: 0.1s;
+}
+
 #menu-main .full-button {
     width: 100%;
 }
