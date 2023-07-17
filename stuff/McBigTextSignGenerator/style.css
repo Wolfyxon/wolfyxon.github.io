@@ -28,6 +28,7 @@ body,html {
     width: 19%;
     height: 100%;
     overflow: hidden;
+    background-color: limegreen;
 }
 
 #menu-main, #menu-bar {
@@ -38,7 +39,6 @@ body,html {
 
 #menu-main {
     overflow-y: scroll;
-    background-color: limegreen;
     padding: 2%;
     width: 81%;
     transition: 0.1s;
@@ -47,7 +47,7 @@ body,html {
 
 #menu-bar {
     background-color: green;
-    width: 10%;
+    width: 15.8%;
     margin-left: -2%;
 }
 

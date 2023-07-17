@@ -226,12 +226,12 @@ window.addEventListener("load", async(event) => {
     const initMenuMainWith = menuMain.style.width
     const initMenuContainerWith = menuContainer.style.width
     const initMainWith = main.style.width
-    const initMenuBarWith = menuBar.style.width
 
     var menuOpen = true
     function openMenu(){
         menuOpen = true
-        menuMain.style.width = initMenuMainWith
+        menuMain.style.display = "inline-block"
+        menuMain.style.maxWidth = "100%"
         menuMain.style.opacity = "1"
         main.style.width = initMainWith
         menuMain.style.opacity = "1"
@@ -240,9 +240,10 @@ window.addEventListener("load", async(event) => {
     }
     function closeMenu(){
         menuOpen = false
-        menuMain.style.width = "0"
+        menuMain.style.display = "none"
+        menuMain.style.maxWidth = "0"
         //menuMain.style.opacity = "0"
-        menuBar.style.width = "70%"
+        menuBar.style.width = "86.5%"
         menuContainer.style.width = "2%";
         main.style.width = "97%"
     }
