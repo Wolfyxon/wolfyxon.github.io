@@ -218,6 +218,18 @@ window.addEventListener("load", async(event) => {
         setText(inputElem.value.toUpperCase());
     })
 
+    document.getElementById("btn-load-custom-font").onclick = function (){
+        const area = document.getElementById("custom-font")
+        const dataTxt = area.value;
+        try {
+            chars = JSON.parse(dataTxt)
+            console.log(chars)
+        } catch (e) {
+
+        }
+    }
+
+
     const main = document.getElementById("main")
     const menuBar = document.getElementById("menu-bar")
     const menuContainer = document.getElementById("menu")
