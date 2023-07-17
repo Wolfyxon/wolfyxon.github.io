@@ -10,6 +10,26 @@ body,html {
     margin: 0;
     padding: 0;
     background-color: #38363A;
+    height: 89.5%;
+}
+
+#main, #menu {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+}
+
+#menu {
+    width: 19%;
+    background-color: limegreen;
+    overflow-y: scroll;
+}
+#main {
+    width: 80%;
 }
 
 header {
