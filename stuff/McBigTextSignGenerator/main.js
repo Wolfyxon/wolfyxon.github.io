@@ -218,4 +218,40 @@ window.addEventListener("load", async(event) => {
         setText(inputElem.value.toUpperCase());
     })
 
+    const main = document.getElementById("main")
+    const menuBar = document.getElementById("menu-bar")
+    const menuContainer = document.getElementById("menu")
+    const menuMain = document.getElementById("menu-main")
+
+    const initMenuMainWith = menuMain.style.width
+    const initMenuContainerWith = menuContainer.style.width
+    const initMainWith = main.style.width
+
+    var menuOpen = true
+    function openMenu(){
+        menuOpen = true
+        menuMain.style.width = initMenuMainWith
+        menuMain.style.opacity = "1"
+        main.style.width = initMainWith
+        menuMain.style.opacity = "1"
+        menuContainer.style.width = initMenuContainerWith
+    }
+    function closeMenu(){
+        menuOpen = false
+        menuMain.style.width = "0"
+        menuMain.style.opacity = "0"
+        menuContainer.style.width = "1%";
+        main.style.width = "98%"
+    }
+    function syncMenuOpenState(){
+        if(menuOpen) openMenu()
+        else closeMenu()
+    }
+    syncMenuOpenState()
+    menuBar.onclick = function (){
+        menuOpen = !menuOpen
+        syncMenuOpenState()
+    }
+
+
 });
