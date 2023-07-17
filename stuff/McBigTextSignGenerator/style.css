@@ -25,8 +25,24 @@ body,html {
 
 #menu {
     width: 19%;
-    background-color: limegreen;
+    height: 100%;
+}
+
+#menu-main, #menu-bar {
+    vertical-align: top;
+    height: 100%;
+    display: inline-block;
+}
+
+#menu-main {
     overflow-y: scroll;
+    background-color: limegreen;
+    padding: 2%;
+    width: 81%;
+}
+#menu-bar {
+    background-color: green;
+    width: 10%;
 }
 
 #menu textarea {
