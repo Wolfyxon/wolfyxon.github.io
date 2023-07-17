@@ -27,6 +27,7 @@ body,html {
 #menu {
     width: 19%;
     height: 100%;
+    overflow: hidden;
 }
 
 #menu-main, #menu-bar {
@@ -41,10 +42,13 @@ body,html {
     padding: 2%;
     width: 81%;
     transition: 0.1s;
+    margin-right: 0;
 }
+
 #menu-bar {
     background-color: green;
     width: 10%;
+    margin-left: -2%;
 }
 
 #menu-main textarea {
@@ -70,6 +74,7 @@ body,html {
     border-color: gold;
     transition: 0.1s;
 }
+
 #menu-main .full-button {
     width: 100%;
 }

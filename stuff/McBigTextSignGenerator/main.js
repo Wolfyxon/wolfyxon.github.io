@@ -226,6 +226,7 @@ window.addEventListener("load", async(event) => {
     const initMenuMainWith = menuMain.style.width
     const initMenuContainerWith = menuContainer.style.width
     const initMainWith = main.style.width
+    const initMenuBarWith = menuBar.style.width
 
     var menuOpen = true
     function openMenu(){
@@ -234,14 +235,16 @@ window.addEventListener("load", async(event) => {
         menuMain.style.opacity = "1"
         main.style.width = initMainWith
         menuMain.style.opacity = "1"
+        menuBar.style.width = initMenuMainWith
         menuContainer.style.width = initMenuContainerWith
     }
     function closeMenu(){
         menuOpen = false
         menuMain.style.width = "0"
-        menuMain.style.opacity = "0"
-        menuContainer.style.width = "1%";
-        main.style.width = "98%"
+        //menuMain.style.opacity = "0"
+        menuBar.style.width = "70%"
+        menuContainer.style.width = "2%";
+        main.style.width = "97%"
     }
     function syncMenuOpenState(){
         if(menuOpen) openMenu()
