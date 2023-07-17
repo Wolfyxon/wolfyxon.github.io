@@ -219,13 +219,23 @@ window.addEventListener("load", async(event) => {
     })
 
     document.getElementById("btn-load-custom-font").onclick = function (){
+        const pErr = document.getElementById("custom-font-error")
+        function err(message){
+            pErr.style.opacity = 1
+            pErr.innerHTML = "Error: "+message
+        }
         const area = document.getElementById("custom-font")
         const dataTxt = area.value;
+        if(dataTxt === ""){
+            err("No data")
+            return
+        }
+
         try {
             chars = JSON.parse(dataTxt)
-            console.log(chars)
+            pErr.style.opacity = 0
         } catch (e) {
-
+            err("Invalid JSON code.")
         }
     }
 
