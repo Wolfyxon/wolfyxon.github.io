@@ -29,6 +29,16 @@ body,html {
     overflow-y: scroll;
 }
 
+#menu textarea {
+    background-color: #fff39c;
+    min-height: 100px;
+    width: 97%;
+    max-width: 97%;
+    margin-left: 1%;
+    border: none;
+    border-radius: 5px;
+}
+
 #menu button {
     background-color: gold;
     border: 1px solid goldenrod;
