@@ -39,7 +39,7 @@ body,html {
 }
 
 #menu-main {
-    overflow-y: scroll;
+    overflow: scroll;
     padding: 2%;
     width: 81%;
     transition: 0.1s;
