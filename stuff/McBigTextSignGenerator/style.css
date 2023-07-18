@@ -11,6 +11,7 @@ body,html {
     padding: 0;
     background-color: #38363A;
     height: 89.5%;
+    font-family: Arial, serif;
 }
 
 #main, #menu {
