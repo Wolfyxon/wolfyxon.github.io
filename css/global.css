@@ -18,14 +18,10 @@ body {
     height: 100%;
 }
 
-#container nav {
+#container .side-menu {
     width: 20%;
 }
 
 #main {
     width: 59%;
-}
-
-#right {
-    width: 20%;
 }
