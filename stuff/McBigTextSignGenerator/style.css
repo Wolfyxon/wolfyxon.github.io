@@ -75,6 +75,13 @@ body,html {
     transition: 0.1s;
 }
 
+#menu-main h1 {
+    text-align: center;
+    background-color: yellow;
+    margin: 0;
+    border-radius: 3px;
+}
+
 #custom-font-error {
     font-size: 80%;
     color: red;
