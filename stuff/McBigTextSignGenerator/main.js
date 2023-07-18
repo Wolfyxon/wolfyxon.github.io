@@ -265,7 +265,7 @@ window.addEventListener("load", async(event) => {
         menuMain.style.display = "none"
         menuMain.style.maxWidth = "0"
         //menuMain.style.opacity = "0"
-        menuBar.style.width = "86.5%"
+        menuBar.style.width = "100%"
         menuContainer.style.width = "2%";
         main.style.width = "97%"
     }
