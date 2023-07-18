@@ -20,8 +20,10 @@ body {
 
 #container .side-menu {
     width: 20%;
+    background-color: #2a292f;
 }
 
 #main {
     width: 59%;
+    background-color: black;
 }
