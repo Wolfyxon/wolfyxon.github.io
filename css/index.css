@@ -1,4 +1,13 @@
 #prompt {
     position: absolute;
     bottom: 1%;
+    width: 100%;
+}
+#cmd-input {
+    color: white;
+    display: inline-block;
+    border: none;
+    border-bottom: red solid 1px;
+    background: none;
+    width: 40%;
 }
