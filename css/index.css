@@ -16,6 +16,7 @@
 #cmd-input:focus {
     border-color: red;
     transition: 0.3s;
+    outline: none;
 }
 
 #cmd-send {
