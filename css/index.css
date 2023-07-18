@@ -16,10 +16,3 @@
     transition: 0.3s;
     outline: none;
 }
-
-#cmd-send {
-    background-color: red;
-    padding: 1%;
-    border: none;
-    user-select: none;
-}
