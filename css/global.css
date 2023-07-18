@@ -13,7 +13,7 @@ body {
     width: 100%;
     height: 100%;
 }
-#container nav, #main, #right {;
+#container nav, #main, #right {
     display: inline-block;
     height: 100%;
 }
