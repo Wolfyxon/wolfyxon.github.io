@@ -37,6 +37,13 @@ function registerCommand(alias, runner, description="No description available") 
     }
 }
 
+function clear(){
+    const amt = getTerminal().children.length
+    for(var i=0;i<amt;i++){
+        getTerminal().children[0].remove()
+    }
+}
+
 function execute(alias, args=[]) {
     const cmd = commands[alias]
     if(cmd === undefined) {
@@ -100,3 +107,4 @@ window.addEventListener("load", () => {
 registerCommand("echo", (args) => {
     echo(args.join(" "))
 })
+registerCommand("clear", clear)
