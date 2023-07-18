@@ -15,6 +15,11 @@ function echo(text) {
     line.textContent = text
     return line
 }
+function echoInnerHTML(preHtml){
+    const line = addAndGetLine();
+    line.innerHTML = preHtml
+    return line
+}
 function echoHTML(html) {
     const line = getTerminal()
     line.innerHTML += html
