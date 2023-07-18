@@ -84,3 +84,13 @@ window.addEventListener("load", () => {
         }
     })
 })
+
+
+
+registerCommand("echo", (args, flags) => {
+    let text = ""
+    for(var i=0;i++;i<args.length){
+        text += args[i]+" "
+    }
+    echo(text)
+})
