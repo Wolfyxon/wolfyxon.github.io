@@ -7,9 +7,15 @@
     color: white;
     display: inline-block;
     border: none;
-    border-bottom: red solid 1px;
+    border-bottom: darkred solid 1px;
     background: none;
     width: 40%;
+    transition: 0.3s;
+}
+
+#cmd-input:focus {
+    border-color: red;
+    transition: 0.3s;
 }
 
 #cmd-send {
