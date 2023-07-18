@@ -11,3 +11,9 @@
     background: none;
     width: 40%;
 }
+
+#cmd-send {
+    background-color: red;
+    padding: 1%;
+    border: none;
+}
