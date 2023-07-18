@@ -51,6 +51,11 @@ body,html {
     background-color: green;
     width: 14%;
     text-align: center;
+    transition: 0.1s background-color;
+}
+#menu-bar:hover {
+    background-color: #018c01;
+    transition: 0.1s background-color;
 }
 
 #menu-bar img {
