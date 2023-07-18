@@ -29,6 +29,14 @@ function echoHTML(html) {
     return line
 }
 
+let commands = {}
+function registerCommand(alias, runner, description="No description available") {
+    commands[alias] = {
+        runner: runner,
+        description: description,
+    }
+}
+
 window.addEventListener("load", () => {
 
 })
