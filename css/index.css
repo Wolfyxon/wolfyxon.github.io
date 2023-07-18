@@ -16,4 +16,5 @@
     background-color: red;
     padding: 1%;
     border: none;
+    user-select: none;
 }
