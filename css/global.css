@@ -16,6 +16,7 @@ body {
     white-space: nowrap;
 }
 #container * {
+    vertical-align: top;
     margin: 0;
 }
 #main, .side-menu {
