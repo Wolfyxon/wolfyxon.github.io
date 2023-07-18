@@ -17,6 +17,7 @@ body {
 }
 #container * {
     vertical-align: top;
+    overflow: scroll;
     margin: 0;
 }
 #main, .side-menu {
