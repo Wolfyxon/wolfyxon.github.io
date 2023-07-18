@@ -8,3 +8,24 @@ body {
     font-family: Arial, serif;
     background-color: #202023;
 }
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+#container nav, #main, #right {;
+    display: inline-block;
+    height: 100%;
+}
+
+#container nav {
+    width: 20%;
+}
+
+#main {
+    width: 59%;
+}
+
+#right {
+    width: 20%;
+}
