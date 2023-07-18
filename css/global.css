@@ -15,6 +15,9 @@ body {
     height: 100%;
     white-space: nowrap;
 }
+#container * {
+    margin: 0;
+}
 #main, .side-menu {
     display: inline-block;
     height: 100%;
