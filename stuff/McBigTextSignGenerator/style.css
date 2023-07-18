@@ -52,6 +52,10 @@ body,html {
     width: 15.8%;
 }
 
+#menu-bar img {
+    width: 90%;
+}
+
 #menu-main textarea {
     background-color: #fff39c;
     min-height: 100px;
