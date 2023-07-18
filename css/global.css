@@ -4,5 +4,7 @@ body,html {
 }
 
 body {
+    color: white;
+    font-family: Arial, serif;
     background-color: #202023;
 }
