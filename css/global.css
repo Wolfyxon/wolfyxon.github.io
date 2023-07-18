@@ -20,11 +20,11 @@ body {
 }
 
 #container .side-menu {
-    width: 20%;
+    width: 15%;
     background-color: #2a292f;
 }
 
 #main {
-    width: 59%;
+    width: 69.5%;
     background-color: black;
 }
