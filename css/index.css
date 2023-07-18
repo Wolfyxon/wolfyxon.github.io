@@ -1,13 +1,15 @@
 #prompt {
     width: 100%;
+    display: table;
 }
+
 #cmd-input {
     color: white;
-    display: inline-block;
+    display: table-cell;
     border: none;
     border-bottom: darkred solid 1px;
     background: none;
-    width: 40%;
+    width: 85%;
     transition: 0.3s;
 }
 
