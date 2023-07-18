@@ -3,6 +3,10 @@
     display: table;
 }
 
+#prompt-pre {
+    padding-right: 0.5%;
+}
+
 #cmd-input {
     color: white;
     display: table-cell;
