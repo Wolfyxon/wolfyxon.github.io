@@ -98,9 +98,5 @@ window.addEventListener("load", () => {
 
 
 registerCommand("echo", (args) => {
-    let text = ""
-    for(var i=0;i++;i<args.length){
-        text += args[i]+" "
-    }
-    echo(text)
+    echo(args.join(" "))
 })
