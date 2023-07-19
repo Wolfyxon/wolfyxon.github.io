@@ -26,6 +26,8 @@ body {
 
 #container .side-menu {
     width: 15%;
+    white-space: normal;
+    word-break: break-word;
 }
 
 #main {
