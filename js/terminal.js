@@ -123,6 +123,7 @@ window.addEventListener("load", () => {
             sendCommand()
         }
     })
+    focusInput()
     clear()
     echoInnerHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
     echoInnerHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
