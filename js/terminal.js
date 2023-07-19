@@ -160,9 +160,9 @@ registerCommand("help", (args) => {
         const cmd = commands[alias]
         echo(alias+": "+cmd.description)
     }
-})
+}, "Lists commands and their descriptions")
 
 registerCommand("echo", (args) => {
     echo(args.join(" "))
-})
-registerCommand("clear", clear)
+},"Prints text")
+registerCommand("clear", clear,"Clears the output")
