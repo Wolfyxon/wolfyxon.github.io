@@ -11,19 +11,21 @@ function addAndGetLine() {
     return pre
 }
 // Adds a <pre> with the specified non-HTML text to the output
-function echo(text, colorClass="white", inline=false) {
+function echo(text, colorClass="white", inline=false, bold=false) {
     const line = addAndGetLine()
     line.textContent = text
     line.className = colorClass
     if(inline) line.style.display = "inline-block"
+    if(bold) line.style.fontWeight = "bold"
     return line
 }
 // Adds a <pre> with the specified HTML or text to the output
-function echoInnerHTML(preHtml, colorClass="white", inline=false){
+function echoInnerHTML(preHtml, colorClass="white", inline=false, bold=false){
     const line = addAndGetLine();
     line.innerHTML = preHtml
     line.className = colorClass
     if(inline) line.style.display = "inline-block"
+    if(bold) line.style.fontWeight = "bold"
     return line
 }
 // Adds an HTML code to the output
