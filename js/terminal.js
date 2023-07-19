@@ -175,3 +175,10 @@ registerCommand("echo", (args) => {
     echo(args.join(" "))
 },"Prints text")
 registerCommand("clear", clear,"Clears the output")
+
+const files = {
+    "people_i_work_with":
+        "<span class='lime'>l299l</span> experienced programmer" +
+        "<span class='purple'>KaroleusPL</span> game developer, artist and composer"
+
+}
