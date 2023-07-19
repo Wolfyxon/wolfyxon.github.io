@@ -163,6 +163,14 @@ window.addEventListener("load", () => {
     echoInnerHTML("<center>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</center>","gray")
 
     echo(" ")
+
+    echoInnerHTML("<center> <a href='https://github.com/Wolfyxon' class='lime'>GitHub</a> " +
+        "<a href='https://youtube.com/@Wolfyxon' class='red'>YouTube</a> " +
+        "<a href='https://twitter.com/@Wolfyxon' class='lightblue'>Twitter</a> " +
+        "<a href='https://discord.gg/RztUGCK' class='purple'>Discord</a> " +
+        "</center>")
+
+    echo(" ")
     echo("- Something about me: -","red")
     echo("Hi, I'm Wolfyxon. A young programmer from Poland. I mainly focus on making websites, tools and games.")
     echo("I also expand my skills outside the programming world, I can edit videos very well and I'm learning how to make music.")
