@@ -210,7 +210,7 @@ registerCommand("cat",function (args){
     }
     echoInnerHTML(text)
 
-})
+},"Reads contents of a text file")
 
 registerCommand("ls", function (args){
     const files = listFiles()
