@@ -96,6 +96,7 @@ function executeText(command) {
 function sendCommand(){
     const cmd = getInput().value
     const preHtml = document.getElementById("prompt-pre").innerHTML
+    scrollToInput()
     if(cmd === "") {
         echoInnerHTML(preHtml)
         return
@@ -106,6 +107,11 @@ function sendCommand(){
     const alias = cmd.split(" ")[0]
     if(commandExists(alias)) executeText(cmd)
     else echo("bash: "+alias+": command not found")
+
+}
+
+function scrollToInput(){
+    getInput().scrollIntoView({block: "nearest"})
 }
 
 window.addEventListener("load", () => {
