@@ -11,9 +11,11 @@ function addAndGetLine() {
     return pre
 }
 // Adds a <pre> with the specified non-HTML text to the output
-function echo(text) {
+function echo(text, colorClass="white", inline=false) {
     const line = addAndGetLine()
     line.textContent = text
+    line.className = colorClass
+    if(inline) line.style.display = "inline-block"
     return line
 }
 // Adds a <pre> with the specified HTML or text to the output
