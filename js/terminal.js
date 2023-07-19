@@ -172,7 +172,7 @@ window.addEventListener("load", () => {
 
     echo(" ")
     echo("- Something about me: -","red")
-    echo("Hi, I'm Wolfyxon. A young programmer from Poland. I mainly focus on making websites, tools and games.")
+    echo("Hi, I'm Wolfyxon. A young male programmer from Poland. I mainly focus on making websites, tools and games.")
     echo("I also expand my skills outside the programming world, I can edit videos very well and I'm learning how to make music. I'm highly interested in psychology.")
     echoInnerHTML("I'm an open source fan and I like having full control over my system (aka. I'm a nerd) so I use <span class='cyan'>Arch Linux</span> operating system as a daily driver.")
     echo("I also like gaming. I like sandbox, strategy and shooter games.")
