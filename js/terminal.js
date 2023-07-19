@@ -96,8 +96,7 @@ function executeText(command) {
     execute(alias,split)
 }
 
-function sendCommand(){
-    const cmd = getInput().value
+function sendCommand(cmd){
     const preHtml = getPrompt().innerHTML
     scrollToInput()
     if(cmd === "") {
@@ -113,6 +112,10 @@ function sendCommand(){
 
 }
 
+function sendCommandFromInput(){
+    sendCommand(getInput().value)
+}
+
 function scrollToInput(){
     getInput().scrollIntoView({block: "nearest"})
 }
@@ -123,7 +126,7 @@ function focusInput(){
 window.addEventListener("load", () => {
     getInput().addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
-            sendCommand()
+            sendCommandFromInput()
         }
     })
     focusInput()
