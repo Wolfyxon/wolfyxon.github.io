@@ -38,4 +38,5 @@
 
 #terminal * {
     animation: fadein 0.3s;
+    overflow: visible;
 }
