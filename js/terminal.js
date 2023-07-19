@@ -148,7 +148,7 @@ window.addEventListener("load", () => {
     echo("Bash","silver",true)
     echo(" ")
     echo("- Layout and style languages: -","red")
-    echo("Markdown ","red",true)
+    echo("Markdown ","silver",true)
     echo("HTML5 ","orange",true)
     echo("CSS ","lightblue",true)
     echo("XML ","lime",true)
