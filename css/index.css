@@ -88,4 +88,9 @@
 #terminal a {
     color: white;
     text-decoration-color: white;
+    transition: 0.1s;
+}
+#terminal a:hover {
+    opacity: 0.8;
+    transition: 0.1s;
 }
