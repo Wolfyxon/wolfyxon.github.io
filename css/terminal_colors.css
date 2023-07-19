@@ -19,6 +19,9 @@
 #terminal .purple {
     color: blueviolet;
 }
+#terminal .magenta {
+    color: darkmagenta;
+}
 #terminal .lime {
     color: limegreen;
 }
