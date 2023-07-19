@@ -19,9 +19,11 @@ function echo(text, colorClass="white", inline=false) {
     return line
 }
 // Adds a <pre> with the specified HTML or text to the output
-function echoInnerHTML(preHtml){
+function echoInnerHTML(preHtml, colorClass="white", inline=false){
     const line = addAndGetLine();
     line.innerHTML = preHtml
+    line.className = colorClass
+    if(inline) line.style.display = "inline-block"
     return line
 }
 // Adds an HTML code to the output
@@ -113,7 +115,7 @@ window.addEventListener("load", () => {
              "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
              " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
              "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
-             "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|<br>")
+             "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|<br>","red")
 })
 
 
