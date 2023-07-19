@@ -40,6 +40,9 @@
     animation: fadein 0.3s;
     overflow: visible;
 }
+#terminal {
+    padding-bottom: 5px;
+}
 
 #terminal a {
     color: white;
