@@ -113,6 +113,9 @@ function sendCommand(){
 function scrollToInput(){
     getInput().scrollIntoView({block: "nearest"})
 }
+function focusInput(){
+    getInput().focus()
+}
 
 window.addEventListener("load", () => {
     getInput().addEventListener("keypress", function(event) {
