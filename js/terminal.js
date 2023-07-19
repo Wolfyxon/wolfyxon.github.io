@@ -42,10 +42,7 @@ function registerCommand(alias, runner, description="No description available") 
 }
 
 function clear(){
-    const amt = getTerminal().children.length
-    for(var i=0;i<amt;i++){
-        getTerminal().children[0].remove()
-    }
+    getTerminal().innerHTML = ""
 }
 
 function commandExists(alias) {
