@@ -6,6 +6,12 @@
 #prompt-pre {
     padding-right: 0.5%;
 }
+#prompt-pre .red {
+    color: red;
+}
+#prompt-pre .purple {
+    color: blueviolet;
+}
 
 #cmd-input {
     color: white;

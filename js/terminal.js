@@ -93,8 +93,9 @@ function executeText(command) {
 
 function sendCommand(){
     const cmd = getInput().value
-    echo(document.getElementById("prompt-pre").textContent+cmd)
+    echoInnerHTML(document.getElementById("prompt-pre").innerHTML)
     if(cmd === "") return
+    echo(cmd,"",true)
     getInput().value = ""
     const alias = cmd.split(" ")[0]
     if(commandExists(alias)) executeText(cmd)
