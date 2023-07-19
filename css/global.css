@@ -31,6 +31,8 @@ body {
 
 #main {
     border-radius: 12px;
+    border-top: 5px solid darkred;
+    border-bottom: 5px solid darkred;
     box-sizing: border-box;
     width: 69.5%;
     background-color: black;
