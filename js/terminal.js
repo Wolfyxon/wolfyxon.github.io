@@ -287,3 +287,7 @@ registerCommand("ls", function (args){
     echo(text)
 
 },"Lists files in the current directory")
+
+registerCommand("reboot", function (){
+    window.location.reload()
+}, "Reloads the page")
