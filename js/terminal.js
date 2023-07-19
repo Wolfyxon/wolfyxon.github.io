@@ -4,6 +4,9 @@ function getTerminal() {
 function getInput() {
     return document.getElementById("cmd-input")
 }
+function getPrompt() {
+    return document.getElementById("prompt-pre")
+}
 
 function addAndGetLine() {
     const pre = document.createElement("pre")
@@ -95,7 +98,7 @@ function executeText(command) {
 
 function sendCommand(){
     const cmd = getInput().value
-    const preHtml = document.getElementById("prompt-pre").innerHTML
+    const preHtml = getPrompt().innerHTML
     scrollToInput()
     if(cmd === "") {
         echoInnerHTML(preHtml)
