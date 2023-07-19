@@ -133,7 +133,7 @@ window.addEventListener("load", () => {
     echo("I am always calm and avoid arguments at any cost. I sense people's emotions and know how to support them.")
     echoInnerHTML("I speak Pol<span class='red'>ish</span>, " +
         "fluent <span class='lightblue'>En<span class='red'>g<span class='white'>l</span>i</span>sh</span> and basic " +
-        "<span class='gold'>Ge</span><span class='red'>rm</span><span class='gray'>an</span>.")
+        "<span class='gray'>Ge</span><span class='red'>rm</span><span class='gold'>an</span>.")
     echo(" ")
 
     echo("- Programming languages: -","cyan")
