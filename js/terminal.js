@@ -233,8 +233,20 @@ registerCommand("clear", clear,"Clears the output")
 const files = {
     "people_i_work_with":
         "- <span class='lime'>l299l</span> experienced programmer <br>" +
-        "- <span class='purple'>KaroleusPL</span> game developer, artist and composer <br>"
+        "- <span class='purple'>KaroleusPL</span> game developer, artist and composer <br>",
 
+    "interests":
+        "- Psychology <br>" +
+        "- Military <br>" +
+        "- Survival <br>" +
+        "- Old tech",
+
+    "hobbies":
+        "- Coding <br>" +
+        "- Gaming <br>" +
+        "- Drawing <br>" +
+        "- Listening to music <br>" +
+        "- Editing videos"
 }
 
 function listFiles() {
