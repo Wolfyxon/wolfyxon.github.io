@@ -96,6 +96,20 @@ function executeText(command) {
     execute(alias,split)
 }
 
+
+let blocked = false
+let unblockOnTerm = false
+
+function block(allowTerm=false) {
+    blocked = true
+    unblockOnTerm = allowTerm
+    getPrompt().style.display = "none";
+}
+function unblock() {
+    blocked = false
+    getPrompt().style.display = "inline-block"
+}
+
 function sendCommand(cmd){
     const preHtml = getPrompt().innerHTML
     scrollToInput()
@@ -106,6 +120,12 @@ function sendCommand(cmd){
     echoInnerHTML(preHtml,"",true)
     echo(cmd,"",true)
     getInput().value = ""
+
+    if(cmd === "^C") {
+        unblock()
+        return;
+    }
+
     const alias = cmd.split(" ")[0]
     if(commandExists(alias)) executeText(cmd)
     else echo("bash: "+alias+": command not found")
@@ -113,6 +133,11 @@ function sendCommand(cmd){
 }
 
 function sendCommandFromInput(){
+    if(blocked) {
+        echo(getInput().value)
+        getInput().value = ""
+        return
+    }
     sendCommand(getInput().value)
 }
 
