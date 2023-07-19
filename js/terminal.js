@@ -191,6 +191,7 @@ registerCommand("cat",function (args){
     const path = args[0]
     if(path === undefined) {
         echo("cat: no path specified")
+        echoInnerHTML("<img src='assets/img/dingus.jpg' width='300px'>")
         return
     }
     const text = files[path]
