@@ -153,6 +153,14 @@ window.addEventListener("load", () => {
 })
 
 
+registerCommand("help", (args) => {
+    const entries = Object.entries(commands)
+    for(var i=0;i<entries.length;i++){
+        const alias = entries[i][0]
+        const cmd = commands[alias]
+        echo(alias+": "+cmd.description)
+    }
+})
 
 registerCommand("echo", (args) => {
     echo(args.join(" "))
