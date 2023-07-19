@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
             sendCommand()
         }
     })
-
+    clear()
     echoInnerHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
              "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
              " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
