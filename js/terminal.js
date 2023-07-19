@@ -183,6 +183,15 @@ const files = {
 
 }
 
+function listFiles() {
+    let res = []
+    const entries = Object.entries(files)
+    for(var i=0;i<entries.length;i++){
+        res.push(entries[i][0])
+    }
+    return res
+}
+
 function fileExists(path) {
     return files[path] !== undefined
 }
