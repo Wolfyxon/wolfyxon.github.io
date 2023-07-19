@@ -31,7 +31,8 @@ body {
 }
 
 #main {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 12px;
     border-top: 5px solid darkred;
     border-bottom: 5px solid darkred;
