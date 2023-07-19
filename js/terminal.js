@@ -118,6 +118,7 @@ window.addEventListener("load", () => {
              "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</center><br>","red")
     echoInnerHTML("<center>Young passionate programmer</center>","purple")
     echo(" ")
+    echo("- Something about me: -","red")
     echo("Hi, I'm Wolfyxon. A young programmer from Poland. I mainly focus on making websites, tools and games.")
     echo("I also expand my skills outside the programming world, I can edit videos very well and I'm learning how to make music.")
     echoInnerHTML("I'm an open source fan and I like having full control over my system (aka. I'm a nerd) so I use <span class='cyan'>Arch Linux</span> operating system as a daily driver.")
@@ -125,9 +126,12 @@ window.addEventListener("load", () => {
     echo("My favourite music genres are Metal, Rock, Dubstep and Orchestral.")
     echo("I'm an extroverted introvert INFJ. I prefer being and working alone but I can be very helpful and social in a group.")
     echo("I am always calm and avoid arguments at any cost. I sense people's emotions and know how to support them.")
+    echoInnerHTML("I speak Pol<span class='red'>ish</span>, " +
+        "fluent <span class='lightblue'>En<span class='red'>g<span class='white'>l</span>i</span>sh</span> and basic " +
+        "<span class='gold'>Ge</span><span class='red'>rm</span><span class='gray'>an</span>.")
     echo(" ")
 
-    echo("- Programming languages: -","silver")
+    echo("- Programming languages: -","cyan")
     echo("C ","cyan",true)
     echo("C++ ","lightblue",true)
     echo("C# ","magenta",true)
@@ -138,13 +142,13 @@ window.addEventListener("load", () => {
     echo("Python ","yellow",true)
     echo("Bash","silver",true)
     echo(" ")
-    echo("- Layout and style languages: -","silver")
+    echo("- Layout and style languages: -","cyan")
     echo("Markdown ","red",true)
     echo("HTML5 ","orange",true)
     echo("CSS ","lightblue",true)
     echo("XML ","lime",true)
     echo(" ")
-    echo("- Database languages: -","silver")
+    echo("- Database languages: -","cyan")
     echo("SQLite ","cyan",true)
     echo("MySQL ","lightblue",true)
 
