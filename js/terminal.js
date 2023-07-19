@@ -246,7 +246,96 @@ const files = {
         "- Gaming <br>" +
         "- Drawing <br>" +
         "- Listening to music <br>" +
-        "- Editing videos"
+        "- Editing videos",
+
+    "ideology": "I hate myself, love others.",
+
+    "musicians": "- My favourite music bands and composers: -<br><br>" +
+        "Rock & Metal: <br>" +
+        "- Rammstein <br>" +
+        "- Korn <br>" +
+        "- SABATON <br>" +
+        "- System of Down <br>" +
+        "- Tool <br>" +
+        "- Limp Bizkit <br>" +
+        "- Metalica <br>" +
+
+        "Dubstep: <br>" +
+        "- Kane Pixels <br>" +
+        "- Marek Hemman <br>" +
+        "- Clubroot <br>" +
+        "- Mooryc <br>" +
+
+        "Orchestral:<br>" +
+        "- Hans Zimmer <br>" +
+        "- Aproaching Nirvana <br>" +
+
+        "Other: <br>" +
+        "- KaroleusPL <br>" +
+        "- SKALD <br>" +
+        "- Will Wood <br>" +
+        "- Toby Fox <br>" +
+        "- Imagine Dragons <br>" +
+        "- Red Hot Chili Peppers <br>" +
+        "- Kings of leon <br>" +
+        "- Twenty One Pilots <br>",
+
+    "ides":"- IDEs, game engines and code editors I use: -<br>" +
+        "Game engines: <br>" +
+        "- Godot <br>" +
+        "- Roblox Studio <br>" +
+        "Text editors: <br>" +
+        "- nano <br>" +
+        "- mousepad <br>" +
+        "Code editors: <br>" +
+        "- Visual Studio Code <br>" +
+        "IDEs: <br>" +
+        "- Webstorm <br>" +
+        "- IntelIJ IDEA <br>" +
+        "- PyCharm <br>" +
+        "- CLion <br>",
+
+    "software": "- Software I use or have experience with: - <br>" +
+        "For programming related software, use 'cat ides' <br>" +
+        "For games, use 'cat games' <br>" +
+        "<br>" +
+        "Drawing: <br>" +
+        "- Krita <br>" +
+        "- Aseprite <br>" +
+        "Video editing: <br>" +
+        "- KDEnlive <br>" +
+        "- DaVinci Resolve <br>" +
+        "Internet browsers: <br>" +
+        "- Firefox [main browser] <br>" +
+        "- Chromium <br>" +
+        "- Chrome <br>" +
+        "- Opera GX <br>" +
+        "- Microsoft Edge <br>" +
+        "Operating systems: <br>" +
+        "- Arch Linux [main OS] <br>" +
+        "- Ubuntu Linux <br>" +
+        "- Kali Linux <br>" +
+        "- Windows XP <br>" +
+        "- Windows 7 <br>" +
+        "- Windows 10 [secondary OS] <br>" +
+        "Desktop environments: <br>" +
+        "- i3 <br>" +
+        "- XFCE <br>" +
+        "- Gnome <br>",
+
+    "games:":" - Games I play: - <br>" +
+        "- Minecraft (Java Edition, New Nintendo 3DS Edition)<br>" +
+        "- Roblox <br>" +
+        "- Phasmophobia <br>" +
+        "- sand:box <br>" +
+        "- Pople Playground <br>" +
+        "- Half Life (all games) <br>" +
+        "- SCP: Secret Laboratory <br>" +
+        "- Warzone 2100 <br>" +
+        "- Mindustry <br>" +
+        "- Undertale <br>" +
+        "- Deltarune <br>"
+
 }
 
 function listFiles() {
