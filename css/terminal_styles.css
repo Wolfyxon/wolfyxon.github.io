@@ -1,3 +1,13 @@
+#terminal .bold {
+    font-weight: bold;
+}
+#terminal .nowrap {
+    white-space: nowrap;
+}
+#terminal .underline {
+    text-decoration: underline;
+}
+
 #terminal .white {
     color: white;
     text-decoration-color: white;
