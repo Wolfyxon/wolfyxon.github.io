@@ -211,3 +211,13 @@ registerCommand("cat",function (args){
     echoInnerHTML(text)
 
 })
+
+registerCommand("ls", function (args){
+    const files = listFiles()
+    let text = ""
+    for(var i=0;i<files.length;i++){
+        text += files[i] += " "
+    }
+    echo(text)
+
+},"Lists files in the current directory")
