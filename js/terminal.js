@@ -207,6 +207,12 @@ window.addEventListener("load", () => {
 
     echo(" ")
 
+    echo("Use 'help' to show a command list","yellow")
+    echo("Use 'ls' to list files (additional info)","lime")
+    echo("Use 'cat <file name>' to read a file","cyan")
+
+    echo(" ")
+
 })
 
 
