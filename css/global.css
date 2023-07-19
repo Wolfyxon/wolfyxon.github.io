@@ -17,7 +17,6 @@ body {
 }
 #container * {
     vertical-align: top;
-    overflow: scroll;
     margin: 0;
 }
 #main, .side-menu {
@@ -30,6 +29,7 @@ body {
 }
 
 #main {
+    overflow: scroll;
     border-radius: 12px;
     border-top: 5px solid darkred;
     border-bottom: 5px solid darkred;
