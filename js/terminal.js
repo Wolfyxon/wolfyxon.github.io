@@ -44,18 +44,22 @@ function clear(){
     }
 }
 
+function commandExists(alias) {
+    return commands[alias] !== undefined
+}
+
 function execute(alias, args=[]) {
-    const cmd = commands[alias]
-    if(cmd === undefined) {
+    if(!commandExists(alias)) {
         console.error("'"+alias+"' command not found")
         return
     }
+    const cmd = commands[alias]
     const runner = cmd.runner
     if( typeof runner == "string") {
         echoInnerHTML(runner)
         return;
     }
-    if( typeof cmd.runner == "function" ) {
+    if( typeof runner == "function" ) {
         runner(args)
         return;
     }
