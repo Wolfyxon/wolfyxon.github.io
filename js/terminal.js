@@ -95,7 +95,9 @@ function sendCommand(){
     echo(document.getElementById("prompt-pre").textContent+cmd)
     if(cmd === "") return
     getInput().value = ""
-    executeText(cmd)
+    const alias = cmd.split(" ")[0]
+    if(commandExists(alias)) executeText(cmd)
+    else echo("bash: "+alias+": command not found")
 }
 
 window.addEventListener("load", () => {
