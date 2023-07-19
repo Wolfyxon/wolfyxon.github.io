@@ -187,3 +187,17 @@ function fileExists(path) {
     return files[path] !== undefined
 }
 
+registerCommand("cat",function (args){
+    const path = args[0]
+    if(path === undefined) {
+        echo("cat: no path specified")
+        return
+    }
+    const text = files[path]
+    if(text === undefined) {
+        echo("cat: "+path+": No such file or directory")
+        return;
+    }
+    echoInnerHTML(text)
+
+})
