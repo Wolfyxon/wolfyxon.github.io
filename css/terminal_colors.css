@@ -40,6 +40,9 @@
 #terminal .blue {
     color: blue;
 }
+#terminal .lightblue {
+    color: #0a85ff;
+}
 #terminal .cyan {
     color: cyan;
 }
