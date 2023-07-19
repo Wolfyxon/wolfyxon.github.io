@@ -120,12 +120,6 @@ function sendCommand(cmd){
     echoInnerHTML(preHtml,"",true)
     echo(cmd,"",true)
     getInput().value = ""
-
-    if(cmd === "^C") {
-        unblock()
-        return;
-    }
-
     const alias = cmd.split(" ")[0]
     if(commandExists(alias)) executeText(cmd)
     else echo("bash: "+alias+": command not found")
@@ -135,6 +129,9 @@ function sendCommand(cmd){
 function sendCommandFromInput(){
     if(blocked) {
         echo(getInput().value)
+        if(getInput().value === "^C") {
+            unblock()
+        }
         getInput().value = ""
         return
     }
