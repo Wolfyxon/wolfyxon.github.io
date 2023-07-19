@@ -38,12 +38,30 @@
         opacity: 1;
     }
 }
+@keyframes scalein {
+    0% {
+        scale: 1 0;
+    }
+    100% {
+        scale: 1 1;
+    }
+}
 
 #main {
     padding: 0.5% 0.5% 1%;
     background: radial-gradient(black, #232323) !important;
     font-size: 0.7vw;
+    animation-name: scalein;
+    animation-duration: 1s;
 }
+#main > * {
+    animation-name: fadein;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
 @media screen and (max-width: 700px) {
     #main {
         font-size: 1.8vw;
