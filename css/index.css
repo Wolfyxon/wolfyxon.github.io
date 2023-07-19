@@ -41,7 +41,7 @@
 
 #main {
     padding: 0.5% 0.5% 1%;
-    background: radial-gradient(black, #1f1f1f) !important;
+    background: radial-gradient(black, #232323) !important;
     font-size: 0.7vw;
 }
 @media screen and (max-width: 700px) {
