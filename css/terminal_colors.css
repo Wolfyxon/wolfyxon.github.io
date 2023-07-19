@@ -1,51 +1,68 @@
 #terminal .white {
     color: white;
+    text-decoration-color: white;
 }
 #terminal .black {
     color: black;
+    text-decoration-color: black;
 }
 #terminal .gray {
     color: gray;
+    text-decoration-color: gray;
 }
 #terminal .silver {
     color: silver;
+    text-decoration-color: silver;
 }
 #terminal .red {
     color: red;
+    text-decoration-color: red;
 }
 #terminal .darkred {
     color: #b40000;
+    text-decoration-color: #b40000;
 }
 #terminal .purple {
     color: blueviolet;
+    text-decoration-color: blueviolet;
 }
 #terminal .magenta {
     color: darkmagenta;
+    text-decoration-color: darkmagenta;
 }
 #terminal .lime {
     color: limegreen;
+    text-decoration-color: limegreen;
 }
 #terminal .green {
     color: green;
+    text-decoration-color: green;
 }
 #terminal .orange {
     color: #ff6730;
+    text-decoration-color: #ff6730;
 }
 #terminal .yellow {
     color: yellow;
+    text-decoration-color: yellow;
 }
 #terminal .gold {
     color: goldenrod;
+    text-decoration-color: goldenrod;
 }
 #terminal .blue {
     color: blue;
+    text-decoration-color: blue;
 }
 #terminal .lightblue {
     color: #0a85ff;
+    text-decoration-color: #0a85ff;
 }
 #terminal .cyan {
     color: cyan;
+    text-decoration-color: cyan;
 }
 #terminal .navy {
     color: navy;
+    text-decoration-color: navy;
 }
