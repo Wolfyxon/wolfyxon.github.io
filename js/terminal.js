@@ -182,3 +182,8 @@ const files = {
         "<span class='purple'>KaroleusPL</span> game developer, artist and composer"
 
 }
+
+function fileExists(path) {
+    return files[path] !== undefined
+}
+
