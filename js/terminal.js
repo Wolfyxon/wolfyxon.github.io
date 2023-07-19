@@ -108,12 +108,15 @@ window.addEventListener("load", () => {
         }
     })
     clear()
+    echoInnerHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
     echoInnerHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
              "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
              " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
              "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
              "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</center><br>","red")
     echoInnerHTML("<center>Young passionate programmer</center>","purple")
+    echoInnerHTML("<center>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</center>","gray")
+
     echo(" ")
     echo("- Something about me: -","red")
     echo("Hi, I'm Wolfyxon. A young programmer from Poland. I mainly focus on making websites, tools and games.")
