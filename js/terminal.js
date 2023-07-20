@@ -334,7 +334,9 @@ const files = {
         "- Warzone 2100 <br>" +
         "- Mindustry <br>" +
         "- Undertale <br>" +
-        "- Deltarune <br>"
+        "- Deltarune <br>",
+
+    "DO_NOT_OPEN":"<a href='https://wolfyxon.github.io/DO_NOT_GO_TO_THIS_PAGE.html'>https://wolfyxon.github.io/DO_NOT_GO_TO_THIS_PAGE.html</a>"
 
 }
 
