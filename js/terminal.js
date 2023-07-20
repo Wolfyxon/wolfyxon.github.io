@@ -323,7 +323,7 @@ const files = {
         "- XFCE <br>" +
         "- Gnome <br>",
 
-    "games:":" - Games I play: - <br>" +
+    "games":" - Games I play: - <br>" +
         "- Minecraft (Java Edition, New Nintendo 3DS Edition)<br>" +
         "- Roblox <br>" +
         "- Phasmophobia <br>" +
