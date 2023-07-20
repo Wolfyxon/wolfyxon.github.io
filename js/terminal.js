@@ -123,6 +123,7 @@ function broadcastInput(clear=true){
     scrollToInput()
     const cmd = document.createElement("pre")
     cmd.textContent = getInput().value
+    cmd.style.display = "inline-block"
     echoInnerHTML(preHtml,"",false).appendChild(cmd)
 
     if(clear) getInput().value = ""
