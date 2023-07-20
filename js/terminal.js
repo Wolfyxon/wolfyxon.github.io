@@ -130,6 +130,8 @@ function broadcastInput(){
 function sigTerm(){
     unblock()
     getInput().value += "^C"
+    broadcastInput()
+    getInput().value = ""
 }
 
 function sendCommandFromInput(){
