@@ -395,6 +395,7 @@ registerCommand("badapple", function (){
         "<canvas id='ba-canvas' style='display: none'></canvas>")
 
     const text = echo("")
+    text.id = "ba-text"
 
     const video = document.getElementById("ba-video")
     const canvas = document.getElementById("ba-canvas")
@@ -413,6 +414,8 @@ registerCommand("badapple", function (){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         const width = video.videoWidth/6.5
         const height = video.videoHeight/8
+        canvas.width = width
+        canvas.height = height
         ctx.drawImage(video,0, 0, width, height)
         text.innerHTML = canvasToASCII(canvas)
 
