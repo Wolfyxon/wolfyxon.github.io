@@ -319,7 +319,7 @@ const files = {
         "- Windows 7 <br>" +
         "- Windows 10 [secondary OS] <br>" +
         "Desktop environments: <br>" +
-        "- i3 <br>" +
+        "- i3 [main DE] <br>" +
         "- XFCE <br>" +
         "- Gnome <br>",
 
