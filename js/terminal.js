@@ -82,7 +82,7 @@ function removeFlags(args) {
 }
 function getFlags(args) {
     let res = []
-    for(var i=1;i<args.length;i++){
+    for(var i=0;i<args.length;i++){
         const arg = args[i];
         if(arg.startsWith("--")) res.push(arg.replace("--",""))
     }
