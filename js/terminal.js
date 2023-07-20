@@ -374,7 +374,7 @@ registerCommand("cat",function (args){
 },"Reads contents of a text file (or shows a cute cat :3)")
 
 registerCommand("ls", function (args){
-    const files = listFiles()
+    const files = listFiles( getFlags(args).includes("all") )
     let text = ""
     for(var i=0;i<files.length;i++){
         text += files[i] += " "
