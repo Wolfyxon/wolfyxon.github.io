@@ -121,7 +121,8 @@ function sendCommand(cmd){
 function broadcastInput(){
     const preHtml = getPrompt().innerHTML
     scrollToInput()
-    const cmd = document.createElement("pre").textContent = getInput().value
+    const cmd = document.createElement("pre")
+    cmd.textContent = getInput().value
     echoInnerHTML(preHtml,"",false).appendChild(cmd)
 
     getInput().value = ""
