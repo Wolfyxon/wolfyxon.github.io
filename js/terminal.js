@@ -118,14 +118,14 @@ function sendCommand(cmd){
     getInput().value = ""
 }
 
-function broadcastInput(){
+function broadcastInput(clear=true){
     const preHtml = getPrompt().innerHTML
     scrollToInput()
     const cmd = document.createElement("pre")
     cmd.textContent = getInput().value
     echoInnerHTML(preHtml,"",false).appendChild(cmd)
 
-    getInput().value = ""
+    if(clear) getInput().value = ""
 }
 
 function sigTerm(){
@@ -144,8 +144,9 @@ function sendCommandFromInput(){
         getInput().value = ""
         return
     }
+    broadcastInput(false)
     sendCommand(getInput().value)
-    broadcastInput()
+
 }
 
 function scrollToInput(){
