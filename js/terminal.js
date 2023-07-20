@@ -386,3 +386,27 @@ registerCommand("ls", function (args){
 registerCommand("reboot", function (){
     window.location.reload()
 }, "Reloads the page")
+
+
+function canvasToASCII(canvas) {
+    //i hate javascript
+    const ctx = canvas.getContext("2d")
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
+    var asciiArt = ""
+    for (var i=0;i<data.length;i+= 4) {
+        const r = data[i]
+        const g = data[i + 1]
+        const b = data[i + 2]
+        const brightness = (3*r + 4*g + b) >>> 3;
+        if (brightness > 51) {
+            asciiArt += "##"
+
+        } else {
+            asciiArt += "  "
+        }
+        if ((i / 4 + 1) % canvas.width === 0) {
+            asciiArt += "<br>"
+        }
+    }
+    return asciiArt
+}
