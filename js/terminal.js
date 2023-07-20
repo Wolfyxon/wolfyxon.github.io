@@ -340,11 +340,14 @@ const files = {
 
 }
 
-function listFiles() {
+function listFiles(hidden=false) {
     let res = []
     const entries = Object.entries(files)
     for(var i=0;i<entries.length;i++){
-        res.push(entries[i][0])
+        const name = entries[i][0]
+        if( hidden || (!name.startsWith(".") && !hidden) ) {
+            res.push(name)
+        }
     }
     res.sort()
     return res
