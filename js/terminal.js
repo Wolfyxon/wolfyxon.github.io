@@ -268,7 +268,7 @@ const files = {
 
         "Orchestral:<br>" +
         "- Hans Zimmer <br>" +
-        "- Aproaching Nirvana <br>" +
+        "- Approaching Nirvana <br>" +
 
         "Other: <br>" +
         "- KaroleusPL <br>" +
