@@ -180,7 +180,7 @@ window.addEventListener("load", () => {
     echo("I'm an extroverted introvert INFJ. I prefer being and working alone but I can be very helpful and social in a group.")
     echo("I am always calm and avoid arguments at any cost. I sense people's emotions and know how to support them.")
     echoInnerHTML("I speak Pol<span class='red'>ish</span>, " +
-        "fluent <span class='lightblue'>En<span class='red'>g<span class='white'>l</span>i</span>sh</span> and basic " +
+        "fluent <span class='lightblue'>En<span class='white'>g<span class='red'>l</span>i</span>sh</span> and basic " +
         "<span class='gray'>Ge</span><span class='red'>rm</span><span class='gold'>an</span>.")
     echo(" ")
 
