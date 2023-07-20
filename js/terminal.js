@@ -440,6 +440,7 @@ registerCommand("badapple", function (){
 function canvasToASCII(canvas) {
     //i hate javascript
     const ctx = canvas.getContext("2d")
+    if(canvas.width === 0|| canvas.height === 0) return ""
     const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
     var asciiArt = ""
     for (var i=0;i<data.length;i+= 4) {
