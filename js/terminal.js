@@ -394,7 +394,7 @@ registerCommand("badapple", function (){
     echoInnerHTML("<video id='ba-video' style='display: none'><source src='../assets/video/bad_apple.mp4' type='video/mp4'></video>" +
         "<canvas id='ba-canvas' style='display: none'></canvas>")
 
-    const text = echo("","nowrap")
+    const text = echo("")
 
     const video = document.getElementById("ba-video")
     const canvas = document.getElementById("ba-canvas")
