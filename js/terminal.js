@@ -387,6 +387,36 @@ registerCommand("reboot", function (){
     window.location.reload()
 }, "Reloads the page")
 
+registerCommand("badapple", function (){
+    block(true)
+    echo("If the video is frozen, it's probably just loading.")
+
+    echoInnerHTML("<video id='ba-video' style='display: none'><source src='../assets/video/bad_apple.mp4' type='video/mp4'></video>" +
+        "<canvas id='ba-canvas' style='display: none'></canvas>")
+
+    const text = echo("","nowrap")
+
+    const video = document.getElementById("ba-video")
+    const canvas = document.getElementById("ba-canvas")
+
+    video.play()
+
+    const update = setInterval(function (){
+        if(!blocked){
+            clearInterval(update)
+            echo("Interrupt signal received")
+            video.remove()
+            canvas.id = null;
+            return
+        }
+        const ctx = canvas.getContext("2d")
+        ctx.drawImage(video,0, 0, video.videoWidth/6.5, video.videoHeight/8)
+        text.innerHTML = canvasToASCII(canvas)
+
+    },10)
+
+    echo("Type ^C and press ENTER to stop.")
+},"Plays Bad Apple as an ASCII art animation")
 
 function canvasToASCII(canvas) {
     //i hate javascript
