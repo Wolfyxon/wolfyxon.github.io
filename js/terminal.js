@@ -111,19 +111,20 @@ function unblock() {
 }
 
 function sendCommand(cmd){
-    const preHtml = getPrompt().innerHTML
-    scrollToInput()
-    if(cmd === "") {
-        echoInnerHTML(preHtml)
-        return
-    }
-    echoInnerHTML(preHtml,"",true)
-    echo(cmd,"",true)
-    getInput().value = ""
+    if(cmd === "") return
     const alias = cmd.split(" ")[0]
     if(commandExists(alias)) executeText(cmd)
     else echo("bash: "+alias+": command not found")
+    getInput().value = ""
+}
 
+function broadcastInput(){
+    const preHtml = getPrompt().innerHTML
+    scrollToInput()
+    const cmd = document.createElement("pre").textContent = getInput().value
+    echoInnerHTML(preHtml,"",false).appendChild(cmd)
+
+    getInput().value = ""
 }
 
 function sigTerm(){
@@ -141,6 +142,7 @@ function sendCommandFromInput(){
         return
     }
     sendCommand(getInput().value)
+    broadcastInput()
 }
 
 function scrollToInput(){
