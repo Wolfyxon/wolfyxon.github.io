@@ -410,6 +410,7 @@ registerCommand("badapple", function (){
             return
         }
         const ctx = canvas.getContext("2d")
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(video,0, 0, video.videoWidth/6.5, video.videoHeight/8)
         text.innerHTML = canvasToASCII(canvas)
 
