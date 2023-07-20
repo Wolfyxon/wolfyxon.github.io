@@ -395,7 +395,7 @@ registerCommand("badapple", function (){
         "<canvas id='ba-canvas' style='display: none'></canvas>")
 
     const text = echo("")
-    text.id = "ba-text"
+    text.className = "ba-text"
 
     const video = document.getElementById("ba-video")
     const canvas = document.getElementById("ba-canvas")
