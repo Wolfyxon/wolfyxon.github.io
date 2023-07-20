@@ -418,12 +418,17 @@ registerCommand("badapple", function (){
 
     video.play()
 
+    function stop(){
+        video.remove()
+        canvas.remove()
+        clearInterval(update)
+        unblock()
+    }
+    video.onended = stop
     const update = setInterval(function (){
         if(!blocked){
-            clearInterval(update)
             echo("Interrupt signal received")
-            video.remove()
-            canvas.remove()
+            stop()
             return
         }
         const ctx = canvas.getContext("2d")
