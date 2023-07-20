@@ -252,7 +252,10 @@ const files = {
         "- Psychology <br>" +
         "- Military <br>" +
         "- Survival <br>" +
-        "- Old tech",
+        "- Old tech <br>" +
+        "- Space <br>" +
+        "- History <br>" +
+        "- Geohraphy",
 
     "hobbies":
         "- Coding <br>" +
