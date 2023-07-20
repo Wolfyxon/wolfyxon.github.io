@@ -423,7 +423,7 @@ registerCommand("badapple", function (){
             clearInterval(update)
             echo("Interrupt signal received")
             video.remove()
-            canvas.id = null;
+            canvas.remove()
             return
         }
         const ctx = canvas.getContext("2d")
