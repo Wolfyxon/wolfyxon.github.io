@@ -346,6 +346,7 @@ function listFiles() {
     for(var i=0;i<entries.length;i++){
         res.push(entries[i][0])
     }
+    res.sort()
     return res
 }
 
