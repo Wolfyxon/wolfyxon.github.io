@@ -126,6 +126,11 @@ function sendCommand(cmd){
 
 }
 
+function sigTerm(){
+    unblock()
+    getInput().value += "^C"
+}
+
 function sendCommandFromInput(){
     if(blocked) {
         echo(getInput().value)
