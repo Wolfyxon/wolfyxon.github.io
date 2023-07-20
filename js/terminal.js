@@ -389,7 +389,7 @@ registerCommand("reboot", function (){
 
 registerCommand("badapple", function (){
     block(true)
-    echo("If the video is frozen, it's probably just loading.")
+    echo("If the playback is frozen, it's probably just loading. The conversion from video to ASCII art happens in real time.")
 
     echoInnerHTML("<video id='ba-video' style='display: none'><source src='../assets/video/bad_apple.mp4' type='video/mp4'></video>" +
         "<canvas id='ba-canvas' style='display: none'></canvas>")
