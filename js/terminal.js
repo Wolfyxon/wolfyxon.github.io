@@ -411,7 +411,9 @@ registerCommand("badapple", function (){
         }
         const ctx = canvas.getContext("2d")
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(video,0, 0, video.videoWidth/6.5, video.videoHeight/8)
+        const width = video.videoWidth/6.5
+        const height = video.videoHeight/8
+        ctx.drawImage(video,0, 0, width, height)
         text.innerHTML = canvasToASCII(canvas)
 
     },10)
