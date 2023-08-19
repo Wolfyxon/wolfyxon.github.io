@@ -163,6 +163,12 @@ window.addEventListener("load", () => {
             sendCommandFromInput()
         }
     })
+    getInput().addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.key === "c"){
+            sigTerm()
+        }
+    })
+
     focusInput()
     clear()
     echoInnerHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
