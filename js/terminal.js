@@ -448,7 +448,7 @@ registerCommand("badapple", function (){
 
     },10)
 
-    echo("Type ^C and press ENTER to stop.")
+    echo("Press CTR+C or type ^C and press ENTER to stop.")
 },"Plays Bad Apple as an ASCII art animation")
 
 function canvasToASCII(canvas) {
