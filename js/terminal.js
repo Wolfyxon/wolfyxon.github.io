@@ -512,6 +512,20 @@ registerCommand("neofetch",async function (){
     addEntry("User agent", navigator.userAgent)
     addEntry("Language", navigator.language)
 
+    const columns = 8
+    const colors = [
+        "black","darkred","limegreen","dodgerblue","mediumorchid","turquoise","whitesmoke",
+        "dimgray","red","lime","deepskyblue","fuchsia","cyan","white"
+    ]
+
+    addHtml(" ")
+    let colorHtml = ""
+    for(let i=0;i<colors.length;i++){
+        if(i===columns-1) colorHtml+="<br>"
+        const col = colors[i]
+        colorHtml += "<span style='background-color:"+col+"'>   </span>"
+    }
+    addHtml(colorHtml)
 
     html += "</div>"
     echoHTML(html)
