@@ -56,12 +56,6 @@ function echoInnerHTML(preHtml, colorClass="white", inline=false, bold=false){
     if(bold) line.style.fontWeight = "bold"
     return line
 }
-// Adds an HTML code to the output
-function echoHTML(html) {
-    const line = getTerminal()
-    line.innerHTML += html
-    return line
-}
 
 let commands = {}
 function registerCommand(alias, runner, description="No description available") {
