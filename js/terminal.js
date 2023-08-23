@@ -499,3 +499,20 @@ function canvasToASCII(canvas) {
     }
     return asciiArt
 }
+
+async function httpGet(url){
+    return new Promise(((resolve, reject) => {
+        var req = new XMLHttpRequest();
+        req.open("GET", url, true)
+        let res = null
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                if (req.status === 200 || req.status == 0) {
+                    res = req.responseText
+                    resolve(res)
+                }
+            }
+        }
+        req.send(null)
+    }))
+}
