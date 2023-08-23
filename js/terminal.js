@@ -48,7 +48,7 @@ function echo(text, colorClass="white", inline=false, bold=false) {
     return line
 }
 // Adds a <pre> with the specified HTML or text to the output
-function echoInnerHTML(preHtml, colorClass="white", inline=false, bold=false){
+function echoHTML(preHtml, colorClass="white", inline=false, bold=false){
     const line = addAndGetLine();
     line.innerHTML = preHtml
     line.className = colorClass
@@ -81,7 +81,7 @@ function execute(alias, args=[]) {
     const cmd = commands[alias]
     const runner = cmd.runner
     if( typeof runner == "string") {
-        echoInnerHTML(runner)
+        echoHTML(runner)
         return;
     }
     if( typeof runner == "function" ) {
@@ -143,7 +143,7 @@ function broadcastInput(clear=true){
     const cmd = document.createElement("pre")
     cmd.textContent = getInput().value
     cmd.style.display = "inline-block"
-    echoInnerHTML(preHtml,"",false).appendChild(cmd)
+    echoHTML(preHtml,"",false).appendChild(cmd)
 
     if(clear) getInput().value = ""
 }
@@ -190,18 +190,18 @@ window.addEventListener("load", () => {
 
     focusInput()
     clear()
-    echoInnerHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
-    echoInnerHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
+    echoHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
+    echoHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
              "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
              " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
              "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
              "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</center><br>","red")
-    echoInnerHTML("<center>Young passionate programmer</center>","purple")
-    echoInnerHTML("<center>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</center>","gray")
+    echoHTML("<center>Young passionate programmer</center>","purple")
+    echoHTML("<center>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</center>","gray")
 
     echo(" ")
 
-    echoInnerHTML("<center> <a href='https://github.com/Wolfyxon' class='lime'>GitHub</a> " +
+    echoHTML("<center> <a href='https://github.com/Wolfyxon' class='lime'>GitHub</a> " +
         "<a href='https://youtube.com/@Wolfyxon' class='red'>YouTube</a> " +
         "<a href='https://twitter.com/@Wolfyxon' class='lightblue'>Twitter</a> " +
         "<a href='https://discord.gg/RztUGCK' class='purple'>Discord</a> " +
@@ -211,12 +211,12 @@ window.addEventListener("load", () => {
     echo("- Something about me: -","red")
     echo("Hi, I'm Wolfyxon. A young male programmer from Poland. I mainly focus on making websites, tools and games.")
     echo("I also expand my skills outside the programming world, I can edit videos very well and I'm learning how to make music. I'm highly interested in psychology.")
-    echoInnerHTML("I'm an open source fan and I like having full control over my system (aka. I'm a nerd) so I use <span class='cyan'>Arch Linux</span> operating system as a daily driver.")
+    echoHTML("I'm an open source fan and I like having full control over my system (aka. I'm a nerd) so I use <span class='cyan'>Arch Linux</span> operating system as a daily driver.")
     echo("I also like gaming. I like sandbox, strategy and shooter games.")
     echo("My favourite music genres are Metal, Rock, Dubstep and Orchestral.")
     echo("I'm an extroverted introvert INFJ. I prefer being and working alone but I can be very helpful and social in a group.")
     echo("I am always calm and avoid arguments at any cost. I sense people's emotions and know how to support them.")
-    echoInnerHTML("I speak Pol<span class='red'>ish</span>, " +
+    echoHTML("I speak Pol<span class='red'>ish</span>, " +
         "fluent <span class='lightblue'>En<span class='white'>g<span class='red'>l</span>i</span>sh</span> and basic " +
         "<span class='gray'>Ge</span><span class='red'>rm</span><span class='gold'>an</span>.")
     echo(" ")
@@ -402,7 +402,7 @@ registerCommand("cat",function (args){
     const path = args[0]
     if(path === undefined) {
         echo("cat: no path specified")
-        echoInnerHTML("<img src='assets/img/dingus.jpg' width='300px'>")
+        echoHTML("<img src='assets/img/dingus.jpg' width='300px'>")
         return
     }
     const text = files[path]
@@ -410,7 +410,7 @@ registerCommand("cat",function (args){
         echo("cat: "+path+": No such file or directory")
         return;
     }
-    echoInnerHTML(text)
+    echoHTML(text)
 
 },"Reads contents of a text file (or shows a cute cat :3)")
 
@@ -432,7 +432,7 @@ registerCommand("badapple", function (){
     block(true)
     echo("If the playback is frozen, it's probably just loading. The conversion from video to ASCII art happens in real time.")
 
-    echoInnerHTML("<video id='ba-video' style='display: none'><source src='../assets/video/bad_apple.mp4' type='video/mp4'></video>" +
+    echoHTML("<video id='ba-video' style='display: none'><source src='../assets/video/bad_apple.mp4' type='video/mp4'></video>" +
         "<canvas id='ba-canvas' style='display: none'></canvas>")
 
     const text = echo("")
