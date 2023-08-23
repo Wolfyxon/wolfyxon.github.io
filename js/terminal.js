@@ -13,6 +13,31 @@ function addAndGetLine() {
     getTerminal().appendChild(pre)
     return pre
 }
+
+function getBrowserName() {
+    const names = {
+        "Edge (Chromium)": (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) && (navigator.userAgent.indexOf("Edg") != -1),
+        "Opera": (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+        "Firefox": typeof InstallTrigger !== 'undefined',
+        "Safari": /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification)),
+        "Internet Explorer": !!document.documentMode,
+        "Edge": !(!!document.documentMode) && !!window.StyleMedia,
+        "Chrome": (!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1) && (!!window.chrome.webstore || !!window.chrome.runtime),
+        "Chromium": (!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1),
+    };
+
+    for (const name in names) {
+        if (names.hasOwnProperty(name)) {  // Check if the property is directly on the object, not inherited
+            const condition = names[name];
+            if (condition) {
+                return name;
+            }
+        }
+    }
+    return "Unknown";
+}
+
+
 // Adds a <pre> with the specified non-HTML text to the output
 function echo(text, colorClass="white", inline=false, bold=false) {
     const line = addAndGetLine()
