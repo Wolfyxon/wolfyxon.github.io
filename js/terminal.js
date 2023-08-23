@@ -470,6 +470,56 @@ registerCommand("badapple", function (){
     echo("Press CTR+C or type ^C and press ENTER to stop.")
 },"Plays Bad Apple as an ASCII art animation")
 
+
+registerCommand("neofetch",async function (){
+    const asciis = JSON.parse(await httpGet("assets/browserASCIIArts.json"))
+    let ascii = asciis[getBrowserName()]
+    if(ascii === undefined) ascii = ""
+
+    let html = "<div style='display: inline-block; vertical-align: top'>"+ascii+"</div> <div style='display: inline-block; vertical-align: top'>"
+
+
+    const browserColors = {
+        "Firefox":"#FF5F2F",
+        "Chromium":"#4F89C5",
+        "Chrome":"#0D9853",
+        "Edge":"#35C2B3",
+        "Edge Legacy":"#0074D0",
+        "Opera":"#F71A2D",
+        "Safari":"#12ABEB",
+        "Internet Explorer":"#006BB2",
+    }
+    let color = browserColors[getBrowserName()]
+    if(color === undefined) color = "#B8B8B8"
+
+    function addHtml(htm){
+        html += "<pre>"+htm+"</pre>"
+    }
+
+    function getColored(label){
+        return "<span style='color: "+color+";'>"+label+"</span>"
+    }
+
+    function addEntry(label, value){
+        addHtml(getColored(label)+": "+value)
+    }
+
+    addHtml(" ")
+    addHtml(getColored("root")+"@"+getColored("wolfyxon"))
+    addHtml("-------------")
+    addEntry("OS",navigator.platform)
+    addEntry("Browser",getBrowserName())
+    addEntry("User agent", navigator.userAgent)
+    addEntry("Language", navigator.language)
+
+
+    html += "</div>"
+    echoHTML(html)
+
+},"Shows information about your browser")
+
+
+
 function canvasToASCII(canvas) {
     //i hate javascript
     const ctx = canvas.getContext("2d")
