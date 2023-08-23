@@ -511,6 +511,9 @@ registerCommand("neofetch",async function (){
     addEntry("Browser",getBrowserName())
     addEntry("User agent", navigator.userAgent)
     addEntry("Language", navigator.language)
+    addEntry("Resolution",window.screen.availWidth+"x"+window.screen.availHeight)
+    addEntry("Internet access",navigator.onLine)
+    addEntry("Do not track",navigator.doNotTrack)
 
     const columns = 8
     const colors = [
