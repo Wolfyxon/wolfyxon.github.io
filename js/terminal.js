@@ -509,7 +509,7 @@ registerCommand("neofetch",async function (){
     addHtml("-------------")
     addEntry("OS",navigator.platform)
     addEntry("Browser",getBrowserName())
-    addEntry("User agent", navigator.userAgent)
+    //addEntry("User agent", navigator.userAgent)
     addEntry("Language", navigator.language)
     addEntry("Resolution",window.screen.availWidth+"x"+window.screen.availHeight)
     addEntry("Internet access",navigator.onLine)
