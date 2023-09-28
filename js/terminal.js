@@ -470,6 +470,33 @@ registerCommand("badapple", function (){
     echo("Press CTR+C or type ^C and press ENTER to stop.")
 },"Plays Bad Apple as an ASCII art animation")
 
+registerCommand("dropbox",async function (args){
+    if(args.length === 0){
+        echo("bash: direct-dropbox: No URL specified. Use with --help for details")
+        return;
+    }
+    if(args[0].toLowerCase() === "--help"){
+        echo("Converts a DropBox link into a direct file download link.")
+        echo("You can convert multiple links by separating them with spaces.")
+        echo(" ")
+        echo("How it works?")
+        echo("yourString.replace(\"www.dropbox.com\",\"dl.dropboxusercontent.com\");")
+        echo(" ")
+        echo("It just replaces www.dropbox.com with l.dropboxusercontent.com,")
+        return;
+    }
+
+    const prefix = "www.dropbox.com"
+    for(let i=0;i<args.length;i++){
+        if(args[i].includes(prefix)){
+            const url = args[i].replace(prefix,"dl.dropboxusercontent.com");
+            echoHTML("<a href='"+url+"'>"+url+"</a>");
+        } else {
+            echo("bash: dropbox: Not a DropBox URL")
+        }
+
+    }
+},"Converts a DropBox link into a direct file download link. Use with --help to see how it works. ")
 
 registerCommand("neofetch",async function (){
     const asciis = JSON.parse(await httpGet("assets/browserASCIIArts.json"))
