@@ -482,7 +482,7 @@ registerCommand("dropbox",async function (args){
         echo("How it works?")
         echo("yourString.replace(\"www.dropbox.com\",\"dl.dropboxusercontent.com\");")
         echo(" ")
-        echo("It just replaces www.dropbox.com with l.dropboxusercontent.com,")
+        echo("It just replaces www.dropbox.com with dl.dropboxusercontent.com,")
         return;
     }
 
