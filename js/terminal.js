@@ -428,7 +428,7 @@ registerCommand("reboot", function (){
     window.location.reload()
 }, "Reloads the page")
 
-registerCommand("badapple", function (){
+registerCommand("badapple", function (args){
     block(true)
     echo("If the playback is frozen, it's probably just loading. The conversion from video to ASCII art happens in real time.")
 
@@ -463,7 +463,7 @@ registerCommand("badapple", function (){
         canvas.width = width
         canvas.height = height
         ctx.drawImage(video,0, 0, width, height)
-        text.innerHTML = canvasToASCII(canvas)
+        text.innerHTML = canvasToASCII(canvas,args[0])
 
     },10)
 
@@ -564,8 +564,9 @@ registerCommand("neofetch",async function (){
 
 
 
-function canvasToASCII(canvas) {
+function canvasToASCII(canvas,char) {
     //i hate javascript
+    if(char === undefined) char = "#"
     const ctx = canvas.getContext("2d")
     if(canvas.width === 0|| canvas.height === 0) return ""
     const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
@@ -576,7 +577,7 @@ function canvasToASCII(canvas) {
         const b = data[i + 2]
         const brightness = (3*r + 4*g + b) >>> 3;
         if (brightness > 51) {
-            asciiArt += "##"
+            asciiArt += char+char
 
         } else {
             asciiArt += "  "
