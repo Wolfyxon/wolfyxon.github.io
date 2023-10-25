@@ -227,6 +227,7 @@ window.addEventListener("load", () => {
     echo("C# ","magenta",true)
     echo("Java ","gold",true)
     echo("JavaScript ","yellow",true)
+    echo("TypeScript ","blue",true)
     echo("GDScript ","lightblue",true)
     echo("Lua ","blue",true)
     echo("Python ","yellow",true)
