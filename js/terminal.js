@@ -190,23 +190,23 @@ window.addEventListener("load", () => {
 
     focusInput()
     clear()
-    echoHTML("<center>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</center>","gray")
-    echoHTML("<center>__        _____  _     _______   ____  _____  _   _ <br>" +
+    echoHTML("<div class='center'>/=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\\</div>","gray")
+    echoHTML("<div class='center'>__        _____  _     _______   ____  _____  _   _ <br>" +
              "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
              " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
              "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
-             "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</center><br>","red")
-    echoHTML("<center>Young passionate programmer</center>","purple")
-    echoHTML("<center>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</center>","gray")
+             "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</div><br>","red")
+    echoHTML("<div class='center'>Young passionate programmer</div>","purple")
+    echoHTML("<div class='center'>\\=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/</div>","gray")
 
     echo(" ")
 
-    echoHTML("<center> <a href='https://github.com/Wolfyxon' class='lime'>GitHub</a> " +
+    echoHTML("<div class='center'> <a href='https://github.com/Wolfyxon' class='lime'>GitHub</a> " +
         "<a href='https://youtube.com/@Wolfyxon' class='red'>YouTube</a> " +
         "<a href='https://twitter.com/@Wolfyxon' class='lightblue'>Twitter</a> " +
         "<a href='https://discord.gg/RztUGCK' class='purple'>Discord</a> " +
         "<a href='https://soundcloud.com/wolfyxon' class='orange'>SoundCloud</a>" +
-        "</center>")
+        "</div>")
 
     echo(" ")
     echo("- Something about me: -","red")
