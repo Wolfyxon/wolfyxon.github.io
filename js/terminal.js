@@ -209,13 +209,11 @@ window.addEventListener("load", () => {
 
     echo(" ")
     echo("- Something about me: -","red")
-    echo("Hi, I'm Wolfyxon. A young male programmer from Poland. I mainly focus on making websites, tools and games.")
-    echo("I also expand my skills outside the programming world, I can edit videos very well and I'm learning how to make music. I'm highly interested in psychology.")
-    echoHTML("I'm an open source fan and I like having full control over my system (aka. I'm a nerd) so I use <span class='cyan'>Arch Linux</span> operating system as a daily driver.")
-    echo("I also like gaming. I like sandbox, strategy and shooter games.")
-    echo("My favourite music genres are Metal, Rock, Dubstep and Orchestral.")
-    echo("I'm an extroverted introvert INFJ. I prefer being and working alone but I can be very helpful and social in a group.")
-    echo("I am always calm and avoid arguments at any cost. I sense people's emotions and know how to support them.")
+    echo("I'm a young Polish programmer and gamer. I focus on making websites and tools, but I also have experience in gamedev.")
+    echo("I'm also experienced in editing videos and audio and I can make basic models in Blender.")
+    echo("I've also gotten into music production, I composed a few songs in LMMS and I'm currently learning how to play the piano.")
+    echo("My favorite music genres are, Rock, Heavy Metal, Dubstep and Orchestral.")
+    echo("Personally I'm an introvert and prefer working alone.")
     echoHTML("I speak Pol<span class='red'>ish</span>, " +
         "fluent <span class='lightblue'>En<span class='white'>g<span class='red'>l</span>i</span>sh</span> and basic " +
         "<span class='gray'>Ge</span><span class='red'>rm</span><span class='gold'>an</span>.")
