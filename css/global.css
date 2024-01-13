@@ -19,16 +19,6 @@ body {
     vertical-align: top;
     margin: 0;
 }
-#main, .side-menu {
-    display: inline-block;
-    height: 100%;
-}
-
-#container .side-menu {
-    width: 15%;
-    white-space: normal;
-    word-break: break-word;
-}
 
 #main {
     overflow-y: scroll;
@@ -37,6 +27,7 @@ body {
     border-top: 5px solid darkred;
     border-bottom: 5px solid darkred;
     box-sizing: border-box;
-    width: 69.5%;
+    width: 100%;
+    height: 100%;
     background-color: black;
 }
