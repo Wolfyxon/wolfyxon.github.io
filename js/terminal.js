@@ -93,7 +93,7 @@ function execute(alias, args=[]) {
 
 function removeFlags(args) {
     let res = []
-    for(var i=1;i<split.length;i++){
+    for(let i=1;i<split.length;i++){
         const arg = split[i];
         if(!arg.startsWith("--"))  res.push(arg)
     }
@@ -101,7 +101,7 @@ function removeFlags(args) {
 }
 function getFlags(args) {
     let res = []
-    for(var i=0;i<args.length;i++){
+    for(let i=0;i<args.length;i++){
         const arg = args[i];
         if(arg.startsWith("--")) res.push(arg.replace("--",""))
     }
@@ -263,7 +263,7 @@ window.addEventListener("load", () => {
 
 registerCommand("help", (args) => {
     const entries = Object.entries(commands)
-    for(var i=0;i<entries.length;i++){
+    for(let i=0;i<entries.length;i++){
         const alias = entries[i][0]
         const cmd = commands[alias]
         echo(alias+": "+cmd.description)
@@ -391,7 +391,7 @@ const files = {
 function listFiles(hidden=false) {
     let res = []
     const entries = Object.entries(files)
-    for(var i=0;i<entries.length;i++){
+    for(let i=0;i<entries.length;i++){
         const name = entries[i][0]
         if( hidden || (!name.startsWith(".") && !hidden) ) {
             res.push(name)
@@ -424,7 +424,7 @@ registerCommand("cat",function (args){
 registerCommand("ls", function (args){
     const files = listFiles( getFlags(args).includes("all") )
     let text = ""
-    for(var i=0;i<files.length;i++){
+    for(let i=0;i<files.length;i++){
         text += files[i] += " "
     }
     echo(text)
@@ -577,8 +577,8 @@ function canvasToASCII(canvas,char) {
     const ctx = canvas.getContext("2d")
     if(canvas.width === 0|| canvas.height === 0) return ""
     const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
-    var asciiArt = ""
-    for (var i=0;i<data.length;i+= 4) {
+    let asciiArt = ""
+    for (let i=0;i<data.length;i+= 4) {
         const r = data[i]
         const g = data[i + 1]
         const b = data[i + 2]
@@ -598,7 +598,7 @@ function canvasToASCII(canvas,char) {
 
 async function httpGet(url){
     return new Promise(((resolve, reject) => {
-        var req = new XMLHttpRequest();
+        let req = new XMLHttpRequest();
         req.open("GET", url, true)
         let res = null
         req.onreadystatechange = function () {
