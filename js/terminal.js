@@ -205,6 +205,7 @@ window.addEventListener("load", () => {
         "<a href='https://youtube.com/@Wolfyxon' class='red'>YouTube</a> " +
         "<a href='https://twitter.com/@Wolfyxon' class='lightblue'>Twitter</a> " +
         "<a href='https://discord.gg/RztUGCK' class='purple'>Discord</a> " +
+        "<a href='https://soundcloud.com/wolfyxon' class='orange'>SoundCloud</a>" +
         "</center>")
 
     echo(" ")
