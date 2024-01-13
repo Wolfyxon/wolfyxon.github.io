@@ -221,6 +221,13 @@ window.addEventListener("load", () => {
         "<span class='gray'>Ge</span><span class='red'>rm</span><span class='gold'>an</span>.")
     echo(" ")
 
+    echo("- Projects -", "red")
+    echoHTML('<a href="https://github.com/Wolfyxon/ItemLimiter">ItemLimiter</a> - a Minecraft Spigot plugin that limits some properties and NBT data of items to prevent shulker and book banning.')
+    echoHTML('<a href="https://github.com/Wolfyxon/godot-BetterEditorPlugin">Godot Better EditorPlugin</a> - an improved EditorPlugin for more access to the Godot Engine plugin API.')
+    echoHTML('<a href="https://www.roblox.com/games/10748929809/">The Great Doors of Door</a> - a parody Robolx game of DOORS that turned into something bigger.')
+    echoHTML('<a href="https://wolfyxon.github.io/3ds-web-stuff/">3DS web stuff</a> - a collection of browser games designed specifically for the Nintendo 3DS.')
+    echo(" ")
+
     echo("- Programming languages: -","red")
     echo("C ","cyan",true)
     echo("C++ ","lightblue",true)
