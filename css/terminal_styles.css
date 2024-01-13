@@ -4,6 +4,11 @@
 #terminal .nowrap {
     white-space: nowrap;
 }
+
+#terminal .center {
+    text-align: center;
+}
+
 #terminal .underline {
     text-decoration: underline;
 }
