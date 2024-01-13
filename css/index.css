@@ -74,6 +74,11 @@
     }
 }
 
+.ba-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 #terminal * {
     animation: fadein 0.3s;
