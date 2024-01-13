@@ -572,8 +572,7 @@ registerCommand("neofetch",async function (){
 
 
 function canvasToASCII(canvas,char) {
-    //i hate javascript
-    if(char === undefined) char = "#"
+    if (char === undefined) char = "##"
     const ctx = canvas.getContext("2d")
     if(canvas.width === 0|| canvas.height === 0) return ""
     const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data
@@ -584,10 +583,9 @@ function canvasToASCII(canvas,char) {
         const b = data[i + 2]
         const brightness = (3*r + 4*g + b) >>> 3;
         if (brightness > 51) {
-            asciiArt += char+char
-
+            asciiArt += char
         } else {
-            asciiArt += "  "
+            asciiArt += " ".repeat(char.length)
         }
         if ((i / 4 + 1) % canvas.width === 0) {
             asciiArt += "<br>"
