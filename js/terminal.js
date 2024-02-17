@@ -228,6 +228,7 @@ window.addEventListener("load", () => {
     echo(" ")
 
     echo("- Programming languages: -","red")
+    echo("Rust ","orange",true)
     echo("C ","cyan",true)
     echo("C++ ","lightblue",true)
     echo("C# ","magenta",true)
