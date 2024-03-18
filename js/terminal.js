@@ -225,6 +225,8 @@ window.addEventListener("load", () => {
     echoHTML('<a href="https://github.com/Wolfyxon/godot-BetterEditorPlugin">Godot Better EditorPlugin</a> - an improved EditorPlugin for more access to the Godot Engine plugin API.')
     echoHTML('<a href="https://www.roblox.com/games/10748929809/">The Great Doors of Door</a> - a parody Robolx game of DOORS that turned into something bigger.')
     echoHTML('<a href="https://wolfyxon.github.io/3ds-web-stuff/">3DS web stuff</a> - a collection of browser games designed specifically for the Nintendo 3DS.')
+    echoHTML('<a href="https://github.com/Wolfyxon/MinVideo">MinVideo</a> - Minimal easy to understand and implement video format.')
+
     echo(" ")
 
     echo("- Programming languages: -","red")
