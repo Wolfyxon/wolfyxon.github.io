@@ -320,7 +320,6 @@ const files = {
         "- Will Wood: Laplace's Angel <br>" +
         "- Toby Fox: BIG SHOT <br>" +
         "- Imagine Dragons: Sharks <br>" +
-        "- Red Hot Chili Peppers: Can't Stop <br>" +
         "- Kings of Leon: Closer <br>" +
         "- Twenty One Pilots: No Chances <br>",
 
