@@ -284,13 +284,12 @@ const files = {
         "- <span class='purple'>KaroleusPL</span> game developer, artist and composer <br>",
 
     "interests":
-        "- Psychology <br>" +
-        "- Military <br>" +
-        "- Survival <br>" +
-        "- Old tech <br>" +
-        "- Space <br>" +
-        "- History <br>" +
-        "- Geohraphy",
+        "1. Technology <br>" +
+        "2. Maps and geography <br>" +
+        "3. Language history <br>" +
+        "4. Space & science <br>" +
+        "5. History <br>" +
+        "6. Survival techniques",
 
     "hobbies":
         "- Coding <br>" +
