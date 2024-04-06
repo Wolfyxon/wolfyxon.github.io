@@ -276,6 +276,8 @@ const files = {
         "- <span class='purple'>KaroleusPL</span> game developer, artist and composer <br>",
 
     "interests":
+        "- Things that fascinate me - <br><br>" +
+
         "1. Technology <br>" +
         "2. Maps and geography <br>" +
         "3. Language history <br>" +
