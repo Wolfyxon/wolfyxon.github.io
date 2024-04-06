@@ -287,6 +287,7 @@ const files = {
         "7. Bad Apple",
 
     "hobbies":
+        "- Things I actively engage in - <br><br>" +
         "1. Programming <br>" +
         "2. Gaming <br>" +
         "3. Music production <br>" +
