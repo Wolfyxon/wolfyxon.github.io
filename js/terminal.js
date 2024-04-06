@@ -291,8 +291,9 @@ const files = {
         "1. Programming <br>" +
         "2. Gaming <br>" +
         "3. Music production <br>" +
-        "4. Vido editing <br>" +
-        "5. Drawing",
+        "4. Playing the piano <br>" +
+        "5. Vido editing <br>" +
+        "6. Drawing",
 
     "musicians": "- My favourite music bands and composers, and their best songs (may change from time to time): -<br><br>" +
         "Rock & Metal: <br>" +
