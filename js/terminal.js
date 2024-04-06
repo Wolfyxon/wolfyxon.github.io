@@ -281,7 +281,8 @@ const files = {
         "3. Language history <br>" +
         "4. Space & science <br>" +
         "5. History <br>" +
-        "6. Survival techniques",
+        "6. Survival techniques <br>" +
+        "7. Bad Apple",
 
     "hobbies":
         "1. Programming <br>" +
