@@ -16,7 +16,7 @@ function addAndGetLine() {
 
 function getBrowserName() {
     const names = {
-        "Edge": (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) && (navigator.userAgent.indexOf("Edg") != -1),
+        "Edge": (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) && (navigator.userAgent.indexOf("Edg") !== -1),
         "Opera": (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
         "Firefox": typeof InstallTrigger !== 'undefined',
         "Safari": /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification)),
@@ -80,11 +80,11 @@ function execute(alias, args=[]) {
     }
     const cmd = commands[alias]
     const runner = cmd.runner
-    if( typeof runner == "string") {
+    if( typeof runner === "string") {
         echoHTML(runner)
         return;
     }
-    if( typeof runner == "function" ) {
+    if( typeof runner === "function" ) {
         runner(args)
         return;
     }
@@ -603,7 +603,7 @@ async function httpGet(url){
         let res = null
         req.onreadystatechange = function () {
             if (req.readyState === 4) {
-                if (req.status === 200 || req.status == 0) {
+                if (req.status === 200 || req.status === 0) {
                     res = req.responseText
                     resolve(res)
                 }
