@@ -298,8 +298,6 @@ const files = {
         "4. Vido editing <br>" +
         "5. Drawing",
 
-    "ideology": "I hate myself, love others.",
-
     "musicians": "- My favourite music bands and composers: -<br><br>" +
         "Rock & Metal: <br>" +
         "- Rammstein <br>" +
