@@ -321,7 +321,8 @@ const files = {
         "- Toby Fox: BIG SHOT <br>" +
         "- Imagine Dragons: Sharks <br>" +
         "- Kings of Leon: Closer <br>" +
-        "- Twenty One Pilots: No Chances <br>",
+        "- Twenty One Pilots: No Chances <br>" +
+        "- One Republic: All The Right Moves",
 
     "ides":"- IDEs, game engines and code editors I use: -<br>" +
         "Game engines: <br>" +
