@@ -264,7 +264,7 @@ window.addEventListener("load", () => {
 })
 
 
-registerCommand("help", (args) => {
+registerCommand("help", (_args) => {
     const entries = Object.entries(commands)
     for(let i=0;i<entries.length;i++){
         const alias = entries[i][0]
@@ -597,7 +597,7 @@ function canvasToASCII(canvas,char) {
 }
 
 async function httpGet(url){
-    return new Promise(((resolve, reject) => {
+    return new Promise(((resolve, _reject) => {
         let req = new XMLHttpRequest();
         req.open("GET", url, true)
         let res = null
