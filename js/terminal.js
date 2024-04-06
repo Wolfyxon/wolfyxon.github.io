@@ -91,14 +91,6 @@ function execute(alias, args=[]) {
     console.error("No matching runner type")
 }
 
-function removeFlags(args) {
-    let res = []
-    for(let i=1;i<split.length;i++){
-        const arg = split[i];
-        if(!arg.startsWith("--"))  res.push(arg)
-    }
-    return res
-}
 function getFlags(args) {
     let res = []
     for(let i=0;i<args.length;i++){
