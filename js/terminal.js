@@ -298,39 +298,39 @@ const files = {
         "4. Vido editing <br>" +
         "5. Drawing",
 
-    "musicians": "- My favourite music bands and composers: -<br><br>" +
+    "musicians": "- My favourite music bands and composers, and their best songs (may change from time to time): -<br><br>" +
         "Rock & Metal: <br>" +
-        "- Rammstein <br>" +
-        "- Korn <br>" +
-        "- SABATON <br>" +
-        "- System of Down <br>" +
-        "- Linkin Park <br>" +
-        "- Coma <br>" +
-        "- Tool <br>" +
-        "- Limp Bizkit <br>" +
-        "- Metalica <br>" +
+        "- Rammstein: Mein Land <br>" +
+        "- Korn: (hard to tell, all are nice) <br>" +
+        "- SABATON: Father <br>" +
+        "- System of Down: IEAIAIO <br>" +
+        "- Linkin Park: Faint <br>" +
+        "- Coma: Osobowy <br>" +
+        "- Tool: Schism <br>" +
+        "- Limp Bizkit:  Nookie <br>" +
+        "- Metalica: If Darkness Had a Son <br>" +
 
         "Dubstep: <br>" +
-        "- Kane Pixels <br>" +
-        "- Marek Hemman <br>" +
-        "- Clubroot <br>" +
-        "- Mooryc <br>" +
+        "- Kane Pixels: Active Field <br>" +
+        "- Marek Hemman: Lindwurm <br>" +
+        "- Clubroot: The Straight And Narrow <br>" +
+        "- Mooryc: Dive <br>" +
 
-        "Orchestral:<br>" +
-        "- Hans Zimmer <br>" +
-        "- Approaching Nirvana <br>" +
+        "Orchestral: <br>" +
+        "- Hans Zimmer: Interstellar - The Docking Scene <br>" +
+        "- Approaching Nirvana: Dunegon Of Deceit <br>" +
 
         "Other: <br>" +
-        "- KaroleusPL <br>" +
-        "- Hakita <br>" +
-        "- KEYGEN CHURCH <br>" +
-        "- SKALD <br>" +
-        "- Will Wood <br>" +
-        "- Toby Fox <br>" +
-        "- Imagine Dragons <br>" +
-        "- Red Hot Chili Peppers <br>" +
-        "- Kings of leon <br>" +
-        "- Twenty One Pilots <br>",
+        "- KaroleusPL: Hide In The Dark (not public) <br>" +
+        "- Hakita: War <br>" +
+        "- KEYGEN CHURCH: Tenebre Rosso Sangue <br>" +
+        "- SKALD: Ó Valhalla <br>" +
+        "- Will Wood: Laplace's Angel <br>" +
+        "- Toby Fox: BIG SHOT <br>" +
+        "- Imagine Dragons: Sharks <br>" +
+        "- Red Hot Chili Peppers: Can't Stop <br>" +
+        "- Kings of Leon: Closer <br>" +
+        "- Twenty One Pilots: No Chances <br>",
 
     "ides":"- IDEs, game engines and code editors I use: -<br>" +
         "Game engines: <br>" +
