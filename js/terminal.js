@@ -343,9 +343,7 @@ const files = {
         "- Visual Studio Code <br>" +
         "IDEs: <br>" +
         "- Webstorm <br>" +
-        "- IntelIJ IDEA <br>" +
-        "- PyCharm <br>" +
-        "- CLion <br>",
+        "- IntelIJ IDEA <br>",
 
     "software": "- Software I use or have experience with: - <br>" +
         "For programming related software, use 'cat ides' <br>" +
