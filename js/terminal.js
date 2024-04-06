@@ -304,6 +304,8 @@ const files = {
         "- Korn <br>" +
         "- SABATON <br>" +
         "- System of Down <br>" +
+        "- Linkin Park <br>" +
+        "- Coma <br>" +
         "- Tool <br>" +
         "- Limp Bizkit <br>" +
         "- Metalica <br>" +
@@ -320,6 +322,8 @@ const files = {
 
         "Other: <br>" +
         "- KaroleusPL <br>" +
+        "- Hakita <br>" +
+        "- KEYGEN CHURCH <br>" +
         "- SKALD <br>" +
         "- Will Wood <br>" +
         "- Toby Fox <br>" +
