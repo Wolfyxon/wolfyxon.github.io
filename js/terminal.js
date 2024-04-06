@@ -307,7 +307,7 @@ const files = {
         "- Linkin Park: Faint <br>" +
         "- Coma: Osobowy <br>" +
         "- Tool: Schism <br>" +
-        "- Limp Bizkit:  Nookie <br>" +
+        "- Limp Bizkit: Nookie <br>" +
         "- Metalica: If Darkness Had a Son <br>" +
 
         "Dubstep: <br>" +
