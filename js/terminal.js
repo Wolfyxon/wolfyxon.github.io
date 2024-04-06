@@ -292,11 +292,11 @@ const files = {
         "6. Survival techniques",
 
     "hobbies":
-        "- Coding <br>" +
-        "- Gaming <br>" +
-        "- Drawing <br>" +
-        "- Listening to music <br>" +
-        "- Editing videos",
+        "1. Programming <br>" +
+        "2. Gaming <br>" +
+        "3. Music production <br>" +
+        "4. Vido editing <br>" +
+        "5. Drawing",
 
     "ideology": "I hate myself, love others.",
 
