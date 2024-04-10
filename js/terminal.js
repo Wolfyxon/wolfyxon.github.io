@@ -376,7 +376,7 @@ const files = {
         "- Roblox <br>" +
         "- Phasmophobia <br>" +
         "- sand:box <br>" +
-        "- Pople Playground <br>" +
+        "- People Playground <br>" +
         "- Half Life (all games) <br>" +
         "- SCP: Secret Laboratory <br>" +
         "- Warzone 2100 <br>" +
