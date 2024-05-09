@@ -231,6 +231,7 @@ window.addEventListener("load", () => {
     echo("JavaScript ","yellow",true)
     echo("GDScript ","lightblue",true)
     echo("Lua ","blue",true)
+    echo("Luau ","lightblue",true)
     echo("Python ","yellow",true)
     echo("Bash","silver",true)
     echo(" ")
