@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --panel: #3e3d3f;
+    --panel-dark: #282829;
+}
+
+body, html {
+    padding: 0;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    height: auto;
+}
+
+@media all and (orientation: portrait) {
+    body, html {
+        width: 100%;
+    }
+}
+
+body {
+    color: white;
+    background-color: #1b1b1d;
+    font-family: "Roboto";
+}
+
+a {
+    color: white;
+}
+
+/* --== Header ==-- */
+#header {
+    background-color: var(--panel-dark);
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+/* Navigator */
+nav {
+    background-color: var(--panel);
+    width: 70%;
+    height: 100%;
+    vertical-align: top;
+    transform: skew(-20deg);
+    display: inline-block;
+}
+
+nav > * {
+    transform: skew(20deg);
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+    height: 100%;
+    transition: 0.1s;
+}
+
+nav a > div {
+    margin-top: 15px;
+}
+
+nav a:hover {
+    background-color: var(--panel-dark);
+    transition: 0.1s;
+}
+
+/* Title */
+#header-title {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 29%;
+    color: red;
+    transform: skew(-20deg);
+}
+
+#header-title > * {
+    position: absolute;
+    top: 25%;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    transform: skew(20deg);
+}

@@ -1,0 +1,7 @@
+# Dirs
+.idea/
+.vscode/
+
+# File formats
+*.bak
+*~
