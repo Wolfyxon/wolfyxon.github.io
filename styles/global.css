@@ -44,6 +44,13 @@ nav {
     overflow: hidden;
 }
 
+@media all and (orientation: portrait) {
+    nav {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 nav > * {
     transform: skew(20deg);
 }
