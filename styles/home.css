@@ -131,11 +131,15 @@
     }
 
     #project-list > * {
-        height: 90vw;
+        height: 122vw;
+    }
+
+    .project-text {
+        width: 100%;
     }
 
     #project-list > * > img {
-        margin-top: 10px;
+        margin-top: 10vw;
         position: inherit;
         width: 100%;
         height: auto;
