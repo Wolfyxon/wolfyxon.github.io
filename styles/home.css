@@ -48,6 +48,46 @@
     transition: 0.1s;
 }
 
+#project-list > * {
+    position: relative;
+    background: var(--panel-dark);
+    height: 15vw;
+}
+
+#project-list > * > img {
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.project-text {
+    padding: 1%;
+    display: inline-block;
+}
+
+.project-text p {
+    padding: 5%;
+}
+
+.project-text a {
+    outline: white 1px solid;
+    text-decoration: none;
+    padding: 5% 10%;
+    background: black;
+    transition: 0.2s;
+}
+
+.project-text a:hover {
+    color: black;
+    background: white;
+    transition: 0.2s;
+}
+
+.project-text a::after {
+    content: " >";
+    margin-left: 10px;
+    font-weight: bold;
+}
 
 @keyframes fly-in {
     0% {
@@ -85,5 +125,17 @@
 
     #socials a {
         width: 6vw;
+    }
+
+    #project-list > * {
+        height: 90vw;
+    }
+
+    #project-list > * > img {
+        margin-top: 10px;
+        position: inherit;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
