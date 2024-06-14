@@ -139,6 +139,10 @@
         width: 100%;
     }
 
+    .project-text {
+        text-align: center;
+    }
+
     #project-list > * > img {
         margin-top: 10vw;
         position: inherit;
