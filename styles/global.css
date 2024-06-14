@@ -45,6 +45,7 @@ nav {
     vertical-align: top;
     transform: skew(-20deg);
     display: inline-block;
+    overflow: hidden;
 }
 
 nav > * {
