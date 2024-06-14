@@ -75,6 +75,7 @@
 .project-text a {
     outline: white 1px solid;
     text-decoration: none;
+    margin-right: 10px;
     padding: 20px;
     background: black;
     transition: 0.2s;
