@@ -73,7 +73,25 @@ nav a:hover {
     transition: 0.1s;
 }
 
-/* --== Page content container ==-- */
+/* --== Footer ==-- */
+
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background: var(--panel);
+    position: absolute;
+    bottom: 0;
+}
+
+footer > div a {
+    padding-right: 1%;
+}
+
+/* --== Other ==-- */
 
 #main {
     padding: 1%;
