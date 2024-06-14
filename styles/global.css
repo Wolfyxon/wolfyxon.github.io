@@ -3,6 +3,7 @@
 :root {
     --panel: #3e3d3f;
     --panel-dark: #282829;
+    --primary: rgb(114, 0, 0);
 }
 
 body, html {
@@ -31,17 +32,33 @@ a {
     height: 50px;
 }
 
+#header > * {
+    margin-left: -30px;
+    padding-left: 30px;
+}
+
+/* Title */
+#header-title {
+    width: 65%;
+    font-weight: bold;
+    background-color: var(--primary);
+    transform: skew(20deg);
+}
+
+#header-title a {
+    display: block;
+    text-decoration: none;
+    font-size: 150%;
+    padding: 10px;
+    transform: skew(-20deg);
+}
 
 /* Navigator */
 nav {
     background: var(--panel);
     width: 70%;
     height: 100%;
-    margin-left: -30px;
-    padding-left: 30px;
-    vertical-align: top;
     transform: skew(-20deg);
-    display: inline-block;
     overflow: hidden;
 }
 
