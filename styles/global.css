@@ -88,3 +88,10 @@ nav a:hover {
     text-align: center;
     transform: skew(20deg);
 }
+
+/* --== Page content container ==-- */
+
+#main {
+    padding: 1%;
+    margin-top: 10px;
+}
