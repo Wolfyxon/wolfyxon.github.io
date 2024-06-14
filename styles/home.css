@@ -18,6 +18,29 @@
     width: 30vw;
 }
 
+#socials {
+    border-radius: 20px;
+    width: 60%;
+    height: 50px;
+    background-color: var(--panel-dark);
+    padding: 1%;
+}
+
+#socials a {
+    display: inline-block;
+    height: 100%;
+    transition: 0.1s;
+}
+
+#socials a:hover {
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
+#socials a > img {
+    height: 100%;
+}
+
 @keyframes banner-text-fly-in {
     0% {
         margin-left: -10%;
