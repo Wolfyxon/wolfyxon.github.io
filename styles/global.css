@@ -34,6 +34,8 @@ nav {
     background: var(--panel);
     width: 70%;
     height: 100%;
+    margin-left: -30px;
+    padding-left: 30px;
     vertical-align: top;
     transform: skew(-20deg);
     display: inline-block;
