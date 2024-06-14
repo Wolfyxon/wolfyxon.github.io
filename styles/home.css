@@ -63,4 +63,9 @@
     #banner-logo {
         width: 50vw;
     }
+
+    #socials {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
