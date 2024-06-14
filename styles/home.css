@@ -1,3 +1,27 @@
+.anim-left {
+    margin-left: -50%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.anim-left.visible {
+    margin-left: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.anim-right {
+    margin-right: 50%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.anim-right.visible {
+    margin-right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
 #banner {
     height: 30vw;
     background-image: url(../media/img/home/banner.png);
@@ -5,13 +29,12 @@
     background-repeat: no-repeat;
 }
 
-#banner > * {
+#banner > * > * {
     display: inline-block;
     vertical-align: top;
 }
 
 #banner-text {
-    animation: fly-in 1s;
     font-size: 2vw;
     width: 60%;
 }
@@ -93,14 +116,6 @@
     content: " >";
     margin-left: 10px;
     font-weight: bold;
-}
-
-@keyframes fly-in {
-    0% {
-        margin-left: -10%;
-        opacity: 0;
-    }
-    
 }
 
 @media all and (orientation: portrait) {
