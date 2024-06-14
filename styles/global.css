@@ -22,7 +22,7 @@ body, html {
 
 body {
     color: white;
-    background-color: #1b1b1d;
+    background: #1b1b1d;
     font-family: "Roboto";
 }
 
@@ -39,7 +39,7 @@ a {
 
 /* Navigator */
 nav {
-    background-color: var(--panel);
+    background: var(--panel);
     width: 70%;
     height: 100%;
     vertical-align: top;
@@ -65,13 +65,13 @@ nav a > div {
 }
 
 nav a:hover {
-    background-color: var(--panel-dark);
+    background: var(--panel-dark);
     transition: 0.1s;
 }
 
 /* Title */
 #header-title {
-    background-color: var(--panel-dark);
+    background: var(--panel-dark);
     position: relative;
     display: inline-block;
     height: 100%;

@@ -22,7 +22,7 @@
     border-radius: 20px;
     width: 60%;
     height: 40px;
-    background-color: var(--panel-dark);
+    background: var(--panel-dark);
     padding: 1%;
 }
 
