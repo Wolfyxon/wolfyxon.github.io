@@ -29,6 +29,8 @@
 #socials a {
     display: inline-block;
     height: 100%;
+    width: 2.5vw;
+    text-align: center;
     transition: 0.1s;
     margin-right: 5px;
 }
@@ -73,5 +75,9 @@
         height: 4vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #socials a {
+        width: 6vw;
     }
 }
