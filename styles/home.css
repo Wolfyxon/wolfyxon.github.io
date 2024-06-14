@@ -30,6 +30,7 @@
     display: inline-block;
     height: 100%;
     transition: 0.1s;
+    margin-right: 5px;
 }
 
 #socials a:hover {
