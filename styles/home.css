@@ -11,7 +11,7 @@
 }
 
 #banner-text {
-    animation: banner-text-fly-in 1s;
+    animation: fly-in 1s;
     font-size: 2vw;
     width: 60%;
 }
@@ -49,7 +49,7 @@
 }
 
 
-@keyframes banner-text-fly-in {
+@keyframes fly-in {
     0% {
         margin-left: -10%;
         opacity: 0;
