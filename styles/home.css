@@ -51,7 +51,9 @@
 #project-list > * {
     position: relative;
     background: var(--panel-dark);
-    height: 15vw;
+    min-height: 20vw;
+    height: fit-content;
+    margin-bottom: 10px;
 }
 
 #project-list > * > img {
@@ -63,16 +65,17 @@
 .project-text {
     padding: 1%;
     display: inline-block;
+    width: 50%;
 }
 
 .project-text p {
-    padding: 5%;
+    padding: 3% 0;
 }
 
 .project-text a {
     outline: white 1px solid;
     text-decoration: none;
-    padding: 5% 10%;
+    padding: 20px;
     background: black;
     transition: 0.2s;
 }
