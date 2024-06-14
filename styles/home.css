@@ -1,3 +1,7 @@
+#main {
+    margin-top: -10px !important;
+}
+
 
 #banner {
     height: 30vw;
@@ -59,7 +63,13 @@
 }
 
 @media all and (orientation: portrait) {
+    #main {
+        margin-top: -40px !important;
+    }
+    
+
     #banner {
+        padding-top: 20px;
         text-align: center;
         height: 70vw;
         background-size: 200% 120%;
