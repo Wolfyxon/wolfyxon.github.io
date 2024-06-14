@@ -1,6 +1,6 @@
 
 #banner {
-    height: 500px;
+    height: 30vw;
 }
 
 #banner > * {
@@ -53,6 +53,7 @@
 @media all and (orientation: portrait) {
     #banner {
         text-align: center;
+        height: 70vw;
     }
     
     #banner-text {
