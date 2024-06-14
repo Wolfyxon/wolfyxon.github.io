@@ -103,8 +103,6 @@ footer {
     margin-right: auto;
     box-sizing: border-box;
     background: var(--panel);
-    position: absolute;
-    bottom: 0;
 }
 
 footer > div a {
