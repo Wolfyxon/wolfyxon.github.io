@@ -1,0 +1,34 @@
+
+#banner {
+    height: 500px;
+}
+
+#banner > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#banner-text {
+    font-size: 2vw;
+    width: 60%;
+}
+
+#banner-logo {
+    width: 30vw;
+}
+
+@media all and (orientation: portrait) {
+    #banner {
+        text-align: center;
+    }
+    
+    #banner-text {
+        margin-top: 0;
+        width: 100%;
+        display: block;
+    }
+
+    #banner-logo {
+        width: 50vw;
+    }
+}
