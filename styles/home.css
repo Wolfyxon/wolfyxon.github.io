@@ -24,6 +24,15 @@
     transition: 1s;
 }
 
+.anim-fade {
+    transition: 1s;
+    opacity: 0;
+}
+.anim-fade.visible {
+    transition: 1s;
+    opacity: 1;
+}
+
 #banner {
     height: 30vw;
     background-image: url(../media/img/home/banner.png);

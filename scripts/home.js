@@ -34,6 +34,8 @@ window.addEventListener("load", () => {
         }
 
         // Finish
+        div.classList = "observing anim-fade";
+        global.observer.observe(div);
         div.append(text, img);
         tmpProjectListFrag.append(div);
     }
