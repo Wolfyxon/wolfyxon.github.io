@@ -38,7 +38,47 @@ window.addEventListener("load", () => {
         tmpProjectListFrag.append(div);
     }
 
+    registerProject(
+        "The Great Doors of Door", 
+        "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
+        "media/img/home/projectThumbnails/tgdod.webp", 
+        [{
+            text: "Play on Roblox", 
+            url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
+        }]
+    );
 
+    registerProject(
+        "3DS Web stuff",
+        "A collection of browser games and tools made for the Nintendo 3DS browser.",
+        "",
+        [
+            {
+                text: "Visit the site",
+                url: "https://wolfyxon.github.io/3ds-web-stuff"
+            },
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/3ds-web-stuff"
+            }
+        ]
+    );
+
+    registerProject(
+        "MinVideo",
+        "Easy to implement uncompressed video format for limited environments.",
+        "",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/MinVideo"
+            },
+            {
+                text: "Web player",
+                url: "https://wolfyxon.github.io/MinVideo/js/test"
+            }
+        ]
+    );
 
     projectList.append(tmpProjectListFrag);
 
