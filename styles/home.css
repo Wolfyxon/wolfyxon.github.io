@@ -33,14 +33,17 @@
     margin-right: 5px;
 }
 
-#socials a:hover {
-    opacity: 0.8;
+
+#socials a > img {
+    filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(500%);
+    height: 100%;
+}
+
+#socials a:hover > img {
+    filter: sepia(0%) saturate(0%);
     transition: 0.1s;
 }
 
-#socials a > img {
-    height: 100%;
-}
 
 @keyframes banner-text-fly-in {
     0% {
