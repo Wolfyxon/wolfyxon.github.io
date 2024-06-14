@@ -37,12 +37,12 @@
 
 
 #socials a > img {
-    filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(500%);
+    filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(900%);
     height: 100%;
 }
 
 #socials a:hover > img {
-    filter: sepia(0%) saturate(0%);
+    filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(0%);
     transition: 0.1s;
 }
 
