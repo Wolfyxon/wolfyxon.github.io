@@ -12,6 +12,7 @@ body, html {
     margin-right: auto;
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 body {
@@ -96,4 +97,5 @@ footer > div a {
 #main {
     padding: 1%;
     margin-top: 10px;
+    min-height: 1000px;
 }
