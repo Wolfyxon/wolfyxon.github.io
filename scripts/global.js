@@ -1,5 +1,4 @@
-window.addEventListener("scroll", () => {
-
+window.addEventListener("load", () => {
     const observer = new IntersectionObserver((entries, obs) => {
         for(const entry of entries) {
             entry.target.classList.toggle("visible", entry.isIntersecting);
