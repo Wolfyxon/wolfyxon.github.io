@@ -62,26 +62,6 @@ nav a:hover {
     transition: 0.1s;
 }
 
-/* Title */
-#header-title {
-    background: var(--panel-dark);
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    width: 29%;
-    color: red;
-    transform: skew(-20deg);
-}
-
-#header-title > * {
-    position: absolute;
-    top: 25%;
-    font-size: 1em;
-    width: 100%;
-    text-align: center;
-    transform: skew(20deg);
-}
-
 /* --== Page content container ==-- */
 
 #main {
