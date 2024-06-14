@@ -58,6 +58,8 @@
 
 #project-list > * > img {
     height: 100%;
+    max-width: 45%;
+    object-fit: contain;
     position: absolute;
     right: 0;
 }
