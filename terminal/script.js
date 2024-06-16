@@ -1,3 +1,5 @@
+/* --== Getters ==-- */
+
 function getConsole() {
     return document.getElementById("console");
 }
@@ -9,6 +11,8 @@ function getPrompt() {
 function getInput() {
     return document.getElementById("input");
 }
+
+/* --== Printing ==-- */
 
 function echoHTML(html) {
    getConsole().innerHTML += html;
