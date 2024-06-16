@@ -175,6 +175,11 @@
         width: 6vw;
     }
 
+    #software > div {
+        text-align: center;
+        width: 100%;
+    }
+
     #project-list > * {
         height: 122vw;
     }
