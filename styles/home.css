@@ -82,6 +82,22 @@
     transition: 0.1s;
 }
 
+#software > div {
+    width: 60%;
+    height: fit-content;
+    padding: 1%;
+    background: var(--panel-dark);
+}
+
+#software > div > img {
+    display: inline-block;
+    width: 40px;
+    margin-right: 2px;
+    padding: 1%;
+    border-radius: 20%;
+    background-color: var(--panel);
+}
+
 #project-list > * {
     position: relative;
     background: var(--panel-dark);
