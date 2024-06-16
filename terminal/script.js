@@ -131,7 +131,11 @@ function execute(text) {
     let args = [];
     let flags = [];
 
-    for(const param of split) {
+    for(let i = 0; i < split.length; i++) {
+        if(i === 0) continue;
+        
+        const param = split[i];
+
         if(param.startsWith("--")) {
             flags.push(param.replace("--", ""));
         } else {
