@@ -57,8 +57,12 @@ class CommandContext {
 class Command {
     constructor(prefixes) {
         this.prefixes = prefixes;
+        this.description = "";
         this.args = [];
-        
+    }
+
+    setDescription(description) {
+        this.description = description;
     }
 
     setCallback(callback) {
@@ -133,7 +137,7 @@ function execute(text) {
 
     for(let i = 0; i < split.length; i++) {
         if(i === 0) continue;
-        
+
         const param = split[i];
 
         if(param.startsWith("--")) {
