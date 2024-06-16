@@ -37,6 +37,7 @@ function execute(text) {
     let split = [];
 
     const chars = text.split("");
+    if(chars.length === 0) return;
 
     let current = "";
     let strOpen = null;
