@@ -39,6 +39,10 @@ function sendText(text) {
     echo(prefix + " " + text);
 }
 
+function focusInput() {
+    getInput().focus();
+}
+
 window.addEventListener("load", () => {
     const input = getInput();
     
@@ -49,4 +53,8 @@ window.addEventListener("load", () => {
             sendText(input.value);
         }
     });
+
+    document.getElementById("main").addEventListener("click", focusInput);
+
+    focusInput();
 });
