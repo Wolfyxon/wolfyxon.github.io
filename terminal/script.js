@@ -34,11 +34,11 @@ function echo(text) {
 /* --== Command processing ==-- */
 
 function execute(text) {    
-    let split = [];
-
     const chars = text.split("");
     if(chars.length === 0) return;
 
+    // Split the string by spaces, " and '
+    let split = [];
     let current = "";
     let strOpen = null;
     for(const char of chars) {
@@ -70,6 +70,8 @@ function execute(text) {
         split.push(current);
     }
 
+    // Separate arguments from flags
+
     let args = [];
     let flags = [];
 
@@ -80,6 +82,8 @@ function execute(text) {
             args.push(param);
         }
     }
+
+    // Execute the command
 }
 
 /* --== Input processing ==-- */
