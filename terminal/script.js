@@ -117,14 +117,7 @@ function execute(text) {
                 if(char == strOpen) {
                     strOpen = null;
                 }
-            } else {function getCommand(alias) {
-                for(const cmd of commands) {
-                    if(cmd.aliases.includes(alias)) {
-                        return cmd;
-                    }
-                }
-            }
-            
+            } else {
                 strOpen = char;
             }
         } else {
