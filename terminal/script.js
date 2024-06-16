@@ -33,6 +33,62 @@ function echo(text) {
 
 /* --== Command processing ==-- */
 
+class CommandContext {
+    constructor(command, args, flags) {
+        this.argValues = {};
+        this.command = command;
+        this.args = args;
+        this.flags = flags;
+
+        for(let i = 0; i < args.length; i++) {
+            const arg = args[i];
+            const argInfo = this.command.args[i];
+            if(!argInfo) break;
+
+            this.argValues[argInfo.name] = arg;
+        }
+    }
+
+    getArg(name) {
+        return this.argValues[name];
+    }
+}
+
+class Command {
+    constructor(prefixes) {
+        this.prefixes = prefixes;
+        this.args = [];
+        
+    }
+
+    setCallback(callback) {
+        this.callback = callback;
+
+        return this;
+    }
+
+    addArg(name, description, required) {
+        this.args.push({
+            name: name,
+            description: description,
+            required: required
+        });
+
+        return this;
+    }
+
+    execute(args, flags) {
+        const ctx = new CommandContext(this, args, flags);
+        console.log(ctx)
+        this.callback(ctx);
+    }
+}
+
+function registerCommand(command) {
+    commands.push(command);
+}
+
+
 function execute(text) {    
     const chars = text.split("");
     if(chars.length === 0) return;
@@ -84,6 +140,17 @@ function execute(text) {
     }
 
     // Execute the command
+    const prefix = split[0];
+
+    for(const cmd of commands) {
+
+        if(cmd.prefixes.includes(prefix)) {
+            cmd.execute(args, flags);
+            return;
+        }
+    }
+
+    echo(`bash: ${prefix}: command not found`);
 }
 
 /* --== Input processing ==-- */
