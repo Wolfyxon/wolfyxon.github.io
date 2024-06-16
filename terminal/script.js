@@ -63,6 +63,8 @@ class Command {
 
     setDescription(description) {
         this.description = description;
+
+        return this;
     }
 
     setCallback(callback) {
