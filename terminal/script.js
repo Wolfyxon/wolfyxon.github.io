@@ -41,13 +41,23 @@ function execute(text) {
     let current = "";
     let strOpen = null;
     for(const char of chars) {
-        if(strOpen) {
-            if(char == strOpen) strOpen = null;
-        } else {
-            if(char == "\"" || char == "'") {
+        if(char == "\"" || char == "'") {
+            if(strOpen) {
+                if(char == strOpen) {
+                    strOpen = null;
+                }
+            } else {
                 strOpen = char;
             }
+        } else {
+            if(char == " " && !strOpen) {
+                split.push(current);
+                current = "";
+                continue;
+            }
         }
+
+        current += char;
     }
 
     if(strOpen) {
@@ -55,6 +65,11 @@ function execute(text) {
         return;
     }
 
+    if(current != "") {
+        split.push(current);
+    }
+
+    
 }
 
 /* --== Input processing ==-- */
