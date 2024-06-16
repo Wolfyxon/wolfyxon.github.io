@@ -69,7 +69,16 @@ function execute(text) {
         split.push(current);
     }
 
-    
+    let args = [];
+    let flags = [];
+
+    for(const param of split) {
+        if(param.startsWith("--")) {
+            flags.push(param.replace("--", ""));
+        } else {
+            args.push(param);
+        }
+    }
 }
 
 /* --== Input processing ==-- */
