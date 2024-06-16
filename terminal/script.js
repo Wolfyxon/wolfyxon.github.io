@@ -85,7 +85,6 @@ class Command {
 
     execute(args, flags) {
         const ctx = new CommandContext(this, args, flags);
-        console.log(ctx)
         this.callback(ctx);
     }
 }
