@@ -1,6 +1,8 @@
 let allowInput = true;
 let commandActive = false;
 
+const commands = [];
+
 /* --== Getters ==-- */
 
 function getConsole() {
@@ -28,6 +30,33 @@ function echo(text) {
     getConsole().append(pre);
 }
 
+
+/* --== Command processing ==-- */
+
+function execute(text) {    
+    let split = [];
+
+    const chars = text.split("");
+
+    let current = "";
+    let strOpen = null;
+    for(const char of chars) {
+        if(strOpen) {
+            if(char == strOpen) strOpen = null;
+        } else {
+            if(char == "\"" || char == "'") {
+                strOpen = char;
+            }
+        }
+    }
+
+    if(strOpen) {
+        echo(`error: Expected closing ${strOpen}`)
+        return;
+    }
+
+}
+
 /* --== Input processing ==-- */
 
 function sendText(text) {
@@ -37,6 +66,8 @@ function sendText(text) {
     if(!commandActive) prefix = getPrompt().innerText;
 
     echo(prefix + " " + text);
+
+    if(!commandActive) execute(text);
 }
 
 function focusInput() {
@@ -50,7 +81,9 @@ window.addEventListener("load", () => {
         if(document.activeElement !== input) return;
 
         if(e.key == "Enter") {
-            sendText(input.value);
+            const txt = input.value;
+            input.value = "";
+            sendText(txt);
         }
     });
 
