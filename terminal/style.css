@@ -19,6 +19,11 @@ body {
     background: radial-gradient(black, #232323);
 }
 
+#main pre {
+    padding: 0;
+    margin: 0;
+}
+
 #input-container {
     height: fit-content;
 }
