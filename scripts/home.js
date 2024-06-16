@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
         // Thumbnail
         const img = document.createElement("img")
         img.src = thumbnail;
-        img.alt = name + " thumbnail";
+        img.alt = "No thumbnail available";
 
         // .project-text
         const text = document.createElement("div");
