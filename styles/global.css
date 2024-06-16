@@ -45,6 +45,12 @@ header > * {
     font-weight: bold;
     background-color: var(--primary);
     transform: skew(20deg);
+    transition: 0.1s;
+}
+
+#header-title:hover {
+    filter: brightness(120%);
+    transition: 0.1s;
 }
 
 #header-title a {
