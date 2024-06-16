@@ -94,6 +94,14 @@ function registerCommand(command) {
     commands.push(command);
 }
 
+function getCommand(alias) {
+    for(const cmd of commands) {
+        if(cmd.aliases.includes(alias)) {
+            return cmd;
+        }
+    }
+}
+
 
 function execute(text) {    
     const chars = text.split("");
@@ -109,7 +117,14 @@ function execute(text) {
                 if(char == strOpen) {
                     strOpen = null;
                 }
-            } else {
+            } else {function getCommand(alias) {
+                for(const cmd of commands) {
+                    if(cmd.aliases.includes(alias)) {
+                        return cmd;
+                    }
+                }
+            }
+            
                 strOpen = char;
             }
         } else {
@@ -151,16 +166,13 @@ function execute(text) {
 
     // Execute the command
     const alias = split[0];
-
-    for(const cmd of commands) {
-
-        if(cmd.aliases.includes(alias)) {
-            cmd.execute(args, flags);
-            return;
-        }
+    const cmd = getCommand(alias);
+    
+    if(cmd) {
+        cmd.execute(args, flags);
+    } else {
+        echo(`bash: ${alias}: command not found`);
     }
-
-    echo(`bash: ${prefix}: command not found`);
 }
 
 /* --== Input processing ==-- */
