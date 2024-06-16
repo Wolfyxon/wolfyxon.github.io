@@ -55,8 +55,8 @@ class CommandContext {
 }
 
 class Command {
-    constructor(prefixes) {
-        this.prefixes = prefixes;
+    constructor(aliases) {
+        this.aliases = aliases;
         this.description = "";
         this.args = [];
     }
@@ -150,11 +150,11 @@ function execute(text) {
     }
 
     // Execute the command
-    const prefix = split[0];
+    const alias = split[0];
 
     for(const cmd of commands) {
 
-        if(cmd.prefixes.includes(prefix)) {
+        if(cmd.aliases.includes(alias)) {
             cmd.execute(args, flags);
             return;
         }
