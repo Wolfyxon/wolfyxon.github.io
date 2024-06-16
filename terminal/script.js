@@ -1,3 +1,6 @@
+let allowInput = true;
+let commandActive = false;
+
 /* --== Getters ==-- */
 
 function getConsole() {
@@ -24,3 +27,26 @@ function echo(text) {
 
     getConsole().append(pre);
 }
+
+/* --== Input processing ==-- */
+
+function sendText(text) {
+    if(!allowInput) return;
+    let prefix = "";
+
+    if(!commandActive) prefix = getPrompt().innerText;
+
+    echo(prefix + " " + text);
+}
+
+window.addEventListener("load", () => {
+    const input = getInput();
+    
+    window.addEventListener("keydown", (e) => {
+        if(document.activeElement !== input) return;
+
+        if(e.key == "Enter") {
+            sendText(input.value);
+        }
+    });
+});
