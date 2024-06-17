@@ -32,5 +32,11 @@ window.addEventListener("load", () => {
         "#6600FF"
     ]);
 
+    addColorGroup("Black", [
+        "#212121",
+        "#292929",
+        "#313131"
+    ]);
+
     tblColors.append(tblColorsFrag);
 });
