@@ -15,6 +15,23 @@ const utils = {
             }
             req.send(null)
         }));
+    },
+
+    getBrowserName: () => {
+        // Edge
+        if((!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) && (navigator.userAgent.indexOf("Edg") !== -1)) return "Edge";
+        // Opera
+        if((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) return "Opera";
+        // Firefox
+        if(typeof InstallTrigger !== 'undefined') return "Firefox";
+        // Safari
+        if(/constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification))) return "Safari";
+        // IE
+        if(!!document.documentMode) return "Internet Explorer";
+        // Chrome
+        if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1) && (!!window.chrome.webstore || !!window.chrome.runtime)) return "Chrome";
+        // Chromium
+        if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1)) return "Chromium"
     }
     
 }
