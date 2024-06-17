@@ -38,5 +38,11 @@ window.addEventListener("load", () => {
         "#313131"
     ]);
 
+    addColorGroup("Yellow & orange", [
+        "#FFA000",
+        "#FF5B00",
+        "#FFCE00"
+    ]);
+
     tblColors.append(tblColorsFrag);
 });
