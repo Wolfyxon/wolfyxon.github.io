@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
         const tr = document.createElement("tr");
         const th = document.createElement("th");
 
+        th.scope = "row";
         th.innerText = name;
         tr.append(th);
 
