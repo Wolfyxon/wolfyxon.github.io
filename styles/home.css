@@ -125,6 +125,7 @@
 }
 
 .project-text a {
+    display: inline-block;
     outline: white 1px solid;
     text-decoration: none;
     margin-right: 10px;
