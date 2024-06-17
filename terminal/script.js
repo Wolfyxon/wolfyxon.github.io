@@ -17,6 +17,10 @@ function getInput() {
     return document.getElementById("input");
 }
 
+function isAnyCommandRunning() {
+    return lastCommandCtx && lastCommandCtx.running;
+}
+
 /* --== Printing ==-- */
 
 function echoHTML(html) {
@@ -74,6 +78,10 @@ class Command {
         this.onQuitRequest = () => { return this.autoAcceptQuitRequest; };
     }
 
+    async callback() {
+        echo("Unimplemented");
+    }
+
     setOnQuitRequest(callback) {
         this.onQuitRequest = callback;
 
@@ -108,11 +116,17 @@ class Command {
         return this;
     }
 
-    execute(args, flags) {
+    async execute(args, flags) {
         const ctx = new CommandContext(this, args, flags);
-        lastCommandCtx = cmd;
+        lastCommandCtx = ctx;
+        
+        getPrompt().style.display = "none";
 
-        this.callback(ctx);
+        await this.callback(ctx);
+
+        ctx.quit();
+
+        getPrompt().style.display = "";
     }
 }
 
@@ -200,11 +214,11 @@ function sendText(text) {
     if(!allowInput) return;
     let prefix = "";
 
-    if(!commandActive) prefix = getPrompt().innerText;
+    if(!isAnyCommandRunning()) prefix = getPrompt().innerText;
 
     echo(prefix + " " + text);
 
-    if(!commandActive) execute(text);
+    if(!isAnyCommandRunning()) execute(text);
 }
 
 function focusInput() {
