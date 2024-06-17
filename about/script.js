@@ -1,0 +1,36 @@
+window.addEventListener("load", () => {
+    const tblColors = document.getElementById("tbl-colors");
+    const tblColorsFrag = document.createDocumentFragment();
+
+    function addColorGroup(name, colors) {
+        const tr = document.createElement("tr");
+        const th = document.createElement("th");
+
+        th.innerText = name;
+        tr.append(th);
+
+        for(const color of colors) {
+            const td = document.createElement("td");
+            td.innerText = color.toUpperCase();
+            td.style.backgroundColor = color;
+
+            tr.append(td);
+        }
+
+        tblColorsFrag.append(tr);
+    }
+
+    addColorGroup("Red", [
+        "#FF0000",
+        "#D20000",
+        "#900000"
+    ]);
+
+    addColorGroup("Purple", [
+        "#8300FF",
+        "#6600FF",
+        "#9700FF"
+    ]);
+
+    tblColors.append(tblColorsFrag);
+});
