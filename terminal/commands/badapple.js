@@ -53,22 +53,22 @@ registerCommand(
 
             // Process image from canvas and convert to ASCII
 
-            const data = canvasCtx.getImageData(0, 0, canvas.width, canvas.height).data
+            const data = canvasCtx.getImageData(0, 0, canvas.width, canvas.height).data;
             let ascii = "";
 
             for (let i = 0; i < data.length; i += 4) {
-                const r = data[i]
-                const g = data[i + 1]
-                const b = data[i + 2]
+                const r = data[i];
+                const g = data[i + 1];
+                const b = data[i + 2];
                 const brightness = ( 3 * r + 4 * g + b) >>> 3;
 
                 if (brightness > 51) {
-                    ascii += char
+                    ascii += char;
                 } else {
-                    ascii += " ".repeat(char.length)
+                    ascii += " ".repeat(char.length);
                 }
                 if ((i / 4 + 1) % canvas.width === 0) {
-                    ascii += "<br>"
+                    ascii += "<br>";
                 }
             }
 
