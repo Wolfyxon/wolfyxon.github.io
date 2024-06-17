@@ -71,7 +71,7 @@ class CommandContext {
     }
 
     quitRequest() {
-        if(command.onQuitRequest()) this.quit();
+        if(this.command.onQuitRequest()) this.quit();
     }
 }
 
@@ -216,7 +216,22 @@ function execute(text) {
 
 /* --== Input processing ==-- */
 
+function sigTerm() {
+    promptEcho(getInput().value);
+
+    getInput().value = "";
+
+    if(isAnyCommandRunning()) {
+        lastCommandCtx.quitRequest();
+    }
+}
+
 function sendText(text) {
+    if(text === "^C") {
+        sigTerm();
+        return;
+    }
+
     if(!allowInput) return;
     let prefix = "";
 
@@ -239,6 +254,11 @@ window.addEventListener("load", () => {
             const txt = input.value;
             input.value = "";
             sendText(txt);
+        }
+
+        if(e.ctrlKey && e.key === "c") {
+            getInput().value += "^C";
+            sigTerm();
         }
     });
 
