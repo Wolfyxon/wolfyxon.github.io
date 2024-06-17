@@ -83,6 +83,18 @@ window.addEventListener("load", () => {
         ]
     );
 
+    registerProject(
+        "This site",
+        "I think it deserves to be listed here since I put quite a lot of effort into it :]",
+        "media/img/Wolfyxon.png",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/wolfyxon.github.io"
+            }
+        ]
+    );
+
     projectList.append(tmpProjectListFrag);
 
 });
