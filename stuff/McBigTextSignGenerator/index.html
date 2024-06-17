@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft big sign generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="main.js"></script>
+
+    <header>
+        <img src="img/logo_split.png" id="logo">
+    </header>
+
+    <div id="container">
+        <div id="menu">
+            <div id="menu-main">
+                <h1>Menu</h1>
+                <h2>Font</h2>
+                <h3>Custom font data</h3>
+                <textarea id="custom-font" placeholder="Enter a valid JSON dictionary..."></textarea><br>
+                <p id="custom-font-error">Error: Hi</p>
+                <button id="btn-load-custom-font" class="full-button">Load</button>
+            </div>
+
+            <div id="menu-bar">
+                <img src="img/menu.png">
+            </div>
+        </div>
+
+
+        <div id="main">
+            <div id="signs">
+        <pre class="sign" contenteditable="true">
+Type some text
+in the input
+below...</pre>
+            </div>
+            <input type="text" id="text-input" placeholder="Type something...">
+
+        </div>
+    </div>
+
+</body>
+</html>
