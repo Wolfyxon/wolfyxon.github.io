@@ -37,6 +37,12 @@ function echo(text) {
 }
 
 
+function promptEcho(text) {
+    if(!isAnyCommandRunning()) prefix = getPrompt().innerText;
+
+    return echo(prefix + " " + text);
+}
+
 /* --== Command processing ==-- */
 
 class CommandContext {
@@ -214,9 +220,7 @@ function sendText(text) {
     if(!allowInput) return;
     let prefix = "";
 
-    if(!isAnyCommandRunning()) prefix = getPrompt().innerText;
-
-    echo(prefix + " " + text);
+    promptEcho(text);
 
     if(!isAnyCommandRunning()) execute(text);
 }
