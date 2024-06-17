@@ -182,7 +182,7 @@
     }
 
     #project-list > * {
-        height: 122vw;
+        height: fit-content;
     }
 
     .project-text {
