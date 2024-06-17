@@ -268,5 +268,19 @@ window.addEventListener("load", () => {
 
     document.getElementById("main").addEventListener("click", focusInput);
 
- 
+    echoHTML("<div style='color: red;'>" +
+        "__        _____  _     _______   ____  _____  _   _ <br>" +
+        "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
+        " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
+        "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
+        "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</div><br>"
+    );
+
+    echo("Welcome to my super nerdy terminal", "#924BFF");
+    echo(" ");
+    echo("See `help` to get a list of commands", "lime");
+    echo("Use `exit` to go back to the home page", "lime");
+    echo(" ");
+    echo("Check out `badapple`", "gold");
+    echo(" ");
 });
