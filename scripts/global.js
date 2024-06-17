@@ -11,13 +11,23 @@ const global = {
 
 window.addEventListener("load", async () => {
 
-    // Auto header and footer insertion
-    const header = await utils.httpGet("/components/header.html");
-    const footer = await utils.httpGet("/components/footer.html");
+    // --== Auto header and footer insertion ==--
 
-    document.body.innerHTML = header + document.body.innerHTML + footer;
+    // Prepare
+    const header = document.createElement("header");
+    const footer = document.createElement("footer");
 
-    // Observe all elements with the 'observing' class
+    document.body.prepend(header);
+    document.body.append(footer);
+
+    // Request header and footer
+    const headerHtml = await utils.httpGet("/components/header.html");
+    header.innerHTML = headerHtml.replace("<header>", "").replace("</header>", "");
+
+    const footerHtml = await utils.httpGet("/components/footer.html");
+    footer.innerHTML = footerHtml.replace("<footer>", "").replace("</footer>", "");
+
+    // --== Observe all elements with the 'observing' class ==--
     for(const observing of document.getElementsByClassName("observing")) {
         global.observer.observe(observing);
     }
