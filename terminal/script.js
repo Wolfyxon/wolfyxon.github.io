@@ -41,6 +41,7 @@ class CommandContext {
         this.command = command;
         this.args = args;
         this.flags = flags;
+        this.running = true;
 
         for(let i = 0; i < args.length; i++) {
             const arg = args[i];
@@ -54,6 +55,14 @@ class CommandContext {
     getArg(name) {
         return this.argValues[name];
     }
+
+    quit() {
+        this.running = false;
+    }
+
+    quitRequest() {
+        if(command.onQuitRequest()) this.quit();
+    }
 }
 
 class Command {
@@ -61,6 +70,20 @@ class Command {
         this.aliases = aliases;
         this.description = "";
         this.args = [];
+        this.autoAcceptQuitRequest = true;
+        this.onQuitRequest = () => { return this.autoAcceptQuitRequest; };
+    }
+
+    setOnQuitRequest(callback) {
+        this.onQuitRequest = callback;
+
+        return this;
+    }
+    
+    setAutoAcceptQuitRequest(value) {
+        this.autoAcceptQuitRequest = value;
+
+        return this;
     }
 
     setDescription(description) {
