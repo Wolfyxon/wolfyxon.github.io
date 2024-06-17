@@ -62,3 +62,14 @@ pre {
     outline: none;
     color: white;
 }
+
+@media all and (orientation: portrait) {
+    body {
+        font-size: 0.9vh;
+    }
+
+    #input {
+        font-size: 0.9vh;
+        width: 60%;
+    }
+}
