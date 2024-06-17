@@ -14,8 +14,8 @@ window.addEventListener("load", async () => {
     // --== Auto header and footer insertion ==--
 
     // Prepare
-    const header = document.createElement("header");
-    const footer = document.createElement("footer");
+    const header = document.getElementsByTagName("header")[0];
+    const footer = document.getElementsByTagName("footer")[0];
 
     document.body.prepend(header);
     document.body.append(footer);
