@@ -32,6 +32,7 @@ function echo(text) {
     pre.innerText = text;
 
     getConsole().append(pre);
+    focusInput();
 
     return pre;
 }
@@ -241,7 +242,9 @@ function sendText(text) {
 }
 
 function focusInput() {
-    getInput().focus();
+    const input = getInput();
+    input.focus();
+    input.scrollIntoView();
 }
 
 window.addEventListener("load", () => {
