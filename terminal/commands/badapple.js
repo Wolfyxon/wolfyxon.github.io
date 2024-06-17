@@ -4,7 +4,7 @@ registerCommand(
 
     .addArg("char", "Custom character for the playback")
 
-    .setCallback(function(ctx) {
+    .setCallback(async (ctx) => {
         /*
             How it works?
             Video plays -> Video is copied to the canvas for image processing -> Script cycles trough each pixel on the canvas and places chars
@@ -73,7 +73,7 @@ registerCommand(
             }
 
             text.innerHTML = ascii;
-            
+
         });
 
         function stop() {

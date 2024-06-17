@@ -4,7 +4,7 @@ registerCommand(
 
     .addArg("command", "The command you want to see the usage of")
 
-    .setCallback(function(ctx) {
+    .setCallback(async (ctx) => {
         const cmdName = ctx.getArg("command");
 
         if(cmdName) {

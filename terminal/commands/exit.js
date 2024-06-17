@@ -2,7 +2,7 @@ registerCommand(
     new Command(["exit", "logout"])
     .setDescription("Quits the terminal and returns to the home page")
     
-    .setCallback(function(ctx) {
+    .setCallback(async (ctx) => {
         window.location.href = "/";
     })
 );
