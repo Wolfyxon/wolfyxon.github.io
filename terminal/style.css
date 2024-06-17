@@ -11,6 +11,16 @@ body {
     background: radial-gradient(black, #232323);
     color: white;
     font-size: 0.8vw;
+    animation: bgScroll 10s infinite linear;
+}
+
+@keyframes bgScroll {
+    0% {
+        background-position-y: -1000px;
+    }
+    100% {
+        background-position-y: 1000px;
+    }
 }
 
 pre {
