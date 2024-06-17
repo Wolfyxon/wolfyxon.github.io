@@ -28,6 +28,8 @@ function echo(text) {
     pre.innerText = text;
 
     getConsole().append(pre);
+
+    return pre;
 }
 
 
