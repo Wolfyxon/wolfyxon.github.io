@@ -1,3 +1,5 @@
+if(!utils) throw "Utils not imported";
+
 const global = {
     
     observer: new IntersectionObserver((entries, obs) => {
