@@ -98,6 +98,7 @@ registerCommand(
             });
         }
 
+        focusInput();
         await wait();
     })
 );
