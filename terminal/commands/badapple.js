@@ -35,6 +35,7 @@ registerCommand(
 
         // Rendering logic
 
+        let active = true;
         video.play();
 
         const canvasCtx = canvas.getContext("2d");
@@ -80,7 +81,23 @@ registerCommand(
             video.remove();
             canvas.remove();
             clearInterval(updateItv);
+            active = false;
         }
 
+        function wait() {
+            return new Promise((resolve) => {
+                if (!active || !ctx.running) {
+                    stop();
+                    return resolve();
+                }
+
+                setTimeout(async () => {
+                    await wait();
+                    resolve();
+                }, 0);
+            });
+        }
+
+        await wait();
     })
 );
