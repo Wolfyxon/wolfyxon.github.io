@@ -98,7 +98,9 @@ registerCommand(
             });
         }
 
-        focusInput();
+        echo(" ");
+        echo("Type ^C or press Ctr+C to stop");
+
         await wait();
     })
 );
