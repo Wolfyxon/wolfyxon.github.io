@@ -29,6 +29,7 @@ a {
 /* --== Header ==-- */
 header {
     width: 100%;
+    min-height: 99px;
     height: fit-content;
 }
 
