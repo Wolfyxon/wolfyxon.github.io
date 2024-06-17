@@ -1,5 +1,5 @@
 let allowInput = true;
-let commandActive = false;
+let lastCommandCtx = null;
 
 const commands = [];
 
@@ -87,6 +87,8 @@ class Command {
 
     execute(args, flags) {
         const ctx = new CommandContext(this, args, flags);
+        lastCommandCtx = cmd;
+
         this.callback(ctx);
     }
 }
