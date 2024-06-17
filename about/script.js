@@ -28,8 +28,8 @@ window.addEventListener("load", () => {
 
     addColorGroup("Purple", [
         "#8300FF",
-        "#6600FF",
-        "#9700FF"
+        "#9700FF",
+        "#6600FF"
     ]);
 
     tblColors.append(tblColorsFrag);
