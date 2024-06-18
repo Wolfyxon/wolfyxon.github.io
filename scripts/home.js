@@ -116,6 +116,7 @@ window.addEventListener("load", () => {
         descEele.innerText = description || "";
 
         const linksEle = document.createElement("div");
+        linksEle.classList.add("programmer-links");
 
         for(const link of links) {
             const a = document.createElement("a");
