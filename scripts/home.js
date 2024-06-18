@@ -97,4 +97,30 @@ window.addEventListener("load", () => {
 
     projectList.append(tmpProjectListFrag);
 
+    const programmersList = document.getElementById("programmers-list");
+    const tmpProgrammersListFrag = document.createDocumentFragment();
+    
+    function registerProgrammer(name, thumbnail, links, description) {
+        const div = document.createElement("div");
+
+        const img = document.createElement("img");
+        img.src = thumbnail;
+        img.alt = "Thumbnail";
+
+        const textSection = document.createElement("div");
+
+        const nameEle = document.createElement("h1");
+        nameEle.innerText = name;
+
+        const descEele = document.createElement("p");
+        descEele.innerText = description || "";
+
+        textSection.append(nameEle, descEele);
+
+        div.append(img, textSection);
+
+        tmpProgrammersListFrag.append(div);
+    }
+
+    programmersList.append(tmpProgrammersListFrag);
 });
