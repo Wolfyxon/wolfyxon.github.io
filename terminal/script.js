@@ -40,6 +40,7 @@ function echo(text, color) {
 
 
 function promptEcho(text) {
+    let prefix = "";
     if(!isAnyCommandRunning()) prefix = getPrompt().innerText;
 
     return echo(prefix + " " + text);
