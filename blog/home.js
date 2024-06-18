@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
     function registerPost(title, date, description, id, topics) {
         const post = document.createElement("a");
-        post.href = "/" + id;
+        post.href = id;
 
         const titleEle = document.createElement("h1");
         titleEle.innerText = title;
@@ -46,6 +46,14 @@ window.addEventListener("load", () => {
 
         tmpPostListFrag.append(post);
     }
+
+    registerPost(
+        "The site was remade",
+        "June 18 2024",
+        "Huge update",
+        "18-06-2024_siteRemake",
+        ["site"]
+    );
 
     postList.append(tmpPostListFrag);
 });
