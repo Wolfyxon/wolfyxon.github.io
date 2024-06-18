@@ -63,6 +63,19 @@ header > * {
     transform: skew(-20deg);
 }
 
+#header-page-title {
+    display: inline-block;
+    background-color: var(--secondary);
+    padding: 2px 10px;
+    margin-left: 1%;
+    transform: skew(-20deg);
+}
+
+#header-page-title > * {
+    display: inline-block;
+    transform: skew(20deg);
+}
+
 /* Navigator */
 nav {
     background: var(--panel);
