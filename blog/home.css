@@ -1,0 +1,36 @@
+#posts > * {
+    text-decoration: none;
+    display: block;
+    height: fit-content;
+    background: var(--panel-dark);
+    padding-bottom: 1%;
+    transition: 0.1s;
+}
+
+#posts > *:hover {
+    filter: brightness(120%);
+    transition: 0.1s;
+}
+
+#posts h1 {
+    background: var(--primary);
+    padding: 1%;
+}
+
+.post-text {
+    padding: 0 1%;
+}
+
+.post-date {
+    padding: 0.5%;
+    display: inline-block;
+    background-color: var(--secondary);
+}
+
+.post-tags > * {
+    display: inline-block;
+    background-color: var(--panel);
+    width: fit-content;
+    padding: 0.7% 1%;
+    font-size: 80%;
+}
