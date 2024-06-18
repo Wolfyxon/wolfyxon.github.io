@@ -27,7 +27,7 @@
     background-color: var(--secondary);
 }
 
-.post-tags > * {
+.post-topics > * {
     display: inline-block;
     background-color: var(--panel);
     width: fit-content;
