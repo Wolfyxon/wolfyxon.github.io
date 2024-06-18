@@ -180,6 +180,11 @@
     margin-right: 3%;
     height: 100%;
     display: inline-block;
+    transition: 0.1s;
+}
+.programmer-links > *:hover {
+    opacity: 0.8;
+    transition: 0.1s;
 }
 
 .programmer-links > * > img {
