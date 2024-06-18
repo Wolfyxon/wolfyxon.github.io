@@ -32,6 +32,26 @@ const utils = {
         if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1) && (!!window.chrome.webstore || !!window.chrome.runtime)) return "Chrome";
         // Chromium
         if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1)) return "Chromium";
+    },
+
+    getSocialIcon: (url) => {
+        const dir = "/media/img/icons/social/";
+
+        const icons = {
+            "twitter.com": "x.png",
+            "x.com": "x.png",
+            "soundcloud.com": "soundcloud.png",
+            "youtube.com": "youtube.png",
+            "www.youtube.com": "youtube.png" 
+        };
+
+        url = url.replace("https://", "").replace("http://", "");
+
+        for(const domain of Object.keys(icons)) {
+            if(url.startsWith(domain)) {
+                return dir + icons[domain];
+            }
+        }
     }
     
 }
