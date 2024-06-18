@@ -142,6 +142,7 @@ window.addEventListener("load", () => {
         [
             "https://x.com/karoleuspl",
             "https://www.youtube.com/@KaroleusPL",
+            "https://soundcloud.com/karoleus-pl",
             "https://github.com/KaroleusPL"
         ], 
         "Starting game developer, experienced artist and musician. Also my best friend."
