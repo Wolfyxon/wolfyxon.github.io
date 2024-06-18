@@ -23,6 +23,7 @@
 
 .post-date {
     padding: 0.5%;
+    margin-left: 10px;
     display: inline-block;
     background-color: var(--color2);
 }
