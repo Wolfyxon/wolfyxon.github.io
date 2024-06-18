@@ -15,3 +15,10 @@
     border: 1px black solid;
     border-radius: 5px;
 }
+
+
+@media all and (orientation: portrait) {
+    #tbl-colors {
+        width: 100%;
+    }
+}
