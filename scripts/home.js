@@ -122,5 +122,16 @@ window.addEventListener("load", () => {
         tmpProgrammersListFrag.append(div);
     }
 
+    registerProgrammer(
+        "Karoleus.PL", 
+        "/media/img/people/karoleus_pl.png", 
+        [
+            "https://x.com/karoleuspl",
+            "https://www.youtube.com/@KaroleusPL",
+            "https://github.com/KaroleusPL"
+        ], 
+        "Starting game developer, experienced artist and musician. Also my best friend."
+    );
+
     programmersList.append(tmpProgrammersListFrag);
 });
