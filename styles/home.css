@@ -252,11 +252,32 @@
     }
 
     #programmers-list > * {
-        height: 30vw;
+        height: fit-content;
+    }
+
+
+    #programmers-list > * > * {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    #programmers-list > * > img {
+        height: 20vh;
+    }
+
+    #programmers-list > * > div {
+        width: 100%;
     }
 
     #programmers-list > * > div > * {
-        margin: 1%;
+        width: 100%;
+    }
+
+    .programmer-links {
+        margin: 0 auto;
+        text-align: center;
+        width: 70% !important;
     }
     
 }
