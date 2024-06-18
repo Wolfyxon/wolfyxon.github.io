@@ -4,6 +4,7 @@
     --panel: #3e3d3f;
     --panel-dark: #282829;
     --primary: rgb(114, 0, 0);
+    --secondary: #D20000;
 }
 
 body, html {
