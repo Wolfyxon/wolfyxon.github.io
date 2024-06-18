@@ -1,0 +1,7 @@
+.post-header {
+    margin-top: 5px;
+    background-color: var(--primary); 
+    padding: 1%;
+    border-bottom: 10px var(--secondary) solid;
+    text-align: center;
+}
