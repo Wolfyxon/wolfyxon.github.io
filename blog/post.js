@@ -11,5 +11,6 @@ window.addEventListener("load", () => {
     date.classList.add("post-date");
 
     hd.append(title, date);
-    document.getElementById("main").prepend(hd);
+    document.body.append(hd);
+    document.body.insertBefore(hd, document.getElementById("main"));
 });
