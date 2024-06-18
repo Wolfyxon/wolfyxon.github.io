@@ -3,8 +3,8 @@
 :root {
     --panel: #3e3d3f;
     --panel-dark: #282829;
-    --primary: rgb(114, 0, 0);
-    --secondary: #D20000;
+    --color1: rgb(114, 0, 0);
+    --color2: #D20000;
     --special: #8300FF;
 }
 
@@ -46,7 +46,7 @@ header > * {
 #header-title {
     width: 65%;
     font-weight: bold;
-    background-color: var(--primary);
+    background-color: var(--color1);
     transform: skew(20deg);
     transition: 0.1s;
 }
@@ -66,7 +66,7 @@ header > * {
 
 #header-page-title {
     display: inline-block;
-    background-color: var(--secondary);
+    background-color: var(--color2);
     padding: 2px 10px;
     margin-left: 1%;
     transform: skew(-20deg);
@@ -148,7 +148,7 @@ footer > div a {
 
 .fancy-h {
     border-right: rgba(255, 255, 255, 0.2) solid 8px;
-    background-color: var(--primary);
+    background-color: var(--color1);
     width: 70%;
     padding-top: 1%;
     padding-bottom: 1%;
