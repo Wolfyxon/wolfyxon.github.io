@@ -168,6 +168,26 @@
 }
 
 
+.programmer-links {
+    width: 50%;
+    padding: 1%;
+    height: 3vh;
+    border-radius: 10px;
+    background-color: var(--panel);
+}
+
+.programmer-links > * {
+    margin-right: 3%;
+    height: 100%;
+    display: inline-block;
+}
+
+.programmer-links > * > img {
+    height: 100%;
+}
+
+
+
 
 @media all and (orientation: portrait) {
     #banner {
