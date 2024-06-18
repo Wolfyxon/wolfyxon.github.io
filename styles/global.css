@@ -76,6 +76,13 @@ header > * {
     transform: skew(20deg);
 }
 
+@media all and (orientation: portrait) {
+    #header-title {
+        width: 75%;
+    }    
+}
+
+
 /* Navigator */
 nav {
     background: var(--panel);
