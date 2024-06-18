@@ -30,7 +30,7 @@ function echoHTML(html) {
 function echo(text, color) {
     const pre = document.createElement("pre");
     pre.innerText = text;
-    pre.style.color = color;
+    pre.style.color = color || "";
 
     getConsole().append(pre);
     focusInput();
