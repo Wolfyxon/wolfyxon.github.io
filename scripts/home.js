@@ -115,7 +115,20 @@ window.addEventListener("load", () => {
         const descEele = document.createElement("p");
         descEele.innerText = description || "";
 
-        textSection.append(nameEle, descEele);
+        const linksEle = document.createElement("div");
+
+        for(const link of links) {
+            const a = document.createElement("a");
+            a.href = link;
+
+            const img = document.createElement("img");
+            img.src = utils.getSocialIcon(link);
+
+            a.append(img);
+            linksEle.append(a);
+        }
+
+        textSection.append(nameEle, descEele, linksEle);
 
         div.append(img, textSection);
 
