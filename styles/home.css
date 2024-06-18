@@ -146,6 +146,29 @@
     font-weight: bold;
 }
 
+#programmers-list > * {
+    background-color: var(--panel-dark);
+    height: 20vh;
+    padding: 1%;
+}
+
+#programmers-list > * > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#programmers-list > * > img {
+    height: 100%;
+    border-radius: 5%;
+}
+
+#programmers-list > * > div {
+    margin-left: 2%;
+    width: 60%;
+}
+
+
+
 @media all and (orientation: portrait) {
     #banner {
         padding-top: 20px;
@@ -201,4 +224,13 @@
         height: auto;
         display: block;
     }
+
+    #programmers-list > * {
+        height: 30vw;
+    }
+
+    #programmers-list > * > div > * {
+        margin: 1%;
+    }
+    
 }
