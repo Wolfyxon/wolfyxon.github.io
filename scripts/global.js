@@ -27,6 +27,16 @@ window.addEventListener("load", async () => {
     const footerHtml = await utils.httpGet("/components/footer.html");
     footer.innerHTML = footerHtml.replace("<footer>", "").replace("</footer>", "");
 
+    // Set page title (if present)
+    const title = document.body.getAttribute("data-title");
+    
+    if(title) {
+        const headerPageTitle = document.getElementById("header-page-title");
+        headerPageTitle.style.display = "";
+
+        headerPageTitle.children[0].innerText = title;
+    }
+
     // --== Observe all elements with the 'observing' class ==--
     for(const observing of document.getElementsByClassName("observing")) {
         global.observer.observe(observing);
