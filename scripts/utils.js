@@ -31,7 +31,7 @@ const utils = {
         // Chrome
         if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1) && (!!window.chrome.webstore || !!window.chrome.runtime)) return "Chrome";
         // Chromium
-        if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1)) return "Chromium"
+        if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1)) return "Chromium";
     }
     
 }
