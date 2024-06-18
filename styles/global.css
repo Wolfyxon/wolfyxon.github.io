@@ -138,3 +138,10 @@ footer > div a {
 .fancy-h > * {
     transform: skew(-20deg);
 }
+
+
+@media all and (orientation: portrait) {
+    .fancy-h {
+        width: 95%;
+    }
+}
