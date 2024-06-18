@@ -42,7 +42,8 @@ const utils = {
             "x.com": "x.png",
             "soundcloud.com": "soundcloud.png",
             "youtube.com": "youtube.png",
-            "www.youtube.com": "youtube.png" 
+            "www.youtube.com": "youtube.png",
+            "github.com": "github.png"
         };
 
         url = url.replace("https://", "").replace("http://", "");
