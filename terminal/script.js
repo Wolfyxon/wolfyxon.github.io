@@ -131,14 +131,35 @@ class Command {
         
         updatePrompt();
 
-        try {
-            await this.callback(ctx);
-        } catch (e) {
-            echo(`error: ${e.message}`);
-            echo(" ");
-            echo(e.stack);
-            echo(" ");
-            echo("This is a bug!");
+        let valid = true;
+        for(let i = 0; i < this.args.length; i++) {
+            const reqArg = this.args[i];
+            console.log(reqArg)
+            if(!reqArg.required) break;
+            
+            if(!args[i]) {
+                if(valid) {
+                    valid = false;
+
+                    echo("error: Not enough arguments.");
+                    echo("Required:");
+                }
+
+                echo(`  ${reqArg.name}: ${reqArg.description}`);
+            }
+        }
+
+        if(valid) {
+            try {
+                await this.callback(ctx);
+            } catch (e) {
+                echo(`error: ${e.message}`);
+                echo(" ");
+                echo(e.stack);
+                echo(" ");
+                echo("This is a bug!");
+            }
+    
         }
 
         ctx.quit();
