@@ -1,6 +1,13 @@
 const postTopics = [
     "site",
-    "projects"
+    "projects",
+    "life",
+    "psychology",
+    "concept",
+    "analysis",
+    "funny",
+    "art",
+    "music"
 ];
 
 
