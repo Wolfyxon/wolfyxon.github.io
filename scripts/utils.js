@@ -53,6 +53,10 @@ const utils = {
                 return dir + icons[domain];
             }
         }
+    },
+
+    urlStartsWith: (url, start) => {
+        return url.replace("http://", "").replace("https://").startsWith(start);
     }
     
 }
