@@ -2,7 +2,7 @@ registerCommand(
     new Command(["dropbox-download", "dropbox-dl", "drbx-dl"])
     .setDescription("Converts a Dropbox file link into a direct file download link.")
     
-    .addArg("link")
+    .addArg("link", "File share link", true)
 
     .setCallback(async (ctx) => {
         const domain = "www.dropbox.com";
