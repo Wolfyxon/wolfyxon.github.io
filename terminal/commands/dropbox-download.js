@@ -20,7 +20,7 @@ registerCommand(
             return;
         }
 
-        const rep = link.replace(domain, targetDomain);
+        const rep = utils.escapeHTML(link.replace(domain, targetDomain));
 
         echoHTML(`<a href="${rep}">${rep}</a>`);
     })
