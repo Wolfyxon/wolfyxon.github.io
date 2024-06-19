@@ -56,7 +56,7 @@ const utils = {
     },
 
     urlStartsWith: (url, start) => {
-        return url.replace("http://", "").replace("https://").startsWith(start);
+        return url.replace("http://", "").replace("https://", "").startsWith(start);
     }
     
 }
