@@ -1,6 +1,9 @@
 const postTopics = [
     "site",
     "projects",
+    "programming",
+    "software",
+    "tech",
     "life",
     "psychology",
     "concept",
