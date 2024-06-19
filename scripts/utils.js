@@ -62,7 +62,7 @@ const utils = {
     escapeHTML: (html) => {
         return html
                .replace("<", "&lt;")
-               .replace(">", "&rt;")
+               .replace(">", "&gt;")
         ;
     }
     
