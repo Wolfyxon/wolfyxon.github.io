@@ -131,7 +131,15 @@ class Command {
         
         updatePrompt();
 
-        await this.callback(ctx);
+        try {
+            await this.callback(ctx);
+        } catch (e) {
+            echo(`error: ${e.message}`);
+            echo(" ");
+            echo(e.stack);
+            echo(" ");
+            echo("This is a bug!");
+        }
 
         ctx.quit();
 
