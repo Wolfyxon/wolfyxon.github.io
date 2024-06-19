@@ -26,6 +26,12 @@ body {
 
 a {
     color: white;
+    transition: 0.1s;
+}
+
+a:hover {
+    transition: 0.1s;
+    color: silver;
 }
 
 /* --== Header ==-- */
@@ -120,6 +126,7 @@ nav a > div {
 nav a:hover {
     background: var(--panel-dark);
     transition: 0.1s;
+    color: white;
 }
 
 /* --== Footer ==-- */
