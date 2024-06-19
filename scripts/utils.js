@@ -57,6 +57,13 @@ const utils = {
 
     urlStartsWith: (url, start) => {
         return url.replace("http://", "").replace("https://", "").startsWith(start);
+    },
+
+    escapeHTML: (html) => {
+        return html
+               .replace("<", "&lt;")
+               .replace(">", "&rt;")
+        ;
     }
     
 }
