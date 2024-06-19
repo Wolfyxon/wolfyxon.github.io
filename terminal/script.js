@@ -129,13 +129,23 @@ class Command {
         const ctx = new CommandContext(this, args, flags);
         lastCommandCtx = ctx;
         
-        getPrompt().style.display = "none";
+        updatePrompt();
 
         await this.callback(ctx);
 
         ctx.quit();
 
-        getPrompt().style.display = "";
+        updatePrompt();
+    }
+}
+
+function updatePrompt() {
+    const prompt =  getPrompt();
+
+    if(isAnyCommandRunning()) {
+       prompt.style.display = "none";
+    } else {
+        prompt.style.display = "";
     }
 }
 
