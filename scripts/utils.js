@@ -76,8 +76,8 @@ const utils = {
 
     escapeHTML: (html) => {
         return html
-               .replace("<", "&lt;")
-               .replace(">", "&gt;")
+               .replaceAll("<", "&lt;")
+               .replaceAll(">", "&gt;")
         ;
     }
     
