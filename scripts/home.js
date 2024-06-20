@@ -69,7 +69,7 @@ window.addEventListener("load", () => {
 
     registerProject(
         "MinVideo",
-        "Easy to implement uncompressed video format for limited environments.",
+        "Easy to understand and implement uncompressed video format for limited environments.",
         "",
         [
             {
