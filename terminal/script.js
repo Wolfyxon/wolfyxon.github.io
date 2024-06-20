@@ -52,9 +52,9 @@ function echo(text, color) {
 
 function promptEcho(text) {
     let prefix = "";
-    if(!isAnyCommandRunning()) prefix = getPrompt().innerText;
+    if(!isAnyCommandRunning()) prefix = getPrompt().innerHTML;
 
-    return echo(prefix + " " + text);
+    return echoWithHTML(prefix + " " + utils.escapeHTML(text));
 }
 
 /* --== Command processing ==-- */
