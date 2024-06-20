@@ -27,6 +27,17 @@ function echoHTML(html) {
    getConsole().innerHTML += html;
 }
 
+function echoWithHTML(html, color) {
+    const pre = document.createElement("pre");
+    pre.innerHTML = html;
+    pre.style.color = color || "";
+
+    getConsole().append(pre);
+    focusInput();
+
+    return pre;
+}
+
 function echo(text, color) {
     const pre = document.createElement("pre");
     pre.innerText = text;
