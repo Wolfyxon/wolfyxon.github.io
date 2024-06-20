@@ -24,6 +24,8 @@ body {
     font-family: "Roboto";
 }
 
+/* --== Links <a> ==-- */
+
 a {
     color: white;
     transition: 0.1s;
@@ -32,6 +34,16 @@ a {
 a:hover {
     transition: 0.1s;
     color: silver;
+}
+
+a[target="_blank"]::after, a[target="blank"]::after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-image: url("/media/img/icons/open_in_new.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /* --== Header ==-- */
