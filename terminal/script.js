@@ -69,6 +69,10 @@ class CommandContext {
         return this.argValues[name];
     }
 
+    getArgsString() {
+        return this.args.join(" ");
+    }
+
     quit() {
         this.running = false;
     }
