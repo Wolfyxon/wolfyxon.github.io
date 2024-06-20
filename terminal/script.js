@@ -138,7 +138,6 @@ class Command {
         let valid = true;
         for(let i = 0; i < this.args.length; i++) {
             const reqArg = this.args[i];
-            console.log(reqArg)
             if(!reqArg.required) break;
             
             if(!args[i]) {
