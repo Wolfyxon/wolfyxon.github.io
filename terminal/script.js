@@ -322,12 +322,13 @@ window.addEventListener("load", () => {
 
     document.getElementById("main").addEventListener("click", focusInput);
 
-    echoHTML("<div style='color: red;'>" +
+    echoWithHTML(
         "__        _____  _     _______   ____  _____  _   _ <br>" +
         "\\ \\      / / _ \\| |   |  ___\\ \\ / /\\ \\/ / _ \\| \\ | |<br>" +
         " \\ \\ /\\ / / | | | |   | |_   \\ V /  \\  / | | |  \\| |<br>" +
         "  \\ V  V /| |_| | |___|  _|   | |   /  \\ |_| | |\\  |<br>" +
-        "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|</div><br>"
+        "   \\_/\\_/  \\___/|_____|_|     |_|  /_/\\_\\___/|_| \\_|<br> <br>",
+        "red"
     );
 
     echo("Welcome to my super nerdy terminal", "#924BFF");
