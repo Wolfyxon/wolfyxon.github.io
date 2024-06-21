@@ -55,6 +55,6 @@ registerCommand(
         addSide(ascii);
         addSide(text);
 
-        echoHTML(html);
+        echoWithHTML(html);
     })
 );
