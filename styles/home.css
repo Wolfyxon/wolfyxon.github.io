@@ -151,6 +151,15 @@
     background-color: var(--panel-dark);
     height: 20vh;
     padding: 1%;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+#programmers-list > *.visible {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.7s;
 }
 
 #programmers-list > * > * {

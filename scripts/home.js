@@ -132,7 +132,7 @@ window.addEventListener("load", () => {
         textSection.append(nameEle, descEele, linksEle);
 
         div.append(img, textSection);
-
+        div.classList.add("observing");
         tmpProgrammersListFrag.append(div);
     }
 
