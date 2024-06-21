@@ -1,6 +1,11 @@
 const utils = {
 
     base64: {
+        /**
+         * Encodes text into Base64
+         * @param {string} text 
+         * @returns {string}
+         */
         encode: (text) => {
             const bytes = new TextEncoder().encode(text);
             const binStr = Array.from(bytes, (byte) => String.fromCodePoint(byte)).join("");
@@ -8,6 +13,11 @@ const utils = {
             return btoa(binStr);
         },
 
+        /**
+         * Decodes Base64
+         * @param {string} base64 
+         * @returns {string}
+         */
         decode: (base64) => {
             const bytes = Uint8Array.from(atob(base64), (m) => m.codePointAt(0));
             
@@ -15,6 +25,11 @@ const utils = {
         }
     },
 
+    /**
+     * Sends an HTTP GET request and returns the body text
+     * @param {string} url 
+     * @returns {string}
+     */
     httpGet: async (url) => {
         return new Promise(((resolve, _reject) => {
             let req = new XMLHttpRequest();
@@ -32,6 +47,10 @@ const utils = {
         }));
     },
 
+    /**
+     * Returns the user's browser name
+     * @returns {string}
+     */
     getBrowserName: () => {
         // Edge
         if((!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) && (navigator.userAgent.indexOf("Edg") !== -1)) return "Edge";
@@ -49,6 +68,11 @@ const utils = {
         if((!!window.chrome || navigator.userAgent.indexOf("Chrome") !== -1)) return "Chromium";
     },
 
+    /**
+     * Returns an URL to the icon image that matches the given social platform 
+     * @param {string} url 
+     * @returns {string}
+     */
     getSocialIcon: (url) => {
         const dir = "/media/img/icons/social/";
 
@@ -70,10 +94,21 @@ const utils = {
         }
     },
 
+    /**
+     * Checks if a URL starts with a string, useful for validating domains
+     * @param {string} url 
+     * @param {string} start 
+     * @returns {string}
+     */
     urlStartsWith: (url, start) => {
         return url.replace("http://", "").replace("https://", "").startsWith(start);
     },
 
+    /**
+     * Escapes HTML to safely inject it into innerHTML without it being parsed
+     * @param {string} html 
+     * @returns {string}
+     */
     escapeHTML: (html) => {
         return html
                .replaceAll("<", "&lt;")
