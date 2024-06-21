@@ -82,7 +82,9 @@ const utils = {
             "soundcloud.com": "soundcloud.png",
             "youtube.com": "youtube.png",
             "www.youtube.com": "youtube.png",
-            "github.com": "github.png"
+            "github.com": "github.png",
+            "discord.com": "discord.svg",
+            "discord.gg": "discord.svg"
         };
 
         url = url.replace("https://", "").replace("http://", "");
