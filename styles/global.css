@@ -113,6 +113,11 @@ header > * {
     transform: skew(20deg);
 }
 
+#header-link-terminal {
+    color: var(--special1);
+}
+
+
 @media all and (orientation: portrait) {
     #header-title {
         width: 75%;
