@@ -5,7 +5,8 @@
     --panel-dark: #282829;
     --color1: rgb(114, 0, 0);
     --color2: #D20000;
-    --special: #8300FF;
+    --special1: rgb(170, 85, 255);
+    --special2: #8300FF; 
 }
 
 body, html {
