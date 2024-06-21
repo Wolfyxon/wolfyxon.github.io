@@ -1,37 +1,4 @@
-.anim-left {
-    position: absolute;
-    margin-left: -50%;
-    opacity: 0;
-    transition: 1s;
-}
-
-.anim-left.visible {
-    margin-left: 0;
-    opacity: 1;
-    transition: 1s;
-}
-
-.anim-right {
-    position: absolute;
-    margin-right: 50%;
-    opacity: 0;
-    transition: 1s;
-}
-
-.anim-right.visible {
-    margin-right: 0;
-    opacity: 1;
-    transition: 1s;
-}
-
-.anim-fade {
-    transition: 1s;
-    opacity: 0;
-}
-.anim-fade.visible {
-    transition: 1s;
-    opacity: 1;
-}
+@import url('/styles/animations.css');
 
 #banner {
     height: 30vw;
