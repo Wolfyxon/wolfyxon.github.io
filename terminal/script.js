@@ -293,6 +293,8 @@ function sendText(text) {
 }
 
 function focusInput() {
+    if(!window.getSelection().isCollapsed) return;
+    
     const input = getInput();
     input.focus();
     input.scrollIntoView();
