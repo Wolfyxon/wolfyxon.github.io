@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "",
+        "https://github-readme-stats.vercel.app/api/pin/?username=wolfyxon&repo=3ds-web-stuff",
         [
             {
                 text: "Visit the site",
@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
     registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
-        "",
+        "https://github-readme-stats.vercel.app/api/pin/?username=wolfyxon&repo=minvideo",
         [
             {
                 text: "Source code",
