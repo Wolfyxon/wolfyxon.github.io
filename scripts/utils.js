@@ -99,6 +99,32 @@ const utils = {
     },
 
     /**
+     * Returns the name of the given URL to a social platform
+     * @param {string} url 
+     * @returns {string}
+     */
+    getSocialName: (url) => {
+        const names = {
+            "twitter.com": "X / Twitter",
+            "x.com": "X / Twitter",
+            "soundcloud.com": "SoundCloud",
+            "youtube.com": "YouTube",
+            "www.youtube.com": "YouTube",
+            "github.com": "GitHub",
+            "discord.com": "Discord",
+            "discord.gg": "Discord"
+        };
+
+        url = url.replace("https://", "").replace("http://", "");
+
+        for(const domain of Object.keys(names)) {
+            if(url.startsWith(domain)) {
+                return dir + names[domain];
+            }
+        }
+    },
+
+    /**
      * Checks if a URL starts with a string, useful for validating domains
      * @param {string} url 
      * @param {string} start 
