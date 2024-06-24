@@ -98,6 +98,8 @@ registerCommand(
             });
         }
 
+        video.onended = stop;
+
         echo(" ");
         echo("Type ^C or press Ctr+C to stop");
 
