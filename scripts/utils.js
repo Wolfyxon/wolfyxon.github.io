@@ -119,7 +119,7 @@ const utils = {
 
         for(const domain of Object.keys(names)) {
             if(url.startsWith(domain)) {
-                return dir + names[domain];
+                return names[domain];
             }
         }
     },
