@@ -94,6 +94,8 @@ const utils = {
                 return dir + icons[domain];
             }
         }
+
+        return "/media/img/icons/social/website.png";
     },
 
     /**
