@@ -124,6 +124,7 @@ window.addEventListener("load", () => {
 
             const img = document.createElement("img");
             img.src = utils.getSocialIcon(link);
+            img.alt = utils.getSocialName(link);
 
             a.append(img);
             linksEle.append(a);
