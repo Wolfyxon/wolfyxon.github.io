@@ -29,10 +29,12 @@ window.addEventListener("load", async () => {
 
     // Set page title (if present)
     const title = document.body.getAttribute("data-title");
+    const mainPage = document.body.getAttribute("data-main-page") || "";
     
     if(title) {
         const headerPageTitle = document.getElementById("header-page-title");
         headerPageTitle.style.display = "";
+        headerPageTitle.href = mainPage;
 
         headerPageTitle.children[0].innerText = title;
     }
