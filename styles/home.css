@@ -69,7 +69,7 @@
 #project-list > * {
     position: relative;
     background: var(--panel-dark);
-    min-height: 20vw;
+    min-height: 15vw;
     height: fit-content;
     margin-bottom: 10px;
 }
