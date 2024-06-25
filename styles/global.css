@@ -92,12 +92,18 @@ header > * {
     transition: 0.1s;
 }
 
-#header-title a {
-    display: block;
-    text-decoration: none;
-    font-size: 150%;
-    padding: 10px;
+#header-title > * {
     transform: skew(-20deg);
+    padding: 10px;
+}
+
+#header-title a {
+    text-decoration: none;
+}
+
+#header-title-home-link {
+    display: inline-block;
+    font-size: 150%;
 }
 
 #header-page-title {
@@ -109,6 +115,8 @@ header > * {
 }
 
 #header-page-title > * {
+    padding: 2px;
+    font-size: 130%;
     display: inline-block;
     transform: skew(20deg);
 }
