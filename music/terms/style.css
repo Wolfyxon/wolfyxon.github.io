@@ -1,0 +1,29 @@
+#dos-and-donts {
+    height: fit-content;
+}
+
+#dos {
+    list-style-image: url("/media/img/icons/check.svg");
+}
+
+#donts {
+    list-style-image: url("/media/img/icons/x.svg");
+}
+
+#dos-and-donts > * {
+    display: inline-block;
+    background: var(--panel);
+    border-radius: 10px;
+    vertical-align: top;
+    height: 200px;
+    width: 45%;
+    padding: 1%;
+}
+
+@media all and (orientation: portrait) {
+    #dos-and-donts > * {
+        width: 98%;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
