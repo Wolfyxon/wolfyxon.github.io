@@ -22,9 +22,9 @@ window.addEventListener("load", () => {
     }
 
     addColorGroup("Red", [
-        "#FF0000",
         "#D20000",
-        "#900000"
+        "#900000",
+        "#FF0000"
     ]);
 
     addColorGroup("Purple", [
