@@ -67,8 +67,9 @@
 }
 
 #project-list > * {
-    position: relative;
+    border-radius: 10px;
     background: var(--panel-dark);
+    position: relative;
     min-height: 15vw;
     height: fit-content;
     margin-bottom: 10px;
@@ -115,6 +116,7 @@
 }
 
 #programmers-list > * {
+    border-radius: 10px;
     background-color: var(--panel-dark);
     height: 20vh;
     padding: 1%;
