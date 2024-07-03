@@ -14,6 +14,10 @@ window.addEventListener("load", () => {
     }
 
     registerSoundfont("FluidR3 GM", "https://member.keymusician.com/Member/FluidR3_GM/");
+    registerSoundfont("Organteq 2 Church Organ", "https://musical-artifacts.com/artifacts/3579");
+    registerSoundfont("General User GS", "https://schristiancollins.com/generaluser.php");
+    registerSoundfont("Amen Break", "https://musical-artifacts.com/artifacts/974");
+    
 
     soundfontList.append(soundFontListFrag);
 });
