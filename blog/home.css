@@ -6,6 +6,7 @@
     border-left: 5px solid var(--color2);
     padding-bottom: 1%;
     transition: 0.1s;
+    border-radius: 10px;
 }
 
 #posts > *:hover {
