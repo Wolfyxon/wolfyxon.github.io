@@ -1,0 +1,24 @@
+#music-software > * {
+    width: 50%;
+    height: 100px;
+    background: var(--panel);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#music-software > * > img {
+    display: inline-block;
+    height: 100%;
+}
+
+.music-software-text {
+    margin-left: 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media all and (orientation: portrait) { 
+    #music-software > * {
+        width: 100%;
+    }
+}
