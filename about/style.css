@@ -1,4 +1,9 @@
+#main > p {
+    text-align: center;
+}
+
 #tbl-colors {
+    margin: 0 auto;
     padding: 5px;
     background-color: var(--panel-dark);
     width: 50%;
