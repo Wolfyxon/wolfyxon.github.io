@@ -6,3 +6,10 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
+.fancy-h {
+    border-left: rgba(255, 255, 255, 0.2) solid 8px;
+    padding: 1%;
+    margin: 20px auto;
+    text-align: center;
+}
