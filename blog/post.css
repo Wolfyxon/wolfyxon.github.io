@@ -1,12 +1,9 @@
+@import url("/styles/article.css");
+
 .post-header {
     margin-top: 5px;
     background-color: var(--color1); 
     padding: 1%;
     border-bottom: 10px var(--color2) solid;
     text-align: center;
-}
-
-section {
-    margin-left: auto;
-    margin-right: auto;
 }
