@@ -58,6 +58,14 @@ window.addEventListener("load", () => {
     }
 
     registerPost(
+        "Why you should never delete your projects",
+        "July 30 2024",
+        "Why is it so important to keep them?",
+        "30-07-2024_whyYouShouldNeverDeleteYourProjects",
+        ["programming", "art"]
+    );
+
+    registerPost(
         "The site was remade",
         "June 18 2024",
         "Some things I have to say about the biggest remake so far.",
