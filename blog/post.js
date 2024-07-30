@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
     const main = document.getElementById("main");
 
-    // -= Static components =-
+    // -== Static components ==- //
 
     const hd = document.createElement("div");
     hd.classList.add("post-header");
@@ -14,13 +14,14 @@ window.addEventListener("load", () => {
     date.innerText = document.body.getAttribute("data-post-date");
     date.classList.add("post-date");
 
-    // -= Nav =-
+    // -== Nav ==- //
     const nav = document.createElement("div"); 
     nav.id = "post-nav";
     
     const navRoot = document.createElement("ul");
     navRoot.id = "post-nav-root";
 
+    // - nav button switch - //
     const navBtn = document.createElement("button");
     navBtn.id = "post-nav-btn";
     let navOpen = false;
@@ -44,6 +45,8 @@ window.addEventListener("load", () => {
 
     closeNav();
    
+    // Scanning for headers and adding them to the list
+
     let currentList = navRoot;
     let currentLevel = 1;
 
@@ -86,7 +89,7 @@ window.addEventListener("load", () => {
     
     nav.append(navBtn, navRoot);
 
-    // -= Finish the header =-
+    // -== Finish the header ==- //
 
     hd.append(title, date, nav);
     document.body.append(hd);
