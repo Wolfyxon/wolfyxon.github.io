@@ -65,6 +65,7 @@ window.addEventListener("load", () => {
 
             const link = document.createElement("li");
             link.innerText = elm.innerText;
+            link.style.fontSize = 100 - (currentLevel * 12) + "%";
             
             link.addEventListener("click", () => {
                 if(navRoot.style.opacity === "0") return;
