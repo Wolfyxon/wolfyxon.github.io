@@ -7,3 +7,47 @@
     border-bottom: 10px var(--color2) solid;
     text-align: center;
 }
+
+#post-nav {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#post-nav-btn {
+    background-image: url("/media/img/icons/menu.png");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 30px;
+}
+
+#post-nav ul {
+    list-style: none;
+}
+
+#post-nav-root {
+    transition: 0.5s;
+    margin: 0 auto;
+    width: fit-content;
+    padding-inline-start: 0;
+    background: var(--color1);
+    overflow: hidden;
+}
+
+#post-nav-root li {
+    transition: 0.1s;
+    min-width: 80px;
+    border-bottom: 1px solid var(--panel-dark);
+    margin: 5px;
+    cursor: pointer;
+}
+
+#post-nav-root li:hover {
+    transition: 0.1s;
+    color: red;
+}
