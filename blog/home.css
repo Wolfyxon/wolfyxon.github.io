@@ -24,6 +24,7 @@
 }
 
 .post-date {
+    border-radius: 10px;
     padding: 0.5%;
     margin-left: 10px;
     display: inline-block;
