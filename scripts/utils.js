@@ -144,6 +144,24 @@ const utils = {
                .replaceAll("<", "&lt;")
                .replaceAll(">", "&gt;")
         ;
+    },
+
+    /**
+     * Returns the descendants of an element
+     * @param {HTMLElement} element 
+     */
+    getDescendants: (element) => {
+        let res = [];
+
+        for(const elm of element.children) {
+            res.push(elm);
+
+            utils.getDescendants(elm).forEach(sub => {
+                res.push(sub);
+            });
+        }
+
+        return res;
     }
     
 }
