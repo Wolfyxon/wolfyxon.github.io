@@ -10,7 +10,8 @@ const postTopics = [
     "analysis",
     "funny",
     "art",
-    "music"
+    "music",
+    "advice"
 ];
 
 
