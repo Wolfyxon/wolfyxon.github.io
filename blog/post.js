@@ -67,6 +67,10 @@ window.addEventListener("load", () => {
             link.innerText = elm.innerText;
             link.style.fontSize = 100 - (currentLevel * 12) + "%";
             
+            if(level == 1) {
+                link.style.fontWeight = "bold";
+            }
+            
             link.addEventListener("click", () => {
                 if(navRoot.style.opacity === "0") return;
 
