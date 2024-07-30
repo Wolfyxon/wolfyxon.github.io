@@ -71,7 +71,7 @@ window.addEventListener("load", () => {
         "June 18 2024",
         "Some things I have to say about the biggest remake so far.",
         "18-06-2024_siteRemake",
-        ["site"]
+        ["site", "projects"]
     );
 
     postList.append(tmpPostListFrag);
