@@ -33,6 +33,7 @@
 
 .post-topics > * {
     display: inline-block;
+    border-radius: 5px;
     background-color: var(--panel);
     width: fit-content;
     padding: 0.7% 1%;
