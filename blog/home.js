@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
         "July 30 2024",
         "Why is it so important to keep them?",
         "30-07-2024_whyYouShouldNeverDeleteYourProjects",
-        ["programming", "art"]
+        ["programming", "art", "advice"]
     );
 
     registerPost(
