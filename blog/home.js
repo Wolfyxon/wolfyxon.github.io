@@ -60,7 +60,7 @@ window.addEventListener("load", () => {
     registerPost(
         "The site was remade",
         "June 18 2024",
-        "Huge update",
+        "Some things I have to say about the biggest remake so far.",
         "18-06-2024_siteRemake",
         ["site"]
     );
