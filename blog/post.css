@@ -28,7 +28,6 @@
     text-align: left;
     list-style: none;
     list-style-position: inside;
-    padding-left: 0;
 }
 
 #post-nav-root {
@@ -38,6 +37,10 @@
     padding-inline-start: 0;
     background: var(--color1);
     overflow: hidden;
+}
+
+#post-nav-root-ul {
+    padding-left: 5%;
 }
 
 #post-nav-root li {
