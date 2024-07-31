@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
 
     function openNav() {
         navOpen = true;
-        navRoot.style.maxHeight = "300px";
+        navRoot.style.maxHeight = "250px";
         navRoot.style.opacity = "1";
     }
 
