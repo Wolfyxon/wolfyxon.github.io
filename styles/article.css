@@ -9,7 +9,10 @@
     animation-duration: 1s;
 }
 
-section {
+#main > section, 
+.section-parent > section, 
+.fancy-section 
+{
     background: var(--panel-dark);
     padding: 0.5% 1%;
     width: 68%;
@@ -21,7 +24,10 @@ section {
 }
 
 @media all and (orientation: portrait) {
-    section {
+    #main > section, 
+    .section-parent > section, 
+    .fancy-section 
+    {
         width: 100%;
     }
 }
