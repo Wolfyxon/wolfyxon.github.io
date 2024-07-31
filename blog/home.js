@@ -14,9 +14,9 @@ const postTopics = [
     "advice"
 ];
 
-
-
 window.addEventListener("load", () => {
+    /* --== Post adding logic ==-- */
+
     const posts = [];
     const postList = document.getElementById("posts");
     const tmpPostListFrag = document.createDocumentFragment();
@@ -68,6 +68,8 @@ window.addEventListener("load", () => {
         });
     }
 
+    /* -= Posts =- */
+
     registerPost(
         "Why you should never delete your projects",
         "July 30 2024",
@@ -84,5 +86,10 @@ window.addEventListener("load", () => {
         ["site", "projects"]
     );
 
+    /* -= Final post logic -= */
+
     postList.append(tmpPostListFrag);
+
+    /* --== Search bar logic ==-- */
+    // TODO
 });
