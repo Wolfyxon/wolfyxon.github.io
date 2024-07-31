@@ -91,5 +91,22 @@ window.addEventListener("load", () => {
     postList.append(tmpPostListFrag);
 
     /* --== Search bar logic ==-- */
-    // TODO
+    const searchInput = document.getElementById("search-input");
+    const topicList = document.getElementById("search-topics-list");
+
+    const topicListFrag = document.createDocumentFragment();
+    for(const topic of postTopics) {
+        const label = document.createElement("label");
+
+        const check = document.createElement("input");
+        check.type = "checkbox";
+
+        const title = document.createElement("span");
+        title.innerText = topic;
+
+        label.append(check, title);
+        topicListFrag.append(label);
+    }
+
+    topicList.append(topicListFrag);
 });
