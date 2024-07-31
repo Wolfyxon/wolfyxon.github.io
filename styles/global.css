@@ -86,6 +86,29 @@ button:hover {
     transition: 0.1s;
 }
 
+/* --== Dropdown button ==-- */
+
+.dropdown-btn {
+    border: 1px solid var(--panel-dark);
+    border-radius: 2px;
+}
+
+.dropdown-btn:hover {
+    box-shadow: none;
+}
+
+.dropdown-btn::after {
+    background: url("/media/img/icons/menu.svg");
+    background-size: 100%;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 3px;
+}
+
+
 /* --== Header ==-- */
 header {
     width: 100%;
