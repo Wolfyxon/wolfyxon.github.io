@@ -7,6 +7,10 @@
     background-repeat: no-repeat;
 }
 
+#banner > * {
+    position: absolute;
+}
+
 #banner > * > * {
     display: inline-block;
     vertical-align: top;
