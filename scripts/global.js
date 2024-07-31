@@ -83,4 +83,42 @@ window.addEventListener("load", async () => {
 
         hide();
     }
+
+    // --== Tab container class ==--
+
+    for(const container of document.getElementsByClassName("tab-container")) {
+        const tabs = [];
+
+        const buttons = document.createElement("div")
+        buttons.className = "tab-buttons";
+
+        for(const tab of container.children) {
+            const name = tab.getAttribute("data-tab-name");
+            if(!name) continue;
+
+            const btn = document.createElement("button");
+            btn.innerText = name;
+
+            btn.addEventListener("click", () => {
+                showTab(tab);
+            });
+
+            tabs.push(tab);
+            buttons.append(btn);
+        }
+
+        container.prepend(buttons)
+
+        function showTab(tab) {
+            for(const t of tabs) {
+                t.style.display = "none";
+                t.classList.remove("selected")
+            }
+
+            tab.classList.add("selected");
+            tab.style.removeProperty("display");
+        }
+
+        showTab(tabs[0]);
+    }
 });
