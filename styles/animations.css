@@ -12,7 +12,6 @@
 /* --== Observer animations ==-- */
 
 .anim-left {
-    position: absolute;
     margin-left: -50%;
     opacity: 0;
     transition: 1s;
@@ -25,7 +24,6 @@
 }
 
 .anim-right {
-    position: absolute;
     margin-right: 50%;
     opacity: 0;
     transition: 1s;
