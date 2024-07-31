@@ -76,6 +76,11 @@ window.addEventListener("load", async () => {
             else show()
         });
 
+        document.addEventListener("click", (e) => {
+            if(e.target === btn) return;
+            if(!utils.getAncestors(e.target).includes(target)) hide();
+        });
+
         hide();
     }
 });
