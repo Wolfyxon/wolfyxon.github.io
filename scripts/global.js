@@ -43,4 +43,39 @@ window.addEventListener("load", async () => {
     for(const observing of document.getElementsByClassName("observing")) {
         global.observer.observe(observing);
     }
+
+    // --== Display switch class ==--
+
+    for(const btn of document.getElementsByClassName("switch")) {
+        const targetId = btn.getAttribute("data-target");
+        if(!targetId) {
+            console.warn("No data-target specified for switch, ignoring.", btn);
+            continue;
+        }
+
+        const target = document.getElementById(targetId);
+        if(!target) {
+            console.warn(`Element #${targetId} not found, ignoring.`, btn);
+            continue;
+        }
+
+        let visible = false;
+
+        function show() {
+            visible = true;
+            target.style.removeProperty("display");
+        }
+
+        function hide() {
+            visible = false;
+            target.style.display = "none";
+        }
+
+        btn.addEventListener("click", () => {
+            if(visible) hide();
+            else show()
+        });
+
+        hide();
+    }
 });
