@@ -103,6 +103,7 @@ window.addEventListener("load", async () => {
                 showTab(tab);
             });
 
+            tab.button = btn;
             tabs.push(tab);
             buttons.append(btn);
         }
@@ -112,10 +113,10 @@ window.addEventListener("load", async () => {
         function showTab(tab) {
             for(const t of tabs) {
                 t.style.display = "none";
-                t.classList.remove("selected")
+                t.button.classList.remove("selected")
             }
 
-            tab.classList.add("selected");
+            tab.button.classList.add("selected");
             tab.style.removeProperty("display");
         }
 
