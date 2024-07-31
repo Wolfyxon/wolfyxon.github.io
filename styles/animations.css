@@ -11,35 +11,35 @@
 
 /* --== Observer animations ==-- */
 
-.anim-left {
+.anim-obs-left {
     margin-left: -50%;
     opacity: 0;
     transition: 1s;
 }
 
-.anim-left.visible {
+.anim-obs-left.visible {
     margin-left: 0;
     opacity: 1;
     transition: 1s;
 }
 
-.anim-right {
+.anim-obs-right {
     margin-right: 50%;
     opacity: 0;
     transition: 1s;
 }
 
-.anim-right.visible {
+.anim-obs-right.visible {
     margin-right: 0;
     opacity: 1;
     transition: 1s;
 }
 
-.anim-fade {
+.anim-obs-fade {
     transition: 1s;
     opacity: 0;
 }
-.anim-fade.visible {
+.anim-obs-fade.visible {
     transition: 1s;
     opacity: 1;
 }
