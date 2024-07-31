@@ -17,6 +17,7 @@ const postTopics = [
 
 
 window.addEventListener("load", () => {
+    const posts = [];
     const postList = document.getElementById("posts");
     const tmpPostListFrag = document.createDocumentFragment();
 
@@ -56,6 +57,15 @@ window.addEventListener("load", () => {
         post.append(textSection);
 
         tmpPostListFrag.append(post);
+
+        posts.push({
+            "title": title,
+            "date": date,
+            "description": description,
+            "id": id,
+            "topics": topics,
+            "element": post
+        });
     }
 
     registerPost(
