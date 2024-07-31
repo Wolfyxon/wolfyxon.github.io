@@ -149,6 +149,7 @@ const utils = {
     /**
      * Returns the descendants of an element
      * @param {HTMLElement} element 
+     * @returns {HTMLElement[]}
      */
     getDescendants: (element) => {
         let res = [];
