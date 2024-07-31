@@ -109,6 +109,8 @@ window.addEventListener("load", () => {
             } else {
                 enabledTopics.splice(enabledTopics.indexOf(topic));
             }
+
+            updatePostList();
         })
 
         const title = document.createElement("span");
@@ -119,4 +121,42 @@ window.addEventListener("load", () => {
     }
 
     topicList.append(topicListFrag);
+
+    function updatePostList() {
+        const query = searchInput.value.toLowerCase();
+
+        for(const post of posts) {
+            let qualifies = true;
+
+            if(query !== "") {
+                if(!post.title.toLowerCase().includes(query) && !post.description.toLowerCase().includes(query)) {
+                    qualifies = false;
+                }
+            }
+
+            if(enabledTopics.length !== 0) {
+                qualifies = false;
+
+                for(const topic of post.topics) {
+                    if(enabledTopics.includes(topic)) {
+                        qualifies = true;
+                        break;
+                    }
+                }
+            }
+
+            if(qualifies) {
+                post.element.style.removeProperty("display");
+            } else {
+                post.element.style.display = "none";
+            }
+            
+        }
+    }
+
+    searchInput.addEventListener("change", updatePostList);
+    searchInput.addEventListener("keydown", updatePostList);
+    searchInput.addEventListener("keyup", updatePostList);
+    
+    
 });
