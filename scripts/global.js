@@ -44,12 +44,12 @@ window.addEventListener("load", async () => {
         global.observer.observe(observing);
     }
 
-    // --== Display switch class ==--
+    // --== Dropdown button class ==--
 
-    for(const btn of document.getElementsByClassName("switch")) {
+    for(const btn of document.getElementsByClassName("dropdown-btn")) {
         const targetId = btn.getAttribute("data-target");
         if(!targetId) {
-            console.warn("No data-target specified for switch, ignoring.", btn);
+            console.warn("No data-target specified for dropdown, ignoring.", btn);
             continue;
         }
 
