@@ -27,22 +27,6 @@ body {
     font-family: "Roboto";
 }
 
-/* --== <section> ==-- */
-
-section {
-    background: var(--panel-dark);
-    padding: 0.5% 1%;
-    width: 68%;
-    border-left: 2px var(--panel) solid;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-@media all and (orientation: portrait) {
-    section {
-        width: 100%;
-    }
-}
 
 /* --== Links <a> ==-- */
 
