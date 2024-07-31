@@ -93,6 +93,28 @@ button:hover {
 }
 
 
+/* --== Tab container ==-- */
+
+.tab-buttons {
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.tab-buttons > * {
+    min-width: 200px;
+    margin-right: 5px;
+    box-shadow: none;
+    border-radius: 1px;
+    padding: 0.5%;
+    transition: 0.2s;
+}
+
+.tab-buttons > *.selected {
+    background-color: var(--color2);
+    transition: 0.2s;
+}
+
 /* --== Header ==-- */
 header {
     width: 100%;
