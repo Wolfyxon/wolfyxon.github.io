@@ -2,6 +2,13 @@
     Style for article sites such as blog and about me.
 */
 
+@import url("/styles/animations.css");
+
+#main {
+    animation: fade-in;
+    animation-duration: 1s;
+}
+
 section {
     margin-left: auto;
     margin-right: auto;
