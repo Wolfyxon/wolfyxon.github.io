@@ -91,8 +91,10 @@ window.addEventListener("load", () => {
     postList.append(tmpPostListFrag);
 
     /* --== Search bar logic ==-- */
+
     const searchInput = document.getElementById("search-input");
     const topicList = document.getElementById("search-topics-list");
+    const enabledTopics = [];
 
     const topicListFrag = document.createDocumentFragment();
     for(const topic of postTopics) {
@@ -100,6 +102,14 @@ window.addEventListener("load", () => {
 
         const check = document.createElement("input");
         check.type = "checkbox";
+
+        check.addEventListener("click", () => {
+            if(check.checked) {
+                enabledTopics.push(topic);
+            } else {
+                enabledTopics.splice(enabledTopics.indexOf(topic));
+            }
+        })
 
         const title = document.createElement("span");
         title.innerText = topic;
