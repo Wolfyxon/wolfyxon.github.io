@@ -162,6 +162,23 @@ const utils = {
         }
 
         return res;
+    },
+
+    /**
+     * Returns the ancestors of an element
+     * @param {HTMLElement} element
+     * @returns {HTMLElement[]}
+     */
+    getAncestors: (element) => {
+        const res = [];
+        let current = element;
+
+        while(current.parentElement) {
+            current = current.parentElement;
+            res.push(current);
+        }
+
+        return res;
     }
     
 }
