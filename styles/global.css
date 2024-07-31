@@ -18,6 +18,7 @@ body, html {
     width: 100%;
     height: auto;
     position: relative;
+    accent-color: var(--color2);
 }
 
 body {
