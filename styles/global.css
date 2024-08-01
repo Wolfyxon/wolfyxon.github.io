@@ -252,13 +252,7 @@ footer > div a {
     transition: 0.3s;
 }
 
-/* --== Other ==-- */
-
-#main {
-    padding: 1%;
-    margin-top: 10px;
-    min-height: 1000px;
-}
+/* --== Fancy H ==-- */
 
 .fancy-h {
     border-right: rgba(255, 255, 255, 0.2) solid 8px;
@@ -280,4 +274,12 @@ footer > div a {
     .fancy-h {
         width: 95%;
     }
+}
+
+/* --== Other ==-- */
+
+#main {
+    padding: 1%;
+    margin-top: 10px;
+    min-height: 1000px;
 }
