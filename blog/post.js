@@ -70,6 +70,7 @@ window.addEventListener("load", () => {
             link.style.fontSize = 100 - (currentLevel * 12) + "%";
             
             if(level == 1) {
+                currentList = navRoot;
                 link.style.fontWeight = "bold";
             }
             
