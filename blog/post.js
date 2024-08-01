@@ -31,9 +31,10 @@ window.addEventListener("load", () => {
         else openNav();
     });
 
+    let targetMenuHeight = "0px";
     function openNav() {
         navOpen = true;
-        navRoot.style.maxHeight = "250px";
+        navRoot.style.maxHeight = targetMenuHeight;
         navRoot.style.opacity = "1";
     }
 
@@ -42,8 +43,6 @@ window.addEventListener("load", () => {
         navRoot.style.maxHeight = "0px";
         navRoot.style.opacity = "0";
     }
-
-    closeNav();
    
     // Scanning for headers and adding them to the list
 
@@ -94,4 +93,7 @@ window.addEventListener("load", () => {
     hd.append(title, date, nav);
     document.body.append(hd);
     document.body.insertBefore(hd, document.getElementById("main"));
+
+    targetMenuHeight = getComputedStyle(navRoot).height;
+    closeNav();
 });
