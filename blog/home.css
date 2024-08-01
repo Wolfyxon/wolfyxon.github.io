@@ -47,6 +47,7 @@
 }
 
 #search-topics-list > * {
+    padding: 3px;
     cursor: pointer;
     user-select: none;
     display: inline-block;
