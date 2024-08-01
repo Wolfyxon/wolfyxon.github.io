@@ -95,6 +95,7 @@
     margin-left: 10px;
     display: inline-block;
     background-color: var(--color2);
+    font-size: 70%;
 }
 
 .post-topics > * {
