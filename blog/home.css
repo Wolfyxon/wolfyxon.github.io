@@ -75,6 +75,13 @@
     animation-duration: 0.5s;
 }
 
+@media all and (orientation: portrait) {
+    #posts > * {
+        border-radius: 5px;
+        border-left-width: 3px;
+    }
+}
+
 #posts > *:hover {
     filter: brightness(120%);
     transition: 0.1s;
@@ -97,6 +104,17 @@
     background-color: var(--color2);
     font-size: 70%;
 }
+
+@media all and (orientation: portrait) {
+    .post-date {
+        font-size: 50%;
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: 5px auto;
+    }
+}
+
 
 .post-topics > * {
     display: inline-block;
