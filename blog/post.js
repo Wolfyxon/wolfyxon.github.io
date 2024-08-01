@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
             const level = parseInt(elm.tagName.replace("H", ""));
 
             if(level < currentLevel) {
-                for(let i = 0; i < level; i++) {
+                for(let i = 0; i < currentLevel - level; i++) {
                     currentList = currentList.parentElement;
                 }
             } else if(level > currentLevel) {
@@ -70,7 +70,6 @@ window.addEventListener("load", () => {
             link.style.fontSize = 100 - (currentLevel * 12) + "%";
             
             if(level == 1) {
-                currentList = navRoot;
                 link.style.fontWeight = "bold";
             }
             
