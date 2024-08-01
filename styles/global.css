@@ -239,6 +239,19 @@ footer > div a {
     padding-right: 1%;
 }
 
+/* --== Faded ==-- */
+/* Used for old and deprecated content */
+
+.faded {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.faded:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
 /* --== Other ==-- */
 
 #main {
