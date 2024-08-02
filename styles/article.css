@@ -14,7 +14,8 @@
 .fancy-section 
 {
     background: var(--panel-dark);
-    padding: 0.5% 1%;
+    padding: 0.5% 10px;
+    box-sizing: border-box;
     width: 68%;
     border-left: 2px var(--panel) solid;
     border-radius: 10px;
