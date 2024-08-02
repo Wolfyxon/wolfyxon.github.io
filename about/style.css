@@ -14,6 +14,7 @@
 #tbl-colors th, td {
     background-color: var(--panel);
     padding: 3%;
+    text-align: center;
 }
 
 #tbl-colors td {
