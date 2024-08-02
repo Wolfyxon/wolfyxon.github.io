@@ -110,6 +110,12 @@ button:hover {
     transition: 0.2s;
 }
 
+@media all and (orientation: portrait) {
+    .tab-buttons > * {
+        min-width: 100px;
+    }
+}
+
 .tab-buttons > *.selected {
     background-color: var(--color2);
     transition: 0.2s;
