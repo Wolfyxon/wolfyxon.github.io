@@ -17,7 +17,8 @@ body, html {
     margin-right: auto;
     width: 100%;
     height: auto;
-    position: relative;
+    left: 0;
+    position: absolute;
     accent-color: var(--color2);
 }
 
