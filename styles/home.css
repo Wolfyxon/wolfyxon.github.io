@@ -192,6 +192,9 @@
         padding-top: 20px;
         text-align: center;
         height: 100vw;
+    }
+
+    #banner::before {
         background-size: 200% 120%;
         background-position: 100% 100%;
     }
