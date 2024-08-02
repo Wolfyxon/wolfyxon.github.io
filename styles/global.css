@@ -98,7 +98,7 @@ button:hover {
 .tab-buttons {
     text-align: center;
     margin: 5px auto;
-    width: fit-content;
+    width: 100%;
 }
 
 .tab-buttons > * {
