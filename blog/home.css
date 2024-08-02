@@ -92,6 +92,14 @@
     padding: 1%;
 }
 
+@media all and (orientation: portrait) {
+    #posts h1 {
+        font-size: 150%;
+        padding: 2%;
+        box-sizing: border-box;
+    }
+}
+
 .post-text {
     padding: 0 1%;
 }
