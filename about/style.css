@@ -26,4 +26,8 @@
     #tbl-colors {
         width: 100%;
     }
+
+    #tbl-colors td {
+        font-size: 90%;
+    }
 }
