@@ -38,5 +38,12 @@
     padding: 1%;
     margin: 20px auto;
     text-align: center;
-    box-sizing: border-box;
+}
+
+@media all and (orientation: portrait) {
+    .fancy-h {
+        padding: 2%;
+        box-sizing: border-box;
+        font-size: 150%;
+    }
 }
