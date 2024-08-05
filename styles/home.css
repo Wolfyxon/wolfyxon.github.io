@@ -1,5 +1,7 @@
 @import url('/styles/animations.css');
 
+/* -== Banner ==-- */
+
 #banner {
     height: 30vw;
     position: relative;
@@ -35,6 +37,32 @@
     width: 30vw;
 }
 
+@media all and (orientation: portrait) {
+    #banner {
+        padding-top: 20px;
+        text-align: center;
+        height: 100vw;
+    }
+
+    #banner::before {
+        background-size: 200% 120%;
+        background-position: 100% 100%;
+    }
+    
+    #banner-text {
+        margin-top: 0;
+        width: 100%;
+        display: block;
+        font-size: 4vw;
+    }
+
+    #banner-logo {
+        width: 50vw;
+    }
+}
+
+/* - banner socials - */
+
 #socials {
     border-radius: 20px;
     width: 60%;
@@ -53,6 +81,18 @@
 }
 
 
+@media all and (orientation: portrait) {
+    #socials {
+        height: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #socials a {
+        width: 6vw;
+    }
+}
+
 #socials a > img {
     filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(900%);
     height: 100%;
@@ -62,6 +102,8 @@
     filter: sepia(100%) saturate(10000%) hue-rotate(-70deg) saturate(0%);
     transition: 0.1s;
 }
+
+/* --== Projects ==-- */
 
 #software > div {
     width: 60%;
@@ -129,6 +171,36 @@
     font-weight: bold;
 }
 
+@media all and (orientation: portrait) {
+    #software > div {
+        text-align: center;
+        width: 100%;
+    }
+
+    #project-list > * {
+        height: fit-content;
+    }
+
+    .project-text {
+        width: 100%;
+    }
+
+    .project-text {
+        text-align: center;
+    }
+
+    #project-list > * > img {
+        margin-top: 10vw;
+        position: inherit;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+/* --== Programmers ==-- */
+
 #programmers-list > * {
     border-radius: 10px;
     background-color: var(--panel-dark);
@@ -184,68 +256,7 @@
     height: 100%;
 }
 
-
-
-
 @media all and (orientation: portrait) {
-    #banner {
-        padding-top: 20px;
-        text-align: center;
-        height: 100vw;
-    }
-
-    #banner::before {
-        background-size: 200% 120%;
-        background-position: 100% 100%;
-    }
-    
-    #banner-text {
-        margin-top: 0;
-        width: 100%;
-        display: block;
-        font-size: 4vw;
-    }
-
-    #banner-logo {
-        width: 50vw;
-    }
-
-    #socials {
-        height: 4vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #socials a {
-        width: 6vw;
-    }
-
-    #software > div {
-        text-align: center;
-        width: 100%;
-    }
-
-    #project-list > * {
-        height: fit-content;
-    }
-
-    .project-text {
-        width: 100%;
-    }
-
-    .project-text {
-        text-align: center;
-    }
-
-    #project-list > * > img {
-        margin-top: 10vw;
-        position: inherit;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
     #programmers-list > * {
         height: fit-content;
     }
