@@ -129,6 +129,7 @@
     min-height: 15vw;
     height: fit-content;
     margin-bottom: 10px;
+    border-left: 5px solid var(--color1);
 }
 
 #project-list > * > img {
@@ -179,6 +180,7 @@
 
     #project-list > * {
         height: fit-content;
+        border-left: none;
     }
 
     .project-text {
