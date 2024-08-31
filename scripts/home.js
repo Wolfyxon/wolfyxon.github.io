@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "https://github-readme-stats.vercel.app/api/pin/?username=wolfyxon&repo=3ds-web-stuff",
+        "media/img/home/projectThumbnails/3dsWebStuff.png",
         [
             {
                 text: "Visit the site",
