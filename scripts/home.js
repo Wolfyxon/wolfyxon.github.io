@@ -55,10 +55,16 @@ window.addEventListener("load", () => {
         "Turret Siege",
         "A game in early development where you are a turret surrounded by bullets and enemies.",
         "media/img/home/projectThumbnails/ts.png",
-        [{
-            text: "Source code",
-            url: "https://github.com/Wolfyxon/TurretSiege/"
-        }]
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/TurretSiege/"
+            },
+            {
+                text: "Downloads",
+                url: "https://github.com/Wolfyxon/TurretSiege/releases/latest"
+            }
+        ]
     );
 
     registerProject(
