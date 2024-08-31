@@ -33,6 +33,7 @@ body {
 a {
     color: white;
     transition: 0.1s;
+    text-underline-offset: 5px;
 }
 
 a:hover {
