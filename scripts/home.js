@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
     registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
-        "https://github-readme-stats.vercel.app/api/pin/?username=wolfyxon&repo=minvideo",
+        "media/img/home/projectThumbnails/MinVideo.png",
         [
             {
                 text: "Source code",
