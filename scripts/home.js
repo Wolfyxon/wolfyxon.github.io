@@ -52,6 +52,16 @@ window.addEventListener("load", () => {
     );
 
     registerProject(
+        "Turret Siege",
+        "A game in early development where you are a turret surrounded by bullets and enemies.",
+        "media/img/home/projectThumbnails/ts.png",
+        [{
+            text: "Source code",
+            url: "https://github.com/Wolfyxon/TurretSiege/"
+        }]
+    );
+
+    registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
         "https://github-readme-stats.vercel.app/api/pin/?username=wolfyxon&repo=3ds-web-stuff",
