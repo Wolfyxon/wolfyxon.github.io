@@ -11,7 +11,8 @@ const postTopics = [
     "funny",
     "art",
     "music",
-    "advice"
+    "advice",
+    "low effort"
 ];
 
 window.addEventListener("load", () => {
