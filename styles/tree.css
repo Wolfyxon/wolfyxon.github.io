@@ -26,7 +26,8 @@
 .tree a {
     display: block;
     padding: 0.3em;
-    border: 2px solid white;
+    background-color: white;
+    color: black;
     width: fit-content;
     border-radius: 10px;
 }
