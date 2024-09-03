@@ -9,7 +9,7 @@
 
 .tree li {
     list-style: none;
-    margin-top: 10px;
+    padding-top: 5px;
     position: relative;
 }
 
