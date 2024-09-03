@@ -1,6 +1,26 @@
+.tree {
+    --indent: 40px;
+}
+
+.tree ul {
+    border-left: 2px white solid;
+    padding-inline-start: var(--indent);
+}
+
 .tree li {
     list-style: none;
     margin-top: 10px;
+    position: relative;
+}
+
+.tree > li li::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-bottom: 2px solid white;
+    width: var(--indent);
+    margin-left: calc(var(--indent) * -1);
+    height: 1em;
 }
 
 .tree a {
