@@ -35,9 +35,9 @@ a {
     transition: 0.1s;
 }
 
-a:hover {
-    transition: 0.1s;
+a[href]:hover {
     color: silver;
+    transition: 0.1s;
 }
 
 a[target="_blank"]::after, a[target="blank"]::after {
