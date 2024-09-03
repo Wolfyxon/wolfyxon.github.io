@@ -34,3 +34,7 @@
     width: fit-content;
     border-radius: 10px;
 }
+
+.tree a.filled {
+    background-color: var(--color);
+}
