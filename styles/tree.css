@@ -4,8 +4,15 @@
 
 .tree ul {
     position: absolute;
-    border-left: 2px white solid;
     padding-inline-start: var(--indent);
+}
+
+.tree ul::before {
+    content: "";
+    position: absolute;
+    border-left: 2px white solid;
+    margin-left: calc(var(--indent) * -1);
+    height: 90%;
 }
 
 .tree li {
