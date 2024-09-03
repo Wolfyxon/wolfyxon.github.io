@@ -3,6 +3,7 @@
 }
 
 .tree ul {
+    position: absolute;
     border-left: 2px white solid;
     padding-inline-start: var(--indent);
 }
