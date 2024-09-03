@@ -2,6 +2,8 @@
     --indent: 40px;
     --unindent: calc(var(--indent) * -0.5);
     --color: white;
+
+    overflow-x: scroll;
 }
 
 .tree ul {
