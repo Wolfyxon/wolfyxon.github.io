@@ -35,6 +35,6 @@
     border-radius: 10px;
 }
 
-.tree a.filled {
+.tree li.filled > a{
     background-color: var(--color);
 }
