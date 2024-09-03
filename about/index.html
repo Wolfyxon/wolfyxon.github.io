@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/styles/global.css">
         <link rel="stylesheet" href="/styles/article.css">
         <link rel="stylesheet" href="/styles/tree.css">
+        <link rel="stylesheet" href="/styles/colors.css">
         <link rel="stylesheet" href="style.css">
 
         <script src="/scripts/utils.js" type="text/javascript"></script>
@@ -25,7 +26,7 @@
         <div id="main">
           
             <div class="tab-container" id="tabs">
-                <div class="section-parent" data-tab-name="Detailed info">
+                <!--<div class="section-parent" data-tab-name="Detailed info">
                     <h1 class="fancy-h"><div>Something about me</div></h1>
                     <section>
                         <p>
@@ -136,16 +137,16 @@
                             It's not easy to offend me, and if you do offend I will assume it wasn't intentional or it's a joke. I forgive rather easily.
                         </p>
                     </section>
-               </div>
+               </div>-->
 
                <div class="section-parent" data-tab-name="Short info">
                     <h1 class="fancy-h"><div>Short about me</div></h1>
                     <section>
                         <ul class="tree">
-                            <li>
+                            <li style="--color: var(--red)">
                                 <a>Me</a>
                                 <ul>
-                                    <li>
+                                    <li style="--color: var(--blue)">
                                         <a>Spoken languages</a>
                                         <ul>
                                             <li><a>Polish</a></li>
@@ -153,10 +154,10 @@
                                             <li><a>German</a></li>
                                         </ul>
                                     </li>
-                                    <li>
+                                    <li style="--color: var(--lime)">
                                         <a>Interests</a>
                                         <ul>
-                                            <li>
+                                            <li style="--color: var(--yellow)">
                                                 <a>Practical</a>
                                                 <ul>
                                                     <li><a>Programming</a></li>
@@ -187,7 +188,7 @@
                                                 </ul>
                                             </li>
                                             
-                                            <li>
+                                            <li style="--color: var(--orange)">
                                                 <a>Theoretical</a>
                                                 <ul>
                                                     <li><a>Autism</a></li>
@@ -197,7 +198,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
+                                    <li style="--color: var(--purple)">
                                         <a>Personality</a>
                                         <ul>
                                             <li><a>Introvert</a></li>
