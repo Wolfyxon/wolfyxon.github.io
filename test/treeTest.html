@@ -1,25 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../styles/tree.css">
+        <title>Wolfyxon</title>
+        <meta name="description" content="My nerdy website">
+        <meta name="google-site-verification" content="CEp8re5xPxShHGl3Z04NXVKOKE-OgXujmu6jYVBIXqE">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preload" href="/components/header.html" as="fetch" crossorigin="anonymous">
+        <link rel="preload" href="/components/footer.html" as="fetch" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" href="/styles/tree.css">
+
+        <script src="/scripts/utils.js" type="text/javascript" defer></script>
+        <script src="/scripts/global.js" type="text/javascript" defer></script>
     </head>
-    <body>
-        <ul class="tree">
-            <li>
-                <a>Root node</a>
-                <ul>
-                    <li><a>Sub node 1</a></li>
-                    <li><a>Sub node 2</a></li>
-                    <li>
-                        <a>Subnode with subsubnodes</a>
-                        <ul>
-                            <li><a>Nested node 1</a></li>
-                            <li><a>Nested node 2</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+
+    <body data-title="Page title" data-main-page="">
+        <header></header>
+        
+        <div id="main">
+            <ul class="tree">
+                <li>
+                    <a>Root node</a>
+                    <ul>
+                        <li><a>Sub node 1</a></li>
+                        <li><a>Sub node 2</a></li>
+                        <li>
+                            <a>Subnode with subsubnodes</a>
+                            <ul>
+                                <li><a>Nested node 1</a></li>
+                                <li><a>Nested node 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <footer></footer>
     </body>
 </html>
