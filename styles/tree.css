@@ -26,7 +26,7 @@
     height: 1em;
 }
 
-.tree a {
+.tree li > a {
     display: block;
     padding: 0.3em;
     border: 3px solid var(--color);
