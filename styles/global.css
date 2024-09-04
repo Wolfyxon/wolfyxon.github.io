@@ -145,10 +145,6 @@ header > * {
     transition: 0.1s;
 }
 
-#header-title:hover {
-    filter: brightness(120%);
-    transition: 0.1s;
-}
 
 #header-title > * {
     transform: skew(-20deg);
@@ -162,6 +158,11 @@ header > * {
 #header-title-home-link {
     display: inline-block;
     font-size: 150%;
+}
+
+#header-title:has(#header-title-home-link:hover) {
+    filter: brightness(120%);
+    transition: 0.1s;
 }
 
 #header-page-title {
