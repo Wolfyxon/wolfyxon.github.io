@@ -23,25 +23,25 @@
 .anim-obs-left {
     margin-left: -50%;
     opacity: 0;
-    transition: margin-left opacity 1s;
+    transition: margin-left 1s, opacity 1s;
 }
 
 .anim-obs-left.visible {
     margin-left: 0;
     opacity: 1;
-    transition: margin-left opacity 1s;
+    transition: margin-left 1s, opacity 1s;
 }
 
 .anim-obs-right {
     margin-right: 50%;
     opacity: 0;
-    transition: margin-right opacity 1s;
+    transition: margin-left 1s, opacity 1s;
 }
 
 .anim-obs-right.visible {
     margin-right: 0;
     opacity: 1;
-    transition: margin-right opacity 1s;
+    transition: margin-left 1s, opacity 1s;
 }
 
 .anim-obs-fade {
