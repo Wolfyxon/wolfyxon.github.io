@@ -192,7 +192,7 @@ header > * {
 
 
 /* Navigator */
-nav {
+header nav {
     background: var(--panel);
     width: 70%;
     height: 50px;
@@ -201,17 +201,17 @@ nav {
 }
 
 @media all and (orientation: portrait) {
-    nav {
+    head nav {
         text-align: center;
         width: 100%;
     }
 }
 
-nav > * {
+header nav > * {
     transform: skew(20deg);
 }
 
-nav a {
+header nav a {
     text-decoration: none;
     text-align: center;
     display: inline-block;
@@ -220,11 +220,11 @@ nav a {
     transition: 0.1s;
 }
 
-nav a > div {
+header nav a > div {
     margin-top: 15px;
 }
 
-nav a:hover {
+header nav a:hover {
     background: var(--panel-dark);
     transition: 0.1s;
     color: white;
