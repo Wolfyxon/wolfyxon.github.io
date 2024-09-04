@@ -46,7 +46,7 @@ a[target="_blank"]::after, a[target="blank"]::after {
     width: 16px;
     height: 16px;
     content: "";
-    background-image: url("/media/img/icons/open_in_new.svg");
+    background-image: url("/media/img/icons/google/open_in_new.svg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -83,7 +83,7 @@ button:hover {
 }
 
 .dropdown-btn::after {
-    background: url("/media/img/icons/menu.svg");
+    background: url("/media/img/icons/google/menu.svg");
     background-size: 100%;
     display: inline-block;
     content: "";
