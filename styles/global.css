@@ -299,4 +299,5 @@ footer > div a {
     border-radius: 5px;
     overflow: scroll;
     margin-bottom: 10px;
+    max-height: 800px;
 }
