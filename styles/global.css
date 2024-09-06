@@ -292,7 +292,7 @@ footer > div a {
     min-height: 1000px;
 }
 
-.codeblock {
+.code {
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--background);
     padding: 10px;
