@@ -21,10 +21,10 @@ window.addEventListener("load", async () => {
     document.body.append(footer);
 
     // Request header and footer
-    const headerHtml = await utils.httpGet("/components/header.html");
+    const headerHtml = await utils.httpGet("/assets/components/header.html");
     header.innerHTML = headerHtml.replace("<header>", "").replace("</header>", "");
 
-    const footerHtml = await utils.httpGet("/components/footer.html");
+    const footerHtml = await utils.httpGet("/assets/components/footer.html");
     footer.innerHTML = footerHtml.replace("<footer>", "").replace("</footer>", "");
 
     // Set page title (if present)

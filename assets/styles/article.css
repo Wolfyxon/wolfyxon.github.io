@@ -2,7 +2,7 @@
     Style for article sites such as blog and about me.
 */
 
-@import url("/styles/animations.css");
+@import url("/assets/styles/animations.css");
 
 #main {
     animation: fade-in;

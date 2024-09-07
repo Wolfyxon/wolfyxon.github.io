@@ -1,4 +1,4 @@
-@import url("/styles/article.css");
+@import url("/assets/styles/article.css");
 
 .post-header {
     margin-top: 5px;
@@ -18,7 +18,7 @@
 }
 
 #post-nav-btn {
-    background-image: url("/media/img/icons/google/menu.svg");
+    background-image: url("/assets/media/img/icons/google/menu.svg");
     background-size: 100% 100%;
     width: 200px;
     height: 30px;

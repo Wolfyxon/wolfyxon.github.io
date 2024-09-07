@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
     registerProject(
         "The Great Doors of Door", 
         "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
-        "media/img/home/projectThumbnails/tgdod.webp", 
+        "assets/media/img/home/projectThumbnails/tgdod.webp", 
         [{
             text: "Play on Roblox", 
             url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
     registerProject(
         "Turret Siege",
         "A game in early development where you are a turret surrounded by bullets and enemies.",
-        "media/img/home/projectThumbnails/ts.png",
+        "assets/media/img/home/projectThumbnails/ts.png",
         [
             {
                 text: "Source code",
@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "media/img/home/projectThumbnails/3dsWebStuff.png",
+        "assets/media/img/home/projectThumbnails/3dsWebStuff.png",
         [
             {
                 text: "Visit the site",
@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
     registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
-        "media/img/home/projectThumbnails/MinVideo.png",
+        "assets/media/img/home/projectThumbnails/MinVideo.png",
         [
             {
                 text: "Source code",
@@ -102,7 +102,7 @@ window.addEventListener("load", () => {
     registerProject(
         "This site",
         "I think it deserves to be listed here since I put quite a lot of effort into it :]",
-        "media/img/Wolfyxon.png",
+        "assets/media/img/Wolfyxon.png",
         [
             {
                 text: "Source code",
@@ -170,7 +170,7 @@ window.addEventListener("load", () => {
 
     registerProgrammer(
         "Karoleus.PL", 
-        "/media/img/people/karoleus_pl.png", 
+        "/assets/media/img/people/karoleus_pl.png", 
         [
             "https://x.com/karoleuspl",
             "https://www.youtube.com/@KaroleusPL",

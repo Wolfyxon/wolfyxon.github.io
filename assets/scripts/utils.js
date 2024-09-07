@@ -74,7 +74,7 @@ const utils = {
      * @returns {string}
      */
     getSocialIcon: (url) => {
-        const dir = "/media/img/icons/social/";
+        const dir = "/assets/media/img/icons/social/";
 
         const icons = {
             "twitter.com": "x.png",
@@ -95,7 +95,7 @@ const utils = {
             }
         }
 
-        return "/media/img/icons/social/website.png";
+        return "/assets/media/img/icons/social/website.png";
     },
 
     /**
