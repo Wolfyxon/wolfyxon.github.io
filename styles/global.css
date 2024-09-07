@@ -11,6 +11,10 @@
     --special2: #8300FF; 
 }
 
+* {
+    scrollbar-color: #4a4a4d #323233;
+}
+
 body, html {
     padding: 0;
     margin-top: 0;
