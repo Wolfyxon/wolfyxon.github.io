@@ -162,7 +162,7 @@ window.addEventListener("load", () => {
             "https://soundcloud.com/karoleus-pl",
             "https://github.com/KaroleusPL"
         ], 
-        "Starting game developer, experienced artist and musician. Also my best friend."
+        "Game developer, experienced artist and musician. Also my best friend."
     );
 
     programmersList.append(tmpProgrammersListFrag);
