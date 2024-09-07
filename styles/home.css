@@ -241,6 +241,7 @@
     height: 3vh;
     border-radius: 10px;
     background-color: var(--panel);
+    margin-top: 20px;
 }
 
 .programmer-links > * {
