@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root {
+* {
+    scrollbar-color: #4a4a4d #323233;
+}
+
+html {
     --background: #121213;
     --panel: #3e3d3f;
     --panel-slightly-dark: #38383a;
@@ -11,8 +15,10 @@
     --special2: #8300FF; 
 }
 
-* {
-    scrollbar-color: #4a4a4d #323233;
+body {
+    color: white;
+    background: var(--background);
+    font-family: "Roboto";
 }
 
 body, html {
@@ -25,13 +31,6 @@ body, html {
     overflow-x: hidden;
     accent-color: var(--color2);
 }
-
-body {
-    color: white;
-    background: var(--background);
-    font-family: "Roboto";
-}
-
 
 /* --== Links <a> ==-- */
 
