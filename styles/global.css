@@ -5,6 +5,7 @@
 }
 
 html {
+    --text: white;
     --background: #121213;
     --panel: #3e3d3f;
     --panel-slightly-dark: #38383a;
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-    color: white;
+    color: var(--text);
     background: var(--background);
     font-family: "Roboto";
 }
@@ -35,7 +36,7 @@ body, html {
 /* --== Links <a> ==-- */
 
 a {
-    color: white;
+    color: var(--text);
     transition: 0.1s;
 }
 
