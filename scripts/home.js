@@ -154,11 +154,13 @@ window.addEventListener("load", () => {
             websiteLink.innerText = website;
         }
 
-        textSection.append(nameEle, descEele, linksEle);
+        textSection.append(nameEle, descEele);
         
         if(websiteLink) {
             textSection.append(websiteLink);
         }
+
+        textSection.append(linksEle);
 
         div.append(img, textSection);
         div.classList.add("observing");
