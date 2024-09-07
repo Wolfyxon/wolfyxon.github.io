@@ -152,6 +152,7 @@ window.addEventListener("load", () => {
             websiteLink = document.createElement("a");
             websiteLink.href = website;
             websiteLink.innerText = website;
+            websiteLink.className = "programmers-website";
         }
 
         textSection.append(nameEle, descEele);
