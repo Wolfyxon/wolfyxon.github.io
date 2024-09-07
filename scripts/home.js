@@ -116,7 +116,7 @@ window.addEventListener("load", () => {
     const programmersList = document.getElementById("programmers-list");
     const tmpProgrammersListFrag = document.createDocumentFragment();
     
-    function registerProgrammer(name, thumbnail, links, description) {
+    function registerProgrammer(name, thumbnail, links, description, website) {
         const div = document.createElement("div");
 
         const img = document.createElement("img");
@@ -146,7 +146,19 @@ window.addEventListener("load", () => {
             linksEle.append(a);
         }
 
+        let websiteLink;
+
+        if(website) {
+            websiteLink = document.createElement("a");
+            websiteLink.href = website;
+            websiteLink.innerText = website;
+        }
+
         textSection.append(nameEle, descEele, linksEle);
+        
+        if(websiteLink) {
+            textSection.append(websiteLink);
+        }
 
         div.append(img, textSection);
         div.classList.add("observing");
