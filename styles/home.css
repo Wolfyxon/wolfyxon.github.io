@@ -206,7 +206,7 @@
 #programmers-list > * {
     border-radius: 10px;
     background-color: var(--panel-dark);
-    height: 20vh;
+    height: fit-content;
     padding: 1%;
     transform: scale(0.8);
     opacity: 0;
