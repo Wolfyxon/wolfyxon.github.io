@@ -235,6 +235,10 @@
     width: 60%;
 }
 
+.programmers-website {
+    padding: 0 0 2% 0;
+    display: block;
+}
 
 .programmer-links {
     width: 50%;
@@ -242,7 +246,6 @@
     height: 3vh;
     border-radius: 10px;
     background-color: var(--panel);
-    margin-top: 20px;
 }
 
 .programmer-links > * {
