@@ -11,7 +11,7 @@ html {
     --panel-slightly-dark: #38383a;
     --panel-dark: #282829;
     --panel-very-dark: #1c1c1d;
-    --color1: rgb(114, 0, 0);
+    --color1: rgb(87, 0, 0);
     --color2: #D20000;
     --special1: rgb(185, 159, 255);
     --special2: #8300FF; 
@@ -145,7 +145,7 @@ header > * {
 #header-title {
     width: 65%;
     font-weight: bold;
-    background-color: var(--color1);
+    background-color: var(--panel-very-dark);
     transform: skew(20deg);
     transition: 0.1s;
 }
@@ -199,7 +199,7 @@ header > * {
 
 /* Navigator */
 header nav {
-    background: var(--panel);
+    background: var(--panel-dark);
     width: 70%;
     height: 50px;
     transform: skew(-20deg);
@@ -231,7 +231,7 @@ header nav a > div {
 }
 
 header nav a:hover {
-    background: var(--panel-dark);
+    background: var(--panel-very-dark);
     transition: 0.1s;
     color: white;
 }

@@ -2,9 +2,9 @@
 
 .post-header {
     margin-top: 5px;
-    background-color: var(--color1); 
+    background-color: var(--panel-very-dark); 
     padding: 1%;
-    border-bottom: 10px var(--color2) solid;
+    border-bottom: 10px var(--color1) solid;
     text-align: center;
 }
 
