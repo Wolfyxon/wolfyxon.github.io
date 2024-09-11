@@ -28,7 +28,7 @@
     height: 1em;
 }
 
-.tree li > a {
+.tree li > div {
     display: block;
     padding: 0.3em;
     border: 3px solid var(--color);
@@ -37,6 +37,6 @@
     border-radius: 10px;
 }
 
-.tree li.filled > a{
+.tree li.filled > div {
     background-color: var(--color);
 }
