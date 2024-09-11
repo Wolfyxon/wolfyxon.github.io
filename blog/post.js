@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
     // - nav button switch - //
     const navBtn = document.createElement("button");
     navBtn.id = "post-nav-btn";
+    navBtn.ariaLabel = "Navigation";
     let navOpen = false;
 
     navBtn.addEventListener("click", () => {
