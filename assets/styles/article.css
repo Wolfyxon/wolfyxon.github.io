@@ -13,7 +13,7 @@
 .section-parent > section, 
 .fancy-section 
 {
-    background: var(--panel-dark);
+    background: var(--panel-very-dark);
     padding: 0.5% 10px;
     box-sizing: border-box;
     width: 68%;
