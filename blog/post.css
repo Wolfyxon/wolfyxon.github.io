@@ -4,7 +4,7 @@
     margin-top: 5px;
     background-color: var(--color1); 
     padding: 1%;
-    border-bottom: 10px var(--color2) solid;
+    border-bottom: 10px var(--panel-very-dark) solid;
     text-align: center;
 }
 
