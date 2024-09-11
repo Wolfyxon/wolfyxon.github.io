@@ -33,6 +33,23 @@
     }
 }
 
+#main > section h1,
+#main > section h2,
+#main > section h3,
+#main > section h4,
+.section-parent > section h1,
+.section-parent > section h2,
+.section-parent > section h3,
+.section-parent > section h4,
+.fancy-section h1,
+.fancy-section h2,
+.fancy-section h3,
+.fancy-section h4
+{
+    color: var(--special1);
+}
+
+
 .fancy-h {
     border-left: rgba(255, 255, 255, 0.2) solid 8px;
     padding: 1%;
