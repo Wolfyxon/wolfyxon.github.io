@@ -76,6 +76,11 @@ button:hover {
     transition: 0.1s;
 }
 
+button:active {
+    background: var(--color2);
+    transition: 0.3s;
+}
+
 /* --== Dropdown button ==-- */
 
 .dropdown-btn {
