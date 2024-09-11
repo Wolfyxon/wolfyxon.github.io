@@ -146,7 +146,7 @@ header > * {
 #header-title {
     width: 65%;
     font-weight: bold;
-    background-color: var(--panel-very-dark);
+    background-color: var(--color1);
     transform: skew(20deg);
     transition: 0.1s;
 }
