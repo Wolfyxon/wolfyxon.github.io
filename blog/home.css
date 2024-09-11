@@ -66,7 +66,7 @@
     text-decoration: none;
     display: block;
     height: fit-content;
-    background: var(--panel-dark);
+    background: var(--panel-very-dark);
     border-left: 8px solid var(--color1);
     padding-bottom: 1%;
     transition: 0.1s;
