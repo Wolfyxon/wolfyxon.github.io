@@ -65,15 +65,14 @@ button {
     font-size: medium;
     font-weight: bold;
     padding: 0.8%;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color1);
     color: white;
     transition: 0.1s;
     cursor: pointer;
 }
 
 button:hover {
-    box-shadow: 0 0 2px 2px var(--color1);
-    background: rgba(44, 44, 44, 0.1);
+    opacity: 0.8;
     transition: 0.1s;
 }
 
