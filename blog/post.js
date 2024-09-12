@@ -95,8 +95,17 @@ window.addEventListener("load", () => {
     rdtLabel.innerText = "Reading time";
 
     const rdtValue = document.createElement("div");
+    const time  = document.getElementById("main").innerText.split(" ").length / 200;
+    let timeStr = "";
+
+    if(time >= 1) {
+        timeStr = `${Math.floor(time)} minutes`;
+    } else {
+        timeStr = `${Math.floor(60 * time)} seconds`;
+    }
+    
     rdtValue.id = "post-rdt-value";
-    rdtValue.innerText = "unknown"; // TODO: calculate the reading time
+    rdtValue.innerText = `~ ${timeStr}`; // TODO: calculate the reading time
 
     rdtContainer.append(rdtLabel, rdtValue);
 
