@@ -54,3 +54,28 @@
     transition: 0.1s;
     color: red;
 }
+
+#post-rdt {
+    margin-top: 15px;
+}
+
+#post-rdt-label {
+    font-size: 85%;
+}
+
+#post-rdt-value {
+    font-weight: bold;
+    font-size: 110%;
+    padding: 5px;
+}
+
+#post-rdt-value::before {
+    content: "";
+    vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    background-image: url("../assets/media/img/icons/google/time.svg");
+    background-size: 100%;
+    margin-right: 2px;
+}

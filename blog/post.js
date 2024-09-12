@@ -86,8 +86,21 @@ window.addEventListener("load", () => {
         }
     });
     
-    
-    nav.append(navBtn, navRoot);
+    // --== Reading time label ==-- //
+    const rdtContainer = document.createElement("div");
+    rdtContainer.id = "post-rdt";
+
+    const rdtLabel = document.createElement("div");
+    rdtLabel.id = "post-rdt-label";
+    rdtLabel.innerText = "Reading time";
+
+    const rdtValue = document.createElement("div");
+    rdtValue.id = "post-rdt-value";
+    rdtValue.innerText = "unknown"; // TODO: calculate the reading time
+
+    rdtContainer.append(rdtLabel, rdtValue);
+
+    nav.append(navBtn, navRoot, rdtContainer);
 
     // -== Finish the header ==- //
 
