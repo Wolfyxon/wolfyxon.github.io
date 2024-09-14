@@ -13,30 +13,32 @@ window.addEventListener("load", async () => {
 
     // --== Auto header and footer insertion ==--
 
-    // Prepare
-    const header = document.getElementsByTagName("header")[0];
-    const footer = document.getElementsByTagName("footer")[0];
-
-    document.body.prepend(header);
-    document.body.append(footer);
-
-    // Request header and footer
-    const headerHtml = await utils.httpGet("/assets/components/header.html");
-    header.innerHTML = headerHtml.replace("<header>", "").replace("</header>", "");
-
-    const footerHtml = await utils.httpGet("/assets/components/footer.html");
-    footer.innerHTML = footerHtml.replace("<footer>", "").replace("</footer>", "");
-
-    // Set page title (if present)
-    const title = document.body.getAttribute("data-title");
-    const mainPage = document.body.getAttribute("data-main-page") || "";
+    if(!document.body.getAttribute("data-no-default")) {
+        // Prepare
+        const header = document.getElementsByTagName("header")[0];
+        const footer = document.getElementsByTagName("footer")[0];
     
-    if(title) {
-        const headerPageTitle = document.getElementById("header-page-title");
-        headerPageTitle.style.display = "";
-        headerPageTitle.href = mainPage;
-
-        headerPageTitle.children[0].innerText = title;
+        document.body.prepend(header);
+        document.body.append(footer);
+    
+        // Request header and footer
+        const headerHtml = await utils.httpGet("/assets/components/header.html");
+        header.innerHTML = headerHtml.replace("<header>", "").replace("</header>", "");
+    
+        const footerHtml = await utils.httpGet("/assets/components/footer.html");
+        footer.innerHTML = footerHtml.replace("<footer>", "").replace("</footer>", "");
+    
+        // Set page title (if present)
+        const title = document.body.getAttribute("data-title");
+        const mainPage = document.body.getAttribute("data-main-page") || "";
+        
+        if(title) {
+            const headerPageTitle = document.getElementById("header-page-title");
+            headerPageTitle.style.display = "";
+            headerPageTitle.href = mainPage;
+    
+            headerPageTitle.children[0].innerText = title;
+        }        
     }
 
     // --== Observe all elements with the 'observing' class ==--
