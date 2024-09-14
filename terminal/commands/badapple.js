@@ -101,7 +101,7 @@ registerCommand(
         video.onended = stop;
 
         echo(" ");
-        echo("Type ^C or press Ctr+C to stop");
+        echo("Type ^C or press Ctrl+C to stop");
 
         await wait();
     })
