@@ -1,5 +1,5 @@
 registerCommand(
-    new Command(["cat"])
+    new Command(["cat", "read"])
     .setDescription("Reads contents of a text file")
     .addArg("path", "File path", false)
     
