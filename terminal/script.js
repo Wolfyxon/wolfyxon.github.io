@@ -3,6 +3,81 @@ let lastCommandCtx = null;
 
 const commands = [];
 
+/* --== File system ==-- */
+const fsDir = "fs";
+let currentDir = "/";
+const fs = [
+    {
+        "name": "testDir",
+        "files": [
+            "test.txt"
+        ]
+    },
+    
+    "hi.txt"
+]
+const fsCache = {};
+
+let currentPath = "/";
+
+async function queryFs(path) {
+    if(!path.startsWith("/")) {
+        path = currentDir + path;
+    }
+
+    const cached = fsCache[path];
+    if(cached) return cached;
+
+    let split = path.split("/");
+    
+    let current = fs;
+    
+    for(const sub of split) {
+        if(sub == "") continue;
+
+        let found = false;
+
+        if(typeof(current) == "string") return null;
+
+        for(const fd of current) {
+            if(fd == sub) {
+                found = true;
+                current = fd;
+                continue;
+            }
+            if(typeof(fd) == "object" && fd.name == sub) {
+                found = true;
+                current = fd.files;
+                continue;
+            }
+        }
+
+        if(!found) return null;
+    }
+
+    if(typeof(current) == "string") {
+        const res = await utils.httpGet(fsDir + path);
+        if(!res) return null;
+        
+        fsCache[path] = res;
+        return res;
+    } else {
+        let names = [];
+
+        for(const obj of current) {
+            if(typeof(obj) == "string") {
+                names.push(obj);
+            } else {
+                names.push(obj.name);
+            }
+        }
+
+        return names;
+    }
+
+    return current;
+}
+
 /* --== Getters ==-- */
 
 function getConsole() {
