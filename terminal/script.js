@@ -76,6 +76,13 @@ async function queryFs(path) {
     }
 }
 
+async function isDir(path) {
+    const res = await queryFs(path);
+    if(!res) return false;
+
+    return typeof(res) == "object";
+}
+
 /* --== Getters ==-- */
 
 function getConsole() {
