@@ -74,8 +74,6 @@ async function queryFs(path) {
 
         return names;
     }
-
-    return current;
 }
 
 /* --== Getters ==-- */
