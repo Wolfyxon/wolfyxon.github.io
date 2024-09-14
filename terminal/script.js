@@ -39,6 +39,11 @@ async function queryFs(path) {
 
         if(typeof(current) == "string") return null;
 
+        if(sub == ".") {
+            found = true;
+            continue;
+        }
+
         for(const fd of current) {
             if(fd == sub) {
                 found = true;
