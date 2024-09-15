@@ -5,17 +5,10 @@ registerCommand(
     .addArg("char", "Custom character for the playback")
 
     .setCallback(async (ctx) => {
-        /*
-            How it works?
-            Video plays -> Video is copied to the canvas for image processing -> Script cycles trough each pixel on the canvas and places chars
-        */
-
         const char = ctx.getArg("char") || "##";
         
         echo("If the playback is frozen, the video is loading. Conversion from video to text happens in real time.");
         echo(" ");
-
-        // Element preparation
 
         const videoSrc = document.createElement("source")
         videoSrc.type = "video/mp4";
@@ -32,9 +25,7 @@ registerCommand(
         getConsole().append(video, canvas);
 
         const text = echo("Please wait...");
-
-        // Rendering logic
-
+        
         let active = true;
         video.play();
 
