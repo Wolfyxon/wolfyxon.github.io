@@ -5,6 +5,16 @@ registerCommand(
     
     .setCallback(async (ctx) => {
         const path = ctx.getArg("path");
+
+        if(!path) {
+            const img = document.createElement("img");
+            img.style.width = "20%";
+            img.src = "/assets/media/img/maxwell.jpg";
+            getConsole().append(img);
+            
+            return;
+        }
+
         const res = await queryFs(path);
 
         if(!res) {
