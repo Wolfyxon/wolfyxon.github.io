@@ -41,7 +41,6 @@ registerCommand(
         const canvasCtx = canvas.getContext("2d");
 
         const updateItv = setInterval(() => {
-            // Copy video frame to canvas
             const w = video.videoWidth / 6.5;
             const h = video.videoHeight / 8;
 
@@ -51,8 +50,6 @@ registerCommand(
             canvas.height = h;
 
             canvasCtx.drawImage(video, 0, 0, w, h);
-
-            // Process image from canvas and convert to ASCII
 
             const data = canvasCtx.getImageData(0, 0, canvas.width, canvas.height).data;
             let ascii = "";
