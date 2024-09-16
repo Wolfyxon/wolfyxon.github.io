@@ -98,6 +98,11 @@ function getPrompt() {
     return document.getElementById("prompt");
 }
 
+function getDirText() {
+    const elms = document.getElementsByClassName("dir");
+    return elms[elms.length - 1];
+}
+
 function getInput() {
     return document.getElementById("input");
 }
