@@ -17,6 +17,22 @@ registerCommand(
             return;
         }
 
+        const split = path.split("/");
+
+        if(path != "/") {
+            for(let i = 0; i < split.length; i++) {
+                const sub = split[split.length - 1 - i];
+                if(sub != "") {
+                    getDirText().innerText = sub;
+                    break;
+                }
+            }
+    
+        } else {
+            getDirText().innerText = path;
+        }
+
+
         if(path.startsWith("/")) {
             currentDir = path;
         } else {
