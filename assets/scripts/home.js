@@ -102,7 +102,7 @@ window.addEventListener("load", () => {
     registerProject(
         "Hero of the Earth",
         "Discontinued post apocalyptic story game.",
-        "https://img.itch.zone/aW1nLzg3ODk2OTAucG5n/347x500/vyKwrl.png",
+        "assets/media/img/home/projectThumbnails/hote.png",
         [
             {
                 text: "Itch.io page",
