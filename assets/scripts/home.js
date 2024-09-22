@@ -100,6 +100,22 @@ window.addEventListener("load", () => {
     );
 
     registerProject(
+        "Hero of the Earth",
+        "Discontinued post apocalyptic story game.",
+        "https://img.itch.zone/aW1nLzg3ODk2OTAucG5n/347x500/vyKwrl.png",
+        [
+            {
+                text: "Itch.io page",
+                url: "https://wolfyxon.itch.io/hote"
+            },
+            {
+                text: "Downloads",
+                url: "https://wolfyxon.itch.io/hote#download"
+            }
+        ]
+    )
+
+    registerProject(
         "This site",
         "I think it deserves to be listed here since I put quite a lot of effort into it :]",
         "assets/media/img/Wolfyxon.png",
