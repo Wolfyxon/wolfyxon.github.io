@@ -93,6 +93,10 @@ window.addEventListener("load", () => {
                 url: "https://github.com/Wolfyxon/lover"
             },
             {
+                text: "Wiki",
+                url: "https://github.com/Wolfyxon/lover/wiki"
+            },
+            {
                 text: "Downloads",
                 url: "https://github.com/Wolfyxon/lover/releases/latest"
             }
