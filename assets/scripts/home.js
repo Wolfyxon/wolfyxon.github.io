@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
     registerProject(
         "Lover",
         "Command line build system for LÖVE2D.",
-        "",
+        "assets/media/img/home/projectThumbnails/lover.png",
         [
             {
                 text: "Source code",
