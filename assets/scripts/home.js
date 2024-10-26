@@ -84,6 +84,22 @@ window.addEventListener("load", () => {
     );
 
     registerProject(
+        "Lover",
+        "Command line build system for LÖVE2D.",
+        "",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/lover"
+            },
+            {
+                text: "Downloads",
+                url: "https://github.com/Wolfyxon/lover/releases/latest"
+            }
+        ]
+    );
+
+    registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
         "assets/media/img/home/projectThumbnails/MinVideo.png",
