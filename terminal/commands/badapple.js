@@ -25,6 +25,7 @@ registerCommand(
         getConsole().append(video, canvas);
 
         const text = echo("Please wait...");
+        text.style.textAlign = "center";
         
         let active = true;
         video.play();
