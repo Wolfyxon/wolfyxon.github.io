@@ -143,6 +143,10 @@ window.addEventListener("load", () => {
             {
                 text: "Source code",
                 url: "https://github.com/Wolfyxon/wolfyxon.github.io"
+            },
+            {
+                text: "Useless button",
+                url: ""
             }
         ]
     );
