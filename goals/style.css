@@ -18,3 +18,30 @@
     width: 4em;
     height: 4em;
 }
+
+#goals {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#goals > * {
+    flex: 1;
+    min-width: 500px;
+}
+
+.goal-header-container {
+    display: flex;
+    padding: 5px;
+    background: var(--panel);
+}
+
+.goal-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
