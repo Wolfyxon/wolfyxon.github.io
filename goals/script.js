@@ -1,11 +1,13 @@
 window.addEventListener("load", () => {
-    const goalList = document.querySelector(".goals");
+    const goalsInProgress = document.getElementById("goals-in-progress");
+    const completeGoals = document.getElementById("complete-goals");
     
-    let goalsHtml = "";
-
+    let goalsInProgressHtml = "";
+    let completeGoalsHtml = "";
+    
     // TODO: Sub-goals, automatic progress calculation, foldable description
     function addGoal(title, progress) {
-        goalsHtml += `
+        const html = `
         <div>
             <div class="goal-header-container">
                 <div class="goal-header">
@@ -15,6 +17,12 @@ window.addEventListener("load", () => {
             </div>
         </div>
         `;
+
+        if(progress == 100) {
+            completeGoalsHtml += html;
+        } else {
+            goalsInProgressHtml += html;
+        }
     }
     
     addGoal("Learn music", 80);
@@ -27,5 +35,6 @@ window.addEventListener("load", () => {
     addGoal("Make a game", 100);
     addGoal("Make a nice website", 100);
 
-    goalList.innerHTML = goalsHtml;
+    goalsInProgress.innerHTML = goalsInProgressHtml;
+    completeGoals.innerHTML = completeGoalsHtml; 
 });
