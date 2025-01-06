@@ -142,6 +142,7 @@ header {
 header > * {
     border-right: rgba(255, 255, 255, 0.2) solid 8px;
     box-sizing: border-box;
+    min-width: fit-content;
     margin-left: -30px;
     padding-left: 30px;
 }
@@ -206,7 +207,6 @@ header > * {
 header nav {
     background: var(--panel-dark);
     width: 70%;
-    min-width: fit-content;
     height: 50px;
     transform: skew(-20deg);
     overflow: hidden;
