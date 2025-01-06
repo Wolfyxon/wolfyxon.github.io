@@ -12,6 +12,7 @@
         <link rel="preload" href="/assets/components/footer.html" as="fetch" crossorigin="anonymous">
 
         <link rel="stylesheet" href="/assets/styles/global.css">
+        <link rel="stylesheet" href="/assets/styles/animations.css">
         <link rel="stylesheet" href="style.css">
         
         <script src="/assets/scripts/utils.js" type="text/javascript" defer></script>
@@ -23,7 +24,7 @@
         <header></header>
         
         <div id="main" class="section-container">
-            <div id="header">
+            <div id="header" class="observing anim-obs-left">
                 <h1>My goals</h1>
                 <p>
                     Here's a list of things I want to achieve in life.
@@ -31,10 +32,10 @@
             </div>
 
             <h2>In progress</h2>
-            <div class="goals" id="goals-in-progress"></div>
+            <div class="goals observing anim-obs-fade" id="goals-in-progress"></div>
 
             <h2>Complete</h2>
-            <div class="goals" id="complete-goals"></div>
+            <div class="goals observing anim-obs-fade" id="complete-goals"></div>
         </div>
 
         <footer></footer>
