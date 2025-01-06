@@ -16,7 +16,10 @@ window.addEventListener("load", () => {
         `;
     }
 
-    addGoal("test", 50);
+    addGoal("Learn music", 80);
+    addGoal("Learn art", 43);
+    addGoal("Heal from social anxiety", 40);
+    addGoal("Save someone's life", 0);
 
     goalList.innerHTML = goalsHtml;
 });
