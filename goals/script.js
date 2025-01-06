@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
     
     let goalsHtml = "";
 
+    // TODO: Sub-goals, automatic progress calculation, foldable description
     function addGoal(title, progress) {
         goalsHtml += `
         <div>
