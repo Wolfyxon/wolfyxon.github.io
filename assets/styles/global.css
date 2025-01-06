@@ -197,8 +197,8 @@ header > * {
 
 @media all and (orientation: portrait) {
     #header-title {
-        width: 75%;
-    }    
+        width: 100%;
+    }
 }
 
 
@@ -212,9 +212,9 @@ header nav {
 }
 
 @media all and (orientation: portrait) {
-    head nav {
+    header nav {
         text-align: center;
-        width: 100%;
+        width: 92%;
     }
 }
 
