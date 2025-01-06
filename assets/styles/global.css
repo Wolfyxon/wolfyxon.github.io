@@ -206,6 +206,7 @@ header > * {
 header nav {
     background: var(--panel-dark);
     width: 70%;
+    min-width: fit-content;
     height: 50px;
     transform: skew(-20deg);
     overflow: hidden;
