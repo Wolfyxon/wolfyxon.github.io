@@ -28,10 +28,12 @@ window.addEventListener("load", () => {
     addGoal("Learn music", 80);
     addGoal("Learn art", 43);
     addGoal("Learn cybersecurity", 20);
+    addGoal("Make a programming language", 2);
     addGoal("Heal from social anxiety", 40);
     addGoal("Save someone's life", 0);
-
+    
     addGoal("Learn programming", 100);
+    addGoal("Learn Linux", 100);
     addGoal("Make a game", 100);
     addGoal("Make a nice website", 100);
 
