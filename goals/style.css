@@ -1,6 +1,6 @@
 :root {
     --pie-bar-val-color: var(--special2);
-    --pie-bar-bg-color: var(--panel-dark);
+    --pie-bar-bg-color: var(--panel-very-dark);
     --pie-bar-full-color: rgb(0, 185, 0);
     --pie-bar-percent: 60%; /* initial test value */
 }
@@ -35,7 +35,7 @@
 .goal-header-container {
     display: flex;
     padding: 5px;
-    background: var(--panel);
+    background: var(--panel-dark);
 }
 
 .goal-header {
