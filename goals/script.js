@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    const goalList = document.getElementById("goals");
+    const goalList = document.querySelector(".goals");
     
     let goalsHtml = "";
 
