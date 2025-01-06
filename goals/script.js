@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
             <div class="goal-header-container">
                 <div class="goal-header">
                     <div class="pie-bar" style="--pie-bar-percent: ${progress}%"></div>
-                    <h1>${title}</h1>
+                    <h3>${title}</h3>
                 </div>
             </div>
         </div>
