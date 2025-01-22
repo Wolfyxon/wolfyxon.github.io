@@ -11,7 +11,11 @@ import Footer from './global/Footer.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Header />
-    <Home />
+    
+    <div id="main">
+      <Home />
+    </div>
+
     <Footer />
   </StrictMode>,
 )
