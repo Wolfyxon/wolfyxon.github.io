@@ -28,7 +28,7 @@ function Home() {
                   </div>
               </div>
 
-              <img src="/assets/img/Wolfyxon.png" id="banner-logo" alt="Wolfyxon logo" />
+              <img src="/assets/media/img/Wolfyxon.png" id="banner-logo" alt="Wolfyxon logo" />
           </div>
       </div>
       <div id="software">

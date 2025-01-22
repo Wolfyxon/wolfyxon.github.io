@@ -25,7 +25,7 @@ function ProjectList() {
     registerProject(
         "The Great Doors of Door", 
         "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
-        "assets/img/home/projectThumbnails/tgdod.webp", 
+        "assets/media/img/home/projectThumbnails/tgdod.webp", 
         [{
             text: "Play on Roblox", 
             url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
@@ -35,7 +35,7 @@ function ProjectList() {
     registerProject(
         "Turret Siege",
         "A game in early development where you are a turret surrounded by bullets and enemies.",
-        "assets/img/home/projectThumbnails/ts.png",
+        "assets/media/img/home/projectThumbnails/ts.png",
         [
             {
                 text: "Source code",
@@ -51,7 +51,7 @@ function ProjectList() {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "assets/img/home/projectThumbnails/3dsWebStuff.png",
+        "assets/media/img/home/projectThumbnails/3dsWebStuff.png",
         [
             {
                 text: "Visit the site",
@@ -67,7 +67,7 @@ function ProjectList() {
     registerProject(
         "Lover",
         "Command line build system for LÖVE2D.",
-        "assets/img/home/projectThumbnails/lover.png",
+        "assets/media/img/home/projectThumbnails/lover.png",
         [
             {
                 text: "Source code",
@@ -87,7 +87,7 @@ function ProjectList() {
     registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
-        "assets/img/home/projectThumbnails/MinVideo.png",
+        "assets/media/img/home/projectThumbnails/MinVideo.png",
         [
             {
                 text: "Source code",
@@ -103,7 +103,7 @@ function ProjectList() {
     registerProject(
         "Hero of the Earth",
         "Discontinued post apocalyptic story game.",
-        "assets/img/home/projectThumbnails/hote.png",
+        "assets/media/img/home/projectThumbnails/hote.png",
         [
             {
                 text: "Itch.io page",
@@ -119,7 +119,7 @@ function ProjectList() {
     registerProject(
         "This site",
         "I think it deserves to be listed here since I put quite a lot of effort into it :]",
-        "assets/img/Wolfyxon.png",
+        "assets/media/img/Wolfyxon.png",
         [
             {
                 text: "Source code",
