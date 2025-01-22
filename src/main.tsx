@@ -6,7 +6,7 @@ import './css/colors.css'
 import './css/global.css'
 
 const Home = lazy(() => import('./pages/home/Home.tsx'))
-const Terminal = lazy(() => import('./pages/terminal/Terminal.tsx'))
+const Redirect = lazy(() => import('./Redirect.tsx'))
 
 import Page from './Page.tsx'
 
@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Page><Home /></Page>} />
-          <Route path="/terminal" element={<Terminal />} />
+          <Route path="/terminal" element={<Redirect to="index.html" />} />
         </Routes>
       </BrowserRouter>
   </StrictMode>,

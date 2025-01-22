@@ -18,7 +18,7 @@ registerCommand(
 
         const tmpWait = echo("Requesting browser ASCII arts...");
 
-        const asciis = JSON.parse(await utils.httpGet("/js/terminal/browserAsciiArts.json"));
+        const asciis = JSON.parse(await utils.httpGet("browserAsciiArts.json"));
         const ascii = asciis[browser] || "";
         const color = browserColors[browser] || "";
 

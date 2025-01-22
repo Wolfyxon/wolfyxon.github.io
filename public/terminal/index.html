@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wolfyxon terminal</title>
+        <meta name="description" content="My nerdy terminal">
+        <meta name="google-site-verification" content="CEp8re5xPxShHGl3Z04NXVKOKE-OgXujmu6jYVBIXqE">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <!-- NOTE: This page is independent and doesn't follow the global style -->
+        <link rel="stylesheet" href="style.css">
+
+        <script src="/js/utils.js" type="text/javascript" defer></script>
+        <script src="/js/global.js" type="text/javascript" defer></script>
+
+        <script src="script.js" type="text/javascript" defer></script>
+
+        <!-- Commands -->
+        <script src="commands/help.js" type="text/javascript" defer></script>
+        <script src="commands/clear.js" type="text/javascript" defer></script>
+        <script src="commands/echo.js" type="text/javascript" defer></script>
+        <script src="commands/reboot.js" type="text/javascript" defer></script>
+        <script src="commands/exit.js" type="text/javascript" defer></script>
+        <script src="commands/badapple.js" type="text/javascript" defer></script>
+        <script src="commands/browserfetch.js" type="text/javascript" defer></script>
+        <script src="commands/dropbox-download.js" type="text/javascript" defer></script>
+        <script src="commands/base64-encode.js" type="text/javascript" defer></script>
+        <script src="commands/base64-decode.js" type="text/javascript" defer></script>
+
+        <script src="commands/fs/ls.js" type="text/javascript" defer></script>
+        <script src="commands/fs/cd.js" type="text/javascript" defer></script>
+        <script src="commands/fs/cat.js" type="text/javascript" defer></script>
+    </head>
+
+    <body data-no-default="true">
+        <div id="main">
+            <pre id="console"></pre>
+            <div id="input-container">
+                 <label id="prompt" for="input">[<span style="color: red;">root</span>@<span style="color: #924BFF;">wolfyxon</span> <span class="dir">/</span>]#</label>
+                 <input type="text" id="input">
+            </div>
+        </div>
+    </body>
+</html>

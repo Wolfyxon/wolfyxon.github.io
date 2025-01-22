@@ -22,7 +22,7 @@ function Header() {
                 <a href="/goals" id="header-link-goals">
                     <div>Goals</div>
                 </a>
-                <a href="/terminal" id="header-link-terminal">
+                <a href="/terminal/index.html" id="header-link-terminal">
                     <div>Terminal</div>
                 </a>
             </nav>
