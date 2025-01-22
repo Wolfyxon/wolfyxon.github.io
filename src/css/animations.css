@@ -1,0 +1,54 @@
+/* --== Normal animations ==-- */
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slight-flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+
+/* --== Observer animations ==-- */
+
+.anim-obs-left {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 1s, opacity 1s;
+}
+
+.anim-obs-left.visible {
+    margin-left: 0;
+    opacity: 1;
+    transition: margin-left 1s, opacity 1s;
+}
+
+.anim-obs-right {
+    margin-right: 50%;
+    opacity: 0;
+    transition: margin-left 1s, opacity 1s;
+}
+
+.anim-obs-right.visible {
+    margin-right: 0;
+    opacity: 1;
+    transition: margin-left 1s, opacity 1s;
+}
+
+.anim-obs-fade {
+    transition: opacity 1s;
+    opacity: 0;
+}
+.anim-obs-fade.visible {
+    transition: opacity 1s;
+    opacity: 1;
+}

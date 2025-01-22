@@ -1,0 +1,74 @@
+/*
+    Style for article sites such as blog and about me.
+*/
+
+@import url("/assets/styles/animations.css");
+
+#main {
+    animation: fade-in;
+    animation-duration: 1s;
+}
+
+#main > section, 
+.section-parent > section, 
+.fancy-section 
+{
+    background: var(--panel-very-dark);
+    padding: 0.5% 1%;
+    box-sizing: border-box;
+    width: 68%;
+    border-left: 2px var(--panel-dark) solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (orientation: portrait) {
+    #main > section, 
+    .section-parent > section, 
+    .fancy-section 
+    {
+        width: 97%;
+    }
+}
+
+/* Lord, forgive me for repeating so much code ;-; */
+
+#main > section h1,
+#main > section h2,
+#main > section h3,
+#main > section h4,
+.section-parent > section h1,
+.section-parent > section h2,
+.section-parent > section h3,
+.section-parent > section h4,
+.fancy-section h1,
+.fancy-section h2,
+.fancy-section h3,
+.fancy-section h4
+{
+    color: var(--special1);
+}
+
+#main > section h1,
+.section-parent > section h1,
+.fancy-section h1
+{
+    font-size: 200%;
+}
+
+.fancy-h {
+    border-left: rgba(255, 255, 255, 0.2) solid 8px;
+    padding: 1%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+@media all and (orientation: portrait) {
+    .fancy-h {
+        padding: 2%;
+        box-sizing: border-box;
+        font-size: 150%;
+    }
+}
