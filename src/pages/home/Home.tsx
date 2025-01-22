@@ -4,6 +4,8 @@ import "../../css/animations.css"
 import "./home.css"
 import FancyHeader from "../../misc/FancyHeader"
 import Badge from "./Badge"
+import Project from "./Project"
+import ProjectList from "./ProjectList"
 
 function Home() {
   return (
@@ -59,8 +61,15 @@ function Home() {
           <Badge icon="software/tools/godot.png" alt="Godot" />
           <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
           <Badge icon="software/tools/git.png" alt="Git" />
-          
         </div>
+      </div>
+
+      <div id="projects">
+          <FancyHeader>My public projects</FancyHeader>
+
+          <ProjectList />
+
+          <a href="https://github.com/Wolfyxon?tab=repositories">See all my public projects on GitHub</a>
       </div>
     </>
   )
