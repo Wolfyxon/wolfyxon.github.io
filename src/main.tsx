@@ -14,7 +14,10 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Page title="Home" home="/"><Home /></Page>} />
+          {["/", "/index.html"].map((v) => {
+            return <Route path={v} element={<Page title="Home" home="/"><Home /></Page>} />
+          })}
+
           <Route path="/terminal" element={<Redirect to="index.html" />} />
         </Routes>
       </BrowserRouter>
