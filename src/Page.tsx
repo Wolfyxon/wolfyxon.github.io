@@ -2,7 +2,7 @@ import Header from './global/Header.tsx'
 import Footer from './global/Footer.tsx'
 import { useEffect } from 'react';
 
-function Page(data: {children: any}) {
+function Page(data: {children: any, title: string, home: string}) {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             for(const entry of entries) {
@@ -17,7 +17,7 @@ function Page(data: {children: any}) {
 
     return (
         <>
-            <Header />
+            <Header title={data.title} home={data.home} />
 
             <div id="main">
                 {data.children}

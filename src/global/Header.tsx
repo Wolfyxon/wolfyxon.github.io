@@ -1,14 +1,14 @@
 import "./Header.css"
 
-function Header() {
+function Header(data: {title: string, home: string}) {
     return (    
         <header>
             <div id="header-title">
                 <div>
-                        <a href="/" id="header-title-home-link">Wolfyxon</a>
+                        <a href={data.home ?? "/"} id="header-title-home-link">Wolfyxon</a>
                         
-                        <a id="header-page-title" style={{display: "none"}}>
-                            <span></span>
+                        <a id="header-page-title">
+                            <span>{data.title}</span>
                         </a>
                 </div>
             </div>
