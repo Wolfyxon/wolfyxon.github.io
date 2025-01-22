@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './css/colors.css'
 import './css/global.css'
 
-import Home from './home/Home.tsx'
+import Home from './pages/home/Home.tsx'
 import Header from './global/Header.tsx'
 import Footer from './global/Footer.tsx'
 
