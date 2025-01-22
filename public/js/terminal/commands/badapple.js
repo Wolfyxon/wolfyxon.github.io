@@ -12,9 +12,8 @@ registerCommand(
 
         const videoSrc = document.createElement("source")
         videoSrc.type = "video/mp4";
-        videoSrc.src = "/assets/media/video/bad_apple.mp4";
+        videoSrc.src = "/assets/bad_apple.mp4";
         
-
         const video = document.createElement("video");
         video.style.display = "none";
         video.append(videoSrc);
