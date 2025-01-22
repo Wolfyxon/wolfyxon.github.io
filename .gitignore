@@ -1,0 +1,8 @@
+# Dirs
+.idea/
+.vscode/
+node_modules/
+
+# File formats
+*.bak
+*~
