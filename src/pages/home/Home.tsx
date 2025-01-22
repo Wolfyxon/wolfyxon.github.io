@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
        <div id="banner">
-          <div /*className="observing anim-obs-left"*/>
+          <div className="observing anim-obs-left">
               <div id="banner-text">
                   <h1>
                       Hi, I'm Wolfyxon
