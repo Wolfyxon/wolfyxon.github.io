@@ -4,7 +4,6 @@ import "../../css/animations.css"
 import "./home.css"
 import FancyHeader from "../../misc/FancyHeader"
 import Badge from "./Badge"
-import Project from "./Project"
 import ProjectList from "./ProjectList"
 
 function Home() {
