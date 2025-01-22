@@ -1,10 +1,10 @@
-import LinkBadge from "./LinkBadge"
+import LinkBadge from "../../misc/LinkBadge"
+import FancyHeader from "../../misc/FancyHeader"
+import Badge from "../../misc/Badge"
+import ProjectList from "./ProjectList"
 
 import "../../css/animations.css"
 import "./home.css"
-import FancyHeader from "../../misc/FancyHeader"
-import Badge from "./Badge"
-import ProjectList from "./ProjectList"
 
 function Home() {
   return (
