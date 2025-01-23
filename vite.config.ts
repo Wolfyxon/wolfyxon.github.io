@@ -12,6 +12,7 @@ export default defineConfig({
       closeBundle: async () => {
         console.log("Cloning index.html for proper static routing");
 
+        // Am I insane or something
         const siteMapModule = await fs.readFileSync("./src/siteMap.tsx").toString();
         const jsonText = siteMapModule.split("export const pages = ")[1]
           .replaceAll(/<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g, "null") // remove component tags
@@ -27,6 +28,8 @@ export default defineConfig({
           const path = build + entry[0];
           
           if(!await fs.existsSync(path)) {
+            console.log(">", path);
+
             await fs.mkdirSync(path);
             await fs.copyFileSync(mainHtml, path + "/index.html");
           }
