@@ -10,6 +10,7 @@ const Redirect = lazy(() => import('./Redirect.tsx'))
 
 import Page from './Page.tsx'
 import Blog from './pages/blog/Blog.tsx'
+import About from './pages/about/About.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,10 @@ createRoot(document.getElementById('root')!).render(
           
           <Route path="/blog" element={
             <Page title="Blog" home="/blog"><Blog /></Page>
+          } />
+
+          <Route path="/about" element={
+            <Page title="About" home="/about"><About /></Page>
           } />
 
           <Route path="/terminal" element={<Redirect to="index.html" />} />
