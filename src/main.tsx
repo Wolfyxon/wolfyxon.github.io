@@ -9,6 +9,7 @@ const Home = lazy(() => import('./pages/home/Home.tsx'))
 const Redirect = lazy(() => import('./Redirect.tsx'))
 const Blog = lazy(() => import('./pages/blog/Blog.tsx'))
 const About = lazy(() => import('./pages/about/About.tsx'))
+const Goals = lazy(() => import('./pages/goals/Goals.tsx'))
 
 import Page from './Page.tsx'
 
@@ -28,6 +29,10 @@ createRoot(document.getElementById('root')!).render(
 
           <Route path="/about" element={
             <Page title="About" home="/about"><About /></Page>
+          } />
+
+          <Route path="/goals" element={
+            <Page title="Goals" home="/goals">< Goals/></Page>
           } />
 
           <Route path="/terminal" element={<Redirect to="index.html" />} />
