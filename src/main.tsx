@@ -12,6 +12,7 @@ const About = lazy(() => import('./pages/about/About.tsx'))
 const Goals = lazy(() => import('./pages/goals/Goals.tsx'))
 
 import Page from './Page.tsx'
+import BlogPost from './pages/blog/BlogPost.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -26,6 +27,11 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/blog" element={
             <Page title="Blog" home="/blog"><Blog /></Page>
           } />
+
+        <Route path="/blog/*" element={
+            <Page title="Blog" home="/blog"><BlogPost /></Page>
+          } />
+
 
           <Route path="/about" element={
             <Page title="About" home="/about"><About /></Page>
