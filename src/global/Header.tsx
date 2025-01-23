@@ -5,11 +5,11 @@ function Header(data: {title: string, home: string}) {
         <header>
             <div id="header-title">
                 <div>
-                        <a href={data.home ?? "/"} id="header-title-home-link">Wolfyxon</a>
-                        
-                        <a id="header-page-title">
-                            <span>{data.title}</span>
-                        </a>
+                    <a href="/" id="header-title-home-link">Wolfyxon</a>
+                    
+                    <a id="header-page-title" href={data.home ?? "/"}>
+                        <span>{data.title}</span>
+                    </a>
                 </div>
             </div>
             <nav>
