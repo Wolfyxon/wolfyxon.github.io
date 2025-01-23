@@ -2,7 +2,7 @@ import { StrictMode, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
-import { pages } from "./siteMap.tsx" 
+import { pages } from "./siteMap.ts" 
 
 import './css/colors.css'
 import './css/global.css'
@@ -16,11 +16,12 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           {
-            Object.entries(pages).map((entry) => {              
+            Object.entries(pages).map((entry) => {        
               const path = entry[0];
               const page = entry[1];
 
-              const pageElm = <Page title={page.title} home=''> {page.element} </Page>
+              const Element = lazy(() => import(page.module));
+              const pageElm = <Page title={page.title} home=''> <Element/> </Page>
               
               return (
                 <>
