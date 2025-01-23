@@ -10,7 +10,6 @@ import './css/global.css'
 const Redirect = lazy(() => import('./Redirect.tsx'))
 
 import Page from './Page.tsx'
-import BlogPost from './pages/blog/BlogPost.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
