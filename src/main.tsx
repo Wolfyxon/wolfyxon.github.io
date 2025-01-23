@@ -7,10 +7,10 @@ import './css/global.css'
 
 const Home = lazy(() => import('./pages/home/Home.tsx'))
 const Redirect = lazy(() => import('./Redirect.tsx'))
+const Blog = lazy(() => import('./pages/blog/Blog.tsx'))
+const About = lazy(() => import('./pages/about/About.tsx'))
 
 import Page from './Page.tsx'
-import Blog from './pages/blog/Blog.tsx'
-import About from './pages/about/About.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
