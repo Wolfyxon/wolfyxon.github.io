@@ -16,7 +16,9 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           {["/", "/index.html"].map((v) => {
-            return <Route path={v} element={<Page title="Home" home="/"><Home /></Page>} />
+              return <Route path={v} element={
+              <Page title="Home" home="/"><Home /></Page>
+            } />
           })}
           
           <Route path="/blog" element={
