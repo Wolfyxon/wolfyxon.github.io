@@ -1,4 +1,4 @@
-function Redirect(data: {to: string}) {
+export default function Redirect(data: {to: string}) {
     location.replace(data.to);
 
     return (
@@ -7,5 +7,3 @@ function Redirect(data: {to: string}) {
         </>
     );
 }
-
-export default Redirect;

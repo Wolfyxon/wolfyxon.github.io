@@ -1,6 +1,6 @@
 import "./Footer.css"
 
-function Footer() {
+export default function Footer() {
     return (    
         <footer>
             <p>
@@ -15,7 +15,5 @@ function Footer() {
             <p>This website is licensed under <a href="https://github.com/Wolfyxon/wolfyxon.github.io/blob/main/LICENSE">LGPL-2.1</a>.</p>
             <p>Made by Wolfyxon.</p>
         </footer>
-    )
+    );
 }
-
-export default Footer

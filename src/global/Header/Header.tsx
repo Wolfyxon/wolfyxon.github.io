@@ -1,6 +1,6 @@
 import "./Header.css"
 
-function Header(data: {title: string, home: string}) {
+export default function Header(data: {title: string, home: string}) {
     return (    
         <header>
             <div id="header-title">
@@ -27,7 +27,5 @@ function Header(data: {title: string, home: string}) {
                 </a>
             </nav>
         </header>
-    )
+    );
 }
-
-export default Header

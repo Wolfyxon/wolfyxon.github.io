@@ -1,4 +1,4 @@
-function Project(data: {title: string, description: string, thumbnail: string, children: any}) {
+export default function Project(data: {title: string, description: string, thumbnail: string, children: any}) {
     return (
         <div className="observing anim-obs-fade">
             <div className="project-text">
@@ -12,5 +12,3 @@ function Project(data: {title: string, description: string, thumbnail: string, c
         </div>
     )
 }
-
-export default Project

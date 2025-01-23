@@ -6,7 +6,7 @@ import ProjectList from "./ProjectList"
 import "../../css/animations.css"
 import "./home.css"
 
-function Home() {
+export default function Home() {
   return (
     <>
        <div id="banner">
@@ -71,7 +71,5 @@ function Home() {
           <a href="https://github.com/Wolfyxon?tab=repositories">See all my public projects on GitHub</a>
       </div>
     </>
-  )
+  );
 }
-
-export default Home

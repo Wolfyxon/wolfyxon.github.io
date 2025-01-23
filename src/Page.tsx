@@ -1,8 +1,8 @@
-import Header from './global/Header.tsx'
-import Footer from './global/Footer.tsx'
+import Header from './global/Header/Header.tsx'
+import Footer from './global/Footer/Footer.tsx'
 import { useEffect } from 'react';
 
-function Page(data: {children: any, title: string, home: string}) {
+export default function Page(data: {children: any, title: string, home: string}) {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             for(const entry of entries) {
@@ -27,5 +27,3 @@ function Page(data: {children: any, title: string, home: string}) {
         </>
     );
 }
-
-export default Page
