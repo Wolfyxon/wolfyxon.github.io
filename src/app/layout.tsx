@@ -21,7 +21,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       </head>
       
       <body>
-        <Header title="" home="" />
+        <Header/>
 
         <div id="main">
           {children}

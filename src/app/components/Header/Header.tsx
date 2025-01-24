@@ -1,15 +1,19 @@
 import "./Header.css"
 
-export default function Header(data: {title: string, home: string}) {
+export default function Header(data: {title?: string, home?: string}) {
     return (    
         <header>
             <div id="header-title">
                 <div>
                     <a href="/" id="header-title-home-link">Wolfyxon</a>
                     
-                    <a id="header-page-title" href={data.home ?? "/"}>
-                        <span>{data.title}</span>
-                    </a>
+                    {
+                        data.title && data.title != "" ? 
+                            <a id="header-page-title" href={data.home ?? "/"}>
+                                <span>{data.title}</span>
+                            </a> 
+                        : null
+                    }
                 </div>
             </div>
             <nav>
