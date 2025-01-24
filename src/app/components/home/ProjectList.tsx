@@ -16,7 +16,7 @@ function ProjectList() {
         });
         
         elms.push((
-            <Project title={name} description={description} thumbnail={thumbnail}>
+            <Project title={name} description={description} thumbnail={thumbnail} key={name}>
                 {linkElms}
             </Project>)
         );
