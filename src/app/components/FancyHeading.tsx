@@ -1,4 +1,4 @@
-export default function FancyHeader(data: {children: any}) {
+export default function FancyHeading(data: {children: any}) {
     return (
         <h1 className="fancy-h">
             <div>

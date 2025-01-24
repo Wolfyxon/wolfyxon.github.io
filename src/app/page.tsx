@@ -1,5 +1,5 @@
 import LinkBadge from "./components/LinkBadge";
-import FancyHeader from "./components/FancyHeader";
+import FancyHeading from "./components/FancyHeading";
 import Badge from "./components/Badge";
 import ProjectList from "./components/home/ProjectList";
 
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
       </div>
       <div id="software">
-        <FancyHeader>Languages & tools</FancyHeader>
+        <FancyHeading>Languages & tools</FancyHeading>
 
         <h2>Languages</h2>
         <div>
@@ -64,7 +64,7 @@ export default function Home() {
       </div>
 
       <div id="projects">
-          <FancyHeader>My public projects</FancyHeader>
+          <FancyHeading>My public projects</FancyHeading>
 
           <ProjectList />
 
