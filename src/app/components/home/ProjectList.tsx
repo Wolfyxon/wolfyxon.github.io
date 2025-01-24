@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import Project from "./Project";
 
 function ProjectList() {
-    let elms: ReactElement[] = [];
+    const elms: ReactElement[] = [];
 
     function registerProject(name: string, description: string, thumbnail: string, links: {text: string, url: string}[]) {
         const linkElms: ReactElement[] = [];
@@ -14,7 +14,7 @@ function ProjectList() {
                 </a>
             ))
         });
-
+        
         elms.push((
             <Project title={name} description={description} thumbnail={thumbnail}>
                 {linkElms}

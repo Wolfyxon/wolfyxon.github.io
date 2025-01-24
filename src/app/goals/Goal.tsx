@@ -1,5 +1,4 @@
-import "../../misc/PieBar/PieBar"
-import PieBar from "../../misc/PieBar/PieBar";
+import PieBar from "../components/PieBar/PieBar";
 
 export default function Goal(data: {title: string, progress: number}) {
     return (

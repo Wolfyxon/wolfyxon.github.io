@@ -1,10 +1,10 @@
-import LinkBadge from "../../misc/LinkBadge"
-import FancyHeader from "../../misc/FancyHeader"
-import Badge from "../../misc/Badge"
-import ProjectList from "./ProjectList"
+import LinkBadge from "./components/LinkBadge";
+import FancyHeader from "./components/FancyHeader";
+import Badge from "./components/Badge";
+import ProjectList from "./components/home/ProjectList";
 
-import "../../css/animations.css"
-import "./home.css"
+import "./css/animations.css";
+import "./css/home.css";
 
 export default function Home() {
   return (
