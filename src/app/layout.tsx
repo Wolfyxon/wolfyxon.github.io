@@ -16,6 +16,8 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="CEp8re5xPxShHGl3Z04NXVKOKE-OgXujmu6jYVBIXqE" />
+
         <script type="text/javascript" src="/js/utils.js" defer></script>
         <script type="text/javascript" src="/js/global.js" defer></script>
       </head>
