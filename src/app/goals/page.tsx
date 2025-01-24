@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
+
 import Goal from "./Goal";
 import GoalList from "./GoalList";
 
 import "../css/animations.css";
 import "./Goals.css";
+
+export const metadata: Metadata = {
+    title: "Wolfyxon - goals",
+    description: "Goals I want to achieve",
+};
 
 export default function Goals() {
     return (
