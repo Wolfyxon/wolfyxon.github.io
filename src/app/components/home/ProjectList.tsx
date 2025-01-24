@@ -9,7 +9,7 @@ function ProjectList() {
         
         links.forEach((link) => {
             linkElms.push((
-                <a href={link.url}>
+                <a href={link.url} key={name + link.text}>
                     {link.text}
                 </a>
             ))
