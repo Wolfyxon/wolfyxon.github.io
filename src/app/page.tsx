@@ -22,11 +22,11 @@ export default function Home() {
                   </p>
 
                   <div id="socials">
-                      <LinkBadge url="https://github.com/Wolfyxon" icon="social/github.png" alt="GitHub" />
-                      <LinkBadge url="https://youtube.com/@Wolfyxon" icon="social/youtube.png" alt="YouTube" />
-                      <LinkBadge url="https://soundcloud.com/wolfyxon" icon="social/soundcloud.png" alt="SoundCloud" />
-                      <LinkBadge url="https://discord.gg/RztUGCK" icon="social/discord.svg" alt="Discord" />
-                      <LinkBadge url="https://x.com/Wolfyxon" icon="social/github.png" alt="X (Twitter)" />
+                      <SocialBadge site={websites.github} link="Wolfyxon" />
+                      <SocialBadge site={websites.youtube} link="@Wolfyxon" />
+                      <SocialBadge site={websites.soundcloud} link="Wolfyxon" />
+                      <SocialBadge site={websites.discord} link="RztUGCK" />
+                      <SocialBadge site={websites.x} link="Wolfyxon" />
                   </div>
               </div>
 
