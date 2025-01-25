@@ -234,7 +234,8 @@
 }
 
 .collaborator-website {
-    padding: 0 0 2% 0;
+    padding: 15px 0;
+    font-weight: bold;
     display: block;
 }
 
