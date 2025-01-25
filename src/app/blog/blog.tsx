@@ -24,3 +24,7 @@ export function parsePost(path: string): PostData {
         slug: path.replace(".md", ""),
     };
 }
+
+export async function getPosts(): Promise<PostData[]> {
+    return (await getPostFileNames()).map((filename) => parsePost("./posts/" + filename));
+}
