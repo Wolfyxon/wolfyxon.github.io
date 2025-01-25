@@ -5,6 +5,8 @@ import ProjectList from "./components/home/ProjectList";
 
 import "./css/animations.css";
 import "./css/home.css";
+import Collaborator from "./components/home/Collaborator";
+import SocialBadge, { websites } from "./components/SocialBadge";
 
 export default function Home() {
   return (
@@ -69,6 +71,26 @@ export default function Home() {
           <ProjectList />
 
           <a href="https://github.com/Wolfyxon?tab=repositories">See all my public projects on GitHub</a>
+      </div>
+
+      <div id="collaborators">
+          <FancyHeading>People I collaborate with</FancyHeading>
+
+          <div id="collaborators-list">
+              <Collaborator 
+                name="KaroleusPL" 
+                description="Experienced artist, musician and beginner game developer. Also my best friend."
+                thumbnail="/assets/media/img/people/karoleus_pl.png"
+                website="https://karoleuspl.github.io"
+                >
+                
+                <SocialBadge site={websites.youtube} link="@KaroleusPL" />
+                <SocialBadge site={websites.x} link="KaroleusPL" />
+                <SocialBadge site={websites.soundcloud} link="karoleus-PL" />
+                <SocialBadge site={websites.github} link="karoleuspl" />
+
+              </Collaborator>
+          </div>
       </div>
     </>
   );
