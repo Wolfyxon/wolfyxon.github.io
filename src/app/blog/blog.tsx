@@ -15,8 +15,9 @@ export async function getPostFileNames(): Promise<string[]> {
     return fs.readdirSync(postDir).filter((v) => v.endsWith(".md"));
 }
 
-export function parsePost(path: string): PostData {
-    const mat = matter(path);
+export async function parsePost(path: string): Promise<PostData> {
+    const text = await fs.readFileSync(path);
+    const mat = matter(text);
 
     return {
         title: mat.data.title,
@@ -28,5 +29,9 @@ export function parsePost(path: string): PostData {
 }
 
 export async function getPosts(): Promise<PostData[]> {
-    return (await getPostFileNames()).map((filename) => parsePost("./posts/" + filename));
+    const names = await getPostFileNames();
+
+    return Promise.all(names.map(async (filename) => {
+        return await parsePost(`${postDir}/${filename}`);
+    }));
 }
