@@ -1,12 +1,12 @@
-import LinkBadge from "./components/LinkBadge";
-import FancyHeading from "./components/FancyHeading";
-import Badge from "./components/Badge";
-import ProjectList from "./components/home/ProjectList";
+import LinkBadge from "../components/LinkBadge";
+import FancyHeading from "../components/FancyHeading";
+import Badge from "../components/Badge";
+import ProjectList from "../components/home/ProjectList";
 
 import "./css/animations.css";
 import "./css/home.css";
-import Collaborator from "./components/home/Collaborator";
-import SocialBadge, { websites } from "./components/SocialBadge";
+import Collaborator from "../components/home/Collaborator";
+import SocialBadge, { websites } from "../components/SocialBadge";
 
 export default function Home() {
   return (
