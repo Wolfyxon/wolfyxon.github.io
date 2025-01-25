@@ -199,9 +199,9 @@
     }
 }
 
-/* --== Programmers ==-- */
+/* --== Collaborators ==-- */
 
-#programmers-list > * {
+#collaborators-list > * {
     border-radius: 10px;
     background-color: var(--panel-dark);
     height: fit-content;
@@ -211,34 +211,34 @@
     transition: transform 0.7s;
 }
 
-#programmers-list > *.visible {
+#collaborators-list > *.visible {
     opacity: 1;
     transform: scale(1);
     transition: transform 0.7s;
 }
 
-#programmers-list > * > * {
+#collaborators-list > * > * {
     display: inline-block;
     vertical-align: top;
 }
 
-#programmers-list > * > img {
+#collaborators-list > * > img {
     height: 100%;
     max-height: 200px;
     border-radius: 5%;
 }
 
-#programmers-list > * > div {
+#collaborators-list > * > div {
     margin-left: 2%;
     width: 60%;
 }
 
-.programmers-website {
+.collaborator-website {
     padding: 0 0 2% 0;
     display: block;
 }
 
-.programmer-links {
+.collaborator-links {
     width: 50%;
     padding: 1%;
     height: 3vh;
@@ -246,46 +246,46 @@
     background-color: var(--panel);
 }
 
-.programmer-links > * {
+.collaborator-links > * {
     margin-right: 3%;
     height: 100%;
     display: inline-block;
     transition: 0.1s;
 }
-.programmer-links > *:hover {
+.collaborator-links > *:hover {
     opacity: 0.8;
     transition: 0.1s;
 }
 
-.programmer-links > * > img {
+.collaborator-links > * > img {
     height: 100%;
 }
 
 @media all and (orientation: portrait) {
-    #programmers-list > * {
+    #collaborators-list > * {
         height: fit-content;
     }
 
 
-    #programmers-list > * > * {
+    #collaborators-list > * > * {
         margin: 0 auto;
         display: block;
         text-align: center;
     }
 
-    #programmers-list > * > img {
+    #collaborators-list > * > img {
         height: 20vh;
     }
 
-    #programmers-list > * > div {
+    #collaborators-list > * > div {
         width: 100%;
     }
 
-    #programmers-list > * > div > * {
+    #collaborators-list > * > div > * {
         width: 100%;
     }
 
-    .programmer-links {
+    .collaborators-links {
         margin: 0 auto;
         text-align: center;
         width: 70% !important;
