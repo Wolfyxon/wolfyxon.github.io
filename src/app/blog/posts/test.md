@@ -1,7 +1,7 @@
 ---
 title: Test post
 description: Testing and stuff idk
-date: 25-01-2025
+date: 2025-01-25
 ---
 
 # Hi
