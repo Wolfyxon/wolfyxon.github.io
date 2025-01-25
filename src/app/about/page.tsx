@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import "../css/animations.css";
+import "../css/article.css";
+
 export const metadata: Metadata = {
     title: "Wolfyxon - about",
     description: "Something about me",
@@ -8,7 +11,9 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <>
-            <h1>About me</h1>
+            <section>
+                <h1>Hi</h1>
+            </section>
         </>
     );
 }
