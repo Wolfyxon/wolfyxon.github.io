@@ -1,6 +1,6 @@
-export default function Collaborator(data: {name: string, thumbnail: string, description: string, website?: string, children: []}) {
+export default function Collaborator(data: {name: string, thumbnail: string, description: string, website?: string, children: any}) {
     return (
-        <div>
+        <div className="observing">
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
             
             <div>
