@@ -22,6 +22,11 @@ export const websites: {[id: string]: WebsiteData} = {
         name: "SoundCloud",
         icon: "soundcloud.png"
     },
+    "discord": {
+        url: "discord.gg",
+        name: "Discord",
+        icon: "discord.svg"
+    },
     "x": {
         url: "x.com",
         name: "X (Twitter)",
