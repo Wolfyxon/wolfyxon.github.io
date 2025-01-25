@@ -9,13 +9,15 @@ export type PostData = {
     slug: string
 }
 
+const postDir = "src/app/blog/posts";
+
 export async function getPostFileNames(): Promise<string[]> {
-    return fs.readdirSync("./posts/").filter((v) => v.endsWith(".md"));
+    return fs.readdirSync(postDir).filter((v) => v.endsWith(".md"));
 }
 
 export function parsePost(path: string): PostData {
     const mat = matter(path);
-    
+
     return {
         title: mat.data.title,
         description: mat.data.description,
