@@ -13,7 +13,7 @@ export default function Collaborator(data: {name: string, thumbnail: string, des
 
                 {
                     data.website ?
-                        <a href={data.website}>{data.website}</a>
+                        <a href={data.website} className="collaborator-website">{data.website}</a>
                     : null
                 }
             </div>
