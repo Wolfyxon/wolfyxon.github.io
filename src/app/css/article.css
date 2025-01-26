@@ -31,6 +31,10 @@
     }
 }
 
+section h1::before {
+    content: "# ";
+}
+
 /* Lord, forgive me for repeating so much code ;-; */
 
 #main > section h1,
