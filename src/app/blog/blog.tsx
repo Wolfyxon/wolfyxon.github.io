@@ -38,3 +38,7 @@ export async function getPosts(): Promise<PostData[]> {
         return await parsePost(`${postDir}/${filename}`);
     }));
 }
+
+export async function getBySlug(slug: string): Promise<PostData> {
+    return parsePost(`${postDir}/${slug}.md`);
+}
