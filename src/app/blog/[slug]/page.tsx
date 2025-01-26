@@ -1,3 +1,4 @@
+import Markdown from "markdown-to-jsx";
 import { getBySlug, getPosts, PostData } from "../blog";
 
 export async function generateStaticParams() {
@@ -8,10 +9,10 @@ export async function generateStaticParams() {
 export default async function BlogPost(data: {params: any}) {
     const slug = (await data.params).slug;
     const post = await getBySlug(slug);
-    
+
     return (
         <>
-            test
+            <Markdown>{post.markdown}</Markdown>
         </>
     );
 }
