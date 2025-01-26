@@ -1,5 +1,5 @@
 import Markdown from "markdown-to-jsx";
-import { getBySlug, getPosts, PostData } from "../blog";
+import { getBySlug, getPosts } from "../blog";
 
 export async function generateStaticParams() {
     const posts = await getPosts();
