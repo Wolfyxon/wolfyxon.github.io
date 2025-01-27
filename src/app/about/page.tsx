@@ -57,6 +57,17 @@ export default function About() {
                         (expect me to have a mental breakdown when looking at your code).
                     </p>
                 </section>
+
+                <section>
+                    <h1>Personality</h1>
+                    <p>
+                        I'm a very introverted and a reserved person, but if you ask me the right questions expect me to
+                        suddenly talk a lot.
+                    </p>
+                    <p>
+                        I care a lot about justice and doing the right things.
+                    </p>
+                </section>
             </div>
         </>
     );
