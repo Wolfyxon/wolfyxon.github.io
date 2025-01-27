@@ -1,6 +1,8 @@
 import Markdown from "markdown-to-jsx";
 import { getBySlug, getPosts } from "../blog";
 
+import "../../css/article.css";
+
 export async function generateStaticParams() {
     const posts = await getPosts();
     return posts.map((v) => { return { slug: v.slug }});
@@ -12,7 +14,9 @@ export default async function BlogPost(data: {params: any}) {
 
     return (
         <>
-            <Markdown>{post.markdown}</Markdown>
+            <div className="fancy-section">
+                <Markdown>{post.markdown}</Markdown>
+            </div>
         </>
     );
 }
