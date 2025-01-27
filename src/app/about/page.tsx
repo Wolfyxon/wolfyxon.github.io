@@ -48,7 +48,7 @@ export default function About() {
                         I'm definitely on the craft-based side of programmers.
                     </p>
                     <p>
-                        I care a lot about code maintainability, structure, style and proper practices.
+                        I care a lot about code maintainability, structure, style, proper practices and performance.
                         I would call myself a perfectionist in that <br/>
                         (expect me to have a mental breakdown when looking at your code).
                     </p>
