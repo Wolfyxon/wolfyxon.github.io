@@ -17,7 +17,7 @@ export default async function Blog() {
 
             <div id="posts">
                 {
-                    (await getPostsSorted()).map((p) => PostCard({post: p}))
+                    (await getPostsSorted()).map((p, i) => PostCard({post: p, key: i}))
                 }
             </div>
         </div>

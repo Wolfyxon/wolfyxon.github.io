@@ -1,9 +1,9 @@
 import { PostData } from "../blog";
 import "./PostCard.css";
 
-export default function PostCard(data: {post: PostData}) {
+export default function PostCard(data: {post: PostData, key?: any}) {
     return (
-        <a className="post-card" href={data.post.slug}>
+        <a className="post-card" href={data.post.slug} key={data.key}>
             <h1 className="post-card-title">
                 {data.post.title}
             </h1>
