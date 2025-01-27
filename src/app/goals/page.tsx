@@ -7,7 +7,7 @@ import "../css/animations.css";
 import "./Goals.css";
 
 export const metadata: Metadata = {
-    title: "Wolfyxon - goals",
+    title: "My goals - Wolfyxon",
     description: "Goals I want to achieve",
 };
 

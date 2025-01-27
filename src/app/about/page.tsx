@@ -4,7 +4,7 @@ import "../css/animations.css";
 import "../css/article.css";
 
 export const metadata: Metadata = {
-    title: "Wolfyxon - about",
+    title: "About me - Wolfyxon",
     description: "Something about me",
 };
 

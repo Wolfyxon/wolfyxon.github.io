@@ -1,8 +1,14 @@
 import { getPosts } from "./blog";
+import { Metadata } from "next";
 import PostCard from "./PostCard/PostCard";
 
 import "../css/animations.css";
 import "./blog.css";
+
+export const metadata: Metadata = {
+    title: "My blog - Wolfyxon",
+    description: "Weird stuff written by me."
+}
 
 export default async function Blog() {
     return (
