@@ -29,8 +29,8 @@ function HomePage() {
         <>
             <h1>My socials</h1>
 
-            <ImageLink url="github.com/..." img="github.png">
-            <ImageLink url="youtube.com/..." img="youtube.png">
+            <ImageLink url="https://github.com/..." img="github.png">
+            <ImageLink url="https://youtube.com/..." img="youtube.png">
             
         </>
     )
