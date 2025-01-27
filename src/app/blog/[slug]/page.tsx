@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx";
 import { getBySlug, getPosts } from "../blog";
 
+import "../../css/animations.css";
 import "../../css/article.css";
 
 export async function generateStaticParams() {
