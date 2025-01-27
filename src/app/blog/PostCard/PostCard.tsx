@@ -13,6 +13,14 @@ export default function PostCard(data: {post: PostData}) {
             <p className="post-card-date">
                 {data.post.date.toDateString()}
             </p>
+
+            <div className="post-card-topics">
+                {
+                    data.post.topics.map((topic, i) => {
+                        return <div key={i}>{topic}</div>
+                    })
+                }
+            </div>
         </a>
     )
 }

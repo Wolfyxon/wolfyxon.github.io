@@ -16,3 +16,11 @@
     transition: 0.1s;
 }
 
+.post-card-topics > * {
+    display: inline-block;
+    background-color: var(--panel-dark);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
