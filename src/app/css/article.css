@@ -2,6 +2,16 @@
     Style for article sites such as blog and about me.
 */
 
+code {
+    background-color: black;
+    border: 2px solid var(--panel-dark);
+    border-radius: 8px;
+    display: block;
+    padding: 10px;
+    width: 90%;
+    min-width: fit-content;
+}
+
 #main {
     animation: fade-in;
     animation-duration: 1s;
