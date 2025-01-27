@@ -1,0 +1,18 @@
+import { PostData } from "../blog";
+import "./PostCard.css";
+
+export default function PostCard(data: {post: PostData}) {
+    return (
+        <a className="post-card" href={data.post.slug}>
+            <h1 className="post-card-title">
+                {data.post.title}
+            </h1>
+            <p className="post-card-description">
+                {data.post.description}
+            </p>
+            <p className="post-card-date">
+                {data.post.date.toDateString()}
+            </p>
+        </a>
+    )
+}
