@@ -1,0 +1,14 @@
+#posts {
+    display: flex;
+    gap: 10px;
+}
+
+.post-card {
+    flex-basis: 50%;
+}
+
+@media all and (orientation: portrait) {
+    .post-card {
+        flex-basis: 100%;
+    }
+}

@@ -1,6 +1,8 @@
 import { getPosts } from "./blog";
 import PostCard from "./PostCard/PostCard";
 
+import "./blog.css";
+
 export default async function Blog() {
     return (
         <>
