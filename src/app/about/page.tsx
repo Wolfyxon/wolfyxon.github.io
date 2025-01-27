@@ -65,7 +65,7 @@ export default function About() {
                         suddenly talk a lot.
                     </p>
                     <p>
-                        I care a lot about justice and doing the right things.
+                        I care a lot about justice, respect and doing the right things.
                     </p>
                 </section>
             </div>
