@@ -5,6 +5,7 @@ import { basename } from "path";
 export type PostData = {
     title: string,
     description: string,
+    topics: [],
     date: Date,
     markdown: string,
     slug: string
@@ -25,6 +26,7 @@ export async function parsePost(path: string): Promise<PostData> {
     return {
         title: mat.data.title,
         description: mat.data.description,
+        topics: mat.data.topics ?? [],
         date: new Date(mat.data.date),
         markdown: mat.content,
         slug: slug,

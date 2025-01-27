@@ -2,6 +2,7 @@
 title: I remade my site in React
 description: What's React and why did I do that
 date: 2025-01-27
+topics: ["site", "projects"]
 ---
 
 
