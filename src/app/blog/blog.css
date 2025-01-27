@@ -6,10 +6,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .post-card {
-    flex-basis: 50%;
+    width: 45%;
 }
 
 @media all and (orientation: portrait) {
