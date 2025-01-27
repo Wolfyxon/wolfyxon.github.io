@@ -26,6 +26,10 @@ export default function About() {
                         I code for fun and enjoy learning new technologies.
                     </p>
                     <p>
+                        I'm also a beginner musician. 
+                        I compose digital music and sometimes play on a piano.
+                    </p>
+                    <p>
                         I'm also autistic btw.
                     </p>
                 </section>
