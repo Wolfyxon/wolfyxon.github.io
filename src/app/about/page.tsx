@@ -68,6 +68,13 @@ export default function About() {
                         I care a lot about justice, respect and doing the right things.
                     </p>
                 </section>
+
+                <section>
+                    <h1>Conclusion</h1>
+                    <p>
+                        Human.
+                    </p>
+                </section>
             </div>
         </>
     );
