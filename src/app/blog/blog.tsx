@@ -41,6 +41,16 @@ export async function getPosts(): Promise<PostData[]> {
     }));
 }
 
+export async function getPostsSorted(): Promise<PostData[]> {
+    const posts = await getPosts();
+
+    posts.sort((a, b) => {
+        return b.date.getTime() - a.date.getTime();
+    });
+
+    return posts;
+}
+
 export async function getBySlug(slug: string): Promise<PostData> {
     return parsePost(`${postDir}/${slug}.md`);
 }
