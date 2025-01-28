@@ -24,7 +24,8 @@ code {
 
 @media all and (orientation: portrait) {
     .article-page {
-        width: 97%;
+        border-radius: 5px;
+        width: 100%;
     }
 }
 
