@@ -4,6 +4,7 @@ import PostCard from "./PostCard/PostCard";
 
 import "../css/animations.css";
 import "./blog.css";
+import Page from "@/templates/Page";
 
 export const metadata: Metadata = {
     title: "My blog - Wolfyxon",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
     return (
-        <div id="blog">
+        <Page category="Blog">
             <h1>Posts</h1>
 
             <div id="posts">
@@ -20,6 +21,6 @@ export default async function Blog() {
                     (await getPostsSorted()).map((p, i) => PostCard({post: p, key: i}))
                 }
             </div>
-        </div>
+        </Page>
     );
 }

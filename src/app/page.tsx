@@ -6,10 +6,11 @@ import SocialBadge, { websites } from "../components/SocialBadge";
 
 import "./css/animations.css";
 import "./css/home.css";
+import Page from "@/templates/Page";
 
 export default function Home() {
   return (
-    <>
+    <Page category="Home">
        <div id="banner">
           <div className="observing anim-obs-left">
               <div id="banner-text">
@@ -91,6 +92,6 @@ export default function Home() {
               </Collaborator>
           </div>
       </div>
-    </>
+    </Page>
   );
 }

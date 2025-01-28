@@ -5,6 +5,7 @@ import GoalList from "./GoalList";
 
 import "../css/animations.css";
 import "./Goals.css";
+import Page from "@/templates/Page";
 
 export const metadata: Metadata = {
     title: "My goals - Wolfyxon",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Goals() {
     return (
-        <>
+        <Page category="Goals">
             <div id="header" className="observing anim-obs-left">
                 <h1>My goals</h1>
                 <p>
@@ -41,6 +42,6 @@ export default function Goals() {
                 <Goal title="Make a game" progress={100}></Goal>
                 <Goal title="Make a nice website" progress={100}></Goal>
             </GoalList>
-        </>
+        </Page>
     );
 }

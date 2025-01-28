@@ -3,6 +3,7 @@ import { getBySlug, getPosts } from "../blog";
 
 import "../../css/animations.css";
 import "../../css/article.css";
+import Page from "@/templates/Page";
 
 export async function generateStaticParams() {
     const posts = await getPosts();
@@ -24,10 +25,10 @@ export default async function BlogPost(data: {params: any}) {
     const post = await getBySlug(slug);
 
     return (
-        <>
+        <Page category="Blog" homeUrl="/blog">
             <div className="fancy-section">
                 <Markdown>{post.markdown}</Markdown>
             </div>
-        </>
+        </Page>
     );
 }
