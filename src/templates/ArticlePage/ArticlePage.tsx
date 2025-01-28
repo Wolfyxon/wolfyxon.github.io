@@ -3,9 +3,9 @@ import Markdown from "markdown-to-jsx";
 import { ReactNode } from "react";
 
 import "@/app/css/animations.css";
-import "./MarkdownPage.css";
+import "./ArticlePage.css";
 
-export default async function MarkdownPage(data: {children: string | ReactNode | ReactNode[], src?: string}) {
+export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string}) {
 
     let content: ReactNode = null;
 
