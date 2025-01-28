@@ -1,9 +1,8 @@
 import Markdown from "markdown-to-jsx";
 import { getBySlug, getPosts } from "../blog";
 
-import "../../css/animations.css";
-import "../../css/article.css";
 import Page from "@/templates/Page";
+import MarkdownPage from "@/templates/MarkdownPage/MarkdownPage";
 
 export async function generateStaticParams() {
     const posts = await getPosts();
@@ -26,9 +25,9 @@ export default async function BlogPost(data: {params: any}) {
 
     return (
         <Page category="Blog" homeUrl="/blog">
-            <div className="fancy-section">
-                <Markdown>{post.markdown}</Markdown>
-            </div>
+            <MarkdownPage>
+                {post.markdown}
+            </MarkdownPage>
         </Page>
     );
 }
