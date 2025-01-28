@@ -1,0 +1,14 @@
+
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background: var(--panel);
+}
+
+footer > div a {
+    padding-right: 5px;
+}

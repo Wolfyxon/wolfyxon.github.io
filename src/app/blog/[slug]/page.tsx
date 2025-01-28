@@ -1,0 +1,34 @@
+import Markdown from "markdown-to-jsx";
+import { getBySlug, getPosts } from "../blog";
+
+import "../../css/animations.css";
+import "../../css/article.css";
+import Page from "@/templates/Page";
+
+export async function generateStaticParams() {
+    const posts = await getPosts();
+    return posts.map((v) => { return { slug: v.slug }});
+}
+
+export async function generateMetadata(data: {params: any}) {
+    const slug = (await data.params).slug;
+    const post = await getBySlug(slug);
+
+    return {
+        title: post.title + " - Wolfyxon's blog",
+        description: post.description
+    }
+}
+
+export default async function BlogPost(data: {params: any}) {
+    const slug = (await data.params).slug;
+    const post = await getBySlug(slug);
+
+    return (
+        <Page category="Blog" homeUrl="/blog">
+            <div className="fancy-section">
+                <Markdown>{post.markdown}</Markdown>
+            </div>
+        </Page>
+    );
+}

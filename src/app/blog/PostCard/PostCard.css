@@ -1,0 +1,26 @@
+.post-card {
+    background-color: var(--panel-very-dark);
+    border-left: 10px solid var(--color1);
+    color: rgb(218, 218, 218);
+    border-radius: 5px;
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.post-card:hover {
+    color: white !important;
+    opacity: 0.95;
+    border-color: var(--color2);
+    transition: 0.1s;
+}
+
+.post-card-topics > * {
+    display: inline-block;
+    background-color: var(--panel-dark);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}

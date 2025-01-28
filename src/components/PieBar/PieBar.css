@@ -1,0 +1,19 @@
+:root {
+    --pie-bar-val-color: var(--special2);
+    --pie-bar-bg-color: var(--panel-very-dark);
+    --pie-bar-percent: 60%; /* initial test value */
+}
+
+.pie-bar {
+    background: conic-gradient(
+        var(--pie-bar-bg-color) calc(99.99% - var(--pie-bar-percent)),
+        var(--pie-bar-bg-color) 0.01%,
+        var(--pie-bar-val-color) 0.01%,
+        var(--pie-bar-val-color) calc(var(--pie-bar-percent) - 0.01%)
+    );
+
+    border-radius: 100%;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+}

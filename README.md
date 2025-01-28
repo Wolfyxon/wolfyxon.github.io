@@ -1,4 +1,4 @@
 # My website
-My portfolio website with my work, about me and random stuff made with pure HTML CSS and JavaScript.
+This is my little nerdy website made with [NextJS](https://nextjs.org/) and [React](https://react.dev/).
 
-https://wolfyxon.github.io
+https://wolfyxon.github.io/
