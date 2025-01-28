@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
-import "../css/animations.css";
-import "../css/article.css";
 import Page from "@/templates/Page";
+import MarkdownPage from "@/templates/MarkdownPage/MarkdownPage";
 
 export const metadata: Metadata = {
     title: "About me - Wolfyxon",
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <Page category="About">
-            <div className="fancy-section">
+            <MarkdownPage>
                 <section>
                     <h1>Who am I</h1>
                     <p>
@@ -76,7 +75,7 @@ export default function About() {
                         Human.
                     </p>
                 </section>
-            </div>
+            </MarkdownPage>
         </Page>
     );
 }
