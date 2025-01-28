@@ -1,0 +1,38 @@
+code {
+    background-color: black;
+    border: 2px solid var(--panel-dark);
+    border-radius: 8px;
+    display: block;
+    padding: 10px;
+    width: 90%;
+    min-width: fit-content;
+}
+
+.article-page {
+    animation: fade-in;
+    animation-duration: 1s;
+    background: var(--panel-very-dark);
+    padding: 0.5% 1%;
+    box-sizing: border-box;
+    width: 68%;
+    border-left: 2px var(--panel-dark) solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (orientation: portrait) {
+    .article-page {
+        width: 97%;
+    }
+}
+
+.article-page h1, 
+.article-page h2 {
+    color: var(--special1);
+}
+
+.article-page h1::before {
+    content: "# ";
+}
