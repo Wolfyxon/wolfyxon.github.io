@@ -31,6 +31,7 @@ code {
 .article-page h1, 
 .article-page h2 {
     color: var(--special1);
+    font-size: 200%;
 }
 
 .article-page h1::before {
