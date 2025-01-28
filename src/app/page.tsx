@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import FancyHeading from "../components/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Badge from "../components/Badge";
@@ -7,6 +9,10 @@ import SocialBadge, { websites } from "../components/SocialBadge";
 import "./css/animations.css";
 import "./css/home.css";
 import Page from "@/templates/Page";
+
+export const metadata: Metadata = {
+  title: "Wolfyxon's epic website"
+}
 
 export default function Home() {
   return (
