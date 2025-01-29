@@ -24,9 +24,22 @@ export default async function ArticlePage(data: {children: string | ReactNode | 
     }
 
     return (
-        // TODO: Heading navigation
-        <article className="article-page">
-            {content}
-        </article>
+        <div className="article-page">
+            <article>{content}</article>
+
+            <nav className="article-nav">
+                <h1>On this page</h1>
+
+                <ul>
+                    <li><a href="">test</a></li>
+                    <li><a href="">test</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="">test</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     )
 }
