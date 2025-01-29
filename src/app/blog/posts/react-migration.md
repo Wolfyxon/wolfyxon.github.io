@@ -7,7 +7,8 @@ topics: ["site", "projects"]
 
 
 # What's React
-As you've probably seen in the description, I remade my site in [React](https://react.dev/) and the [NextJS](https://nextjs.org/) framework.
+As you've probably seen in the description, I remade my site in [React](https://react.dev/) and the [NextJS](https://nextjs.org/) framework. <br/>
+Even though the website looks mostly the same (despite a few redesigns), its code has been completely changed.
 
 React is a library for easy website and UI development.
 
