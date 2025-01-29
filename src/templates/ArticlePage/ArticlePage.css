@@ -52,9 +52,44 @@ code {
     content: "### ";
 }
 
-.article-nav {
+.article-nav-container {
     position: fixed;
     margin-left: 20px;
+}
+
+.article-nav-container > * {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    transition: 0.1s;
+}
+
+.article-nav-btn {
+    position: absolute;
+    left: -2em;
+    background: url(/assets/media/img/icons/google/menu.svg);
+    background-size: 100%;
+    background-color: var(--panel-dark);
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin-right: 5px;
+    border: none;
+    display: none;
+}
+
+.article-nav-btn:active {
+    background: url(/assets/media/img/icons/google/menu.svg);
+    background-color: var(--panel);
+    background-size: 100%;
+}
+
+.article-nav-container {
+    width: 90%;
+}
+
+.article-nav h1 {
+    display: inline;
 }
 
 .article-nav ul {
@@ -66,6 +101,10 @@ code {
 }
 
 @media all and (orientation: portrait) {
+    .article-nav-btn {
+        display: inline-block;
+    }
+
     .article-page article {
         border-radius: 5px;
         width: 100%;

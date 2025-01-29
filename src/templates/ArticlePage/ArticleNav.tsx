@@ -39,9 +39,12 @@ export default function ArticleNav() {
     });
 
     return (
-        <nav className="article-nav" ref={ref}>
-            <h1>On this page</h1>
+        <div className="article-nav-container">
+            <button className="article-nav-btn" aria-label="Article navigation"> </button>
 
-        </nav>
+            <nav className="article-nav" ref={ref}>
+                <h1>On this page</h1>
+            </nav>
+        </div>
     )
 }
