@@ -1,0 +1,87 @@
+.article-nav-container {
+    position: fixed;
+    margin-left: 20px;
+}
+
+.article-nav-container > * {
+    display: inline-block;
+    vertical-align: top;
+    transition: 0.1s;
+}
+
+.article-nav-btn {
+    position: absolute;
+    left: -2em;
+    background: url(/assets/media/img/icons/google/menu.svg);
+    background-size: 100%;
+    background-color: var(--panel-dark);
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin-right: 5px;
+    border: none;
+    display: none;
+}
+
+.article-nav-btn:active {
+    background: url(/assets/media/img/icons/google/menu.svg);
+    background-color: var(--panel);
+    background-size: 100%;
+}
+
+.article-nav-container {
+    width: 90%;
+}
+
+.article-nav h1 {
+    display: inline;
+}
+
+.article-nav > ul > li a {
+    display: block;
+    border-left: 2px solid var(--panel);
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.article-nav > ul > li a:hover {
+    transition: 0.1s;
+    border-color: white;
+}
+
+.article-nav a {
+    text-decoration: none;
+}
+
+.article-nav ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.article-nav li {
+    margin-bottom: 5px;
+}
+
+@media all and (orientation: portrait) {
+    .article-nav {
+        padding: 8px;
+        margin-left: 0;
+    }
+
+    .article-nav-container {
+        border: 2px solid var(--panel);
+        background-color: var(--panel-very-dark);
+        border-radius: 5px;
+        left: 98%;
+        transition: 0.2s;
+    }
+
+    .article-nav-container.open {
+        left: 20%;
+        transition: 0.2s;
+    }
+
+    .article-nav-btn {
+        display: inline-block;
+    }
+}

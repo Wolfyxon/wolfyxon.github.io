@@ -1,6 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
+
+import "./ArticleNav.css";
 
 export default function ArticleNav() {
     const mainRef = useRef(null);
