@@ -48,6 +48,10 @@ code {
     list-style: none;
 }
 
+.article-nav li {
+    margin-bottom: 5px;
+}
+
 @media all and (orientation: portrait) {
     .article-page article {
         border-radius: 5px;
