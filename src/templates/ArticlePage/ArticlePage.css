@@ -29,14 +29,27 @@ code {
     margin-bottom: 10px;
 }
 
-.article-page article h1, 
-.article-page article h2 {
-    color: var(--special1);
+.article-page article h1 {
     font-size: 200%;
+}
+
+.article-page article h1, 
+.article-page article h2,
+.article-page article h3
+{
+    color: var(--special1);
 }
 
 .article-page article h1::before {
     content: "# ";
+}
+
+.article-page article h2::before {
+    content: "## ";
+}
+
+.article-page article h3::before {
+    content: "### ";
 }
 
 .article-nav {
