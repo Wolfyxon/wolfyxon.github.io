@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import "@/app/css/animations.css";
 import "./ArticlePage.css";
+import ArticleNav from "./ArticleNav";
 
 export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string}) {
 
@@ -27,19 +28,7 @@ export default async function ArticlePage(data: {children: string | ReactNode | 
         <div className="article-page">
             <article>{content}</article>
 
-            <nav className="article-nav">
-                <h1>On this page</h1>
-
-                <ul>
-                    <li><a href="">test</a></li>
-                    <li><a href="">test</a></li>
-                    <li>
-                        <ul>
-                            <li><a href="">test</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <ArticleNav />
         </div>
     )
 }
