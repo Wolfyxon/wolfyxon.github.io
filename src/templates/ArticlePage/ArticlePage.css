@@ -91,8 +91,25 @@ code {
     display: inline;
 }
 
+.article-nav > ul > li a {
+    display: block;
+    border-left: 2px solid var(--panel);
+    padding: 5px;
+    transition: 0.1s;
+}
+
+.article-nav > ul > li a:hover {
+    transition: 0.1s;
+    border-color: white;
+}
+
+.article-nav a {
+    text-decoration: none;
+}
+
 .article-nav ul {
     list-style: none;
+    padding-left: 10px;
 }
 
 .article-nav li {
