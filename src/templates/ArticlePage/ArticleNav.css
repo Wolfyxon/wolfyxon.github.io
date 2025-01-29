@@ -56,6 +56,7 @@
 .article-nav ul {
     list-style: none;
     padding-left: 10px;
+    margin-left: 10px;
 }
 
 .article-nav li {
