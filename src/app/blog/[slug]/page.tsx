@@ -26,7 +26,7 @@ export default async function BlogPost(data: {params: any}) {
 
     return (
         <Page category="Blog" homeUrl="/blog">
-            <ArticlePage>
+            <ArticlePage title={post.title}>
                 {post.markdown}
             </ArticlePage>
             
