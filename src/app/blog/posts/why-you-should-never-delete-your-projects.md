@@ -1,6 +1,6 @@
 ---
 title: Why you should never delete your projects
-description: WHy is it a bad idea to delete your old projects
+description: Why is it a bad idea to delete your old projects
 date: 2024-06-30
 topics: ["advice"]
 ---
