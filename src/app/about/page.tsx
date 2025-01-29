@@ -13,7 +13,7 @@ export default function About() {
         <Page category="About">
             <ArticlePage>
                 <section>
-                    <h1>Who am I</h1>
+                    <h1 id="who-am-i">Who am I</h1>
                     <p>
                         Hi, I'm Wolfyxon.
                     </p>
@@ -35,7 +35,7 @@ export default function About() {
                 </section>
 
                 <section>
-                    <h1>Interests</h1>
+                    <h1 id="interests">Interests</h1>
                     <p>
                         Programming is my primary interest (a passion, actually) but I'm also into
                         composing music, video and audio editing, science and psychology.
@@ -47,7 +47,7 @@ export default function About() {
                 </section>
 
                 <section>
-                    <h1>How I code</h1>
+                    <h1 id="how-i-code">How I code</h1>
                     <p>
                         I'm definitely on the craft-based side of programmers.
                     </p>
@@ -59,7 +59,7 @@ export default function About() {
                 </section>
 
                 <section>
-                    <h1>Personality</h1>
+                    <h1 id="personality">Personality</h1>
                     <p>
                         I'm a very introverted and a reserved person, but if you ask me the right questions expect me to
                         suddenly talk a lot.
@@ -70,7 +70,7 @@ export default function About() {
                 </section>
 
                 <section>
-                    <h1>Conclusion</h1>
+                    <h1 id="conclusion">Conclusion</h1>
                     <p>
                         Human.
                     </p>
