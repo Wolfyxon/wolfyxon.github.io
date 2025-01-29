@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import "./ArticleNav.css";
 
-export default function ArticleNav() {
+export default function ArticleNav(data: {title?: string}) {
     const mainRef = useRef(null);
     const navRef = useRef(null);
 
@@ -59,7 +59,7 @@ export default function ArticleNav() {
             <button className="article-nav-btn" aria-label="Article navigation" onClick={switchNav}> </button>
 
             <nav className="article-nav" ref={navRef}>
-                <h1>On this page</h1>
+                <h1>{data.title ?? "On this page"}</h1>
             </nav>
         </div>
     )

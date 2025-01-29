@@ -6,7 +6,7 @@ import "@/app/css/animations.css";
 import "./ArticlePage.css";
 import ArticleNav from "./ArticleNav";
 
-export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string}) {
+export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string, title?: string}) {
 
     let content: ReactNode = null;
 
@@ -28,7 +28,7 @@ export default async function ArticlePage(data: {children: string | ReactNode | 
         <div className="article-page">
             <article>{content}</article>
 
-            <ArticleNav />
+            <ArticleNav title={data.title} />
         </div>
     )
 }
