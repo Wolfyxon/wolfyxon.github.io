@@ -58,7 +58,6 @@ code {
 }
 
 .article-nav-container > * {
-    position: relative;
     display: inline-block;
     vertical-align: top;
     transition: 0.1s;
@@ -111,6 +110,20 @@ code {
     }
 
     .article-nav {
+        padding: 8px;
         margin-left: 0;
+    }
+
+    .article-nav-container {
+        border: 2px solid var(--panel);
+        background-color: var(--panel-very-dark);
+        border-radius: 5px;
+        left: 98%;
+        transition: 0.2s;
+    }
+
+    .article-nav-container.open {
+        left: 20%;
+        transition: 0.2s;
     }
 }

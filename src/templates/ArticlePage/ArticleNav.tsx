@@ -1,13 +1,15 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function ArticleNav() {
-    const ref = useRef(null);
-    
+    const mainRef = useRef(null);
+    const navRef = useRef(null);
+
+    const [isOpen, setOpen] = useState(false);
 
     useEffect(() => {
-        const nav = ref.current! as HTMLElement;
+        const nav = navRef.current! as HTMLElement;
         
         const headings = document.querySelectorAll(".article-page article *:is(h1, h2, h3, h4, h5, h6)");
         
@@ -38,11 +40,23 @@ export default function ArticleNav() {
         nav.appendChild(rootList);
     });
 
-    return (
-        <div className="article-nav-container">
-            <button className="article-nav-btn" aria-label="Article navigation"> </button>
+    function switchNav() {
+        const container = mainRef.current! as HTMLElement;
+        
+        if(isOpen) {
+            container.classList.add("open");
+        } else {
+            container.classList.remove("open");
+        }
+        
+        setOpen(!isOpen);
+    }
 
-            <nav className="article-nav" ref={ref}>
+    return (
+        <div className="article-nav-container" ref={mainRef}>
+            <button className="article-nav-btn" aria-label="Article navigation" onClick={switchNav}> </button>
+
+            <nav className="article-nav" ref={navRef}>
                 <h1>On this page</h1>
             </nav>
         </div>
