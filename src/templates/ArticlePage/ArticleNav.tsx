@@ -38,7 +38,7 @@ export default function ArticleNav() {
         }
 
         nav.appendChild(rootList);
-    });
+    }, []);
 
     function switchNav() {
         const container = mainRef.current! as HTMLElement;
