@@ -9,7 +9,7 @@ export default function ArticleNav() {
     useEffect(() => {
         const nav = ref.current! as HTMLElement;
         
-        const headings = document.querySelectorAll(".article-page *:is(h1, h2, h3, h4, h5, h6)");
+        const headings = document.querySelectorAll(".article-page article *:is(h1, h2, h3, h4, h5, h6)");
         
         const rootList = document.createElement("ul");
         
