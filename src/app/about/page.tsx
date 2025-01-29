@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function About() {
     return (
         <Page category="About">
-            <ArticlePage>
+            <ArticlePage title="About me">
                 <section>
                     <h1 id="who-am-i">Who am I</h1>
                     <p>
