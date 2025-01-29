@@ -14,6 +14,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="CEp8re5xPxShHGl3Z04NXVKOKE-OgXujmu6jYVBIXqE" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </head>
       
       <body>
