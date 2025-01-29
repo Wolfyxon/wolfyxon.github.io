@@ -1,4 +1,3 @@
-import Markdown from "markdown-to-jsx";
 import { getBySlug, getPosts } from "../blog";
 
 import Page from "@/templates/Page";
