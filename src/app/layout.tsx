@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./css/colors.css";
 import "./css/global.css";
+import ClientWorker from "./ClientWorker";
 
 
 export const metadata: Metadata = {
@@ -19,6 +20,8 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       
       <body>
         {children}
+
+        <ClientWorker />
       </body>
     </html>
   );

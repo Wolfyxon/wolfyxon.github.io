@@ -5,11 +5,10 @@ import ProjectList from "../components/home/ProjectList";
 import Badge from "../components/Badge";
 import Collaborator from "../components/home/Collaborator";
 import SocialBadge, { websites } from "../components/SocialBadge";
+import Page from "@/templates/Page";
 
 import "./css/animations.css";
 import "./css/home.css";
-import Page from "@/templates/Page";
-import ClientWorker from "./ClientWorker";
 
 export const metadata: Metadata = {
   title: "Wolfyxon's epic website"
@@ -18,8 +17,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Page category="Home">
-      <ClientWorker />
-
        <div id="banner">
           <div className="observing anim-obs-left">
               <div id="banner-text">
