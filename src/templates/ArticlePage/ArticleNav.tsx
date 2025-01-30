@@ -7,9 +7,7 @@ import "./ArticleNav.css";
 export default function ArticleNav(data: {title?: string}) {
     const mainRef = useRef(null);
     const navRef = useRef(null);
-
-    const [isOpen, setOpen] = useState(false);
-
+    
     useEffect(() => {
         const nav = navRef.current! as HTMLElement;
         
@@ -45,13 +43,7 @@ export default function ArticleNav(data: {title?: string}) {
     function switchNav() {
         const container = mainRef.current! as HTMLElement;
         
-        if(isOpen) {
-            container.classList.add("open");
-        } else {
-            container.classList.remove("open");
-        }
-        
-        setOpen(!isOpen);
+        container.classList.toggle("open");
     }
 
     return (
