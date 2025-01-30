@@ -71,6 +71,8 @@
         border-radius: 5px;
         left: 98%;
         transition: 0.2s;
+        height: 100%;
+        width: 100%;
     }
 
     .article-nav-container.open {
