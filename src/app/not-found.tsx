@@ -1,6 +1,8 @@
 import Redirect from "@/components/Redirect";
 import { Metadata } from "next";
 
+import "./css/404.css";
+
 export const metadata: Metadata = {
     title: "Page not found",
     description: "This page does not exist I guess"
