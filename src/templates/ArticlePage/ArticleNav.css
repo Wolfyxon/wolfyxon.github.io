@@ -49,6 +49,12 @@
     text-decoration: none;
 }
 
+.article-nav a.current {
+    font-size: 105%;
+    color: var(--color4);
+    font-weight: bold;
+}
+
 .article-nav ul {
     list-style: none;
     padding-left: 10px;

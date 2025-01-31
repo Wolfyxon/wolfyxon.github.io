@@ -10,8 +10,32 @@ export default function ArticleNav(data: {title?: string}) {
     
     useEffect(() => {
         const nav = navRef.current! as HTMLElement;
+
         const headings = document.querySelectorAll(".article-page article *:is(h1, h2, h3, h4, h5, h6)");
-        
+        const links: HTMLAnchorElement[] = [];
+
+        const observer = new IntersectionObserver((entires) => {
+            let set = false;
+
+            entires.forEach((entry, i) => {
+                entry.target.classList.toggle("visible", entry.isIntersecting);
+
+                for(let i = 0; i < headings.length; i++) {
+                    const h = headings[i];
+
+                    if(h.classList.contains("visible")) {
+                        
+                        links.forEach((link, linkI) => {
+                            console.log(i, linkI);
+                            link.classList.toggle("current", i == linkI);
+                        });
+
+                        break;
+                    }
+                }
+            });
+        });
+
         const rootList = document.createElement("ul");
         
         let current = rootList;
@@ -19,6 +43,7 @@ export default function ArticleNav(data: {title?: string}) {
 
         for(const h of headings) {
             const depth = parseInt(h.tagName.replace("H", ""));
+            observer.observe(h);
 
             if(depth != currentDepth) {
                 if(depth > currentDepth) {
@@ -33,7 +58,15 @@ export default function ArticleNav(data: {title?: string}) {
                 currentDepth = depth;
             }
 
-            current.innerHTML += `<li><a href="#${h.id}">${h.innerHTML}</a></li>`;
+            const link = document.createElement("a");
+            link.href = "#" + h.id;
+            link.innerText = h.innerHTML;
+            links.push(link);
+
+            const li = document.createElement("li");
+            li.appendChild(link);
+
+            current.appendChild(li);
         }
 
         nav.appendChild(rootList);
