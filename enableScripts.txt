@@ -1,0 +1,4 @@
+Use this to fix powershell execution policy error.
+(School PCs suck)
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
