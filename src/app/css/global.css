@@ -175,8 +175,9 @@ button:active {
 /* --== Other ==-- */
 
 #main {
-    padding: 1%;
-    margin-top: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
     min-height: 1000px;
 }
 
