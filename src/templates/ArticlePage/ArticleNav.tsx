@@ -47,12 +47,15 @@ export default function ArticleNav(data: {title?: string}) {
 
             if(depth != currentDepth) {
                 if(depth > currentDepth) {
+                    const li = document.createElement("li");
                     const list = document.createElement("ul");
 
-                    current.appendChild(list);
+                    li.appendChild(list);
+                    current.appendChild(li);
+
                     current = list;
                 } else {
-                    current = current.parentElement! as HTMLUListElement;
+                    current = current.parentElement!.parentElement! as HTMLUListElement;
                 }
 
                 currentDepth = depth;
