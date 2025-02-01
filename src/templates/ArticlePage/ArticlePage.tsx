@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import "@/app/css/animations.css";
 import "./ArticlePage.css";
 import ArticleNav from "./ArticleNav";
+import FancyHeading from "@/components/FancyHeading";
 
 export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string, title?: string}) {
 
@@ -26,6 +27,8 @@ export default async function ArticlePage(data: {children: string | ReactNode | 
 
     return (
         <div className="article-page">
+            <FancyHeading>{data.title}</FancyHeading>
+
             <article>{content}</article>
 
             <ArticleNav title={data.title} />
