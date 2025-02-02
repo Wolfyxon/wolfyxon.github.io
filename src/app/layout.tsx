@@ -7,10 +7,10 @@ import ClientWorker from "./ClientWorker";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Wolfyxon",
+    template: "%s | Wolfyxon",
     default: "Wolfyxon"
   },
-  
+
   description: "My little nerdy space on the internet",
 };
 
