@@ -26,7 +26,6 @@ export default function ArticleNav(data: {title?: string}) {
                     if(h.classList.contains("visible")) {
                         
                         links.forEach((link, linkI) => {
-                            console.log(i, linkI);
                             link.classList.toggle("current", i == linkI);
                         });
 
