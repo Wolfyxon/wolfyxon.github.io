@@ -8,6 +8,7 @@ registerCommand(
         const char = ctx.getArg("char") || "##";
         
         echo("If the playback is frozen, the video is loading. Conversion from video to text happens in real time.");
+        echo("If you see flashing nonsense, enable using HTML5 canvas data in your browser.");
         echo(" ");
 
         const videoSrc = document.createElement("source")
