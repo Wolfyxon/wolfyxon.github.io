@@ -4,7 +4,7 @@ import Page from "@/templates/Page";
 import ArticlePage from "@/templates/ArticlePage/ArticlePage";
 
 export const metadata: Metadata = {
-    title: "About me - Wolfyxon",
+    title: "About me",
     description: "Something about me",
 };
 

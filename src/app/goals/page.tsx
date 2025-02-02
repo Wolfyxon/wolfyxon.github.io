@@ -8,7 +8,7 @@ import "./Goals.css";
 import Page from "@/templates/Page";
 
 export const metadata: Metadata = {
-    title: "My goals - Wolfyxon",
+    title: "My goals",
     description: "Goals I want to achieve",
 };
 

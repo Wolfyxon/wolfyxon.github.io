@@ -7,7 +7,7 @@ import "./blog.css";
 import Page from "@/templates/Page";
 
 export const metadata: Metadata = {
-    title: "My blog - Wolfyxon",
+    title: "My blog",
     description: "Weird stuff written by me."
 }
 
