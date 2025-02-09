@@ -60,7 +60,7 @@ export default function Home() {
           <Badge icon="software/lang/mysql.png" alt="MySQL" />
           <Badge icon="software/lang/sqlite.png" alt="SQLite" />
           <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
-          <Badge icon="software/lang/bash.png" alt="MySQL" />
+          <Badge icon="software/lang/bash.png" alt="Bash" />
         </div>
 
         <h2>Tools</h2>
@@ -68,7 +68,7 @@ export default function Home() {
           <Badge icon="software/tools/vscode.png" alt="Visual Studio Code" />
           <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
           <Badge icon="software/tools/godot.png" alt="Godot" />
-          <Badge icon="software/tools/nodejs.png" alt="Godot" />
+          <Badge icon="software/tools/nodejs.png" alt="NodeJS" />
           <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
           <Badge icon="software/tools/git.png" alt="Git" />
           <Badge icon="software/tools/linux.svg" alt="Linux" />
