@@ -60,6 +60,7 @@ export default function Home() {
           <Badge icon="software/lang/mysql.png" alt="MySQL" />
           <Badge icon="software/lang/sqlite.png" alt="SQLite" />
           <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
+          <Badge icon="software/lang/bash.png" alt="MySQL" />
         </div>
 
         <h2>Tools</h2>
