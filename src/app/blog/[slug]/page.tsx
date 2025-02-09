@@ -1,7 +1,7 @@
 import { getBySlug, getPosts } from "../blog";
 
-import Page from "@/templates/Page";
-import ArticlePage from "@/templates/ArticlePage/ArticlePage";
+import Page from "@/layouts/Page";
+import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 
 import "./blogPost.css";
 

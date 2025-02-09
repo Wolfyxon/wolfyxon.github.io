@@ -5,7 +5,7 @@ import ProjectList from "../components/home/ProjectList";
 import Badge from "../components/Badge";
 import Collaborator from "../components/home/Collaborator";
 import SocialBadge, { websites } from "../components/SocialBadge";
-import Page from "@/templates/Page";
+import Page from "@/layouts/Page";
 
 import "./css/animations.css";
 import "./css/home.css";

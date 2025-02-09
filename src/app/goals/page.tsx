@@ -5,7 +5,7 @@ import GoalList from "./GoalList";
 
 import "../css/animations.css";
 import "./Goals.css";
-import Page from "@/templates/Page";
+import Page from "@/layouts/Page";
 
 export const metadata: Metadata = {
     title: "My goals",

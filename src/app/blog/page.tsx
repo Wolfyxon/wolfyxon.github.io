@@ -4,7 +4,7 @@ import PostCard from "./PostCard/PostCard";
 
 import "../css/animations.css";
 import "./blog.css";
-import Page from "@/templates/Page";
+import Page from "@/layouts/Page";
 
 export const metadata: Metadata = {
     title: "My blog",
