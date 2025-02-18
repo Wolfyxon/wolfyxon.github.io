@@ -110,7 +110,7 @@
     background: var(--panel-dark);
 }
 
-#software > div > img {
+#software > div > * {
     display: inline-block;
     width: 40px;
     height: 40px;
