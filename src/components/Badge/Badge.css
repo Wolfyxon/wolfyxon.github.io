@@ -11,6 +11,7 @@
 .badge-label {
     width: 100%;
     position: absolute;
+    font-weight: bold;
     text-align: center;
     top: 80%;
     opacity: 0;
