@@ -72,6 +72,7 @@ export default function Home() {
           <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
           <Badge icon="software/tools/nodejs.png" alt="NodeJS" />
           <Badge icon="software/lib/react.png" alt="React" />
+          <Badge icon="software/lib/discordjs.png" alt="Discord.js" />
           <Badge icon="software/tools/git.png" alt="Git" />
           <Badge icon="software/tools/linux.svg" alt="Linux" />
           
