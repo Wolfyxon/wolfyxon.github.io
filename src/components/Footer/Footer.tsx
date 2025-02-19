@@ -12,7 +12,7 @@ export default function Footer() {
                 <a href="mailto:wolfyxon@gmail.com">wolfyxon@gmail.com</a>
             </p>
 
-            <p>This website is licensed under <a href="https://github.com/Wolfyxon/wolfyxon.github.io/blob/main/LICENSE">LGPL-2.1</a>.</p>
+            <p>This website is licensed under <a href="https://github.com/Wolfyxon/wolfyxon.github.io/blob/main/LICENSE">GPL-3.0</a>.</p>
             <p>Made by Wolfyxon.</p>
         </footer>
     );
