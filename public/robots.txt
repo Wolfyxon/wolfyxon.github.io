@@ -1,5 +1,5 @@
 User-agent: *
-/*ref=*
+Disallow: /*ref=*
 
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
