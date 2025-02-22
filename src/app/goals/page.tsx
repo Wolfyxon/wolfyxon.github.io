@@ -32,7 +32,7 @@ export default function Goals() {
                 <Goal title="Learn cybersecurity" progress={10}></Goal>
                 <Goal title="Learn electricity & electronics" progress={5}></Goal>
                 <Goal title="Make a programming language" progress={2}></Goal>
-                <Goal title="Heal form social anxiety" progress={45}></Goal>
+                <Goal title="Heal form social anxiety" progress={47}></Goal>
                 <Goal title="Write a story" progress={0}></Goal>
                 <Goal title="Save someone's life" progress={0}></Goal>
             </GoalList>
