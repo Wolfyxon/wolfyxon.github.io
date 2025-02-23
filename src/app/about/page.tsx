@@ -18,7 +18,7 @@ export default function About() {
                         Hi, I'm Wolfyxon.
                     </p>
                     <p>
-                        I'm a young programmer from Poland. <br />
+                        I'm a young programmer guy from Poland. <br />
                         I've been coding since I was 9 years old and it truly is my passion. 
                     </p>
                     <p>
