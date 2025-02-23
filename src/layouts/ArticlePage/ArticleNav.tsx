@@ -15,8 +15,6 @@ export default function ArticleNav(data: {title?: string}) {
         const links: HTMLAnchorElement[] = [];
 
         const observer = new IntersectionObserver((entires) => {
-            let set = false;
-
             entires.forEach((entry) => {
                 entry.target.classList.toggle("visible", entry.isIntersecting);
 
