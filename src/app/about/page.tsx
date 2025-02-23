@@ -44,6 +44,9 @@ export default function About() {
                         I enjoy dealing with all kinds of software, especially if it provides a lot of control.
                         That's why I use Linux and a lot of open source tools. 
                     </p>
+                    <p>
+                        I like sandbox, strategy and shooter games.
+                    </p>
                 </section>
 
                 <section>
