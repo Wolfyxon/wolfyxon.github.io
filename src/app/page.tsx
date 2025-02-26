@@ -9,6 +9,7 @@ import Page from "@/layouts/Page";
 
 import "./css/animations.css";
 import "./css/home.css";
+import Tag from "@/components/Tag/Tag";
 
 export const metadata: Metadata = {
   title: "Wolfyxon's epic website"
@@ -76,7 +77,19 @@ export default function Home() {
             <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
             <Badge icon="software/tools/git.png" alt="Git" />
             <Badge icon="software/tools/linux.svg" alt="Linux" />
-            
+          </div>
+        </div>
+
+        <div id="fields">
+          <h2>Fields</h2>
+          
+          <div>
+            <Tag>API programming</Tag>
+            <Tag>Backend</Tag>
+            <Tag>Frontend</Tag>
+            <Tag>Databases</Tag>
+            <Tag>Game development</Tag>
+            <Tag>Database management</Tag>
           </div>
         </div>
       </div>
