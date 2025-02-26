@@ -84,16 +84,22 @@ export default function Home() {
           <h2>Fields</h2>
           
           <div>
-            <Tag>REST API usage & creation</Tag>  
+            <Tag>REST API usage & creation</Tag>
+            <Tag>Low-level programming</Tag>  
             <Tag>Backend</Tag>
             <Tag>Frontend</Tag>
             <Tag>Databases</Tag>
+            <Tag>SEO & Accessibility</Tag>
+            <Tag>Tooling</Tag>
             <Tag>Game development</Tag>
+            <Tag>Discord bots</Tag>
             <Tag>Networking & multiplayer</Tag>
             <Tag>Database management</Tag>
             <Tag>System design</Tag>
             <Tag>Basic robotics</Tag>
             <Tag>Video & audio editing</Tag>
+            <Tag>Digital graphics</Tag>
+            <Tag>Digital music</Tag>
           </div>
         </div>
       </div>
