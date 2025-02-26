@@ -39,43 +39,45 @@ export default function Home() {
               <img src="/assets/media/img/Wolfyxon.png" id="banner-logo" alt="Wolfyxon logo" />
           </div>
       </div>
-      <div id="software">
-        <FancyHeading>Languages & tools</FancyHeading>
+      
+      <div id="experience">
+        <FancyHeading>Experience</FancyHeading>
+        <div id="software">
+          <h2>Languages</h2>
+          <div>
+            <Badge icon="software/lang/rust.png" alt="Rust" />
+            <Badge icon="software/lang/lua.png" alt="Lua" />
+            <Badge icon="software/lang/Luau.png" alt="Luau" />
+            <Badge icon="software/tools/godot.png" alt="GDScript" />
+            <Badge icon="software/lang/java.svg" alt="Java" />
+            <Badge icon="software/lang/python.svg" alt="Python" />
+            <Badge icon="software/lang/js.png" alt="JavaScript" />
+            <Badge icon="software/lang/ts.png" alt="TypeScript" />
+            <Badge icon="software/lang/html5.svg" alt="HTML5" />
+            <Badge icon="software/lang/css3.svg" alt="CSS3" />
+            <Badge icon="software/lang/c.svg" alt="C" />
+            <Badge icon="software/lang/cpp.svg" alt="C++" />
+            <Badge icon="software/lang/csharp.svg" alt="C#" />
+            <Badge icon="software/lang/mysql.png" alt="MySQL" />
+            <Badge icon="software/lang/sqlite.png" alt="SQLite" />
+            <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
+            <Badge icon="software/lang/bash.png" alt="Bash" />
+          </div>
 
-        <h2>Languages</h2>
-        <div>
-          <Badge icon="software/lang/rust.png" alt="Rust" />
-          <Badge icon="software/lang/lua.png" alt="Lua" />
-          <Badge icon="software/lang/Luau.png" alt="Luau" />
-          <Badge icon="software/tools/godot.png" alt="GDScript" />
-          <Badge icon="software/lang/java.svg" alt="Java" />
-          <Badge icon="software/lang/python.svg" alt="Python" />
-          <Badge icon="software/lang/js.png" alt="JavaScript" />
-          <Badge icon="software/lang/ts.png" alt="TypeScript" />
-          <Badge icon="software/lang/html5.svg" alt="HTML5" />
-          <Badge icon="software/lang/css3.svg" alt="CSS3" />
-          <Badge icon="software/lang/c.svg" alt="C" />
-          <Badge icon="software/lang/cpp.svg" alt="C++" />
-          <Badge icon="software/lang/csharp.svg" alt="C#" />
-          <Badge icon="software/lang/mysql.png" alt="MySQL" />
-          <Badge icon="software/lang/sqlite.png" alt="SQLite" />
-          <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
-          <Badge icon="software/lang/bash.png" alt="Bash" />
-        </div>
-
-        <h2>Tools</h2>
-        <div>
-          <Badge icon="software/tools/vscode.png" alt="Visual Studio Code" />
-          <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
-          <Badge icon="software/tools/godot.png" alt="Godot" />
-          <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
-          <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
-          <Badge icon="software/tools/nodejs.png" alt="NodeJS" />
-          <Badge icon="software/lib/react.png" alt="React" />
-          <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
-          <Badge icon="software/tools/git.png" alt="Git" />
-          <Badge icon="software/tools/linux.svg" alt="Linux" />
-          
+          <h2>Tools</h2>
+          <div>
+            <Badge icon="software/tools/vscode.png" alt="Visual Studio Code" />
+            <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
+            <Badge icon="software/tools/godot.png" alt="Godot" />
+            <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
+            <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
+            <Badge icon="software/tools/nodejs.png" alt="NodeJS" />
+            <Badge icon="software/lib/react.png" alt="React" />
+            <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
+            <Badge icon="software/tools/git.png" alt="Git" />
+            <Badge icon="software/tools/linux.svg" alt="Linux" />
+            
+          </div>
         </div>
       </div>
 
