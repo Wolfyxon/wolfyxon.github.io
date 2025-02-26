@@ -3,7 +3,7 @@ import Markdown from "markdown-to-jsx";
 import { ReactNode } from "react";
 
 import ArticleNav from "./ArticleNav";
-import FancyHeading from "@/components/FancyHeading";
+import FancyHeading from "@/components/FancyHeading/FancyHeading";
 
 import "@/app/css/animations.css";
 import "./ArticlePage.css";
