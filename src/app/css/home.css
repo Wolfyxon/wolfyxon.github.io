@@ -101,14 +101,19 @@
     transition: 0.1s;
 }
 
-/* --== Projects ==-- */
+/* --== Experience ==-- */
+
+#experience {
+    width: 60%;
+}
 
 #software > div {
-    width: 60%;
     height: fit-content;
     padding: 1%;
     background: var(--panel-dark);
 }
+
+/* --== Projects ==-- */
 
 #project-list > * {
     border-radius: 10px;
