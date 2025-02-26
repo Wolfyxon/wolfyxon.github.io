@@ -91,6 +91,8 @@ export default function Home() {
             <Tag>Databases</Tag>
             <Tag>SEO & Accessibility</Tag>
             <Tag>Tooling</Tag>
+            <Tag>Command line</Tag>
+            <Tag>Version control</Tag>
             <Tag>Game development</Tag>
             <Tag>Discord bots</Tag>
             <Tag>Networking & multiplayer</Tag>
