@@ -1,3 +1,5 @@
+import "./FancyHeading.css";
+
 export default function FancyHeading(data: {children: any}) {
     return (
         <h1 className="fancy-h">
