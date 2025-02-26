@@ -113,6 +113,11 @@
     background: var(--panel-dark);
 }
 
+@media all and (orientation: portrait) {
+    #experience {
+        width: 100%;
+    }
+
 /* --== Projects ==-- */
 
 #project-list > * {
@@ -166,11 +171,6 @@
 }
 
 @media all and (orientation: portrait) {
-    #software > div {
-        text-align: center;
-        width: 100%;
-    }
-
     #project-list > * {
         height: fit-content;
         border-left: none;
