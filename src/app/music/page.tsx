@@ -12,6 +12,7 @@ export default function MusicPage() {
                 <LargeBadge title="YouTube" icon="/assets/media/img/icons/social/youtube.png" url="https://www.youtube.com/playlist?list=PLtM1NLG1o7IidEvwmwbUCxkJnukupLA0Z" />
                 <LargeBadge title="SoundCloud" icon="/assets/media/img/icons/social/soundcloud.png" url="https://soundcloud.com/wolfyxon" />
             </div>
+            <p>Page under construction eh</p>
         </Page>
     )
 }
