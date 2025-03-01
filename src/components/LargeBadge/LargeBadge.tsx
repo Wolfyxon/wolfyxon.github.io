@@ -12,7 +12,7 @@ export default function LargeBadge(data: {icon: string, title: string, url?: str
     );
     
     return data.url ? (
-        <a className="large-badge" href="url">
+        <a className="large-badge" href={data.url}>
             {content}
         </a>
     ) : (
