@@ -1,0 +1,22 @@
+.large-badge {
+    background-color: var(--panel-slightly-dark);
+    border-radius: 5px;
+    border: 2px solid var(--panel-very-dark);
+    width: fit-content;
+    padding: 10px;
+    min-width: 300px;
+    display: flex;
+    gap: 10px;
+}
+
+.large-badge-title {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.large-badge img {
+    background-color: var(--panel-very-dark);
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px;
+}
