@@ -1,4 +1,5 @@
 .large-badge {
+    text-decoration: none;
     background-color: var(--panel-slightly-dark);
     border-radius: 5px;
     border: 2px solid var(--panel-very-dark);
