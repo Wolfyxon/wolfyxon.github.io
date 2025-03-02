@@ -1,7 +1,9 @@
 import Page from "@/layouts/Page";
 
 import "./music.css";
+
 import LargeBadge from "@/components/LargeBadge/LargeBadge";
+import Tag from "@/components/Tag/Tag";
 
 export default function MusicPage() {
     return (
@@ -17,6 +19,14 @@ export default function MusicPage() {
 
             <div className="cards">
                 <LargeBadge title="LMMS" icon="/assets/media/img/icons/software/tools/lmms.png" url="https://lmms.io" />
+            </div>
+
+            <h2>SoundFonts</h2>
+            <div>
+                <Tag url="https://schristiancollins.com/generaluser.php">GeneralUser GS</Tag>
+                <Tag url="https://member.keymusician.com/Member/FluidR3_GM/index.html">FluidR3_GM</Tag>
+                <Tag>TimGM6mb</Tag>
+                <Tag url="https://musical-artifacts.com/artifacts/974">AmenBreak</Tag>
             </div>
 
             <p>Page under construction eh</p>
