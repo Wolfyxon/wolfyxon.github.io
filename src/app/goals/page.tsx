@@ -21,7 +21,8 @@ export default function Goals() {
                     Here's a list of things I want to achieve in life.
                 </p>
                 <p>
-                    The progress pie shows how I'm satisfied with the progress a goal.
+                    The progress pie doesn't accurately show the progress of a goal, but rather how I'm confident with it. <br/>
+                    You never stop learning and improving.
                 </p>
             </div>
 
