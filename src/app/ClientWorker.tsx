@@ -7,6 +7,7 @@ export default function ClientWorker() {
         const observer = new IntersectionObserver((entries) => {
             for(const entry of entries) {
                 entry.target.classList.toggle("visible", entry.isIntersecting);
+                entry.target.classList.toggle("invisible", !entry.isIntersecting);
             }
         })
     
