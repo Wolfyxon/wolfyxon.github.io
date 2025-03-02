@@ -30,10 +30,12 @@ export class Command {
 // TODO: Implement everything
 export class CommandRunContext {
     command: Command;
+    args: string[];
     exitHandler: CommandExitHandler;
 
-    constructor(command: Command) {
+    constructor(command: Command, args: string[]) {
         this.command = command;
+        this.args = args;
         
         this.exitHandler = () => {
             return true;
