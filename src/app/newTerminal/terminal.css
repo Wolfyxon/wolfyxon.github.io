@@ -9,7 +9,7 @@ body, html {
 }
 
 body {
-    background: radial-gradient(black, #232323);
+    background: linear-gradient(black, #0f0f0f, black);
     background-size: 100% auto;
     color: white;
     font-size: 0.8vw;
