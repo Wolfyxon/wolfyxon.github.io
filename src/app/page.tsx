@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       <div id="projects">
-          <FancyHeading>My public projects</FancyHeading>
+          <FancyHeading>Featured projects</FancyHeading>
 
           <ProjectList />
 
