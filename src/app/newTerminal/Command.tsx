@@ -1,6 +1,8 @@
 type CommandHandler = (ctx: CommandRunContext) => void;
 type CommandExitHandler = () => boolean;
 
+export const FLAG_PREFIX = "--";
+
 export class Command {
     aliases: string[];
     description: string;
@@ -30,13 +32,25 @@ export class Command {
 // TODO: Implement everything
 export class CommandRunContext {
     command: Command;
+    rawArgs: string[];
     args: string[];
+    flags: string[];
     exitHandler: CommandExitHandler;
 
-    constructor(command: Command, args: string[]) {
+    constructor(command: Command, rawArgs: string[]) {
         this.command = command;
-        this.args = args;
-        
+        this.rawArgs = rawArgs;
+        this.args = [];
+        this.flags = [];
+
+        rawArgs.forEach((arg) => {
+            if(arg.startsWith(FLAG_PREFIX)) {
+                this.flags.push(arg.substring(FLAG_PREFIX.length, arg.length));
+            } else {
+                this.args.push(arg);
+            }
+        });
+
         this.exitHandler = () => {
             return true;
         }    
