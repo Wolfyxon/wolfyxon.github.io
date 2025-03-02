@@ -63,7 +63,6 @@ export default function Home() {
             <Badge icon="software/lang/sqlite.png" alt="SQLite" />
             <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
             <Badge icon="software/lang/bash.png" alt="Bash" />
-            <Badge icon="software/lang/make.svg" alt="GNU Make" />
           </div>
 
           <h2>Tools</h2>
