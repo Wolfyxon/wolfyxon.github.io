@@ -16,6 +16,14 @@ body {
     animation: bgScroll 10s infinite linear;
 }
 
+.username {
+    color: red;
+}
+
+.hostname {
+    color: #924BFF;
+}
+
 @keyframes bgScroll {
     0% { background-position-y: -1000px; }
     100% { background-position-y: 1000px; }
