@@ -41,8 +41,8 @@ export default function Home() {
           </div>
       </div>
       
+      <FancyHeading>Experience</FancyHeading>
       <div id="experience">
-        <FancyHeading>Experience</FancyHeading>
         <div id="software">
           <h2>Languages</h2>
           <div>
