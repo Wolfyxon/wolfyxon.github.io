@@ -1,3 +1,5 @@
+import "./terminal.css";
+
 export default function TerminalPage() {
     return (
         <>
@@ -6,7 +8,7 @@ export default function TerminalPage() {
                  <label id="prompt" htmlFor="input">
                     [<span className="username">root</span>@<span className="hostname">wolfyxon</span> <span className="dir">/</span>]#
                 </label>
-                
+
                  <input type="text" id="input" />
             </div>
         </>
