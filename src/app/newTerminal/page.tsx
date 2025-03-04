@@ -9,7 +9,7 @@ import "./terminal.css";
 export default function TerminalPage() {
     useEffect(() => {
         const input = getInput();
-        const console = getConsole();
+        const termConsole = getConsole();
 
         let currentCtx: CommandRunContext | undefined;
 
@@ -30,6 +30,10 @@ export default function TerminalPage() {
             // TODO
         }
 
+        function focusInput() {
+            input.focus();
+        }
+
         window.addEventListener("keydown", (e) => {
             if(document.activeElement !== input) return;
     
@@ -44,17 +48,25 @@ export default function TerminalPage() {
                 sigTerm();
             }
         });
+
+        document.addEventListener("click", (e) => {
+            const sel = document.getSelection();
+            
+            if(!sel || sel.isCollapsed) {
+                focusInput();
+            }
+        });
+        focusInput();
     }, []);
 
     return (
         <>
             <pre id="console"></pre>
             <div id="input-container">
-                 <label id="prompt" htmlFor="input">
+                 <span id="prompt">
                     [<span className="username">root</span>@<span className="hostname">wolfyxon</span> <span className="dir" id="dir">/</span>]#
-                </label>
-
-                 <input type="text" id="input" />
+                </span>
+                <span id="input" contentEditable>hi</span>
             </div>
         </>
     );

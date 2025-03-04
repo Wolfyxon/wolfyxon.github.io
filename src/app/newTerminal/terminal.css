@@ -62,15 +62,15 @@ a {
 #prompt {
     height: 100%;
     display: inline-block;
+    margin-right: 0.3em;
 }
 
 #input {
-    display: inline-block;
     font-family: inherit;
     font-style: inherit;
     font-size: 0.8vw;
     height: 100%;
-    width: 80%;
+    width: 200px;
     background: none;
     border: none;
     outline: none;
