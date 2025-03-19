@@ -7,7 +7,7 @@ export type PostData = {
     description: string,
     topics: [],
     date: Date,
-    public?: boolean,
+    hidden: boolean,
     markdown: string,
     slug: string
 }
@@ -29,7 +29,7 @@ export async function parsePost(path: string): Promise<PostData> {
         description: mat.data.description,
         topics: mat.data.topics ?? [],
         date: new Date(mat.data.date),
-        public: mat.data.public ?? true,
+        hidden: mat.data.hidden ?? false,
         markdown: mat.content,
         slug: slug,
     };
@@ -50,7 +50,7 @@ export async function getPostsForListing(): Promise<PostData[]> {
         return b.date.getTime() - a.date.getTime();
     });
 
-    return posts.filter((post) => post.public);
+    return posts.filter((post) => !post.hidden);
 }
 
 export async function getBySlug(slug: string): Promise<PostData> {
