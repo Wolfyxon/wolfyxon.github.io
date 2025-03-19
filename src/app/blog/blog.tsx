@@ -7,6 +7,7 @@ export type PostData = {
     description: string,
     topics: [],
     date: Date,
+    public?: boolean,
     markdown: string,
     slug: string
 }
@@ -28,6 +29,7 @@ export async function parsePost(path: string): Promise<PostData> {
         description: mat.data.description,
         topics: mat.data.topics ?? [],
         date: new Date(mat.data.date),
+        public: mat.data.public ?? true,
         markdown: mat.content,
         slug: slug,
     };
@@ -41,14 +43,14 @@ export async function getPosts(): Promise<PostData[]> {
     }));
 }
 
-export async function getPostsSorted(): Promise<PostData[]> {
+export async function getPostsForListing(): Promise<PostData[]> {
     const posts = await getPosts();
 
     posts.sort((a, b) => {
         return b.date.getTime() - a.date.getTime();
     });
 
-    return posts;
+    return posts.filter((post) => post.public);
 }
 
 export async function getBySlug(slug: string): Promise<PostData> {

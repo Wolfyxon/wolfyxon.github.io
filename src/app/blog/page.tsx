@@ -1,4 +1,4 @@
-import { getPosts, getPostsSorted } from "./blog";
+import { getPosts, getPostsForListing } from "./blog";
 import { Metadata } from "next";
 import PostCard from "./PostCard/PostCard";
 
@@ -18,7 +18,7 @@ export default async function Blog() {
 
             <div id="posts">
                 {
-                    (await getPostsSorted()).map((p, i) => PostCard({post: p, key: i}))
+                    (await getPostsForListing()).map((p, i) => PostCard({post: p, key: i}))
                 }
             </div>
         </Page>
