@@ -29,8 +29,10 @@ code {
     margin-bottom: 10px;
 }
 
-.article-page article h1 {
-    font-size: 200%;
+@media all and (orientation: landscape) {
+    .article-page article h1 {
+        font-size: 200%;
+    }
 }
 
 .article-page article h1, 
