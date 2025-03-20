@@ -72,14 +72,19 @@ export default function Home() {
             <Badge icon="software/tools/godot.png" alt="Godot" />
             <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
             <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
-            <Badge icon="software/tools/nodejs.png" alt="NodeJS" />
-            <Badge icon="software/lib/react.png" alt="React" />
-            <Badge icon="software/tools/vite.svg" alt="Vite" />
-            <Badge icon="software/tools/nextjs.png" alt="NextJS" />
-            <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
             <Badge icon="software/tools/git.png" alt="Git" />
             <Badge icon="software/tools/linux.svg" alt="Linux" />
           </div>
+
+          <h2>Libraries and frameworks</h2>
+          <div>
+              <Badge icon="software/lib/react.png" alt="React" />
+              <Badge icon="software/framework/vite.svg" alt="Vite" />
+              <Badge icon="software/framework/nextjs.png" alt="NextJS" />
+              <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
+            <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
+          </div>
+
         </div>
 
         <div id="fields">
