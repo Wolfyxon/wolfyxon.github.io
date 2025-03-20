@@ -82,6 +82,7 @@ export default function Home() {
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.png" alt="NextJS" />
               <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
+              <Badge icon="software/framework/love2d.png" alt="Love2D" />
             <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
           </div>
 
