@@ -29,6 +29,10 @@ code {
     margin-bottom: 10px;
 }
 
+.article-page a {
+    text-underline-offset: 2px
+}
+
 @media all and (orientation: landscape) {
     .article-page article h1 {
         font-size: 200%;
