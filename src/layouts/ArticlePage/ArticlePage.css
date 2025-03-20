@@ -16,7 +16,6 @@ code {
 .article-page > * {
     vertical-align: top;
     display: inline-block;
-    
 }
 
 .article-page article {
@@ -67,4 +66,9 @@ code {
         border-radius: 5px;
         width: 100%;
     }
+}
+
+.article-header:not(:empty) {
+    display: block;
+    margin-bottom: 20px;
 }

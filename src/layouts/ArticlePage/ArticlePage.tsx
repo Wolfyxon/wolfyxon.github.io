@@ -30,9 +30,12 @@ export default async function ArticlePage(data: {children: Generic, headerElemen
     return (
         <div className="article-page">
             <FancyHeading>{data.title}</FancyHeading>
-            {data.headerElement}
-            <article>{content}</article>
+            
+            <div className="article-header">
+                {data.headerElement}
+            </div>
 
+            <article>{content}</article>
             <ArticleNav title={data.title} />
         </div>
     )
