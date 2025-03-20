@@ -7,8 +7,9 @@ import FancyHeading from "@/components/FancyHeading/FancyHeading";
 
 import "@/app/css/animations.css";
 import "./ArticlePage.css";
+import { Generic } from "@/utils";
 
-export default async function ArticlePage(data: {children: string | ReactNode | ReactNode[], src?: string, title?: string}) {
+export default async function ArticlePage(data: {children: Generic, src?: string, title?: string}) {
 
     let content: ReactNode = null;
 
