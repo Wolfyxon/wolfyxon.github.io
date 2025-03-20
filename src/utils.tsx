@@ -1,3 +1,3 @@
 import { ReactNode } from "react";
 
-export type Generic = string | ReactNode | ReactNode[];
+export type Generic = string | number | ReactNode | ReactNode[];
