@@ -20,7 +20,7 @@ code {
 }
 
 .article-page article {
-    padding: 0.5% 1%;
+    padding: 5px 10px;
     box-sizing: border-box;
     width: 68%;
     background: var(--panel-very-dark);
