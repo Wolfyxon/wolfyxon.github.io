@@ -13,13 +13,18 @@ export default function MinecraftMovieCountdown() {
         let itv;
 
         function update() {
-            const offset = new Date(release.getTime() - Date.now());
+            const offset = Math.max(release.getTime() - Date.now(), 0);
+
+            const d = Math.floor(offset / (1000 * 60 * 60 * 24));
+            const h = Math.floor((offset % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((offset % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((offset % (1000 * 60)) / 1000);
 
             timer.innerText = [
-                `${offset.getDay()} days`, 
-                `${offset.getHours()} hours`, 
-                `${offset.getMinutes()} minutes`,
-                `${offset.getSeconds()} seconds`
+                `${d} days`, 
+                `${h} hours`, 
+                `${m} minutes`,
+                `${s} seconds`
             ].join(" ");
         }
 
