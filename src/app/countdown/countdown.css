@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Minecraft;
+    src: url("/assets/fonts/minecraft.woff");
+  }
+
+body, html {
+    height: 100%;
+    font-family: Minecraft;
+}
+
+body {
+    text-align: center;
+}
+
+#container {
+    margin: 10% auto;
+    max-width: 2000px;
+}
+
+#label {
+    color: #50A333;
+}
+
+#timer {
+    font-size: 5em;
+}
+
+@media all and (orientation: portrait) {
+    #timer {
+        font-size: 3em;
+    }
+}
