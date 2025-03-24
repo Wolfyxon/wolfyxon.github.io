@@ -1,15 +1,16 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import "./countdown.css";
 
 export default function MinecraftMovieCountdown() {
     const release = new Date("2025-04-03");
-    const timerRef = useRef(null);
 
     useEffect(() => {
-        const timer: HTMLElement = timerRef.current!;
+        const timer = document.getElementById("timer")!;
+        const video = document.getElementById("video")! as HTMLVideoElement;
+
         let itv;
 
         function update() {
@@ -26,6 +27,11 @@ export default function MinecraftMovieCountdown() {
                 `${m} minutes`,
                 `${s} seconds`
             ].join(" ");
+
+            if(offset <= 0) {
+                video.style.opacity = "1";
+                video.play();
+            }
         }
 
         itv = setInterval(update, 1000);
@@ -34,9 +40,14 @@ export default function MinecraftMovieCountdown() {
 
     return (
         <>
+            <video id="video" loop>
+                <source src="/assets/media/video/I_am_Steve.mp4" type="video/mp4" />
+                Video not supported :c
+            </video>
+
             <div id="container">
                 <p id="label">Minecraft Movie is out in...</p>
-                <div ref={timerRef} id="timer"></div>
+                <div id="timer"></div>
             </div>
         </>
     );
