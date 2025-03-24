@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import "./countdown.css";
 
 export default function MinecraftMovieCountdownClient() {
-    const release = new Date("2025-04-03");
+    const release = new Date("2025-04-03 16:10:00");
 
     useEffect(() => {
         const timer = document.getElementById("timer")!;
