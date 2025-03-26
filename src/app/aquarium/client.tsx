@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import "./aquarium.css";
-import { clamp, lerp } from "@/utils";
+import { clamp, lerp, randf } from "@/utils";
 
 class Object {
     char: string;
@@ -53,7 +53,20 @@ class Object {
     }
 
     update(delta: number) {
-        this.moveRotated(this.angle, this.speed * delta)
+        //this.moveRotated(this.angle, this.speed * delta)
+    }
+}
+
+class Fish extends Object {
+    targetX: number = 0;
+    targetY: number = 0;
+
+    constructor() {
+        super("🐟");
+    }
+
+    update(delta: number) {
+        this.lerpPos(this.targetX, this.targetY, 0.005 * delta);
     }
 }
 
@@ -62,25 +75,32 @@ export default function AquariumClient() {
         const aquarium = document.getElementById("aquarium")!;
         const objects: Object[] = [];
 
-        const fish = new Object("🐟");
-        
         function addObject(obj: Object) {
             objects.push(obj);
             aquarium.append(obj.element);
         }
 
-        addObject(fish);
+        addObject(new Fish());
 
         let last = Date.now();
+        let frames = 0;
+        const fishRange = 3;
 
         setInterval(() => {
             const now = Date.now();
             const delta = now - last;
             last = now;
-
+            
             objects.forEach((o) => {
+                if(frames % 200 == 0 && o instanceof Fish) {
+                    o.targetX = o.x + randf(-fishRange, fishRange);
+                    o.targetY = o.y + randf(-fishRange, fishRange);
+                }
+
                 o.update(delta);
             });
+
+            frames++;
         }, 0);
     }, []);
 
