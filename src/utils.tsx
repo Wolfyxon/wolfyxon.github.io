@@ -12,3 +12,11 @@ export function clamp(num: number, min: number, max: number): number {
 export function lerp(from: number, to: number, speed: number): number {
     return from + (to - from) * speed;
 }
+
+export function randf(min: number, max: number): number {
+    return Math.random() * (max - min) + min;
+}
+
+export function randi(min: number, max: number): number {
+    return Math.round(randf(min, max));
+}
