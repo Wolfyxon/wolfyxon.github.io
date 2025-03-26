@@ -8,3 +8,7 @@ export function clamp(num: number, min: number, max: number): number {
 
     return num;
 }
+
+export function lerp(from: number, to: number, speed: number): number {
+    return from + (to - from) * speed;
+}
