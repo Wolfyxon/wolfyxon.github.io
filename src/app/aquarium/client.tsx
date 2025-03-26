@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import "./aquarium.css";
-import { clamp } from "@/utils";
+import { clamp, lerp } from "@/utils";
 
 class Object {
     char: string;
@@ -42,6 +42,13 @@ class Object {
         this.move(
             Math.sin(angle) * speed,
             Math.cos(angle) * speed
+        );
+    }
+
+    lerpPos(x: number, y: number, speed: number) {
+        this.setPos(
+            lerp(this.x, x, speed),
+            lerp(this.y, y, speed)
         );
     }
 
