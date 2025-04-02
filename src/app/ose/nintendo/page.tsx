@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import OsePage from "../OsePage";
 import TextLink from "@/components/TextLink";
+import Timer from "@/components/Timer";
 
 export const metadata: Metadata = {
     title: "Ogólnoświatowa Sieć Nintendo"
@@ -19,7 +20,7 @@ export default function PisOsePage() {
             </p>
             <p>
                 Specjalny oddział Ninja został wysłany do twojej lokalizacji. <br />
-                Szacowany czas dotarcia: <strong>TODO</strong>
+                Szacowany czas dotarcia: <strong><Timer seconds={6000}>%h:%m:%s</Timer></strong>
             </p>
 
             <p>Więcej o usłudze na <TextLink>https://www.nintendo.com/</TextLink>.</p>
