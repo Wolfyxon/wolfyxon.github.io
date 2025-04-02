@@ -12,7 +12,7 @@ export default function EuOsePage() {
             title={metadata.title as string}
             heading="本網站含有錯誤訊息"
             category="Misinformation"
-            dynamicCategory="HONG_KONG DEMOCRACY FREEDOM UNITED_STATES">
+            dynamicCategory="HONG_KONG DEMOCRACY FREEDOM UNITED_STATES TAIWAN">
 
             <p>
                 由於您所在國家/地區啟用了中國公民保護服務，因此無法存取此頁面。
