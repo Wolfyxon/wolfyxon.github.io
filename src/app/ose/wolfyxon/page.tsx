@@ -7,16 +7,15 @@ export const metadata: Metadata = {
 }
 
 export default function UssrOsePage() {
-    // Ale mam nadzieję że moja strona nie jest ciulata XDDD
     return <OsePage 
             icon="/assets/media/img/Wolfyxon_opaque.png" 
             title={metadata.title as string}
-            heading="Ta strona zawiera ciulaty kod"
-            category="Bad code"
-            dynamicCategory="NO_CLASSES_OR_STRUCTS Improper_Naming REDUNDANCY LOW_PERFORMANCE">
+            heading="Ta strona zawiera Windowsa"
+            category="Microsoft Windows"
+            dynamicCategory="MICROSOFT WINDOWS CLOSED_SOURCE NO_CONTROL FORCED_UPDATES">
 
             <p>
-                Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Programisty WOLFYXON, która jest włączona w Twoim repozytorium.
+                Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Systemu WOLFYXON, która jest włączona w Twojej boot partycji.
             </p>
 
             <p>Więcej o usłudze na <TextLink>https://wolfyxon.github.io</TextLink></p>
