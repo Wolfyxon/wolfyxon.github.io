@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnojęzykowa Sieć Pamięci"
 }
 
-export default function PisOsePage() {
+export default function RustOsePage() {
     return <OsePage 
             icon="/assets/media/img/icons/software/lang/rust.png" 
             title={metadata.title as string}

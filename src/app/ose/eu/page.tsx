@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnoeuropejska Sieć Antyapplowska"
 }
 
-export default function PisOsePage() {
+export default function EuOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/eu.webp" 
             title={metadata.title as string}

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     title: "Ogólnoarstotzka Sieć Antyprzestępcza"
 }
 
-export default function PisOsePage() {
+export default function ArstotzkaOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/arstotzka.png" 
             title="Ogólnoarstotzka Sieć Antyprzestępcza"
