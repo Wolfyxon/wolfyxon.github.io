@@ -64,57 +64,6 @@ button:active {
     transition: 0.3s;
 }
 
-/* --== Dropdown button ==-- */
-
-.dropdown-btn {
-    border: 1px solid var(--panel-dark);
-    border-radius: 2px;
-}
-
-.dropdown-btn:hover {
-    box-shadow: none;
-}
-
-.dropdown-btn::after {
-    background: url("/assets/media/img/icons/google/menu.svg");
-    background-size: 100%;
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 3px;
-}
-
-
-/* --== Tab container ==-- */
-
-.tab-buttons {
-    text-align: center;
-    margin: 5px auto;
-    width: 100%;
-}
-
-.tab-buttons > * {
-    min-width: 200px;
-    margin-right: 5px;
-    box-shadow: none;
-    border-radius: 1px;
-    padding: 8px;
-    transition: 0.2s;
-}
-
-@media all and (orientation: portrait) {
-    .tab-buttons > * {
-        min-width: 100px;
-    }
-}
-
-.tab-buttons > *.selected {
-    background-color: var(--color2);
-    transition: 0.2s;
-}
-
 /* --== Faded ==-- */
 /* Used for old and deprecated content */
 
