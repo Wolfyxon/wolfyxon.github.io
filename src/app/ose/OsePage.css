@@ -1,0 +1,37 @@
+body {
+    font-size: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+.msg {
+    display: inline-block;
+    font-size: 14px;
+    background-color: rgb(184, 49, 47);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#b-texts {
+    text-align: center;
+    font-size: 16px;
+}
+
+.l-text {
+    font-size: 27px;
+}
+
+.top {
+    display: block;
+    text-align: center;
+}
+
+.top br {
+    line-height: 20px;
+}
+
+hr {
+    margin: 20px 0 20px 0;
+}
