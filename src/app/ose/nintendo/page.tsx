@@ -13,7 +13,7 @@ export default function PisOsePage() {
             title={metadata.title as string}
             heading="Ta strona łamie prawa autorskie"
             category="Copyright infringement"
-            dynamicCategory="PIRACY MUSIC FAN_GAMES">
+            dynamicCategory="PIRACY MUSIC FAN_GAMES EMULATION">
 
             <p>
                 Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Gracza Nintendo, która jest włączona w Twojej konsoli.
