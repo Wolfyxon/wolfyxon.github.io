@@ -12,7 +12,7 @@ export default function RustOsePage() {
             title={metadata.title as string}
             heading="Ta strona zawiera niebezpieczną pamięć"
             category="Memory Unsafe"
-            dynamicCategory="USE_AFTER_FREE NULL C C++">
+            dynamicCategory="USE_AFTER_FREE NULL BUFFER_OVERFLOW MEMORY_CORRUPTION C C++">
 
             <p>
                 Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Pamięci Programu, która jest włączona w Twoim języku.
