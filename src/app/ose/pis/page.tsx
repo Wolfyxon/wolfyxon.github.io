@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import OsePage from "../OsePage";
+
+export const metadata: Metadata = {
+    title: "Ogólnopolska Sieć antylewacyjna"
+}
 
 export default function PisOsePage() {
     return <OsePage 
