@@ -25,7 +25,7 @@ export default function OsePage(data: OsePageProps) {
     <>
         <p className="center">
             <a href="https://plug.ose.gov.pl/">
-                <img src={data.icon} alt="-S" />
+                <img src={data.icon} alt="-S" id="logo" />
             </a>
         </p>
 

@@ -14,6 +14,10 @@ body {
     font-weight: bold;
 }
 
+#logo {
+    height: 231px;
+}
+
 #b-texts {
     text-align: center;
     font-size: 16px;
