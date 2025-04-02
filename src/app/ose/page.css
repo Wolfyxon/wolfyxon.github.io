@@ -1,0 +1,14 @@
+body, html {
+    text-align: center;
+}
+
+#links > a {
+    width: 20%;
+    min-width: fit-content;
+
+    margin: 0 auto;
+    display: block;
+    padding: 2px;
+    margin-bottom: 5px;
+    background-color: silver;
+}
