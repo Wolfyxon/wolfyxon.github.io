@@ -12,3 +12,13 @@ html {
     --special1: rgb(185, 159, 255);
     --special2: #8300FF; 
 }
+
+body, html {
+    padding: 0;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
