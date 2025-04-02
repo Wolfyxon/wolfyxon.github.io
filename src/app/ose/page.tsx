@@ -1,6 +1,12 @@
 import * as fs from "fs";
+import { Metadata } from "next";
 
 import "./page.css";
+
+export const metadata: Metadata = {
+    title: "Parodie OSE",
+    description: "Strona z parodiami blokady Ogólnopolskiej Sieci Edukacyjnej"   
+}
 
 const dir = "src/app/ose/";
 
