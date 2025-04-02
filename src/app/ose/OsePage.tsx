@@ -1,7 +1,7 @@
 import { Metadata } from "next";
+import { Content } from "@/utils";
 
 import "./OsePage.css";
-import { Content } from "@/utils";
 
 export const metadata: Metadata = {
     title: {
