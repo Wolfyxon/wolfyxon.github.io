@@ -4,7 +4,9 @@ import { useEffect, useRef } from "react";
 
 export type TimerProps = {
     untilDate?: Date, 
-    seconds?: number, 
+    seconds?: number,
+    id?: string,
+    className?: string, 
     children: string,
     onEnd?: () => any 
 };
@@ -54,5 +56,5 @@ export default function Timer(data: TimerProps) {
         update();
     }, []);
 
-    return <span ref={timerRef} className="timer"></span>
+    return <span ref={timerRef} className={data.className ?? "" + " timer"} id={data.id}></span>
 }

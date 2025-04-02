@@ -24,7 +24,7 @@ export default function MinecraftMovieCountdownClient() {
             <div id="container">
                 <p id="label">Minecraft Movie is out in...</p>
                 
-                <Timer untilDate={release} onEnd={onEnd}>
+                <Timer untilDate={release} onEnd={onEnd} id="timer">
                     %d days %h hours %m minutes %s seconds
                 </Timer>
             </div>
