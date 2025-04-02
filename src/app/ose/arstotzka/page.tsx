@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import OsePage from "../OsePage";
 
 export const metadata: Metadata = {
-    title: "Ogólnoarstotzka Sieć Antyprzestępcza"
+    title: "Ogólnoarstotzka Sieć Graniczna"
 }
 
 export default function ArstotzkaOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/arstotzka.png" 
-            title="Ogólnoarstotzka Sieć Antyprzestępcza"
+            title={metadata.title as string}
             heading="Ta strona nie ma wstępu"
             category="Invalid"
             dynamicCategory="INVALID_DOCUMENTS">
