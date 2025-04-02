@@ -18,7 +18,7 @@ export default function UssrOsePage() {
                 Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Obywatela ZSRR, która jest włączona w NASZYM związku.
             </p>
 
-            <p>Więcej o usłudze na <TextLink>https://en.wikipedia.org/wiki/Soviet_Union</TextLink>.</p>
+            <p>KOMUNIZM!!!</p>
 
         </OsePage>
 }
