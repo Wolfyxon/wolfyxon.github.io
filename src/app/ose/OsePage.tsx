@@ -7,7 +7,8 @@ export const metadata: Metadata = {
     title: {
         template: "%s",
         default: "Odmowa dostępu"
-    }
+    },
+    description: "Parodia blokady OSE"
 }
 
 export type OsePageProps = {
