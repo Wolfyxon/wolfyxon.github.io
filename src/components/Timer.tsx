@@ -2,7 +2,14 @@
 
 import { useEffect, useRef } from "react";
 
-export default function Timer(data: {untilDate?: Date, seconds?: number, onEnd?: () => any, children: string}) {
+export type TimerProps = {
+    untilDate?: Date, 
+    seconds?: number, 
+    children: string,
+    onEnd?: () => any 
+};
+
+export default function Timer(data: TimerProps) {
     const timerRef = useRef(null);
     
     useEffect(() => {
