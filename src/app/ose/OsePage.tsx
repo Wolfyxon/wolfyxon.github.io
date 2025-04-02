@@ -20,6 +20,7 @@ export type OsePageProps = {
 }
 
 export default function OsePage(data: OsePageProps) {
+    // Adapted from OSE (Ogólnopolska Sieć Edukacyjna / General Polish Education Network) website block screen
     return (
     <>
         <p className="center">
