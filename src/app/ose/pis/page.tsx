@@ -12,7 +12,7 @@ export default function PisOsePage() {
             title="Ogólnopolska Sieć Antylewacyjna"
             heading="Ta strona zawiera lewactwo"
             category="Lewactwo"
-            dynamicCategory="LEWACTWO BRAINROT SKIBIDI_TOILET">
+            dynamicCategory="TUSK GERMANY EUROPEAN_UNION">
 
             <p>
                 Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Obywatela RP, która jest włączona w Twoim państwie.
