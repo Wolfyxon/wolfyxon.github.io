@@ -43,11 +43,15 @@ export default function OsePage(data: OsePageProps) {
         </p>
 
         <p>Żądanie zostało zablokowane przez silnik analizy URL. Strona WWW należy do kategorii blokowanych przez system.</p>
-        <p><strong>URL:</strong> https://wolfyxon.github.io</p>
-        <p><strong>Kategoria URL:</strong> {data.category}</p>
+        
+        <p>
+            <strong>URL: </strong> https://wolfyxon.github.io
+        </p>
+
+        <p><strong>Kategoria URL: </strong> {data.category}</p>
 
         <p id="cat" style={{"display": "block"}}>
-            <strong>Kategoria z Dynamicznej Analizy Treści:</strong> 
+            <strong>Kategoria z Dynamicznej Analizy Treści: </strong> 
             <span id="cat-val">{data.dynamicCategory}</span>
         </p>
 
