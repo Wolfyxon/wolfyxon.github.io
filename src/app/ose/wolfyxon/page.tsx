@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function UssrOsePage() {
     // Ale mam nadzieję że moja strona nie jest ciulata XDDD
     return <OsePage 
-            icon="/assets/media/img/Wolfyxon.png" 
+            icon="/assets/media/img/Wolfyxon_opaque.png" 
             title={metadata.title as string}
             heading="Ta strona zawiera ciulaty kod"
             category="Bad code"
