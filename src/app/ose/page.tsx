@@ -28,6 +28,11 @@ export default function OseHomePage() {
             </div>
             
             <a href="/">Strona główna</a>
+
+            <p>
+                Nie chciało mi się stylować tej strony. 
+                Po prostu wybierz co chcesz.
+            </p>
         </>
     )
 }
