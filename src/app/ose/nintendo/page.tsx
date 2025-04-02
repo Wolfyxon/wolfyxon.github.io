@@ -20,7 +20,7 @@ export default function PisOsePage() {
             </p>
             <p>
                 Specjalny oddział Ninja został wysłany do twojej lokalizacji. <br />
-                Szacowany czas dotarcia: <strong><Timer seconds={6000}>%h:%m:%s</Timer></strong>
+                Szacowany czas dotarcia: <strong><Timer seconds={6000}>%hh:%mm:%ss</Timer></strong>
             </p>
 
             <p>Więcej o usłudze na <TextLink>https://www.nintendo.com/</TextLink>.</p>

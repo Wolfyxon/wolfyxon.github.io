@@ -23,6 +23,10 @@ export default function Timer(data: TimerProps) {
 
         let itv: NodeJS.Timeout;
 
+        function pad(num: number | string): string {
+            return num.toString().padStart(2, "0");
+        }
+
         function update() {
             if(!itv) return;
 
@@ -33,16 +37,29 @@ export default function Timer(data: TimerProps) {
                 if(data.onEnd) data.onEnd();
             }
 
-            const replMap = {
+            const replMap: Record<string, number | string> = {
                 "d": Math.floor(offset / (1000 * 60 * 60 * 24)),
                 "h": Math.floor((offset % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
                 "m": Math.floor((offset % (1000 * 60 * 60)) / (1000 * 60)),
-                "s": Math.floor((offset % (1000 * 60)) / 1000)
+                "s": Math.floor((offset % (1000 * 60)) / 1000),
             };
 
+            replMap.hh = pad(replMap.h);
+            replMap.mm = pad(replMap.m);
+            replMap.ss = pad(replMap.s);
+            
             let text = format;
+            const entries = Object.entries(replMap);
+            
+            entries.sort((a, b) => {
+                if(a[0].length > b[0].length) { 
+                    return -1 
+                }
 
-            Object.entries(replMap).forEach((e) => {
+                return 1;
+            });
+
+            entries.forEach((e) => {
                 const key = e[0];
                 const time = e[1];
 
