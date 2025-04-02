@@ -4,8 +4,7 @@ body, html {
 
 #links > a {
     width: 20%;
-    min-width: fit-content;
-
+    min-width: 200px;
     margin: 0 auto;
     display: block;
     padding: 2px;
