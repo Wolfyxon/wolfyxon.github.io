@@ -12,7 +12,7 @@ export default function UssrOsePage() {
             title={metadata.title as string}
             heading="Ta strona zawiera kapitalizm"
             category="Capitalism"
-            dynamicCategory="CAPITALISM USA NATO POLAND">
+            dynamicCategory="CAPITALISM USA NATO POLAND WEST">
 
             <p>
                 Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Obywatela ZSRR, która jest włączona w NASZYM związku.
