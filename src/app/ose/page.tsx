@@ -10,18 +10,6 @@ export const metadata: Metadata = {
 
 const dir = "src/app/ose/";
 
-function getPages(): string[] {
-    const res: string[] = []
-
-    fs.readdirSync(dir).forEach((v) => {
-        if(fs.statSync(dir + v).isDirectory()) {
-            res.push(v);
-        }
-    });
-
-    return res;
-}
-
 export default function OseHomePage() {
     return (
         <>
@@ -41,4 +29,16 @@ export default function OseHomePage() {
             </p>
         </>
     )
+}
+
+function getPages(): string[] {
+    const res: string[] = []
+
+    fs.readdirSync(dir).forEach((v) => {
+        if(fs.statSync(dir + v).isDirectory()) {
+            res.push(v);
+        }
+    });
+
+    return res;
 }
