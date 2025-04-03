@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "中國安防網"
 }
 
-export default function EuOsePage() {
+export default function ChinaOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/china.png"
             title={metadata.title as string}

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnoprogramowa Sieć Wolności"
 }
 
-export default function UssrOsePage() {
+export default function GnuOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/gnu.webp" 
             title={metadata.title as string}

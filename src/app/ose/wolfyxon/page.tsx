@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnonerdzka Sieć Wolfyxonacji"
 }
 
-export default function UssrOsePage() {
+export default function WolfyxonOsePage() {
     return <OsePage 
             icon="/assets/media/img/Wolfyxon_opaque.png" 
             title={metadata.title as string}

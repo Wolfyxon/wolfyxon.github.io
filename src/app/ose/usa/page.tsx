@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnostanowa Sieć Ameryki"
 }
 
-export default function ArstotzkaOsePage() {
+export default function UsaOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/usa.svg" 
             title={metadata.title as string}

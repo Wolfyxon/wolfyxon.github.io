@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnoziemska Sieć Kombinatu"
 }
 
-export default function ArstotzkaOsePage() {
+export default function CombineOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/combine.svg" 
             title={metadata.title as string}

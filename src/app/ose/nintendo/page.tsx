@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "Ogólnoświatowa Sieć Nintendo"
 }
 
-export default function PisOsePage() {
+export default function NintendoOsePage() {
     return <OsePage 
             icon="/assets/media/img/ose/nintendo.png" 
             title={metadata.title as string}

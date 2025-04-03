@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Ogólnorybska Sieć Szynki"
 }
 
-export default function LinusOsePage() {
+export default function KaroleusOsePage() {
     return <OsePage 
             icon="/assets/media/img/people/karoleus_pl.png" 
             title={metadata.title as string}
