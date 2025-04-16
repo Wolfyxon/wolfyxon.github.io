@@ -3,17 +3,27 @@
 import Timer from "@/components/Timer";
 
 import "./countdown.css";
+import { useEffect, useState } from "react";
 
 export default function MinecraftMovieCountdownClient() {
     const release = new Date("2025-04-04 14:10:00");
+    const [interacted, setInteracted] = useState(false);
 
-    function onEnd() {
+    function play() {
         const video = document.getElementById("video")! as HTMLVideoElement;
 
         video.style.opacity = "1";
         video.play();
     }
 
+    function onEnd() {
+        if(interacted) {
+            play()
+        } else {
+            setTimeout(play);
+        }
+    }
+    
     return (
         <>
             <video id="video" loop>
