@@ -1,6 +1,7 @@
 import Redirect from "@/components/Redirect";
 import { Metadata } from "next";
 
+import "./css/main.css";
 import "./css/404.css";
 
 export const metadata: Metadata = {
