@@ -1,7 +1,11 @@
 import Redirect from "@/components/Redirect";
 
 const redirects: {[slug: string]: string} = {
-    "centerme": "/CenterMe/"
+    "centerme": "/CenterMe",
+    "discord": "https://discord.com/invite/RztUGCK",
+    "Discord": "https://discord.com/invite/RztUGCK",
+    "github": "https://github.com/wolfyxon",
+    "GitHub": "https://github.com/wolfyxon"
 }
 
 export async function generateStaticParams() {
