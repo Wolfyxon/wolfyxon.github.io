@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export type OsePageProps = {
     title: string, 
     icon: string, 
-    heading: string,
-    category: string,
-    dynamicCategory: string,
+    heading: Content,
+    category: Content,
+    dynamicCategory: Content,
     children?: Content
 }
 
