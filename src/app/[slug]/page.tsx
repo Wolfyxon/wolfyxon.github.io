@@ -15,5 +15,5 @@ export async function generateStaticParams() {
 export default async function SlugRedirect(data: {params: any}) {
     const slug = (await data.params).slug as string;
 
-    return <Redirect url={redirects[slug]} />
+    return <Redirect url={redirects[slug]} />;
 }
