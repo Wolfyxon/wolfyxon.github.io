@@ -56,6 +56,7 @@ export default function Home() {
             <Badge icon="software/lang/ts.png" alt="TypeScript" />
             <Badge icon="software/lang/html5.svg" alt="HTML5" />
             <Badge icon="software/lang/css3.svg" alt="CSS3" />
+            <Badge icon="software/lang/php.png" alt="PHP" />
             <Badge icon="software/lang/c.svg" alt="C" />
             <Badge icon="software/lang/cpp.svg" alt="C++" />
             <Badge icon="software/lang/csharp.svg" alt="C#" />
