@@ -19,6 +19,10 @@ const redirects: RedirectEntry[] = [
         url: "https://soundcloud.com/wolfyxon"
     },
     {
+        aliases: ["youtube", "YouTube", "yt", "YT"],
+        url: "https://www.youtube.com/@Wolfyxon"
+    },
+    {
         aliases: ["3ds", "3DS", "3ds-stuff", "3DS-stuff", "3DStuff", "3dswebstuff", "3DSWebStuff"],
         url: "https://wolfyxon.github.io/3ds-web-stuff"
     },
