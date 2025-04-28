@@ -7,10 +7,6 @@ type RedirectEntry = {
 
 const redirects: RedirectEntry[] = [
     {
-        aliases: ["centerme", "Centerme", "CenterME", "centreme", "CentreMe"],
-        url: "https://wolfyxon.github.io/CenterMe",
-    },
-    {
         aliases: ["discord", "Discord"],
         url: "https://discord.com/invite/RztUGCK"
     },
@@ -25,6 +21,10 @@ const redirects: RedirectEntry[] = [
     {
         aliases: ["3ds", "3DS", "3ds-stuff", "3DS-stuff", "3DStuff", "3dswebstuff", "3DSWebStuff"],
         url: "https://wolfyxon.github.io/3ds-web-stuff"
+    },
+    {
+        aliases: ["centerme", "Centerme", "CenterME", "centreme", "CentreMe"],
+        url: "https://wolfyxon.github.io/CenterMe",
     }
 ]
 
