@@ -17,6 +17,10 @@ const redirects: RedirectEntry[] = [
     {
         aliases: ["github", "Github", "GitHub"],
         url: "https://github.com/wolfyxon"
+    },
+    {
+        aliases: ["3ds", "3DS", "3ds-stuff", "3DS-stuff", "3DStuff", "3dswebstuff", "3DSWebStuff"],
+        url: "https://wolfyxon.github.io/3ds-web-stuff"
     }
 ]
 
@@ -36,7 +40,7 @@ export async function generateStaticParams() {
     redirects.forEach((v) => {
         v.aliases.forEach((v) => res.push({slug: v}));
     });
-    
+
     return res;
 }
 
