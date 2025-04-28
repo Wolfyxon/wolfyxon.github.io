@@ -49,7 +49,7 @@ export default function Home() {
             <Badge icon="software/lang/rust.png" alt="Rust" />
             <Badge icon="software/lang/lua.png" alt="Lua" />
             <Badge icon="software/lang/Luau.png" alt="Luau" />
-            <Badge icon="software/tools/godot.png" alt="GDScript" />
+            <Badge icon="software/framework/godot.png" alt="GDScript" />
             <Badge icon="software/lang/java.svg" alt="Java" />
             <Badge icon="software/lang/python.svg" alt="Python" />
             <Badge icon="software/lang/js.png" alt="JavaScript" />
@@ -65,27 +65,26 @@ export default function Home() {
             <Badge icon="software/lang/bash.png" alt="Bash" />
           </div>
 
-          <h2>Tools</h2>
-          <div>
-            <Badge icon="software/tools/vscode.png" alt="Visual Studio Code" />
-            <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
-            <Badge icon="software/tools/godot.png" alt="Godot" />
-            <Badge icon="software/tools/rbxstudio.png" alt="Roblox Studio" />
-            <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
-            <Badge icon="software/tools/git.png" alt="Git" />
-            <Badge icon="software/tools/linux.svg" alt="Linux" />
-          </div>
-
-          <h2>Libraries and frameworks</h2>
+          <h2>Libraries, frameworks and engines</h2>
           <div>
               <Badge icon="software/lib/react.png" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.png" alt="NextJS" />
               <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
+              <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
               <Badge icon="software/framework/love2d.png" alt="Love2D" />
-            <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
+              <Badge icon="software/framework/godot.png" alt="Godot" />
+              <Badge icon="software/framework/rbxstudio.png" alt="Roblox Studio" />
           </div>
 
+          <h2>Tools</h2>
+          <div>
+            <Badge icon="software/tools/vscode.png" alt="Visual Studio Code" />
+            <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
+            <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
+            <Badge icon="software/tools/git.png" alt="Git" />
+            <Badge icon="software/tools/linux.svg" alt="Linux" />
+          </div>
         </div>
 
         <div id="fields">
