@@ -72,6 +72,7 @@ export default function Home() {
               <Badge icon="software/framework/nextjs.png" alt="NextJS" />
               <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
               <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
+              <Badge icon="software/lib/jquery.png" alt="jQuery" />
               <Badge icon="software/framework/love2d.png" alt="Love2D" />
               <Badge icon="software/framework/godot.png" alt="Godot" />
               <Badge icon="software/framework/rbxstudio.png" alt="Roblox Studio" />
