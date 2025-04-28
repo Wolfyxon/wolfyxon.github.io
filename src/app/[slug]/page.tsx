@@ -5,15 +5,6 @@ type RedirectEntry = {
     url: string
 }
 
-/*
-const redirects: {[slug: string]: string} = {
-    "centerme": "/CenterMe",
-    "discord": "https://discord.com/invite/RztUGCK",
-    "Discord": "https://discord.com/invite/RztUGCK",
-    "github": "https://github.com/wolfyxon",
-    "GitHub": "https://github.com/wolfyxon"
-}*/
-
 const redirects: RedirectEntry[] = [
     {
         aliases: ["centerme", "Centerme", "CenterME", "centreme", "CentreMe"],
