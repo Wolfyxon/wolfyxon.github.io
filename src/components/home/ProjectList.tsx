@@ -23,16 +23,6 @@ function ProjectList() {
     }
 
     registerProject(
-        "The Great Doors of Door", 
-        "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
-        "assets/media/img/home/projectThumbnails/tgdod.webp", 
-        [{
-            text: "Play on Roblox", 
-            url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
-        }]
-    );
-
-    registerProject(
         "Turret Siege",
         "A game in early development where you are a turret surrounded by bullets and enemies.",
         "assets/media/img/home/projectThumbnails/ts.png",
@@ -44,22 +34,6 @@ function ProjectList() {
             {
                 text: "Downloads",
                 url: "https://github.com/Wolfyxon/TurretSiege/releases/latest"
-            }
-        ]
-    );
-
-    registerProject(
-        "3DS Web stuff",
-        "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "assets/media/img/home/projectThumbnails/3dsWebStuff.png",
-        [
-            {
-                text: "Visit the site",
-                url: "https://wolfyxon.github.io/3ds-web-stuff"
-            },
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/3ds-web-stuff"
             }
         ]
     );
@@ -85,19 +59,29 @@ function ProjectList() {
     );
 
     registerProject(
-        "MinVideo",
-        "Easy to understand and implement uncompressed video format for limited environments.",
-        "assets/media/img/home/projectThumbnails/MinVideo.png",
+        "3DS Web stuff",
+        "A collection of browser games and tools made for the Nintendo 3DS browser.",
+        "assets/media/img/home/projectThumbnails/3dsWebStuff.png",
         [
             {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/MinVideo"
+                text: "Visit the site",
+                url: "https://wolfyxon.github.io/3ds-web-stuff"
             },
             {
-                text: "Web player",
-                url: "https://wolfyxon.github.io/MinVideo/js/test"
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/3ds-web-stuff"
             }
         ]
+    );
+
+    registerProject(
+        "The Great Doors of Door", 
+        "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
+        "assets/media/img/home/projectThumbnails/tgdod.webp", 
+        [{
+            text: "Play on Roblox", 
+            url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
+        }]
     );
 
     registerProject(
@@ -114,7 +98,23 @@ function ProjectList() {
                 url: "https://wolfyxon.itch.io/hote#download"
             }
         ]
-    )
+    );
+
+    registerProject(
+        "MinVideo",
+        "Easy to understand and implement uncompressed video format for limited environments.",
+        "assets/media/img/home/projectThumbnails/MinVideo.png",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/MinVideo"
+            },
+            {
+                text: "Web player",
+                url: "https://wolfyxon.github.io/MinVideo/js/test"
+            }
+        ]
+    );
 
     registerProject(
         "This site",
