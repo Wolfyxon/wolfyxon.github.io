@@ -21,6 +21,7 @@
     position: absolute;
     font-weight: bold;
     text-align: center;
+    left: 0;
     top: 80%;
     opacity: 0;
     transition: 0.2s;
