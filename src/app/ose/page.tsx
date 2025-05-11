@@ -10,12 +10,26 @@ export const metadata: Metadata = {
 
 const dir = "src/app/ose/";
 
+const best = [
+    "gierek",
+    "pis",
+    "sans"
+];
+
 export default function OseHomePage() {
     return (
         <>
             <h1>Ta strona zawiera parodie OSE ☹</h1>
             
             <div id="links">
+                <strong>Najlepsze</strong>
+
+                {best.map((v) => {
+                    return <a href={"./" + v} key={v}>{v}</a>
+                })}
+
+                <strong>Inne</strong>
+
                 {getPages().map((v) => {
                     return <a href={"./" + v} key={v}>{v}</a>
                 })}
@@ -31,7 +45,7 @@ export default function OseHomePage() {
     )
 }
 
-function getPages(): string[] {
+function getAllPages(): string[] {
     const res: string[] = []
 
     fs.readdirSync(dir).forEach((v) => {
@@ -41,4 +55,8 @@ function getPages(): string[] {
     });
 
     return res;
+}
+
+function getPages(): string[] {
+    return getAllPages().filter((v) => !best.includes(v));
 }
