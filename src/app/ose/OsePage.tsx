@@ -65,11 +65,11 @@ export default function OsePage(data: OsePageProps) {
 
         <footer>
             <p>
-                Nie jestem związany z OSE ani żadną firmą wspomnianą na tej stronie.
+                Nie jestem związany z OSE ani żadną firmą ani organizacją wspomnianą na tej stronie.
                 Ta strona jest parodią i nie ma na celu nikogo obrazić.
             </p>
             <p>
-                I am not associated with OSE or any other companies mentioned on this page.
+                I am not associated with OSE or any other companies or organizations mentioned on this page.
                 This site is a parody and is not meant to offend anyone.
             </p>
 
