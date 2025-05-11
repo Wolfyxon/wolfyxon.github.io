@@ -51,12 +51,12 @@ export default function OsePage(data: OsePageProps) {
 
         <p><strong>Kategoria URL: </strong> {data.category}</p>
 
-        <p id="cat" style={{"display": "block"}}>
+        <p id="cat">
             <strong>Kategoria z Dynamicznej Analizy Treści: </strong> 
             <span id="cat-val">{data.dynamicCategory}</span>
         </p>
 
-        <p id="id" style={{"display": "block"}}>
+        <p id="id">
             <strong>ID: </strong>
             <span id="id-val">02</span>
         </p>
