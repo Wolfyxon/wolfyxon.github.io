@@ -14,7 +14,7 @@ export default function SansOsePage() {
             title={metadata.title as string}
             heading={<span>Ta strona pamięta two'je <span id="glow">ludobujsfa</span></span>}
             category="Genocides"
-            dynamicCategory="GENOCIDE CHARA">
+            dynamicCategory="GENOCIDE CHARA LOVE XP">
 
             <p>
                 Dostęp do tej strony został zablokowany ze względu na usługę Gwardia Królewska, która jest włączona w Podziemiu.
