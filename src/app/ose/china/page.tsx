@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ChinaOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/china.png"
+            icon="/assets/media/img/ose/john_xina.jpg"
             title={metadata.title as string}
             heading="本網站含有錯誤訊息"
             category="Misinformation"
