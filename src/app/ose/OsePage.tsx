@@ -72,6 +72,8 @@ export default function OsePage(data: OsePageProps) {
                 I am not associated with OSE or any other companies mentioned on this page.
                 This site is a parody and is not meant to offend anyone.
             </p>
+
+            <a href="..">More</a>
         </footer>
     </>
     );
