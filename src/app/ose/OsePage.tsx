@@ -62,6 +62,17 @@ export default function OsePage(data: OsePageProps) {
         </p>
         
         <hr />
+
+        <footer>
+            <p>
+                Nie jestem związany z OSE ani żadną firmą wspomnianą na tej stronie.
+                Ta strona jest parodią i nie ma na celu nikogo obrazić.
+            </p>
+            <p>
+                I am not associated with OSE or any other companies mentioned on this page.
+                This site is a parody and is not meant to offend anyone.
+            </p>
+        </footer>
     </>
     );
 }
