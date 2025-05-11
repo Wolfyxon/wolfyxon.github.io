@@ -46,7 +46,7 @@ export default function OseHomePage() {
 }
 
 function getAllPages(): string[] {
-    const res: string[] = []
+    const res: string[] = [];
 
     fs.readdirSync(dir).forEach((v) => {
         if(fs.statSync(dir + v).isDirectory()) {
