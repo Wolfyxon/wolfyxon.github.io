@@ -4,6 +4,10 @@
     --color-disabled: #adadad;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 button {
     font-weight: bold;
     padding: 10px 30px;
