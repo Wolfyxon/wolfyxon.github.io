@@ -35,10 +35,13 @@ export default function LighterTestPage() {
     const [dispResults, setResults] = useState<Content[]>([]);
 
     useEffect(() => {
+        const stmContainer = document.getElementById("statement-container");
+
         let currentTest: Test;
+        let answerBlock = false;
         let answers: Answer[] = [];
         let currentStatementIdx = 0;
-    
+        
         function loadTest(test: Test) {
             currentTest = test;
     
@@ -56,13 +59,24 @@ export default function LighterTestPage() {
         }
     
         function submitAnswer(answer: Answer) {
-            answers[currentStatementIdx] = answer;
+            if(answerBlock) return;
+
+            answerBlock = true;
+
+            stmContainer!.style.opacity = "0";
+
+            setTimeout(() => {            
+                answers[currentStatementIdx] = answer;
             
-            if(currentStatementIdx < currentTest.statements.length - 1) {
-                loadStatementIdx(currentStatementIdx + 1);
-            } else {
-                loadResults();
-            }
+                if(currentStatementIdx < currentTest.statements.length - 1) {
+                    loadStatementIdx(currentStatementIdx + 1);
+                } else {
+                    loadResults();
+                }
+
+                answerBlock = false;
+                stmContainer!.style.opacity = "1";
+            }, 500);
         }
 
         function loadResults() {

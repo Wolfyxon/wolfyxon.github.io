@@ -6,6 +6,7 @@
 
 #statement-container {
     text-align: center;
+    transition: 0.5s;
 }
 
 #statement-index-container {
