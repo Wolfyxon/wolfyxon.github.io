@@ -12,4 +12,9 @@ button {
     color: var(--color1);
     background: none;
     border-radius: 50px;
+    transition: 0.1s;
+}
+
+button:hover {
+    opacity: 0.5;
 }
