@@ -10,9 +10,10 @@ body {
 
 button {
     font-weight: bold;
+    font-size: 120%;
     padding: 10px 30px;
     margin-right: 5px;
-    border: 2px solid var(--color1);
+    border: 3px solid var(--color1);
     color: var(--color1);
     background: none;
     border-radius: 50px;
