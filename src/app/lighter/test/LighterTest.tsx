@@ -8,25 +8,6 @@ import LighterResult from "../result/LighterResult";
 
 import "./LighterTest.css";
 
-const testTest: Test = {
-    candidates: [
-        {
-            name: "A",
-            icon: "/assets/media/img/ose/amogus.webp",
-            answers: [-1, 1]
-        },
-        {
-            name: "B",
-            icon: "/assets/media/img/ose/john_xina.jpg",
-            answers: [1, 1]
-        }
-    ],
-    statements: [
-        "Idk",
-        "Hi"
-    ]
-}
-
 export default function LighterTest(props: {test: Test}) {
 
     const [dispStatementIdx, setDispStatementIdx] = useState("");
