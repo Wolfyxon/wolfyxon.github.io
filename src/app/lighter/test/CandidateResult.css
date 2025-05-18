@@ -1,0 +1,36 @@
+
+.candidate-result {
+    margin: 0 auto;
+    width: 50%;
+    height: 60px;
+    margin-top: 5px;
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+}
+
+.candidate-icon-container {
+    flex: 1;
+}
+
+.candidate-icon {
+    height: 100%;
+}
+
+.candidate-bar {
+    background-color: rgb(228, 228, 228);
+    height: 100%;
+    flex: 10;
+}
+
+.candidate-percent {
+    color: gray;
+    text-align: center;
+    flex: 1;
+}
+
+.candidate-bar-inner {
+    background-color: var(--color1);
+    height: 100%;
+    content: " ";
+}

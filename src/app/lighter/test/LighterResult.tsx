@@ -1,6 +1,6 @@
 import { Candidate } from "../Lighter";
 
-import "./style.css";
+import "./CandidateResult.css";
 
 export default function LighterResult(props: {candidate: Candidate, percent: number}) {
     return (

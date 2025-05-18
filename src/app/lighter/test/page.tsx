@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Answer, Test } from "../Lighter";
+import { Content } from "@/utils";
+
 import LighterResult from "./LighterResult";
 
 import "../lighter.css";
-import { Content } from "@/utils";
+import "./style.css";
 
 const testTest: Test = {
     candidates: [
