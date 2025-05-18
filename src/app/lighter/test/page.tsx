@@ -82,6 +82,8 @@ export default function LighterTestPage() {
         function loadResults() {
             const matchResults: {id: number, matches: number}[] = [];
 
+            stmContainer!.style.display = "none";
+
             currentTest.candidates.forEach((can, canI) => {
                 const matchRes = {
                     id: canI,
