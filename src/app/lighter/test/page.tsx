@@ -11,10 +11,12 @@ const testTest: Test = {
     candidates: [
         {
             name: "A",
+            icon: "/assets/media/img/ose/amogus.webp",
             answers: [-1, 1]
         },
         {
             name: "B",
+            icon: "/assets/media/img/ose/john_xina.jpg",
             answers: [1, 1]
         }
     ],
