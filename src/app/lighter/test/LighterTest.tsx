@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import { Answer, Test } from "../Lighter";
 import { Content } from "@/utils";
 
-import LighterResult from "./LighterResult";
+import LighterResult from "../result/LighterResult";
 
-import "../lighter.css";
-import "./style.css";
+import "./LighterTest.css";
 
 const testTest: Test = {
     candidates: [
@@ -28,7 +27,7 @@ const testTest: Test = {
     ]
 }
 
-export default function LighterTestPage() {
+export default function LighterTest(props: {test: Test}) {
 
     const [dispStatementIdx, setDispStatementIdx] = useState("");
     const [dispStatementText, setStatementText] = useState("");
@@ -116,7 +115,7 @@ export default function LighterTestPage() {
         document.getElementById("btn-disagree")!.onclick = () => submitAnswer(Answer.No);
         document.getElementById("btn-idk")!.onclick = () => submitAnswer(Answer.Idk);
 
-        loadTest(testTest);
+        loadTest(props.test);
     }, []);
 
     return (

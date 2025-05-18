@@ -3,6 +3,7 @@ import TextLink from "@/components/TextLink";
 import "./lighter.css";
 
 export default function LighterHomePage() {
+    // TODO loading tests from here
     return (
         <>
             <h1>Lighter</h1>
