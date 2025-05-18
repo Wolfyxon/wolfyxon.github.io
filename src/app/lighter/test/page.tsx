@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { Answer, Test } from "../Lighter";
 
+import "../lighter.css";
+
 const testTest: Test = {
     candidates: [
         {

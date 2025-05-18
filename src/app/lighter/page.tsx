@@ -1,5 +1,7 @@
 import TextLink from "@/components/TextLink";
 
+import "./lighter.css";
+
 export default function LighterHomePage() {
     return (
         <>
