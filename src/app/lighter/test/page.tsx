@@ -115,9 +115,9 @@ export default function LighterTestPage() {
                     </p>
                     
                     <div id="answer-buttons">
-                        <button id="btn-agree">Agree</button>
-                        <button id="btn-disagree">Disagree</button>
-                        <button id="btn-idk">No opinion</button>
+                        <button id="btn-agree">AGREE</button>
+                        <button id="btn-disagree">DISAGREE</button>
+                        <button id="btn-idk">NO OPINION</button>
                     </div>
                 </div>
 
