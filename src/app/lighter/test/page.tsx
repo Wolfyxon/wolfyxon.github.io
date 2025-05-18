@@ -30,7 +30,7 @@ const testTest: Test = {
 
 export default function LighterTestPage() {
 
-    const [dispStatementIdx, setDispStatementIdx] = useState(0);
+    const [dispStatementIdx, setDispStatementIdx] = useState("");
     const [dispStatementText, setStatementText] = useState("");
     const [dispResults, setResults] = useState<Content[]>([]);
 
@@ -51,6 +51,7 @@ export default function LighterTestPage() {
         function loadStatementIdx(idx: number) {
             currentStatementIdx = idx;
 
+            setDispStatementIdx(`${idx + 1}/${currentTest.statements.length}`);
             loadStatement(currentTest.statements[idx], answers[idx]);
         }
     
@@ -123,7 +124,7 @@ export default function LighterTestPage() {
             <div id="test">
                 <div id="statement-container">
                     <p id="statement-index-container">
-                        Statement: <span id="statement-index">0/1</span>
+                        Statement: <span id="statement-index">{dispStatementIdx}</span>
                     </p>
 
                     <p id="statement">
