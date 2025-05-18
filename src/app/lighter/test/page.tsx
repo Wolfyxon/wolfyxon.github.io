@@ -106,7 +106,7 @@ export default function LighterTestPage() {
         <>
             <div id="test">
                 <div id="statement-container">
-                    <p>
+                    <p id="statement-index-container">
                         Statement: <span id="statement-index">0/1</span>
                     </p>
 

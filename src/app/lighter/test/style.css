@@ -1,0 +1,35 @@
+
+#test {
+    width: 60%;
+    margin: 200px auto;
+}
+
+#statement-container {
+    text-align: center;
+}
+
+#statement-index-container {
+    text-align: left;
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#statement-index {
+    color: var(--color2);
+}
+
+#statement {
+    font-size: 300%;
+}
+
+#answer-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#answer-buttons > * {
+    flex: 1;
+}
