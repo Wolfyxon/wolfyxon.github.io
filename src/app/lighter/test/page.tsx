@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Answer, Test } from "../Lighter";
+import LighterResult from "./LighterResult";
 
 import "../lighter.css";
+import { Content } from "@/utils";
 
 const testTest: Test = {
     candidates: [
@@ -26,6 +28,7 @@ export default function LighterTestPage() {
 
     const [dispStatementIdx, setDispStatementIdx] = useState(0);
     const [dispStatementText, setStatementText] = useState("");
+    const [dispResults, setResults] = useState<Content[]>([]);
 
     useEffect(() => {
         let currentTest: Test;
@@ -50,17 +53,16 @@ export default function LighterTestPage() {
     
         function submitAnswer(answer: Answer) {
             answers[currentStatementIdx] = answer;
-            console.log(currentStatementIdx)
+            
             if(currentStatementIdx < currentTest.statements.length - 1) {
                 loadStatementIdx(currentStatementIdx + 1);
             } else {
-                console.log("finish")
                 loadResults();
             }
         }
 
         function loadResults() {
-            let matchResults: {id: number, matches: number}[] = [];
+            const matchResults: {id: number, matches: number}[] = [];
 
             currentTest.candidates.forEach((can, canI) => {
                 const matchRes = {
@@ -81,7 +83,12 @@ export default function LighterTestPage() {
                 return b.matches - a.matches;
             });
 
-            console.log(matchResults);
+            setResults(matchResults.map((res, i) => {
+                const percent = (res.matches / currentTest.statements.length) * 100;
+                const candidate = currentTest.candidates[res.id];
+
+                return <LighterResult candidate={candidate} percent={percent} key={i} />
+            }))
         }
 
         document.getElementById("btn-agree")!.onclick = () => submitAnswer(Answer.Yes);
@@ -115,9 +122,7 @@ export default function LighterTestPage() {
                 </div>
             </div>
             
-            <div id="results">
-        
-            </div>
+            <div id="results">{dispResults}</div>
 
         </>
     );
