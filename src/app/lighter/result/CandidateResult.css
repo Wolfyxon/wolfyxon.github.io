@@ -10,7 +10,25 @@
 }
 
 .candidate-icon-container {
+    position: relative;
     flex: 1;
+}
+
+.candidate-icon:hover ~ .candidate-name {
+    opacity: 1;
+}
+
+.candidate-name {
+    text-align: center;
+    pointer-events: none;
+    z-index: 5;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.1s;
+    color: white;
+    background-color: var(--color2);
 }
 
 .candidate-icon {
