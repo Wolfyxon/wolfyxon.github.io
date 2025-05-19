@@ -53,6 +53,7 @@
     color: gray;
     text-align: center;
     flex: 1;
+    align-self: center;
 }
 
 .candidate-bar-inner {
