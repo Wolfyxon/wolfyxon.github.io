@@ -17,6 +17,7 @@ export default function LighterTest(props: {test: Test}) {
     useEffect(() => {
         const stmContainer = document.getElementById("statement-container");
         const resultsContainer = document.getElementById("results");
+        const selector = document.getElementById("statement-selector");
 
         let currentTest: Test;
         let answerBlock = false;
@@ -26,6 +27,15 @@ export default function LighterTest(props: {test: Test}) {
         function loadTest(test: Test) {
             currentTest = test;
     
+            for(let i = 0; i < test.statements.length; i++) {
+                const btn = document.createElement("button");
+                
+                btn.onclick = () => loadStatementIdx(i);
+                btn.innerText = `${i}`;
+
+                selector!.append(btn);
+            }
+
             loadStatementIdx(0);
         }
     
@@ -121,7 +131,7 @@ export default function LighterTest(props: {test: Test}) {
                 </div>
 
                 <div id="statement-selector">
-                    
+
                 </div>
             </div>
             
