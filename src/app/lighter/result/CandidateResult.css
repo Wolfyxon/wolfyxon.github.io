@@ -28,6 +28,8 @@
     transition: 0.1s;
     color: white;
     background-color: var(--color2);
+    width: 100%;
+    text-align: center;
 }
 
 .candidate-icon {
