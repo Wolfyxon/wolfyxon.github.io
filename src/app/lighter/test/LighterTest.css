@@ -55,3 +55,24 @@
     margin-top: 20px;
     color: gray;
 }
+
+#statement-selector {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+#statement-selector > * {
+    border: none;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    color: rgb(197, 197, 197);
+    font-weight: normal;
+    font-size: 100%;
+}
+
+#statement-selector > *.current {
+    background-color: var(--color2);
+}
