@@ -40,10 +40,20 @@ export default function LighterTest(props: {test: Test}) {
         }
     
         function loadStatementIdx(idx: number) {
+            if(answerBlock) return;
+
+            answerBlock = true;
+            stmContainer!.style.opacity = "0";
+
             currentStatementIdx = idx;
 
-            setDispStatementIdx(`${idx + 1}/${currentTest.statements.length}`);
-            loadStatement(currentTest.statements[idx], answers[idx]);
+            setTimeout(() => {
+                setDispStatementIdx(`${idx + 1}/${currentTest.statements.length}`);
+                loadStatement(currentTest.statements[idx], answers[idx]);
+
+                answerBlock = false;
+                stmContainer!.style.opacity = "1";
+            }, 500);
         }
     
         function loadStatement(text: string, answer?: Answer) {
@@ -51,24 +61,13 @@ export default function LighterTest(props: {test: Test}) {
         }
     
         function submitAnswer(answer: Answer) {
-            if(answerBlock) return;
-
-            answerBlock = true;
-
-            stmContainer!.style.opacity = "0";
-
-            setTimeout(() => {            
-                answers[currentStatementIdx] = answer;
-            
-                if(currentStatementIdx < currentTest.statements.length - 1) {
-                    loadStatementIdx(currentStatementIdx + 1);
-                } else {
-                    loadResults();
-                }
-
-                answerBlock = false;
-                stmContainer!.style.opacity = "1";
-            }, 500);
+            answers[currentStatementIdx] = answer;
+        
+            if(currentStatementIdx < currentTest.statements.length - 1) {
+                loadStatementIdx(currentStatementIdx + 1);
+            } else {
+                loadResults();
+            }
         }
 
         function loadResults() {
