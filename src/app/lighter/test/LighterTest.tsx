@@ -40,6 +40,7 @@ export default function LighterTest(props: {test: Test}) {
         }
     
         function loadStatementIdx(idx: number) {
+            if(idx > answers.length) return;
             if(answerBlock) return;
 
             answerBlock = true;
