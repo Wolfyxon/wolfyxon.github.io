@@ -9,6 +9,12 @@
     gap: 10px;
 }
 
+@media all and (orientation: portrait) {
+    .candidate-result {
+        width: 95%;
+    }
+}
+
 .candidate-icon-container {
     position: relative;
     flex: 1;
