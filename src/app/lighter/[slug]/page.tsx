@@ -28,32 +28,32 @@ const tests: {[slug: string]: Test} = {
             {
                 name: "Mr Wątroba",
                 icon: "/assets/media/img/lighter/tgdod/MrWatroba.png",
-                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1]
+                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1]
             },
             {
                 name: "Bonifacy",
                 icon: "/assets/media/img/lighter/tgdod/Bonifacy.png",
-                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1]
+                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1, -1]
             },
             {
                 name: "Glitcher",
                 icon: "/assets/media/img/lighter/tgdod/Glitcher.png",
-                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1]
+                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1]
             },
             {
                 name: "The Dark One",
                 icon: "/assets/media/img/lighter/tgdod/DarkOne.png",
-                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1]
+                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1]
             },
             {
                 name: "The Bright One",
                 icon: "/assets/media/img/lighter/tgdod/BrightOne.png",
-                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1]
+                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
             },
             {
                 name: "Crystal Shogun",
                 icon: "/assets/media/img/lighter/tgdod/crystalShogun.png",
-                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1]
+                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1]
             },
         ],
         statements: [
@@ -79,7 +79,9 @@ const tests: {[slug: string]: Test} = {
             "Mayonnaise is great",
             '"helo my fred" is the proper way to greet someone',
             "Violence can sometimes be justified",
-            "The T-Pose is the best defense technique"
+            "The T-Pose is the best defense technique",
+            "Potatoes are a good replacement for power plants",
+            "We need to invest more into healthcare"
         ]
     }
 }
