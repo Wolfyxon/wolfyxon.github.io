@@ -147,9 +147,7 @@ export default function LighterTest(props: {test: Test}) {
                     </div>
                 </div>
 
-                <div id="statement-selector">
-
-                </div>
+                <div id="statement-selector"></div>
             </div>
             
             <div id="results" style={{visibility: "hidden"}}>
