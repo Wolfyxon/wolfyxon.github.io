@@ -52,6 +52,11 @@ export default function LighterTest(props: {test: Test}) {
 
             currentStatementIdx = idx;
 
+            for(let i = 0; i < selector!.children.length; i++) {
+                const elm = selector!.children[i];
+                elm.className = currentStatementIdx == i ? "current" : "";
+            }
+
             setTimeout(() => {
                 setDispStatementIdx(`${idx + 1}/${currentTest.statements.length}`);
                 loadStatement(currentTest.statements[idx], answers[idx]);
