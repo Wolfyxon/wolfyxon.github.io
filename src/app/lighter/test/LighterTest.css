@@ -49,3 +49,9 @@
 #results-header {
     color: var(--color2);
 }
+
+#retake {
+    display: block;
+    margin-top: 20px;
+    color: gray;
+}

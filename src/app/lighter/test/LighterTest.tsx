@@ -128,8 +128,9 @@ export default function LighterTest(props: {test: Test}) {
             <div id="results" style={{visibility: "hidden"}}>
                 <h1 id="results-header">Results:</h1>
                 {dispResults}
-            </div>
 
+                <a href="" id="retake">Take the test again</a>
+            </div>
         </>
     );
 }
