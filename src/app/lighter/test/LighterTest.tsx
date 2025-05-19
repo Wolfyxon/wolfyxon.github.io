@@ -16,6 +16,7 @@ export default function LighterTest(props: {test: Test}) {
 
     useEffect(() => {
         const stmContainer = document.getElementById("statement-container");
+        const resultsContainer = document.getElementById("results");
 
         let currentTest: Test;
         let answerBlock = false;
@@ -64,6 +65,7 @@ export default function LighterTest(props: {test: Test}) {
             const matchResults: {id: number, matches: number}[] = [];
 
             stmContainer!.style.display = "none";
+            resultsContainer!.style.visibility = "visible";
 
             currentTest.candidates.forEach((can, canI) => {
                 const matchRes = {
@@ -123,7 +125,9 @@ export default function LighterTest(props: {test: Test}) {
                 </div>
             </div>
             
-            <div id="results">{dispResults}</div>
+            <div id="results" style={{visibility: "hidden"}}>
+                {dispResults}
+            </div>
 
         </>
     );
