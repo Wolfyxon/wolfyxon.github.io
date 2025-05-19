@@ -78,8 +78,10 @@
     color: rgb(197, 197, 197);
     font-weight: normal;
     font-size: 100%;
+    transition: 0.2s;
 }
 
 #statement-selector > *.current {
+    color: white;
     background-color: var(--color2);
 }
