@@ -92,6 +92,7 @@ export default function LighterTest(props: {test: Test}) {
             const matchResults: {id: number, matches: number}[] = [];
 
             stmContainer!.style.display = "none";
+            selector!.style.display = "none";
             resultsContainer!.style.visibility = "visible";
 
             currentTest.candidates.forEach((can, canI) => {
