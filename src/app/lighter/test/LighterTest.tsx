@@ -31,7 +31,7 @@ export default function LighterTest(props: {test: Test}) {
                 const btn = document.createElement("button");
                 
                 btn.onclick = () => loadStatementIdx(i);
-                btn.innerText = `${i}`;
+                btn.innerText = `${i + 1}`;
 
                 selector!.append(btn);
             }
