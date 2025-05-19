@@ -22,8 +22,8 @@
 
 #statement {
     font-size: 200%;
-    height: 2em;
-    min-height: fit-content;
+    min-height: 2em;
+    height: fit-content;
 }
 
 #answer-buttons {
@@ -31,6 +31,12 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
+}
+
+@media all and (orientation: portrait) {
+    #answer-buttons  {
+        flex-direction: column;
+    }
 }
 
 #answer-buttons > * {
