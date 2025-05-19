@@ -22,6 +22,8 @@
 
 #statement {
     font-size: 300%;
+    height: 2em;
+    min-height: fit-content;
 }
 
 #answer-buttons {
