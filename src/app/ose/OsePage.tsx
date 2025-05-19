@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Content } from "@/utils";
+import { ReactNode } from "react";
 
 import "./OsePage.css";
 
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 export type OsePageProps = {
     title: string, 
     icon: string, 
-    heading: Content,
-    category: Content,
-    dynamicCategory: Content,
-    children?: Content
+    heading: ReactNode,
+    category: ReactNode,
+    dynamicCategory: ReactNode,
+    children?: ReactNode
 }
 
 export default function OsePage(data: OsePageProps) {

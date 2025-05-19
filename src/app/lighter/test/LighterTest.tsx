@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Answer, Test } from "../Lighter";
-import { Content } from "@/utils";
 
 import LighterResult from "../result/LighterResult";
 
@@ -12,7 +11,7 @@ export default function LighterTest(props: {test: Test}) {
 
     const [dispStatementIdx, setDispStatementIdx] = useState("");
     const [dispStatementText, setStatementText] = useState("");
-    const [dispResults, setResults] = useState<Content[]>([]);
+    const [dispResults, setResults] = useState<ReactNode[]>([]);
 
     useEffect(() => {
         const stmContainer = document.getElementById("statement-container");
