@@ -28,32 +28,32 @@ const tests: {[slug: string]: Test} = {
             {
                 name: "Mr Wątroba",
                 icon: "/assets/media/img/lighter/tgdod/MrWatroba.png",
-                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1]
+                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1]
             },
             {
                 name: "Bonifacy",
                 icon: "/assets/media/img/lighter/tgdod/Bonifacy.png",
-                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1]
+                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1]
             },
             {
                 name: "Glitcher",
                 icon: "/assets/media/img/lighter/tgdod/Glitcher.png",
-                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1]
+                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1]
             },
             {
                 name: "The Dark One",
                 icon: "/assets/media/img/lighter/tgdod/DarkOne.png",
-                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1]
+                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1]
             },
             {
                 name: "The Bright One",
                 icon: "/assets/media/img/lighter/tgdod/BrightOne.png",
-                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1]
+                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1]
             },
             {
                 name: "Crystal Shogun",
                 icon: "/assets/media/img/lighter/tgdod/crystalShogun.png",
-                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1]
+                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1]
             },
         ],
         statements: [
@@ -72,7 +72,14 @@ const tests: {[slug: string]: Test} = {
             "Arch Linux is the best operating system",
             "You can leave the Weird Place without a liver",
             "If you believe strong enough, everything is going to be ok",
-            "Always expect the Unexpected"
+            "Always expect the Unexpected",
+            "Victims of piano impacts should be treated with the highest priority",
+            "We need to invest more into key mechanisms",
+            "Breaking into someone's property should be punished by death",
+            "Mayonnaise is great",
+            '"helo my fred" is the proper way to greet someone',
+            "Violence can sometimes be justified",
+            "The T-Pose is the best defense technique"
         ]
     }
 }
