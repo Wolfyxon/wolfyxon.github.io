@@ -61,7 +61,7 @@ const tests: {[slug: string]: Test} = {
             "All computers should have antivirus software",
             "Dropping a piano on someone should be punished by death",
             "If someone stole my liver I would do anything to get it back",
-            "We need to invest more into mining susonium caves",
+            "We need to invest more into mining sussonium caves",
             "Milk is great",
             "Potatoes possess great power and should be handled with caution",
             "We need to invest more in technology",
