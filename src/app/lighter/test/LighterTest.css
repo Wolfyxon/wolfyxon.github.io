@@ -34,3 +34,7 @@
 #answer-buttons > * {
     flex: 1;
 }
+
+#results-header {
+    color: var(--color2);
+}
