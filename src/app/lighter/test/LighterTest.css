@@ -35,6 +35,17 @@
     flex: 1;
 }
 
+#results {
+    margin: 0 auto;
+    width: 50%;
+}
+
+@media all and (orientation: portrait) {
+    #results {
+        width: 95%;
+    }
+}
+
 #results-header {
     color: var(--color2);
 }

@@ -1,18 +1,11 @@
 
 .candidate-result {
     margin: 0 auto;
-    width: 50%;
     height: 60px;
     margin-top: 5px;
     flex-direction: row;
     display: flex;
     gap: 10px;
-}
-
-@media all and (orientation: portrait) {
-    .candidate-result {
-        width: 95%;
-    }
 }
 
 .candidate-icon-container {
