@@ -37,6 +37,11 @@
     flex: 1;
 }
 
+#answer-buttons .current {
+    color: white;
+    background-color: var(--color1);
+}
+
 #results {
     margin: 0 auto;
     width: 50%;

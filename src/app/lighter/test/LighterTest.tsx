@@ -19,6 +19,10 @@ export default function LighterTest(props: {test: Test}) {
         const resultsContainer = document.getElementById("results");
         const selector = document.getElementById("statement-selector");
 
+        const btnAgree = document.getElementById("btn-agree")!;
+        const btnDisagree = document.getElementById("btn-disagree")!;
+        const btnIdk = document.getElementById("btn-idk")!;
+
         let currentTest: Test;
         let answerBlock = false;
         let answers: Answer[] = [];
@@ -56,13 +60,21 @@ export default function LighterTest(props: {test: Test}) {
                 stmContainer!.style.opacity = "1";
             }, 500);
         }
+
+        function setCurrentAnswer(answer?: Answer) {
+            btnAgree.className = answer == Answer.Yes ? "current" : "";
+            btnDisagree.className = answer == Answer.No ? "current" : "";
+            btnIdk.className = answer == Answer.Idk ? "current" : "";
+        }
     
         function loadStatement(text: string, answer?: Answer) {
+            setCurrentAnswer(answer);
             setStatementText(text);
         }
     
         function submitAnswer(answer: Answer) {
             answers[currentStatementIdx] = answer;
+            setCurrentAnswer(answer);
         
             if(currentStatementIdx < currentTest.statements.length - 1) {
                 loadStatementIdx(currentStatementIdx + 1);
@@ -103,10 +115,10 @@ export default function LighterTest(props: {test: Test}) {
                 return <LighterResult candidate={candidate} percent={percent} key={i} />
             }))
         }
-
-        document.getElementById("btn-agree")!.onclick = () => submitAnswer(Answer.Yes);
-        document.getElementById("btn-disagree")!.onclick = () => submitAnswer(Answer.No);
-        document.getElementById("btn-idk")!.onclick = () => submitAnswer(Answer.Idk);
+        
+        btnAgree.onclick = () => submitAnswer(Answer.Yes);
+        btnDisagree.onclick = () => submitAnswer(Answer.No);
+        btnIdk.onclick = () => submitAnswer(Answer.Idk);
 
         loadTest(props.test);
     }, []);
