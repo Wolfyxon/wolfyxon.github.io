@@ -28,32 +28,32 @@ const tests: {[slug: string]: Test} = {
             {
                 name: "Mr Wątroba",
                 icon: "/assets/media/img/lighter/tgdod/MrWatroba.png",
-                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1, 1]
+                answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1]
             },
             {
                 name: "Bonifacy",
                 icon: "/assets/media/img/lighter/tgdod/Bonifacy.png",
-                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1, 1]
+                answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1, -1]
             },
             {
                 name: "Glitcher",
                 icon: "/assets/media/img/lighter/tgdod/Glitcher.png",
-                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1, 1]
+                answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1]
             },
             {
                 name: "The Dark One",
                 icon: "/assets/media/img/lighter/tgdod/DarkOne.png",
-                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1]
+                answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1]
             },
             {
                 name: "The Bright One",
                 icon: "/assets/media/img/lighter/tgdod/BrightOne.png",
-                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+                answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
             },
             {
                 name: "Crystal Shogun",
                 icon: "/assets/media/img/lighter/tgdod/crystalShogun.png",
-                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, 1]
+                answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1]
             },
         ],
         statements: [
@@ -61,7 +61,7 @@ const tests: {[slug: string]: Test} = {
             "All computers should have antivirus software",
             "Dropping a piano on someone should be punished by death",
             "If someone stole my liver I would do anything to get it back",
-            "We need to invest more into mining susonium caves",
+            "We need to invest more into mining sussonium caves",
             "Milk is great",
             "Potatoes possess great power and should be handled with caution",
             "We need to invest more in technology",
@@ -80,7 +80,8 @@ const tests: {[slug: string]: Test} = {
             '"helo my fred" is the proper way to greet someone',
             "Violence can sometimes be justified",
             "The T-Pose is the best defense technique",
-            "Pianos should be black"
+            "Potatoes are a good replacement for power plants",
+            "We need to invest more into healthcare"
         ]
     }
 }
