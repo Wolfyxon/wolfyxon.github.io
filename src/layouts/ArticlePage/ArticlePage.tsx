@@ -2,7 +2,7 @@ import * as fs from "fs";
 import Markdown from "markdown-to-jsx";
 import { ReactNode } from "react";
 
-import ArticleNav from "./ArticleNav";
+import ArticleNav from "./nav/ArticleNav";
 import FancyHeading from "@/components/FancyHeading/FancyHeading";
 
 import "@/app/css/animations.css";
