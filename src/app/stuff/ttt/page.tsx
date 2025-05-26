@@ -55,6 +55,9 @@ export default function TicTacToe() {
     const [cells, setCells] = useState(emptyCells());
     const [currentPlr, setCurrentPlr] = useState("x");
 
+    const [xWins, setXWins] = useState(0);
+    const [oWins, setOWins] = useState(0);
+
     function emptyCells() {
         return new Array(MAP_SIZE).fill("");
     }
@@ -96,6 +99,13 @@ export default function TicTacToe() {
         if(isWinner()) {
             alert(`${currentPlr} wins`);
             setCells(emptyCells());
+
+            if(currentPlr == "x") {
+                setXWins(xWins + 1);
+            } else {
+                setOWins(oWins + 1);
+            }
+
             return;
         }
 
@@ -116,6 +126,10 @@ export default function TicTacToe() {
                         <Cell value={v} handler={() => cellClick(i)}  key={i} />
                     )
                 }
+            </div>
+            <div id="side">
+                <p>X: {xWins}</p>
+                <p>O: {oWins}</p>
             </div>
         </div>
 
