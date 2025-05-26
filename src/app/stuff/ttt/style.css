@@ -26,7 +26,7 @@ body {
     flex-basis: 30%;
 }
 
-.current {
+.highlight {
     color: red;
     font-weight: bold;
 }
