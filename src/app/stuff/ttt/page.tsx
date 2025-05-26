@@ -54,7 +54,7 @@ export default function TicTacToe() {
     const mapRef = useRef(null);
     const [cells, setCells] = useState(emptyCells());
     const [currentPlr, setCurrentPlr] = useState("x");
-
+    const [win, setWin] = useState<string | null>(null);
     const [xWins, setXWins] = useState(0);
     const [oWins, setOWins] = useState(0);
 
@@ -84,6 +84,7 @@ export default function TicTacToe() {
     }
 
     function cellClick(cellIdx: number) {
+        if(win) return;
         if(cells[cellIdx] != "") return;
 
         setCells(cells.map((v, i) => {
@@ -95,10 +96,14 @@ export default function TicTacToe() {
         }));
     }
 
+    function reset() {
+        setWin(null);
+        setCells(emptyCells());
+    }
+
     useEffect(() => {
         if(isWinner()) {
-            alert(`${currentPlr} wins`);
-            setCells(emptyCells());
+            setWin(currentPlr);
 
             if(currentPlr == "x") {
                 setXWins(xWins + 1);
@@ -130,8 +135,14 @@ export default function TicTacToe() {
             <div id="side">
                 <p>X: {xWins}</p>
                 <p>O: {oWins}</p>
+
+                <button onClick={reset}>Reset</button>
             </div>
         </div>
+
+        {
+                win ? <h1 id="win-label">{win} won!</h1> : null
+        }
 
         </>
     )
