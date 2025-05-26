@@ -149,9 +149,9 @@ export default function TicTacToe() {
                 }
             </div>
             <div id="side">
-                <p className={currentPlr == "x" ? "highlight" : undefined}>X: {xWins}</p>
-                <p className={currentPlr == "o" ? "highlight" : undefined}>O: {oWins}</p>
-
+                <PlayerStat player="x" currentPlr={currentPlr} value={xWins} />
+                <PlayerStat player="o" currentPlr={currentPlr} value={oWins} />
+                
                 <button onClick={reset}>Reset</button>
             </div>
         </div>
@@ -161,6 +161,14 @@ export default function TicTacToe() {
         }
 
         </>
+    )
+}
+
+function PlayerStat(props: {player: string, currentPlr: string, value: number}) {
+    return (
+        <p  className={props.currentPlr == props.player ? "highlight" : undefined}>
+            {props.player}: {props.value}
+        </p>
     )
 }
 
