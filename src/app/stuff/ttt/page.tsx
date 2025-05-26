@@ -149,8 +149,8 @@ export default function TicTacToe() {
                 }
             </div>
             <div id="side">
-                <p>X: {xWins}</p>
-                <p>O: {oWins}</p>
+                <p className={currentPlr == "x" ? "current" : undefined}>X: {xWins}</p>
+                <p className={currentPlr == "o" ? "current" : undefined}>O: {oWins}</p>
 
                 <button onClick={reset}>Reset</button>
             </div>

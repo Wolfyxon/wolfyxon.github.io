@@ -25,3 +25,8 @@ body {
     height: 50px;
     flex-basis: 30%;
 }
+
+.current {
+    color: red;
+    font-weight: bold;
+}
