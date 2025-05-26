@@ -83,6 +83,18 @@ export default function TicTacToe() {
         return false;
     }
 
+    function getFilledCellCount(): number {
+        let res = 0;
+
+        cells.forEach((v) => {
+            if(v != "") {
+                res += 1;
+            }
+        })
+
+        return res;
+    }
+
     function cellClick(cellIdx: number) {
         if(win) return;
         if(cells[cellIdx] != "") return;
@@ -112,6 +124,10 @@ export default function TicTacToe() {
             }
 
             return;
+        } else {
+            if(getFilledCellCount() == MAP_SIZE) {
+                setWin("Nobody");
+            }
         }
 
         if(currentPlr == "x") {
