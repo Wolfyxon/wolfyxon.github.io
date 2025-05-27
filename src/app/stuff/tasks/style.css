@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+
+td > *, th > * {
+    width: 100%;
+}
+
+#col-priority {
+    width: 3em;
+}
+
+#col-date {
+    width: 20em;
+}
