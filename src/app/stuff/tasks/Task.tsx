@@ -31,7 +31,7 @@ export default function Task(props: {data: TaskData, maxPriority: number, delete
         <tr>
             <td style={{background: color}}>{data.priority}</td>
             <td>{data.name}</td>
-            <td>{data.date.toUTCString()}</td>
+            <td style={{color: data.date.getTime() < Date.now() ? "red" : undefined}}>{data.date.toUTCString()}</td>
             
             <td>
                 <button onClick={() => props.deleteHandler(data)}>Usuń</button>
