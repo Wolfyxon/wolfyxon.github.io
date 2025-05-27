@@ -8,13 +8,28 @@ export type TaskData = {
     priority: number
 }
 
-export default function Task(props: {data: TaskData, deleteHandler: (data: TaskData) => any}) {
-    const ref = useRef<HTMLTableRowElement>(null);
+export default function Task(props: {data: TaskData, maxPriority: number, deleteHandler: (data: TaskData) => any}) {
     const data = props.data;
+
+    const prFactor = data.priority / props.maxPriority;
+    let color = "lime";
+
+    if(prFactor >= 0.8) {
+        color = "red";
+    }
+    else if(prFactor >= 0.7) {
+        color = "orange";
+    } else if(prFactor >= 0.5) {
+        color = "yellow";
+    } else if(prFactor >= 0.25) {
+        color = "green"
+    } else {
+        color = "lime";
+    }
 
     return (
         <tr>
-            <td>{data.priority}</td>
+            <td style={{background: color}}>{data.priority}</td>
             <td>{data.name}</td>
             <td>{data.date.toUTCString()}</td>
             

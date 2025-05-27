@@ -8,6 +8,7 @@ import "./style.css";
 
 export default function Tasks() {
     const [tasks, setTasks] = useState<TaskData[]>([]);
+    const [maxPriority, setMaxPriority] = useState(0);
 
     const priorityRef = useRef<HTMLInputElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
@@ -29,10 +30,25 @@ export default function Tasks() {
         setTasks(
             [...tasks, task].sort((a, b) => b.priority - a.priority)
         );
+
+        updateMaxPriority();
+    }
+
+    function updateMaxPriority() {
+        let maxPr = 0;
+
+        tasks.forEach((v) => {
+            if(v.priority > maxPr) {
+                maxPr = v.priority;
+            }
+        });
+
+        setMaxPriority(maxPr);
     }
 
     function deleteTask(task: TaskData) {
         setTasks(tasks.filter((v) => v != task));
+        updateMaxPriority();
     }
 
     return (
@@ -54,7 +70,7 @@ export default function Tasks() {
                 </th>
             </tr>
             {
-                tasks.map((data) => <Task data={data} deleteHandler={deleteTask} />)
+                tasks.map((data) => <Task data={data} maxPriority={maxPriority} deleteHandler={deleteTask} />)
             }
         </table>
         
