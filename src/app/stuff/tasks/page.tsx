@@ -27,7 +27,7 @@ export default function Tasks() {
         }
 
         setTasks(
-            [...tasks, task]
+            [...tasks, task].sort((a, b) => b.priority - a.priority)
         );
     }
 
