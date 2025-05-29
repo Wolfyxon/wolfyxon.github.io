@@ -1,3 +1,31 @@
+
+/*@property --pie-bar-true-percent {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+}
+
+@property --pie-bar-percent-empty {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+}
+
+@property --pie-bar-percent {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+}
+
+@keyframes piebar_anim {
+    from {
+        --pie-bar-true-percent: var(--pie-bar-percent-empty);
+    }
+    to {
+        --pie-bar-true-percent: var(--pie-bar-percent);
+    }
+}*/
+
 :root {
     --pie-bar-val-color: var(--special2);
     --pie-bar-bg-color: var(--panel-very-dark);
@@ -5,13 +33,14 @@
 }
 
 .pie-bar {
-    background: conic-gradient(
+    background: conic-gradient(                /* --pie-bar-true-percent */
         var(--pie-bar-bg-color) calc(99.99% - var(--pie-bar-percent)),
         var(--pie-bar-bg-color) 0.01%,
-        var(--pie-bar-val-color) 0.01%,
+        var(--pie-bar-val-color) 0.01%,/* --pie-bar-true-percent */
         var(--pie-bar-val-color) calc(var(--pie-bar-percent) - 0.01%)
     );
 
+    /*animation: piebar_anim 2s 1s forwards; */
     border-radius: 100%;
     display: inline-block;
     width: 4em;
