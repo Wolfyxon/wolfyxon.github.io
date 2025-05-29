@@ -82,6 +82,7 @@ export default function Home() {
           <h2>Tools</h2>
           <div>
             <Badge icon="software/tools/vscode.png" alt="VS Code" />
+            <Badge icon="software/tools/vs.svg" alt="Visual Studio" />
             <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
             <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
             <Badge icon="software/tools/git.svg" alt="Git" />
