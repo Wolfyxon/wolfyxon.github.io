@@ -92,3 +92,7 @@
     color: white;
     background-color: var(--color2);
 }
+
+#statement-selector > *:has(~ .current) {
+    color: black;
+}
