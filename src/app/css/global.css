@@ -20,5 +20,5 @@ body, html {
     margin-right: auto;
     width: 100%;
     height: auto;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
