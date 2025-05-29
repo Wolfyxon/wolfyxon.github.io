@@ -1,5 +1,4 @@
 .article-nav-container {
-    vertical-align: unset !important;
     position: sticky;
     top: 20px;
     margin-left: 20px;
@@ -75,10 +74,12 @@
     }
 
     .article-nav-container {
+        position: fixed;
+        top: 0;
         border: 2px solid var(--panel);
         background-color: var(--panel-very-dark);
         border-radius: 5px;
-        left: 98%;
+        left: 96%;
         transition: 0.2s;
         height: 100%;
         width: 100%;
