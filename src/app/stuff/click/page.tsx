@@ -5,16 +5,16 @@ import { useState } from "react";
 import "@/app/css/bigCenter.css";
 
 export default function Clicker() {
-    const [klikniecia, ustawKlikniecia] = useState(0);
+    const [clicks, setClicks] = useState(0);
 
-    function klik() {
-        ustawKlikniecia(klikniecia + 1);
+    function click() {
+        setClicks(clicks + 1);
     }
 
     return (
         <>
-            <p>Ilość kliknięć: {klikniecia}</p>
-            <button onClick={klik}>Kliknij</button>
+            <p>Clicks: {clicks}</p>
+            <button onClick={click}>Click me</button>
         </>
     )
 }
