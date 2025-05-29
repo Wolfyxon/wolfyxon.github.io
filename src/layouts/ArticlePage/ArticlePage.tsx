@@ -34,8 +34,10 @@ export default async function ArticlePage(data: {children: ReactNode, headerElem
                 {data.headerElement}
             </div>
 
-            <article>{content}</article>
-            <ArticleNav title={data.title} />
+            <div className="article-container">
+                <article>{content}</article>
+                <ArticleNav title={data.title} />
+            </div>
         </div>
     )
 }

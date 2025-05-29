@@ -1,5 +1,6 @@
 .article-nav-container {
     position: sticky;
+    align-self: flex-start;
     top: 20px;
     margin-left: 20px;
 }

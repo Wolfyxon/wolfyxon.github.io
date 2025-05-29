@@ -13,12 +13,13 @@ code {
     animation-duration: 1s;
 }
 
-.article-page > * {
-    vertical-align: top;
-    display: inline-block;
+.article-container {
+    display: flex;
+    /*vertical-align: top;
+    display: inline-block;*/
 }
 
-.article-page article {
+.article-container article {
     padding: 5px 10px;
     box-sizing: border-box;
     width: 68%;
