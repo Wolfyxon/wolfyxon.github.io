@@ -88,6 +88,10 @@ export default function Home() {
             <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
             <Badge icon="software/tools/git.svg" alt="Git" />
             <Badge icon="software/tools/linux.svg" alt="Linux" />
+            <Badge icon="software/tools/krita.png" alt="Krita" />
+            <Badge icon="software/tools/lmms.png" alt="LMMS" />
+            <Badge icon="software/video/resolve.png" alt="DaVinci Resolve" />
+            <Badge icon="software/video/kdenlive.png" alt="KDEnlive" />
           </div>
         </div>
 
