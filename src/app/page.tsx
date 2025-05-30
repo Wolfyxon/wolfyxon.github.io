@@ -47,51 +47,51 @@ export default function Home() {
           <h2>Languages</h2>
           <div>
             <Badge icon="software/lang/rust.png" alt="Rust" />
-            <Badge icon="software/lang/lua.png" alt="Lua" />
-            <Badge icon="software/lang/Luau.png" alt="Luau" />
-            <Badge icon="software/framework/godot.png" alt="GDScript" />
+            <Badge icon="software/lang/lua.svg" alt="Lua" />
+            <Badge icon="software/lang/luau.svg" alt="Luau" />
+            <Badge icon="software/framework/godot.svg" alt="GDScript" />
             <Badge icon="software/lang/java.svg" alt="Java" />
             <Badge icon="software/lang/python.svg" alt="Python" />
-            <Badge icon="software/lang/js.png" alt="JavaScript" />
-            <Badge icon="software/lang/ts.png" alt="TypeScript" />
+            <Badge icon="software/lang/js.svg" alt="JavaScript" />
+            <Badge icon="software/lang/ts.svg" alt="TypeScript" />
             <Badge icon="software/lang/html5.svg" alt="HTML5" />
             <Badge icon="software/lang/css3.svg" alt="CSS3" />
-            <Badge icon="software/lang/php.png" alt="PHP" />
+            <Badge icon="software/lang/php.svg" alt="PHP" />
             <Badge icon="software/lang/c.svg" alt="C" />
             <Badge icon="software/lang/cpp.svg" alt="C++" />
             <Badge icon="software/lang/csharp.svg" alt="C#" />
             <Badge icon="software/lang/mysql.png" alt="MySQL" />
-            <Badge icon="software/lang/sqlite.png" alt="SQLite" />
-            <Badge icon="software/lang/postgresql.png" alt="PostgreSQL" />
-            <Badge icon="software/lang/bash.png" alt="Bash" />
+            <Badge icon="software/lang/sqlite.svg" alt="SQLite" />
+            <Badge icon="software/lang/postgresql.svg" alt="PostgreSQL" />
+            <Badge icon="software/lang/bash.svg" alt="Bash" />
           </div>
 
           <h2>Libraries, frameworks and engines</h2>
           <div>
-              <Badge icon="software/lib/react.png" alt="React" />
+              <Badge icon="software/lib/react.svg" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.png" alt="NextJS" />
               <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
               <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
-              <Badge icon="software/lib/jquery.png" alt="jQuery" />
+              <Badge icon="software/lib/jquery.svg" alt="jQuery" />
               <Badge icon="software/framework/dotnet.svg" alt=".NET" />
-              <Badge icon="software/framework/love2d.png" alt="Love2D" />
-              <Badge icon="software/framework/godot.png" alt="Godot" />
-              <Badge icon="software/framework/rbxstudio.png" alt="Roblox Studio" />
+              <Badge icon="software/framework/love2d.svg" alt="Love2D" />
+              <Badge icon="software/framework/godot.svg" alt="Godot" />
+              <Badge icon="software/framework/rbxstudio.svg" alt="Roblox Studio" />
           </div>
 
           <h2>Tools</h2>
           <div>
-            <Badge icon="software/tools/vscode.png" alt="VS Code" />
+            <Badge icon="software/tools/vscode.svg" alt="VS Code" />
             <Badge icon="software/tools/vs.svg" alt="Visual Studio" />
             <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
-            <Badge icon="software/tools/android_studio.png" alt="Android Studio" />
+            <Badge icon="software/tools/android_studio.svg" alt="Android Studio" />
             <Badge icon="software/tools/git.svg" alt="Git" />
             <Badge icon="software/tools/linux.svg" alt="Linux" />
-            <Badge icon="software/tools/krita.png" alt="Krita" />
-            <Badge icon="software/tools/lmms.png" alt="LMMS" />
-            <Badge icon="software/video/resolve.png" alt="DaVinci Resolve" />
-            <Badge icon="software/video/kdenlive.png" alt="KDEnlive" />
+            <Badge icon="software/tools/krita.svg" alt="Krita" />
+            <Badge icon="software/tools/lmms.svg" alt="LMMS" />
+            <Badge icon="software/video/resolve.svg" alt="DaVinci Resolve" />
+            <Badge icon="software/video/kdenlive.svg" alt="KDEnlive" />
           </div>
         </div>
 
