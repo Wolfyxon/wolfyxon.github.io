@@ -48,3 +48,31 @@ Before you submit your code, please verify that it compiles (or gets parsed as v
 If the project includes unit tests, run them to make sure your code didn't break anything in the program.
 
 Making your own tests for your code is also highly appreciated!
+
+## 5. Documentation
+If the project uses documentation comments, you must add them for all of your functions.
+
+Description is only required if other definitions in the project use it.
+
+### Examples:
+**LuaDoc:**
+```lua
+---@param a number
+---@param b number
+---@return number
+function add(a, b)
+    return a + b
+end
+```
+
+**JSDoc:**
+```js
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+**/
+function add(a, b) {
+    return a + b;
+}
+```
