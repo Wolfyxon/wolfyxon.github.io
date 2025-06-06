@@ -75,11 +75,13 @@ header nav {
     height: 50px;
     transform: skew(-20deg);
     overflow: hidden;
+    display: flex;
+    gap: 4px;
 }
 
 @media all and (orientation: portrait) {
     header nav {
-        text-align: center;
+        justify-content: center;
         width: 100%;
     }
 }
@@ -91,14 +93,12 @@ header nav > * {
 header nav a {
     text-decoration: none;
     text-align: center;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 70px;
     height: 100%;
     transition: 0.1s;
-}
-
-header nav a > div {
-    margin-top: 15px;
 }
 
 header nav a:hover {
