@@ -4,7 +4,7 @@ export default function Collaborator(data: {name: string, thumbnail: string, des
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
             
             <div>
-                <h2>{data.name}</h2>
+                <h2 translate="no">{data.name}</h2>
                 <p>{data.description}</p>
 
                 <div className="collaborator-links">

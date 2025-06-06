@@ -5,7 +5,9 @@ export default function Header(data: {title?: string, home?: string}) {
         <header>
             <div id="header-title">
                 <div>
-                    <a href="/" id="header-title-home-link">Wolfyxon</a>
+                    <a href="/" id="header-title-home-link" translate="no">
+                        Wolfyxon
+                    </a>
                     
                     {
                         data.title && data.title != "" ? 

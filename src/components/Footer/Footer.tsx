@@ -9,7 +9,7 @@ export default function Footer() {
                 <a href="https://github.com/Wolfyxon/wolfyxon.github.io/issues">Issues</a>
             </p>
             <p>
-                <a href="mailto:wolfyxon@gmail.com">wolfyxon@gmail.com</a>
+                <a href="mailto:wolfyxon@gmail.com" translate="no">wolfyxon@gmail.com</a>
             </p>
 
             <p>This website is licensed under <a href="https://github.com/Wolfyxon/wolfyxon.github.io/blob/main/LICENSE">GPL-3.0</a>.</p>

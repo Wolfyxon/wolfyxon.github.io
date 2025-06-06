@@ -2,7 +2,7 @@ export default function Project(data: {title: string, description: string, thumb
     return (
         <div className="observing anim-obs-fade">
             <div className="project-text">
-                <h2>{data.title}</h2>
+                <h2 translate="no">{data.title}</h2>
                 <p>{data.description}</p>
 
                 {data.children}
