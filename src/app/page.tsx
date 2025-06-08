@@ -99,7 +99,7 @@ export default function Home() {
           <h2>Fields</h2>
           
           <div>
-            <Tag>REST API usage & creation</Tag>
+            <Tag>REST API usage & development</Tag>
             <Tag>Low-level programming</Tag>  
             <Tag>Backend</Tag>
             <Tag>Frontend</Tag>
