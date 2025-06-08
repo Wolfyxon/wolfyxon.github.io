@@ -50,3 +50,5 @@ Download the file you want you want to verify and its `.sig` counterpart. Put th
 ```
 gpg -v filename.sig
 ```
+
+[Learn more](https://www.gnupg.org/gph/en/manual/x135.html)
