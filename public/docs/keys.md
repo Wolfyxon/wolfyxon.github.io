@@ -9,7 +9,7 @@ It ensures that I am the author of the files and they haven't been tampered with
 https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
 
-# My public GnuPG key
+# My public key
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
