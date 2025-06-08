@@ -46,7 +46,7 @@ gpg --import <file>
 [Learn more](https://www.gnupg.org/gph/en/manual/x56.html)
 
 # Verifying a file
-Download the file you want you want to verify and it's `.sig` counterpart. Put them in the same directory and run: 
+Download the file you want you want to verify and its `.sig` counterpart. Put them in the same directory and run: 
 ```
 gpg -v filename.sig
 ```
