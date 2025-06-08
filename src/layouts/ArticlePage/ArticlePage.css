@@ -2,10 +2,18 @@ code {
     background-color: black;
     border: 2px solid var(--panel-dark);
     border-radius: 8px;
+}
+
+pre code {
     display: block;
     padding: 10px;
     width: 90%;
     overflow: scroll;
+}
+
+code:not(pre code) {
+    padding: 2px 5px;
+    border-radius: 4px;
 }
 
 .article-page {
