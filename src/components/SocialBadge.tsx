@@ -10,12 +10,12 @@ export const websites: {[id: string]: WebsiteData} = {
     "github": {
         url: "github.com",
         name: "GitHub",
-        icon: "github.png"
+        icon: "github.svg"
     },
     "youtube": {
         url: "youtube.com",
         name: "YouTube",
-        icon: "youtube.png"
+        icon: "youtube.svg"
     },
     "soundcloud": {
         url: "soundcloud.com",
