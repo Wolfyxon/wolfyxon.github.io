@@ -12,7 +12,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(/assets/media/img/home/banner.png);
+    background-image: url(/assets/media/img/home/banner.webp);
     background-size: 100% 100%;
     animation: slight-flash 5s infinite;
 }
