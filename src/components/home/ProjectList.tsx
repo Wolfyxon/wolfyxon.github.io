@@ -25,7 +25,7 @@ function ProjectList() {
     registerProject(
         "Turret Siege",
         "A game in early development where you are a turret surrounded by bullets and enemies.",
-        "assets/media/img/home/projectThumbnails/ts.png",
+        "assets/media/img/home/projectThumbnails/ts.webp",
         [
             {
                 text: "Source code",
@@ -41,7 +41,7 @@ function ProjectList() {
     registerProject(
         "Lover",
         "Command line build system for LÖVE2D.",
-        "assets/media/img/home/projectThumbnails/lover.png",
+        "assets/media/img/home/projectThumbnails/lover.webp",
         [
             {
                 text: "Source code",
@@ -61,7 +61,7 @@ function ProjectList() {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser.",
-        "assets/media/img/home/projectThumbnails/3dsWebStuff.png",
+        "assets/media/img/home/projectThumbnails/3dsWebStuff.webp",
         [
             {
                 text: "Visit the site",
@@ -87,7 +87,7 @@ function ProjectList() {
     registerProject(
         "Hero of the Earth",
         "Discontinued post apocalyptic story game.",
-        "assets/media/img/home/projectThumbnails/hote.png",
+        "assets/media/img/home/projectThumbnails/hote.webp",
         [
             {
                 text: "Itch.io page",
@@ -103,7 +103,7 @@ function ProjectList() {
     registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
-        "assets/media/img/home/projectThumbnails/MinVideo.png",
+        "assets/media/img/home/projectThumbnails/MinVideo.webp",
         [
             {
                 text: "Source code",
