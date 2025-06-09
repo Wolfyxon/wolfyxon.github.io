@@ -29,14 +29,15 @@ DAUJBaOagAAKCRD8+caRsj4d/Kb0AQDRErSLEfW+AeNcu1RHwCA8JSKIhA7MBfu7
 # Importing
 [Download text](/resources/gpg/wolfyxon.txt) | [Download binary](/resources/gpg/wolfyxon.gpg)
 
-<!-- 
-TODO: Add import from keys.openpgp.org (this thing seems to be slow)
--->
-
 From URL
 ```
 curl https://wolfyxon.github.io/resources/gpg/wolfyxon.gpg | gpg --import -
 ```
+
+From https://keys.openpgp.org/
+```
+gpg --keyserver keys.openpgp.org --receive-keys FCF9C691B23E1DFC
+``` 
 
 From file
 ```
