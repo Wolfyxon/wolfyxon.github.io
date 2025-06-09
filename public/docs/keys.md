@@ -48,7 +48,7 @@ gpg --import <file>
 # Verifying a file
 Download the file you want you want to verify and its `.sig` counterpart. Put them in the same directory and run: 
 ```
-gpg -v filename.sig
+gpg --verify filename.sig
 ```
 
 [Learn more](https://www.gnupg.org/gph/en/manual/x135.html)
