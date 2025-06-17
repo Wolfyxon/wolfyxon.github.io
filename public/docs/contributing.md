@@ -17,7 +17,7 @@ For consistency, use the same style for your submitted code as the project.
 
 Included, but not limited to:
 - Indentation
-- Naming (ex. snake_case, camelCase)
+- Naming (ex. `snake_case`, `camelCase`)
 - Order of definitions in the file
 
 The project is most likely using the standard naming convention of the used programming language.
