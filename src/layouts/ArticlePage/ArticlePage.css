@@ -62,6 +62,7 @@ code:not(pre code) {
     color: var(--special1);
 }
 
+/*
 .article-page article h1::before {
     content: "# ";
 }
@@ -72,7 +73,7 @@ code:not(pre code) {
 
 .article-page article h3::before {
     content: "### ";
-}
+}*/
 
 @media all and (orientation: portrait) {
     .article-page article {
