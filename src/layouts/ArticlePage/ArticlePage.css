@@ -41,6 +41,10 @@ code:not(pre code) {
     text-underline-offset: 2px
 }
 
+.article-page p {
+    padding-right: 1em;
+}
+
 .article-page li {
     padding: 3px;
 }
