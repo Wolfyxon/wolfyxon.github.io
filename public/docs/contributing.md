@@ -34,12 +34,25 @@ You may use AI to assist you while programming, for example to help you with fin
 
 ## 3. Don't make unnecessary comments
 Don't explain code that's self explanatory.
-Only do that when the code is very confusing.
+Only do that when the code is confusing.
 
 **Bad example:**
 ```javascript
 // Show a popup saying "Hello"
 alert("Hello");
+```
+
+**Good example**
+```rust
+    // Makes the program GPU accelerated with NVIDIA
+    pub fn prime(&mut self) -> &mut Self {
+        self.set_env("__NV_PRIME_RENDER_OFFLOAD", "1");
+        self.set_env("__GLX_VENDOR_LIBRARY_NAME", "nvidia");
+        self.set_env("__VK_LAYER_NV_optimus", "NVIDIA_only");
+        self.set_env("VK_ICD_FILENAMES", "/usr/share/vulkan/icd.d/nvidia_icd.json");
+
+        self
+    }
 ```
 
 ## 4. Manual and automated testing
