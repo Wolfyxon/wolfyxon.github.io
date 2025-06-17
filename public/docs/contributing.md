@@ -6,8 +6,17 @@ description: Rules you need to follow when contributing to my projects
 # Introduction
 
 Here are guidelines of how you may contribute to my projects and the rules you need to follow when doing so.
-
 They apply to all of my projects, however please also review the *CONTRIBUTING.md* (if present) for extra guidelines.
+
+**You may contribute by:**
+- Reporting bugs
+- Suggesting improvements
+- Writing code
+    - Fixing bugs
+    - Adding new features
+
+Almost all my projects (including their source code) is available on [GitHub](https://github.com/wolfyxon).
+That's where you can contribute.
 
 # Rules
 
