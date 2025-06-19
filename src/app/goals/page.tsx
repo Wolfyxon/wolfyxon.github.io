@@ -28,10 +28,10 @@ export default function Goals() {
 
             <h2>In progress</h2>
             <GoalList id="goals-in-progress">
-                <Goal title="Learn music" progress={70}></Goal>
-                <Goal title="Learn art" progress={30}></Goal>
+                <Goal title="Learn music" progress={73}></Goal>
+                <Goal title="Learn art" progress={20}></Goal>
                 <Goal title="Learn cybersecurity" progress={10}></Goal>
-                <Goal title="Learn electricity & electronics" progress={5}></Goal>
+                <Goal title="Learn electricity & electronics" progress={35}></Goal>
                 <Goal title="Make a programming language" progress={2}></Goal>
                 <Goal title="Heal from social anxiety" progress={47}></Goal>
                 <Goal title="Write a story" progress={0}></Goal>
