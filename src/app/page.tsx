@@ -113,6 +113,7 @@ export default function Home() {
             <Tag>Discord bots</Tag>
             <Tag>Networking & multiplayer</Tag>
             <Tag>Database management</Tag>
+            <Tag>System administration</Tag>
             <Tag>Basic electronics</Tag>
             <Tag>Basic robotics</Tag>
             <Tag>Video & audio editing</Tag>
