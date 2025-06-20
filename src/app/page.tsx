@@ -78,6 +78,7 @@ export default function Home() {
               <Badge icon="software/framework/love2d.svg" alt="Love2D" />
               <Badge icon="software/framework/godot.svg" alt="Godot" />
               <Badge icon="software/framework/rbxstudio.svg" alt="Roblox Studio" />
+              <Badge icon="arduino.svg" alt="Arduino" />
           </div>
 
           <h2>Tools</h2>
