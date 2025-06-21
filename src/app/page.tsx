@@ -100,25 +100,29 @@ export default function Home() {
           <h2>Fields</h2>
           
           <div>
-            <Tag>REST API usage & development</Tag>
-            <Tag>Low-level programming</Tag>  
-            <Tag>Backend</Tag>
-            <Tag>Frontend</Tag>
-            <Tag>Databases</Tag>
-            <Tag>SEO & Accessibility</Tag>
-            <Tag>Tooling</Tag>
-            <Tag>Command line</Tag>
-            <Tag>Version control</Tag>
-            <Tag>Game development</Tag>
-            <Tag>Discord bots</Tag>
-            <Tag>Networking & multiplayer</Tag>
-            <Tag>Database management</Tag>
-            <Tag>System administration</Tag>
-            <Tag>Basic electronics</Tag>
-            <Tag>Basic robotics</Tag>
-            <Tag>Video & audio editing</Tag>
-            <Tag>Digital graphics</Tag>
-            <Tag>Digital music</Tag>
+            {
+              [
+                "REST API usage & development",
+                "Low-level programming",
+                "Backend",
+                "Frontend",
+                "Databases",
+                "SEO & Accessibility",
+                "Tooling",
+                "Command line",
+                "Version control",
+                "Game development",
+                "Discord bots",
+                "Networking & multiplayer",
+                "Database management",
+                "System administration",
+                "Basic electronics",
+                "Basic robotics",
+                "Video & audio editing",
+                "Digital graphics",
+                "Digital music"
+              ].map((name) => <Tag key={"field-" + name}>{name}</Tag>)
+            }
           </div>
         </div>
       </div>
