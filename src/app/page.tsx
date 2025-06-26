@@ -12,7 +12,7 @@ import "./css/home.css";
 import Tag from "@/components/Tag/Tag";
 
 export const metadata: Metadata = {
-  title: "Wolfyxon's epic website"
+  title: "Wolfyxon | My website"
 }
 
 export default function Home() {
