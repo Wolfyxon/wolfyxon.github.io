@@ -24,17 +24,15 @@ export default async function DocPage(props: {params: any}) {
     const slug = (await props.params).slug;
     const doc = await getDocBySlug(slug);
 
-    const header = (
-        <div>
-            <a href={`${REPO_URL}/${slug}.md`}>See on GitHub</a> | <a href={`/docs/${slug}.md`}>Plain text</a>
-        </div>
-    )
-
     return (
         <Page category="Docs" homeUrl="/docs">
-            <ArticlePage title={doc.title} headerElement={header}>
+            <ArticlePage title={doc.title}>
                 {doc.markdown}
             </ArticlePage>
+            
+            <div>
+                <a href={`${REPO_URL}/${slug}.md`}>See on GitHub</a> | <a href={`/docs/${slug}.md`}>Plain text</a>
+            </div>
         </Page>
     )
 }
