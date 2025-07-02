@@ -90,6 +90,7 @@ export default function Home() {
             <Badge icon="software/tools/git.svg" alt="Git" />
             <Badge icon="software/tools/linux.svg" alt="Linux" />
             <Badge icon="software/tools/krita.svg" alt="Krita" />
+            <Badge icon="software/tools/audacity.svg" alt="Audacity" />
             <Badge icon="software/tools/lmms.svg" alt="LMMS" />
             <Badge icon="software/video/resolve.svg" alt="DaVinci Resolve" />
             <Badge icon="software/video/kdenlive.svg" alt="KDEnlive" />
