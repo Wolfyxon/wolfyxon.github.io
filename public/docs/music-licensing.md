@@ -1,6 +1,6 @@
 ---
 title: Music licensing
-description: How my music is licensed and how can you use it
+description: How my music is licensed and how you can use it
 ---
 
 # Summary
