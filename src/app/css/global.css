@@ -1,10 +1,10 @@
 html {
     --text: white;
     --background: black;
-    --panel: #3e3d3f;
-    --panel-slightly-dark: #38383a;
-    --panel-dark: #282829;
-    --panel-very-dark: #1c1c1d;
+    --panel: #2b2a2c;
+    --panel-slightly-dark: #272729;
+    --panel-dark: #1e1e1f;
+    --panel-very-dark: #0f0f0f;
     --color1: rgb(87, 0, 0);
     --color2: #D20000;
     --color3: #ff0000;
