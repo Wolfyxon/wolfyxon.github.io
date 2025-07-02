@@ -9,7 +9,11 @@ export default function Widget(props: {title: string, url?: string, children: Re
             <div className="widget-title">{props.title}</div>
             
             {
-                props.url ? <img className="widget-title-icon" src="/assets/media/img/icons/google/arrow-outward.svg" />
+                props.url ? 
+                <img
+                    alt="Open" 
+                    className="widget-title-icon" 
+                    src="/assets/media/img/icons/google/arrow-outward.svg" />
                 : null
             }
         </div>
