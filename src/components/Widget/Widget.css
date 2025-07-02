@@ -1,0 +1,20 @@
+
+.widget {
+    display: inline-block;
+    overflow: hidden;
+    background: var(--panel-dark);
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.widget-title {
+    font-size: 150%;
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--panel);
+}
+
+.widget-content {
+    padding: 8px;
+}
