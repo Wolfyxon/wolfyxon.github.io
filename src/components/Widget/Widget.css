@@ -5,8 +5,9 @@
     background: var(--panel-dark);
     width: 300px;
     border-radius: 5px;
-    margin: 5px 0px;
+    margin: 5px 3px;
     text-decoration: none;
+    height: 100px;
 }
 
 .widget-title-container {
