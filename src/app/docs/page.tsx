@@ -2,6 +2,12 @@ import Widget from "@/components/Widget/Widget";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
 import { getDocs } from "./docs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Documentation",
+    description: "Some documentation of my projects and me"
+}
 
 export default async function DocsHomePage() {
     return (
