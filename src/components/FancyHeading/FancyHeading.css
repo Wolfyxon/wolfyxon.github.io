@@ -1,16 +1,15 @@
 .fancy-h {
-    border-right: rgba(255, 255, 255, 0.2) solid 8px;
+    /* border-right: rgba(255, 255, 255, 0.1) solid 10px; */
     background-color: var(--color1);
     width: 70%;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 5vw;
-    margin-left: -5vw;
-    transform: skew(20deg);
+    padding-left: 2vw;
+    transform: skew(15deg);
 }
 
 .fancy-h > * {
-    transform: skew(-20deg);
+    transform: skew(-15deg);
 }
 
 
