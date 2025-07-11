@@ -8,6 +8,12 @@
     transform: skew(15deg);
 }
 
+.fancy-h-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .fancy-h > * {
     transform: skew(-15deg);
 }
