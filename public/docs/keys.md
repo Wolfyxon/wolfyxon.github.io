@@ -45,7 +45,7 @@ From file
 gpg --import <file>
 ```
 
-[Learn more](https://www.gnupg.org/gph/en/manual/x56.html)
+[Learn more about importing keys](https://www.gnupg.org/gph/en/manual/x56.html)
 
 # Verifying a file
 Download the file you want you want to verify and its `.sig` counterpart. Put them in the same directory and run: 
@@ -53,4 +53,4 @@ Download the file you want you want to verify and its `.sig` counterpart. Put th
 gpg --verify filename.sig
 ```
 
-[Learn more](https://www.gnupg.org/gph/en/manual/x135.html)
+[Learn more about verifying files and signatures](https://www.gnupg.org/gph/en/manual/x135.html)
