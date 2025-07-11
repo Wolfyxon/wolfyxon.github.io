@@ -71,62 +71,6 @@ const utils = {
     },
 
     /**
-     * Returns an URL to the icon image that matches the given social platform 
-     * @param {string} url 
-     * @returns {string}
-     */
-    getSocialIcon: (url) => {
-        const dir = "/assets/media/img/icons/social/";
-
-        const icons = {
-            "twitter.com": "x.png",
-            "x.com": "x.png",
-            "soundcloud.com": "soundcloud.png",
-            "youtube.com": "youtube.png",
-            "www.youtube.com": "youtube.png",
-            "github.com": "github.png",
-            "discord.com": "discord.svg",
-            "discord.gg": "discord.svg"
-        };
-
-        url = url.replace("https://", "").replace("http://", "");
-
-        for(const domain of Object.keys(icons)) {
-            if(url.startsWith(domain)) {
-                return dir + icons[domain];
-            }
-        }
-
-        return "/assets/media/img/icons/social/website.png";
-    },
-
-    /**
-     * Returns the name of the given URL to a social platform
-     * @param {string} url 
-     * @returns {string}
-     */
-    getSocialName: (url) => {
-        const names = {
-            "twitter.com": "X / Twitter",
-            "x.com": "X / Twitter",
-            "soundcloud.com": "SoundCloud",
-            "youtube.com": "YouTube",
-            "www.youtube.com": "YouTube",
-            "github.com": "GitHub",
-            "discord.com": "Discord",
-            "discord.gg": "Discord"
-        };
-
-        url = url.replace("https://", "").replace("http://", "");
-
-        for(const domain of Object.keys(names)) {
-            if(url.startsWith(domain)) {
-                return names[domain];
-            }
-        }
-    },
-
-    /**
      * Checks if a URL starts with a string, useful for validating domains
      * @param {string} url 
      * @param {string} start 
@@ -165,23 +109,5 @@ const utils = {
         }
 
         return res;
-    },
-
-    /**
-     * Returns the ancestors of an element
-     * @param {HTMLElement} element
-     * @returns {HTMLElement[]}
-     */
-    getAncestors: (element) => {
-        const res = [];
-        let current = element;
-
-        while(current.parentElement) {
-            current = current.parentElement;
-            res.push(current);
-        }
-
-        return res;
-    }
-    
+    }    
 }
