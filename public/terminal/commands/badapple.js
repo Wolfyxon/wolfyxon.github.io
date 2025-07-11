@@ -34,8 +34,8 @@ registerCommand(
         const canvasCtx = canvas.getContext("2d");
 
         const updateItv = setInterval(() => {
-            const w = video.videoWidth * 0.1;
-            const h = video.videoHeight * 0.1;
+            const w = video.videoWidth * 0.3;
+            const h = video.videoHeight * 0.3;
 
             if(w === 0 || h === 0) return;
 
