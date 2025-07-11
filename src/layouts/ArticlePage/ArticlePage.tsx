@@ -8,7 +8,7 @@ import FancyHeading from "@/components/FancyHeading/FancyHeading";
 import "@/app/css/animations.css";
 import "./ArticlePage.css";
 
-export default async function ArticlePage(data: {children: ReactNode, headerElement?: ReactNode, src?: string, title?: string}) {
+export default async function ArticlePage(data: {children: ReactNode, headerElement?: ReactNode, footerElement?: ReactNode, src?: string, title?: string}) {
 
     let content: ReactNode = null;
 
@@ -37,8 +37,12 @@ export default async function ArticlePage(data: {children: ReactNode, headerElem
                     </div>
 
                     <article>{content}</article>
+
+                    <div className="article-footer">
+                        {data.footerElement}
+                    </div>
                 </div>
-                
+
                 <ArticleNav title={data.title} />
             </div>
         </div>

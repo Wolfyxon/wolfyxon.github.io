@@ -32,14 +32,15 @@ export default async function BlogPost(data: {params: any}) {
         </a>
     )
 
+    const footer = (
+        <p className="blog-post-date">{post.date.toDateString()}</p>
+    );
+
     return (
         <Page category="Blog" homeUrl="/blog">
-
-            <ArticlePage title={post.title} headerElement={header}>
+            <ArticlePage title={post.title} headerElement={header} footerElement={footer}>
                 {post.markdown}
             </ArticlePage>
-            
-            <p className="blog-post-date">{post.date.toDateString()}</p>
         </Page>
     );
 }
