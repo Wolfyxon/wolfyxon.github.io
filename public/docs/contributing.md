@@ -1,5 +1,5 @@
 ---
-title: Contributing guidelines
+title: Contribution guidelines
 description: Rules you need to follow when contributing to my projects
 ---
 
