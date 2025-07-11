@@ -28,14 +28,17 @@ export default async function ArticlePage(data: {children: ReactNode, headerElem
 
     return (
         <div className="article-page">
-            <FancyHeading>{data.title}</FancyHeading>
-            
-            <div className="article-header">
-                {data.headerElement}
-            </div>
+            <div className="article-sides">
+                <div className="article-container">
+                    <FancyHeading centered={true}>{data.title}</FancyHeading>
+                    
+                    <div className="article-header">
+                        {data.headerElement}
+                    </div>
 
-            <div className="article-container">
-                <article>{content}</article>
+                    <article>{content}</article>
+                </div>
+                
                 <ArticleNav title={data.title} />
             </div>
         </div>

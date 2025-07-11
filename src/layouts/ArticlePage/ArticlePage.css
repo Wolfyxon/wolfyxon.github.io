@@ -16,21 +16,30 @@ code:not(pre code) {
     border-radius: 4px;
 }
 
+.fancy-h {
+    width: 95%;
+    font-size: 160%;
+}
+
 .article-page {
     animation: fade-in;
     animation-duration: 1s;
 }
 
-.article-container {
+.article-sides {
     display: flex;
+    justify-content: center;
     /*vertical-align: top;
     display: inline-block;*/
 }
 
-.article-container article {
-    padding: 5px 10px;
+.article-container {
     box-sizing: border-box;
     width: 68%;
+}
+
+.article-container article {
+    padding: 5px 10px;
     background: var(--panel-very-dark);
     border-left: 2px var(--panel-dark) solid;
     border-radius: 8px;
@@ -76,7 +85,7 @@ code:not(pre code) {
 }*/
 
 @media all and (orientation: portrait) {
-    .article-page article {
+    .article-container {
         border-radius: 5px;
         width: 100%;
     }
