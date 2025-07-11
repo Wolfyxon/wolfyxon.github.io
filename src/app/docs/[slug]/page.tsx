@@ -16,7 +16,7 @@ export async function generateMetadata(data: {params: any}) {
 
     return {
         title: post.title + " - Documentation",
-        description: post.description
+        description: post.description ?? "Documentation page. No description."
     }
 }
 
