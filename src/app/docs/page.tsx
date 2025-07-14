@@ -18,6 +18,9 @@ export default async function DocsHomePage() {
                     Here you can find some important information about my projects
                     and me.
                 </p>
+                <p>
+                    Also see the <a href="/about">about me page</a>.
+                </p>
 
                 <div id="doc-list">
                     {
