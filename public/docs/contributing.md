@@ -18,7 +18,7 @@ They apply to all of my projects, however please also review the *CONTRIBUTING.m
 Almost all my projects (including their source code) is available on [GitHub](https://github.com/wolfyxon).
 That's where you can contribute.
 
-# Rules
+# Rules for writing code
 
 ## 1. Follow the project's style
 
