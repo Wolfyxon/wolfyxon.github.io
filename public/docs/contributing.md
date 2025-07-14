@@ -15,7 +15,7 @@ They apply to all of my projects, however please also review the *CONTRIBUTING.m
     - Fixing bugs
     - Adding new features
 
-Almost all my projects (including their source code) is available on [GitHub](https://github.com/wolfyxon).
+Almost all my projects (including their source code) are available on my [GitHub profile](https://github.com/wolfyxon).
 That's where you can contribute.
 
 # Rules for bug reports
