@@ -53,7 +53,6 @@
 }
 
 .article-nav a.current {
-    font-size: 105%;
     color: var(--color4);
     border-color: var(--color4);
     font-weight: bold;
