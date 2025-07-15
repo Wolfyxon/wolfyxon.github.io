@@ -35,6 +35,7 @@
 
 .article-nav h1 {
     display: inline;
+    font-size: 150%;
 }
 
 .article-nav > ul > li a {
