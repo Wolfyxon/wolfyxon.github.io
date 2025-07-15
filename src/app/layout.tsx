@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ClientWorker from "./ClientWorker";
 
-import "./css/colors.css";
 import "./css/global.css";
 
 export const metadata: Metadata = {
