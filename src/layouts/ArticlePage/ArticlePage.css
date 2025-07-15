@@ -64,10 +64,11 @@ code:not(pre code) {
     }
 }
 
-.article-page article h1, 
-.article-page article h2,
-.article-page article h3
-{
+.article-page article h1 {
+    color: var(--color4);
+}
+
+.article-page article h2 {
     color: var(--special1);
 }
 
