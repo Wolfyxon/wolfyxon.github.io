@@ -27,15 +27,25 @@ This was my first experience with coding.
 Some time later I asked my parents to enroll me in a programming course so I can learn more.
 
 They found [Giganci Programowania](https://www.giganciprogramowania.edu.pl) where I revised Scratch, learned the basics of programming,
-Python, C# and .NET forms, web development with HTML, CSS and JavaScript, and then the basics of cybersecurity.
+Python, basic Android apps, C# and .NET forms, web development with HTML, CSS and JavaScript, and then the basics of cybersecurity.
 I was often ahead of the things that were taught there.
 
 I learned a lot there, but the majority of the things I learned came from me experimenting and coding my own stuff at home.
 
 # Expansion
-During the pandemic in 2020
+During the pandemic in 2020, I started working on [Hero of the Earth](https://wolfyxon.itch.io/hote) in [Godot Engine](https://godotengine.org/), which was my first major project.
+I also made some private Discord bots at the time with DiscordJS in JavaScript.
+
+Later I got really comfortable with web development, mostly frontend and some backend. 
+I was also making a lot of small projects, mostly private ones.
+I also made a few small Minecraft plugins and mods in Java.
+
+After switching to Linux I made some automation scripts for my system.
 
 # Current times
-I'm currently expanding my skills into low-level programming and embedded devices and further enhancing my current skills.
+Recently I learned PHP, Rust, C, learned more about C++ and learned how to use SQL databases.
 
-My goal is to 
+I'm currently expanding my skills into low-level programming and embedded devices and working on my current projects.
+I want to constantly improve and become a better programmer, but also help others start coding too.
+
+My goal is to create my own dream programming language at some point.
