@@ -8,7 +8,8 @@ export type DocData = {
     title: string,
     description: string,
     markdown: string,
-    slug: string[]
+    slug: string[],
+    hidden?: boolean
 }
 
 export type DocCategory = {
@@ -51,8 +52,9 @@ export async function parseDoc(path: string): Promise<DocData> {
     return {
         title: mat.data.title ?? slug,
         description: mat.data.description ?? "",
+        hidden: mat.data.hidden,
         markdown: mat.content,
-        slug: slug
+        slug: slug,
     };
 }
 

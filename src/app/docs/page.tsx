@@ -33,6 +33,10 @@ export default async function DocsHomePage() {
                                 <h2>{capitalize(category.name)}</h2>
                                 {
                                     category.docs.map((doc) => {
+                                        if(doc.hidden) {
+                                            return;
+                                        }
+
                                         return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
                                             {doc.description || "No Description"}
                                         </Widget>
