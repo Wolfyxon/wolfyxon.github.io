@@ -25,9 +25,11 @@ export default async function DocPage(props: {params: any}) {
     const slug = (await props.params).slug;
     const doc = await getDocBySlug(slug);
 
+    const mdFile = slug.join("/") + ".md";
+
     const footer = (
         <div>
-            <a href={`${REPO_URL}/${slug}.md`}>See on GitHub</a> | <a href={`/docs/${slug}.md`}>Plain text</a>
+            <a href={`${REPO_URL}/${mdFile}`}>See on GitHub</a> | <a href={`/docs/${mdFile}`}>Plain text</a>
         </div>
     );
 
