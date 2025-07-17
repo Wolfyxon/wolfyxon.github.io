@@ -17,3 +17,14 @@ export function randf(min: number, max: number): number {
 export function randi(min: number, max: number): number {
     return Math.round(randf(min, max));
 }
+
+export function capitalize(text: string): string {
+    if(text.length == 0) {
+        return text;
+    }
+
+    const split = text.split("");
+
+    split[0] = split[0].toUpperCase();
+    return split.join("");
+}
