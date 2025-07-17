@@ -7,6 +7,7 @@ const REPO_URL = "https://github.com/Wolfyxon/wolfyxon.github.io/tree/main/publi
 
 export async function generateStaticParams() {
     const posts = await getDocs();
+    
     return posts.map((v) => { return { slug: v.slug }});
 }
 

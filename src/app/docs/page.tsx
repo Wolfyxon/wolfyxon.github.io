@@ -25,7 +25,7 @@ export default async function DocsHomePage() {
                 <div id="doc-list">
                     {
                         (await getDocs()).map((doc) => {
-                            return <Widget title={doc.title} url={doc.slug} key={doc.title}>
+                            return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
                                 {doc.description || "No Description"}
                             </Widget>
                         })

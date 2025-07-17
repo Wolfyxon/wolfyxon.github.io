@@ -8,19 +8,41 @@ export type DocData = {
     title: string,
     description: string,
     markdown: string,
-    slug: string
+    slug: string[]
 }
 
-export async function getDocFileNames(): Promise<string[]> {
-    return fs.readdirSync(DOCS_PATH).filter((v) => v.endsWith(".md"));
+export async function getDocFolders(): Promise<string[]> {
+    return fs.readdirSync(DOCS_PATH).filter((v) => fs.lstatSync(v).isDirectory())
+}
+
+export async function getDocPaths(dir: string = DOCS_PATH): Promise<string[]> {
+    const res: string[] = []
+    const paths = fs.readdirSync(dir);
+   
+
+    paths.forEach(async (v) => {
+        const path = dir + "/" + v;
+
+        if(fs.lstatSync(path).isDirectory()) {
+            (await getDocPaths(path)).forEach((v) => {
+                res.push(v);
+            });
+        } else {
+            if(path.endsWith(".md")) {
+                res.push(path.replace(DOCS_PATH + "/", ""));
+            }
+        }
+    });
+
+    return res;
 }
 
 export async function parseDoc(path: string): Promise<DocData> {
     const text = await fs.readFileSync(path);
     const mat = matter(text);
     
-    const slug = basename(path.replace(DOCS_PATH, "").replace(".md", ""));
-
+    const slug = path.replace(DOCS_PATH + "/", "").replace(".md", "").split("/");
+    
     return {
         title: mat.data.title ?? slug,
         description: mat.data.description ?? "",
@@ -30,13 +52,13 @@ export async function parseDoc(path: string): Promise<DocData> {
 }
 
 export async function getDocs(): Promise<DocData[]> {
-    const names = await getDocFileNames();
+    const names = await getDocPaths();
 
     return Promise.all(names.map(async (filename) => {
         return await parseDoc(`${DOCS_PATH}/${filename}`);
     }));
 }
 
-export async function getDocBySlug(slug: string): Promise<DocData> {
-    return parseDoc(`${DOCS_PATH}/${slug}.md`);
+export async function getDocBySlug(slug: string[]): Promise<DocData> {
+    return parseDoc(`${DOCS_PATH}/${slug.join("/")}.md`);
 }
