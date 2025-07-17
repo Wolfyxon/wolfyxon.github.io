@@ -17,7 +17,6 @@ print("Hello World");
 ```
 
 ```
-
 let some_var = true;
 
 print(`Value of some_var is {some_var}`)
@@ -27,7 +26,6 @@ if some_var {
 } else {
     print("Not good")
 }
-
 ```
 
 # Loops
@@ -39,11 +37,9 @@ for i in 5 {
 for i in 10..0 {
     print(i);
 }
-
 ```
 
 ```
-
 let start = OS::unix_time();
 
 while OS::unix_time() < start + 10 {
@@ -52,7 +48,6 @@ while OS::unix_time() < start + 10 {
 }
 
 print("Time's up!");
-
 ```
 
 ```
@@ -119,7 +114,6 @@ func try_change_password(current_password: String, new_password: String) {
 
 test_user.change_password("pass123", "aaaaaaaaaa");
 test_user.change_password("password123", "bbbbbbbbbbbbb");
-
 ```
 
 # Enums
@@ -155,7 +149,6 @@ Main script
 import utils, math::add;
 
 utils::cool_print(add(1, 5));
-
 ```
 
 utils
