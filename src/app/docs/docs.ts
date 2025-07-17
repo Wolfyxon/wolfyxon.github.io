@@ -67,6 +67,7 @@ export async function getDocs(): Promise<DocData[]> {
 export async function getDocsInCategories(): Promise<DocCategory[]> {
     const docs = await getDocs();
     let res: DocCategory[] = [];
+    let otherDocs: DocData[] = []
 
     function add(category: string, doc: DocData) {
         for(const cat of res) {
@@ -84,10 +85,14 @@ export async function getDocsInCategories(): Promise<DocCategory[]> {
 
     docs.forEach((doc) => {
         if(doc.slug.length == 1) {
-            add("other", doc);
+            otherDocs.push(doc);
         } else {
             add(doc.slug[0], doc);
         }
+    });
+
+    otherDocs.forEach((doc) => {
+        add("other", doc);
     });
 
     return res;
