@@ -17,7 +17,7 @@ export default async function DocsHomePage() {
             <ArticlePage title="Documentation">
                 <h1>Welcome to my documentation</h1>
                 <p>
-                    Here you can find some important information about my projects
+                    Here you can find some information about my projects
                     and me.
                 </p>
                 <p>
