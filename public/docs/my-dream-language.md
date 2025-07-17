@@ -82,6 +82,12 @@ func greet(name: String) {
 ```
 class Named {
     pub name: String
+
+    pub func new(name: String) -> Self {
+        return Self {
+            name: name
+        }
+    }
 }
 
 class User: Named {
@@ -89,7 +95,7 @@ class User: Named {
 
     pub func new(name: String, password: String) -> Self {
         return Self {
-            name: name,
+            super::new(),
             password: password
         }
     }
