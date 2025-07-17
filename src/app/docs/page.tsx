@@ -1,7 +1,7 @@
 import Widget from "@/components/Widget/Widget";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
-import { getDocs, getDocsInCategories } from "./docs";
+import { getDocsInCategories } from "./docs";
 import { Metadata } from "next";
 import { Fragment } from "react";
 import { capitalize } from "@/utils";

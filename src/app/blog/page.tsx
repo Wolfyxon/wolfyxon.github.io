@@ -1,4 +1,4 @@
-import { getPosts, getPostsForListing } from "./blog";
+import { getPostsForListing } from "./blog";
 import { Metadata } from "next";
 import PostCard from "./PostCard/PostCard";
 
