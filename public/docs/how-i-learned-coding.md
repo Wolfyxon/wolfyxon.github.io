@@ -1,6 +1,7 @@
 ---
 title: How I learned to code
 description: My journey with becoming a programmer
+hidden: true
 ---
 
 # Introduction
