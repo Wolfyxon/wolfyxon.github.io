@@ -19,6 +19,7 @@ export default async function DocsHomePage() {
                 <p>
                     Here you can find some information about my projects
                     and me.
+                    It can also serve the purpose of a blog. 
                 </p>
                 <p>
                     Each doc can also be viewed as plain markdown text, by adding <b>.md</b> at the end of the URL.
