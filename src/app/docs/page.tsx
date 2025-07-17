@@ -1,8 +1,10 @@
 import Widget from "@/components/Widget/Widget";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
-import { getDocs } from "./docs";
+import { getDocs, getDocsInCategories } from "./docs";
 import { Metadata } from "next";
+import { Fragment } from "react";
+import { capitalize } from "@/utils";
 
 export const metadata: Metadata = {
     title: "Documentation",
@@ -24,10 +26,20 @@ export default async function DocsHomePage() {
 
                 <div id="doc-list">
                     {
-                        (await getDocs()).map((doc) => {
-                            return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
-                                {doc.description || "No Description"}
-                            </Widget>
+                        (await getDocsInCategories()).map((category) => {
+                            return (
+                            <Fragment key={category.name}>
+                            
+                                <h2>{capitalize(category.name)}</h2>
+                                {
+                                    category.docs.map((doc) => {
+                                        return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
+                                            {doc.description || "No Description"}
+                                        </Widget>
+                                    })
+                                }
+                            </Fragment>
+                            )
                         })
                     }
                 </div>

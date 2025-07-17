@@ -11,6 +11,11 @@ export type DocData = {
     slug: string[]
 }
 
+export type DocCategory = {
+    name: string,
+    docs: DocData[]
+}
+
 export async function getDocFolders(): Promise<string[]> {
     return fs.readdirSync(DOCS_PATH).filter((v) => fs.lstatSync(v).isDirectory())
 }
@@ -42,7 +47,7 @@ export async function parseDoc(path: string): Promise<DocData> {
     const mat = matter(text);
     
     const slug = path.replace(DOCS_PATH + "/", "").replace(".md", "").split("/");
-    
+
     return {
         title: mat.data.title ?? slug,
         description: mat.data.description ?? "",
@@ -57,6 +62,35 @@ export async function getDocs(): Promise<DocData[]> {
     return Promise.all(names.map(async (filename) => {
         return await parseDoc(`${DOCS_PATH}/${filename}`);
     }));
+}
+
+export async function getDocsInCategories(): Promise<DocCategory[]> {
+    const docs = await getDocs();
+    let res: DocCategory[] = [];
+
+    function add(category: string, doc: DocData) {
+        for(const cat of res) {
+            if(cat.name == category) {
+                cat.docs.push(doc);
+                return;
+            }
+        }
+
+        res.push({
+            name: category,
+            docs: [doc]
+        });
+    }
+
+    docs.forEach((doc) => {
+        if(doc.slug.length == 1) {
+            add("other", doc);
+        } else {
+            add(doc.slug[0], doc);
+        }
+    });
+
+    return res;
 }
 
 export async function getDocBySlug(slug: string[]): Promise<DocData> {
