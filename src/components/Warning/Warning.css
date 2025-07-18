@@ -5,6 +5,7 @@
     border: 10px var(--panel-dark) dashed;
     color: black;
     padding: 5px 20px;
+    margin: 20px 5px;
 }
 
 .warning-block-content {
