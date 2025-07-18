@@ -18,5 +18,5 @@
 }
 
 .warning-block a:hover {
-    color: black;
+    color: var(--color1);
 }
