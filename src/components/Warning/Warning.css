@@ -1,0 +1,12 @@
+
+.warning-block {
+    background-color: rgb(255, 153, 0);
+    transform: skew(10deg);
+    border: 10px var(--panel-dark) dashed;
+    color: black;
+    padding: 5px 20px;
+}
+
+.warning-block-content {
+    transform: skew(-10deg);
+}
