@@ -1,3 +1,5 @@
+import { DISCORD_INVITE } from "@/globalData";
+
 import MailLink from "@/components/MailLink";
 import TextLink from "@/components/TextLink";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
@@ -12,7 +14,7 @@ export default function ContactPage() {
                     Email: <MailLink>wolfyxon@gmail.com</MailLink>
                 </p>
                 <p>
-                    Discord: <TextLink>https://discord.com/invite/RztUGCK</TextLink>
+                    Discord: <TextLink>{DISCORD_INVITE}</TextLink>
                 </p>
             </ArticlePage>
         </Page>

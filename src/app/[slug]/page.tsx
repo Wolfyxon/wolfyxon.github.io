@@ -1,4 +1,5 @@
 import Redirect from "@/components/Redirect";
+import { DISCORD_INVITE } from "@/globalData";
 
 type RedirectEntry = {
     aliases: string[],
@@ -8,7 +9,7 @@ type RedirectEntry = {
 const redirects: RedirectEntry[] = [
     {
         aliases: ["discord", "Discord"],
-        url: "https://discord.com/invite/RztUGCK"
+        url: DISCORD_INVITE
     },
     {
         aliases: ["github", "Github", "GitHub"],
