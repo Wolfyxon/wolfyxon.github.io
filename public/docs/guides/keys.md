@@ -7,6 +7,9 @@ description: How to import my public key and use it to verify releases
 I use **GnuPG** to sign the release files of the most of my projects.
 It ensures that I am the author of the files and they haven't been tampered with.
 
+**GnuPG** is a program for making digital signatures and encrypting data, based on the 
+[PGP system](https://en.wikipedia.org/wiki/Pretty_Good_Privacy).
+
 https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
 
