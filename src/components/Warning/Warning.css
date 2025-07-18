@@ -11,3 +11,12 @@
 .warning-block-content {
     transform: skew(-10deg);
 }
+
+.warning-block a {
+    color: black;
+    font-weight: bold;
+}
+
+.warning-block a:hover {
+    color: black;
+}
