@@ -8,7 +8,7 @@ pre code {
     display: block;
     padding: 10px;
     width: 90%;
-    overflow: scroll;
+    overflow: auto;
 }
 
 code:not(pre code) {
