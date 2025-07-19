@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { ReactNode } from "react";
 
 import "./OsePage.css";
+import Timestamp from "@/components/Timestamp";
 
 export const metadata: Metadata = {
     title: {
@@ -38,7 +39,7 @@ export default function OsePage(data: OsePageProps) {
 
         <hr />
 
-        <p>Wygenerowano na wolf841x.ose.net.pl , 2025/02/12 12:27:04 dla adresu 4096:1b3:69420:a7be:2137:17ff:cd02:ff55</p>
+        <p>Wygenerowano na wolf841x.ose.net.pl , <Timestamp /> dla adresu 4096:1b3:69420:a7be:2137:17ff:cd02:ff55</p>
         <p>
             <span className="msg">Zablokowano przez silnik analizy URL</span>
         </p>
