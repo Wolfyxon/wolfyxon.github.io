@@ -15,7 +15,7 @@ export default function PythonaOsePage() {
             dynamicCategory="INVALID_INDENTATION INVALID_TABS INVALID_SPACE">
 
             <p>
-                Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Języka Python, która jest włączona w Twoim języku.
+                Dostęp do tej strony został zablokowany ze względu na usługę Ochrona Języka Python, która jest włączona w Twoim interpreterze.
             </p>
 
             <p>Więcej o usłudze na <TextLink>https://www.python.org/</TextLink></p>
