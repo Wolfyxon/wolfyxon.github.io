@@ -101,6 +101,22 @@ function ProjectList() {
     );
 
     registerProject(
+        "Godot Together",
+        "Experimental Godot plugin for real time collaboration over the network.",
+        "assets/media/img/home/projectThumbnails/gdt.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/GodotTogether"
+            },
+            {
+                text: "Wiki",
+                url: "https://github.com/Wolfyxon/GodotTogether/wiki"
+            }
+        ]
+    )
+
+    registerProject(
         "MinVideo",
         "Easy to understand and implement uncompressed video format for limited environments.",
         "assets/media/img/home/projectThumbnails/MinVideo.webp",
