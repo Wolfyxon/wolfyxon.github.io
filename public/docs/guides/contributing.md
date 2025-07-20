@@ -19,6 +19,12 @@ Almost all my projects (including their source code) are available on my [GitHub
 That's where you can contribute.
 
 # Reporting bugs and submitting suggestions
+To report a bug or submit a suggestion in my project, find its GitHub repository and go to the **issues** tab.
+There you can find existing submissions (open and closed) and submit new ones.
+
+You will need a GitHub account to create and comment on issues.
+
+When creating issues, follow the rules below.
 
 ## 1. Check for duplicates
 Search for other reports (open and closed) if they describe the bug that you encountered or your idea.
