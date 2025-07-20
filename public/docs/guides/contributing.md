@@ -6,7 +6,7 @@ description: Rules you need to follow when contributing to my projects
 # Introduction
 
 Here are guidelines of how you may contribute to my projects and the rules you need to follow when doing so.
-They apply to all of my projects, however please also review the *CONTRIBUTING.md* (if present) for extra guidelines.
+They apply to all of my projects, however please also review their *CONTRIBUTING.md* (if present) guidelines specific to the project.
 
 **You may contribute by:**
 - Reporting bugs
