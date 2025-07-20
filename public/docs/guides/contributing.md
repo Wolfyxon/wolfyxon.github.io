@@ -18,14 +18,14 @@ They apply to all of my projects, however please also review the *CONTRIBUTING.m
 Almost all my projects (including their source code) are available on my [GitHub profile](https://github.com/wolfyxon).
 That's where you can contribute.
 
-# Rules for bug reports
+# Reporting bugs and submitting suggestions
 
 ## 1. Check for duplicates
-Search for other reports (open and closed) if they describe the bug that you encountered.
-If a the bug has already been reported, don't report it again.
+Search for other reports (open and closed) if they describe the bug that you encountered or your idea.
+If a the bug or suggestion has already been submitted, don't report it again.
 
 ## 2. Don't be vague 
-Provide as much detail about the bug as possible.
+Provide as much detail about the bug or suggested change/feature as possible.
 
 **Bad example:**  
 *Program doesn't work.*
@@ -33,7 +33,7 @@ Provide as much detail about the bug as possible.
 **Good example:**  
 *The program crashes with a message "image.png is missing in the binary" when you open it.*
 
-# Rules for writing code
+# Writing code
 
 ## 1. Follow the project's style
 
