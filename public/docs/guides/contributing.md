@@ -40,6 +40,18 @@ Provide as much detail about the bug or suggested change/feature as possible.
 *The program crashes with a message "image.png is missing in the binary" when you open it.*
 
 # Writing code
+To contribute by directly writing code, go to the project's GitHub repository and **fork** it to create a copy of it
+on your GitHub account.
+
+Then I recommend you **create a new branch** so you can submit paralel pull requests without waiting for your previous ones
+to be accepted and you won't have to revert all the commits on the main branch if they get rejected.
+
+After that, you can edit files in your fork as you wish, I strongly recommend you use **Git** over the GitHub web interface for committing files.
+
+When you're done, commit your changes and click **contribute** (it will appear) in your repo to create a pull request
+to send your code for review.
+
+Make sure to follow the rules below.
 
 ## 1. Follow the project's style
 
