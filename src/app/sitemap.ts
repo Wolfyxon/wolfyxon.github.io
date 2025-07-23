@@ -1,12 +1,11 @@
 import { MetadataRoute } from 'next'
+import { ROOT } from "@/globalData";
 
 type SiteMapEntry = {
     page: string,
     priority: number,
     changeFrequency?: "yearly" | "always" | "hourly" | "daily" | "weekly" | "monthly" | "never"
 }
-
-const ROOT = "https://wolfyxon.github.io/";
 
 export const dynamic = "force-static";
 
