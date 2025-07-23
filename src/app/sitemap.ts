@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             page: "ose",
             priority: 0.5
         }
-    ]
+    ];
 
     const now  = new Date();
 
