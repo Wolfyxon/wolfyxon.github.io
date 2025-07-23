@@ -8,6 +8,8 @@ type SiteMapEntry = {
 
 const ROOT = "https://wolfyxon.github.io/";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const sm: SiteMapEntry[] = [
         {
