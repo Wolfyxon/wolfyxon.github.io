@@ -1,7 +1,5 @@
 User-agent: *
 Disallow: /*ref=*
-
-User-agent: *
 Disallow: /assets/media/img/icons/
 Disallow: /assets/media/img/ose/
 Disallow: /assets/media/img/people/
