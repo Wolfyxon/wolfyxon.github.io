@@ -1,11 +1,13 @@
 User-agent: *
 Disallow: /*ref=*
-Disallow: /assets/media/img/icons/
-Disallow: /assets/media/img/ose/
-Disallow: /assets/media/img/people/
-Disallow: /assets/media/img/lighter/
-Disallow: /assets/media/img/home/banner.webp
-Disallow: /assets/media/video/
+
+# Do not enable for now
+#Disallow: /assets/media/img/icons/
+#Disallow: /assets/media/img/ose/
+#Disallow: /assets/media/img/people/
+#Disallow: /assets/media/img/lighter/
+#Disallow: /assets/media/img/home/banner.webp
+#Disallow: /assets/media/video/
 
 # AI scraper rules
 User-agent: AI2Bot
