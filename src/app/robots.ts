@@ -24,6 +24,10 @@ export default function robots(): MetadataRoute.Robots {
                     "Applebot-Extended",
                     "Bytespider",
                     "CCBot",
+                    "ChatGPT Agent",
+                    "ChatGPT-User",
+                    "Claude-User",
+                    "Claude-SearchBot",
                     "Claude-Web",
                     "ClaudeBot",
                     "cohere-ai",
@@ -33,8 +37,10 @@ export default function robots(): MetadataRoute.Robots {
                     "DuckAssistBot",
                     "FacebookBot",
                     "FriendlyCrawler",
+                    "Gemini-Deep-Research",
                     "Google-Extended",
                     "GoogleOther",
+                    "Google-CloudVertexBot",
                     "GoogleOther-Image",
                     "GoogleOther-Video",
                     "GPTBot",
@@ -53,12 +59,16 @@ export default function robots(): MetadataRoute.Robots {
                     "PerplexityBot",
                     "PetalBot",
                     "Scrapy",
+                    "thetradedesk",
                     "SemrushBot-OCOB",
                     "SemrushBot-SWA",
                     "Sidetrade indexer bot",
                     "Timpibot",
                     "VelenPublicWebCrawler",
-                    "Webzio-Extended"
+                    "Webzio-Extended",
+                    "yacybot",
+                    "YandexAdditional",
+                    "YandexAdditionalBot"
                 ]
             }
         ]
