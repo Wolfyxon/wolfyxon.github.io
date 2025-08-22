@@ -1,0 +1,4 @@
+Contact: mailto:wolfyxon@gmail.com
+Encryption: https://wolfyxon.github.io/resources/gpg/wolfyxon.txt
+Preferred-Languages: en, pl
+Expires: 2027-09-05T00:00:00.000Z
