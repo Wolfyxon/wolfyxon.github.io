@@ -45,7 +45,7 @@ export default function Home() {
       <div id="experience">
         <div id="software">
           <h2>Languages</h2>
-          <div>
+          <div className="observing anim-obs-left">
             <Badge icon="software/lang/rust.png" alt="Rust" />
             <Badge icon="software/lang/lua.svg" alt="Lua" />
             <Badge icon="software/lang/luau.svg" alt="Luau" />
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
 
           <h2>Libraries, frameworks and engines</h2>
-          <div>
+          <div className="observing anim-obs-left">
               <Badge icon="software/lib/react.svg" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.png" alt="NextJS" />
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
           <h2>Tools</h2>
-          <div>
+          <div className="observing anim-obs-left">
             <Badge icon="software/tools/vscode.svg" alt="VS Code" />
             <Badge icon="software/tools/vs.svg" alt="Visual Studio" />
             <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
@@ -102,7 +102,7 @@ export default function Home() {
         <div id="fields">
           <h2>Fields</h2>
           
-          <div>
+          <div className="observing anim-obs-fade">
             {
               [
                 "REST API usage & development",
