@@ -135,7 +135,7 @@ function ProjectList() {
     registerProject(
         "This site",
         "I think it deserves to be listed here since I put quite a lot of effort into it :]",
-        "assets/media/img/Wolfyxon.png",
+        "assets/media/img/Wolfyxon.webp",
         [
             {
                 text: "Source code",
