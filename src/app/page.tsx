@@ -61,7 +61,7 @@ export default function Home() {
             <Badge icon="software/lang/c.svg" alt="C" />
             <Badge icon="software/lang/cpp.svg" alt="C++" />
             <Badge icon="software/lang/csharp.svg" alt="C#" />
-            <Badge icon="software/lang/mysql.png" alt="MySQL" />
+            <Badge icon="software/lang/mysql.webp" alt="MySQL" />
             <Badge icon="software/lang/sqlite.svg" alt="SQLite" />
             <Badge icon="software/lang/postgresql.svg" alt="PostgreSQL" />
             <Badge icon="software/lang/bash.svg" alt="Bash" />
@@ -71,9 +71,9 @@ export default function Home() {
           <div className="observing anim-obs-left">
               <Badge icon="software/lib/react.svg" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
-              <Badge icon="software/framework/nextjs.png" alt="NextJS" />
-              <Badge icon="software/framework/nodejs.png" alt="NodeJS" />
-              <Badge icon="software/lib/discordjs.png" alt="DiscordJS" />
+              <Badge icon="software/framework/nextjs.webp" alt="NextJS" />
+              <Badge icon="software/framework/nodejs.webp" alt="NodeJS" />
+              <Badge icon="software/lib/discordjs.webp" alt="DiscordJS" />
               <Badge icon="software/lib/jquery.svg" alt="jQuery" />
               <Badge icon="software/framework/dotnet.svg" alt=".NET" />
               <Badge icon="software/framework/love2d.svg" alt="Love2D" />
