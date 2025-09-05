@@ -37,7 +37,7 @@ export default function Home() {
                   </div>
               </div>
 
-              <img src="/assets/media/img/Wolfyxon.png" id="banner-logo" alt="Wolfyxon logo" />
+              <img src="/assets/media/img/Wolfyxon.webp" id="banner-logo" alt="Wolfyxon logo" />
           </div>
       </div>
       
@@ -145,7 +145,7 @@ export default function Home() {
               <Collaborator 
                 name="KaroleusPL" 
                 description="Experienced artist, musician and beginner game developer. Also my best friend."
-                thumbnail="/assets/media/img/people/karoleus_pl.png"
+                thumbnail="/assets/media/img/people/karoleus_pl.webp"
                 website="https://karoleuspl.github.io"
                 >
                 
