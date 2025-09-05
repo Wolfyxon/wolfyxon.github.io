@@ -46,7 +46,7 @@ export default function Home() {
         <div id="software">
           <h2>Languages</h2>
           <div className="observing anim-obs-left">
-            <Badge icon="software/lang/rust.png" alt="Rust" />
+            <Badge icon="software/lang/rust.webp" alt="Rust" />
             <Badge icon="software/lang/lua.svg" alt="Lua" />
             <Badge icon="software/lang/luau.svg" alt="Luau" />
             <Badge icon="software/framework/godot.svg" alt="GDScript" />

@@ -20,7 +20,7 @@ export const websites: {[id: string]: WebsiteData} = {
     "soundcloud": {
         url: "soundcloud.com",
         name: "SoundCloud",
-        icon: "soundcloud.png"
+        icon: "soundcloud.webp"
     },
     "discord": {
         url: "discord.gg",
@@ -30,7 +30,7 @@ export const websites: {[id: string]: WebsiteData} = {
     "x": {
         url: "x.com",
         name: "X (Twitter)",
-        icon: "x.png"
+        icon: "x.webp"
     }
 }
 
