@@ -63,6 +63,23 @@ button:active {
     transition: 0.3s;
 }
 
+/* --== Inputs ==-- */
+
+input[type="text"] {
+    background: none;
+    color: white;
+    font-size: 125%;
+    background-color: var(--color1);
+    border: none;
+    border-bottom: 2px solid var(--color5);
+    transition: 0.2s;
+}
+
+input[type="text"]:focus {
+    border-bottom-color: var(--color3);
+    outline: none;
+}
+
 /* --== Faded ==-- */
 /* Used for old and deprecated content */
 
