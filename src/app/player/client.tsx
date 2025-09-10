@@ -1,18 +1,25 @@
 "use client";
 
 import ImageButton from "@/components/ImageButton/ImageButton";
+import { lerp } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 
 type AudioData = {
     elm?: ReactNode,
     file: File,
+    volume: number,
     audio: HTMLAudioElement
 }
+
+let currentAudio: AudioData | null = null;
 
 export default function PlayerPageClient() {
     const [uploadError, setUploadError] = useState<string>("");
     const [audios, setAudios] = useState<AudioData[]>([]);
-
+    
+    const [fadeSpeed, setFadeSpeed] = useState(0.01);
+    const [globalVolume, setGlobalVolume] = useState(1);
+    
     function addUploadError(text: string) {
         setUploadError(uploadError + text + "\n");
     }
@@ -25,7 +32,8 @@ export default function PlayerPageClient() {
 
         const data: AudioData = {
             audio: new Audio(URL.createObjectURL(file)),
-            file: file
+            file: file,
+            volume: 0,
         }
 
         const key = `audio-${file.size}-${Math.floor(Date.now())}`;
@@ -49,6 +57,30 @@ export default function PlayerPageClient() {
 
         inp.files = null;
     }
+
+
+    let lastFrame = Date.now();
+    
+    setInterval(() => {
+        const now = Date.now();
+        const delta = now - lastFrame;
+        lastFrame = now;
+
+        for(const audio of audios) {
+            let vol = 0;
+
+            if(audio == currentAudio) {
+                vol = 1;
+            }
+
+            audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
+            audio.audio.volume = audio.volume * globalVolume;
+
+            if(audio.volume == 0) {
+                audio.audio.pause();
+            }
+        }
+    });
 
     useEffect(() => {
         window.addEventListener("dragenter", (e) => {
@@ -95,8 +127,19 @@ export default function PlayerPageClient() {
 }
 
 function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<AudioData[]>>}) {
+    const audio = props.data.audio;
+    
     function remove() {
         props.setAudios((prev) => prev.filter((v) => v != props.data));
+    }
+
+    function playPause() {
+        if(audio.paused) {
+            currentAudio = props.data;
+            audio.play();
+        } else {
+            currentAudio = null;
+        }
     }
 
     return (
@@ -105,7 +148,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
 
             <input type="text" defaultValue={props.data.file.name} placeholder="Unnamed" className="audio-title" />
             
-            <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" />
+            <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
             <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
         </div>
