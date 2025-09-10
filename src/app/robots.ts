@@ -14,6 +14,12 @@ export default function robots(): MetadataRoute.Robots {
                 ]
             },
             {
+                userAgent: "*",
+                disallow: [
+                    "/blog"
+                ]
+            },
+            {
                 disallow: "/",
                 userAgent: [
                     "AI2Bot",
