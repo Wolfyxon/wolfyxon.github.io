@@ -1,0 +1,8 @@
+.img-button {
+    padding: 1px 2px;
+}
+
+.img-button-img {
+    object-fit: contain;
+    width: 1.5em;
+}
