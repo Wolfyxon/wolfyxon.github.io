@@ -156,9 +156,11 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
         }
     }
 
+    const name = props.data.file.name;
+
     return (
         <div className="audio" ref={ref}>
-            <input type="text" defaultValue={props.data.file.name} placeholder="Unnamed" className="audio-title" />
+            <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
