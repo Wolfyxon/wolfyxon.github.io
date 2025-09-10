@@ -109,7 +109,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
-            <ImageButton img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
+            <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
         </div>
     );
 }
