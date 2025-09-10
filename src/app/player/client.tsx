@@ -1,7 +1,7 @@
 "use client";
 
 import ImageButton from "@/components/ImageButton/ImageButton";
-import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+import { ChangeEvent, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 
 type AudioData = {
     elm?: ReactNode,
@@ -33,8 +33,8 @@ export default function PlayerPageClient() {
         }
 
         const key = `audio-${file.size}-${Math.floor(Date.now())}`;
-        const elm = (<AudioEntry data={data} key={key} />);
-        
+        const elm = (<AudioEntry data={data} setAudios={setAudios} key={key} />);
+
         data.elm = elm;
 
         setAudios(prev => [...prev, data]);
@@ -98,14 +98,18 @@ export default function PlayerPageClient() {
     </>);
 }
 
-function AudioEntry(props: {data: AudioData}) {
+function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<AudioData[]>>}) {
+    function remove() {
+        props.setAudios((prev) => prev.filter((v) => v != props.data));
+    }
+
     return (
         <div className="audio">
             <input type="text" defaultValue={props.data.file.name} placeholder="Unnamed" className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
-            <ImageButton img="/assets/media/img/icons/google/delete.svg" />
+            <ImageButton img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
         </div>
     );
 }
