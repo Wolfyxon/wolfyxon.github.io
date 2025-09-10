@@ -15,16 +15,16 @@ header > * {
 /* Title */
 #header-title {
     width: 65%;
+    font-size: 70%;
     font-weight: bold;
     background-color: var(--color1);
     transform: skew(20deg);
     transition: 0.1s;
 }
 
-
 #header-title > * {
     transform: skew(-20deg);
-    padding: 10px;
+    padding: 8px;
 }
 
 #header-title a {
