@@ -76,7 +76,7 @@ export default function PlayerPageClient() {
     }, []);
 
     return (<>
-        <div id="audios">{audios.map((audio) => audio.elm)}</div>
+        <div id="audios">{audios.length != 0 ? audios.map((audio) => audio.elm) : <p className="faded">No audios yet...</p>}</div>
 
         <div id="upload-container">
             <div id="upload-error">{uploadError}</div>
