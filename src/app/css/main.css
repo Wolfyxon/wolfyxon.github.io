@@ -46,7 +46,7 @@ button {
     border-radius: 5px;
     font-size: medium;
     font-weight: bold;
-    padding: 0.8%;
+    padding: 8px;
     background: var(--color1);
     color: white;
     transition: 0.1s;
