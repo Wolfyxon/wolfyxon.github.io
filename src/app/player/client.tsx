@@ -22,7 +22,7 @@ export default function PlayerPageClient() {
         }
 
         const elm = (<AudioEntry file={file} key={`audio-${file.size}-${Math.floor(Date.now())}`} />);
-        setAudios([...audios, elm]);
+        setAudios(prev => [...prev, elm]);
     }
 
     function filesSelected(e: ChangeEvent) {
