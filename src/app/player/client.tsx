@@ -3,9 +3,15 @@
 import ImageButton from "@/components/ImageButton/ImageButton";
 import { ChangeEvent, ReactNode, useEffect, useState } from "react";
 
+type AudioData = {
+    elm?: ReactNode,
+    file: File,
+    audio: HTMLAudioElement
+}
+
 export default function PlayerPageClient() {
     const [uploadError, setUploadError] = useState<string>("");
-    const [audios, setAudios] = useState<ReactNode[]>([]);
+    const [audios, setAudios] = useState<AudioData[]>([]);
 
     function addUploadError(text: string) {
         setUploadError(uploadError + text + "\n");
@@ -21,8 +27,15 @@ export default function PlayerPageClient() {
             return;
         }
 
-        const elm = (<AudioEntry file={file} key={`audio-${file.size}-${Math.floor(Date.now())}`} />);
-        setAudios(prev => [...prev, elm]);
+        const data: AudioData = {
+            audio: new Audio(URL.createObjectURL(file)),
+            file: file
+        }
+
+        const elm = (<AudioEntry data={data} key={`audio-${file.size}-${Math.floor(Date.now())}`} />);
+        data.elm = elm;
+
+        setAudios(prev => [...prev, data]);
     }
 
     function filesSelected(e: ChangeEvent) {
@@ -65,7 +78,7 @@ export default function PlayerPageClient() {
     }, []);
 
     return (<>
-        <div id="audios">{audios}</div>
+        <div id="audios">{audios.map((audio) => audio.elm)}</div>
 
         <div id="upload-container">
             <div id="upload-error">{uploadError}</div>
@@ -83,10 +96,10 @@ export default function PlayerPageClient() {
     </>);
 }
 
-function AudioEntry(props: {file: File}) {
+function AudioEntry(props: {data: AudioData}) {
     return (
         <div className="audio">
-            <input type="text" defaultValue={props.file.name} placeholder="Unnamed" className="audio-title" />
+            <input type="text" defaultValue={props.data.file.name} placeholder="Unnamed" className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
