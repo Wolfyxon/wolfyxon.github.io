@@ -3,12 +3,7 @@
     gap: 10px;
     margin-bottom: 8px;
     font-size: 100%;
-}
-
-.audio-status {
-    transition: var(--transition);
-    background-color: var(--panel-dark);
-    width: 0.5em;
+    padding: 4px;
 }
 
 .audio.current {
