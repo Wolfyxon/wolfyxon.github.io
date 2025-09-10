@@ -130,6 +130,9 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
     const audio = props.data.audio;
     
     function remove() {
+        audio.pause();
+        audio.remove();
+
         props.setAudios((prev) => prev.filter((v) => v != props.data));
     }
 
