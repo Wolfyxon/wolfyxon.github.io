@@ -1,7 +1,7 @@
 "use client";
 
 import ImageButton from "@/components/ImageButton/ImageButton";
-import { lerp } from "@/utils";
+import { clamp, lerp } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 
 type AudioData = {
@@ -74,7 +74,7 @@ export default function PlayerPageClient() {
             }
 
             audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
-            audio.audio.volume = audio.volume * globalVolume;
+            audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
 
             if(audio.volume == 0) {
                 audio.audio.pause();
