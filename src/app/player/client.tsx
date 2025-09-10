@@ -17,12 +17,8 @@ export default function PlayerPageClient() {
         setUploadError(uploadError + text + "\n");
     }
 
-    function isAudio(type: string) {
-        return type === "application/ogg" || type.startsWith("audio/");
-    }
-
     function addAudio(file: File) {
-        if(!isAudio(file.type)) {
+        if(!(file.type === "application/ogg" || file.type.startsWith("audio/"))) {
             addUploadError(`${file.name} is not an audio file: ${file.type}`);
             return;
         }
