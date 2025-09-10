@@ -12,3 +12,25 @@ footer {
 footer > div a {
     padding-right: 5px;
 }
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 10px;
+    border-left: 1px solid silver;
+}
+
+.footer-column a {
+    text-decoration: none;
+}
+
+.footer-column-title {
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+#footer-columns {
+    display: flex;
+    gap: 10px;
+}
