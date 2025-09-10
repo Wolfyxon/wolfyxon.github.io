@@ -32,7 +32,9 @@ export default function PlayerPageClient() {
             file: file
         }
 
-        const elm = (<AudioEntry data={data} key={`audio-${file.size}-${Math.floor(Date.now())}`} />);
+        const key = `audio-${file.size}-${Math.floor(Date.now())}`;
+        const elm = (<AudioEntry data={data} key={key} />);
+        
         data.elm = elm;
 
         setAudios(prev => [...prev, data]);
