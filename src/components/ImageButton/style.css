@@ -10,6 +10,10 @@
     height: 100%;
 }
 
+.img-button-label:not(:empty) {
+    padding-right: 5px;
+}
+
 .img-button-img {
     object-fit: contain;
     height: 1.5em;
