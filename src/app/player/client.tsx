@@ -2,10 +2,11 @@
 
 import ImageButton from "@/components/ImageButton/ImageButton";
 import { clamp, lerp } from "@/utils";
-import { ChangeEvent, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
+import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useRef, useState } from "react";
 
 type AudioData = {
     elm?: ReactNode,
+    ref?: RefObject<null>,
     file: File,
     volume: number,
     audio: HTMLAudioElement
@@ -68,9 +69,16 @@ export default function PlayerPageClient() {
 
         for(const audio of audios) {
             let vol = 0;
+            const elm = audio.ref?.current as HTMLDivElement | undefined
 
             if(audio == currentAudio) {
                 vol = 1;
+
+                if(elm) {
+                    elm.style.background = "var(--color3)";
+                }
+            } else if(elm) {
+                elm.style.background = "";
             }
 
             audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
@@ -128,6 +136,9 @@ export default function PlayerPageClient() {
 
 function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<AudioData[]>>}) {
     const audio = props.data.audio;
+    const ref = useRef(null);
+
+    props.data.ref = ref;
     
     function remove() {
         audio.pause();
@@ -146,7 +157,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
     }
 
     return (
-        <div className="audio">
+        <div className="audio" ref={ref}>
             <input type="text" defaultValue={props.data.file.name} placeholder="Unnamed" className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
