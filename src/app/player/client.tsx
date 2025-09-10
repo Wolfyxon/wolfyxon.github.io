@@ -1,15 +1,76 @@
 "use client";
 
 import ImageButton from "@/components/ImageButton/ImageButton";
+import { ChangeEvent, ReactNode, useEffect, useState } from "react";
 
 export default function PlayerPageClient() {
+    const [uploadError, setUploadError] = useState<string>("");
+    const [audios, setAudios] = useState<ReactNode[]>([]);
+
+    function addUploadError(text: string) {
+        setUploadError(uploadError + text + "\n");
+    }
+
+    function isAudio(type: string) {
+        return type === "application/ogg" || type.startsWith("audio/");
+    }
+
+    function addAudio(file: File) {
+        if(!isAudio(file.type)) {
+            addUploadError(`${file.name} is not an audio file: ${file.type}`);
+            return;
+        }
+
+        const elm = (<AudioEntry file={file} key={`audio-${file.size}-${Math.floor(Date.now())}`} />);
+        setAudios([...audios, elm]);
+    }
+
+    function filesSelected(e: ChangeEvent) {
+        const inp: HTMLInputElement = e.target as HTMLInputElement;
+
+        if(!inp.files) {
+            return;
+        }
+
+        for(const f of inp.files) {
+            addAudio(f);
+        }
+
+        inp.files = null;
+    }
+
+    useEffect(() => {
+        window.addEventListener("dragenter", (e) => {
+            e.preventDefault();
+        });
+
+        window.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+
+        window.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            const files = e.dataTransfer?.files;
+
+            if(!files) {
+                setUploadError("No files");
+                return;
+            }
+
+            for(const f of files) {
+                addAudio(f);
+            }
+        });
+    }, []);
+
     return (<>
-        <div id="audios">
-            <AudioEntry title="hi" />
-        </div>
+        <div id="audios">{audios}</div>
 
         <div id="upload-container">
-            <div>Add audio by dragging and dropping files or using <input type="file" /></div>
+            <div id="upload-error">{uploadError}</div>
+
+            <div>Add audio by dragging and dropping files or using <input onChange={filesSelected} type="file" /></div>
             <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>
         </div>
 
@@ -22,10 +83,10 @@ export default function PlayerPageClient() {
     </>);
 }
 
-function AudioEntry(props: {title: string}) {
+function AudioEntry(props: {file: File}) {
     return (
         <div className="audio">
-            <input type="text" defaultValue={props.title} placeholder="Unnamed" className="audio-title" />
+            <input type="text" defaultValue={props.file.name} placeholder="Unnamed" className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" />
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
