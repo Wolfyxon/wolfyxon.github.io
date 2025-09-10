@@ -9,7 +9,9 @@ export default function ImageButton(props: {img: string, className?: string, id?
 
     return (
         <button onClick={props.onClick} id={props.id} className={className}>
-            <img src={props.img} className="img-button-img" />
+            <div className="img-button-img-container">
+                <img src={props.img} className="img-button-img" />
+            </div>
         </button>
     );
 }
