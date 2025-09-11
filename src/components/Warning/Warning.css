@@ -15,10 +15,6 @@
     font-weight: bold;
 }
 
-.warning-block a:hover {
-    color: var(--color1);
-}
-
 .warning-block-title {
     color: var(--warning);
 }
