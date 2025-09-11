@@ -206,6 +206,7 @@ function AudioEntry(props: {
                       "/assets/media/img/icons/google/pause.svg"
                     : "/assets/media/img/icons/google/play.svg"
                 }
+                className="play-pause-btn"
                 onClick={playPause} />
 
             {/*

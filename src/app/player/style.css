@@ -12,6 +12,10 @@
     background-color: var(--color4);
 }
 
+.play-pause-btn {
+    min-width: 5.5em;
+}
+
 #main {
     max-width: 1500px;
     margin: 0 auto;
