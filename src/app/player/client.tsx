@@ -72,17 +72,10 @@ export default function PlayerPageClient() {
     
             for(const audio of audios) {
                 let vol = 0;
-                //const elm = audio.ref?.current as HTMLDivElement | undefined
-    
+                
                 if(audio == currentAudio) {
                     vol = 1;
-    
-                    /*/if(elm) {
-                        elm.style.background = "var(--color3)";
-                    }*/
-                }/* else if(elm) {
-                    elm.style.background = "";
-                }*/
+                }
     
                 audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
                 audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
@@ -138,7 +131,8 @@ export default function PlayerPageClient() {
                 currentAudio={currentAudio}
                 setAudios={setAudios} 
                 setCurrentAudio={setCurrentAudio}
-                key={`audio-${i}-${audio.file.size}`} />) 
+                key={`audio-${i}-${audio.file.size}`} />)
+            
             : <p className="faded">No audios yet...</p>}</div>
 
         <div id="upload-container">
@@ -199,7 +193,7 @@ function AudioEntry(props: {
     const name = removeExtension(props.data.file.name);
 
     return (
-        <div className="audio" ref={ref}>
+        <div className={`audio ${props.currentAudio == props.data ? "current" : ""}`} ref={ref}>
             <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
