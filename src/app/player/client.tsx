@@ -161,8 +161,17 @@ export default function PlayerPageClient() {
 
         <div id="panel">
             <div id="controls">
-                <ImageButton label="Pause" img="/assets/media/img/icons/google/pause.svg" onClick={pause} />
-                <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
+                <ImageButton 
+                    label="Pause" 
+                    img="/assets/media/img/icons/google/pause.svg"
+                    disabled={!currentAudio}
+                    onClick={pause}/>
+                
+                <ImageButton 
+                    label="Stop" 
+                    img="/assets/media/img/icons/google/stop.svg" 
+                    disabled={!currentAudio}
+                    onClick={stop} />
             </div>
         </div>
     </>);
