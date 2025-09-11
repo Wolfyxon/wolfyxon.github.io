@@ -4,7 +4,7 @@ export default function ImageButton(props: {img: string, className?: string, id?
     let className = "img-button";
     
     if(props.className) {
-        className += props.className;
+        className += " " + props.className;
     }
 
     return (
