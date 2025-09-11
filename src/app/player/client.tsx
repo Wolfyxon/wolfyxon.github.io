@@ -1,7 +1,7 @@
 "use client";
 
 import ImageButton from "@/components/ImageButton/ImageButton";
-import { clamp, lerp } from "@/utils";
+import { clamp, lerp, removeExtension } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useRef, useState } from "react";
 
 type AudioData = {
@@ -169,7 +169,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
         currentAudio = null;
     }
 
-    const name = props.data.file.name;
+    const name = removeExtension(props.data.file.name);
 
     return (
         <div className="audio" ref={ref}>
