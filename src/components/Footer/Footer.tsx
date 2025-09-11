@@ -14,7 +14,6 @@ export default function Footer() {
                 <Column title="Super secret">
                     <a href="/ose">OSE</a>
                     <a href="/archive/lighter/tgdod">Lighter</a>
-                    <a href="/stuff/ttt">Tic Tac Toe</a>
                     <a href="/3ds-web-stuff">3DS Web Stuff</a>
                 </Column>
 
