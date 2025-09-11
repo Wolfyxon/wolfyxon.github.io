@@ -102,16 +102,29 @@ export default function PlayerPageClient() {
     }, [currentAudio]);
 
     useEffect(() => {
+        const body = document.body;
+
         window.addEventListener("dragenter", (e) => {
             e.preventDefault();
+            body.classList.add("drag");
         });
 
         window.addEventListener("dragover", (e) => {
             e.preventDefault();
+            body.classList.add("drag");
         });
+
+        window.addEventListener("dragend", (e) => {
+            body.classList.remove("drag");
+        });
+
+        window.addEventListener("dragleave", (e) => {
+            body.classList.remove("drag");
+        })
 
         window.addEventListener("drop", (e) => {
             e.preventDefault();
+            body.classList.remove("drag");
 
             const files = e.dataTransfer?.files;
 
