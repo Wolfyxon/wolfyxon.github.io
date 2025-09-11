@@ -53,12 +53,16 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:disabled {
+    opacity: 0.5;
+}
+
+button:hover:not(:disabled) {
     opacity: 0.8;
     transition: 0.1s;
 }
 
-button:active {
+button:active:not(:disabled) {
     background: var(--color2);
     transition: 0.3s;
 }
