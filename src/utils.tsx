@@ -1,4 +1,14 @@
 
+export function removeExtension(fileName: string): string {
+    const split = fileName.split(".");
+    
+    if(split.length > 1) {
+        split.pop();
+    }
+
+    return split.join(".");
+}
+
 export function clamp(num: number, min: number, max: number): number {
     if(num < min) return min;
     if(num > max) return max;
