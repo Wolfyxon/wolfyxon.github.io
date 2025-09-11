@@ -2,7 +2,7 @@
 
 import ImageButton from "@/components/ImageButton/ImageButton";
 import { clamp, lerp, removeExtension } from "@/utils";
-import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useRef, useState } from "react";
+import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
 
 type AudioData = {
     elm?: ReactNode,
@@ -12,8 +12,6 @@ type AudioData = {
     audio: HTMLAudioElement,
     stopped: boolean
 }
-
-//let currentAudio: AudioData | null = null;
 
 export default function PlayerPageClient() {
     const [uploadError, setUploadError] = useState<string>("");
@@ -65,9 +63,9 @@ export default function PlayerPageClient() {
         let frame: number;
 
         const loop = () => {
-            console.log("a");
             const now = Date.now();
             const delta = now - lastFrame;
+
             lastFrame = now;
     
             for(const audio of audios) {
@@ -157,23 +155,24 @@ function AudioEntry(props: {
         setAudios: Dispatch<SetStateAction<AudioData[]>>, 
         setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>
     }) {
-    const audio = props.data.audio;
-    const ref = useRef(null);
 
-    props.data.ref = ref;
+    const data = props.data;
+    const audio = data.audio;
     
+    const isCurrent = props.currentAudio == data;
+
     function remove() {
         audio.pause();
         audio.remove();
 
-        props.setAudios((prev) => prev.filter((v) => v != props.data));
+        props.setAudios((prev) => prev.filter((v) => v != data));
     }
 
     function playPause() {
-        if(props.currentAudio == props.data) {
+        if(isCurrent) {
             props.setCurrentAudio(null);
         } else {
-            props.setCurrentAudio(props.data);
+            props.setCurrentAudio(data);
             
             if(audio.paused) {    
                 audio.play();
@@ -182,7 +181,7 @@ function AudioEntry(props: {
     }
 
     function stop() {
-        if(props.currentAudio != props.data) {
+        if(!isCurrent) {
             return;
         }
 
@@ -193,7 +192,7 @@ function AudioEntry(props: {
     const name = removeExtension(props.data.file.name);
 
     return (
-        <div className={`audio ${props.currentAudio == props.data ? "current" : ""}`} ref={ref}>
+        <div className={`audio ${isCurrent ? "current" : ""}`}>
             <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
