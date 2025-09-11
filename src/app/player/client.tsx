@@ -42,6 +42,17 @@ export default function PlayerPageClient() {
         setAudios(prev => [...prev, data]);
     }
 
+    function stop() {
+        if(currentAudio) {
+            currentAudio.stopped = true;
+            setCurrentAudio(null);
+        }
+    }
+
+    function pause() {
+        setCurrentAudio(null);
+    }
+
     function filesSelected(e: ChangeEvent) {
         const inp: HTMLInputElement = e.target as HTMLInputElement;
 
@@ -150,8 +161,8 @@ export default function PlayerPageClient() {
 
         <div id="panel">
             <div id="controls">
-                <ImageButton label="Pause all" img="/assets/media/img/icons/google/pause.svg" />
-                <ImageButton label="Stop all" img="/assets/media/img/icons/google/stop.svg" />
+                <ImageButton label="Pause" img="/assets/media/img/icons/google/pause.svg" onClick={pause} />
+                <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
             </div>
         </div>
     </>);
