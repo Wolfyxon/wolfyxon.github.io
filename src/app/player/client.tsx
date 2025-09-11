@@ -73,6 +73,10 @@ export default function PlayerPageClient() {
                 
                 if(audio == currentAudio) {
                     vol = 1;
+
+                    if(audio.audio.currentTime == audio.audio.duration) {
+                        setCurrentAudio(null);
+                    }
                 }
     
                 audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
