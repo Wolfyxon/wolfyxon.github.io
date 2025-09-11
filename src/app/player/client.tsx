@@ -9,7 +9,8 @@ type AudioData = {
     ref?: RefObject<null>,
     file: File,
     volume: number,
-    audio: HTMLAudioElement
+    audio: HTMLAudioElement,
+    stopped: boolean
 }
 
 let currentAudio: AudioData | null = null;
@@ -35,6 +36,7 @@ export default function PlayerPageClient() {
             audio: new Audio(URL.createObjectURL(file)),
             file: file,
             volume: 0,
+            stopped: false
         }
 
         const key = `audio-${file.size}-${Math.floor(Date.now())}`;
@@ -86,6 +88,12 @@ export default function PlayerPageClient() {
 
             if(audio != currentAudio && audio.volume <= 0.05) {
                 audio.audio.pause();
+
+                if(audio.stopped) {
+                    audio.audio.currentTime = 0;
+                    audio.stopped = false;                  
+                }
+
             }
         }
     });
@@ -156,6 +164,11 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
         }
     }
 
+    function stop() {
+        props.data.stopped = true;
+        currentAudio = null
+    }
+
     const name = props.data.file.name;
 
     return (
@@ -163,7 +176,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
             <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
             
             <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
-            <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" />
+            <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
             <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
         </div>
     );
