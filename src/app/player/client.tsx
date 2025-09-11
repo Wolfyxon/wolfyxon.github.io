@@ -41,18 +41,6 @@ export default function PlayerPageClient() {
             stopped: false
         }
 
-        const key = `audio-${file.size}-${Math.floor(Date.now())}`;
-
-        const elm = (<AudioEntry 
-            data={data} 
-            currentAudio={currentAudio}
-            setAudios={setAudios} 
-            setCurrentAudio={setCurrentAudio}
-            key={key} />
-        );
-
-        data.elm = elm;
-
         setAudios(prev => [...prev, data]);
     }
 
@@ -84,17 +72,17 @@ export default function PlayerPageClient() {
     
             for(const audio of audios) {
                 let vol = 0;
-                const elm = audio.ref?.current as HTMLDivElement | undefined
+                //const elm = audio.ref?.current as HTMLDivElement | undefined
     
                 if(audio == currentAudio) {
                     vol = 1;
     
-                    if(elm) {
+                    /*/if(elm) {
                         elm.style.background = "var(--color3)";
-                    }
-                } else if(elm) {
+                    }*/
+                }/* else if(elm) {
                     elm.style.background = "";
-                }
+                }*/
     
                 audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
                 audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
@@ -144,7 +132,14 @@ export default function PlayerPageClient() {
     }, []);
 
     return (<>
-        <div id="audios">{audios.length != 0 ? audios.map((audio) => audio.elm) : <p className="faded">No audios yet...</p>}</div>
+        <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
+            <AudioEntry 
+                data={audio} 
+                currentAudio={currentAudio}
+                setAudios={setAudios} 
+                setCurrentAudio={setCurrentAudio}
+                key={`audio-${i}-${audio.file.size}`} />) 
+            : <p className="faded">No audios yet...</p>}</div>
 
         <div id="upload-container">
             <div id="upload-error">{uploadError}</div>
@@ -181,15 +176,22 @@ function AudioEntry(props: {
     }
 
     function playPause() {
-        if(audio.paused) {
-            props.setCurrentAudio(props.data);
-            audio.play();
-        } else {
+        if(props.currentAudio == props.data) {
             props.setCurrentAudio(null);
+        } else {
+            props.setCurrentAudio(props.data);
+            
+            if(audio.paused) {    
+                audio.play();
+            }
         }
     }
 
     function stop() {
+        if(props.currentAudio != props.data) {
+            return;
+        }
+
         props.data.stopped = true;
         props.setCurrentAudio(null);
     }
