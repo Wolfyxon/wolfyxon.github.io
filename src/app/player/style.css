@@ -4,6 +4,7 @@
     margin-bottom: 8px;
     font-size: 100%;
     padding: 4px;
+    transition: 0.5s;
 }
 
 .audio.current {
