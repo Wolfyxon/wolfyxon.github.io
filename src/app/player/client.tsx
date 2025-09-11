@@ -78,7 +78,7 @@ export default function PlayerPageClient() {
                 audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
                 audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
     
-                if(audio != currentAudio && audio.volume <= 0.05) {
+                if(audio != currentAudio && audio.volume <= 0.02) {
                     audio.audio.pause();
     
                     if(audio.stopped) {
