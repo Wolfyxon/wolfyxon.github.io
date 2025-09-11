@@ -1,9 +1,8 @@
 
 .warning-block {
-    background-color: rgb(255, 153, 0);
+    background-color: var(--panel-dark);
     transform: skew(10deg);
-    border: 10px var(--panel-dark) dashed;
-    color: black;
+    border: 10px var(--warning) dashed;
     padding: 5px 20px;
     margin: 20px 5px;
 }
@@ -13,10 +12,13 @@
 }
 
 .warning-block a {
-    color: black;
     font-weight: bold;
 }
 
 .warning-block a:hover {
     color: var(--color1);
+}
+
+.warning-block-title {
+    color: var(--warning);
 }

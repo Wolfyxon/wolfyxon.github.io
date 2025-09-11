@@ -16,8 +16,7 @@ export const metadata: Metadata = {
 export default async function Blog() {
     return (
         <Page category="Blog">
-            <Warning>
-                <h1>Archived</h1>
+            <Warning title="Archived">
                 <p>
                     The blog has been archived and will no longer be updated.
                 </p>
