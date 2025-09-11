@@ -166,7 +166,7 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
 
     function stop() {
         props.data.stopped = true;
-        currentAudio = null
+        currentAudio = null;
     }
 
     const name = props.data.file.name;
