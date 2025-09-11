@@ -172,6 +172,7 @@ function AudioEntry(props: {
         if(isCurrent) {
             props.setCurrentAudio(null);
         } else {
+            data.stopped = false;
             props.setCurrentAudio(data);
             
             if(audio.paused) {    
