@@ -13,7 +13,7 @@ type AudioData = {
     stopped: boolean
 }
 
-let currentAudio: AudioData | null = null;
+//let currentAudio: AudioData | null = null;
 
 export default function PlayerPageClient() {
     const [uploadError, setUploadError] = useState<string>("");
@@ -22,6 +22,8 @@ export default function PlayerPageClient() {
     const [fadeSpeed, setFadeSpeed] = useState(0.01);
     const [globalVolume, setGlobalVolume] = useState(1);
     
+    const [currentAudio, setCurrentAudio] = useState<AudioData | null>(null);
+
     function addUploadError(text: string) {
         setUploadError(uploadError + text + "\n");
     }
@@ -40,7 +42,14 @@ export default function PlayerPageClient() {
         }
 
         const key = `audio-${file.size}-${Math.floor(Date.now())}`;
-        const elm = (<AudioEntry data={data} setAudios={setAudios} key={key} />);
+
+        const elm = (<AudioEntry 
+            data={data} 
+            currentAudio={currentAudio}
+            setAudios={setAudios} 
+            setCurrentAudio={setCurrentAudio}
+            key={key} />
+        );
 
         data.elm = elm;
 
@@ -64,39 +73,50 @@ export default function PlayerPageClient() {
 
     let lastFrame = Date.now();
     
-    setInterval(() => {
-        const now = Date.now();
-        const delta = now - lastFrame;
-        lastFrame = now;
+    useEffect(() => {
+        let frame: number;
 
-        for(const audio of audios) {
-            let vol = 0;
-            const elm = audio.ref?.current as HTMLDivElement | undefined
-
-            if(audio == currentAudio) {
-                vol = 1;
-
-                if(elm) {
-                    elm.style.background = "var(--color3)";
+        const loop = () => {
+            console.log("a");
+            const now = Date.now();
+            const delta = now - lastFrame;
+            lastFrame = now;
+    
+            for(const audio of audios) {
+                let vol = 0;
+                const elm = audio.ref?.current as HTMLDivElement | undefined
+    
+                if(audio == currentAudio) {
+                    vol = 1;
+    
+                    if(elm) {
+                        elm.style.background = "var(--color3)";
+                    }
+                } else if(elm) {
+                    elm.style.background = "";
                 }
-            } else if(elm) {
-                elm.style.background = "";
+    
+                audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
+                audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
+    
+                if(audio != currentAudio && audio.volume <= 0.05) {
+                    audio.audio.pause();
+    
+                    if(audio.stopped) {
+                        audio.audio.currentTime = 0;
+                        audio.stopped = false;                  
+                    }
+    
+                }
             }
 
-            audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
-            audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
+            frame = requestAnimationFrame(loop);
+        };
 
-            if(audio != currentAudio && audio.volume <= 0.05) {
-                audio.audio.pause();
+        frame = requestAnimationFrame(loop);
+        return () => cancelAnimationFrame(frame);
 
-                if(audio.stopped) {
-                    audio.audio.currentTime = 0;
-                    audio.stopped = false;                  
-                }
-
-            }
-        }
-    });
+    }, [currentAudio]);
 
     useEffect(() => {
         window.addEventListener("dragenter", (e) => {
@@ -142,7 +162,12 @@ export default function PlayerPageClient() {
     </>);
 }
 
-function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<AudioData[]>>}) {
+function AudioEntry(props: {
+        data: AudioData, 
+        currentAudio: AudioData | null,
+        setAudios: Dispatch<SetStateAction<AudioData[]>>, 
+        setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>
+    }) {
     const audio = props.data.audio;
     const ref = useRef(null);
 
@@ -157,16 +182,16 @@ function AudioEntry(props: {data: AudioData, setAudios: Dispatch<SetStateAction<
 
     function playPause() {
         if(audio.paused) {
-            currentAudio = props.data;
+            props.setCurrentAudio(props.data);
             audio.play();
         } else {
-            currentAudio = null;
+            props.setCurrentAudio(null);
         }
     }
 
     function stop() {
         props.data.stopped = true;
-        currentAudio = null;
+        props.setCurrentAudio(null);
     }
 
     const name = removeExtension(props.data.file.name);
