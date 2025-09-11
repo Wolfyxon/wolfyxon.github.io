@@ -186,12 +186,12 @@ function AudioEntry(props: {
     }
 
     function stop() {
-        if(!isCurrent) {
-            return;
+        if(isCurrent) {
+            data.stopped = true;
+            props.setCurrentAudio(null);
+        } else {
+            data.audio.currentTime = 0;
         }
-
-        props.data.stopped = true;
-        props.setCurrentAudio(null);
     }
 
     const name = removeExtension(props.data.file.name);
