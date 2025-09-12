@@ -1,8 +1,10 @@
 "use client";
 
+import Checkbox from "@/components/Checkbox/Checkbox";
 import ImageButton from "@/components/ImageButton/ImageButton";
 import { clamp, lerp, removeExtension } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
+import HeaderSwitch from "./HeaderSwitch";
 
 type AudioData = {
     elm?: ReactNode,
@@ -173,6 +175,9 @@ export default function PlayerPageClient() {
                     disabled={!currentAudio}
                     onClick={stop} />
             </div>
+        </div>
+        <div id="settings">
+            <HeaderSwitch />
         </div>
     </>);
 }
