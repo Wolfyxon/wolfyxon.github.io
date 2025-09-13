@@ -12,7 +12,7 @@ export default function LeaveBlocker(props: {enabled?: boolean}) {
             window.addEventListener("beforeunload", beforeunload);
             return () => removeEventListener("beforeunload", beforeunload);
         }
-    }, []);
+    });
 
     return (<></>)
 }
