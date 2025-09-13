@@ -1,4 +1,13 @@
 
+export type ElmBase = {
+    id?: string,
+    className?: string
+}
+
+export function classJoin(base: string, extra?: string): string {
+    return `${base} ${extra ? extra : ""}`.trimEnd();
+}
+
 export function removeExtension(fileName: string): string {
     const split = fileName.split(".");
     
