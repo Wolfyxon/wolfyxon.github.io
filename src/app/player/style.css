@@ -70,3 +70,22 @@ body.drag #upload-container {
 #controls > * {
     font-size: 150%;
 }
+
+#settings {
+    margin-top: 10px;
+    gap: 20px;
+    display: flex;
+}
+
+#switches {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: stretch;
+    justify-self: stretch;
+}
+
+#ranges {
+    flex: 1;
+}

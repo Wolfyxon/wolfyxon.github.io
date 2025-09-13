@@ -180,8 +180,13 @@ export default function PlayerPageClient() {
             </div>
         </div>
         <div id="settings">
-            <HeaderSwitch />
-            <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} />
+            <div id="switches">
+                <HeaderSwitch />
+                <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} />
+            </div>
+            <div id="ranges">
+                nothing yet
+            </div>
         </div>
 
         <LeaveBlocker enabled={audios.length != 0 && askBeforeLeaving} />
