@@ -162,7 +162,7 @@ export default function PlayerPageClient() {
         <div id="upload-container">
             <div id="upload-error">{uploadError}</div>
 
-            <div>Add audio by dragging and dropping files or using <input onChange={filesSelected} type="file" accept="audio/*" /></div>
+            <div>Add audio by dragging and dropping files or <input onChange={filesSelected} type="file" accept="audio/*" aria-label="upload an audio file" /></div>
             <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>
         </div>
 
