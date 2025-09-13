@@ -39,11 +39,15 @@
     height: 1.25em;
     border: 2px solid white;
     border-radius: 2px;
-    transition: 0.1s;
+    transition: background-color background-image 0.1s;
 }
 
 .checkbox-container input:checked {
     background-color: white;
+    background-image: url("/assets/media/img/icons/google/check.svg");
+    background-size: 100%;
+    background-origin: border-box;
+    background-blend-mode: difference;
 }
 
 .checkbox-container-inner:has(input:active) {
