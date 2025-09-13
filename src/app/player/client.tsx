@@ -22,6 +22,8 @@ export default function PlayerPageClient() {
     
     const [fadeSpeed, setFadeSpeed] = useState(0.01);
     const [globalVolume, setGlobalVolume] = useState(1);
+
+    const [askBeforeLeaving, setAskBeforeLeaving] = useState(true);
     
     const [currentAudio, setCurrentAudio] = useState<AudioData | null>(null);
 
@@ -179,9 +181,10 @@ export default function PlayerPageClient() {
         </div>
         <div id="settings">
             <HeaderSwitch />
+            <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} />
         </div>
 
-        <LeaveBlocker enabled={audios.length != 0} />
+        <LeaveBlocker enabled={audios.length != 0 && askBeforeLeaving} />
     </>);
 }
 
