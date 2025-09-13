@@ -9,7 +9,13 @@ export default function ImageButton(props: {
     disabled?: boolean
 } & ElmBase) {
     return (
-        <button onClick={props.onClick} id={props.id} className={classJoin("img-button", props.className)} aria-label={props.ariaLabel ?? props.label} disabled={props.disabled}>
+        <button 
+                id={props.id} 
+                className={classJoin("img-button", props.className)} 
+                onClick={props.onClick} 
+                aria-label={props.ariaLabel ?? props.label} 
+                disabled={props.disabled}
+            >
             <div className="img-button-img-container">
                 <img src={props.img} className="img-button-img" alt="icon" />
                 <span className="img-button-label">{props.label}</span>
