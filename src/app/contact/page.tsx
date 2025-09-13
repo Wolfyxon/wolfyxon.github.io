@@ -1,7 +1,7 @@
 import { DISCORD_INVITE } from "@/globalData";
 
-import MailLink from "@/components/MailLink";
-import TextLink from "@/components/TextLink";
+import MailLink from "@/components/links/MailLink";
+import TextLink from "@/components/links/TextLink";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
 
