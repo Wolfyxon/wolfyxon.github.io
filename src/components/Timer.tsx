@@ -1,15 +1,14 @@
 "use client"
 
+import { ElmBase, classJoin } from "@/utils";
 import { useEffect, useRef } from "react";
 
 export type TimerProps = {
     untilDate?: Date, 
     seconds?: number,
-    id?: string,
-    className?: string, 
     children: string,
     onEnd?: () => any 
-};
+} & ElmBase;
 
 export default function Timer(data: TimerProps) {
     const timerRef = useRef(null);
@@ -73,5 +72,5 @@ export default function Timer(data: TimerProps) {
         update();
     }, []);
 
-    return <span ref={timerRef} className={data.className ?? "" + " timer"} id={data.id}></span>
+    return <span ref={timerRef} className={classJoin("timer", data.className)} id={data.id}></span>
 }
