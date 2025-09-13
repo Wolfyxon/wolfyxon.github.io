@@ -7,8 +7,8 @@ import Collaborator from "../components/home/Collaborator";
 import SocialBadge, { websites } from "../components/SocialBadge";
 import Page from "@/layouts/Page";
 
-import "./css/animations.css";
-import "./css/home.css";
+import "@/css/animations.css";
+import "@/css/home.css";
 import Tag from "@/components/Tag/Tag";
 
 export const metadata: Metadata = {

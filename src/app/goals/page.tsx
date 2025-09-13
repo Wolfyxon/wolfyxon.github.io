@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Goal from "./Goal";
 import GoalList from "./GoalList";
 
-import "../css/animations.css";
+import ".@/css/animations.css";
 import "./Goals.css";
 import Page from "@/layouts/Page";
 

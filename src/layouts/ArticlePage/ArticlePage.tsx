@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 import ArticleNav from "./nav/ArticleNav";
 import FancyHeading from "@/components/FancyHeading/FancyHeading";
 
-import "@/app/css/animations.css";
+import "@/css/animations.css";
 import "./ArticlePage.css";
 
 export default async function ArticlePage(data: {children: ReactNode, headerElement?: ReactNode, footerElement?: ReactNode, src?: string, title?: string}) {

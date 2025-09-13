@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ClientWorker from "../components/essential/ClientWorker";
 
-import "./css/global.css";
+import "@/css/global.css";
 
 export const metadata: Metadata = {
   title: {
