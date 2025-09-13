@@ -5,7 +5,7 @@ import ImageButton from "@/components/ImageButton/ImageButton";
 import { clamp, lerp, removeExtension } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
 import HeaderSwitch from "./HeaderSwitch";
-import LeaveBlocker from "@/components/LeaveBlocker";
+import LeaveBlocker from "@/components/func/LeaveBlocker";
 
 type AudioData = {
     elm?: ReactNode,

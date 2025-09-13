@@ -1,4 +1,4 @@
-import Redirect from "@/components/Redirect";
+import Redirect from "@/components/func/Redirect";
 import { DISCORD_INVITE } from "@/globalData";
 
 type RedirectEntry = {

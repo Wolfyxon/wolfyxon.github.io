@@ -1,4 +1,4 @@
-import Redirect from "@/components/Redirect";
+import Redirect from "@/components/func/Redirect";
 import { Metadata } from "next";
 
 import "@/css/main.css";
