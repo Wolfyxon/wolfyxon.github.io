@@ -4,12 +4,12 @@ import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Badge from "../components/Badge/Badge";
 import Collaborator from "../components/home/Collaborator";
-import SocialBadge, { websites } from "../components/SocialBadge";
+import SocialBadge, { websites } from "../components/badges/SocialBadge";
 import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
-import Tag from "@/components/Tag/Tag";
+import Tag from "@/components/badges/Tag/Tag";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website"
