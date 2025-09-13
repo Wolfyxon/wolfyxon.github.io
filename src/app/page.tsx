@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
-import Badge from "../components/Badge/Badge";
+import Badge from "../components/badges/Badge/Badge";
 import Collaborator from "../components/home/Collaborator";
 import SocialBadge, { websites } from "../components/badges/SocialBadge";
 import Page from "@/layouts/Page";
