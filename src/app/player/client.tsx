@@ -24,6 +24,7 @@ export default function PlayerPageClient() {
     const [globalVolume, setGlobalVolume] = useState(1);
 
     const [askBeforeLeaving, setAskBeforeLeaving] = useState(true);
+    const [askBeforeDeleting, setAskBeforeDeleting] = useState(false);
     
     const [currentAudio, setCurrentAudio] = useState<AudioData | null>(null);
 
@@ -153,6 +154,7 @@ export default function PlayerPageClient() {
                 currentAudio={currentAudio}
                 setAudios={setAudios} 
                 setCurrentAudio={setCurrentAudio}
+                askBeforeDeleting={askBeforeDeleting}
                 key={`audio-${i}-${audio.file.size}`} />)
             
             : <p className="faded">No audios yet...</p>}</div>
@@ -183,6 +185,7 @@ export default function PlayerPageClient() {
             <div id="switches">
                 <HeaderSwitch />
                 <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} />
+                <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} />
             </div>
             <div id="ranges">
                 nothing yet
@@ -197,7 +200,8 @@ function AudioEntry(props: {
         data: AudioData, 
         currentAudio: AudioData | null,
         setAudios: Dispatch<SetStateAction<AudioData[]>>, 
-        setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>
+        setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>,
+        askBeforeDeleting?: boolean
     }) {
 
     const data = props.data;
@@ -206,6 +210,10 @@ function AudioEntry(props: {
     const isCurrent = props.currentAudio == data;
 
     function remove() {
+        if(props.askBeforeDeleting && !confirm("Are you sure you want to remove this audio?")) {
+            return
+        }
+
         audio.pause();
         audio.remove();
 
