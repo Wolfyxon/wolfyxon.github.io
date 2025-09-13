@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import OsePage from "../OsePage";
-import TextLink from "@/components/TextLink";
+import TextLink from "@/components/links/TextLink";
 
 import "./style.css";
 

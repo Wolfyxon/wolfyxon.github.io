@@ -1,4 +1,4 @@
-import TextLink from "@/components/TextLink";
+import TextLink from "@/components/links/TextLink";
 
 import "./lighter.css";
 
