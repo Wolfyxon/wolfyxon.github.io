@@ -6,6 +6,7 @@ import { clamp, lerp, removeExtension } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
 import HeaderSwitch from "./HeaderSwitch";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
+import Slider from "@/components/input/Slider/Slider";
 
 type AudioData = {
     elm?: ReactNode,
@@ -198,7 +199,8 @@ export default function PlayerPageClient() {
                 <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} />
             </div>
             <div id="ranges">
-                nothing yet
+                <Slider label="Global volume" />
+                <Slider label="Fade speed" />
             </div>
         </div>
 

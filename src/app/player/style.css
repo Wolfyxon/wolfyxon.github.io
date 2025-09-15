@@ -77,15 +77,11 @@ body.drag #upload-container {
     display: flex;
 }
 
-#switches {
+#settings > * {
     display: flex;
     flex: 1;
     gap: 5px;
     flex-direction: column;
     justify-content: stretch;
     justify-self: stretch;
-}
-
-#ranges {
-    flex: 1;
 }
