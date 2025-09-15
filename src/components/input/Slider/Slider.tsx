@@ -7,6 +7,7 @@ export default function Slider(props: {
     ariaLabel?: string, 
     min?: number,
     max?: number,
+    step?: number
     onChange?: ((val: number) => void)
     value?: number
 }) {
@@ -40,6 +41,7 @@ export default function Slider(props: {
                     onChange={changed}
                     min={props.min}
                     max={props.max}
+                    step={props.step}
                 />
 
                 <input type="number" 
@@ -48,6 +50,7 @@ export default function Slider(props: {
                     onChange={changed}
                     min={props.min}
                     max={props.max}
+                    step={props.step}
                 />
             </label>
         </div>
