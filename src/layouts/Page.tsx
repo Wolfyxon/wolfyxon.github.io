@@ -2,17 +2,24 @@ import Footer from "@/components/essential/Footer/Footer";
 import Header from "@/components/essential/Header/Header";
 
 import "@/css/main.css";
+import Root from "./Root";
+import ClientWorker from "@/components/essential/ClientWorker";
 
 export default function Page(data: { children: any, category: string, homeUrl?: string }) {
     return (
-        <>
-            <Header title={data.category} home={data.homeUrl} />
+        <Root>
+            <head></head>
+            <body>
+                <Header title={data.category} home={data.homeUrl} />
 
-            <div id="main">
-                {data.children}
-            </div>
+                <div id="main">
+                    {data.children}
+                </div>
 
-            <Footer />
-        </>
+                <Footer />
+
+                <ClientWorker />
+            </body>
+        </Root>
     );
 }
