@@ -147,6 +147,15 @@ export default function PlayerPageClient() {
         });
     }, []);
 
+    const fileInput = (
+        <input 
+            onChange={filesSelected} 
+            type="file" 
+            accept="audio/*" 
+            aria-label="upload an audio file" 
+        />
+    );
+
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
             <AudioEntry 
@@ -162,7 +171,7 @@ export default function PlayerPageClient() {
         <div id="upload-container">
             <div id="upload-error">{uploadError}</div>
 
-            <div>Add audio by dragging and dropping files or <input onChange={filesSelected} type="file" accept="audio/*" aria-label="upload an audio file" /></div>
+            <div>Add audio by dragging and dropping files or {fileInput}</div>
             <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>
         </div>
 
