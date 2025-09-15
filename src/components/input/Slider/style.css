@@ -12,19 +12,19 @@
     border-radius: 5px;
     border: 2px solid var(--color5);
     width: 100%;
-    padding: 5px;
+    padding: 3.5px;
     gap: 5px;
 }
 
 .slider-label {
     text-align: center;
-    flex: 0.2;
+    flex: 0.3;
 }
 
 .slider-inner input[type="number"] {
     flex: 0.2;
     font-family: monospace;
-    font-size: 120%;
+    font-size: 125%;
     outline: none;
     border: none;
     border-bottom: 2px solid var(--color5);
