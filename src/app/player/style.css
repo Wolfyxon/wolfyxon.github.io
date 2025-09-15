@@ -14,7 +14,7 @@ body.drag #upload-container {
 .audio {
     display: flex;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     font-size: 100%;
     padding: 4px;
     border-radius: 8px;
