@@ -23,6 +23,7 @@
     flex: 1;
     color: silver;
     text-align: right;
+    text-wrap: nowrap;
 }
 
 .checkbox-container-state::before {
