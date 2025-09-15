@@ -1,19 +1,28 @@
 
 .slider {
-    width: fit-content;
+    min-width: fit-content;
 }
 
 .slider-inner {
-    font-size: 120%;
+    font-size: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     background-color: var(--color1);
+    border-radius: 5px;
+    border: 2px solid var(--color5);
     width: 100%;
     padding: 5px;
     gap: 5px;
 }
 
+.slider-label {
+    text-align: center;
+    flex: 0.2;
+}
+
 .slider-inner input[type="number"] {
+    flex: 0.2;
     font-family: monospace;
     font-size: 120%;
     outline: none;
@@ -21,7 +30,7 @@
     border-bottom: 2px solid var(--color5);
     background: var(--color1);
     color: white;
-    max-width: 4em;
+    min-width: 4em;
     transition: 0.2s;
     padding: 2px 8px;
 }
@@ -32,9 +41,11 @@
 
 
 .slider-inner input[type="range"] {
+    flex: 1;
+    height: 0.8em;
     appearance: none;
-    background: none;
-    border: 2px solid var(--color5);
+    background: var(--color5);
+    border: 2px solid var(--color2);
 }
 
 /* Range thumb styles */

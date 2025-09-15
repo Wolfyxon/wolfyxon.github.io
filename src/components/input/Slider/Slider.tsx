@@ -33,7 +33,7 @@ export default function Slider(props: {
     return (
         <div className="slider">
             <label className="slider-inner">
-                {props.label}
+                <span className="slider-label">{props.label}</span>
 
                 <input type="range" 
                     aria-label={props.ariaLabel}
