@@ -153,6 +153,7 @@ export default function PlayerPageClient() {
             type="file" 
             accept="audio/*" 
             aria-label="upload an audio file" 
+            multiple
         />
     );
 
