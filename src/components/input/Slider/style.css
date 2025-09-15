@@ -1,10 +1,49 @@
 
+.slider {
+    width: fit-content;
+}
+
 .slider-inner {
+    font-size: 120%;
     display: flex;
     align-items: center;
+    background-color: var(--color1);
+    width: 100%;
+    padding: 5px;
     gap: 5px;
 }
 
+.slider-inner input[type="number"] {
+    font-family: monospace;
+    font-size: 120%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color5);
+    background: var(--color1);
+    color: white;
+    max-width: 4em;
+    transition: 0.2s;
+    padding: 2px 8px;
+}
+
+.slider-inner input[type="number"]:focus {
+    border-bottom-color: var(--color3);
+}
+
+
 .slider-inner input[type="range"] {
-    
+    appearance: none;
+    background: none;
+    border: 2px solid var(--color5);
+}
+
+/* Range thumb styles */
+
+.slider-inner input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    background-color: var(--color4);
+    width: 1em;
+    height: 2em;
+    border: 0;
+    border-radius: 5px;
 }

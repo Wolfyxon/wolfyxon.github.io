@@ -31,7 +31,7 @@ export default function Slider(props: {
     }
 
     return (
-        <div>
+        <div className="slider">
             <label className="slider-inner">
                 {props.label}
 
