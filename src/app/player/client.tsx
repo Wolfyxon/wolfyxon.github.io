@@ -1,7 +1,7 @@
 "use client";
 
-import Checkbox from "@/components/Checkbox/Checkbox";
-import ImageButton from "@/components/ImageButton/ImageButton";
+import Checkbox from "@/components/input/Checkbox/Checkbox";
+import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { clamp, lerp, removeExtension } from "@/utils";
 import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
 import HeaderSwitch from "./HeaderSwitch";

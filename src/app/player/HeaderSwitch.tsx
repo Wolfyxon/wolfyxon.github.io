@@ -1,6 +1,6 @@
 "use client";
 
-import Checkbox from "@/components/Checkbox/Checkbox";
+import Checkbox from "@/components/input/Checkbox/Checkbox";
 
 export default function HeaderSwitch() {    
     function change(val: boolean) {
