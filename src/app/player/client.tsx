@@ -117,7 +117,7 @@ export default function PlayerPageClient() {
         frame = requestAnimationFrame(loop);
         return () => cancelAnimationFrame(frame);
 
-    }, [currentAudio, globalVolume]);
+    }, [currentAudio, globalVolume, fadeSpeed]);
 
     useEffect(() => {
         const body = document.body;
@@ -200,7 +200,7 @@ export default function PlayerPageClient() {
             </div>
             <div id="ranges">
                 <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} />
-                <Slider label="Fade speed" />
+                <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} />
             </div>
         </div>
 
