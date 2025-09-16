@@ -3,12 +3,12 @@ export type HeadComponent = React.ReactElement<React.HTMLAttributes<HTMLHeadElem
 export type BodyComponent = React.ReactElement<React.HTMLAttributes<HTMLBodyElement>, 'body'>
 
 
-export default function Root(props: {children: [HeadComponent, BodyComponent], lang?: string}) {
+export default function Root(props: {children: [HeadComponent, BodyComponent]}) {
     const head = props.children[0];
     const body = props.children[1];
     
     return (
-        <html lang={props.lang}>
+        <html lang="en">
             <head>
                 <meta name="google-site-verification" content="CEp8re5xPxShHGl3Z04NXVKOKE-OgXujmu6jYVBIXqE" />
 
