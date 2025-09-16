@@ -22,7 +22,7 @@ export default function PlayerPageClient() {
     const [audios, setAudios] = useState<AudioData[]>([]);
     
     const [fadeSpeed, setFadeSpeed] = useState(0.01);
-    const [globalVolume, setGlobalVolume] = useState(1);
+    const [globalVolume, setGlobalVolume] = useState(100);
 
     const [askBeforeLeaving, setAskBeforeLeaving] = useState(true);
     const [askBeforeDeleting, setAskBeforeDeleting] = useState(false);
@@ -98,7 +98,7 @@ export default function PlayerPageClient() {
                 }
     
                 audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
-                audio.audio.volume = clamp(audio.volume * globalVolume, 0, 1);
+                audio.audio.volume = clamp(audio.volume * (globalVolume / 100), 0, 1);
     
                 if(audio != currentAudio && audio.volume <= 0.02) {
                     audio.audio.pause();
@@ -117,7 +117,7 @@ export default function PlayerPageClient() {
         frame = requestAnimationFrame(loop);
         return () => cancelAnimationFrame(frame);
 
-    }, [currentAudio]);
+    }, [currentAudio, globalVolume]);
 
     useEffect(() => {
         const body = document.body;
@@ -199,7 +199,7 @@ export default function PlayerPageClient() {
                 <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} />
             </div>
             <div id="ranges">
-                <Slider label="Global volume" />
+                <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} />
                 <Slider label="Fade speed" />
             </div>
         </div>
