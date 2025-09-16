@@ -158,7 +158,9 @@ export default function PlayerPageClient() {
         />
     );
 
+    const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
+    
 
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
@@ -196,9 +198,11 @@ export default function PlayerPageClient() {
         </div>
         <div id="settings">
             <div id="switches">
-                <HeaderSwitch />
-                <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} />
-                <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} />
+                <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
+
+                <HeaderSwitch disabled={lockChecks} />
+                <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
+                <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
             </div>
             <div id="ranges">
                 <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />

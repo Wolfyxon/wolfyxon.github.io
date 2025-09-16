@@ -2,7 +2,7 @@
 
 import Checkbox from "@/components/input/Checkbox/Checkbox";
 
-export default function HeaderSwitch() {    
+export default function HeaderSwitch(props: {disabled?: boolean}) {    
     function change(val: boolean) {
         const hdr = document.querySelector("header")!;
 
@@ -16,6 +16,6 @@ export default function HeaderSwitch() {
     }
 
     return (
-        <Checkbox label="Hide header" onChange={change} />
+        <Checkbox label="Hide header" onChange={change} disabled={props.disabled} />
     );
 }

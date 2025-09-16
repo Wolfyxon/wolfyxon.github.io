@@ -5,6 +5,7 @@ export default function Checkbox(props: {
     label: string, 
     checked?: boolean, 
     flat?: boolean, 
+    disabled?: boolean,
     onChange?: (value: boolean) => any}
 ) {
     const [check, setCheck] = useState(props.checked ?? false);
@@ -24,7 +25,7 @@ export default function Checkbox(props: {
     return (
         <label className={`checkbox-container ${flat}`}>
             <div className="checkbox-container-inner">
-                <input type="checkbox" aria-label={props.label} defaultChecked={check} onChange={change} />
+                <input type="checkbox" aria-label={props.label} defaultChecked={check} onChange={change} disabled={props.disabled} />
                 <div>{props.label}</div>
                 <div className="checkbox-container-state">{String(check)}</div>
             </div>
