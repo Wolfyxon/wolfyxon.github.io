@@ -1,7 +1,12 @@
 import { ChangeEvent, useState } from "react";
 import "./style.css";
 
-export default function Checkbox(props: {label: string, checked?: boolean, flat?: boolean, onChange?: (value: boolean) => any}) {
+export default function Checkbox(props: {
+    label: string, 
+    checked?: boolean, 
+    flat?: boolean, 
+    onChange?: (value: boolean) => any}
+) {
     const [check, setCheck] = useState(props.checked ?? false);
 
     function change(e: ChangeEvent) {
