@@ -67,6 +67,10 @@
     opacity: 0.8;
 }
 
+.checkbox-container-inner:has(input:disabled) {
+    opacity: 0.5;
+}
+
 .checkbox-container:not(.flat)
 .checkbox-container-inner:has(input:checked) {
     background-color: var(--color5);

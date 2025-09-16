@@ -59,6 +59,10 @@
     opacity: 0.8;
 }
 
+.slider-inner:has(input:disabled) {
+    opacity: 0.5;
+}
+
 /* Range thumb styles */
 
 .slider-inner input[type="range"]::-moz-range-thumb {
