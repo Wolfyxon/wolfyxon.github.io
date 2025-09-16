@@ -158,6 +158,8 @@ export default function PlayerPageClient() {
         />
     );
 
+    const [lockSliders, setLockSliders] = useState(false);
+
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
             <AudioEntry 
@@ -199,8 +201,10 @@ export default function PlayerPageClient() {
                 <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} />
             </div>
             <div id="ranges">
-                <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} />
-                <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} />
+                <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
+
+                <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} disabled={lockSliders} />
+                <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} disabled={lockSliders} />
             </div>
         </div>
 
