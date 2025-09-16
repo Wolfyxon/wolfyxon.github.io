@@ -17,7 +17,7 @@ export default function SansOsePage() {
             dynamicCategory="GENOCIDE CHARA LOVE XP">
 
             <p>
-                Dostęp do tej strony został zablokowany ze względu na usługę Gwardia Królewska, która jest włączona w Podziemiu.
+                Czy ty chcesz mieć zły czas?
             </p>
 
             <p>Więcej o usłudze na <TextLink>https://undertale.com/</TextLink></p>
