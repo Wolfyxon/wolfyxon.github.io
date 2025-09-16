@@ -61,6 +61,7 @@
 .checkbox-container.flat input:checked {
     border-color: var(--color2);
     background-color: var(--color2);
+    background-blend-mode: lighten;
 }
 
 .checkbox-container-inner:has(input:active) {
