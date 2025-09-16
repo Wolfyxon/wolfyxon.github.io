@@ -1,10 +1,11 @@
 code {
-    background-color: black;
-    border: 2px solid var(--panel-dark);
+    background-color: var(--panel-dark);
+    border: 2px solid var(--panel-slightly-dark);
     border-radius: 8px;
 }
 
 pre code {
+    font-size: 115%;
     display: block;
     padding: 15px;
     width: 90%;
