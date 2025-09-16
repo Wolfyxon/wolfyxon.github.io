@@ -2,15 +2,17 @@ import { ChangeEvent, useState } from "react"
 
 import "./style.css";
 
-export default function Slider(props: {
+export type SliderProps = {
     label?: string,
     ariaLabel?: string, 
     min?: number,
     max?: number,
     step?: number
-    onChange?: ((val: number) => void)
     value?: number
-}) {
+    onChange?: ((val: number) => void)
+}
+
+export default function Slider(props: SliderProps) {
     const [value, setValue] = useState(props.value ?? (props.min ?? 0));
 
     function changed(e: ChangeEvent) {
