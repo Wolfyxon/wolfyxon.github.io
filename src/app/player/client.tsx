@@ -7,6 +7,7 @@ import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect,
 import HeaderSwitch from "./HeaderSwitch";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";
+import HSeparator from "@/components/separators/HSeparator";
 
 type AudioData = {
     elm?: ReactNode,
@@ -199,6 +200,7 @@ export default function PlayerPageClient() {
         <div id="settings">
             <div id="switches">
                 <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
+                <HSeparator />
 
                 <HeaderSwitch disabled={lockChecks} />
                 <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
@@ -206,6 +208,7 @@ export default function PlayerPageClient() {
             </div>
             <div id="ranges">
                 <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
+                <HSeparator />
 
                 <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} disabled={lockSliders} />
                 <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} disabled={lockSliders} />

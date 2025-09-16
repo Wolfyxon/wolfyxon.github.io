@@ -1,0 +1,11 @@
+
+.separator {
+    background-color: var(--color5);
+    --sep-size: 1px;
+}
+
+.separator.h {
+    width: 100%;
+    height: var(--sep-size);
+    margin-bottom: 5px;
+}
