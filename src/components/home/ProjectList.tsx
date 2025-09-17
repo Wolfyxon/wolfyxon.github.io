@@ -115,23 +115,7 @@ function ProjectList() {
             }
         ]
     )
-
-    registerProject(
-        "MinVideo",
-        "Easy to understand and implement uncompressed video format for limited environments.",
-        "assets/media/img/home/projectThumbnails/MinVideo.webp",
-        [
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/MinVideo"
-            },
-            {
-                text: "Web player",
-                url: "https://wolfyxon.github.io/MinVideo/js/test"
-            }
-        ]
-    );
-
+    
     registerProject(
         "This site",
         "I think it deserves to be listed here since I put quite a lot of effort into it :]",
