@@ -14,9 +14,9 @@ export default function About() {
             <ArticlePage title="About me">
                 <section>
                     <h1 id="who-am-i">Who am I</h1>
-                    <p>
+                    <h2>
                         Hi, I'm Wolfyxon.
-                    </p>
+                    </h2>
                     <p>
                         I'm a young programmer guy from Poland. <br />
                         I've been coding since I was 9 years old and it truly is my passion. 
