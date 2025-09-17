@@ -60,7 +60,7 @@ function ProjectList() {
 
     registerProject(
         "3DS Web stuff",
-        "A collection of browser games and tools made for the Nintendo 3DS browser.",
+        "A collection of browser games and tools made for the Nintendo 3DS browser with some DSi support.",
         "assets/media/img/home/projectThumbnails/3dsWebStuff.webp",
         [
             {
