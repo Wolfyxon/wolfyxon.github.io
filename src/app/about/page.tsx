@@ -58,6 +58,9 @@ export default function About() {
                         I would call myself a perfectionist in that <br/>
                         (expect me to have a mental breakdown when looking at your code).
                     </p>
+                    <p>
+                        Oh also don't look at my old projects please...
+                    </p>
                 </section>
 
                 <section>
