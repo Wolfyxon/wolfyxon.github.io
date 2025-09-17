@@ -75,6 +75,22 @@ function ProjectList() {
     );
 
     registerProject(
+        "Godot Together",
+        "Experimental Godot plugin for real time collaboration over the network.",
+        "assets/media/img/home/projectThumbnails/gdt.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/GodotTogether"
+            },
+            {
+                text: "Wiki",
+                url: "https://github.com/Wolfyxon/GodotTogether/wiki"
+            }
+        ]
+    );
+
+    registerProject(
         "The Great Doors of Door", 
         "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
         "assets/media/img/home/projectThumbnails/tgdod.webp", 
@@ -99,22 +115,6 @@ function ProjectList() {
             }
         ]
     );
-
-    registerProject(
-        "Godot Together",
-        "Experimental Godot plugin for real time collaboration over the network.",
-        "assets/media/img/home/projectThumbnails/gdt.webp",
-        [
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/GodotTogether"
-            },
-            {
-                text: "Wiki",
-                url: "https://github.com/Wolfyxon/GodotTogether/wiki"
-            }
-        ]
-    )
     
     registerProject(
         "This site",
