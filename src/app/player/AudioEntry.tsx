@@ -68,12 +68,7 @@ export default function AudioEntry(props: {
                 }
                 className="play-pause-btn"
                 onClick={playPause} />
-
-            {/*
-                isCurrent ?
-                <ImageButton label="Pause" img="/assets/media/img/icons/google/pause.svg" onClick={playPause} />
-                : <ImageButton label="Play" img="/assets/media/img/icons/google/play.svg" onClick={playPause} />
-            */}
+            
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
             <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
         </div>
