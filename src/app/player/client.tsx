@@ -13,7 +13,7 @@ type AudioData = {
     elm?: ReactNode,
     ref?: RefObject<null>,
     file: File,
-    volume: number,
+    targetVolume: number,
     audio: HTMLAudioElement,
     stopped: boolean
 }
@@ -43,7 +43,7 @@ export default function PlayerPageClient() {
         const data: AudioData = {
             audio: new Audio(URL.createObjectURL(file)),
             file: file,
-            volume: 0,
+            targetVolume: 0,
             stopped: false
         }
 
@@ -98,10 +98,10 @@ export default function PlayerPageClient() {
                     }
                 }
     
-                audio.volume = lerp(audio.volume, vol, fadeSpeed * 0.1 * delta);
-                audio.audio.volume = clamp(audio.volume * (globalVolume / 100), 0, 1);
+                audio.targetVolume = lerp(audio.targetVolume, vol, fadeSpeed * 0.1 * delta);
+                audio.audio.volume = clamp(audio.targetVolume * (globalVolume / 100), 0, 1);
     
-                if(audio != currentAudio && audio.volume <= 0.02) {
+                if(audio != currentAudio && audio.targetVolume <= 0.02) {
                     audio.audio.pause();
     
                     if(audio.stopped) {
