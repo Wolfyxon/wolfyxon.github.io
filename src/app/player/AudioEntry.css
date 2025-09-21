@@ -1,0 +1,22 @@
+
+.audio {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2px;
+    font-size: 100%;
+    padding: 4px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.audio.current {
+    background-color: var(--color4);
+}
+
+.audio-title {
+    flex: 1;
+}
+
+.audio .play-pause-btn {
+    min-width: 5.5em;
+}
