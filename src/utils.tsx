@@ -4,6 +4,18 @@ export type ElmBase = {
     className?: string
 }
 
+export function removeEmpty(strings: string[]): string[] {
+    const res = [];
+
+    for(const str of strings) {
+        if(str.trim().length != 0) {
+            res.push(str);
+        }
+    }
+
+    return res;
+}
+
 export function classJoin(base: string, extra?: string): string {
     return `${base} ${extra ? extra : ""}`.trimEnd();
 }
