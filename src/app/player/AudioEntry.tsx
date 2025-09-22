@@ -10,7 +10,8 @@ export default function AudioEntry(props: {
     currentAudio: AudioData | null,
     setAudios: Dispatch<SetStateAction<AudioData[]>>, 
     setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>,
-    askBeforeDeleting?: boolean
+    askBeforeDeleting?: boolean,
+    lockDelete?: boolean
 }) {
     const data = props.data;
     const audio = data.audio;
@@ -70,7 +71,7 @@ export default function AudioEntry(props: {
                 onClick={playPause} />
             
             <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
-            <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} />
+            <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} disabled={props.lockDelete} />
         </div>
     );
 }

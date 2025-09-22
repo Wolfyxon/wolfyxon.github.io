@@ -162,6 +162,7 @@ export default function PlayerPageClient() {
 
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
+    const [lockDel, setLockDel] = useState(false);
     
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
@@ -171,6 +172,7 @@ export default function PlayerPageClient() {
                 setAudios={setAudios} 
                 setCurrentAudio={setCurrentAudio}
                 askBeforeDeleting={askBeforeDeleting}
+                lockDelete={lockDel}
                 key={`audio-${i}-${audio.file.size}`} />)
             
             : <p className="faded">No audios yet...</p>}</div>
@@ -203,8 +205,10 @@ export default function PlayerPageClient() {
                 <HSeparator />
 
                 <HeaderSwitch disabled={lockChecks} />
+                <Checkbox label="Lock audio deletion" checked={lockDel} onChange={setLockDel} disabled={lockChecks} />
                 <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
                 <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
+                
             </div>
             <div id="ranges">
                 <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
