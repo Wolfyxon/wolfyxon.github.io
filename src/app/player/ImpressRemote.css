@@ -1,0 +1,62 @@
+.impress-remote {
+    background-color: var(--color6);
+    border: 2px solid var(--color1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.impress-remote-preview {
+    background-color: var(--panel-dark);
+    display: block;
+    width: 250px;
+}
+
+.impress-remote-lr {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.impress-remote-connect {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.impress-remote-connect input {
+    width: 100%;
+}
+
+.impress-remote-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.impress-remote-slides {
+    overflow-y: scroll;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    border: 2px solid var(--color3);
+    max-width: 600px;
+    height: 105px;
+}
+
+.impress-remote-slides > * {
+    scale: 0.9;
+    transition: 0.1s;
+}
+
+.impress-remote-controls {
+    display: flex;
+    justify-content: stretch;
+    gap: 5px;
+    flex: 1;
+}
+
+.impress-remote-controls > * {
+    flex: 1;
+}

@@ -9,6 +9,7 @@ import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
 import AudioEntry from "./AudioEntry";
+import ImpressRemote from "./ImpressRemote";
 
 export type AudioData = {
     elm?: ReactNode,
@@ -152,6 +153,7 @@ export default function PlayerPageClient() {
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
+    const [impressRemoteEnabled, setImpressRemoteEnabled] = useState(true);
     
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
@@ -174,6 +176,9 @@ export default function PlayerPageClient() {
         </div>
 
         <div id="panel">
+            {
+                impressRemoteEnabled ? <ImpressRemote /> : null
+            }
             <div id="settings">
                 <div id="switches">
                     <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
@@ -184,6 +189,13 @@ export default function PlayerPageClient() {
                     <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
                     <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
                     
+                    <Checkbox 
+                        label="Enable LibreOffice Impress remote control"
+                        confirmOff="Disabling ImpressRemote will cause it to disconnect!"
+                        checked={impressRemoteEnabled}
+                        onChange={setImpressRemoteEnabled} 
+                        disabled={lockChecks} 
+                    />
                 </div>
                 <div id="ranges">
                     <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
