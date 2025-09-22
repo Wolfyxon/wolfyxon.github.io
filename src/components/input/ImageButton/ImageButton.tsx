@@ -6,8 +6,13 @@ export default function ImageButton(props: {
     label?: string, 
     ariaLabel?: string, 
     onClick?: () => any,
-    disabled?: boolean
+    disabled?: boolean,
+    reverse?: boolean
 } & ElmBase) {
+    const image = (
+        <img src={props.img} className="img-button-img" alt="icon" />
+    );
+
     return (
         <button 
                 id={props.id} 
@@ -17,8 +22,9 @@ export default function ImageButton(props: {
                 disabled={props.disabled}
             >
             <div className="img-button-img-container">
-                <img src={props.img} className="img-button-img" alt="icon" />
+                {props.reverse ? null : image}
                 <span className="img-button-label">{props.label}</span>
+                {props.reverse ? image : null}
             </div>
         </button>
     );
