@@ -3,16 +3,48 @@
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import "./ImpressRemote.css";
 import { useRef, useState } from "react";
+import { removeEmpty } from "@/utils";
 
 export default function ImpressRemote() {
-    const [currentSlideSrc, setCurrentSlideSrc] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png");
-    const [slides, setSlides] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png,".repeat(20).split(","));
+    const [currentSlideSrc, setCurrentSlideSrc] = useState<string | undefined>(undefined);
+    const [slides, setSlides] = useState<string[]>([]);
     const [connected, setConnected] = useState(false);
 
     const wsRef = useRef<WebSocket>(null);
 
     const addressRef = useRef<HTMLInputElement>(null);
     
+    function onMessage(e: MessageEvent) {
+        console.log(e.data);
+
+        const splitData = removeEmpty((e.data as string).split("\n"));
+        
+        const msg = splitData[0];
+        const data1 = splitData[1];
+        const data2 = splitData[2];
+        
+        if(msg == "slide_preview") {
+            if(data1 == "0") {
+                setSlides([]);
+            }
+            
+            // TODO: Fix slides not adding until you change anything in the code and save lol
+
+            setSlides((prev) => {
+                const url = `data:image/png;base64,${data2}`;
+                const index = parseInt(data1);
+
+                if(prev.length >= index) {
+                    prev[index] = url;
+                } else {
+                    prev.push(url);
+                }
+
+                return prev;
+            });
+        }
+    }
+
     function connect() {
         const address = addressRef.current!.value;
 
@@ -26,6 +58,8 @@ export default function ImpressRemote() {
                 wsRef.current = ws;
                 setConnected(true);
             } 
+
+            ws.onmessage = onMessage;
         } catch(e) {
             alert("Unable to connect: " + e);
         }
