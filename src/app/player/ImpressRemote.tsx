@@ -7,6 +7,8 @@ import { useRef, useState } from "react";
 export default function ImpressRemote() {
     const [currentSlideSrc, setCurrentSlideSrc] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png");
     const [slides, setSlides] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png,".repeat(20).split(","));
+    const [connected, setConnected] = useState(false);
+
     const wsRef = useRef<WebSocket>(null);
 
     const addressRef = useRef<HTMLInputElement>(null);
@@ -22,6 +24,7 @@ export default function ImpressRemote() {
             ws.onopen = () => {
                 console.log("Connected");
                 wsRef.current = ws;
+                setConnected(true);
             } 
         } catch(e) {
             alert("Unable to connect: " + e);
@@ -73,9 +76,7 @@ export default function ImpressRemote() {
             <div className="impress-remote-lr">
                 <img height={250} className="impress-remote-preview" alt="Slide preview" src={currentSlideSrc}  />
 
-                {/*ws ? panel : connectPanel*/}
-                {connectPanel}
-                {panel}
+                {connected ? panel : connectPanel}
             </div>
         </div>
     )
