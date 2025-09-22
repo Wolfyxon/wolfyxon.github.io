@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, useState } from "react";
 import "./style.css";
 
@@ -6,12 +8,26 @@ export default function Checkbox(props: {
     checked?: boolean, 
     flat?: boolean, 
     disabled?: boolean,
+    confirm?: string,
+    confirmOff?: string,
+    confirmOn?: string,
     onChange?: (value: boolean) => any}
 ) {
     const [check, setCheck] = useState(props.checked ?? false);
 
     function change(e: ChangeEvent) {
         const inp = e.target as HTMLInputElement;
+
+        const denied = props.confirm && !confirm(props.confirm);
+        const deniedOn = inp.checked && props.confirmOn && !confirm(props.confirmOn);
+        const deniedOff = !inp.checked && props.confirmOff && !confirm(props.confirmOff);
+        
+        if(denied || deniedOn || deniedOff) {
+            inp.checked = check;
+            e.preventDefault();
+
+            return;
+        }
 
         setCheck(inp.checked);
         
