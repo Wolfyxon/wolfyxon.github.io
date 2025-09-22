@@ -174,28 +174,27 @@ export default function PlayerPageClient() {
         </div>
 
         <div id="panel">
+            <div id="settings">
+                <div id="switches">
+                    <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
+                    <HSeparator />
 
-        </div>
-        <div id="settings">
-            <div id="switches">
-                <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
-                <HSeparator />
+                    <HeaderSwitch disabled={lockChecks} />
+                    <Checkbox label="Lock audio deletion" checked={lockDel} onChange={setLockDel} disabled={lockChecks} />
+                    <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
+                    <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
+                    
+                </div>
+                <div id="ranges">
+                    <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
+                    <HSeparator />
 
-                <HeaderSwitch disabled={lockChecks} />
-                <Checkbox label="Lock audio deletion" checked={lockDel} onChange={setLockDel} disabled={lockChecks} />
-                <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
-                <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
-                
+                    <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} disabled={lockSliders} />
+                    <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} disabled={lockSliders} />
+                </div>
             </div>
-            <div id="ranges">
-                <Checkbox label="Lock" flat checked={lockSliders} onChange={setLockSliders} />
-                <HSeparator />
-
-                <Slider label="Global volume" onChange={setGlobalVolume} value={globalVolume} disabled={lockSliders} />
-                <Slider label="Fade speed" onChange={setFadeSpeed} value={fadeSpeed} min={0.0001} max={0.5} step={0.0001} disabled={lockSliders} />
-            </div>
         </div>
-
+       
         <LeaveBlocker enabled={audios.length != 0 && askBeforeLeaving} />
     </>);
 }
