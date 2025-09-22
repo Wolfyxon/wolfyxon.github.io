@@ -1,12 +1,29 @@
+"use client";
+
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import "./ImpressRemote.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ImpressRemote() {
     const [currentSlideSrc, setCurrentSlideSrc] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png");
     const [slides, setSlides] = useState("https://media.tenor.com/fIaezRSZPSAAAAAe/cat-explosion.png,".repeat(20).split(","));
-
     const [connected, setConnected] = useState(false);
+
+    const addressRef = useRef<HTMLInputElement>(null);
+    let ws: WebSocket | null = null;
+
+    function connect() {
+        const address = addressRef.current!.value;
+
+        try {
+            const wsLocal = new WebSocket(address);
+            ws = wsLocal;
+
+            setConnected(true);
+        } catch(e) {
+            alert("Unable to connect: " + e);
+        }
+    }
 
     const panel = (
         <div className="impress-remote-panel">
@@ -29,10 +46,10 @@ export default function ImpressRemote() {
 
             <label>
                 WebSocket address: <br/>
-                <input type="text" placeholder="ws://" defaultValue={"ws://localhost:1600"} />
+                <input type="text" placeholder="ws://" defaultValue="ws://localhost:1600" ref={addressRef} />
             </label>
             
-            <button>Connect</button>
+            <button onClick={connect}>Connect</button>
 
             <p>
             <a href="https://github.com/Wolfyxon/ImpressProxy/releases/latest">Download</a> <a href="https://github.com/Wolfyxon/ImpressProxy">ImpressProxy</a> to
