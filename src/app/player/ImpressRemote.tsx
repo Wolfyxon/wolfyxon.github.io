@@ -36,6 +36,14 @@ export default function ImpressRemote() {
         wsRef.current!.send("presentation_start\n\n");
     }
 
+    function goPrev() {
+        wsRef.current!.send("transition_previous\n\n");
+    }
+
+    function goNext() {
+        wsRef.current!.send("transition_next\n\n");
+    }
+
     const panel = (
         <div className="impress-remote-panel">
                     <div className="impress-remote-slides">
@@ -45,8 +53,8 @@ export default function ImpressRemote() {
                     <div className="impress-remote-slide-label">Current slide: 0/1</div>
 
                     <div className="impress-remote-controls">
-                        <ImageButton label="Previous" img="/assets/media/img/icons/google/prev.svg" />
-                        <ImageButton label="Next" img="/assets/media/img/icons/google/next.svg" reverse />
+                        <ImageButton label="Previous" img="/assets/media/img/icons/google/prev.svg" onClick={goPrev} />
+                        <ImageButton label="Next" img="/assets/media/img/icons/google/next.svg" onClick={goNext} reverse />
                     </div>
 
                     <ImageButton label="Start presentation" img="/assets/media/img/icons/google/playCircle.svg" onClick={start} />
