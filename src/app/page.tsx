@@ -25,7 +25,7 @@ export default function Home() {
                       Hi, I'm Wolfyxon
                   </h1>
                   <p>
-                      I'm a guy who loves programming and dealing with different software.
+                      I'm a guy who loves programming and dealing with all kinds of software.
                   </p>
 
                   <div id="socials">
