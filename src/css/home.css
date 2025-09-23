@@ -17,9 +17,6 @@
     animation: slight-flash 5s infinite;
 }
 
-#banner > * {
-    position: absolute;
-}
 
 #banner > * > * {
     display: inline-block;
