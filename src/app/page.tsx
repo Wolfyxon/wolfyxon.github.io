@@ -25,7 +25,7 @@ export default function Home() {
                       Hi, I'm Wolfyxon
                   </h1>
                   <p>
-                      Young passionate programmer, beginner musician and Linux enthusiast.
+                      I'm a guy who loves programming and dealing with different software.
                   </p>
 
                   <div id="socials">
@@ -105,25 +105,23 @@ export default function Home() {
           <div className="observing anim-obs-fade">
             {
               [
-                "REST API usage & development",
-                "Low-level programming",
+                "Web APIs",
                 "Backend",
                 "Frontend",
                 "Databases",
-                "SEO & Accessibility",
-                "Tooling",
+                "Website SEO & accessibility",
                 "Command line",
                 "Version control",
+                "Low-level programming",
                 "Game development",
                 "Discord bots",
-                "Networking & multiplayer",
-                "Database management",
+                "Networking",,
                 "System administration",
                 "Basic electronics",
                 "Basic robotics",
                 "Video & audio editing",
                 "Digital graphics",
-                "Digital music"
+                "Digital music production"                
               ].map((name) => <Tag key={"field-" + name}>{name}</Tag>)
             }
           </div>
