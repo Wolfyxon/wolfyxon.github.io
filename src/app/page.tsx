@@ -20,7 +20,7 @@ export default function Home() {
     <Page category="Home">
        <div id="banner">
           <div className="observing anim-obs-left">
-              <div id="banner-text">
+            <div id="banner-text">
                   <h1>
                       Hi, I'm Wolfyxon
                   </h1>
