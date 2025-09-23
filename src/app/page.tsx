@@ -24,7 +24,7 @@ export default function Home() {
                   <h1>
                       Hi, I'm Wolfyxon
                   </h1>
-                  <p>
+                  <p id="banner-text-about">
                       I'm a guy who loves programming and dealing with all kinds of software.
                   </p>
 

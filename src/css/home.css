@@ -28,6 +28,10 @@
     width: 60%;
 }
 
+#banner-text-about {
+    max-width: 800px;
+}
+
 #banner-logo {
     width: 30vw;
 }
