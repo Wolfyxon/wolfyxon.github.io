@@ -104,3 +104,8 @@ code:not(pre code) {
     display: block;
     margin-bottom: 20px;
 }
+
+.article-footer {
+    opacity: 0.7;
+    margin-top: 40px;
+}
