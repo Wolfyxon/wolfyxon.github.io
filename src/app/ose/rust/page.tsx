@@ -11,7 +11,7 @@ export default function RustOsePage() {
             icon="/assets/media/img/icons/software/lang/rust.webp" 
             title={metadata.title as string}
             heading="Ta strona zawiera NIEBEZPIECZNĄ PAMIĘĆ!!!!!!!!!!1"
-            category="Memory Unsafe"
+            category="Unsafe Memory"
             dynamicCategory="USE_AFTER_FREE NULL BUFFER_OVERFLOW MEMORY_CORRUPTION C C++">
 
             <p>
