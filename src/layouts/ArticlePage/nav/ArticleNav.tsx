@@ -60,7 +60,7 @@ export default function ArticleNav(data: {title?: string}) {
 
             const link = document.createElement("a");
             link.href = "#" + h.id;
-            link.innerText = h.innerHTML;
+            link.innerText = h.textContent ?? h.innerHTML;
             links.push(link);
 
             const li = document.createElement("li");
