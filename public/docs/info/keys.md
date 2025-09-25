@@ -49,10 +49,17 @@ DAUJBaOagAAKCRD8+caRsj4d/Kb0AQDRErSLEfW+AeNcu1RHwCA8JSKIhA7MBfu7
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 You can copy and import it. 
-Below are commands that will allow you to do this or with an alternative way.
+Below are commands that will allow you to do this or to use an alternative way.
 
 ## Import commands
 Various methods of importing my key via the command line.
+
+### From text
+```
+gpg --import
+(paste the key block)
+(press Ctrl + D to finish)
+```
 
 ### From URL
 ```
