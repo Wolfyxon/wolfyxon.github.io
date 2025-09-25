@@ -29,7 +29,7 @@ export default async function DocPage(props: {params: any}) {
     const mdFile = slug.join("/") + ".md";
 
     const header = (
-        <a href="/blog">
+        <a href="/docs">
             <TextIcon src="/assets/media/img/icons/google/arrow-back.svg" alt="Back arrow" />
             Back to all docs
         </a>
