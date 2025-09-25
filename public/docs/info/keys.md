@@ -15,6 +15,9 @@ they were in fact made by me and not tampered with.
 Sometimes I may also sign various messages or text files to provide a proof that I wrote them and that they're not fake.
 
 The signature format I use is [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) which relies on asymmetric encryption (public and private keys).
+The **public key** is used to verify signatures and **private key** (which you should never share) is used to make them.
+
+In this guide, I'll show you how to obtain my **public key**.
 
 # Software I use
 I use **GnuPG** to make the signatures. It's referred to as **gpg**.
