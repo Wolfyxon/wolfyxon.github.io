@@ -1,6 +1,6 @@
 ---
 title: My dream programming language
-description: How would my programming language look
+description: How would my programming language look like
 ---
 
 # Introduction
