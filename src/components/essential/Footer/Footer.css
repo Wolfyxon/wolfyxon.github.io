@@ -16,7 +16,7 @@ footer > div a {
 .footer-column {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     padding: 0 10px;
     border-left: 1px solid silver;
 }
