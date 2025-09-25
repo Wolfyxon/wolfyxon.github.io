@@ -13,7 +13,11 @@ It ensures that I am the author of the files and they haven't been tampered with
 https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
 
-# My public key
+# Importing
+[Download text version](/resources/gpg/wolfyxon.txt) | [Download binary version (.gpg)](/resources/gpg/wolfyxon.gpg)
+
+
+My key as text:
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -29,31 +33,52 @@ DAUJBaOagAAKCRD8+caRsj4d/Kb0AQDRErSLEfW+AeNcu1RHwCA8JSKIhA7MBfu7
 =FC/i
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+You can copy and import it. 
+Below are commands that will allow you to do this or with an alternative way.
 
-# Importing
-[Download text](/resources/gpg/wolfyxon.txt) | [Download binary](/resources/gpg/wolfyxon.gpg)
+## Import commands
+Various methods of importing my key via the command line.
 
-From URL
+### From URL
 ```
 curl https://wolfyxon.github.io/resources/gpg/wolfyxon.gpg | gpg --import -
 ```
 
-From https://keys.openpgp.org/
+**NOTE:** Not all Windows versions have `curl` installed by default, so you may want to use an other method or install it first.
+
+`curl` is used to send HTTP request to retrieve files and contents of websites. 
+
+### From a key server
+https://keys.openpgp.org/
 ```
 gpg --keyserver keys.openpgp.org --receive-keys FCF9C691B23E1DFC
 ``` 
 
-From file
+### From file
 ```
 gpg --import <file>
 ```
+Examples:
+```
+gpg --import Downloads/wolfyxon.gpg
+```
+```
+gpg --import C:\Users\CoolPerson\Downloads\wolfyxon.txt
+```
 
-[Learn more about importing keys](https://www.gnupg.org/gph/en/manual/x56.html)
+
+[Learn more about importing keys at the GnuPG website](https://www.gnupg.org/gph/en/manual/x56.html)
 
 # Verifying a file
 Download the file you want you want to verify and its `.sig` counterpart. Put them in the same directory and run: 
 ```
-gpg --verify filename.sig
+gpg --verify <signature file>
+```
+## Example:
+Original file: `CoolGame.zip` | Signature: `CoolGame.zip.sig`
+
+```
+gpg --verify CoolGame.zip.sig
 ```
 
-[Learn more about verifying files and signatures](https://www.gnupg.org/gph/en/manual/x135.html)
+[Learn more about verifying files and signatures at the GnuPG website](https://www.gnupg.org/gph/en/manual/x135.html)
