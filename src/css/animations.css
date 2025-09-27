@@ -17,6 +17,17 @@
     100% { opacity: 1; }
 }
 
+/* --== Config ==-- */
+
+:root {
+    --anim-duration: 1s;
+    --anim-obs-transition: transform var(--anim-duration), 
+                           opacity var(--anim-duration) 
+}
+
+.anim-0-5s {
+    --anim-duration: 0.5s;
+}
 
 /* --== Observer animations ==-- */
 
@@ -24,32 +35,32 @@
     /*margin-left: -50%;*/
     transform: translateX(-50%);
     opacity: 0;
-    transition: transform 1s, opacity 1s;
+    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-left.visible {
     transform: translateX(0);
     opacity: 1;
-    transition: transform 1s, opacity 1s;
+    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-right {
     transform: translateX(50%);
     opacity: 0;
-    transition: transform 1s, opacity 1s;
+    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-right.visible {
     transform: translateX(0);
     opacity: 1;
-    transition: transform 1s, opacity 1s;
+    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-fade {
-    transition: opacity 1s;
+    transition: opacity var(--anim-duration);
     opacity: 0;
 }
 .anim-obs-fade.visible {
-    transition: opacity 1s;
+    transition: opacity var(--anim-duration);
     opacity: 1;
 }
