@@ -21,8 +21,6 @@
 
 :root {
     --anim-duration: 1s;
-    --anim-obs-transition: transform var(--anim-duration), 
-                           opacity var(--anim-duration) 
 }
 
 .anim-0-5s {
@@ -35,7 +33,7 @@
     /*margin-left: -50%;*/
     transform: translateX(-50%);
     opacity: 0;
-    transition: var(--anim-obs-transition);
+    transition: transform var(--anim-duration), opacity var(--anim-duration);
 }
 
 .anim-obs-left.visible {
@@ -46,7 +44,7 @@
 .anim-obs-right {
     transform: translateX(50%);
     opacity: 0;
-    transition: var(--anim-obs-transition);
+    transition: var(--anim-duration), opacity var(--anim-duration);
 }
 
 .anim-obs-right.visible {
