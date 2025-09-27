@@ -1,6 +1,6 @@
 export default function Project(data: {title: string, description: string, thumbnail: string, children: any}) {
     return (
-        <div className="">
+        <div>
             <div className="project-text">
                 <h2 translate="no">{data.title}</h2>
                 <p>{data.description}</p>
