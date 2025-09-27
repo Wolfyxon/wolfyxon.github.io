@@ -23,22 +23,6 @@ function ProjectList() {
     }
 
     registerProject(
-        "Turret Siege",
-        "A game in early development where you are a turret surrounded by bullets and enemies.",
-        "assets/media/img/home/projectThumbnails/ts.webp",
-        [
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/TurretSiege/"
-            },
-            {
-                text: "Downloads",
-                url: "https://github.com/Wolfyxon/TurretSiege/releases/latest"
-            }
-        ]
-    );
-
-    registerProject(
         "Lover",
         "Command line build system for LÖVE2D.",
         "assets/media/img/home/projectThumbnails/lover.webp",
@@ -54,6 +38,22 @@ function ProjectList() {
             {
                 text: "Downloads",
                 url: "https://github.com/Wolfyxon/lover/releases/latest"
+            }
+        ]
+    );
+
+    registerProject(
+        "Turret Siege",
+        "A game where you are being attacked from all sides. Soundtrack made by me.",
+        "assets/media/img/home/projectThumbnails/ts.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/TurretSiege/"
+            },
+            {
+                text: "Downloads",
+                url: "https://github.com/Wolfyxon/TurretSiege/releases/latest"
             }
         ]
     );
@@ -92,7 +92,7 @@ function ProjectList() {
 
     registerProject(
         "The Great Doors of Door", 
-        "A game that was supposed to be a parody of DOORS, but we accidentally made a lore and it became something entirely different. Made by me, Karoleus.PL and rob eeee.", 
+        "A funny Roblox game that was supposed to be a low-effort parody, but then we made it into an emotional story.", 
         "assets/media/img/home/projectThumbnails/tgdod.webp", 
         [{
             text: "Play on Roblox", 
@@ -116,23 +116,6 @@ function ProjectList() {
         ]
     );
     
-    registerProject(
-        "This site",
-        "I think it deserves to be listed here since I put quite a lot of effort into it :]",
-        "assets/media/img/Wolfyxon.webp",
-        [
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/wolfyxon.github.io"
-            },
-            {
-                text: "Useless button",
-                url: ""
-            }
-        ]
-    );
-
-
     return (
         <div id="project-list">{elms}</div>
     );
