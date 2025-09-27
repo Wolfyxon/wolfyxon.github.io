@@ -41,11 +41,19 @@ export default function Home() {
           </div>
       </div>
       
+      <div id="projects">
+          <FancyHeading>Featured projects</FancyHeading>
+
+          <ProjectList />
+
+          <a href="https://github.com/Wolfyxon?tab=repositories">See all my public projects on GitHub</a>
+      </div>
+
       <FancyHeading>Experience</FancyHeading>
-      <div id="experience">
+      <div id="experience" className="observing anim-obs-fade">
         <div id="software">
           <h2>Languages</h2>
-          <div className="observing anim-obs-left">
+          <div className="observing anim-obs-fade">
             <Badge icon="software/lang/rust.webp" alt="Rust" />
             <Badge icon="software/lang/lua.svg" alt="Lua" />
             <Badge icon="software/lang/luau.svg" alt="Luau" />
@@ -68,7 +76,7 @@ export default function Home() {
           </div>
 
           <h2>Libraries, frameworks and engines</h2>
-          <div className="observing anim-obs-left">
+          <div>
               <Badge icon="software/lib/react.svg" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.webp" alt="NextJS" />
@@ -84,7 +92,7 @@ export default function Home() {
           </div>
 
           <h2>Tools</h2>
-          <div className="observing anim-obs-left">
+          <div>
             <Badge icon="software/tools/vscode.svg" alt="VS Code" />
             <Badge icon="software/tools/vs.svg" alt="Visual Studio" />
             <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
@@ -102,7 +110,7 @@ export default function Home() {
         <div id="fields">
           <h2>Fields</h2>
           
-          <div className="observing anim-obs-fade">
+          <div>
             {
               [
                 "Web APIs",
@@ -126,14 +134,6 @@ export default function Home() {
             }
           </div>
         </div>
-      </div>
-
-      <div id="projects">
-          <FancyHeading>Featured projects</FancyHeading>
-
-          <ProjectList />
-
-          <a href="https://github.com/Wolfyxon?tab=repositories">See all my public projects on GitHub</a>
       </div>
 
       <div id="collaborators">
