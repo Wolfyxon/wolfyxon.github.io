@@ -90,21 +90,6 @@ export default function Home() {
               <Badge icon="arduino.svg" alt="Arduino" />
               <Badge icon="software/framework/ev3dev.webp" alt="ev3dev" />
           </div>
-
-          <h2>Tools</h2>
-          <div>
-            <Badge icon="software/tools/vscode.svg" alt="VS Code" />
-            <Badge icon="software/tools/vs.svg" alt="Visual Studio" />
-            <Badge icon="software/tools/IntelliJ_IDEA.svg" alt="IntellIJ IDEA" />
-            <Badge icon="software/tools/android_studio.svg" alt="Android Studio" />
-            <Badge icon="software/tools/git.svg" alt="Git" />
-            <Badge icon="software/tools/linux.svg" alt="Linux" />
-            <Badge icon="software/tools/krita.svg" alt="Krita" />
-            <Badge icon="software/tools/audacity.svg" alt="Audacity" />
-            <Badge icon="software/tools/lmms.svg" alt="LMMS" />
-            <Badge icon="software/video/resolve.svg" alt="DaVinci Resolve" />
-            <Badge icon="software/video/kdenlive.svg" alt="KDEnlive" />
-          </div>
         </div>
 
         <div id="fields">
