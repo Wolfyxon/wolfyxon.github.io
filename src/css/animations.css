@@ -27,6 +27,12 @@
     --anim-duration: 0.5s;
 }
 
+
+.anim-0-25s {
+    --anim-duration: 0.25s;
+}
+
+
 /* --== Observer animations ==-- */
 
 .anim-obs-left {
