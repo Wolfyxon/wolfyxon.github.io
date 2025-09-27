@@ -41,7 +41,6 @@
 .anim-obs-left.visible {
     transform: translateX(0);
     opacity: 1;
-    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-right {
@@ -53,7 +52,6 @@
 .anim-obs-right.visible {
     transform: translateX(0);
     opacity: 1;
-    transition: var(--anim-obs-transition);
 }
 
 .anim-obs-fade {
@@ -61,6 +59,5 @@
     opacity: 0;
 }
 .anim-obs-fade.visible {
-    transition: opacity var(--anim-duration);
     opacity: 1;
 }
