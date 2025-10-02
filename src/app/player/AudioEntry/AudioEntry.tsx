@@ -1,10 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { AudioData } from "../client";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
+import Slider from "@/components/input/Slider/Slider";
+
 import { removeExtension, secondsToString } from "@/utils";
 
 import "./style.css";
-import Slider from "@/components/input/Slider/Slider";
 
 export default function AudioEntry(props: {
     data: AudioData, 
@@ -115,7 +116,8 @@ export default function AudioEntry(props: {
                     <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} disabled={props.lockDelete} />
                 </div>
                 <div className="audio-time">
-                    <span ref={timeLabelRef}>{secondsToString(0)}</span> / <span>{!isNaN(audio.duration) ? secondsToString(audio.duration) : secondsToString(0)}</span>
+                    <span ref={timeLabelRef}>{secondsToString(0)}</span> / <></>
+                    <span>{!isNaN(audio.duration) ? secondsToString(audio.duration) : secondsToString(0)}</span>
                 </div>
             </div>
         </div>
