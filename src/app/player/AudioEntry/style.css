@@ -7,14 +7,50 @@
     padding: 4px;
     border-radius: 8px;
     transition: 0.5s;
+    flex-basis: 1;
+}
+
+.audio > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
 }
 
 .audio.current {
     background-color: var(--color4);
 }
 
+.audio-col1 {
+    flex: 1;
+}
+
 .audio-title {
     flex: 1;
+}
+
+.audio-time-range {
+    background-color: var(--panel) !important;
+    border: var(--color5) solid 2px !important;
+    height: 0.8em !important;
+    border-radius: 10px;
+
+    --thumb-height: 1.2em;
+    --thumb-width: 1.2em;
+    --thumb-border: 2px solid var(--color4);
+    --thumb-bg: var(--color5);
+    --thumb-border-radius: 100%;
+}
+
+.audio-time-range:hover {
+    --thumb-bg: var(--color4);
+    --thumb-border: 2px solid var(--color5);
+}
+
+.audio-controls {
+    display: flex;
+    gap: 5px;
 }
 
 .audio .play-pause-btn {

@@ -55,23 +55,31 @@ export default function AudioEntry(props: {
 
     return (
         <div className={`audio ${isCurrent ? "current" : ""}`}>
-            <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
-            
-            <ImageButton 
-                label={
-                    isCurrent ?
-                    "Pause"
-                    : "Play"
-                } 
-                img={isCurrent ?
-                    "/assets/media/img/icons/google/pause.svg"
-                    : "/assets/media/img/icons/google/play.svg"
-                }
-                className="play-pause-btn"
-                onClick={playPause} />
-            
-            <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
-            <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} disabled={props.lockDelete} />
+            <div className="audio-col1">
+                <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
+                <input type="range" defaultValue={0} className="audio-time-range" />
+            </div>
+
+            <div className="audio-col2">
+                <div className="audio-controls">
+                    <ImageButton 
+                        label={
+                            isCurrent ?
+                            "Pause"
+                            : "Play"
+                        } 
+                        img={isCurrent ?
+                            "/assets/media/img/icons/google/pause.svg"
+                            : "/assets/media/img/icons/google/play.svg"
+                        }
+                        className="play-pause-btn"
+                        onClick={playPause} />
+                    
+                    <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
+                    <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} disabled={props.lockDelete} />
+                </div>
+                <div className="audio-time">0:00 / 0:00</div>
+            </div>
         </div>
     );
 }
