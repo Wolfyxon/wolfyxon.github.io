@@ -30,12 +30,6 @@
     flex: 1;
 }
 
-.audio-time-range {
-
-
-
-}
-
 .audio-time-range:hover {
     --thumb-bg: var(--color4);
     --thumb-border: 2px solid var(--color5);
