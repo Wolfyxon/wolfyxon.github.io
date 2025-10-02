@@ -82,7 +82,7 @@ export default function AudioEntry(props: {
                 
                 <Slider
                     step={0.01}
-                    max={audio.duration} 
+                    max={!isNaN(audio.duration) ? audio.duration : 0} 
                     className="audio-time-range" 
                     ariaLabel="Time position" 
                     disabled={props.lockTime}
