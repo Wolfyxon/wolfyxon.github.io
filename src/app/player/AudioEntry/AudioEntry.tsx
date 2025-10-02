@@ -12,7 +12,8 @@ export default function AudioEntry(props: {
     setAudios: Dispatch<SetStateAction<AudioData[]>>, 
     setCurrentAudio: Dispatch<SetStateAction<AudioData | null>>,
     askBeforeDeleting?: boolean,
-    lockDelete?: boolean
+    lockDelete?: boolean,
+    lockTime?: boolean
 }) {
     const data = props.data;
     const audio = data.audio;
@@ -58,7 +59,7 @@ export default function AudioEntry(props: {
         <div className={`audio ${isCurrent ? "current" : ""}`}>
             <div className="audio-col1">
                 <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
-                <Slider value={0} className="audio-time-range" ariaLabel="Time position" flat />
+                <Slider value={0} className="audio-time-range" ariaLabel="Time position" disabled={props.lockTime} flat />
             </div>
 
             <div className="audio-col2">

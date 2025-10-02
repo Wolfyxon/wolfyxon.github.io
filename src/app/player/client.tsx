@@ -152,6 +152,7 @@ export default function PlayerPageClient() {
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
+    const [lockTime, setLockTime] = useState(false);
     const [impressRemoteEnabled, setImpressRemoteEnabled] = useState(false);
     
     return (<>
@@ -163,6 +164,7 @@ export default function PlayerPageClient() {
                 setCurrentAudio={setCurrentAudio}
                 askBeforeDeleting={askBeforeDeleting}
                 lockDelete={lockDel}
+                lockTime={lockTime}
                 key={`audio-${i}-${audio.file.size}`} />)
             
             : <p className="faded">No audios yet...</p>}</div>
@@ -185,6 +187,8 @@ export default function PlayerPageClient() {
 
                     <HeaderSwitch disabled={lockChecks} />
                     <Checkbox label="Lock audio deletion" checked={lockDel} onChange={setLockDel} disabled={lockChecks} />
+                    <Checkbox label="Lock audio time" checked={lockTime} onChange={setLockTime} disabled={lockChecks} />
+
                     <Checkbox label="Ask before leaving" checked={askBeforeLeaving} onChange={setAskBeforeLeaving} disabled={lockChecks} />
                     <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
                     
