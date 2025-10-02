@@ -53,13 +53,26 @@ export default function AudioEntry(props: {
         }
     }
 
+    function seek(time: number) {
+        audio.currentTime = time;
+    }
+
     const name = removeExtension(props.data.file.name);
 
     return (
         <div className={`audio ${isCurrent ? "current" : ""}`}>
             <div className="audio-col1">
                 <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
-                <Slider value={0} className="audio-time-range" ariaLabel="Time position" disabled={props.lockTime} flat />
+                
+                <Slider 
+                    value={audio.currentTime}
+                    max={audio.duration} 
+                    className="audio-time-range" 
+                    ariaLabel="Time position" 
+                    disabled={props.lockTime}
+                    onChange={seek}
+                    flat
+                />
             </div>
 
             <div className="audio-col2">
