@@ -12,11 +12,11 @@ body {
     background: var(--background);
     font-family: "Roboto";
 
-    --thumb-bg: var(--color4);
-    --thumb-width: 1em;
-    --thumb-height: 2em;
-    --thumb-border: none;
-    --thumb-border-radius: 5px;
+    --thumb-height: 1.2em;
+    --thumb-width: 1.2em;
+    --thumb-border: 2px solid var(--color4);
+    --thumb-bg: var(--color5);
+    --thumb-border-radius: 100%;
     --thumb-transition: 0.1s;
 }
 
@@ -95,11 +95,10 @@ input[type="text"]:focus {
 /* --== Range inputs ==-- */
 
 input[type="range"] {
+    background-color: var(--panel);
+    border: var(--color5) solid 2px;
     height: 0.8em;
-    appearance: none;
-    background: var(--color5);
-    border: 2px solid var(--color2);
-    transition: 0.1s;
+    border-radius: 10px;
 }
 
 input[type="range"]::-moz-range-thumb {

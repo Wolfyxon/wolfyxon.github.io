@@ -31,16 +31,9 @@
 }
 
 .audio-time-range {
-    background-color: var(--panel) !important;
-    border: var(--color5) solid 2px !important;
-    height: 0.8em !important;
-    border-radius: 10px;
 
-    --thumb-height: 1.2em;
-    --thumb-width: 1.2em;
-    --thumb-border: 2px solid var(--color4);
-    --thumb-bg: var(--color5);
-    --thumb-border-radius: 100%;
+
+
 }
 
 .audio-time-range:hover {
