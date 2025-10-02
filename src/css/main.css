@@ -68,7 +68,7 @@ button:active:not(:disabled) {
     transition: 0.3s;
 }
 
-/* --== Inputs ==-- */
+/* --== Text inputs ==-- */
 
 input[type="text"] {
     background: none;
@@ -83,6 +83,50 @@ input[type="text"] {
 input[type="text"]:focus {
     border-bottom-color: var(--color3);
     outline: none;
+}
+
+/* --== Range inputs ==-- */
+
+input[type="range"] {
+    height: 0.8em;
+    appearance: none;
+    background: var(--color5);
+    border: 2px solid var(--color2);
+    transition: 0.1s;
+
+    --thumb-bg: var(--color4);
+    --thumb-width: 1em;
+    --thumb-height: 2em;
+    --thumb-border: none;
+    --thumb-border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    background: var(--thumb-bg);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    border: var(--thumb-border);
+    border-radius: var(--thumb-border-radius);
+}
+
+input[type="range"]::-ms-thumb {
+    appearance: none;
+    background: var(--thumb-bg);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    border: var(--thumb-border);
+    border-radius: var(--thumb-border-radius);
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    background: var(--thumb-bg);
+    width: var(--thumb-width);
+    height: var(--thumb-height);
+    border: var(--thumb-border);
+    border-radius: var(--thumb-border-radius);
 }
 
 /* --== Faded ==-- */

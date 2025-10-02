@@ -42,17 +42,6 @@
 
 .slider-inner input[type="range"] {
     flex: 1;
-    height: 0.8em;
-    appearance: none;
-    background: var(--color5);
-    border: 2px solid var(--color2);
-    transition: 0.1s;
-
-    --thumb-bg: var(--color4);
-    --thumb-width: 1em;
-    --thumb-height: 2em;
-    --thumb-border: none;
-    --thumb-border-radius: 5px;
 }
 
 .slider-inner input[type="range"]:hover {
@@ -61,34 +50,4 @@
 
 .slider-inner:has(input:disabled) {
     opacity: 0.5;
-}
-
-/* Range thumb styles */
-
-.slider-inner input[type="range"]::-moz-range-thumb {
-    appearance: none;
-    background: var(--thumb-bg);
-    width: var(--thumb-width);
-    height: var(--thumb-height);
-    border: var(--thumb-border);
-    border-radius: var(--thumb-border-radius);
-}
-
-.slider-inner input[type="range"]::-ms-thumb {
-    appearance: none;
-    background: var(--thumb-bg);
-    width: var(--thumb-width);
-    height: var(--thumb-height);
-    border: var(--thumb-border);
-    border-radius: var(--thumb-border-radius);
-}
-
-
-.slider-inner input[type="range"]::-webkit-slider-thumb {
-    appearance: none;
-    background: var(--thumb-bg);
-    width: var(--thumb-width);
-    height: var(--thumb-height);
-    border: var(--thumb-border);
-    border-radius: var(--thumb-border-radius);
 }
