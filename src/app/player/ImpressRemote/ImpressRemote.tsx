@@ -7,7 +7,7 @@ import { removeEmpty } from "@/utils";
 import "./style.css";
 
 export default function ImpressRemote() {
-    const [currentSlideSrc, setCurrentSlideSrc] = useState<string | undefined>(undefined);
+    const [currentSlideSrc, setCurrentSlideSrc] = useState<string | undefined>("/assets/media/img/icons/google/square.svg");
     const [slides, setSlides] = useState<string[]>([]);
     const [connected, setConnected] = useState(false);
 
