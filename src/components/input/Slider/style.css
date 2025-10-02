@@ -4,9 +4,11 @@
 }
 
 .slider-inner {
-    font-size: 100%;
     display: flex;
-    flex-direction: row;
+}
+
+.slider-inner:not(.flat) {
+    font-size: 100%;
     align-items: center;
     background-color: var(--color1);
     border-radius: 5px;
@@ -39,11 +41,12 @@
     border-bottom-color: var(--color3);
 }
 
-
 .slider-inner input[type="range"] {
     flex: 1;
+}
+
+.slider-inner:not(.flat) input[type="range"] {
     height: 0.8em;
-    appearance: none;
     background: var(--color5);
     border: 2px solid var(--color2);
     transition: 0.1s;
@@ -57,10 +60,10 @@
     --thumb-progress-bg: var(--color3)
 }
 
-.slider-inner input[type="range"]:hover {
+.slider-inner:not(.flat) input[type="range"]:hover {
     opacity: 0.8;
 }
 
-.slider-inner:has(input:disabled) {
+.slider-inner:not(.flat):has(input:disabled) {
     opacity: 0.5;
 }

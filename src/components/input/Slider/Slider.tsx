@@ -10,6 +10,7 @@ export type SliderProps = {
     step?: number,
     value?: number,
     disabled?: boolean,
+    flat?: boolean,
     onChange?: ((val: number) => void)
 }
 
@@ -33,10 +34,12 @@ export default function Slider(props: SliderProps) {
         }
     }
 
+    const flat = props.flat ? "flat" : "";
+
     return (
-        <div className="slider">
-            <label className="slider-inner">
-                <span className="slider-label">{props.label}</span>
+        <div className={`slider ${flat}`}>
+            <label className={`slider-inner ${flat}`}>
+                {!props.flat ? <span className="slider-label">{props.label}</span> : null}
 
                 <input type="range" 
                     aria-label={props.ariaLabel}
@@ -48,7 +51,7 @@ export default function Slider(props: SliderProps) {
                     disabled={props.disabled}
                 />
 
-                <input type="number" 
+                {!props.flat ? <input type="number" 
                     aria-label={props.ariaLabel}
                     value={value}
                     onChange={changed}
@@ -56,7 +59,7 @@ export default function Slider(props: SliderProps) {
                     max={props.max}
                     step={props.step}
                     disabled={props.disabled}
-                />
+                /> : null}
             </label>
         </div>
     )
