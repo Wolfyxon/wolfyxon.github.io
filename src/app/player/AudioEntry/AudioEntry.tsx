@@ -56,8 +56,8 @@ export default function AudioEntry(props: {
     return (
         <div className={`audio ${isCurrent ? "current" : ""}`}>
             <div className="audio-col1">
-                <input type="text" defaultValue={name} placeholder={name} className="audio-title" />
-                <input type="range" defaultValue={0} className="audio-time-range" />
+                <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
+                <input type="range" defaultValue={0} className="audio-time-range" aria-label="Time position" />
             </div>
 
             <div className="audio-col2">
