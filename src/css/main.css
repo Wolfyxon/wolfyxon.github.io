@@ -11,6 +11,12 @@ body {
     color: var(--text);
     background: var(--background);
     font-family: "Roboto";
+
+    --thumb-bg: var(--color4);
+    --thumb-width: 1em;
+    --thumb-height: 2em;
+    --thumb-border: none;
+    --thumb-border-radius: 5px;
 }
 
 body, html {
@@ -93,12 +99,6 @@ input[type="range"] {
     background: var(--color5);
     border: 2px solid var(--color2);
     transition: 0.1s;
-
-    --thumb-bg: var(--color4);
-    --thumb-width: 1em;
-    --thumb-height: 2em;
-    --thumb-border: none;
-    --thumb-border-radius: 5px;
 }
 
 input[type="range"]::-moz-range-thumb {
