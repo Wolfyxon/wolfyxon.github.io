@@ -3,6 +3,7 @@
     user-select: none;
     cursor: pointer;
     display: block;
+    transition: 0.1s;
 }
 
 .checkbox-container:not(.flat) .checkbox-container-inner {
@@ -37,8 +38,12 @@
     content:  " : ";
 }
 
-.checkbox-container-inner:hover {
+.checkbox-container:hover {
     opacity: 0.9;
+}
+
+.checkbox-container.flat:hover {
+    opacity: 0.8;
 }
 
 .checkbox-container input {
