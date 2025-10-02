@@ -44,7 +44,9 @@ export default function Home() {
           <FancyHeading>Featured projects</FancyHeading>
 
           <ProjectList />
-          <a href="https://github.com/Wolfyxon?tab=repositories" className="important-link">See all my public projects on GitHub</a>
+          <a href="https://github.com/Wolfyxon?tab=repositories" className="important-link" target="_blank">
+            See all my public projects on GitHub
+            </a>
       </div>
 
       <FancyHeading>Experience</FancyHeading>
