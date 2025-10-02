@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { AudioData } from "../client";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
-import { removeExtension } from "@/utils";
+import { removeExtension, secondsToString } from "@/utils";
 
 import "./style.css";
 import Slider from "@/components/input/Slider/Slider";
@@ -19,7 +19,9 @@ export default function AudioEntry(props: {
     const audio = data.audio;
 
     const isCurrent = props.currentAudio == data;
+
     const sliderInputRef = useRef<HTMLInputElement>(null);
+    const timeLabelRef = useRef<HTMLSpanElement>(null);
 
     function remove() {
         if(props.askBeforeDeleting && !confirm("Are you sure you want to remove this audio?")) {
@@ -63,7 +65,9 @@ export default function AudioEntry(props: {
 
         const loop = () => {
             if(!isNaN(audio.duration)) {
+                // for some reason using state to modify the time value doesn't work bleh
                 sliderInputRef.current!.value = audio.currentTime.toString();
+                timeLabelRef.current!.textContent = secondsToString(audio.currentTime);
             }
             
             frame = requestAnimationFrame(loop);
@@ -110,7 +114,9 @@ export default function AudioEntry(props: {
                     <ImageButton label="Stop" img="/assets/media/img/icons/google/stop.svg" onClick={stop} />
                     <ImageButton label="Delete" img="/assets/media/img/icons/google/delete.svg" onClick={remove} disabled={props.lockDelete} />
                 </div>
-                <div className="audio-time">0:00 / 0:00</div>
+                <div className="audio-time">
+                    <span ref={timeLabelRef}>{secondsToString(0)}</span> / <span>{!isNaN(audio.duration) ? secondsToString(audio.duration) : secondsToString(0)}</span>
+                </div>
             </div>
         </div>
     );
