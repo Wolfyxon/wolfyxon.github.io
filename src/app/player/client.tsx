@@ -1,9 +1,8 @@
 "use client";
 
 import Checkbox from "@/components/input/Checkbox/Checkbox";
-import ImageButton from "@/components/input/ImageButton/ImageButton";
-import { clamp, lerp, removeExtension } from "@/utils";
-import { ChangeEvent, Dispatch, ReactNode, RefObject, SetStateAction, useEffect, useState } from "react";
+import { clamp, lerp } from "@/utils";
+import { ChangeEvent, ReactNode, RefObject, useEffect, useState } from "react";
 import HeaderSwitch from "./HeaderSwitch";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";

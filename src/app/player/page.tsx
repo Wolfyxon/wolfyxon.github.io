@@ -1,5 +1,5 @@
-import Page from "@/layouts/Page";
 import { Metadata } from "next";
+import Page from "@/layouts/Page";
 import PlayerPageClient from "./client";
 
 import "./style.css";
