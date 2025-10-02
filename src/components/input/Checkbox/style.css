@@ -52,7 +52,6 @@
     height: 1.25em;
     border: 2px solid white;
     border-radius: 2px;
-    transition: background-color 0.1s background-image 0.1s;
 }
 
 .checkbox-container input:checked {
