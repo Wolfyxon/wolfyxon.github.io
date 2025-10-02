@@ -4,6 +4,7 @@ import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { removeExtension } from "@/utils";
 
 import "./style.css";
+import Slider from "@/components/input/Slider/Slider";
 
 export default function AudioEntry(props: {
     data: AudioData, 
@@ -57,7 +58,7 @@ export default function AudioEntry(props: {
         <div className={`audio ${isCurrent ? "current" : ""}`}>
             <div className="audio-col1">
                 <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
-                <input type="range" defaultValue={0} className="audio-time-range" aria-label="Time position" />
+                <Slider value={0} className="audio-time-range" ariaLabel="Time position" flat />
             </div>
 
             <div className="audio-col2">
