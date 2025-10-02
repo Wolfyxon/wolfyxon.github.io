@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
-import { AudioData } from "./client";
+import { AudioData } from "../client";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { removeExtension } from "@/utils";
 
-import "./AudioEntry.css";
+import "./style.css";
 
 export default function AudioEntry(props: {
     data: AudioData, 

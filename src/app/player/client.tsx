@@ -8,8 +8,8 @@ import HeaderSwitch from "./HeaderSwitch";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
-import AudioEntry from "./AudioEntry";
-import ImpressRemote from "./ImpressRemote";
+import AudioEntry from "./AudioEntry/AudioEntry";
+import ImpressRemote from "./ImpressRemote/ImpressRemote";
 
 export type AudioData = {
     elm?: ReactNode,

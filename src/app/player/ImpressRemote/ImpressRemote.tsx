@@ -1,9 +1,10 @@
 "use client";
 
 import ImageButton from "@/components/input/ImageButton/ImageButton";
-import "./ImpressRemote.css";
 import { useRef, useState } from "react";
 import { removeEmpty } from "@/utils";
+
+import "./style.css";
 
 export default function ImpressRemote() {
     const [currentSlideSrc, setCurrentSlideSrc] = useState<string | undefined>(undefined);
