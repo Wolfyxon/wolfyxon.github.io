@@ -54,6 +54,7 @@
     --thumb-border: none;
     --thumb-border-radius: 5px;
     --thumb-transition: 0.1s;
+    --thumb-progress-bg: var(--color3)
 }
 
 .slider-inner input[type="range"]:hover {

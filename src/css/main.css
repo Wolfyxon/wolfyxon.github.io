@@ -18,6 +18,7 @@ body {
     --thumb-bg: var(--color5);
     --thumb-border-radius: 100%;
     --thumb-transition: 0.1s;
+    --thumb-progress-bg: var(--color5);
 }
 
 body, html {
@@ -95,12 +96,14 @@ input[type="text"]:focus {
 /* --== Range inputs ==-- */
 
 input[type="range"] {
+    appearance: none;
     background-color: var(--panel);
     border: var(--color5) solid 2px;
     height: 0.8em;
     border-radius: 10px;
 }
 
+/* -- Firefox -- */
 input[type="range"]::-moz-range-thumb {
     appearance: none;
     background: var(--thumb-bg);
@@ -111,6 +114,12 @@ input[type="range"]::-moz-range-thumb {
     transition: var(--thumb-transition);
 }
 
+input[type="range"]::-moz-range-progress {
+    background: var(--thumb-progress-bg);
+    height: 100%;
+}
+
+/* -- IE -- */
 input[type="range"]::-ms-thumb {
     appearance: none;
     background: var(--thumb-bg);
@@ -121,7 +130,15 @@ input[type="range"]::-ms-thumb {
     transition: var(--thumb-transition);
 }
 
+input[type="range"]::-ms-fill-upper {
+    background: var(--thumb-progress-bg);
+}
 
+input[type="range"]::-ms-fill-lower {
+    background: var(--thumb-progress-bg);
+}
+
+/* -- Webkit -- */
 input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     background: var(--thumb-bg);
@@ -131,6 +148,8 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: var(--thumb-border-radius);
     transition: var(--thumb-transition);
 }
+
+/* TODO: Implement progress color for Webkit/Chrome*/
 
 /* --== Faded ==-- */
 /* Used for old and deprecated content */
