@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, Ref, useState } from "react"
 
 import "./style.css";
 import { ElmBase } from "@/utils";
@@ -12,6 +12,7 @@ export type SliderProps = {
     value?: number,
     disabled?: boolean,
     flat?: boolean,
+    inputRef?: Ref<HTMLInputElement>,
     onChange?: ((val: number) => void)
 } & ElmBase;
 
@@ -50,6 +51,7 @@ export default function Slider(props: SliderProps) {
                     max={props.max}
                     step={props.step}
                     disabled={props.disabled}
+                    ref={props.inputRef}
                 />
 
                 {!props.flat ? <input type="number" 
