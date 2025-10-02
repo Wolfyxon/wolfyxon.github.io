@@ -38,11 +38,11 @@
     content:  " : ";
 }
 
-.checkbox-container:hover {
+.checkbox-container:hover:not(:has(input:disabled)) {
     opacity: 0.9;
 }
 
-.checkbox-container.flat:hover {
+.checkbox-container.flat:hover:not(:has(input:disabled)) {
     opacity: 0.8;
 }
 
