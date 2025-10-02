@@ -152,7 +152,7 @@ export default function PlayerPageClient() {
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
-    const [impressRemoteEnabled, setImpressRemoteEnabled] = useState(true);
+    const [impressRemoteEnabled, setImpressRemoteEnabled] = useState(false);
     
     return (<>
         <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
