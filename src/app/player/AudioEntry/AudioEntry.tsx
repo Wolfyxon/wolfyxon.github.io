@@ -66,6 +66,7 @@ export default function AudioEntry(props: {
                 
                 <Slider 
                     value={audio.currentTime}
+                    step={0.1}
                     max={audio.duration} 
                     className="audio-time-range" 
                     ariaLabel="Time position" 
