@@ -81,7 +81,7 @@ export default function AudioEntry(props: {
                 <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
                 
                 <Slider
-                    step={0.1}
+                    step={0.01}
                     max={audio.duration} 
                     className="audio-time-range" 
                     ariaLabel="Time position" 
