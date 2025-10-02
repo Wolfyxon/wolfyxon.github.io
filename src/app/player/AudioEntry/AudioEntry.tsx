@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { AudioData } from "../client";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { removeExtension } from "@/utils";
@@ -19,6 +19,7 @@ export default function AudioEntry(props: {
     const audio = data.audio;
 
     const isCurrent = props.currentAudio == data;
+    const sliderInputRef = useRef<HTMLInputElement>(null);
 
     function remove() {
         if(props.askBeforeDeleting && !confirm("Are you sure you want to remove this audio?")) {
@@ -57,6 +58,21 @@ export default function AudioEntry(props: {
         audio.currentTime = time;
     }
 
+    useEffect(() => {
+        let frame: number;
+
+        const loop = () => {
+            if(!isNaN(audio.duration)) {
+                sliderInputRef.current!.value = audio.currentTime.toString();
+            }
+            
+            frame = requestAnimationFrame(loop);
+        }
+
+        frame = requestAnimationFrame(loop);
+        return () => cancelAnimationFrame(frame);
+    }, []);
+
     const name = removeExtension(props.data.file.name);
 
     return (
@@ -64,14 +80,14 @@ export default function AudioEntry(props: {
             <div className="audio-col1">
                 <input type="text" defaultValue={name} placeholder={name} className="audio-title" aria-label="Audio title" />
                 
-                <Slider 
-                    value={audio.currentTime}
+                <Slider
                     step={0.1}
                     max={audio.duration} 
                     className="audio-time-range" 
                     ariaLabel="Time position" 
                     disabled={props.lockTime}
                     onChange={seek}
+                    inputRef={sliderInputRef}
                     flat
                 />
             </div>
