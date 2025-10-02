@@ -60,10 +60,10 @@
     --thumb-progress-bg: var(--color3)
 }
 
-.slider-inner:not(.flat) input[type="range"]:hover {
+.slider-inner:not(.flat) input[type="range"]:hover:not(:disabled) {
     opacity: 0.8;
 }
 
 .slider-inner:not(.flat):has(input:disabled) {
-    opacity: 0.5;
+    opacity: 0.6;
 }

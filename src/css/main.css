@@ -101,6 +101,15 @@ input[type="range"] {
     border: var(--color5) solid 2px;
     height: 0.8em;
     border-radius: 10px;
+    transition: 0.1s;
+}
+
+input[type="range"]:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+input[type="range"]:disabled {
+    opacity: 0.6;
 }
 
 /* -- Firefox -- */
