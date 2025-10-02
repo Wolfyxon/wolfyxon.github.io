@@ -25,9 +25,6 @@ export default function Header(data: {title?: string, home?: string}) {
                 <a href="/docs" id="header-link-docs">
                     <div>Docs</div>
                 </a>
-                <a href="/goals" id="header-link-goals">
-                    <div>Goals</div>
-                </a>
                 <a href="/terminal/index.html" id="header-link-terminal">
                     <div>Terminal</div>
                 </a>
