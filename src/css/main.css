@@ -17,6 +17,7 @@ body {
     --thumb-height: 2em;
     --thumb-border: none;
     --thumb-border-radius: 5px;
+    --thumb-transition: 0.1s;
 }
 
 body, html {
@@ -108,6 +109,7 @@ input[type="range"]::-moz-range-thumb {
     height: var(--thumb-height);
     border: var(--thumb-border);
     border-radius: var(--thumb-border-radius);
+    transition: var(--thumb-transition);
 }
 
 input[type="range"]::-ms-thumb {
@@ -117,6 +119,7 @@ input[type="range"]::-ms-thumb {
     height: var(--thumb-height);
     border: var(--thumb-border);
     border-radius: var(--thumb-border-radius);
+    transition: var(--thumb-transition);
 }
 
 
@@ -127,6 +130,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: var(--thumb-height);
     border: var(--thumb-border);
     border-radius: var(--thumb-border-radius);
+    transition: var(--thumb-transition);
 }
 
 /* --== Faded ==-- */
