@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react"
 
 import "./style.css";
+import { ElmBase } from "@/utils";
 
 export type SliderProps = {
     label?: string,
@@ -12,7 +13,7 @@ export type SliderProps = {
     disabled?: boolean,
     flat?: boolean,
     onChange?: ((val: number) => void)
-}
+} & ElmBase;
 
 export default function Slider(props: SliderProps) {
     const [value, setValue] = useState(props.value ?? (props.min ?? 0));
@@ -37,7 +38,7 @@ export default function Slider(props: SliderProps) {
     const flat = props.flat ? "flat" : "";
 
     return (
-        <div className={`slider ${flat}`}>
+        <div className={`slider ${flat} ${props.className ? props.className : ""}`} id={props.id}>
             <label className={`slider-inner ${flat}`}>
                 {!props.flat ? <span className="slider-label">{props.label}</span> : null}
 
