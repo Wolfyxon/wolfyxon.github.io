@@ -39,6 +39,7 @@ a[href]:hover {
 
 a[target="_blank"]::after, a[target="blank"]::after {
     display: inline-block;
+    margin-left: 1px;
     width: 16px;
     height: 16px;
     content: "";
