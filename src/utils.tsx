@@ -39,6 +39,17 @@ export function splitSeconds(time: number): SplitTime {
     return res;
 }
 
+// TODO: Add configuration to add more units (like hours)
+export function secondsToString(time: number): string {
+    const split = splitSeconds(time);
+
+    return `${pad(split.minutes)}:${pad(split.seconds)}`;
+}
+
+export function pad(number: number, zeros?: number): string {
+    return number.toString().padStart(zeros ?? 2, "0");
+}
+
 export function removeEmpty(strings: string[]): string[] {
     const res = [];
 
