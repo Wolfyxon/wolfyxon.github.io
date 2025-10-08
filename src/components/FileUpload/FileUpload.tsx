@@ -11,6 +11,7 @@ export default function FileUpload(props: {
     accept: string,
     prefix?: string,
     note?: string,
+    global?: boolean,
     callback: (files: FileList) => boolean | string | string[] | undefined | null | void
 } & ElmBase) {
     const [error, setError] = useState("");
@@ -50,13 +51,13 @@ export default function FileUpload(props: {
         window.addEventListener("dragover", (e) => {
             e.preventDefault();
             
-            if(isHas(e.target, div)) {
+            if(isHas(e.target, div) || props.global) {
                 div.classList.add("drag");
             }
         });
 
         window.addEventListener("dragleave", (e) => {
-            if(isHas(e.target, div)) {
+            if(isHas(e.target, div) || props.global) {
                 div.classList.remove("drag");
             }
         });
@@ -64,10 +65,10 @@ export default function FileUpload(props: {
         window.addEventListener("drop", (e) => {
             e.preventDefault();
 
-            if(!isHas(e.target, div)) {
+            if(!isHas(e.target, div) && !props.global) {
                 return;
             }
-            
+
             div.classList.remove("drag");
 
             const files = e.dataTransfer?.files;
