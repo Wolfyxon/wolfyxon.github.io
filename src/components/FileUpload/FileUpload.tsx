@@ -62,6 +62,7 @@ export default function FileUpload(props: {
 
         window.addEventListener("drop", (e) => {
             e.preventDefault();
+            div.classList.remove("drag");
 
             const files = e.dataTransfer?.files;
 
