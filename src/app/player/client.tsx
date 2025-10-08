@@ -1,15 +1,15 @@
 "use client";
 
-import Checkbox from "@/components/input/Checkbox/Checkbox";
 import { clamp, lerp } from "@/utils";
-import { ChangeEvent, ReactNode, RefObject, useEffect, useState } from "react";
+import { ReactNode, RefObject, useEffect, useState } from "react";
+import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
+import Checkbox from "@/components/input/Checkbox/Checkbox";
 import HeaderSwitch from "./HeaderSwitch";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
 import AudioEntry from "./AudioEntry/AudioEntry";
 import ImpressRemote from "./ImpressRemote/ImpressRemote";
-import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 
 export type AudioData = {
     elm?: ReactNode,
@@ -21,7 +21,6 @@ export type AudioData = {
 }
 
 export default function PlayerPageClient() {
-    const [uploadError, setUploadError] = useState<string>("");
     const [audios, setAudios] = useState<AudioData[]>([]);
     
     const [fadeSpeed, setFadeSpeed] = useState(0.01);
