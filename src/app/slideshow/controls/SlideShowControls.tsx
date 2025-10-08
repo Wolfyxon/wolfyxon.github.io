@@ -1,16 +1,23 @@
 "use client";
 
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
 import "./style.css";
-import { Dispatch, SetStateAction, useState } from "react";
-import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
+
+type BroadcastData = {
+    msg: string,
+} & Record<any, any>
 
 export default function SlideShowControls(props: {
-    fullscreen: () => void,
+    fullscreen?: () => void,
     setSrc: Dispatch<SetStateAction<string>>
 }) {
     const [slides, setSlides] = useState<string[]>([]);
+    const [slideIdx, setSlideIdx] = useState(0);
+
+    const bcRef = useRef<BroadcastChannel | null>(null);
     
     function filesDropped(files: FileList): string[] {
         const errs: string[] = [];
@@ -24,24 +31,90 @@ export default function SlideShowControls(props: {
             }
         }
 
+        const wasEmpty = slides.length == 0;
+
         setSlides(old => [...old, ...srcs]);
+
+        bcRef.current?.postMessage({
+            msg: "setSlides",
+            srcs: srcs
+        });
+
+        if(wasEmpty) {
+            setSlide(0, false);
+        }
 
         return errs;
     }
 
-
-    function previous() {
-
+    function fullscreen() {
+        if(props.fullscreen) {
+            props.fullscreen();
+        }
     }
 
-    function next() {
-        
+    function previous(publish?: boolean) {
+        if(slideIdx <= 0) {
+            return;
+        }
+
+        setSlide(slideIdx - 1, publish);
     }
+
+    function next(publish?: boolean) {
+        if(slideIdx >= slides.length) {
+            return;
+        }
+
+        setSlide(slideIdx + 1, publish);
+    }
+
+    function setSlide(index: number, publish?: boolean) {    
+        setSlideIdx(index);
+
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                msg: "setSlide",
+                index: index
+            });
+        }
+
+        // Cursed but works. TODO: Find a better fix
+        setSlides(slides => {
+            props.setSrc(slides[index]);
+            return slides;
+        });
+    }
+
+    useEffect(() => {
+        const bc = new BroadcastChannel("slideshow");
+        bcRef.current = bc;
+
+        bc.onmessage = (e) => {
+            const data = e.data as BroadcastData;
+
+            switch(data.msg) {
+                case "previous": {
+                    previous(false);
+                    break;
+                }
+                case "next": {
+                    next(false);
+                    break;
+                }
+                case "setSlides": {
+                    setSlides(data.srcs);
+                    break;
+                }
+            }
+        }
+
+    }, []);
 
     return (
         <div className="slideshow-controls">
             <div className="slideshow-slides">
-                {slides.map(src => <img src={src} alt="Slide" width={100} />)}
+                {slides.map((src, i) => <img src={src} alt="Slide" width={100} key={`slide-${i}`} />)}
             </div>
             <FileUpload
                 prefix="Drag and drop images, paste with Ctrl+V or use"
@@ -54,7 +127,8 @@ export default function SlideShowControls(props: {
                 <ImageButton
                     img="/assets/media/img/icons/google/fullscreen.svg" 
                     label="Fullscreen"
-                    onClick={props.fullscreen}
+                    disabled={fullscreen == undefined}
+                    onClick={fullscreen}
                 />
 
                 <ImageButton
@@ -70,6 +144,9 @@ export default function SlideShowControls(props: {
                 />
             </div>
             <div>
+                {!props.fullscreen ? (
+                    <p>Fullscreen is not supported with remote control</p>
+                ) : null}
                 <label>
                     <span>Arrow modifier key </span>
 
