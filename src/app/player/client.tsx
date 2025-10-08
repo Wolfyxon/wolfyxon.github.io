@@ -9,7 +9,7 @@ import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
 import AudioEntry from "./AudioEntry/AudioEntry";
 import ImpressRemote from "./ImpressRemote/ImpressRemote";
-import FileUpload from "@/components/FileUpload/FileUpload";
+import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 
 export type AudioData = {
     elm?: ReactNode,
@@ -126,7 +126,12 @@ export default function PlayerPageClient() {
             
             : <p className="faded">No audios yet...</p>}</div>
 
-        <FileUpload accept="audio/*" callback={filesDropped} />
+        <FileUpload 
+            accept="audio/*" 
+            callback={filesDropped}
+            prefix="Add audio by dragging and dropping files or"
+            note={UPLOAD_NOTE_OFFLINE}
+        />
 
         <div id="panel">
             {

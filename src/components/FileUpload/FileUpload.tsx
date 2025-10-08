@@ -5,8 +5,12 @@ import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 import "./style.css";
 
+export const UPLOAD_NOTE_OFFLINE = "No stable internet required. Everything is handled locally in your browser";
+
 export default function FileUpload(props: {
-    accept: string, 
+    accept: string,
+    prefix?: string,
+    note?: string,
     callback: (files: FileList) => boolean | string | string[] | undefined | null | void
 } & ElmBase) {
     const [error, setError] = useState("");
@@ -86,8 +90,12 @@ export default function FileUpload(props: {
         <div id={props.id} className={classJoin("file-upload", props.className)} ref={ref}>
             <div className="file-upload-error">{error}</div>
 
-            <div>Add audio by dragging and dropping files or {fileInput}</div>
-            <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>
+            <div>{props.prefix ? props.prefix : "Drag and drop files or use"} {fileInput}</div>
+            {
+                props.note ?
+                    <div className="faded">{props.note}</div>
+                : null
+            }
         </div>
     );
 }
