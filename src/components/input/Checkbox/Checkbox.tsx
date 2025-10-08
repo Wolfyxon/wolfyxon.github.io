@@ -2,6 +2,7 @@
 
 import { ChangeEvent, useState } from "react";
 import "./style.css";
+import { ElmBase, classJoin } from "@/utils";
 
 export default function Checkbox(props: {
     label: string, 
@@ -11,8 +12,8 @@ export default function Checkbox(props: {
     confirm?: string,
     confirmOff?: string,
     confirmOn?: string,
-    onChange?: (value: boolean) => any}
-) {
+    onChange?: (value: boolean) => any
+} & ElmBase) {
     const [check, setCheck] = useState(props.checked ?? false);
 
     function change(e: ChangeEvent) {
@@ -39,7 +40,7 @@ export default function Checkbox(props: {
     const flat = props.flat ? "flat" : "";
 
     return (
-        <label className={`checkbox-container ${flat}`}>
+        <label className={classJoin(`checkbox-container ${flat}`, props.className)} id={props.id}>
             <div className="checkbox-container-inner">
                 <input type="checkbox" aria-label={props.label} defaultChecked={check} onChange={change} disabled={props.disabled} />
                 <div>{props.label}</div>
