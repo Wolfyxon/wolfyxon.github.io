@@ -17,6 +17,7 @@ export default function SlideShowPageClient() {
             <img 
                 alt="Slide" 
                 className="slideshow-preview"
+                width={400}
                 height={400}
                 src={currentSrc}
                 ref={previewRef}
