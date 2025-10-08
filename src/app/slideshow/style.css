@@ -1,0 +1,10 @@
+.slideshow-page-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.slideshow-controls {
+    flex: 1;
+}

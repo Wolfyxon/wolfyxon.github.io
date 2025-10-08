@@ -1,0 +1,25 @@
+.slideshow-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slideshow-controls-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.slideshow-slides {
+    background: var(--panel-dark);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 100px;
+    overflow: scroll;
+}
+
+.slideshow-slides img {
+    object-fit: contain;
+}
