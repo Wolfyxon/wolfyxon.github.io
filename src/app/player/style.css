@@ -2,11 +2,6 @@ body {
     transition: background 0.2s;
 }
 
-#main {
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
 #audios {
     --transition: 0.5s;
     display: flex;

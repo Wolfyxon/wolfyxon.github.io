@@ -3,6 +3,7 @@ import Page from "@/layouts/Page";
 import PlayerPageClient from "./client";
 
 import "./style.css";
+import "@/css/pageInset.css";
 
 export const metadata: Metadata = {
     title: "Player",
