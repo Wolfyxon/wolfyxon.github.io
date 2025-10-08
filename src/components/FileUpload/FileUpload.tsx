@@ -74,6 +74,14 @@ export default function FileUpload(props: {
             }
         });
 
+        window.addEventListener("paste", (e) => {
+            const files = e.clipboardData?.files;
+
+            if(files) {
+                filesDropped(files);
+            }
+        });
+
     }, []);
 
     const fileInput = (
