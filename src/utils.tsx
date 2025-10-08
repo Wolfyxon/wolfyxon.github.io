@@ -46,6 +46,19 @@ export function secondsToString(time: number): string {
     return `${pad(split.minutes)}:${pad(split.seconds)}`;
 }
 
+export function getObjectURLBase64(obj: File): Promise<string> {
+    return new Promise((res, rej) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(obj);
+
+        reader.onload = () => {
+            res(reader.result as string);
+        }
+
+        reader.onerror = rej;
+    });
+}
+
 /** 
  * Checks if a specified element is the same or is inside as the specified root.
  * Useful in DOM event handlers.

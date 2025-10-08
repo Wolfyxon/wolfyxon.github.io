@@ -5,6 +5,7 @@ import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpl
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
 import "./style.css";
+import { getObjectURLBase64 } from "@/utils";
 
 type BroadcastData = {
     msg: string,
@@ -19,32 +20,41 @@ export default function SlideShowControls(props: {
 
     const bcRef = useRef<BroadcastChannel | null>(null);
     
-    function filesDropped(files: FileList): string[] {
+    async function filesDroppedAsync(files: FileList): Promise<string[]> {
         const errs: string[] = [];
         const srcs: string[] = [];
 
         for(const file of files) {
             if(file.type.startsWith("image/")) {
-                srcs.push(URL.createObjectURL(file));
+                srcs.push(await getObjectURLBase64(file));
             } else {
                 errs.push(`'${file.name}' is not an image: ${file.type}`);
             }
         }
 
+        addSlides(srcs);
+
+        return errs;
+    }
+
+    function addSlides(srcs: string[], publish?: boolean) {
         const wasEmpty = slides.length == 0;
-
         setSlides(old => [...old, ...srcs]);
-
-        bcRef.current?.postMessage({
-            msg: "setSlides",
-            srcs: srcs
-        });
 
         if(wasEmpty) {
             setSlide(0, false);
         }
 
-        return errs;
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                msg: "addSlides",
+                srcs: srcs
+            });
+        }
+    }
+
+    function filesDropped(files: FileList) {
+        filesDroppedAsync(files);
     }
 
     function fullscreen() {
@@ -102,8 +112,8 @@ export default function SlideShowControls(props: {
                     next(false);
                     break;
                 }
-                case "setSlides": {
-                    setSlides(data.srcs);
+                case "addSlides": {
+                    addSlides(data.srcs, false);
                     break;
                 }
             }
