@@ -9,6 +9,7 @@ import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
 import AudioEntry from "./AudioEntry/AudioEntry";
 import ImpressRemote from "./ImpressRemote/ImpressRemote";
+import FileUpload from "@/components/FileUpload/FileUpload";
 
 export type AudioData = {
     elm?: ReactNode,
@@ -31,14 +32,9 @@ export default function PlayerPageClient() {
     
     const [currentAudio, setCurrentAudio] = useState<AudioData | null>(null);
 
-    function addUploadError(text: string) {
-        setUploadError(uploadError + text + "\n");
-    }
-
     function addAudio(file: File) {
         if(!(file.type === "application/ogg" || file.type.startsWith("audio/"))) {
-            addUploadError(`${file.name} is not an audio file: ${file.type}`);
-            return;
+            return `${file.name} is not an audio file: ${file.type}`;
         }
 
         const data: AudioData = {
@@ -51,18 +47,18 @@ export default function PlayerPageClient() {
         setAudios(prev => [...prev, data]);
     }
     
-    function filesSelected(e: ChangeEvent) {
-        const inp: HTMLInputElement = e.target as HTMLInputElement;
+    function filesDropped(files: FileList): string[] {
+        const errs: string[] = [];
 
-        if(!inp.files) {
-            return;
+        for(const f of files) {
+            const err = addAudio(f);
+
+            if(err) {
+                errs.push(err);
+            }
         }
 
-        for(const f of inp.files) {
-            addAudio(f);
-        }
-
-        inp.files = null;
+        return errs;
     }
 
 
@@ -110,45 +106,6 @@ export default function PlayerPageClient() {
 
     }, [currentAudio, globalVolume, fadeSpeed]);
 
-    useEffect(() => {
-        const body = document.body;
-
-        window.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            body.classList.add("drag");
-        });
-
-        window.addEventListener("dragleave", () => {
-            body.classList.remove("drag");
-        })
-
-        window.addEventListener("drop", (e) => {
-            e.preventDefault();
-            body.classList.remove("drag");
-
-            const files = e.dataTransfer?.files;
-
-            if(!files) {
-                setUploadError("No files");
-                return;
-            }
-
-            for(const f of files) {
-                addAudio(f);
-            }
-        });
-    }, []);
-
-    const fileInput = (
-        <input 
-            onChange={filesSelected} 
-            type="file" 
-            accept="audio/*" 
-            aria-label="upload an audio file" 
-            multiple
-        />
-    );
-
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
@@ -169,12 +126,7 @@ export default function PlayerPageClient() {
             
             : <p className="faded">No audios yet...</p>}</div>
 
-        <div id="upload-container">
-            <div id="upload-error">{uploadError}</div>
-
-            <div>Add audio by dragging and dropping files or {fileInput}</div>
-            <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>
-        </div>
+        <FileUpload accept="audio/*" callback={filesDropped} />
 
         <div id="panel">
             {

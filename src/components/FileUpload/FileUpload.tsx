@@ -1,12 +1,13 @@
 "use client";
 
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 export default function FileUpload(props: {
     accept: string, 
-    callback: (files: FileList) => boolean | string | string[] | undefined | null
+    callback: (files: FileList) => boolean | string | string[] | undefined | null | void
 }) {
     const [error, setError] = useState("");
+    const ref = useRef<HTMLDivElement>(null);
 
     function inputChange(e: ChangeEvent) {
         const inp: HTMLInputElement = e.target as HTMLInputElement;
@@ -15,7 +16,13 @@ export default function FileUpload(props: {
             return;
         }
 
-        const result = props.callback(inp.files);
+        filesDropped(inp.files);
+
+        inp.files = null;
+    }
+
+    function filesDropped(files: FileList) {
+        const result = props.callback(files);
 
         if(result != true && result !== null && result !== undefined) {       
             const resType = typeof(result);
@@ -24,13 +31,41 @@ export default function FileUpload(props: {
                 setError("Error uploading files");
             } if(resType == "string") {
                 setError(result as string);
+            } if(resType == "object") {
+                setError((result as string[]).join("\n"));
             }
         }
-
-        inp.files = null;
     }
 
     useEffect(() => {
+        const div = ref.current!
+
+        window.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            const target = e.target as HTMLElement
+
+            if(target == div || target.contains(div)) {
+                div.classList.add("drag");
+            }
+        });
+
+        window.addEventListener("dragleave", (e) => {
+            const target = e.target as HTMLElement
+
+            if(target == div || target.contains(div)) {
+                div.classList.remove("drag");
+            }
+        });
+
+        window.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            const files = e.dataTransfer?.files;
+
+            if(files) {
+                filesDropped(files);
+            }
+        });
 
     }, []);
 
@@ -45,7 +80,7 @@ export default function FileUpload(props: {
     );
 
     return (
-        <div className="file-upload">
+        <div className="file-upload" ref={ref}>
             <div className="upload-error">{error}</div>
 
             <div>Add audio by dragging and dropping files or {fileInput}</div>
