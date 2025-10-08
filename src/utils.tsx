@@ -46,6 +46,20 @@ export function secondsToString(time: number): string {
     return `${pad(split.minutes)}:${pad(split.seconds)}`;
 }
 
+/** 
+ * Checks if a specified element is the same or is inside as the specified root.
+ * Useful in DOM event handlers.
+*/
+export function isHas(check: HTMLElement | EventTarget | null, root: HTMLElement): boolean {
+    if(!check) {
+        return false;
+    }
+
+    const chk = (check as HTMLElement);
+    
+    return chk == root || root.contains(chk);
+}
+
 export function pad(number: number, zeros?: number): string {
     return number.toString().padStart(zeros ?? 2, "0");
 }

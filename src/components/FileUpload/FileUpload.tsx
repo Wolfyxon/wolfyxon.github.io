@@ -1,6 +1,6 @@
 "use client";
 
-import { ElmBase, classJoin } from "@/utils";
+import { ElmBase, classJoin, isHas } from "@/utils";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 import "./style.css";
@@ -45,9 +45,8 @@ export default function FileUpload(props: {
 
         window.addEventListener("dragover", (e) => {
             e.preventDefault();
-            const target = e.target as HTMLElement
-
-            if(target == div || target.contains(div)) {
+            
+            if(isHas(e.target, div)) {
                 div.classList.add("drag");
             }
         });
@@ -55,7 +54,7 @@ export default function FileUpload(props: {
         window.addEventListener("dragleave", (e) => {
             const target = e.target as HTMLElement
 
-            if(target == div || target.contains(div)) {
+            if(isHas(e.target, div)) {
                 div.classList.remove("drag");
             }
         });
