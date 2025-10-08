@@ -3,6 +3,8 @@
 import { ElmBase, classJoin } from "@/utils";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
+import "./style.css";
+
 export default function FileUpload(props: {
     accept: string, 
     callback: (files: FileList) => boolean | string | string[] | undefined | null | void
@@ -82,7 +84,7 @@ export default function FileUpload(props: {
 
     return (
         <div id={props.id} className={classJoin("file-upload", props.className)} ref={ref}>
-            <div className="upload-error">{error}</div>
+            <div className="file-upload-error">{error}</div>
 
             <div>Add audio by dragging and dropping files or {fileInput}</div>
             <div className="faded">No stable internet required. Everything is handled locally in your browser.</div>

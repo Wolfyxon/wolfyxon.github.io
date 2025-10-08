@@ -1,0 +1,16 @@
+.file-upload {
+    padding: 40px 20px;
+    border: 3px var(--panel) dashed;
+    transition: 0.5s;
+}
+
+.file-upload-error:not(:empty) {
+    margin-bottom: 20px;
+    white-space: pre-line;
+    color: var(--color4);
+}
+
+.file-upload.drag {
+    background: var(--panel);
+    border-color: white;
+}
