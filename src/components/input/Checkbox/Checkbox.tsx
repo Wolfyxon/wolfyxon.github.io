@@ -1,8 +1,9 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import "./style.css";
 import { ElmBase, classJoin } from "@/utils";
+
+import "./style.css";
 
 export default function Checkbox(props: {
     label: string, 
