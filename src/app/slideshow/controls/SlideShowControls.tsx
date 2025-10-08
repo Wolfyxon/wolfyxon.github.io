@@ -104,12 +104,8 @@ export default function SlideShowControls(props: {
             const data = e.data as BroadcastData;
 
             switch(data.msg) {
-                case "previous": {
-                    previous(false);
-                    break;
-                }
-                case "next": {
-                    next(false);
+                case "setSlide": {
+                    setSlide(data.index, false);
                     break;
                 }
                 case "addSlides": {
