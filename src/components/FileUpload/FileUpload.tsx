@@ -56,8 +56,6 @@ export default function FileUpload(props: {
         });
 
         window.addEventListener("dragleave", (e) => {
-            const target = e.target as HTMLElement
-
             if(isHas(e.target, div)) {
                 div.classList.remove("drag");
             }
@@ -65,6 +63,11 @@ export default function FileUpload(props: {
 
         window.addEventListener("drop", (e) => {
             e.preventDefault();
+
+            if(!isHas(e.target, div)) {
+                return;
+            }
+            
             div.classList.remove("drag");
 
             const files = e.dataTransfer?.files;
