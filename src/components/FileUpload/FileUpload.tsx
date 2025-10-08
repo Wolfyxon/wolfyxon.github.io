@@ -1,11 +1,12 @@
 "use client";
 
+import { ElmBase, classJoin } from "@/utils";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 export default function FileUpload(props: {
     accept: string, 
     callback: (files: FileList) => boolean | string | string[] | undefined | null | void
-}) {
+} & ElmBase) {
     const [error, setError] = useState("");
     const ref = useRef<HTMLDivElement>(null);
 
@@ -80,7 +81,7 @@ export default function FileUpload(props: {
     );
 
     return (
-        <div className="file-upload" ref={ref}>
+        <div id={props.id} className={classJoin("file-upload", props.className)} ref={ref}>
             <div className="upload-error">{error}</div>
 
             <div>Add audio by dragging and dropping files or {fileInput}</div>
