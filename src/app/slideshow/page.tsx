@@ -10,6 +10,18 @@ export default function SlideShowPage() {
         <Page category="Slideshow">
             <h1>Slideshow player</h1>
             <SlideShowPageClient />
+
+            <h2>How to use?</h2>
+            <ol>
+                <li>Open this page in 2 tabs</li>
+                <li>Move one tab to a separate window and put it on the projector screen</li>
+                <li>Add slide images</li>
+                <li>Click 'fullscreen' on the projector tab</li>
+                <li>Use 'previous' and 'next' buttons to swap between slides</li>
+            </ol>
+            <p>
+                Also see <a href="/player" target="_blank">Player</a> to control music and slides at the same time.
+            </p>
         </Page>
     );
 }
