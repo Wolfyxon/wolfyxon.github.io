@@ -77,7 +77,7 @@ export default function SlideShowControls(props: {
     }
 
     function next(publish?: boolean) {
-        if(slideIdx >= slides.length) {
+        if(slideIdx >= slides.length - 1) {
             return;
         }
 
