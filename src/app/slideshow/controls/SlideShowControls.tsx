@@ -6,6 +6,7 @@ import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpl
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
 import "./style.css";
+import Accordion from "@/components/input/Accordion/Accordion";
 
 type BroadcastData = {
     msg: string,
@@ -208,26 +209,27 @@ export default function SlideShowControls(props: {
                     />
                 </div>
             </div>
-            <div>
-                <label>
-                    <span>Navigation keys </span>
+            <Accordion title="Settings">
+                <div className="slideshow-settings">
+                    <label>
+                        <span>Navigation keys: </span>
+                        <select defaultValue="Arrows">
+                            <option>Arrows</option>
+                            <option>Q & E</option>
+                        </select>
+                    </label>
 
-                    <select defaultValue="Arrows">
-                        <option>Arrows</option>
-                        <option>Q & E</option>
-                    </select>
-                </label>
-                <span> </span>
-                <label>
-                    <span>Modifier </span>
+                    <label>
+                        <span>Key modifier: </span>
 
-                    <select defaultValue="Control">
-                        <option>None</option>
-                        <option>Control</option>
-                        <option>Shift</option>
-                    </select>
-                </label>
-            </div>
+                        <select defaultValue="Control">
+                            <option>None</option>
+                            <option>Control</option>
+                            <option>Shift</option>
+                        </select>
+                    </label>
+                </div>
+            </Accordion>
             <a href="/slideshow" target="_blank">Open new instance for remote control</a>
         </div>
     );

@@ -40,3 +40,14 @@
 .slideshow-slides img.current {
     background-color: var(--color4);
 }
+
+.slideshow-settings {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.slideshow-settings label span {
+    display: inline-block;
+    min-width: 150px;
+}
