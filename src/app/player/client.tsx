@@ -171,6 +171,7 @@ export default function PlayerPageClient() {
                         label="Enable slideshow control"
                         checked={slideshowEnabled}
                         onChange={setSlideshowEnabled}
+                        disabled={lockChecks}
                     />
                 </div>
                 <div id="ranges">
