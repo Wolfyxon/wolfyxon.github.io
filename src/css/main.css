@@ -116,6 +116,10 @@ select:active {
     background-color: var(--color5);
 }
 
+select:disabled {
+    opacity: 0.6;
+}
+
 /* --== Range inputs ==-- */
 
 input[type="range"] {
