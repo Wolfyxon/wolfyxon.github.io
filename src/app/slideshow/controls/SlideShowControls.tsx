@@ -22,9 +22,8 @@ export default function SlideShowControls(props: {
     const [slideIdx, setSlideIdx] = useState(0);
 
     const bcRef = useRef<BroadcastChannel | null>(null);
+    const originRef = useRef<string | null>(null);
     
-    const origin = Math.random().toString() + new Date();
-
     async function filesDroppedAsync(files: FileList): Promise<string[]> {
         const errs: string[] = [];
         const srcs: string[] = [];
@@ -53,7 +52,7 @@ export default function SlideShowControls(props: {
         if(publish ?? true) {
             bcRef.current?.postMessage({
                 msg: "addSlides",
-                origin: origin,
+                origin: originRef.current,
                 srcs: srcs
             });
         }
@@ -91,7 +90,7 @@ export default function SlideShowControls(props: {
         if(publish ?? true) {
             bcRef.current?.postMessage({
                 msg: "setSlide",
-                origin: origin,
+                origin: originRef.current,
                 index: index
             });
         }
@@ -110,11 +109,11 @@ export default function SlideShowControls(props: {
         bc.onmessage = (e) => {
             const data = e.data as BroadcastData;
 
-            if(data.origin == origin) {
+            if(data.origin == originRef.current) {
                 return;
             }
 
-            if(data.target && data.target != origin) {
+            if(data.target && data.target != originRef.current) {
                 return;
             }
 
@@ -127,9 +126,41 @@ export default function SlideShowControls(props: {
                     addSlides(data.srcs, false);
                     break;
                 }
+                case "setSlides": {
+                    if(data.srcs.length > 50) {
+                        console.error("too much!");
+                        return;
+                    }
+
+                    setSlides(data.srcs);
+                    break;
+                }
+                case "getSlides": {
+                    bcRef.current?.postMessage({
+                        msg: "setSlides",
+                        origin: originRef.current,
+                        target: data.origin,
+                        srcs: slides
+                    });
+                }
             }
         }
 
+        return () => bc.close();
+    }, [slides]);
+
+    useEffect(() => {
+        console.log(originRef.current)
+        if(originRef.current) {
+            return;
+        }
+
+        originRef.current = Math.random().toString() + new Date();
+
+        bcRef.current?.postMessage({
+            msg: "getSlides",
+            origin: originRef.current,
+        });
     }, []);
 
     return (
