@@ -2,6 +2,16 @@ body {
     transition: background 0.2s;
 }
 
+#top-panels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#top-panels > * {
+    flex: 1;
+}
+
 #audios {
     --transition: 0.5s;
     display: flex;

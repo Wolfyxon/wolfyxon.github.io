@@ -9,7 +9,7 @@ import LeaveBlocker from "@/components/func/LeaveBlocker";
 import Slider from "@/components/input/Slider/Slider";
 import HSeparator from "@/components/separators/HSeparator";
 import AudioEntry from "./AudioEntry/AudioEntry";
-import ImpressRemote from "./ImpressRemote/ImpressRemote";
+import SlideShowControls from "../slideshow/controls/SlideShowControls";
 
 export type AudioData = {
     elm?: ReactNode,
@@ -105,38 +105,47 @@ export default function PlayerPageClient() {
 
     }, [currentAudio, globalVolume, fadeSpeed]);
 
+    const [slideshowEnabled, setSlideshowEnabled] = useState(false);
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
     const [lockTime, setLockTime] = useState(false);
-    const [impressRemoteEnabled, setImpressRemoteEnabled] = useState(false);
-    
-    return (<>
-        <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
-            <AudioEntry 
-                data={audio} 
-                currentAudio={currentAudio}
-                setAudios={setAudios} 
-                setCurrentAudio={setCurrentAudio}
-                askBeforeDeleting={askBeforeDeleting}
-                lockDelete={lockDel}
-                lockTime={lockTime}
-                key={`audio-${i}-${audio.file.size}`} />)
-            
-            : <p className="faded">No audios yet...</p>}</div>
 
-        <FileUpload 
-            accept="audio/*" 
-            callback={filesDropped}
-            prefix="Add audio by dragging and dropping files or"
-            note={UPLOAD_NOTE_OFFLINE}
-            global
-        />
+    return (<>
+
+        <div id="top-panels">
+            <div id="audio-panel">
+                <div id="audios">{audios.length != 0 ? audios.map((audio, i) => 
+                    <AudioEntry 
+                        data={audio} 
+                        currentAudio={currentAudio}
+                        setAudios={setAudios} 
+                        setCurrentAudio={setCurrentAudio}
+                        askBeforeDeleting={askBeforeDeleting}
+                        lockDelete={lockDel}
+                        lockTime={lockTime}
+                        key={`audio-${i}-${audio.file.size}`} />)
+                    
+                    : <p className="faded">No audios yet...</p>}
+                </div>
+
+                <FileUpload 
+                    accept="audio/*" 
+                    callback={filesDropped}
+                    prefix="Add audio by dragging and dropping files or"
+                    note={UPLOAD_NOTE_OFFLINE}
+                    global={!slideshowEnabled}
+                />
+            </div>
+            
+            {
+                slideshowEnabled ?
+                    <SlideShowControls setSrc={() => {}} />
+                : null
+            }
+        </div>
 
         <div id="panel">
-            {
-                impressRemoteEnabled ? <ImpressRemote /> : null
-            }
             <div id="settings">
                 <div id="switches">
                     <Checkbox label="Lock" flat checked={lockChecks} onChange={setLockChecks} />
@@ -150,11 +159,9 @@ export default function PlayerPageClient() {
                     <Checkbox label="Ask before deleting audio" checked={askBeforeDeleting} onChange={setAskBeforeDeleting} disabled={lockChecks} />
                     
                     <Checkbox 
-                        label="Enable LibreOffice Impress remote control"
-                        confirmOff="Disabling ImpressRemote will cause it to disconnect!"
-                        checked={impressRemoteEnabled}
-                        onChange={setImpressRemoteEnabled} 
-                        disabled={lockChecks} 
+                        label="Enable slideshow control"
+                        checked={slideshowEnabled}
+                        onChange={setSlideshowEnabled}
                     />
                 </div>
                 <div id="ranges">
