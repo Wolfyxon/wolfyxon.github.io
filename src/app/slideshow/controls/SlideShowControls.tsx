@@ -182,7 +182,7 @@ export default function SlideShowControls(props: {
                 <ImageButton
                     img="/assets/media/img/icons/google/fullscreen.svg" 
                     label="Fullscreen"
-                    disabled={fullscreen == undefined}
+                    disabled={!props.fullscreen}
                     onClick={fullscreen}
                 />
 
@@ -199,9 +199,6 @@ export default function SlideShowControls(props: {
                 />
             </div>
             <div>
-                {!props.fullscreen ? (
-                    <p>Fullscreen is not supported with remote control</p>
-                ) : null}
                 <label>
                     <span>Arrow modifier key </span>
 
