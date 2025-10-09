@@ -106,6 +106,18 @@ export default function SlideShowControls(props: {
         });
     }
 
+    function deleteCurrent() {
+        if(slides.length != 0) {
+            setSlides(slides.filter((v, i) => i != slideIdx ));
+        }
+    }
+
+    function deleteAll() {
+        if(confirm("Do you want to delete ALL slides? (no undo)")) {
+            setSlides([]);
+        }
+    }
+
     useEffect(() => {
         const bc = new BroadcastChannel("slideshow");
         bcRef.current = bc;
@@ -254,6 +266,18 @@ export default function SlideShowControls(props: {
                         reverse
                     />
                 </div>
+
+                <ImageButton 
+                    img="/assets/media/img/icons/google/delete.svg"
+                    label="Delete selected"
+                    onClick={deleteCurrent}
+                />
+
+                <ImageButton 
+                    img="/assets/media/img/icons/google/delete.svg"
+                    label="Delete all"
+                    onClick={deleteAll}
+                />
             </div>
             <Accordion title="Settings">
                 <div className="slideshow-settings">
