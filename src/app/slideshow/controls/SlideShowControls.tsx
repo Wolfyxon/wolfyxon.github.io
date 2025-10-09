@@ -200,7 +200,7 @@ export default function SlideShowControls(props: {
 
                 <ImageButton
                     img="/assets/media/img/icons/google/next.svg" 
-                    label="Previous"
+                    label="Next"
                     onClick={next}
                 />
             </div>
