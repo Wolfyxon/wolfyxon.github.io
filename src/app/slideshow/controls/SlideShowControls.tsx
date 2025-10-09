@@ -171,6 +171,7 @@ export default function SlideShowControls(props: {
                     width={100} 
                     height={100} 
                     key={`slide-${i}`}
+                    onClick={() => setSlide(i)}
                     className={i == slideIdx ? "current" : undefined} 
                 />)}
             </div>
