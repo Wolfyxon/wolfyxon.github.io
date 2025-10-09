@@ -13,6 +13,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
+    opacity: 0;
 }
 
 .accordion.open .accordion-button {
@@ -24,4 +25,5 @@
     padding: 20px;
     overflow-y: scroll;
     border-bottom-width: 2px;
+    opacity: 1;
 }
