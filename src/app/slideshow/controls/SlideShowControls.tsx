@@ -12,6 +12,7 @@ type BroadcastData = {
 } & Record<any, any>
 
 export default function SlideShowControls(props: {
+    hideUpload?: boolean,
     fullscreen?: () => void,
     setSrc: Dispatch<SetStateAction<string>>
 }) {
@@ -122,12 +123,16 @@ export default function SlideShowControls(props: {
             <div className="slideshow-slides">
                 {slides.map((src, i) => <img src={src} alt="Slide" width={100} key={`slide-${i}`} />)}
             </div>
-            <FileUpload
-                prefix="Drag and drop images, paste with Ctrl+V or use"
-                note={UPLOAD_NOTE_OFFLINE}
-                accept="image/*" 
-                callback={filesDropped}
-            />
+            {
+                !props.hideUpload ?
+                    <FileUpload
+                        prefix="Drag and drop images, paste with Ctrl+V or use"
+                        note={UPLOAD_NOTE_OFFLINE}
+                        accept="image/*" 
+                        callback={filesDropped}
+                    />
+                : null
+            }
             <div className="slideshow-controls-buttons">
                 <ImageButton
                     img="/assets/media/img/icons/google/fullscreen.svg" 

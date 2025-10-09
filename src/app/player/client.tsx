@@ -105,6 +105,7 @@ export default function PlayerPageClient() {
 
     }, [currentAudio, globalVolume, fadeSpeed]);
 
+    const [fileUploadDisabled, setFileUploadDisabled] = useState(false);
     const [slideshowEnabled, setSlideshowEnabled] = useState(false);
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
@@ -129,17 +130,25 @@ export default function PlayerPageClient() {
                     : <p className="faded">No audios yet...</p>}
                 </div>
 
-                <FileUpload 
-                    accept="audio/*" 
-                    callback={filesDropped}
-                    prefix="Add audio by dragging and dropping files or"
-                    note={UPLOAD_NOTE_OFFLINE}
-                />
+                {!fileUploadDisabled ? 
+                    <FileUpload 
+                        accept="audio/*" 
+                        callback={filesDropped}
+                        prefix="Add audio by dragging and dropping files or"
+                        note={UPLOAD_NOTE_OFFLINE}
+                    />
+                : null
+                }
+
+
             </div>
             
             {
                 slideshowEnabled ?
-                    <SlideShowControls setSrc={() => {}} />
+                    <SlideShowControls
+                        setSrc={() => {}}
+                        hideUpload={fileUploadDisabled} 
+                    />
                 : null
             }
         </div>
@@ -151,6 +160,7 @@ export default function PlayerPageClient() {
                     <HSeparator />
 
                     <HeaderSwitch disabled={lockChecks} />
+                    <Checkbox label="Hide file uploads" checked={fileUploadDisabled} onChange={setFileUploadDisabled} disabled={lockChecks} />
                     <Checkbox label="Lock audio deletion" checked={lockDel} onChange={setLockDel} disabled={lockChecks} />
                     <Checkbox label="Lock audio time" checked={lockTime} onChange={setLockTime} disabled={lockChecks} />
 
