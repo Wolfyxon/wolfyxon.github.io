@@ -166,7 +166,7 @@ export default function SlideShowControls(props: {
     return (
         <div className="slideshow-controls">
             <div className="slideshow-slides">
-                {slides.map((src, i) => <img src={src} alt="Slide" width={100} key={`slide-${i}`} />)}
+                {slides.map((src, i) => <img src={src} alt="Slide" width={100} height={100} key={`slide-${i}`} />)}
             </div>
             {
                 !props.hideUpload ?
