@@ -3,8 +3,13 @@
 import { ReactNode, useState } from "react";
 
 import "./style.css";
+import { ElmBase, classJoin } from "@/utils";
 
-export default function Accordion(props: {title: string, open?: boolean, children: ReactNode}) {
+export default function Accordion(props: {
+    title: string, 
+    open?: boolean, 
+    children: ReactNode
+} & ElmBase) {
     const [open, setOpen] = useState(props.open ?? false);
 
     function click() {
@@ -12,7 +17,7 @@ export default function Accordion(props: {title: string, open?: boolean, childre
     }
 
     return (
-        <div className={`accordion ${open ? "open" : ""}`}>
+        <div className={classJoin(`accordion ${open ? "open" : ""}`, props.className)} id={props.id}>
             <button onClick={click} className="accordion-button">
                 <label>{props.title}</label>
             </button>
