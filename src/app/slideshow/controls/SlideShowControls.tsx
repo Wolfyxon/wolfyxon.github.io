@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import { getObjectURLBase64 } from "@/utils";
+import { EventListener, getObjectURLBase64 } from "@/utils";
 import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
@@ -22,6 +22,9 @@ export default function SlideShowControls(props: {
     const [slides, setSlides] = useState<string[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);
 
+    const [navKeys, setNavKeys] = useState("Q & E");
+    const [navModifier, setNavModifier] = useState("Shift");
+    
     const bcRef = useRef<BroadcastChannel | null>(null);
     const originRef = useRef<string | null>(null);
     
@@ -163,6 +166,49 @@ export default function SlideShowControls(props: {
         });
     }, []);
 
+    useEffect(() => {
+        const lis = [
+            new EventListener(window, "keydown", (_e) => {
+                const e = _e as KeyboardEvent;
+                const key = e.key.toLowerCase();
+
+                if(navModifier != "None") {
+                    if(navModifier == "Shift" && !e.shiftKey) {
+                        return;
+                    }
+
+                    if(navModifier == "Control" && !e.ctrlKey) {
+                        return;
+                    }
+
+                    if(navModifier == "Alt" && !e.altKey) {
+                        return;
+                    }
+                }
+
+                if(navKeys == "Q & E") {
+                    if(key == "e") {
+                        next();
+                    } else if(key == "q") {
+                        previous();
+                    }
+                }
+
+                if(navKeys == "Arrows") {
+                    if(key == "ArrowRight") {
+                        next();
+                    } else if(key == "ArrowLeft") {
+                        previous();
+                    }
+                }
+            })
+        ];
+
+        return () => {
+            lis.forEach(l => l.disconnect());
+        }
+    }, [navKeys, navModifier, slideIdx, slides]);
+
     return (
         <div className="slideshow-controls">
             <div className="slideshow-slides">
@@ -213,7 +259,7 @@ export default function SlideShowControls(props: {
                 <div className="slideshow-settings">
                     <label>
                         <span>Navigation keys: </span>
-                        <select defaultValue="Arrows">
+                        <select defaultValue={navKeys}>
                             <option>Arrows</option>
                             <option>Q & E</option>
                         </select>
@@ -222,7 +268,7 @@ export default function SlideShowControls(props: {
                     <label>
                         <span>Key modifier: </span>
 
-                        <select defaultValue="Control">
+                        <select defaultValue={navModifier}>
                             <option>None</option>
                             <option>Control</option>
                             <option>Shift</option>
