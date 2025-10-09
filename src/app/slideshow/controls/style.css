@@ -20,6 +20,16 @@
     overflow: scroll;
 }
 
+.slideshow-pn-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.slideshow-pn-buttons > * {
+    flex: 1;
+    min-width: 7em;
+}
+
 .slideshow-slides img {
     object-fit: contain;
     padding: 5px;

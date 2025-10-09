@@ -192,18 +192,20 @@ export default function SlideShowControls(props: {
                     onClick={fullscreen}
                 />
 
-                <ImageButton
-                    img="/assets/media/img/icons/google/prev.svg" 
-                    label="Previous"
-                    onClick={previous}
-                />
+                <div className="slideshow-pn-buttons">
+                    <ImageButton
+                        img="/assets/media/img/icons/google/prev.svg" 
+                        label="Previous"
+                        onClick={previous}
+                    />
 
-                <ImageButton
-                    img="/assets/media/img/icons/google/next.svg" 
-                    label="Next"
-                    onClick={next}
-                    reverse
-                />
+                    <ImageButton
+                        img="/assets/media/img/icons/google/next.svg" 
+                        label="Next"
+                        onClick={next}
+                        reverse
+                    />
+                </div>
             </div>
             <div>
                 <label>
