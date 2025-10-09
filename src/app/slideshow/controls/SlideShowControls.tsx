@@ -210,7 +210,16 @@ export default function SlideShowControls(props: {
             </div>
             <div>
                 <label>
-                    <span>Arrow modifier key </span>
+                    <span>Navigation keys </span>
+
+                    <select defaultValue="Arrows">
+                        <option>Arrows</option>
+                        <option>Q & E</option>
+                    </select>
+                </label>
+                <span> </span>
+                <label>
+                    <span>Modifier </span>
 
                     <select defaultValue="Control">
                         <option>None</option>
