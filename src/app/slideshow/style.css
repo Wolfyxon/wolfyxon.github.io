@@ -7,7 +7,7 @@
 
 .slideshow-preview {
     object-fit: contain;
-    background-color: var(--panel-dark);
+    background-color: black;
 }
 
 .slideshow-controls {
