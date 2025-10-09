@@ -150,7 +150,6 @@ export default function SlideShowControls(props: {
     }, [slides]);
 
     useEffect(() => {
-        console.log(originRef.current)
         if(originRef.current) {
             return;
         }
