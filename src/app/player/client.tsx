@@ -134,7 +134,6 @@ export default function PlayerPageClient() {
                     callback={filesDropped}
                     prefix="Add audio by dragging and dropping files or"
                     note={UPLOAD_NOTE_OFFLINE}
-                    global={!slideshowEnabled}
                 />
             </div>
             

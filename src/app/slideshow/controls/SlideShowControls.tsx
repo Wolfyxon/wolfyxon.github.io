@@ -127,7 +127,6 @@ export default function SlideShowControls(props: {
                 note={UPLOAD_NOTE_OFFLINE}
                 accept="image/*" 
                 callback={filesDropped}
-                global
             />
             <div className="slideshow-controls-buttons">
                 <ImageButton
