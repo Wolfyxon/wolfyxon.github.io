@@ -208,6 +208,7 @@ export default function SlideShowControls(props: {
                     </select>
                 </label>
             </div>
+            <a href="/slideshow" target="_blank">Open new instance for remote control</a>
         </div>
     );
 }
