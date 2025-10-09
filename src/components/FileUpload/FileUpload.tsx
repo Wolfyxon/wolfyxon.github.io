@@ -1,6 +1,6 @@
 "use client";
 
-import { ElmBase, classJoin, isHas } from "@/utils";
+import { ElmBase, EventListener, classJoin, isHas } from "@/utils";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 import "./style.css";
@@ -46,46 +46,51 @@ export default function FileUpload(props: {
     }
 
     useEffect(() => {
-        const div = ref.current!
-
-        window.addEventListener("dragover", (e) => {
-            e.preventDefault();
+        const div = ref.current!;
+        
+        const listeners: EventListener[] = [
+            new EventListener(window, "dragover", (e) => {
+                e.preventDefault();
             
-            if(isHas(e.target, div) || props.global) {
-                div.classList.add("drag");
-            }
-        });
+                if(isHas(e.target, div) || props.global) {
+                    div.classList.add("drag");
+                }
+            }),
 
-        window.addEventListener("dragleave", (e) => {
-            if(isHas(e.target, div) || props.global) {
+            new EventListener(window, "dragleave", (e) => {
+                if(isHas(e.target, div) || props.global) {
+                    div.classList.remove("drag");
+                }
+            }),
+
+            new EventListener(window, "drop", (e) => {
+                e.preventDefault();
+    
+                if(!isHas(e.target, div) && !props.global) {
+                    return;
+                }
+    
                 div.classList.remove("drag");
-            }
-        });
+    
+                const files = (e as DragEvent).dataTransfer?.files;
+    
+                if(files) {
+                    filesDropped(files);
+                }
+            }),
 
-        window.addEventListener("drop", (e) => {
-            e.preventDefault();
+            new EventListener(window, "paste", (e) => {
+                const files = (e as ClipboardEvent).clipboardData?.files;
+    
+                if(files) {
+                    filesDropped(files);
+                }
+            })
+        ];
 
-            if(!isHas(e.target, div) && !props.global) {
-                return;
-            }
-
-            div.classList.remove("drag");
-
-            const files = e.dataTransfer?.files;
-
-            if(files) {
-                filesDropped(files);
-            }
-        });
-
-        window.addEventListener("paste", (e) => {
-            const files = e.clipboardData?.files;
-
-            if(files) {
-                filesDropped(files);
-            }
-        });
-
+        return () => {
+            listeners.forEach(l => l.disconnect());
+        }
     }, []);
 
     const fileInput = (
