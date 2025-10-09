@@ -9,6 +9,7 @@ import { getObjectURLBase64 } from "@/utils";
 
 type BroadcastData = {
     msg: string,
+    origin: string,
 } & Record<any, any>
 
 export default function SlideShowControls(props: {
@@ -21,6 +22,8 @@ export default function SlideShowControls(props: {
 
     const bcRef = useRef<BroadcastChannel | null>(null);
     
+    const origin = Math.random().toString() + new Date();
+
     async function filesDroppedAsync(files: FileList): Promise<string[]> {
         const errs: string[] = [];
         const srcs: string[] = [];
@@ -49,6 +52,7 @@ export default function SlideShowControls(props: {
         if(publish ?? true) {
             bcRef.current?.postMessage({
                 msg: "addSlides",
+                origin: origin,
                 srcs: srcs
             });
         }
@@ -86,6 +90,7 @@ export default function SlideShowControls(props: {
         if(publish ?? true) {
             bcRef.current?.postMessage({
                 msg: "setSlide",
+                origin: origin,
                 index: index
             });
         }
@@ -103,6 +108,10 @@ export default function SlideShowControls(props: {
 
         bc.onmessage = (e) => {
             const data = e.data as BroadcastData;
+
+            if(data.origin == origin) {
+                return;
+            }
 
             switch(data.msg) {
                 case "setSlide": {
