@@ -202,6 +202,7 @@ export default function SlideShowControls(props: {
                     img="/assets/media/img/icons/google/next.svg" 
                     label="Next"
                     onClick={next}
+                    reverse
                 />
             </div>
             <div>
