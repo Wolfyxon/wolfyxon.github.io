@@ -94,6 +94,28 @@ input[type="text"]:focus {
     outline: none;
 }
 
+/* --== Select dropdowns ==-- */
+
+select {
+    color: white;
+    font-size: 100%;
+    border-radius: 4px;
+    padding: 2px 20px;
+    background-color: var(--color1);
+    border: 2px solid var(--color3);
+    transition: 0.1s;
+}
+
+select:hover, select:focus {
+    cursor: pointer;
+    outline: none;
+    opacity: 0.9;
+}
+
+select:active {
+    background-color: var(--color5);
+}
+
 /* --== Range inputs ==-- */
 
 input[type="range"] {
