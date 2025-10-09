@@ -1,5 +1,5 @@
 .file-upload {
-    padding: 40px 20px;
+    padding: 25px 15px;
     border: 3px var(--panel) dashed;
     transition: 0.5s;
 }
