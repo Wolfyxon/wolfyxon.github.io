@@ -4,8 +4,25 @@ export type ElmBase = {
     className?: string
 }
 
-export type TimeUnit = "years" | "months" | "weeks" | "days" | "hours" | "minutes" | "seconds"
+export class EventListener {
+    emitter: HTMLElement | Window;
+    eventName: string;
+    handler: EventListenerOrEventListenerObject;
 
+    constructor(emitter: HTMLElement | Window, eventName: string, handler: EventListenerOrEventListenerObject) {
+        this.emitter = emitter;
+        this.eventName = eventName;
+        this.handler = handler;
+        
+        emitter.addEventListener(eventName, handler);
+    }
+
+    disconnect() {
+        this.emitter.removeEventListener(this.eventName, this.handler);
+    }
+}
+
+export type TimeUnit = "years" | "months" | "weeks" | "days" | "hours" | "minutes" | "seconds"
 export type SplitTime = Record<TimeUnit, number>
 
 const TIME_DIVISORS: {unit: TimeUnit, div: number}[] = [
