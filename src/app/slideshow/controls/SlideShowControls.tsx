@@ -10,6 +10,7 @@ import { getObjectURLBase64 } from "@/utils";
 type BroadcastData = {
     msg: string,
     origin: string,
+    target?: string,
 } & Record<any, any>
 
 export default function SlideShowControls(props: {
@@ -110,6 +111,10 @@ export default function SlideShowControls(props: {
             const data = e.data as BroadcastData;
 
             if(data.origin == origin) {
+                return;
+            }
+
+            if(data.target && data.target != origin) {
                 return;
             }
 
