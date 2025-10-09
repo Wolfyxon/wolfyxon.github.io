@@ -7,6 +7,7 @@ import ImageButton from "@/components/input/ImageButton/ImageButton";
 
 import "./style.css";
 import Accordion from "@/components/input/Accordion/Accordion";
+import Checkbox from "@/components/input/Checkbox/Checkbox";
 
 type BroadcastData = {
     msg: string,
@@ -221,6 +222,8 @@ export default function SlideShowControls(props: {
         }
     }, [navKeys, navModifier, slideIdx, slides]);
 
+    const [lockDelete, setLockDelete] = useState(false);
+
     return (
         <div className="slideshow-controls">
             <div className="slideshow-slides">
@@ -271,12 +274,14 @@ export default function SlideShowControls(props: {
                     img="/assets/media/img/icons/google/delete.svg"
                     label="Delete selected"
                     onClick={deleteCurrent}
+                    disabled={lockDelete}
                 />
 
                 <ImageButton 
                     img="/assets/media/img/icons/google/delete.svg"
                     label="Delete all"
                     onClick={deleteAll}
+                    disabled={lockDelete}
                 />
             </div>
             <Accordion title="Settings">
@@ -298,6 +303,8 @@ export default function SlideShowControls(props: {
                             <option>Shift</option>
                         </select>
                     </label>
+
+                    <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
                 </div>
             </Accordion>
             <a href="/slideshow" target="_blank">Open new instance for remote control</a>
