@@ -63,8 +63,8 @@
 }
 
 .checkbox-container.flat input:checked {
-    border-color: var(--color5);
-    background-color: var(--color5);
+    border-color: var(--color2);
+    background-color: var(--color3);
     background-blend-mode: lighten;
 }
 
