@@ -36,7 +36,6 @@ export default function Experience() {
               <Badge icon="software/framework/nodejs.webp" alt="NodeJS" />
               <Badge icon="software/lib/discordjs.webp" alt="DiscordJS" />
               <Badge icon="software/lib/jquery.svg" alt="jQuery" />
-              <Badge icon="software/framework/dotnet.svg" alt=".NET" />
               <Badge icon="software/framework/love2d.svg" alt="Love2D" />
               <Badge icon="software/framework/godot.svg" alt="Godot" />
               <Badge icon="software/framework/rbxstudio.svg" alt="Roblox Studio" />
