@@ -21,7 +21,7 @@
 }
 
 .accordion.open .accordion-content {
-    max-height: 100px;
+    max-height: 200px;
     padding: 20px;
     overflow-y: scroll;
     border-bottom-width: 2px;
