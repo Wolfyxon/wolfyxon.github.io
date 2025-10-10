@@ -8,6 +8,7 @@ import ImageButton from "@/components/input/ImageButton/ImageButton";
 import "./style.css";
 import Accordion from "@/components/input/Accordion/Accordion";
 import Checkbox from "@/components/input/Checkbox/Checkbox";
+import LeaveBlocker from "@/components/func/LeaveBlocker";
 
 type BroadcastData = {
     msg: string,
@@ -223,9 +224,12 @@ export default function SlideShowControls(props: {
     }, [navKeys, navModifier, slideIdx, slides]);
 
     const [lockDelete, setLockDelete] = useState(false);
-
+    const [askLeave, setAskLeave] = useState(true);
+    
     return (
         <div className="slideshow-controls">
+            <LeaveBlocker enabled={askLeave && slides.length != 0} />
+
             <div className="slideshow-slides">
                 {slides.map((src, i) => <img 
                     src={src}
@@ -305,6 +309,8 @@ export default function SlideShowControls(props: {
                     </label>
 
                     <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
+                    <Checkbox label="Ask before leaving" checked={askLeave} onChange={setAskLeave} flat />
+                    
                 </div>
             </Accordion>
             <a href="/slideshow" target="_blank">Open new instance for remote control</a>
