@@ -113,6 +113,7 @@ export default function SlideShowControls(props: {
 
     function deleteCurrent() {
         if(slides.length != 0) {
+            // TODO: Fix this taking ages with large amounts of images
             setSlides(slides.filter((v, i) => i != slideIdx ));
         }
     }
