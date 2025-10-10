@@ -74,7 +74,7 @@ export default function OsePage(data: OsePageProps) {
                 This site is a parody and is not meant to offend anyone.
             </p>
 
-            <a href="..">More</a>
+            <a href="..">More versions / Więcej wersji</a>
         </footer>
     </>
     );
