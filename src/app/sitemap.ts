@@ -26,6 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             page: "terminal",
             priority: 0.6,
+        },
+        {
+            page: "player",
+            priority: 0.5
+        },
+        {
+            page: "slideshow",
+            priority: 0.4
+        },
+        {
+            page: "ose",
+            priority: 0.5
         }
     ];
 
