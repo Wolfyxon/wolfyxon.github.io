@@ -17,6 +17,8 @@ export default function FileUpload(props: {
     callback: ((files: FileList) => FileUploadError | Promise<FileUploadError>)
 } & ElmBase) {
     const [error, setError] = useState("");
+    const [uploadingCount, setUploadingCount] = useState(0);
+
     const ref = useRef<HTMLDivElement>(null);
 
     function inputChange(e: ChangeEvent) {
@@ -31,24 +33,33 @@ export default function FileUpload(props: {
         inp.files = null;
     }
 
-    async function filesDropped(files: FileList) {
-        let result = props.callback(files);
+    async function filesDropped(files: FileList): Promise<void> {
+        return new Promise((resolve, reject) => {
+            setUploadingCount(prev => prev + 1);
 
-        if(result instanceof Promise) {
-            result = await result;
-        }
-
-        if(result != true && result !== null && result !== undefined) {       
-            const resType = typeof(result);
-            
-            if(result === false) {
-                setError("Error uploading files");
-            } if(resType == "string") {
-                setError(result as string);
-            } if(resType == "object") {
-                setError((result as string[]).join("\n"));
-            }
-        }
+            setTimeout(async () => {
+                let result = props.callback(files);
+                
+                if(result instanceof Promise) {
+                    result = await result;
+                }
+        
+                if(result != true && result !== null && result !== undefined) {       
+                    const resType = typeof(result);
+                    
+                    if(result === false) {
+                        setError("Error uploading files");
+                    } if(resType == "string") {
+                        setError(result as string);
+                    } if(resType == "object") {
+                        setError((result as string[]).join("\n"));
+                    }
+                }
+    
+                setUploadingCount(prev => prev - 1);
+                resolve();
+            });
+        });
     }
 
     useEffect(() => {
@@ -110,15 +121,20 @@ export default function FileUpload(props: {
     );
 
     return (
-        <div id={props.id} className={classJoin("file-upload", props.className)} ref={ref}>
-            <div className="file-upload-error">{error}</div>
+        <div id={props.id} className={`${classJoin("file-upload", props.className)} ${uploadingCount != 0 ? "uploading" : ""}`} ref={ref}>
+            <div className="file-upload-main">
+                <div className="file-upload-error">{error}</div>
 
-            <div>{props.prefix ? props.prefix : "Drag and drop files or use"} {fileInput}</div>
-            {
-                props.note ?
-                    <div className="faded">{props.note}</div>
-                : null
-            }
+                <div>{props.prefix ? props.prefix : "Drag and drop files or use"} {fileInput}</div>
+                {
+                    props.note ?
+                        <div className="faded">{props.note}</div>
+                    : null
+                }
+            </div>
+            <div className="file-upload-uploading">
+                <div>Uploading...</div>
+            </div>
         </div>
     );
 }
