@@ -40,7 +40,7 @@ code:not(pre code) {
 }
 
 .article-container article {
-    padding: 5px 10px;
+    padding: 5px 20px;
     background: var(--panel-very-dark);
     border-left: 2px var(--panel-dark) solid;
     border-radius: 8px;
