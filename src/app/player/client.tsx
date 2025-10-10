@@ -38,9 +38,7 @@ export default function PlayerPageClient() {
             }
     
             const audio = new Audio(URL.createObjectURL(file));
-    
             
-    
             const data: AudioData = {
                 audio: audio,
                 file: file,
