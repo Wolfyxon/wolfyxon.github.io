@@ -2,7 +2,7 @@
 
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { EventListener, getObjectURLBase64, inputHandled } from "@/utils";
-import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
+import FileUpload, { FileUploadStatusCallback, UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
 import "./style.css";
@@ -30,7 +30,9 @@ export default function SlideShowControls(props: {
     const bcRef = useRef<BroadcastChannel | null>(null);
     const originRef = useRef<string | null>(null);
     
-    async function filesDroppedAsync(files: FileList): Promise<string[]> {
+    async function filesDroppedAsync(files: FileList, status: FileUploadStatusCallback): Promise<string[]> {
+        status(false);
+
         const errs: string[] = [];
         const srcs: string[] = [];
 
@@ -43,6 +45,7 @@ export default function SlideShowControls(props: {
         }
 
         addSlides(srcs);
+        status(true);
 
         return errs;
     }
@@ -64,8 +67,8 @@ export default function SlideShowControls(props: {
         }
     }
 
-    function filesDropped(files: FileList) {
-        filesDroppedAsync(files);
+    function filesDropped(files: FileList, status:  FileUploadStatusCallback) {
+        filesDroppedAsync(files, status);
     }
 
     function fullscreen() {
