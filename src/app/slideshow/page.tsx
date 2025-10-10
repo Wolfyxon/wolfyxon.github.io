@@ -4,6 +4,12 @@ import SlideShowPageClient from "./client";
 
 import "@/css/pageInset.css";
 import "./style.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Slideshow",
+    description: "Online slideshow tool"
+}
 
 export default function SlideShowPage() {
     return (
