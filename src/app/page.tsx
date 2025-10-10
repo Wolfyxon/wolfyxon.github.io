@@ -11,7 +11,10 @@ import "@/css/animations.css";
 import "@/css/home.css";
 
 export const metadata: Metadata = {
-  title: "Wolfyxon | My website"
+  title: "Wolfyxon | My website",
+  description: "Hi, I'm Wolfyxon. I'm a guy who loves programming " +
+               "and dealing with all kinds of software. " +
+               "This is my website, where you can see the stuff I make."
 }
 
 export default function Home() {
