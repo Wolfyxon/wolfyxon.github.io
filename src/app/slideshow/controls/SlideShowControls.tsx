@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import { EventListener, getObjectURLBase64 } from "@/utils";
+import { EventListener, getObjectURLBase64, inputHandled } from "@/utils";
 import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 
@@ -186,6 +186,10 @@ export default function SlideShowControls(props: {
                 const e = _e as KeyboardEvent;
                 const key = e.key.toLowerCase();
 
+                if(inputHandled(e)) {
+                    return;
+                }
+
                 if(navModifier != "None") {
                     if(navModifier == "Shift" && !e.shiftKey) {
                         return;
@@ -203,16 +207,20 @@ export default function SlideShowControls(props: {
                 if(navKeys == "Q & E") {
                     if(key == "e") {
                         next();
+                        e.preventDefault();
                     } else if(key == "q") {
                         previous();
+                        e.preventDefault();
                     }
                 }
 
                 if(navKeys == "Arrows") {
                     if(key == "ArrowRight") {
                         next();
+                        e.preventDefault();
                     } else if(key == "ArrowLeft") {
                         previous();
+                        e.preventDefault();
                     }
                 }
             })

@@ -76,6 +76,22 @@ export function getObjectURLBase64(obj: File): Promise<string> {
     });
 }
 
+export function inputHandled(event: KeyboardEvent): boolean {
+    const t = event.target as HTMLElement;
+    console.log(t);
+    return (
+        t && (
+            (
+                t.tagName == "SELECT"
+            ) ||
+            (
+                t.tagName == "INPUT" &&
+                ["text", "number"].includes((t as HTMLInputElement).type)
+            )
+        )
+    );
+}
+
 /** 
  * Checks if a specified element is the same or is inside as the specified root.
  * Useful in DOM event handlers.
