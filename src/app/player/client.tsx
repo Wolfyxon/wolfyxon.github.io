@@ -31,26 +31,49 @@ export default function PlayerPageClient() {
     
     const [currentAudio, setCurrentAudio] = useState<AudioData | null>(null);
 
-    function addAudio(file: File) {
-        if(!(file.type === "application/ogg" || file.type.startsWith("audio/"))) {
-            return `${file.name} is not an audio file: ${file.type}`;
-        }
+    function addAudio(file: File): Promise<string | undefined | void> {
+        return new Promise((res, rej) => {
+            if(!(file.type === "application/ogg" || file.type.startsWith("audio/"))) {
+                return `${file.name} is not an audio file: ${file.type}`;
+            }
+    
+            const audio = new Audio(URL.createObjectURL(file));
+    
+            
+    
+            const data: AudioData = {
+                audio: audio,
+                file: file,
+                targetVolume: 0,
+                stopped: false
+            }
 
-        const data: AudioData = {
-            audio: new Audio(URL.createObjectURL(file)),
-            file: file,
-            targetVolume: 0,
-            stopped: false
-        }
+            audio.onerror = function() {
+                const errCode = audio.error?.code ?? 0;
 
-        setAudios(prev => [...prev, data]);
+                const errors: string[] = [
+                    "Unknown error",
+                    "Uploading aborted",
+                    "Network error",
+                    "Unable to decode audio",
+                    `Audio format not supported (${file.type})`
+                ];
+                
+                res(`'${file.name}': ${errors[errCode]}`);
+            }
+    
+            audio.oncanplaythrough = function() {
+                setAudios(prev => [...prev, data]);
+                res();
+            }
+        });
     }
     
-    function filesDropped(files: FileList): string[] {
+    async function filesDropped(files: FileList): Promise<string[]> {
         const errs: string[] = [];
 
         for(const f of files) {
-            const err = addAudio(f);
+            const err = await addAudio(f);
 
             if(err) {
                 errs.push(err);
