@@ -78,7 +78,7 @@ export function getObjectURLBase64(obj: File): Promise<string> {
 
 export function inputHandled(event: KeyboardEvent): boolean {
     const t = event.target as HTMLElement;
-    console.log(t);
+    
     return (
         t && (
             (
