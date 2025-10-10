@@ -41,6 +41,11 @@
     background-color: var(--color4);
 }
 
+.slideshow-slides img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .slideshow-settings {
     display: flex;
     gap: 10px;
