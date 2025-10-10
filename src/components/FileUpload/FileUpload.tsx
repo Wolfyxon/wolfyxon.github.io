@@ -9,7 +9,8 @@ export const UPLOAD_NOTE_OFFLINE = "No stable internet required. Everything is h
 
 export type FileUploadError = boolean | string | string[] | undefined | null | void;
 
-type FileDropCallback = ((files: FileList) => FileUploadError | Promise<FileUploadError>);
+export type FileUploadStatusCallback = (complete: boolean) => void;
+export type FileDropCallback = (files: FileList, statusCallback: FileUploadStatusCallback) => FileUploadError | Promise<FileUploadError>;
 
 export default function FileUpload(props: {
     accept: string,
@@ -39,8 +40,27 @@ export default function FileUpload(props: {
         return new Promise((resolve, reject) => {
             setUploadingCount(prev => prev + 1);
 
+            let statusWait = false;
+
+            function statusCallback(status: boolean) {
+                if(!status) {
+                    statusWait = true;
+                } else {
+                    if(!statusWait) {
+                        throw "Status callback has to be first called with false";
+                    }
+
+                    finish();
+                }
+            }
+
+            function finish() {
+                setUploadingCount(prev => prev - 1);
+                resolve();
+            }
+
             setTimeout(async () => {
-                let result = props.callback(files);
+                let result = props.callback(files, statusCallback);
                 
                 if(result instanceof Promise) {
                     result = await result;
@@ -57,9 +77,10 @@ export default function FileUpload(props: {
                         setError((result as string[]).join("\n"));
                     }
                 }
-    
-                setUploadingCount(prev => prev - 1);
-                resolve();
+                
+                if(!statusWait) {
+                    finish();
+                }
             });
         });
     }
