@@ -11,9 +11,13 @@ export default function Footer() {
                     <a href="https://github.com/Wolfyxon/wolfyxon.github.io/issues">Bugs & suggestions</a>
                 </Column>
 
-                <Column title="Super secret">
-                    <a href="/ose">OSE</a>
+                <Column title="Utilities">
                     <a href="/player">Player</a>
+                    <a href="/slideshow">Slideshow</a>
+                </Column>
+
+                <Column title="Other">
+                    <a href="/ose">OSE</a>
                     <a href="/archive/lighter/tgdod">Lighter</a>
                 </Column>
 
