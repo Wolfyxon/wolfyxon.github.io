@@ -9,12 +9,14 @@ export const UPLOAD_NOTE_OFFLINE = "No stable internet required. Everything is h
 
 export type FileUploadError = boolean | string | string[] | undefined | null | void;
 
+type FileDropCallback = ((files: FileList) => FileUploadError | Promise<FileUploadError>);
+
 export default function FileUpload(props: {
     accept: string,
     prefix?: string,
     note?: string,
     global?: boolean,
-    callback: ((files: FileList) => FileUploadError | Promise<FileUploadError>)
+    callback: FileDropCallback
 } & ElmBase) {
     const [error, setError] = useState("");
     const [uploadingCount, setUploadingCount] = useState(0);
