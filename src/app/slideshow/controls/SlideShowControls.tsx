@@ -138,9 +138,10 @@ export default function SlideShowControls(props: {
             });
         }
 
-        // Cursed but works. TODO: Find a better fix
+        // Cursed but works. Do not touch
         setSlides(slides => {
-            props.setSrc(slides[index].src!);
+            setTimeout(() => props.setSrc(slides[index].src!));
+
             return slides;
         });
     }
