@@ -274,6 +274,7 @@ export default function SlideShowControls(props: {
 
     const [lockDelete, setLockDelete] = useState(false);
     const [askLeave, setAskLeave] = useState(true);
+    const [disableNewIns, setDisableNewIns] = useState(false);
     
     return (
         <div className="slideshow-controls">
@@ -360,10 +361,11 @@ export default function SlideShowControls(props: {
 
                     <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
                     <Checkbox label="Ask before leaving" checked={askLeave} onChange={setAskLeave} flat />
+                    <Checkbox label="Disable new instance link" checked={disableNewIns} onChange={setDisableNewIns} flat />
                     
                 </div>
             </Accordion>
-            <a href="/slideshow" target="_blank">Open new instance for remote control</a>
+            <a href="/slideshow" target="_blank" aria-disabled={disableNewIns ? true : undefined}>Open new instance for remote control</a>
         </div>
     );
 }
