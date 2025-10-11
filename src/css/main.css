@@ -32,6 +32,11 @@ a {
     transition: 0.1s;
 }
 
+a[aria-disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 a[href]:hover {
     color: silver;
     transition: 0.1s;
