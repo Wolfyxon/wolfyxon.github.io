@@ -1,6 +1,6 @@
 "use client";
 
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { EventListener, inputHandled } from "@/utils";
 import FileUpload, { FileUploadStatusCallback, UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
@@ -35,6 +35,14 @@ export default function SlideShowControls(props: {
     
     const bcRef = useRef<BroadcastChannel | null>(null);
     const originRef = useRef<string | null>(null);
+
+    function navSelectChanged(e: ChangeEvent) {
+        setNavKeys((e.target! as HTMLSelectElement).value);
+    }
+
+    function navModSelectChanged(e: ChangeEvent) {
+        setNavModifier((e.target! as HTMLSelectElement).value);
+    }
     
     async function filesDroppedAsync(files: FileList, status: FileUploadStatusCallback): Promise<string[]> {
         status(false);
@@ -343,7 +351,7 @@ export default function SlideShowControls(props: {
                 <div className="slideshow-settings">
                     <label>
                         <span>Navigation keys: </span>
-                        <select defaultValue={navKeys}>
+                        <select defaultValue={navKeys} onChange={navSelectChanged}>
                             <option>Arrows</option>
                             <option>Q & E</option>
                         </select>
@@ -352,7 +360,7 @@ export default function SlideShowControls(props: {
                     <label>
                         <span>Key modifier: </span>
 
-                        <select defaultValue={navModifier}>
+                        <select defaultValue={navModifier} onChange={navModSelectChanged}>
                             <option>None</option>
                             <option>Control</option>
                             <option>Shift</option>
