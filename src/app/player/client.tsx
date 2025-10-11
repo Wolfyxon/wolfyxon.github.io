@@ -128,7 +128,7 @@ export default function PlayerPageClient() {
     }, [currentAudio, globalVolume, fadeSpeed]);
 
     const [fileUploadDisabled, setFileUploadDisabled] = useState(false);
-    const [slideshowEnabled, setSlideshowEnabled] = useState(false);
+    const [slideshowEnabled, setSlideshowEnabled] = useState(true);
     const [lockChecks, setLockChecks] = useState(false);
     const [lockSliders, setLockSliders] = useState(false);
     const [lockDel, setLockDel] = useState(false);
