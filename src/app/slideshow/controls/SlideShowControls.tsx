@@ -53,7 +53,7 @@ export default function SlideShowControls(props: {
         }
 
         addSlides(newSlides);
-        status(true);
+        status(true, errs);
 
         return errs;
     }
