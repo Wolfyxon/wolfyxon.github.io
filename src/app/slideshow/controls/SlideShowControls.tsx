@@ -16,12 +16,17 @@ type BroadcastData = {
     target?: string,
 } & Record<any, any>
 
+type SlideData = {
+    blob: Blob,
+    src?: string
+}
+
 export default function SlideShowControls(props: {
     hideUpload?: boolean,
     fullscreen?: () => void,
     setSrc: Dispatch<SetStateAction<string>>
 }) {
-    const [slides, setSlides] = useState<string[]>([]);
+    const [slides, setSlides] = useState<SlideData[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);
 
     const [navKeys, setNavKeys] = useState("Q & E");
@@ -34,25 +39,44 @@ export default function SlideShowControls(props: {
         status(false);
 
         const errs: string[] = [];
-        const srcs: string[] = [];
+        const newSlides: SlideData[] = [];
 
         for(const file of files) {
             if(file.type.startsWith("image/")) {
-                srcs.push(await getObjectURLBase64(file));
+                newSlides.push(hydrateSlide({
+                    blob: file
+                }));
             } else {
                 errs.push(`'${file.name}' is not an image: ${file.type}`);
             }
         }
 
-        addSlides(srcs);
+        addSlides(newSlides);
         status(true);
 
         return errs;
     }
 
-    function addSlides(srcs: string[], publish?: boolean) {
+    function stripSlide(slide: SlideData): SlideData {
+        return {
+            blob: slide.blob,
+        }
+    }
+
+    function hydrateSlide(slide: SlideData): SlideData {
+        if(slide.src) {
+            return slide;
+        }
+
+        return {
+            blob: slide.blob,
+            src: URL.createObjectURL(slide.blob)
+        }
+    }
+
+    function addSlides(newSlides: SlideData[], publish?: boolean) {
         const wasEmpty = slides.length == 0;
-        setSlides(old => [...old, ...srcs]);
+        setSlides(old => [...old, ...newSlides]);
 
         if(wasEmpty) {
             setSlide(0, false);
@@ -62,7 +86,7 @@ export default function SlideShowControls(props: {
             bcRef.current?.postMessage({
                 msg: "addSlides",
                 origin: originRef.current,
-                srcs: srcs
+                slides: newSlides.map((v) => stripSlide(v))
             });
         }
     }
@@ -106,7 +130,7 @@ export default function SlideShowControls(props: {
 
         // Cursed but works. TODO: Find a better fix
         setSlides(slides => {
-            props.setSrc(slides[index]);
+            props.setSrc(slides[index].src!);
             return slides;
         });
     }
@@ -145,16 +169,16 @@ export default function SlideShowControls(props: {
                     break;
                 }
                 case "addSlides": {
-                    addSlides(data.srcs, false);
+                    addSlides(data.slides.map((v: SlideData) => hydrateSlide(v)), false);
                     break;
                 }
                 case "setSlides": {
-                    if(data.srcs.length > 50) {
+                    if(data.slides.length > 50) {
                         console.error("too much!");
                         return;
                     }
 
-                    setSlides(data.srcs);
+                    setSlides(data.slides.map((v: SlideData) => hydrateSlide(v)));
                     break;
                 }
                 case "getSlides": {
@@ -162,7 +186,7 @@ export default function SlideShowControls(props: {
                         msg: "setSlides",
                         origin: originRef.current,
                         target: data.origin,
-                        srcs: slides
+                        slides: slides.map((v: SlideData) => stripSlide(v))
                     });
                 }
             }
@@ -243,8 +267,8 @@ export default function SlideShowControls(props: {
             <LeaveBlocker enabled={askLeave && slides.length != 0} />
 
             <div className="slideshow-slides">
-                {slides.map((src, i) => <img 
-                    src={src}
+                {slides.map((slide, i) => <img 
+                    src={slide.src!}
                     alt="Slide" 
                     width={100} 
                     height={100} 
