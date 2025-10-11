@@ -9,7 +9,7 @@ export const UPLOAD_NOTE_OFFLINE = "No stable internet required. Everything is h
 
 export type FileUploadError = boolean | string | string[] | undefined | null | void;
 
-export type FileUploadStatusCallback = (complete: boolean) => void;
+export type FileUploadStatusCallback = (complete: boolean, errors: FileUploadError) => void;
 export type FileDropCallback = (files: FileList, statusCallback: FileUploadStatusCallback) => FileUploadError | Promise<FileUploadError>;
 
 export default function FileUpload(props: {
@@ -42,7 +42,7 @@ export default function FileUpload(props: {
 
             let statusWait = false;
 
-            function statusCallback(status: boolean) {
+            function statusCallback(status: boolean, errors: FileUploadError) {
                 if(!status) {
                     statusWait = true;
                 } else {
@@ -50,6 +50,7 @@ export default function FileUpload(props: {
                         throw "Status callback has to be first called with false";
                     }
 
+                    processResult(errors);
                     finish();
                 }
             }
@@ -57,6 +58,20 @@ export default function FileUpload(props: {
             function finish() {
                 setUploadingCount(prev => prev - 1);
                 resolve();
+            }
+
+            function processResult(result: FileUploadError) {
+                if(result != true && result !== null && result !== undefined) {       
+                    const resType = typeof(result);
+                    
+                    if(result === false) {
+                        setError("Error uploading files");
+                    } if(resType == "string") {
+                        setError(result as string);
+                    } if(resType == "object") {
+                        setError((result as string[]).join("\n"));
+                    }
+                }
             }
 
             setTimeout(async () => {
@@ -75,17 +90,7 @@ export default function FileUpload(props: {
                     resolved = true;
                 }
         
-                if(result != true && result !== null && result !== undefined) {       
-                    const resType = typeof(result);
-                    
-                    if(result === false) {
-                        setError("Error uploading files");
-                    } if(resType == "string") {
-                        setError(result as string);
-                    } if(resType == "object") {
-                        setError((result as string[]).join("\n"));
-                    }
-                }
+                processResult(result);
                 
                 if(!statusWait) {
                     finish();
