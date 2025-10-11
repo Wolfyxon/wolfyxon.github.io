@@ -34,7 +34,8 @@ export default function PlayerPageClient() {
     function addAudio(file: File): Promise<string | undefined | void> {
         return new Promise((res, rej) => {
             if(!(file.type === "application/ogg" || file.type.startsWith("audio/"))) {
-                return `${file.name} is not an audio file: ${file.type}`;
+                res(`${file.name} is not an audio file: ${file.type}`);
+                return;
             }
     
             const audio = new Audio(URL.createObjectURL(file));
