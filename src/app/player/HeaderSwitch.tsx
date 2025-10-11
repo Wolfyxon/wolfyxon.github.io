@@ -5,13 +5,11 @@ import Checkbox from "@/components/input/Checkbox/Checkbox";
 export default function HeaderSwitch(props: {disabled?: boolean}) {    
     function change(val: boolean) {
         const hdr = document.querySelector("header")!;
-
-        // 'visibility' is slow
-
+        
         if(val) {
-            hdr.style.opacity = "0";
+            hdr.style.display = "none";
         } else {
-            hdr.style.removeProperty("opacity");
+            hdr.style.removeProperty("display");
         }
     }
 
