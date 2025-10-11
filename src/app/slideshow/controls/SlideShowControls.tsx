@@ -76,6 +76,10 @@ export default function SlideShowControls(props: {
     }
 
     function addSlides(newSlides: SlideData[], publish?: boolean) {
+        if(newSlides.length == 0) {
+            return;
+        }
+        
         const wasEmpty = slides.length == 0;
         setSlides(old => [...old, ...newSlides]);
 
