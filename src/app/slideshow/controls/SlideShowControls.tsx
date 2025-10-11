@@ -292,6 +292,7 @@ export default function SlideShowControls(props: {
                 <ImageButton
                     img="/assets/media/img/icons/google/fullscreen.svg" 
                     label="Fullscreen this tab"
+                    title={!props.fullscreen ? "Fullscreen is only available in a slideshow host tab. Click 'Open new instance...' below" : undefined}
                     disabled={!props.fullscreen}
                     onClick={fullscreen}
                 />
