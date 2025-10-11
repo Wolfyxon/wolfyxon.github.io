@@ -63,7 +63,16 @@ export default function FileUpload(props: {
                 let result = props.callback(files, statusCallback);
                 
                 if(result instanceof Promise) {
+                    let resolved = false;
+
+                    setTimeout(() => {
+                        if(!resolved) {
+                            console.warn("File upload callback still not resolved. Did you forget to call resolve or used 'return' in the Promise function?");
+                        }
+                    }, 3000);
+
                     result = await result;
+                    resolved = true;
                 }
         
                 if(result != true && result !== null && result !== undefined) {       
