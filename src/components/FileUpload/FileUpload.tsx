@@ -136,7 +136,7 @@ export default function FileUpload(props: {
             new EventListener(window, "paste", (e) => {
                 const files = (e as ClipboardEvent).clipboardData?.files;
     
-                if(files) {
+                if(files && files.length != 0) {
                     filesDropped(files);
                 }
             })
