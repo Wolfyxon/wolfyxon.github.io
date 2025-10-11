@@ -92,6 +92,15 @@ export default function SlideShowControls(props: {
         }
     }
 
+    function publishSlides(target?: string, slideList?: SlideData[]) {
+        bcRef.current?.postMessage({
+            msg: "setSlides",
+            origin: originRef.current,
+            target: target,
+            slides: (slideList ?? slides).map((v: SlideData) => stripSlide(v))
+        });
+    }
+
     function filesDropped(files: FileList, status:  FileUploadStatusCallback) {
         filesDroppedAsync(files, status);
     }
@@ -138,8 +147,9 @@ export default function SlideShowControls(props: {
 
     function deleteCurrent() {
         if(slides.length != 0) {
-            // TODO: Fix this taking ages with large amounts of images
-            setSlides(slides.filter((v, i) => i != slideIdx ));
+            const newSlides = slides.filter((v, i) => i != slideIdx);
+            setSlides(newSlides);
+            publishSlides(undefined, newSlides);
         }
     }
 
@@ -147,6 +157,8 @@ export default function SlideShowControls(props: {
         if(confirm("Do you want to delete ALL slides? (no undo)")) {
             setSlides([]);
         }
+
+        publishSlides(undefined, []);
     }
 
     useEffect(() => {
@@ -183,12 +195,7 @@ export default function SlideShowControls(props: {
                     break;
                 }
                 case "getSlides": {
-                    bcRef.current?.postMessage({
-                        msg: "setSlides",
-                        origin: originRef.current,
-                        target: data.origin,
-                        slides: slides.map((v: SlideData) => stripSlide(v))
-                    });
+                    publishSlides(data.origin);
                 }
             }
         }
