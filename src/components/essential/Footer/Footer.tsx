@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import "./Footer.css"
 import { DISCORD_INVITE } from "@/globalData";
+
+import "./Footer.css";
 
 export default function Footer() {
     return (    
