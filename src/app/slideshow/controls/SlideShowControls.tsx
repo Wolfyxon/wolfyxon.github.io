@@ -173,7 +173,7 @@ export default function SlideShowControls(props: {
                     break;
                 }
                 case "setSlides": {
-                    if(data.slides.length > 50) {
+                    if(data.slides.length > 100) {
                         console.error("too much!");
                         return;
                     }
