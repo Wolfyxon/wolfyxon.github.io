@@ -264,10 +264,10 @@ export default function SlideShowControls(props: {
                 }
 
                 if(navKeys == "Arrows") {
-                    if(key == "ArrowRight") {
+                    if(key == "arrowright") {
                         next();
                         e.preventDefault();
-                    } else if(key == "ArrowLeft") {
+                    } else if(key == "arrowleft") {
                         previous();
                         e.preventDefault();
                     }
