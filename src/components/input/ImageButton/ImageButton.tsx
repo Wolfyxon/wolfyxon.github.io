@@ -4,6 +4,7 @@ import "./style.css";
 export default function ImageButton(props: {
     img: string, 
     label?: string, 
+    title?: string,
     ariaLabel?: string, 
     onClick?: () => any,
     disabled?: boolean,
@@ -19,6 +20,7 @@ export default function ImageButton(props: {
                 className={classJoin("img-button", props.className)} 
                 onClick={props.onClick} 
                 aria-label={props.ariaLabel ?? props.label} 
+                title={props.title}
                 disabled={props.disabled}
             >
             <div className="img-button-img-container">
