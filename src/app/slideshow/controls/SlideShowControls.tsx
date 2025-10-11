@@ -290,7 +290,7 @@ export default function SlideShowControls(props: {
             <div className="slideshow-controls-buttons">
                 <ImageButton
                     img="/assets/media/img/icons/google/fullscreen.svg" 
-                    label="Fullscreen"
+                    label="Fullscreen this tab"
                     disabled={!props.fullscreen}
                     onClick={fullscreen}
                 />
