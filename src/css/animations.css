@@ -59,7 +59,7 @@
 }
 
 .anim-obs-down {
-    transform: translateY(50%);
+    transform: translateY(25%);
     opacity: 0;
     transition: transform var(--anim-duration), opacity var(--anim-duration);
 }
