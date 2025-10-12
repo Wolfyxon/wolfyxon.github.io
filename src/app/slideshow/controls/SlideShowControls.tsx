@@ -171,9 +171,11 @@ export default function SlideShowControls(props: {
                     props.setSlide(slides[index]);
                 }
 
-                if(props.loadVideo) {
-                    props.loadVideo();
-                }
+                setTimeout(() => {
+                    if(props.loadVideo) {
+                        props.loadVideo();
+                    }
+                });
             });
 
             return slides;
