@@ -297,7 +297,11 @@ export default function SlideShowControls(props: {
 
             <div className="slideshow-slides">
                 {slides.map((slide, i) => <img 
-                    src={slide.src!}
+                    src={
+                        slide.blob.type.startsWith("video") ? 
+                            "/assets/media/img/icons/google/playCircle.svg" 
+                            : slide.src!
+                    }
                     alt="Slide" 
                     width={100} 
                     height={100} 
