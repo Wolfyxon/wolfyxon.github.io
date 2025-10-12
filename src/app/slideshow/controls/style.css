@@ -10,6 +10,16 @@
     gap: 8px;
 }
 
+.slideshow-video-controls {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.slideshow-video-controls > * {
+    flex: 1;
+}
+
 .slideshow-slides {
     background: var(--panel-dark);
     border-radius: 5px;

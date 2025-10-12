@@ -10,6 +10,7 @@ import Checkbox from "@/components/input/Checkbox/Checkbox";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 
 import "./style.css";
+import Slider from "@/components/input/Slider/Slider";
 
 type BroadcastData = {
     msg: string,
@@ -42,6 +43,12 @@ export default function SlideShowControls(props: {
 
     function navModSelectChanged(e: ChangeEvent) {
         setNavModifier((e.target! as HTMLSelectElement).value);
+    }
+
+    function isCurrentSlideVideo(): boolean {
+        const slide = slides[slideIdx];
+
+        return slide && slide.blob.type.startsWith("video/");
     }
     
     async function filesDroppedAsync(files: FileList, status: FileUploadStatusCallback): Promise<string[]> {
@@ -346,6 +353,10 @@ export default function SlideShowControls(props: {
                     onClick={deleteAll}
                     disabled={lockDelete}
                 />
+            </div>
+            <div className="slideshow-video-controls">
+                <ImageButton label="Play video" img="/assets/media/img/icons/google/play.svg" disabled={!isCurrentSlideVideo()} />
+                <ImageButton label="Stop video" img="/assets/media/img/icons/google/stop.svg" disabled={!isCurrentSlideVideo()} />
             </div>
             <Accordion title="Settings">
                 <div className="slideshow-settings">
