@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef, useState } from "react";
-import SlideShowControls from "./controls/SlideShowControls";
+import SlideShowControls, { SlideData } from "./controls/SlideShowControls";
 
 export default function SlideShowPageClient() {
     
-    const [currentSrc, setCurrentSrc] = useState("/assets/media/img/maxwell.jpg");
+    const [currentlide, setCurrentSlide] = useState<SlideData | null>(null);
     const previewRef = useRef<HTMLImageElement>(null);
 
     function fullscreen() {
@@ -14,19 +14,20 @@ export default function SlideShowPageClient() {
     
     return (
         <div className="slideshow-page-container">
-            <img 
-                alt="Slide" 
-                className="slideshow-preview"
-                width={400}
-                height={400}
-                src={currentSrc}
-                ref={previewRef}
-            />
-
-
-            <SlideShowControls 
+            <div className="slideshow-preview">
+                <img 
+                    alt="Slide" 
+                    className="slideshow-preview-img"
+                    width={400}
+                    height={400}
+                    src={currentlide?.src ?? "/assets/media/img/maxwell.jpg"}
+                    ref={previewRef}
+                />
+            </div>
+            
+            <SlideShowControls
                 fullscreen={fullscreen}
-                setSrc={setCurrentSrc}
+                setSlide={setCurrentSlide}
             />
         </div>
     );

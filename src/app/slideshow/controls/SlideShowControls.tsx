@@ -18,7 +18,7 @@ type BroadcastData = {
     target?: string,
 } & Record<any, any>
 
-type SlideData = {
+export type SlideData = {
     blob: Blob,
     name: string,
     src?: string
@@ -27,7 +27,7 @@ type SlideData = {
 export default function SlideShowControls(props: {
     hideUpload?: boolean,
     fullscreen?: () => void,
-    setSrc: Dispatch<SetStateAction<string>>
+    setSlide: Dispatch<SetStateAction<SlideData | null>>
 }) {
     const [slides, setSlides] = useState<SlideData[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);
@@ -163,7 +163,7 @@ export default function SlideShowControls(props: {
 
         // Cursed but works. Do not touch
         setSlides(slides => {
-            setTimeout(() => props.setSrc(slides[index].src!));
+            setTimeout(() => props.setSlide(slides[index]));
 
             return slides;
         });

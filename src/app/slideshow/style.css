@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 
-.slideshow-preview {
+.slideshow-preview > * {
     object-fit: contain;
     background-color: black;
 }
