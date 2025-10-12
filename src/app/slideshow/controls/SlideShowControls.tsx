@@ -235,6 +235,27 @@ export default function SlideShowControls(props: {
         }
     }
 
+    function testLoad() {
+        const currentIdx = slideIdx;
+
+        const len = slides.length;
+        const delay = 50;
+
+        if(len == 0) {
+            return;
+        }
+
+        for(let i = 0; i < len; i++) {
+            setTimeout(() => {
+                setSlide(i);
+            }, i * delay);
+        }
+
+        setTimeout(() => {
+            setSlide(currentIdx);
+        }, len * delay);
+    }
+
     useEffect(() => {
         const bc = new BroadcastChannel("slideshow");
         bcRef.current = bc;
@@ -477,6 +498,13 @@ export default function SlideShowControls(props: {
                     
                     <Checkbox label="Ask before leaving" checked={askLeave} onChange={setAskLeave} flat />
                     <Checkbox label="Disable new instance link" checked={disableNewIns} onChange={setDisableNewIns} flat />
+
+                    <button 
+                        onClick={testLoad}
+                        title="Quickly goes through all slides allowing your browser to load them and to test for any errors."
+                    >
+                        Test and load all slides
+                    </button>
                     
                 </div>
             </Accordion>
