@@ -27,6 +27,9 @@ export type SlideData = {
 export default function SlideShowControls(props: {
     hideUpload?: boolean,
     fullscreen?: () => void,
+    playVideo?: () => void,
+    pauseVideo?: () => void,
+    stopVideo?: () => void,
     setSlide: Dispatch<SetStateAction<SlideData | null>>
 }) {
     const [slides, setSlides] = useState<SlideData[]>([]);
@@ -185,6 +188,45 @@ export default function SlideShowControls(props: {
         publishSlides(undefined, []);
     }
 
+    function playVideo(publish?: boolean) {
+        if(props.playVideo) {
+            props.playVideo();
+        }
+
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                origin: originRef.current,
+                msg: "playVideo"
+            });
+        }
+    }
+
+    function pauseVideo(publish?: boolean) {
+        if(props.pauseVideo) {
+            props.pauseVideo();
+        }
+
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                origin: originRef.current,
+                msg: "pauseVideo"
+            });
+        }
+    }
+
+    function stopVideo(publish?: boolean) {
+        if(props.stopVideo) {
+            props.stopVideo();
+        }
+
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                origin: originRef.current,
+                msg: "stopVideo"
+            });
+        }
+    }
+
     useEffect(() => {
         const bc = new BroadcastChannel("slideshow");
         bcRef.current = bc;
@@ -220,6 +262,19 @@ export default function SlideShowControls(props: {
                 }
                 case "getSlides": {
                     publishSlides(data.origin);
+                    break;
+                }
+                case "playVideo": {
+                    playVideo(false);
+                    break;
+                }
+                case "pauseVideo": {
+                    pauseVideo(false);
+                    break;
+                }
+                case "stopVideo": {
+                    stopVideo(false);
+                    break;
                 }
             }
         }
@@ -364,9 +419,24 @@ export default function SlideShowControls(props: {
                 />
             </div>
             <div className="slideshow-video-controls">
-                <ImageButton label="Play video" img="/assets/media/img/icons/google/play.svg" disabled={!isCurrentSlideVideo()} />
-                <ImageButton label="Pause video" img="/assets/media/img/icons/google/pause.svg" disabled={!isCurrentSlideVideo()} />
-                <ImageButton label="Stop video" img="/assets/media/img/icons/google/stop.svg" disabled={!isCurrentSlideVideo()} />
+                <ImageButton 
+                    label="Play video" 
+                    img="/assets/media/img/icons/google/play.svg"
+                    onClick={playVideo}
+                    disabled={!isCurrentSlideVideo()} 
+                />
+                <ImageButton 
+                    label="Pause video" 
+                    img="/assets/media/img/icons/google/pause.svg"
+                    onClick={pauseVideo} 
+                    disabled={!isCurrentSlideVideo()} 
+                />
+                <ImageButton 
+                    label="Stop video" 
+                    img="/assets/media/img/icons/google/stop.svg"
+                    onClick={stopVideo} 
+                    disabled={!isCurrentSlideVideo()} 
+                />
             </div>
             <Accordion title="Settings">
                 <div className="slideshow-settings">
