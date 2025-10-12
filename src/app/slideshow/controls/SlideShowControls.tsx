@@ -58,12 +58,12 @@ export default function SlideShowControls(props: {
         const newSlides: SlideData[] = [];
 
         for(const file of files) {
-            if(file.type.startsWith("image/")) {
+            if(file.type.startsWith("image/") || file.type.startsWith("video/")) {
                 newSlides.push(hydrateSlide({
                     blob: file
                 }));
             } else {
-                errs.push(`'${file.name}' is not an image: ${file.type}`);
+                errs.push(`'${file.name}' is not an image or video: ${file.type}`);
             }
         }
 
@@ -313,7 +313,7 @@ export default function SlideShowControls(props: {
             {
                 !props.hideUpload ?
                     <FileUpload
-                        prefix="Drag and drop images, paste with Ctrl+V or use"
+                        prefix="Drag and drop images and videos, paste with Ctrl+V or use"
                         note={UPLOAD_NOTE_OFFLINE}
                         accept="image/*" 
                         callback={filesDropped}
