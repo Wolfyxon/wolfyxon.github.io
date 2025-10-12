@@ -16,6 +16,10 @@ You are free to:
 As long as you:
 - Add a easily accessible note that states that I am the author of the music. 
 
+Are **not** allowed to:
+- Claim my music as yours.
+- Use it without properly stating me as the author.
+
 # FAQ
 ## How should I attribute it?
 If you are making a YouTube video you can add:
