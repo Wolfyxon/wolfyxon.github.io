@@ -29,8 +29,8 @@ export default function SlideShowControls(props: {
     pauseVideo?: () => void,
     stopVideo?: () => void,
     loadVideo?: () => any,
-    setSlide: Dispatch<SetStateAction<SlideData | null>>,
-    setMuted: Dispatch<SetStateAction<boolean>>
+    setSlide?: Dispatch<SetStateAction<SlideData | null>>,
+    setMuted?: Dispatch<SetStateAction<boolean>>
 }) {
     const [slides, setSlides] = useState<SlideData[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);

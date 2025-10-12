@@ -168,7 +168,6 @@ export default function PlayerPageClient() {
             {
                 slideshowEnabled ?
                     <SlideShowControls
-                        setSrc={() => {}}
                         hideUpload={fileUploadDisabled} 
                     />
                 : null
