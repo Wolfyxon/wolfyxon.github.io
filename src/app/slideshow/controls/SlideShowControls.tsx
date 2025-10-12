@@ -166,7 +166,11 @@ export default function SlideShowControls(props: {
 
         // Cursed but works. Do not touch
         setSlides(slides => {
-            setTimeout(() => props.setSlide(slides[index]));
+            setTimeout(() => {
+                if(props.setSlide) {
+                    props.setSlide(slides[index])
+                }
+            });
 
             return slides;
         });
