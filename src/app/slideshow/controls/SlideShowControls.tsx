@@ -20,6 +20,7 @@ type BroadcastData = {
 
 type SlideData = {
     blob: Blob,
+    name: string,
     src?: string
 }
 
@@ -60,7 +61,8 @@ export default function SlideShowControls(props: {
         for(const file of files) {
             if(file.type.startsWith("image/") || file.type.startsWith("video/")) {
                 newSlides.push(hydrateSlide({
-                    blob: file
+                    blob: file,
+                    name: file.name
                 }));
             } else {
                 errs.push(`'${file.name}' is not an image or video: ${file.type}`);
@@ -76,6 +78,7 @@ export default function SlideShowControls(props: {
     function stripSlide(slide: SlideData): SlideData {
         return {
             blob: slide.blob,
+            name: slide.name
         }
     }
 
@@ -86,6 +89,7 @@ export default function SlideShowControls(props: {
 
         return {
             blob: slide.blob,
+            name: slide.name,
             src: URL.createObjectURL(slide.blob)
         }
     }
@@ -302,6 +306,7 @@ export default function SlideShowControls(props: {
                             "/assets/media/img/icons/google/playCircle.svg" 
                             : slide.src!
                     }
+                    title={slide.name}
                     alt="Slide" 
                     width={100} 
                     height={100} 
