@@ -64,6 +64,8 @@ export default function PlayerPageClient() {
             audio.oncanplaythrough = function() {
                 setAudios(prev => [...prev, data]);
                 res();
+                
+                audio.oncanplaythrough = null;
             }
         });
     }
