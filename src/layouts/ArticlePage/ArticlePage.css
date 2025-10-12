@@ -1,5 +1,5 @@
 code {
-    background-color: var(--panel-dark);
+    background-color: var(--panel-very-dark);
     border: 2px solid var(--panel-slightly-dark);
     border-radius: 8px;
 }
@@ -41,8 +41,7 @@ code:not(pre code) {
 
 .article-container article {
     padding: 5px 20px;
-    background: var(--panel-very-dark);
-    border-left: 2px var(--panel-dark) solid;
+    background: var(--panel-dark);
     border-radius: 8px;
     margin-bottom: 10px;
 }

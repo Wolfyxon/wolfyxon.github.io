@@ -2,7 +2,7 @@
 .widget {
     display: inline-block;
     overflow: hidden;
-    background: var(--panel-dark);
+    background: var(--panel);
     width: 300px;
     border-radius: 5px;
     margin: 5px 3px;
@@ -14,7 +14,7 @@
     font-size: 150%;
     font-weight: bold;
     padding: 5px;
-    background-color: var(--panel);
+    background-color: var(--panel-very-dark);
     display: flex;
     justify-content: space-between;
 }
