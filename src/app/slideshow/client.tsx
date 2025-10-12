@@ -6,6 +6,7 @@ import SlideShowControls, { SlideData } from "./controls/SlideShowControls";
 export default function SlideShowPageClient() {
     
     const [currentlide, setCurrentSlide] = useState<SlideData | null>(null);
+    const [muted, setMuted] = useState(false);
 
     const previewRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -40,6 +41,7 @@ export default function SlideShowPageClient() {
                             width={400}
                             height={400}
                             ref={videoRef}
+                            muted={muted}
                         >
                             <source type={currentlide?.blob.type} src={currentlide?.src} />        
                             Video not supported
@@ -67,6 +69,7 @@ export default function SlideShowPageClient() {
                 playVideo={playVideo}
                 pauseVideo={pauseVideo}
                 stopVideo={stopVideo}
+                setMuted={setMuted}
             />
         </div>
     );

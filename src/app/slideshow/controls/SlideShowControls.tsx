@@ -30,7 +30,8 @@ export default function SlideShowControls(props: {
     playVideo?: () => void,
     pauseVideo?: () => void,
     stopVideo?: () => void,
-    setSlide: Dispatch<SetStateAction<SlideData | null>>
+    setSlide: Dispatch<SetStateAction<SlideData | null>>,
+    setMuted: Dispatch<SetStateAction<boolean>>
 }) {
     const [slides, setSlides] = useState<SlideData[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);
@@ -463,6 +464,14 @@ export default function SlideShowControls(props: {
                     </label>
 
                     <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
+                    <Checkbox 
+                        label="Mute video in this tab" 
+                        checked={props.playVideo === undefined} 
+                        disabled={props.playVideo === undefined}
+                        onChange={props.setMuted} 
+                        flat 
+                    />
+                    
                     <Checkbox label="Ask before leaving" checked={askLeave} onChange={setAskLeave} flat />
                     <Checkbox label="Disable new instance link" checked={disableNewIns} onChange={setDisableNewIns} flat />
                     
