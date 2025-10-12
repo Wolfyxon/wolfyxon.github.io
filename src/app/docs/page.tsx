@@ -15,7 +15,7 @@ export default async function DocsHomePage() {
     return (
         <Page homeUrl="" category="Docs">
             <ArticlePage title="Documentation">
-                <h1>Welcome to my documentation</h1>
+                <h1 id="welcome-to-my-documentation">Welcome to my documentation</h1>
                 <p>
                     Here you can find some information about my projects
                     and me.
@@ -34,7 +34,7 @@ export default async function DocsHomePage() {
                             return (
                             <Fragment key={category.name}>
                             
-                                <h2>{capitalize(category.name)}</h2>
+                                <h2 id={category.name}>{capitalize(category.name)}</h2>
                                 {
                                     category.docs.map((doc) => {
                                         if(doc.hidden) {
