@@ -8,7 +8,6 @@ export default function SlideShowPageClient() {
     const [currentlide, setCurrentSlide] = useState<SlideData | null>(null);
 
     const previewRef = useRef<HTMLDivElement>(null);
-    const imgRef = useRef<HTMLImageElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
 
     function fullscreen() {
@@ -56,7 +55,6 @@ export default function SlideShowPageClient() {
                             width={400}
                             height={400}
                             src={currentlide?.src ?? "/assets/media/img/maxwell.jpg"}
-                            ref={imgRef}
                         />
                     )
                 }
