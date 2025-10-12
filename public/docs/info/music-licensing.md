@@ -9,6 +9,7 @@ My music is licensed under **Creative Commons Attribution 4.0**, [learn more](ht
 
 You are free to:
 - Use my music in YouTube videos.
+- Download and use it offline.
 - Use it in games.
 - Remix it.
 
