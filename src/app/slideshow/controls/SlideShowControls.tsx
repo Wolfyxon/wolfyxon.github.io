@@ -360,6 +360,7 @@ export default function SlideShowControls(props: {
             </div>
             <div className="slideshow-video-controls">
                 <ImageButton label="Play video" img="/assets/media/img/icons/google/play.svg" disabled={!isCurrentSlideVideo()} />
+                <ImageButton label="Pause video" img="/assets/media/img/icons/google/pause.svg" disabled={!isCurrentSlideVideo()} />
                 <ImageButton label="Stop video" img="/assets/media/img/icons/google/stop.svg" disabled={!isCurrentSlideVideo()} />
             </div>
             <Accordion title="Settings">
