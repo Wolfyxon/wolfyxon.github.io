@@ -45,6 +45,7 @@
     object-fit: contain;
     padding: 5px;
     border-radius: 5px;
+    background-color: var(--panel);
     transition: 0.1s;
 }
 
