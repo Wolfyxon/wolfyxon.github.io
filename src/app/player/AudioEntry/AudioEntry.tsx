@@ -54,6 +54,7 @@ export default function AudioEntry(props: {
             props.setCurrentAudio(null);
         } else {
             data.audio.currentTime = 0;
+            data.audio.pause();
         }
     }
 
