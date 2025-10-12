@@ -58,6 +58,17 @@
     opacity: 1;
 }
 
+.anim-obs-down {
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform var(--anim-duration), opacity var(--anim-duration);
+}
+
+.anim-obs-down.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .anim-obs-fade {
     transition: opacity var(--anim-duration);
     opacity: 0;
