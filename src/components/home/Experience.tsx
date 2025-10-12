@@ -3,10 +3,10 @@ import Tag from "../badges/Tag/Tag";
 
 export default function Experience() {
     return (
-        <div id="experience" className="observing anim-obs-fade">
+        <div id="experience" className="observing anim-obs-down">
         <div id="software">
           <h2>Languages</h2>
-          <div className="observing anim-obs-fade">
+          <div className="observing anim-obs-down">
             <Badge icon="software/lang/rust.webp" alt="Rust" />
             <Badge icon="software/lang/lua.svg" alt="Lua" />
             <Badge icon="software/lang/luau.svg" alt="Luau" />
@@ -29,7 +29,7 @@ export default function Experience() {
           </div>
 
           <h2>Libraries, frameworks and engines</h2>
-          <div>
+          <div className="observing anim-obs-down">
               <Badge icon="software/lib/react.svg" alt="React" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.webp" alt="NextJS" />
@@ -47,7 +47,7 @@ export default function Experience() {
         <div id="fields">
           <h2>Fields</h2>
           
-          <div>
+          <div className="observing anim-obs-down">
             {
               [
                 "Web APIs",
