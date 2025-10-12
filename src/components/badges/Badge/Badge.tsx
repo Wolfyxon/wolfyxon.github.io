@@ -1,10 +1,15 @@
+import { ElmBase, classJoin } from "@/utils";
 import "./Badge.css";
 
-export default function Badge(data: {icon: string, alt: string, translate?: "no" | "yes"}) {
+export default function Badge(props: {
+    icon: string, 
+    alt: string, 
+    translate?: "no" | "yes"
+} & ElmBase) {
     return (
-        <div className="badge">
-            <img className="badge-img" src={"/assets/media/img/icons/" + data.icon} alt={data.alt} />
-            <div className="badge-label" translate={data.translate ?? "no"}>{data.alt}</div>
+        <div className={classJoin("badge", props.className)} id={props.id}>
+            <img className="badge-img" src={"/assets/media/img/icons/" + props.icon} alt={props.alt} />
+            <div className="badge-label" translate={props.translate ?? "no"}>{props.alt}</div>
         </div>
-    )
+    );
 }
