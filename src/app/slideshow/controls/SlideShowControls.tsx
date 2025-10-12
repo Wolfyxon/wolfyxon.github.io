@@ -28,6 +28,7 @@ export default function SlideShowControls(props: {
     playVideo?: () => void,
     pauseVideo?: () => void,
     stopVideo?: () => void,
+    loadVideo?: () => any,
     setSlide: Dispatch<SetStateAction<SlideData | null>>,
     setMuted: Dispatch<SetStateAction<boolean>>
 }) {
@@ -167,7 +168,11 @@ export default function SlideShowControls(props: {
         setSlides(slides => {
             setTimeout(() => {
                 if(props.setSlide) {
-                    props.setSlide(slides[index])
+                    props.setSlide(slides[index]);
+                }
+
+                if(props.loadVideo) {
+                    props.loadVideo();
                 }
             });
 

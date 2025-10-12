@@ -28,6 +28,12 @@ export default function SlideShowPageClient() {
         videoRef.current!.currentTime = 0;
     }
 
+    function loadVideo() {
+        if(videoRef.current) {
+            videoRef.current.load();
+        }
+    }
+
     return (
         <div className="slideshow-page-container">
             <div className="slideshow-preview" ref={previewRef}>
@@ -70,6 +76,7 @@ export default function SlideShowPageClient() {
                 pauseVideo={pauseVideo}
                 stopVideo={stopVideo}
                 setMuted={setMuted}
+                loadVideo={loadVideo}
             />
         </div>
     );
