@@ -4,13 +4,11 @@ import { ChangeEvent, Dispatch, SetStateAction, useEffect, useRef, useState } fr
 import { EventListener, inputHandled } from "@/utils";
 import FileUpload, { FileUploadStatusCallback, UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
-
 import Accordion from "@/components/input/Accordion/Accordion";
 import Checkbox from "@/components/input/Checkbox/Checkbox";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 
 import "./style.css";
-import Slider from "@/components/input/Slider/Slider";
 
 type BroadcastData = {
     msg: string,
@@ -466,10 +464,10 @@ export default function SlideShowControls(props: {
                     <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
                     <Checkbox 
                         label="Mute video in this tab" 
-                        checked={props.playVideo === undefined} 
+                        checked={props.playVideo === undefined}
                         disabled={props.playVideo === undefined}
-                        onChange={props.setMuted} 
-                        flat 
+                        onChange={props.setMuted}
+                        flat
                     />
                     
                     <Checkbox label="Ask before leaving" checked={askLeave} onChange={setAskLeave} flat />
