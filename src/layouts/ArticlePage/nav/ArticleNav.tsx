@@ -37,10 +37,15 @@ export default function ArticleNav(data: {title?: string}) {
         
         let current = rootList;
         let currentDepth = 1;
+        const maxDepth = 1; // Do not remove the nesting logic, I may remove this limit in future
 
         for(const h of headings) {
             const depth = parseInt(h.tagName.replace("H", ""));
             observer.observe(h);
+
+            if(depth > maxDepth) {
+                continue;
+            }
 
             if(depth != currentDepth) {
                 if(depth > currentDepth) {
