@@ -61,7 +61,7 @@ code:not(pre code) {
     }
 }
 
-.article-page li {
+.article-page article li {
     padding: 3px;
 }
 
