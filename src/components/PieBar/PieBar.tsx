@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./PieBar.css"
+import "./style.css";
 
 export default function PieBar(data: {progress?: number}) {
     const style = {

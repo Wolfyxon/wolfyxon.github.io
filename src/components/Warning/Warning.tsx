@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import "./Warning.css";
+import "./style.css";
 
 export default function Warning(props: {children: ReactNode, title?: string}) {
     return (

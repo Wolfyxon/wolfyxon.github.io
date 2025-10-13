@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import "./ArticleNav.css";
+import "./style.css";
 
 export default function ArticleNav(data: {title?: string}) {
     const mainRef = useRef(null);

@@ -1,4 +1,4 @@
-import "./TextIcon.css";
+import "./style.css";
 
 export default function TextIcon(data: {src: string, alt: string}) {
     return (

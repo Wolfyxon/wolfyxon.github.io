@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import "./Widget.css";
+import "./style.css";
 
 export default function Widget(props: {title: string, url?: string, children: ReactNode}) {
     const body = (

@@ -1,4 +1,4 @@
-import "./FancyHeading.css";
+import "./style.css";
 
 export default function FancyHeading(data: {children: any, centered?: boolean}) {
     let className = "fancy-h";
