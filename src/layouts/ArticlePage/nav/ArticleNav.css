@@ -41,7 +41,7 @@
 .article-nav > ul > li a {
     display: block;
     border-left: 2px solid var(--panel);
-    padding: 5px;
+    padding: 8px 5px;
     transition: 0.1s;
 }
 
@@ -57,17 +57,14 @@
 .article-nav a.current {
     color: var(--color4);
     border-color: var(--color4);
+    background-color: var(--color6);
     font-weight: bold;
 }
 
 .article-nav ul {
     list-style: none;
     padding-left: 10px;
-    margin-left: 10px;
-}
-
-.article-nav li {
-    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 @media all and (orientation: portrait) {
