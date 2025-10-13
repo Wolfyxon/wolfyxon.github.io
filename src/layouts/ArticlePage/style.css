@@ -36,7 +36,7 @@ code:not(pre code) {
 
 .article-container {
     box-sizing: border-box;
-    width: 68%;
+    width: 60%;
 }
 
 .article-container article {
