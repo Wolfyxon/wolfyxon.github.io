@@ -79,6 +79,15 @@ code:not(pre code) {
     color: var(--special1);
 }
 
+/* how do I group that, help */
+.article-page article h3,
+.article-page article h4,
+.article-page article h5,
+.article-page article h6
+{
+    color: rgb(220, 220, 255);
+}
+
 /*
 .article-page article h1::before {
     content: "# ";
