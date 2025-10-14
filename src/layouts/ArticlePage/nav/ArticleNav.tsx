@@ -22,8 +22,9 @@ export default function ArticleNav(data: {title?: string}) {
                     const h = headings[i];
 
                     if(h.classList.contains("visible")) {
-                        
-                        links.forEach((link, linkI) => {
+                        links.forEach((link) => {
+                            const linkI = parseInt(link.getAttribute("data-heading")!);
+
                             link.classList.toggle("current", i == linkI);
                         });
 
@@ -39,8 +40,10 @@ export default function ArticleNav(data: {title?: string}) {
         let currentDepth = 1;
         const maxDepth = 1; // Do not remove the nesting logic, I may remove this limit in future
 
-        for(const h of headings) {
+        for(let i = 0; i < headings.length; i++) {
+            const h = headings[i];
             const depth = parseInt(h.tagName.replace("H", ""));
+
             observer.observe(h);
 
             if(depth > maxDepth) {
@@ -64,6 +67,7 @@ export default function ArticleNav(data: {title?: string}) {
             }
 
             const link = document.createElement("a");
+            link.setAttribute("data-heading", i.toString());
             link.href = "#" + h.id;
             link.innerText = h.textContent ?? h.innerHTML;
             links.push(link);
