@@ -102,6 +102,10 @@ You're not crazy, your phone is actually listening to you, do some research if y
 Your Android phone, most apps and websites will track everything you do and sometimes even use your microphone to show you better ads and sell that info to companies.
 You should disable that.
 
+## Use AI responsibly
+Your conversations with LLMs such as ChatGPT may be reviewed by other people and used for further training.
+You don't want to share any private information with AI models.
+
 # Keeping your accounts secure
 This will cover some obvious examples, but from my experience way too many people don't follow those practices so I think I should cover them.
 
