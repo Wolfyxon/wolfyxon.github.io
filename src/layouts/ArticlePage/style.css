@@ -53,6 +53,7 @@ code:not(pre code) {
 .article-page p {
     padding-right: 1em;
     font-size: 110%;
+    line-height: 150%;
 }
 
 @media all and (orientation: portrait) {
