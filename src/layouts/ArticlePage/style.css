@@ -89,18 +89,16 @@ code:not(pre code) {
     color: rgb(220, 220, 255);
 }
 
-/*
-.article-page article h1::before {
-    content: "# ";
+.article-header:not(:empty) {
+    display: block;
+    margin-bottom: 20px;
 }
 
-.article-page article h2::before {
-    content: "## ";
+.article-footer {
+    opacity: 0.7;
+    margin-top: 40px;
 }
 
-.article-page article h3::before {
-    content: "### ";
-}*/
 
 @media all and (orientation: portrait) {
     .article-container {
@@ -111,14 +109,4 @@ code:not(pre code) {
     .article-container article {
         padding: 5px 20px;
     }
-}
-
-.article-header:not(:empty) {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.article-footer {
-    opacity: 0.7;
-    margin-top: 40px;
 }
