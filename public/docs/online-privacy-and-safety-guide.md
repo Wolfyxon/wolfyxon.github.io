@@ -47,6 +47,7 @@ I'm not gonna explain it in detail, you can do your own research. You can see a 
 I'll just say that showing even a small bit of the outside environment is extremely dangerous as there are various methods of finding the exact location of the place showcased on the photo or video.
 
 Do not share any photos or videos of the outside world online.
+
 ### Your school data
 If you're still going to school, do not share any information about it, such as:
 - Your plan
@@ -57,6 +58,22 @@ If your plan is available on your school's website, with enough effort someone w
 
 The most dangerous one in my opinion is the full names of your teachers.
 There's a very high chance the majority of your teachers use Facebook and don't properly care about the privacy which makes your school very easy to find from their profile, which obviously leads back to you.
+
+### Screenshots and screensharing
+You have to be very careful whenever you're making screenshots or sharing your screen to someone.
+Close everything that contains sensitive information and make sure to not open it back. 
+
+Here are some examples what you need to look for:
+- Google Maps
+- Your e-mail
+- The bottom (footer) of Google search. It shows your approximate city.
+- Internet speed test sites (some may show your IP address and location).
+- Private files (including image previews)
+- Your bank website
+- Your school website
+- Public transport website of your area
+- Browsing & search history
+- Passwords and logins (obviously)
 
 ## Assume everything may be leaked eventually
 The even the most *secure* companies suffer data breaches leaving data of thousands of users open to cybercriminals.
