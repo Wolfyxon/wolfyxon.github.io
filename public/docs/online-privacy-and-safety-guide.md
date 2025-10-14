@@ -36,6 +36,7 @@ If you use or ever actively used Facebook there's a very high chance your real l
 Almost all of your activity on Facebook can be searched on the platform and through Google which can only be slightly reduced in your settings.
 
 If you've ever done things like followed your town page or liked a post of a local restaurant this can be an obvious sign of where you live.
+
 ### Getting doxxed via your friends
 Let's say you successfully adjusted your account settings, disappeared from searches and your profile is invisible, well it's not.
 
@@ -92,9 +93,13 @@ As you probably know, in these days all tech companies spy on you and sell your 
 ## Don't blindly agree to everything
 That big shiny *consent to all* button you see and blindly click when you visit a website?
 Well have you ever actually read what you're consenting to?
+
+And why would a calculator app or a popular social media app ask you for the permission to make phone calls?
+
 Often when you read deeper you will find that the website tracks your behavior and then sells it to companies to show you better ads.
 
 You should always decline everything you don't need, even if it takes an extra minute to uncheck all the boxes (if they don't have a disagree button).
+On Android if that involves app permissions, you can easily do that in settings.
 
 ## Disable ad personalization
 Have you ever talked about something and the next minute you see it in an ad on your phone? 
@@ -106,6 +111,15 @@ You should disable that.
 ## Use AI responsibly
 Your conversations with LLMs such as ChatGPT may be reviewed by other people and used for further training.
 You don't want to share any private information with AI models.
+
+## Delete accounts you don't need
+Why keep something you don't need?
+
+Deleting an account you don't need won't cost you anything and all of the private data you entered will (hopefully) be deleted
+before it can be breached and it won't be sold.
+
+Additionally if you only need an account to do something quick, you can just use a disposable email
+such as https://temp-mail.org and delete that account when you're done.
 
 # Keeping your accounts secure
 This will cover some obvious examples, but from my experience way too many people don't follow those practices so I think I should cover them.
