@@ -94,7 +94,7 @@ As you probably know, in these days all tech companies spy on you and sell your 
 That big shiny *consent to all* button you see and blindly click when you visit a website?
 Well have you ever actually read what you're consenting to?
 
-And why would a calculator app or a popular social media app ask you for the permission to make phone calls?
+And why would a popular social media app ask you for the permission to make phone calls?
 
 Often when you read deeper you will find that the website tracks your behavior and then sells it to companies to show you better ads.
 
@@ -120,6 +120,28 @@ before it can be breached and it won't be sold.
 
 Additionally if you only need an account to do something quick, you can just use a disposable email
 such as https://temp-mail.org and delete that account when you're done.
+
+## Block internet access for apps that don't need it
+Why would a calculator app need internet access?
+Of course, send analytics to the developer and spy on you. It's not just showing you ads!
+
+While you cannot directly disallow internet access for apps in Android, you can use a firewall app.
+
+I recommend either [Rethink DNS](https://play.google.com/store/apps/details?id=com.celzero.bravedns&hl=en) or [NetGuard](https://play.google.com/store/apps/details?id=eu.faircode.netguard&hl=en).
+
+Here's a list of some types of Android apps that should not have internet access:
+- Your keyboard app (such as GBoard)
+- Phone (the app you use to make calls)
+- SMS
+- File manager
+- Gallery
+- Voice recorder
+- Camera
+- Notes
+- Your home screen launcher
+- Music player (if it's not something like Spotify)
+- Games without multiplayer functionality
+- Drawing and photo editor apps
 
 # Keeping your accounts secure
 This will cover some obvious examples, but from my experience way too many people don't follow those practices so I think I should cover them.
