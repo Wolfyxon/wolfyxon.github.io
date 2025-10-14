@@ -12,8 +12,13 @@ This will not be a *live off grid*, *delete all of your online accounts*, *use t
 I will also not talk about Linux and open source software here because I'm aware that this is not a viable option for most people even though that's what I use and encourage.
 
 # Why should I care?
-If you're a person that openly shares their life on the internet, this may not be a guide for you.
+If you're a person that openly shares their life on the internet, most of this guide may not be for you.
 Me personally and many people I know, prefer to be as anonymous and disconnected from their real world identity as possible.
+
+However you have to remember that you have things to hide, even if you don't think like this.
+Would you give a random person the login and password to your social media account and let them do anything they want with it?
+
+There are still things you want to watch out for!
 
 # Protecting your information
 
