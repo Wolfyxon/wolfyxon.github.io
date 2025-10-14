@@ -26,8 +26,9 @@ There are still things you want to watch out for!
 Searching for yourself on the internet is the first step to protect your data by identifying what information is public about you.
 Then you can try getting rid of it.
 
-## Get rid or isolate Facebook
+## Isolate or delete your Facebook account
 It's common knowledge that Facebook collects very large amounts of your data but that data is often not private.
+
 Facebook is a true doxxing ground and I strongly do not recommend using it.
 If you use or ever actively used Facebook there's a very high chance your real life identity can be found through it.
 
