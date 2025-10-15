@@ -76,3 +76,24 @@
 .anim-obs-fade.visible {
     opacity: 1;
 }
+
+@media (scripting: none) {
+    .anim-obs-left {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .anim-obs-right {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .anim-obs-down {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .anim-obs-fade {
+        opacity: 1;
+    }
+}
