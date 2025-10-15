@@ -1,6 +1,6 @@
 export default function Collaborator(data: {name: string, thumbnail: string, description: string, website?: string, children: any}) {
     return (
-        <div className="observing">
+        <div className="observing anim-obs-grow">
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
             
             <div>
@@ -18,5 +18,5 @@ export default function Collaborator(data: {name: string, thumbnail: string, des
                 }
             </div>
         </div>
-    )
+    );
 }

@@ -204,15 +204,6 @@
     background-color: var(--panel-dark);
     height: fit-content;
     padding: 1%;
-    transform: scale(0.8);
-    opacity: 0;
-    transition: 0.7s;
-}
-
-#collaborators-list > *.visible {
-    opacity: 1;
-    transform: scale(1);
-    transition: 0.7s;
 }
 
 #collaborators-list > * > * {
