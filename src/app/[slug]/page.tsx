@@ -1,4 +1,4 @@
-import Redirect from "@/components/func/Redirect";
+import RedirectPage from "@/layouts/RedirectPage";
 import { DISCORD_INVITE } from "@/globalData";
 
 type RedirectEntry = {
@@ -57,5 +57,5 @@ export default async function SlugRedirect(data: {params: any}) {
     const slug = (await data.params).slug as string;
     const redirect = getRedirect(slug);
 
-    return <Redirect url={redirect!.url} />;
+    return <RedirectPage url={redirect!.url} />;
 }

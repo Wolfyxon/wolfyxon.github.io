@@ -1,4 +1,4 @@
-import Redirect from "@/components/func/Redirect";
+import RedirectPage from "@/layouts/RedirectPage";
 import { Metadata } from "next";
 
 import "@/css/main.css";
@@ -15,7 +15,7 @@ export default function NotFound() {
             <h1>404</h1>
             <p>Page not found, prepare thyself</p>
 
-            <Redirect url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+            <RedirectPage url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
         </>
     )
 }
