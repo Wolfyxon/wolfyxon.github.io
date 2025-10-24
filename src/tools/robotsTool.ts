@@ -63,23 +63,24 @@ async function updateAi() {
     const agents = await queryAIBotAgents();
     const localAgents = getLocalAIAgents();
 
-    let newCount = 0;
+    const newAgents: string[] = [];
 
     for(const ag of agents) {
         if(!localAgents.includes(ag)) {
             localAgents.push(ag);
-            newCount++;        
+            newAgents.push(ag);    
         }
     }
 
-    if(newCount == 0) {
+    if(newAgents.length == 0) {
         console.log("No new agents detected. Nothing to do.");
         return;
     }
 
     console.log("New array:\n");
     console.log(userAgentsToString(localAgents));
-    console.log(`Total new: ${newCount}`);
+    console.log(`Total new: ${newAgents.length}`);
+    console.log(newAgents);
 }
 
 updateAi();
