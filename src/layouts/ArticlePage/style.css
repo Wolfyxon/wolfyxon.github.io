@@ -110,3 +110,10 @@ code:not(pre code) {
         padding: 5px 20px;
     }
 }
+
+@media all and (orientation: landscape) {
+    .article-page article h1::before {
+        content: "# ";
+        opacity: 0.25;
+    }
+}
