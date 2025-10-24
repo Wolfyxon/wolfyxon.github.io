@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <>
+        <RedirectPage url="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             <h1>404</h1>
             <p>Page not found, prepare thyself</p>
-
-            <RedirectPage url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
-        </>
+        </RedirectPage>
     )
 }
