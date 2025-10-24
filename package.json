@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "robots": "npx tsx src/tools/robotsTool.ts"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
