@@ -11,7 +11,7 @@ export default function RedirectPage(props: {url: string, children?: ReactNode})
     return (
         <Root>
             <head>
-                <meta http-equiv="refresh" content={`0; url=${props.url}`} />
+                <meta httpEquiv="refresh" content={`0; url=${props.url}`} />
             </head>
             <body>
                 {props.children}
