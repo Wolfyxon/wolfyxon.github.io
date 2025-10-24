@@ -72,6 +72,11 @@ async function updateAi() {
         }
     }
 
+    if(newCount == 0) {
+        console.log("No new agents detected. Nothing to do.");
+        return;
+    }
+
     console.log("New array:\n");
     console.log(userAgentsToString(localAgents));
     console.log(`Total new: ${newCount}`);
