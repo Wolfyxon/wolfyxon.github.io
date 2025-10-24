@@ -13,10 +13,10 @@
     "markdown-to-jsx": "^7.7.3",
     "next": "15.5.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tsx": "^4.20.6"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "tsx": "^4.20.6",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
