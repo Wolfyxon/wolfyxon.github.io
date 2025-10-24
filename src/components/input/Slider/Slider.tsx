@@ -1,7 +1,7 @@
 import { ChangeEvent, Ref, useState } from "react"
 
 import "./style.css";
-import { ElmBase } from "@/utils";
+import { ElmBase } from "@/util/dom";
 
 export type SliderProps = {
     label?: string,

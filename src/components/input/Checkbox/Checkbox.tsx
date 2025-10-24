@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import { ElmBase, classJoin } from "@/utils";
+import { ElmBase, classJoin } from "@/util/dom";
 
 import "./style.css";
 

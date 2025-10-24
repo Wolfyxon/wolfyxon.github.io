@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 
 import "./style.css";
-import { ElmBase, classJoin } from "@/utils";
+import { ElmBase, classJoin } from "@/util/dom";
 
 export default function Accordion(props: {
     title: string, 

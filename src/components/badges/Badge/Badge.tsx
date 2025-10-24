@@ -1,4 +1,4 @@
-import { ElmBase, classJoin } from "@/utils";
+import { ElmBase, classJoin } from "@/util/dom";
 import "./Badge.css";
 
 export default function Badge(props: {

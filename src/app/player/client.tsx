@@ -1,6 +1,6 @@
 "use client";
 
-import { clamp, lerp } from "@/utils";
+import { clamp, lerp } from "@/util/math";
 import { ReactNode, RefObject, useEffect, useState } from "react";
 import FileUpload, { UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import Checkbox from "@/components/input/Checkbox/Checkbox";

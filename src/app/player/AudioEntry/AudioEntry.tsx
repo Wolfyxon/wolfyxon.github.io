@@ -3,7 +3,8 @@ import { AudioData } from "../client";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import Slider from "@/components/input/Slider/Slider";
 
-import { removeExtension, secondsToString } from "@/utils";
+import { secondsToString } from "@/util/time";
+import { removeExtension } from "@/util/string";
 
 import "./style.css";
 

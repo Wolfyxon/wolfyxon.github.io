@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import { EventListener, inputHandled } from "@/utils";
+import { EventListener, inputHandled } from "@/util/dom";
 import FileUpload, { FileUploadStatusCallback, UPLOAD_NOTE_OFFLINE } from "@/components/FileUpload/FileUpload";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import Accordion from "@/components/input/Accordion/Accordion";

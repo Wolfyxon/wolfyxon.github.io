@@ -4,7 +4,7 @@ import Page from "@/layouts/Page";
 import { getDocsInCategories } from "./docs";
 import { Metadata } from "next";
 import { Fragment } from "react";
-import { capitalize } from "@/utils";
+import { capitalize } from "@/util/string";
 
 export const metadata: Metadata = {
     title: "Documentation",

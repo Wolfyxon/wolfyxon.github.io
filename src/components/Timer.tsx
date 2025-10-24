@@ -1,6 +1,6 @@
 "use client"
 
-import { ElmBase, classJoin } from "@/utils";
+import { ElmBase, classJoin } from "@/util/dom";
 import { useEffect, useRef } from "react";
 
 export type TimerProps = {
