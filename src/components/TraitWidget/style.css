@@ -1,0 +1,24 @@
+.trait-widget {
+    position: relative;
+    background-color: var(--panel-dark);
+    min-width: 300px;
+}
+
+.trait-widget-icon {
+    width: 32px;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.trait-widget-header {
+    margin: 0;
+    padding: 10px;
+}
+
+.trait-widget-header h2 {
+    margin: 0;
+    padding: 0;
+    flex: 2;
+}
