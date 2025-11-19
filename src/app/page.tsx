@@ -59,13 +59,13 @@ export default function Home() {
       <FancyHeading>Currently</FancyHeading>
 
       <div id="trait-widgets" className="observing anim-obs-fade">
-        <TraitWidget title="Working on..." icon="/assets/media/img/icons/google/gear.svg" iconAlt="Gear">
+        <TraitWidget title="Working on..." icon="/assets/media/img/icons/google/gear.svg" iconAlt="Gear" id="widget-working">
           <ul>
             <li>Random projects</li>
           </ul>
         </TraitWidget>
 
-        <TraitWidget title="Learning..." icon="/assets/media/img/icons/google/search.svg" iconAlt="Magnifier">
+        <TraitWidget title="Learning..." icon="/assets/media/img/icons/google/search.svg" iconAlt="Magnifier" id="widget-learning">
           <ul>
             <li>Electronics</li>
             <li>Embedded systems</li>
@@ -73,7 +73,7 @@ export default function Home() {
           </ul>
         </TraitWidget>
 
-        <TraitWidget title="Want to..." icon="/assets/media/img/icons/google/bulb.svg" iconAlt="Lightbulb">
+        <TraitWidget title="Want to..." icon="/assets/media/img/icons/google/bulb.svg" iconAlt="Lightbulb" id="widget-want-to">
           <ul>
             <li>Learn drawing</li>
             <li>Complete high school</li>
