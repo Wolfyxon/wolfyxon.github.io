@@ -9,6 +9,7 @@ import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
+import TraitWidget from "@/components/TraitWidget/TraitWidget";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
@@ -54,6 +55,32 @@ export default function Home() {
 
       <FancyHeading>Experience</FancyHeading>
       <Experience />
+
+      <FancyHeading>Currently</FancyHeading>
+
+      <div id="trait-widgets" className="observing anim-obs-fade">
+        <TraitWidget title="Working on..." icon="/assets/media/img/icons/google/gear.svg" iconAlt="Gear">
+          <ul>
+            <li>Random projects</li>
+          </ul>
+        </TraitWidget>
+
+        <TraitWidget title="Learning..." icon="/assets/media/img/icons/google/search.svg" iconAlt="Magnifier">
+          <ul>
+            <li>Electronics</li>
+            <li>Embedded systems</li>
+            <li>How to be a human</li>
+          </ul>
+        </TraitWidget>
+
+        <TraitWidget title="Want to..." icon="/assets/media/img/icons/google/bulb.svg" iconAlt="Lightbulb">
+          <ul>
+            <li>Learn drawing</li>
+            <li>Complete high school</li>
+            <li>Never stop learning</li>
+          </ul>
+        </TraitWidget>
+      </div>
 
       <div id="collaborators">
           <FancyHeading>People I collaborate with</FancyHeading>

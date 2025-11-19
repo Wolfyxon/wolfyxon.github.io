@@ -282,3 +282,15 @@
     }
     
 }
+
+/*---=== Trait widgets ===---*/
+
+#trait-widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#trait-widgets > * {
+    flex: 1;
+}
