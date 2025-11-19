@@ -117,7 +117,9 @@ function ProjectList() {
     );
     
     return (
-        <div id="project-list">{elms}</div>
+        <div id="project-list" className="observing anim-obs-fade">
+            {elms}
+        </div>
     );
 }
 

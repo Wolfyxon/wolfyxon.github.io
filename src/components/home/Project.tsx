@@ -8,7 +8,7 @@ export default function Project(data: {title: string, description: string, thumb
                 {data.children}
             </div>
 
-            <img src={data.thumbnail} alt="thumbnail" className="observing anim-obs-right anim-0-25s" />
+            <img src={data.thumbnail} alt="thumbnail" className="observing anim-obs-right anim-0-5s" />
         </div>
     )
 }
