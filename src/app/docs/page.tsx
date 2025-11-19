@@ -6,6 +6,8 @@ import { Metadata } from "next";
 import { Fragment } from "react";
 import { capitalize } from "@/util/string";
 
+import "./style.css";
+
 export const metadata: Metadata = {
     title: "Documentation",
     description: "Some documentation of my projects and me"
@@ -35,17 +37,19 @@ export default async function DocsHomePage() {
                             <Fragment key={category.name}>
                             
                                 <h2 id={category.name}>{capitalize(category.name)}</h2>
-                                {
-                                    category.docs.map((doc) => {
-                                        if(doc.hidden) {
-                                            return;
-                                        }
+                                <div className="widget-container">
+                                    {
+                                        category.docs.map((doc) => {
+                                            if(doc.hidden) {
+                                                return;
+                                            }
 
-                                        return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
-                                            {doc.description || "No Description"}
-                                        </Widget>
-                                    })
-                                }
+                                            return <Widget title={doc.title} url={doc.slug.join("/")} key={doc.title}>
+                                                {doc.description || "No Description"}
+                                            </Widget>
+                                        })
+                                    }
+                                </div>
                             </Fragment>
                             )
                         })

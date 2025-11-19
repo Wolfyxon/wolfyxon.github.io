@@ -1,0 +1,11 @@
+.widget-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media all and (orientation: portrait) {
+    .widget-container > * {
+        flex: 1;
+    }
+}

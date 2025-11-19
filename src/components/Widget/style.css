@@ -4,6 +4,7 @@
     overflow: hidden;
     background: var(--panel);
     width: 300px;
+    min-width: 300px;
     border-radius: 5px;
     margin: 5px 3px;
     text-decoration: none;
