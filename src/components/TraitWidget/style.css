@@ -2,6 +2,8 @@
     position: relative;
     background-color: var(--panel-dark);
     min-width: 300px;
+    border-bottom: 5px solid var(--panel);
+    border-radius: 10px;
 }
 
 .trait-widget-icon {
