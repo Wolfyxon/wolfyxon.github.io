@@ -62,6 +62,7 @@ export default function Home() {
         <TraitWidget title="Working on..." icon="/assets/media/img/icons/google/gear.svg" iconAlt="Gear" id="widget-working">
           <ul>
             <li>Random projects</li>
+            <li>Writing a story</li>
           </ul>
         </TraitWidget>
 
