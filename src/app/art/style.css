@@ -1,0 +1,47 @@
+#drawings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#drawings-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--panel);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+@media all and (orientation: portrait) {
+    #drawings-header {
+        flex-direction: row-reverse;
+    }
+}
+
+#drawings-header img {
+    max-height: 150px;
+}
+
+.drawing {
+    background-color: var(--panel-dark);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.drawing-text {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drawing-title {
+    font-weight: bold;
+}
+
+.drawing img {
+    object-fit: contain;
+    width: 350px;
+    height: 350px;
+}
