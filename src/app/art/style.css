@@ -25,7 +25,8 @@
 }
 
 .drawing {
-    background-color: var(--panel-dark);
+    background-color: var(--panel-very-dark);
+    border: var(--panel-dark) solid 2px;
     border-radius: 5px;
     padding: 10px;
 }
