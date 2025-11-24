@@ -36,7 +36,7 @@ export default function Drawing(props: {data: DrawingData}) {
     }, []);
 
     return (
-        <div className="drawing observing anim-obs-fade" onClick={open}>
+        <div className="drawing" onClick={open}>
             <div className="drawing-fullscreen" style={isOpenFullscreen ? {visibility: "visible", opacity: "1"} : undefined}>
                 <img
                     src={data.src}
