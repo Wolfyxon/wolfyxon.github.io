@@ -3,6 +3,12 @@ import Drawing, { DrawingData } from "./Drawing";
 
 import "./style.css";
 import "@/css/animations.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Art gallery",
+    description: "A page where you can see my silly drawings. I'm new to art so please be nice!"
+};
 
 const drawings: DrawingData[] = [
     {
