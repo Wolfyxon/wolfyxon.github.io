@@ -14,6 +14,31 @@ const TIME_DIVISORS: {unit: TimeUnit, div: number}[] = [
     {unit: "seconds", div: 1 }
 ];
 
+const DAYS: string[] = [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+];
+
+const MONTHS: string[] = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december"
+];
+
 export function splitSeconds(time: number): SplitTime {
     const res = {
         seconds: 0,
