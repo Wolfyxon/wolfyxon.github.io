@@ -35,7 +35,7 @@ const drawings: DrawingData[] = [
 export default function ArtPage() {
     return (
         <Page category="Art">
-            <div id="drawings-header">
+            <div id="drawings-header" className="observing anim-obs-down">
                 {/* TODO: Replace with a short cartoon-ish red pencil drawing */}
                 <img
                     src="/assets/img/Wolfyxon.webp"
@@ -53,7 +53,7 @@ export default function ArtPage() {
                 </div>
             </div>
 
-            <div id="drawings" className="observing anim-obs-fade">
+            <div id="drawings" className="observing anim-obs-down">
                 {
                     drawings.map((v, i) => <Drawing data={v} key={`drawing-${i}`} />)
                 }
