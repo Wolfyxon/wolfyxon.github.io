@@ -59,7 +59,7 @@ export default function ArtPage() {
                 </div>
             </div>
 
-            <div id="drawings" className="observing anim-obs-down">
+            <div id="drawings" className="observing anim-obs-fade">
                 {
                     drawings.map((v, i) => <Drawing data={v} key={`drawing-${i}`} />)
                 }
