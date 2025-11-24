@@ -36,7 +36,7 @@ export default function ArtPage() {
     return (
         <Page category="Art">
             <div id="drawings-header">
-                {/* TODO: Make a  */}
+                {/* TODO: Replace with a short cartoon-ish red pencil drawing */}
                 <img
                     src="/assets/img/Wolfyxon.webp"
                     alt="logo"
@@ -45,7 +45,7 @@ export default function ArtPage() {
                     <h1>Welcome to my art gallery!</h1>
                     <p>
                         I'm a noob so please be nice! <br/>
-                        All drawings are made by me in Krita using a graphic tablet.
+                        All digital drawings are made by me in Krita using a graphic tablet.
                     </p>
                     <p>
                         <b>Note:</b> I do not consent my work to be used in the training of AI models.
