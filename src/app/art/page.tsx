@@ -6,34 +6,29 @@ import "@/css/animations.css";
 
 const drawings: DrawingData[] = [
     {
-        title: "Maxwell",
-        date: "2025-11-24",
-        src: "/assets/img/maxwell.jpg"
+        title: "Passage",
+        date: "2025-11-23",
+        src: "/assets/img/art/Passage.png"
     },
     {
-        title: "Edward of Games",
-        date: "2025-11-24",
-        src: "/assets/img/ose/gierek.jpg"
+        title: "Angel of Cyphers",
+        date: "2025-11-21",
+        src: "/assets/img/art/Angel_of_Cyphers.png"
     },
     {
-        title: "Maxwell",
-        date: "2025-11-24",
-        src: "/assets/img/maxwell.jpg"
+        title: "Forest Witch",
+        date: "2025-07-11",
+        src: "/assets/img/art/Forest_Witch.png"
     },
     {
-        title: "Edward of Games",
-        date: "2025-11-24",
-        src: "/assets/img/ose/gierek.jpg"
+        title: "Arctic Fox",
+        date: "2025-04-21",
+        src: "/assets/img/art/Arctic_Fox.webp"
     },
     {
-        title: "Maxwell",
-        date: "2025-11-24",
-        src: "/assets/img/maxwell.jpg"
-    },
-    {
-        title: "Maxwell",
-        date: "2025-11-24",
-        src: "/assets/img/maxwell.jpg"
+        title: "Hungarian Parliament",
+        date: "2024-09-24",
+        src: "/assets/img/art/Hungarian_Parliament.webp"
     }
 ];
 
@@ -55,11 +50,10 @@ export default function ArtPage() {
                     <p>
                         <b>Note:</b> I do not consent my work to be used in the training of AI models.
                     </p>
-                    <p>(also page under construction, you will see mostly placeholders)</p>
                 </div>
             </div>
 
-            <div id="drawings">
+            <div id="drawings" className="observing anim-obs-fade">
                 {
                     drawings.map((v, i) => <Drawing data={v} key={`drawing-${i}`} />)
                 }
