@@ -14,7 +14,7 @@ const TIME_DIVISORS: {unit: TimeUnit, div: number}[] = [
     {unit: "seconds", div: 1 }
 ];
 
-const DAYS: string[] = [
+export const DAYS: string[] = [
     "monday",
     "tuesday",
     "wednesday",
@@ -24,7 +24,7 @@ const DAYS: string[] = [
     "sunday"
 ];
 
-const MONTHS: string[] = [
+export const MONTHS: string[] = [
     "january",
     "february",
     "march",
