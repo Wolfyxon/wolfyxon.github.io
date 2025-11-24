@@ -29,6 +29,11 @@
     border: var(--panel-dark) solid 2px;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
+}
+
+.drawing:hover .drawing-preview {
+    scale: 1.05;
 }
 
 .drawing-text {
@@ -41,8 +46,36 @@
     font-weight: bold;
 }
 
-.drawing img {
+.drawing-preview {
     object-fit: contain;
     width: 350px;
     height: 350px;
+    transition: 0.1s;
+}
+
+.drawing-fullscreen {
+    cursor: default;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000d0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.drawing-fullscreen-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.drawing-fullscreen img {
+    max-height: 97vh;
 }
