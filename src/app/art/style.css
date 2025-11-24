@@ -76,6 +76,6 @@
     right: 20px;
 }
 
-.drawing-fullscreen img {
-    max-height: 97vh;
+.drawing-fullscreen > img {
+    height: 97vh;
 }
