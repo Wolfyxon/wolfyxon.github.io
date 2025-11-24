@@ -8,12 +8,12 @@ const tests: {[slug: string]: Test} = {
         candidates: [
             {
                 name: "A",
-                icon: "/assets/media/img/ose/amogus.webp",
+                icon: "/assets/img/ose/amogus.webp",
                 answers: [-1, 1]
             },
             {
                 name: "B",
-                icon: "/assets/media/img/ose/john_xina.jpg",
+                icon: "/assets/img/ose/john_xina.jpg",
                 answers: [1, 1]
             }
         ],
@@ -27,32 +27,32 @@ const tests: {[slug: string]: Test} = {
         candidates: [
             {
                 name: "Mr Wątroba",
-                icon: "/assets/media/img/lighter/tgdod/MrWatroba.png",
+                icon: "/assets/img/lighter/tgdod/MrWatroba.png",
                 answers: [1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1]
             },
             {
                 name: "Bonifacy",
-                icon: "/assets/media/img/lighter/tgdod/Bonifacy.png",
+                icon: "/assets/img/lighter/tgdod/Bonifacy.png",
                 answers: [-1, 1, 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1]
             },
             {
                 name: "Glitcher",
-                icon: "/assets/media/img/lighter/tgdod/Glitcher.png",
+                icon: "/assets/img/lighter/tgdod/Glitcher.png",
                 answers: [1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, 1]
             },
             {
                 name: "The Dark One",
-                icon: "/assets/media/img/lighter/tgdod/DarkOne.png",
+                icon: "/assets/img/lighter/tgdod/DarkOne.png",
                 answers: [-1, -1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1]
             },
             {
                 name: "The Bright One",
-                icon: "/assets/media/img/lighter/tgdod/BrightOne.png",
+                icon: "/assets/img/lighter/tgdod/BrightOne.png",
                 answers: [1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
             },
             {
                 name: "Crystal Shogun",
-                icon: "/assets/media/img/lighter/tgdod/crystalShogun.png",
+                icon: "/assets/img/lighter/tgdod/crystalShogun.png",
                 answers: [1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1]
             },
         ],

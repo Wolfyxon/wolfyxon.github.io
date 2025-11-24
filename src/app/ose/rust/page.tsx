@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function RustOsePage() {
     return <OsePage 
-            icon="/assets/media/img/icons/software/lang/rust.webp" 
+            icon="/assets/img/icons/software/lang/rust.webp" 
             title={metadata.title as string}
             heading="Ta strona zawiera NIEBEZPIECZNĄ PAMIĘĆ!!!!!!!!!!1"
             category="Unsafe Memory"

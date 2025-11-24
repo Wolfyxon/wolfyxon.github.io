@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function UsaOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/usa.svg" 
+            icon="/assets/img/ose/usa.svg" 
             title={metadata.title as string}
             heading="Ta strona zawiera kilometry"
             category="Kilometer"

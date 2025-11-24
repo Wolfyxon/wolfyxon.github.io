@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function SansOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/sans.webp" 
+            icon="/assets/img/ose/sans.webp" 
             title={metadata.title as string}
             heading={<span>Ta strona pamięta two'je <span id="glow">ludobujsfa</span></span>}
             category="Genocides"

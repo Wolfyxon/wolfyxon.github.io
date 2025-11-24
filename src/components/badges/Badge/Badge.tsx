@@ -8,7 +8,7 @@ export default function Badge(props: {
 } & ElmBase) {
     return (
         <div className={classJoin("badge", props.className)} id={props.id}>
-            <img className="badge-img" src={"/assets/media/img/icons/" + props.icon} alt={props.alt} />
+            <img className="badge-img" src={"/assets/img/icons/" + props.icon} alt={props.alt} />
             <div className="badge-label" translate={props.translate ?? "no"}>{props.alt}</div>
         </div>
     );

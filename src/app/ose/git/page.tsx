@@ -11,7 +11,7 @@ const gts = ">>>>>>>";
 
 export default function GitOsePage() {
     return <OsePage 
-            icon="/assets/media/img/icons/software/tools/git.svg" 
+            icon="/assets/img/icons/software/tools/git.svg" 
             title={metadata.title as string}
             heading="Ta strona zawiera merge conflict"
             category="Merge Conflict"

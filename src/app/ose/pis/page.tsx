@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PisOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/pis.png" 
+            icon="/assets/img/ose/pis.png" 
             title="Ogólnopolska Sieć Antylewacyjna"
             heading="Ta strona zawiera lewactwo"
             category="Lewactwo"

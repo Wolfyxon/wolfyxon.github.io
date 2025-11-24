@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function LinusOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/linus.webp" 
+            icon="/assets/img/ose/linus.webp" 
             title={metadata.title as string}
             heading="Ta strona zawiera NVIDIe"
             category="NVIDIA"

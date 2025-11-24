@@ -62,7 +62,7 @@ export default function SlideShowPageClient() {
                             className="slideshow-preview-img"
                             width={400}
                             height={400}
-                            src={currentlide?.src ?? "/assets/media/img/maxwell.jpg"}
+                            src={currentlide?.src ?? "/assets/img/maxwell.jpg"}
                         />
                     )
                 }

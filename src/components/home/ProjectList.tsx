@@ -25,7 +25,7 @@ function ProjectList() {
     registerProject(
         "Lover",
         "Command line build system for LÖVE2D.",
-        "assets/media/img/home/projectThumbnails/lover.webp",
+        "assets/img/home/projectThumbnails/lover.webp",
         [
             {
                 text: "Source code",
@@ -45,7 +45,7 @@ function ProjectList() {
     registerProject(
         "Turret Siege",
         "A game where you are being attacked from all sides. Soundtrack made by me.",
-        "assets/media/img/home/projectThumbnails/ts.webp",
+        "assets/img/home/projectThumbnails/ts.webp",
         [
             {
                 text: "Source code",
@@ -61,7 +61,7 @@ function ProjectList() {
     registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser with some DSi support.",
-        "assets/media/img/home/projectThumbnails/3dsWebStuff.webp",
+        "assets/img/home/projectThumbnails/3dsWebStuff.webp",
         [
             {
                 text: "Visit the site",
@@ -77,7 +77,7 @@ function ProjectList() {
     registerProject(
         "Godot Together",
         "Experimental Godot plugin for real time collaboration over the network.",
-        "assets/media/img/home/projectThumbnails/gdt.webp",
+        "assets/img/home/projectThumbnails/gdt.webp",
         [
             {
                 text: "Source code",
@@ -93,7 +93,7 @@ function ProjectList() {
     registerProject(
         "The Great Doors of Door", 
         "A funny Roblox game that was supposed to be a low-effort parody, but then we made it into an emotional story.", 
-        "assets/media/img/home/projectThumbnails/tgdod.webp", 
+        "assets/img/home/projectThumbnails/tgdod.webp", 
         [{
             text: "Play on Roblox", 
             url: "https://www.roblox.com/games/10748929809/The-Great-Doors-of-Door-AAAA"
@@ -103,7 +103,7 @@ function ProjectList() {
     registerProject(
         "Hero of the Earth",
         "Discontinued post apocalyptic story game.",
-        "assets/media/img/home/projectThumbnails/hote.webp",
+        "assets/img/home/projectThumbnails/hote.webp",
         [
             {
                 text: "Itch.io page",

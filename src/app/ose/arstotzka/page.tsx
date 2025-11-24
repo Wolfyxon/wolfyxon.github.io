@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ArstotzkaOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/arstotzka.png" 
+            icon="/assets/img/ose/arstotzka.png" 
             title={metadata.title as string}
             heading="Ta strona nie ma wstępu"
             category="Invalid"

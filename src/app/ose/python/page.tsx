@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PythonaOsePage() {
     return <OsePage 
-            icon="/assets/media/img/icons/software/lang/python.svg" 
+            icon="/assets/img/icons/software/lang/python.svg" 
             title={metadata.title as string}
             heading="Ta strona zawiera za dużo spacji"
             category="Invalid indentation"

@@ -16,7 +16,7 @@
 .article-nav-btn {
     position: absolute;
     left: -2em;
-    background: url(/assets/media/img/icons/google/menu.svg);
+    background: url(/assets/img/icons/google/menu.svg);
     background-size: 100%;
     background-color: var(--panel-dark);
     width: 2em;
@@ -28,7 +28,7 @@
 }
 
 .article-nav-btn:active {
-    background: url(/assets/media/img/icons/google/menu.svg);
+    background: url(/assets/img/icons/google/menu.svg);
     background-color: var(--panel);
     background-size: 100%;
 }

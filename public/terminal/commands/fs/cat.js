@@ -9,7 +9,7 @@ registerCommand(
         if(!path) {
             const img = document.createElement("img");
             img.style.width = "20%";
-            img.src = "/assets/media/img/maxwell.jpg";
+            img.src = "/assets/img/maxwell.jpg";
             getConsole().append(img);
             
             return;

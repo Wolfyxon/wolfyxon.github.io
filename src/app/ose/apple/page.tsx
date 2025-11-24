@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AppleOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/apple.png" 
+            icon="/assets/img/ose/apple.png" 
             title={metadata.title as string}
             heading="Ta strona zawiera nieautoryzowane naprawy"
             category="Unauthorized Repairs"

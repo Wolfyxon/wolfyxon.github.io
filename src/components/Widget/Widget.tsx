@@ -13,7 +13,7 @@ export default function Widget(props: {title: string, url?: string, children: Re
                 <img
                     alt="Open" 
                     className="widget-title-icon" 
-                    src="/assets/media/img/icons/google/arrow-outward.svg" />
+                    src="/assets/img/icons/google/arrow-outward.svg" />
                 : null
             }
         </div>

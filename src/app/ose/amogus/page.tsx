@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AmogusOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/amogus.webp" 
+            icon="/assets/img/ose/amogus.webp" 
             title={metadata.title as string}
             heading="Ta strona jest sus"
             category="Impostor"

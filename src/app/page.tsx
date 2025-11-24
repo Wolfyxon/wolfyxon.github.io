@@ -40,7 +40,7 @@ export default function Home() {
                   </div>
               </div>
 
-              <img src="/assets/media/img/Wolfyxon.webp" id="banner-logo" alt="Wolfyxon logo" />
+              <img src="/assets/img/Wolfyxon.webp" id="banner-logo" alt="Wolfyxon logo" />
           </div>
       </div>
       
@@ -59,14 +59,14 @@ export default function Home() {
       <FancyHeading>Currently</FancyHeading>
 
       <div id="trait-widgets" className="observing anim-obs-fade">
-        <TraitWidget title="Working on..." icon="/assets/media/img/icons/google/gear.svg" iconAlt="Gear" id="widget-working">
+        <TraitWidget title="Working on..." icon="/assets/img/icons/google/gear.svg" iconAlt="Gear" id="widget-working">
           <ul>
             <li>Random projects</li>
             <li>Writing a story</li>
           </ul>
         </TraitWidget>
 
-        <TraitWidget title="Learning..." icon="/assets/media/img/icons/google/search.svg" iconAlt="Magnifier" id="widget-learning">
+        <TraitWidget title="Learning..." icon="/assets/img/icons/google/search.svg" iconAlt="Magnifier" id="widget-learning">
           <ul>
             <li>Electronics</li>
             <li>Embedded systems</li>
@@ -74,7 +74,7 @@ export default function Home() {
           </ul>
         </TraitWidget>
 
-        <TraitWidget title="Want to..." icon="/assets/media/img/icons/google/bulb.svg" iconAlt="Lightbulb" id="widget-want-to">
+        <TraitWidget title="Want to..." icon="/assets/img/icons/google/bulb.svg" iconAlt="Lightbulb" id="widget-want-to">
           <ul>
             <li>Learn drawing</li>
             <li>Complete high school</li>
@@ -90,7 +90,7 @@ export default function Home() {
               <Collaborator 
                 name="KaroleusPL" 
                 description="Experienced artist, musician and beginner game developer. Also my best friend."
-                thumbnail="/assets/media/img/people/karoleus_pl.webp"
+                thumbnail="/assets/img/people/karoleus_pl.webp"
                 website="https://karoleuspl.github.io"
                 >
                 

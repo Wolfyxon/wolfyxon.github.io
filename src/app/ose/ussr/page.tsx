@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function UssrOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/ussr.png" 
+            icon="/assets/img/ose/ussr.png" 
             title={metadata.title as string}
             heading="Ta strona zawiera kapitalizm"
             category="Capitalism"

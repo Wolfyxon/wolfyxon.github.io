@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function GierekOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/gierek.jpg" 
+            icon="/assets/img/ose/gierek.jpg" 
             title={metadata.title as string}
             heading="Ta strona zawiera gierki"
             category="Games"

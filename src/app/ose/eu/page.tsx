@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function EuOsePage() {
     return <OsePage 
-            icon="/assets/media/img/ose/eu.webp" 
+            icon="/assets/img/ose/eu.webp" 
             title={metadata.title as string}
             heading="Ta strona zawiera Apple"
             category="Apple"

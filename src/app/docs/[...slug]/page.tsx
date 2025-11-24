@@ -30,7 +30,7 @@ export default async function DocPage(props: {params: any}) {
 
     const header = (
         <a href="/docs">
-            <TextIcon src="/assets/media/img/icons/google/arrow-back.svg" alt="Back arrow" />
+            <TextIcon src="/assets/img/icons/google/arrow-back.svg" alt="Back arrow" />
             Back to all docs
         </a>
     );

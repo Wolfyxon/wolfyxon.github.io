@@ -389,7 +389,7 @@ export default function SlideShowControls(props: {
                 {slides.map((slide, i) => <img 
                     src={
                         slide.blob.type.startsWith("video") ? 
-                            "/assets/media/img/icons/google/playCircle.svg" 
+                            "/assets/img/icons/google/playCircle.svg" 
                             : slide.src!
                     }
                     title={slide.name}
@@ -413,7 +413,7 @@ export default function SlideShowControls(props: {
             }
             <div className="slideshow-controls-buttons">
                 <ImageButton
-                    img="/assets/media/img/icons/google/fullscreen.svg" 
+                    img="/assets/img/icons/google/fullscreen.svg" 
                     label="Fullscreen this tab"
                     title={!props.fullscreen ? "Fullscreen is only available in a slideshow host tab. Click 'Open new instance...' below" : undefined}
                     disabled={!props.fullscreen}
@@ -422,13 +422,13 @@ export default function SlideShowControls(props: {
 
                 <div className="slideshow-pn-buttons">
                     <ImageButton
-                        img="/assets/media/img/icons/google/prev.svg" 
+                        img="/assets/img/icons/google/prev.svg" 
                         label="Previous"
                         onClick={previous}
                     />
 
                     <ImageButton
-                        img="/assets/media/img/icons/google/next.svg" 
+                        img="/assets/img/icons/google/next.svg" 
                         label="Next"
                         onClick={next}
                         reverse
@@ -436,14 +436,14 @@ export default function SlideShowControls(props: {
                 </div>
 
                 <ImageButton 
-                    img="/assets/media/img/icons/google/delete.svg"
+                    img="/assets/img/icons/google/delete.svg"
                     label="Delete selected"
                     onClick={deleteCurrent}
                     disabled={lockDelete}
                 />
 
                 <ImageButton 
-                    img="/assets/media/img/icons/google/delete.svg"
+                    img="/assets/img/icons/google/delete.svg"
                     label="Delete all"
                     onClick={deleteAll}
                     disabled={lockDelete}
@@ -452,19 +452,19 @@ export default function SlideShowControls(props: {
             <div className="slideshow-video-controls">
                 <ImageButton 
                     label="Play video" 
-                    img="/assets/media/img/icons/google/play.svg"
+                    img="/assets/img/icons/google/play.svg"
                     onClick={playVideo}
                     disabled={!isCurrentSlideVideo()} 
                 />
                 <ImageButton 
                     label="Pause video" 
-                    img="/assets/media/img/icons/google/pause.svg"
+                    img="/assets/img/icons/google/pause.svg"
                     onClick={pauseVideo} 
                     disabled={!isCurrentSlideVideo()} 
                 />
                 <ImageButton 
                     label="Stop video" 
-                    img="/assets/media/img/icons/google/stop.svg"
+                    img="/assets/img/icons/google/stop.svg"
                     onClick={stopVideo} 
                     disabled={!isCurrentSlideVideo()} 
                 />
