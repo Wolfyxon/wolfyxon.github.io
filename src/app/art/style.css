@@ -64,6 +64,7 @@
 }
 
 .drawing-fullscreen {
+    overflow: hidden;
     cursor: default;
     z-index: 100;
     display: flex;
