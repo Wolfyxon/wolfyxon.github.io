@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 
 const drawings: DrawingData[] = [
     {
+        title: "Fight the Void",
+        date: "2025-11-25",
+        src: "/assets/img/art/Fight_the_Void.webp"
+    },
+    {
         title: "Passage",
         date: "2025-11-23",
         src: "/assets/img/art/Passage.png"
