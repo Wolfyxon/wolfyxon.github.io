@@ -64,7 +64,7 @@ export default function ArtPage() {
                         All digital drawings are made by me in Krita using a graphic tablet.
                     </p>
                     <p>
-                        <b>Note:</b> I do not consent my work to be used in the training of AI models.
+                        <b>Note:</b> I do not consent to the use of my work in AI model training.
                     </p>
                 </div>
             </div>
