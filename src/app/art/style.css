@@ -87,7 +87,7 @@
 }
 
 .drawing-fullscreen > img {
-    width: 97vw;
-    height: 97vh;
-    object-fit: contain;
+    max-width: 97vw;
+    max-height: 97vh;
+    background-color: red;
 }
