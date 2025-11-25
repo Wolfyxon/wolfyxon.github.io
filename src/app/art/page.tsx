@@ -52,7 +52,6 @@ export default function ArtPage() {
     return (
         <Page category="Art">
             <div id="drawings-header" className="observing anim-obs-down">
-                {/* TODO: Replace with a short cartoon-ish red pencil drawing */}
                 <img
                     src="/assets/img/art/crayon.webp"
                     alt="logo"
