@@ -61,7 +61,8 @@ export default function ArtPage() {
                     <h1>Welcome to my art gallery!</h1>
                     <p>
                         I'm a noob so please be nice! <br/>
-                        All digital drawings are made by me in Krita using a graphic tablet.
+                        All digital drawings are made by me in Krita using a graphic tablet. <br />
+                        Pixel art is made in Libresprite, mostly using a mouse.
                     </p>
                     <p>
                         <b>Note:</b> I do not consent to the use of my work in AI model training.
