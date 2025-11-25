@@ -28,6 +28,8 @@
 }
 
 #drawings-header img {
+    object-fit: contain;
+    max-width: 20vw;
     max-height: 150px;
 }
 
