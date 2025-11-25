@@ -40,6 +40,11 @@ const drawings: DrawingData[] = [
         title: "Hungarian Parliament",
         date: "2024-09-24",
         src: "/assets/img/art/Hungarian_Parliament.webp"
+    },
+    {
+        title: "3DS Web Stuff Pigeon sprites",
+        date: "2024-03-19",
+        src: "/assets/img/art/3DSWebStuff-Pigeon.webp"
     }
 ];
 
