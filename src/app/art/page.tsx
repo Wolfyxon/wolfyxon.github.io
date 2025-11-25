@@ -49,7 +49,7 @@ export default function ArtPage() {
             <div id="drawings-header" className="observing anim-obs-down">
                 {/* TODO: Replace with a short cartoon-ish red pencil drawing */}
                 <img
-                    src="/assets/img/Wolfyxon.webp"
+                    src="/assets/img/art/crayon.webp"
                     alt="logo"
                 />
                 <div>
