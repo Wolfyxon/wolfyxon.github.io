@@ -115,4 +115,11 @@
 
 #drawing-view-meta h1 {
     font-size: 110%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#drawing-view-meta-date {
+    padding: 0;
+    margin: 0;
 }

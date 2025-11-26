@@ -125,7 +125,7 @@ export default function ArtPageClient() {
                 <ImageButton img="/assets/img/icons/google/info.svg" />
                 <div id="drawing-view-meta">
                     <h1>{lastDrawing?.title}</h1>
-                    <p id="drawing-view-date">{(() => {
+                    <p id="drawing-view-meta-date">{(() => {
                         if(!lastDrawing) return;
 
                         const date = new Date(lastDrawing.date);
