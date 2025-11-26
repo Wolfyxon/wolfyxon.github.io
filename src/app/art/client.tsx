@@ -45,37 +45,36 @@ const drawings: DrawingData[] = [
 export default function ArtPageClient() {
     const [lastDrawing, setLastDrawing] = useState<DrawingData | null>(null);
     const [fullscreenOpen, setFullscreenOpen] = useState(false);
-    const fullscreenPreviewRef = useRef<HTMLDivElement>(null);
+    const viewRef = useRef<HTMLDivElement>(null);
 
     function openDrawing(drawing: DrawingData) {
         setLastDrawing(drawing);
         setFullscreenOpen(true);
     }
 
-    function closeFullscreen() {
+    function closeView() {
         setFullscreenOpen(false);
     }
 
-    function fullscreenPreviewClicked(e: MouseEvent<HTMLDivElement>) {
-        if(e.target == fullscreenPreviewRef.current) {
-            closeFullscreen();
+    function viewClicked(e: MouseEvent<HTMLDivElement>) {
+        if(e.target == viewRef.current) {
+            closeView();
         }
     }
-
 
     useEffect(() => {
         window.addEventListener("keydown", (e) => {
             if(e.key == "Escape") {
-                closeFullscreen();
+                closeView();
             }
         });
     }, []);
 
     return (<>
         <div 
-            id="drawing-fullscreen" 
-            ref={fullscreenPreviewRef}
-            onClick={fullscreenPreviewClicked}
+            id="drawing-view" 
+            ref={viewRef}
+            onClick={viewClicked}
             style={fullscreenOpen ? {visibility: "visible", opacity: "1"} : undefined}
         >
             <img
@@ -85,9 +84,9 @@ export default function ArtPageClient() {
 
             <ImageButton 
                 img="/assets/img/icons/google/x.svg"
-                id="drawing-fullscreen-close"
+                id="drawing-view-close"
                 ariaLabel="Close"
-                onClick={closeFullscreen}
+                onClick={closeView}
             />
         </div>
 

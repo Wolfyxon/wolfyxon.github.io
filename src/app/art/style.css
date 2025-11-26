@@ -63,7 +63,7 @@
     transition: 0.1s;
 }
 
-#drawing-fullscreen {
+#drawing-view {
     overflow: hidden;
     cursor: default;
     z-index: 100;
@@ -81,14 +81,13 @@
     transition: 0.2s;
 }
 
-#drawing-fullscreen-close {
+#drawing-view > img {
+    max-width: 97vw;
+    max-height: 97vh;
+}
+
+#drawing-view-close {
     position: absolute;
     top: 10px;
     right: 20px;
-}
-
-#drawing-fullscreen > img {
-    max-width: 97vw;
-    max-height: 97vh;
-    background-color: red;
 }
