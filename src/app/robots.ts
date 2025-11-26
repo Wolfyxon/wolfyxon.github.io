@@ -16,7 +16,8 @@ export default function robots(): MetadataRoute.Robots {
                     "/*ref=*",
                     "/assets/img/icons",
                     "/assets/img/ose",
-                    "/assets/img/home/banner.webp"
+                    "/assets/img/home/banner.webp",
+                    "/3ds-web-stuff/img/logos"
                 ]
             },
             {
