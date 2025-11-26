@@ -2,6 +2,7 @@
 
 import { capitalize } from "@/util/string";
 import { MONTHS } from "@/util/time";
+import { useEffect, useRef } from "react";
 
 export type DrawingData = {
     title: string,
@@ -16,6 +17,7 @@ export default function Drawing(props: {
 }) {
     const data = props.data;
     const date = new Date(data.date);
+    const ref = useRef<HTMLDivElement>(null);
 
     function open() {
         if(props.openFunc) {
@@ -23,8 +25,16 @@ export default function Drawing(props: {
         }
     }
 
+    useEffect(() => {
+        window.addEventListener("keydown", (e) => {
+            if(e.key == "Enter" && document.activeElement == ref.current) {
+                open();
+            }
+        });
+    }, []);
+
     return (
-        <div className="drawing" onClick={open}>
+        <div className="drawing" onClick={open} tabIndex={0} ref={ref}>
             <img
                 className="drawing-preview" 
                 src={data.src} 
