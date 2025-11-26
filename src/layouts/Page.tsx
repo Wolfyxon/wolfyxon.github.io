@@ -4,16 +4,19 @@ import Header from "@/components/essential/Header/Header";
 import "@/css/main.css";
 import Root from "./Root";
 import ClientWorker from "@/components/essential/ClientWorker";
+import { ReactNode } from "react";
 
-export default function Page(data: { children: any, category: string, homeUrl?: string }) {
+export default function Page(props: { children: any, category: string, homeUrl?: string, head?: ReactNode }) {
     return (
         <Root>
-            <head></head>
+            <head>
+                {props.head}
+            </head>
             <body>
-                <Header title={data.category} home={data.homeUrl} />
+                <Header title={props.category} home={props.homeUrl} />
 
                 <div id="main">
-                    {data.children}
+                    {props.children}
                 </div>
 
                 <Footer />
