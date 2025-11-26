@@ -91,3 +91,14 @@
     top: 10px;
     right: 20px;
 }
+
+#drawing-view-meta {
+    position: absolute;
+    width: 250px;
+    left: 10px;
+    top: 5px;
+}
+
+#drawing-view-meta h1 {
+    font-size: 110%;
+}

@@ -114,6 +114,9 @@ export default function ArtPageClient() {
             onClick={viewClicked}
             style={fullscreenOpen ? {visibility: "visible", opacity: "1"} : undefined}
         >
+            <div id="drawing-view-meta">
+                <h1>{lastDrawing?.title}</h1>
+            </div>
             <img
                 src={lastDrawing?.src}
                 alt={lastDrawing?.title ?? "Image not loaded"} 
