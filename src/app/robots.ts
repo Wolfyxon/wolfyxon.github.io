@@ -10,7 +10,10 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 disallow: [
-                    "/*ref=*"
+                    "/*ref=*",
+                    "/assets/img/icons",
+                    "/assets/img/ose",
+                    "/assets/img/home/banner.webp"
                 ]
             },
             {
