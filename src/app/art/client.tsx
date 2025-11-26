@@ -50,6 +50,7 @@ export default function ArtPageClient() {
     function openDrawing(drawing: DrawingData) {
         setLastDrawing(drawing);
         setFullscreenOpen(true);
+        history.pushState(null, "", "");
     }
 
     function closeView() {
@@ -68,6 +69,10 @@ export default function ArtPageClient() {
                 closeView();
             }
         });
+
+        window.addEventListener("popstate", (e) => {
+            closeView();
+        })
     }, []);
 
     return (<>
