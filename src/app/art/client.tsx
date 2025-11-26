@@ -13,17 +13,17 @@ const drawings: DrawingData[] = [
     {
         title: "Passage",
         date: "2025-11-23",
-        src: "/assets/img/art/Passage.png"
+        src: "/assets/img/art/Passage.webp"
     },
     {
         title: "Angel of Cyphers",
         date: "2025-11-21",
-        src: "/assets/img/art/Angel_of_Cyphers.png"
+        src: "/assets/img/art/Angel_of_Cyphers.webp"
     },
     {
         title: "Forest Witch",
         date: "2025-07-11",
-        src: "/assets/img/art/Forest_Witch.png"
+        src: "/assets/img/art/Forest_Witch.webp"
     },
     {
         title: "Arctic Fox",
