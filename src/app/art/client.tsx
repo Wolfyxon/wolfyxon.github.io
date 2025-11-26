@@ -3,6 +3,8 @@
 import { MouseEvent, useEffect, useRef, useState } from "react";
 import Drawing, { DrawingData } from "./Drawing";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
+import { capitalize } from "@/util/string";
+import { MONTHS } from "@/util/time";
 
 const drawings: DrawingData[] = [
     {
@@ -121,6 +123,12 @@ export default function ArtPageClient() {
         >
             <div id="drawing-view-meta">
                 <h1>{lastDrawing?.title}</h1>
+                <p id="drawing-view-date">{(() => {
+                    if(!lastDrawing) return;
+
+                    const date = new Date(lastDrawing.date);
+                    return `${capitalize(MONTHS[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
+                })()}</p>
                 <p>{lastDrawing?.note}</p>
             </div>
             <img
