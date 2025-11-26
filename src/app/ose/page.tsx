@@ -13,7 +13,8 @@ const dir = "src/app/ose/";
 const best = [
     "gierek",
     "pis",
-    "sans"
+    "sans",
+    "smilelandia"
 ];
 
 export default function OseHomePage() {
