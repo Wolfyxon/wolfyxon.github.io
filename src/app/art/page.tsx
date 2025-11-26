@@ -59,7 +59,9 @@ export default function ArtPage() {
                 <div>
                     <h1>Welcome to my art gallery!</h1>
                     <p>
-                        I'm a noob so please be nice! <br/>
+                        I'm a noob so please be nice!
+                    </p>
+                    <p>
                         All digital drawings are made by me in Krita using a graphic tablet. <br />
                         Pixel art is made in Libresprite, mostly using a mouse.
                     </p>
