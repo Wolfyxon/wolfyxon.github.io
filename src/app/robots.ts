@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: [
                     "Googlebot",
+                    "Googlebot-Image",
                     "bingbot"
                 ],
                 disallow: [
@@ -18,6 +19,13 @@ export default function robots(): MetadataRoute.Robots {
                     "/assets/img/ose",
                     "/assets/img/home/banner.webp",
                     "/3ds-web-stuff/img/logos"
+                ]
+            },
+            {
+                userAgent: "*",
+                disallow: [
+                    "/assets/img/art/3DSWebStuff-Pigeon.webp",
+                    "/assets/img/art/Forest_Witch.webp"
                 ]
             },
             {
