@@ -18,9 +18,19 @@ export const metadata: Metadata = {
                "This is my website, where you can see the stuff I make."
 }
 
+const extraHead = <>
+  <link 
+    rel="preload"
+    href="/assets/img/home/banner.webp"
+    type="image/webp"
+    as="image"
+    fetchPriority="high" 
+  />
+</>
+
 export default function Home() {
   return (
-    <Page category="Home">
+    <Page category="Home" head={extraHead}>
        <div id="banner">
           <div className="observing anim-obs-left">
             <div id="banner-text">
@@ -40,7 +50,7 @@ export default function Home() {
                   </div>
               </div>
 
-              <img src="/assets/img/Wolfyxon.webp" id="banner-logo" alt="Wolfyxon logo" />
+              <img src="/assets/img/Wolfyxon.webp" id="banner-logo" alt="Wolfyxon logo" fetchPriority="high" />
           </div>
       </div>
       
