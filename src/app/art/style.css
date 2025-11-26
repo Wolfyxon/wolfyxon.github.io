@@ -92,11 +92,25 @@
     right: 20px;
 }
 
-#drawing-view-meta {
+#drawing-view-meta-container {
+    display: flex;
+    align-items: start;
+    gap: 10px;
     position: absolute;
     width: 250px;
     left: 10px;
     top: 5px;
+}
+
+#drawing-view-meta-container:hover #drawing-view-meta {
+    opacity: 1;
+    font-size: unset;
+}
+
+#drawing-view-meta {
+    opacity: 0;
+    font-size: 0;
+    transition: opacity 0.1s;
 }
 
 #drawing-view-meta h1 {

@@ -121,15 +121,18 @@ export default function ArtPageClient() {
             onClick={viewClicked}
             style={fullscreenOpen ? {visibility: "visible", opacity: "1"} : undefined}
         >
-            <div id="drawing-view-meta">
-                <h1>{lastDrawing?.title}</h1>
-                <p id="drawing-view-date">{(() => {
-                    if(!lastDrawing) return;
+            <div id="drawing-view-meta-container">
+                <ImageButton img="/assets/img/icons/google/info.svg" />
+                <div id="drawing-view-meta">
+                    <h1>{lastDrawing?.title}</h1>
+                    <p id="drawing-view-date">{(() => {
+                        if(!lastDrawing) return;
 
-                    const date = new Date(lastDrawing.date);
-                    return `${capitalize(MONTHS[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
-                })()}</p>
-                <p>{lastDrawing?.note}</p>
+                        const date = new Date(lastDrawing.date);
+                        return `${capitalize(MONTHS[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
+                    })()}</p>
+                    <p>{lastDrawing?.note}</p>
+                </div>
             </div>
             <img
                 src={lastDrawing?.src}
