@@ -58,7 +58,7 @@ export default function ArtPageClient() {
 
     function fullscreenPreviewClicked(e: MouseEvent<HTMLDivElement>) {
         if(e.target == fullscreenPreviewRef.current) {
-            close();
+            closeFullscreen();
         }
     }
 
