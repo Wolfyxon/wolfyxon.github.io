@@ -15,7 +15,8 @@ const drawings: DrawingData[] = [
     {
         title: "Passage",
         date: "2025-11-23",
-        src: "/assets/img/art/Passage.webp"
+        src: "/assets/img/art/Passage.webp",
+        note: "Yeah I reused the pose from Angel of Cyphers"
     },
     {
         title: "Angel of Cyphers",
