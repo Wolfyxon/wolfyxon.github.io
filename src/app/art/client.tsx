@@ -26,7 +26,7 @@ const drawings: DrawingData[] = [
         title: "Forest Witch",
         date: "2025-07-11",
         src: "/assets/img/art/Forest_Witch.webp",
-        note: "I don't really like but don't hate it either"
+        note: "I don't really like but don't hate it either. Yes I messed up that arm."
     },
     {
         title: "Arctic Fox",
