@@ -70,13 +70,13 @@ export default function Home() {
           <ul>
             <li>Electronics</li>
             <li>Embedded systems</li>
+            <li>Drawing</li>
             <li>How to be a human</li>
           </ul>
         </TraitWidget>
 
         <TraitWidget title="Want to..." icon="/assets/img/icons/google/bulb.svg" iconAlt="Lightbulb" id="widget-want-to">
           <ul>
-            <li>Learn drawing</li>
             <li>Complete high school</li>
             <li>Never stop learning</li>
           </ul>
