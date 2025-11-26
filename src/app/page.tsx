@@ -70,7 +70,7 @@ export default function Home() {
           <ul>
             <li>Electronics</li>
             <li>Embedded systems</li>
-            <a href="/art">Drawing</a>
+            <li><a href="/art">Drawing</a></li>
             <li>How to be a human</li>
           </ul>
         </TraitWidget>
