@@ -11,14 +11,15 @@ export type DrawingData = {
 
 export default function Drawing(props: {
     data: DrawingData, 
-    openFunc?: (drawing: DrawingData) => void
+    index: number,
+    openFunc?: (drawing: DrawingData, index: number) => void
 }) {
     const data = props.data;
     const date = new Date(data.date);
 
     function open() {
         if(props.openFunc) {
-            props.openFunc(data);
+            props.openFunc(data, props.index);
         }
     }
 

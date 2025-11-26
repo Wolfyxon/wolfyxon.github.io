@@ -45,12 +45,16 @@ const drawings: DrawingData[] = [
 export default function ArtPageClient() {
     const [lastDrawing, setLastDrawing] = useState<DrawingData | null>(null);
     const [fullscreenOpen, setFullscreenOpen] = useState(false);
+
+    const lastDrawingIdRef = useRef<number>(null);
     const viewRef = useRef<HTMLDivElement>(null);
 
-    function openDrawing(drawing: DrawingData) {
+    function openDrawing(drawing: DrawingData, index: number) {
         setLastDrawing(drawing);
         setFullscreenOpen(true);
         history.pushState(null, "", "");
+
+        lastDrawingIdRef.current = index;
     }
 
     function closeView() {
@@ -63,10 +67,38 @@ export default function ArtPageClient() {
         }
     }
 
+    function nextDrawing() {
+        if(lastDrawingIdRef.current == null) return;
+
+        if(lastDrawingIdRef.current < drawings.length - 1) {
+            const idx = lastDrawingIdRef.current + 1;
+            openDrawing(drawings[idx], idx)
+        }
+    }
+
+    function prevDrawing() {
+        if(lastDrawingIdRef.current == null) return;
+
+        if(lastDrawingIdRef.current > 0) {
+            const idx = lastDrawingIdRef.current - 1;
+            openDrawing(drawings[idx], idx)
+        }
+    }
+
     useEffect(() => {
         window.addEventListener("keydown", (e) => {
             if(e.key == "Escape") {
                 closeView();
+            }
+            
+            if(lastDrawingIdRef.current != null) {
+                if(e.key == "ArrowRight") {
+                    nextDrawing();
+                }
+
+                if(e.key == "ArrowLeft") {
+                    prevDrawing();
+                }
             }
         });
 
@@ -100,6 +132,7 @@ export default function ArtPageClient() {
                 drawings.map((v, i) => 
                     <Drawing 
                         data={v}
+                        index={i}
                         openFunc={openDrawing}
                         key={`drawing-${i}`} 
                     />
