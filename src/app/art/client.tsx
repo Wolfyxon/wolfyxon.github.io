@@ -58,6 +58,7 @@ export default function ArtPageClient() {
     }
 
     function closeView() {
+        lastDrawingIdRef.current = null;
         setFullscreenOpen(false);
     }
 
