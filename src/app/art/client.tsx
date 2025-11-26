@@ -23,22 +23,26 @@ const drawings: DrawingData[] = [
     {
         title: "Forest Witch",
         date: "2025-07-11",
-        src: "/assets/img/art/Forest_Witch.webp"
+        src: "/assets/img/art/Forest_Witch.webp",
+        note: "I don't really like but don't hate it either"
     },
     {
         title: "Arctic Fox",
         date: "2025-04-21",
-        src: "/assets/img/art/Arctic_Fox.webp"
+        src: "/assets/img/art/Arctic_Fox.webp",
+        note: ":3"
     },
     {
         title: "Hungarian Parliament",
         date: "2024-09-24",
-        src: "/assets/img/art/Hungarian_Parliament.webp"
+        src: "/assets/img/art/Hungarian_Parliament.webp",
+        note: "Drew this in school for a project."
     },
     {
         title: "3DS Web Stuff Pigeon sprites",
         date: "2024-03-19",
-        src: "/assets/img/art/3DSWebStuff-Pigeon.webp"
+        src: "/assets/img/art/3DSWebStuff-Pigeon.webp",
+        note: "Sprites for a Flappy Bird clone on my 3DS browser games site."
     }
 ];
 
@@ -117,6 +121,7 @@ export default function ArtPageClient() {
         >
             <div id="drawing-view-meta">
                 <h1>{lastDrawing?.title}</h1>
+                <p>{lastDrawing?.note}</p>
             </div>
             <img
                 src={lastDrawing?.src}

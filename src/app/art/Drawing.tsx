@@ -7,7 +7,8 @@ import { useEffect, useRef } from "react";
 export type DrawingData = {
     title: string,
     date: string,
-    src: string
+    src: string,
+    note?: string
 };
 
 export default function Drawing(props: {
