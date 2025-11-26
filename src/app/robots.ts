@@ -8,7 +8,10 @@ export default function robots(): MetadataRoute.Robots {
         sitemap: ROOT + "sitemap.xml",
         rules: [
             {
-                userAgent: "*",
+                userAgent: [
+                    "Googlebot",
+                    "bingbot"
+                ],
                 disallow: [
                     "/*ref=*",
                     "/assets/img/icons",
