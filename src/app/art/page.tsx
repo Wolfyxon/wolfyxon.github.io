@@ -29,7 +29,7 @@ export default function ArtPage() {
                         Pixel art is made in Libresprite, mostly using a mouse.
                     </p>
                     <p>
-                        <b>Note:</b> I do not consent to the use of my work in AI model training.
+                        <b>Note:</b> I do not consent to the use of my work in AI model training. <a href="/docs/licensing/art">License details</a>
                     </p>
                 </div>
             </div>
