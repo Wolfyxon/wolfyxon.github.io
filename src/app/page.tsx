@@ -108,7 +108,7 @@ export default function Home() {
                 <SocialBadge site={websites.x} link="KaroleusPL" />
                 <SocialBadge site={websites.soundcloud} link="karoleus-PL" />
                 <SocialBadge site={websites.github} link="karoleuspl" />
-
+                <SocialBadge site={websites.deviantart} link="karoleusyt" />
               </Collaborator>
           </div>
       </div>
