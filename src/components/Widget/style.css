@@ -13,8 +13,9 @@
 }
 
 .widget:hover {
-    background: white;
-    color: black !important;
+    background: var(--panel-bright);
+    color: white !important;
+    opacity: 1 !important;
 }
 
 .widget-title-container {

@@ -1,6 +1,7 @@
 html {
     --text: white;
     --background: black;
+    --panel-bright: #545457; 
     --panel: #2b2a2c;
     --panel-slightly-dark: #272729;
     --panel-dark: #1e1e1f;
