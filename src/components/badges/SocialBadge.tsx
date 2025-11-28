@@ -27,6 +27,11 @@ export const websites: {[id: string]: WebsiteData} = {
         name: "Discord",
         icon: "discord.svg"
     },
+    "deviantart": {
+        url: "www.deviantart.com",
+        name: "DeviantArt",
+        icon: "deviantart.svg"
+    },
     "x": {
         url: "x.com",
         name: "X (Twitter)",
