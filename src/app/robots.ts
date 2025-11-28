@@ -124,7 +124,7 @@ export default function robots(): MetadataRoute.Robots {
                     "YandexAdditionalBot",
                     "YouBot",
                     "aiHitBot",
-                    "amazon-kendra-",
+                    "amazon-kendra",
                     "anthropic-ai",
                     "atlassian-bot",
                     "bedrockbot",
