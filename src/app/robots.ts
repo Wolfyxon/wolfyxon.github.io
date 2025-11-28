@@ -18,13 +18,7 @@ export default function robots(): MetadataRoute.Robots {
                     "/assets/img/icons",
                     "/assets/img/ose",
                     "/assets/img/home/banner.webp",
-                    "/3ds-web-stuff/img/logos"
-                ]
-            },
-            {
-                userAgent: "*",
-                disallow: [
-                    "/assets/img/art/3DSWebStuff-Pigeon.webp",
+                    "/3ds-web-stuff/img/logos",
                     "/assets/img/art/Forest_Witch.webp"
                 ]
             },
