@@ -9,16 +9,28 @@
     margin: 5px 3px;
     text-decoration: none;
     height: 120px;
+    transition: 0.1s;
+}
+
+.widget:hover {
+    background: white;
+    color: black !important;
 }
 
 .widget-title-container {
+    color: white;
     font-size: 150%;
     font-weight: bold;
     padding: 5px;
     background-color: var(--panel-very-dark);
     display: flex;
     justify-content: space-between;
+    transition: 0.1s;
 }
+
+.widget:hover .widget-title-container {
+    background-color: var(--panel);
+} 
 
 .widget-title-icon {
     flex: 0.1;
