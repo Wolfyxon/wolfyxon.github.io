@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run checksAndUpdates && next build",
     "start": "next start",
     "lint": "next lint",
     "cli": "npx tsx src/tools/cli.ts",
-    "robots": "npm run cli -- --update-robots"
+    "robots": "npm run cli -- --update-robots",
+    "checksAndUpdates": "npm run cli -- --check-update-robots"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
