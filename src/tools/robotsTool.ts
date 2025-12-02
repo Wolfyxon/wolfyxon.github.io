@@ -29,7 +29,7 @@ async function queryAIBotAgents() {
     return Object.keys(json);
 }
 
-async function updateAiUserAgents(data?: AiUserAgentData) {
+export async function updateAiUserAgents(data?: AiUserAgentData) {
     data = data ?? await getAiUserAgentData();
 
     console.log("Updating AI crawler UserAgents...");
@@ -63,7 +63,7 @@ async function updateAiUserAgents(data?: AiUserAgentData) {
     }
 }
 
-async function checkedUpdateAiUserAgents() {
+export async function checkedUpdateAiUserAgents() {
     const data = await getAiUserAgentData();
 
     const now = new Date(getISODate()).getTime();
@@ -82,5 +82,3 @@ async function checkedUpdateAiUserAgents() {
 
     updateAiUserAgents(data);
 }
-
-checkedUpdateAiUserAgents();
