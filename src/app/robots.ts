@@ -1,9 +1,22 @@
 import { ROOT } from "@/globalData";
+import { readFileSync, readSync } from "fs";
 import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-export default function robots(): MetadataRoute.Robots {
+export const AI_USER_AGENTS_PATH = "src/data/aiUserAgents.json";
+
+export type AiUserAgentData = {
+    lastUpdate: string,
+    userAgents: string[]
+};
+
+export async function getAiUserAgentData(): Promise<AiUserAgentData> {
+    const file = await readFileSync(AI_USER_AGENTS_PATH, "utf-8");
+    return JSON.parse(file.toString());
+}
+
+export default async function robots(): Promise<MetadataRoute.Robots> {
     return {
         sitemap: ROOT + "sitemap.xml",
         rules: [
@@ -24,122 +37,7 @@ export default function robots(): MetadataRoute.Robots {
             },
             {
                 disallow: "/",
-                userAgent: [
-                    "AI2Bot",
-                    "AddSearchBot",
-                    "Ai2Bot-Dolma",
-                    "AmazonBuyForMe",
-                    "Amazonbot",
-                    "Andibot",
-                    "Anomura",
-                    "Applebot",
-                    "Applebot-Extended",
-                    "Awario",
-                    "Bravebot",
-                    "Brightbot 1.0",
-                    "BuddyBot",
-                    "Bytespider",
-                    "CCBot",
-                    "ChatGPT Agent",
-                    "ChatGPT-User",
-                    "Claude-SearchBot",
-                    "Claude-User",
-                    "Claude-Web",
-                    "ClaudeBot",
-                    "CloudVertexBot",
-                    "Cloudflare-AutoRAG",
-                    "Cotoyogi",
-                    "Crawlspace",
-                    "DataForSeoBot",
-                    "Datenbank Crawler",
-                    "DeepSeekBot",
-                    "Devin",
-                    "Diffbot",
-                    "DuckAssistBot",
-                    "Echobot Bot",
-                    "EchoboxBot",
-                    "FacebookBot",
-                    "Factset_spyderbot",
-                    "FirecrawlAgent",
-                    "FriendlyCrawler",
-                    "GPTBot",
-                    "Gemini-Deep-Research",
-                    "Google-CloudVertexBot",
-                    "Google-Extended",
-                    "Google-Firebase",
-                    "Google-NotebookLM",
-                    "GoogleAgent-Mariner",
-                    "GoogleOther",
-                    "GoogleOther-Image",
-                    "GoogleOther-Video",
-                    "ICC-Crawler",
-                    "ISSCyberRiskCrawler",
-                    "IbouBot",
-                    "ImagesiftBot",
-                    "Kangaroo Bot",
-                    "KlaviyoAIBot",
-                    "LinerBot",
-                    "Linguee Bot",
-                    "Meta-ExternalAgent",
-                    "Meta-ExternalFetcher",
-                    "MistralAI-User",
-                    "MistralAI-User/1.0",
-                    "MyCentralAIScraperBot",
-                    "NotebookLM",
-                    "NovaAct",
-                    "OAI-SearchBot",
-                    "OpenAI",
-                    "Operator",
-                    "PanguBot",
-                    "Panscient",
-                    "Perplexity-User",
-                    "PerplexityBot",
-                    "PetalBot",
-                    "PhindBot",
-                    "Poseidon Research Crawler",
-                    "QualifiedBot",
-                    "QuillBot",
-                    "Quora-Bot",
-                    "SBIntuitionsBot",
-                    "Scrapy",
-                    "SemrushBot-OCOB",
-                    "SemrushBot-SWA",
-                    "ShapBot",
-                    "Sidetrade indexer bot",
-                    "TerraCotta",
-                    "Thinkbot",
-                    "TikTokSpider",
-                    "Timpibot",
-                    "VelenPublicWebCrawler",
-                    "WARDBot",
-                    "Webzio-Extended",
-                    "YaK",
-                    "YandexAdditional",
-                    "YandexAdditionalBot",
-                    "YouBot",
-                    "aiHitBot",
-                    "amazon-kendra",
-                    "anthropic-ai",
-                    "atlassian-bot",
-                    "bedrockbot",
-                    "bigsur.ai",
-                    "cohere-ai",
-                    "cohere-training-data-crawler",
-                    "facebookexternalhit",
-                    "iaskspider/2.0",
-                    "img2dataset",
-                    "meta-externalagent",
-                    "meta-externalfetcher",
-                    "meta-webindexer",
-                    "netEstate Imprint Crawler",
-                    "omgili",
-                    "omgilibot",
-                    "panscient.com",
-                    "quillbot.com",
-                    "thetradedesk",
-                    "wpbot",
-                    "yacybot"
-                ]
+                userAgent: (await getAiUserAgentData()).userAgents
             }
         ]
     }
