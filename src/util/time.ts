@@ -67,6 +67,12 @@ export function secondsToString(time: number): string {
     return `${pad(split.minutes)}:${pad(split.seconds)}`;
 }
 
+export function toISODate(date?: Date): string {
+    date = date ?? new Date();
+
+    return date.toISOString().split('T')[0];
+}
+
 export function getObjectURLBase64(obj: File): Promise<string> {
     return new Promise((res, rej) => {
         const reader = new FileReader();
