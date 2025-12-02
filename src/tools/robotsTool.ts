@@ -1,12 +1,7 @@
 
-import robots from "@/app/robots";
-
-type RobotsRule = {
-    userAgent: string | string[];
-    allow?: string | string[] | undefined;
-    disallow?: string | string[] | undefined;
-    crawlDelay?: number | undefined;
-};
+import robots, { AI_USER_AGENTS_PATH, AiUserAgentData, getAiUserAgentData } from "@/app/robots";
+import { getISODate } from "@/util/time";
+import { writeFileSync } from "fs";
 
 type AIRobotsJsonEntry = {
     operator: string,
@@ -21,6 +16,8 @@ type AIRobotsJson = Record<string, AIRobotsJsonEntry>; // key is the user agent
 const JSON_URL = "https://github.com/ai-robots-txt/ai.robots.txt/raw/refs/heads/main/robots.json";
 
 async function queryAIBots(): Promise<AIRobotsJson> {
+    console.log(`Getting ${JSON_URL}`);
+    
     const res = await fetch(JSON_URL);
     const json = await res.json();
 
@@ -32,55 +29,58 @@ async function queryAIBotAgents() {
     return Object.keys(json);
 }
 
-function userAgentsToString(array: string[]): string {
-    let res = "";
-    array.sort();
+async function updateAiUserAgents(data?: AiUserAgentData) {
+    data = data ?? await getAiUserAgentData();
 
-    for(let i = 0; i < array.length; i++) {
-        res += `"${array[i]}"`;
+    console.log("Updating AI crawler UserAgents...");
 
-        if(i != array.length - 1) {
-            res += ",\n";
+    try {
+        const recvAgents = await queryAIBotAgents();
+        const newAgents: string[] = [];
+        let count = 0;
+
+        for(const agent of recvAgents) {
+            if(!data.userAgents.includes(agent)) {
+                data.userAgents.push(agent);
+                newAgents.push(agent)
+                count++;
+            }
         }
-    }
 
-    return res;
+        console.log(`Total new UserAgents: ${count}`);
+        console.log(newAgents);
+
+        data.userAgents.sort();
+        data.lastUpdate = getISODate();
+
+        const str = JSON.stringify(data, null, 2);
+        await writeFileSync(AI_USER_AGENTS_PATH, str);
+
+        console.log("Update successful");
+
+    } catch(e) {
+        console.error(`Unable to update: ${e}`);
+    }
 }
 
-function getLocalAIAgents(): string[] {
-    for(const rule of robots().rules as RobotsRule[]) {
-        if(rule.disallow == "/" && rule.userAgent.includes("GPTBot")) {
-            return rule.userAgent as string[];
-        }
-    }
+async function checkedUpdateAiUserAgents() {
+    const data = await getAiUserAgentData();
 
-    throw "AI user agents rule not found";
-}
+    const now = new Date().valueOf();
+    const then = new Date(data.lastUpdate).valueOf();
+    const updateInterval = 7 * 60 * 60 * 60 * 24; // 7 days. TODO: improve readability
 
-async function updateAi() {
-    console.log(`Downloading registry...`);
-
-    const agents = await queryAIBotAgents();
-    const localAgents = getLocalAIAgents();
-
-    const newAgents: string[] = [];
-
-    for(const ag of agents) {
-        if(!localAgents.includes(ag)) {
-            localAgents.push(ag);
-            newAgents.push(ag);    
-        }
-    }
-
-    if(newAgents.length == 0) {
-        console.log("No new agents detected. Nothing to do.");
+    if(isNaN(then)) {
+        console.error(`Unable to parse date from '${data.lastUpdate}'. AI user agent update check failed.`);
         return;
     }
 
-    console.log("New array:\n");
-    console.log(userAgentsToString(localAgents));
-    console.log(`Total new: ${newAgents.length}`);
-    console.log(newAgents);
+    if(now - then <= updateInterval) {
+        console.log("Not updating AI UserAgents, an update was recently performed already.");
+        return;
+    }
+
+    updateAiUserAgents(data);
 }
 
-updateAi();
+checkedUpdateAiUserAgents();
