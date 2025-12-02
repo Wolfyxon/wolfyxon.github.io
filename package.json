@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "robots": "npx tsx src/tools/cli.ts --update-robots"
+    "cli": "npx tsx src/tools/cli.ts",
+    "robots": "npm run cli -- --update-robots"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
