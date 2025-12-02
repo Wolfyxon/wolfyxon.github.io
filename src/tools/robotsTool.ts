@@ -66,8 +66,8 @@ async function updateAiUserAgents(data?: AiUserAgentData) {
 async function checkedUpdateAiUserAgents() {
     const data = await getAiUserAgentData();
 
-    const now = new Date().valueOf();
-    const then = new Date(data.lastUpdate).valueOf();
+    const now = new Date(getISODate()).getTime();
+    const then = new Date(data.lastUpdate).getTime();
     const updateInterval = 7 * 60 * 60 * 60 * 24; // 7 days. TODO: improve readability
 
     if(isNaN(then)) {
