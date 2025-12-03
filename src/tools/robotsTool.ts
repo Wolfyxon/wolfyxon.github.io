@@ -1,5 +1,5 @@
 
-import robots, { AI_USER_AGENTS_PATH, AiUserAgentData, getAiUserAgentData } from "@/app/robots";
+import { AI_USER_AGENTS_PATH, AiUserAgentData, getAiUserAgentData } from "@/app/robots";
 import { getISODate, WEEKS } from "@/util/time";
 import { writeFileSync } from "fs";
 
