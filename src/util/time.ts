@@ -4,13 +4,20 @@ import { pad } from "./math";
 export type TimeUnit = "years" | "months" | "weeks" | "days" | "hours" | "minutes" | "seconds"
 export type SplitTime = Record<TimeUnit, number>
 
+export const MINUTES = 60;
+export const HOURS = MINUTES * 60;
+export const DAYS = HOURS * 24;
+export const WEEKS = DAYS * 7;
+export const MONTHS = DAYS * 30;
+export const YEARS = MONTHS * 12;
+
 const TIME_DIVISORS: {unit: TimeUnit, div: number}[] = [
-    {unit: "years", div:  60 * 60 * 24 * 365},
-    {unit: "months", div: 60 * 60 * 24 * 30},
-    {unit: "weeks", div: 60 * 60 * 24 * 7},
-    {unit: "days", div: 60 * 60 * 24},
-    {unit: "hours", div: 60 * 60},
-    {unit: "minutes", div: 60},
+    {unit: "years", div:  YEARS},
+    {unit: "months", div: MONTHS},
+    {unit: "weeks", div: WEEKS},
+    {unit: "days", div: DAYS},
+    {unit: "hours", div: HOURS},
+    {unit: "minutes", div: MINUTES},
     {unit: "seconds", div: 1 }
 ];
 

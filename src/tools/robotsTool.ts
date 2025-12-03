@@ -1,6 +1,6 @@
 
 import robots, { AI_USER_AGENTS_PATH, AiUserAgentData, getAiUserAgentData } from "@/app/robots";
-import { getISODate } from "@/util/time";
+import { getISODate, WEEKS } from "@/util/time";
 import { writeFileSync } from "fs";
 
 type AIRobotsJsonEntry = {
@@ -68,7 +68,7 @@ export async function checkedUpdateAiUserAgents() {
 
     const now = new Date(getISODate()).getTime();
     const then = new Date(data.lastUpdate).getTime();
-    const updateInterval = 7 * 60 * 60 * 60 * 24; // 7 days. TODO: improve readability
+    const updateInterval = 1 * WEEKS;
 
     if(isNaN(then)) {
         console.error(`Unable to parse date from '${data.lastUpdate}'. AI user agent update check failed.`);
