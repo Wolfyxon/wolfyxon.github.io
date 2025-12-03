@@ -1,10 +1,12 @@
+import { ReactNode } from "react";
+
 import Footer from "@/components/essential/Footer/Footer";
 import Header from "@/components/essential/Header/Header";
-
-import "@/css/main.css";
-import Root from "./Root";
 import ClientWorker from "@/components/essential/ClientWorker";
-import { ReactNode } from "react";
+import Root from "./Root";
+
+import "@/css/fonts/roboto.css";
+import "@/css/main.css";
 
 export default function Page(props: { children: any, category: string, homeUrl?: string, head?: ReactNode }) {
     return (
