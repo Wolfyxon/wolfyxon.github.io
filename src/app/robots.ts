@@ -35,11 +35,16 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
     return {
         sitemap: ROOT + "sitemap.xml",
         rules: [
+            /* Search engines */
             {
                 userAgent: [
                     "Googlebot",
                     "Googlebot-Image",
-                    "bingbot"
+                    "bingbot",
+                    "DuckDuckBot",
+                    "Yandex",
+                    "YandexImages",
+                    "Baiduspider"
                 ],
                 disallow: [
                     "/*ref=*",
@@ -52,9 +57,11 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
                     ...getHiddenDrawingURLs()
                 ]
             },
+
+            /* AI crawlers */
             {
+                userAgent: (await getAiUserAgentData()).userAgents,
                 disallow: "/",
-                userAgent: (await getAiUserAgentData()).userAgents
             }
         ]
     }
