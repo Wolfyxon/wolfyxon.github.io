@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
+import SocialBadge, { websites } from "../components/badges/SocialBadge";
 import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Experience from "@/components/home/Experience";
 import Collaborator from "../components/home/Collaborator";
-import SocialBadge, { websites } from "../components/badges/SocialBadge";
+import TraitWidget from "@/components/TraitWidget/TraitWidget";
 import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
-import TraitWidget from "@/components/TraitWidget/TraitWidget";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
