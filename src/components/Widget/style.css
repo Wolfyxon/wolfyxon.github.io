@@ -13,9 +13,8 @@
 }
 
 .widget:hover {
-    background: var(--panel-bright);
     color: white !important;
-    opacity: 1 !important;
+    opacity: 0.75 !important;
 }
 
 .widget-title-container {
@@ -28,10 +27,6 @@
     justify-content: space-between;
     transition: 0.1s;
 }
-
-.widget:hover .widget-title-container {
-    background-color: var(--panel);
-} 
 
 .widget-title-icon {
     flex: 0.1;
