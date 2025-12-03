@@ -76,7 +76,6 @@ header nav {
     transform: skew(-20deg);
     overflow: hidden;
     display: flex;
-    gap: 4px;
 }
 
 @media all and (orientation: portrait) {
@@ -96,8 +95,8 @@ header nav a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
     height: 100%;
+    padding: 0 15px;
     transition: 0.1s;
 }
 
