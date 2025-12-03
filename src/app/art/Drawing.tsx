@@ -1,7 +1,7 @@
 "use client";
 
 import { capitalize } from "@/util/string";
-import { MONTHS } from "@/util/time";
+import { MONTH_NAMES } from "@/util/time";
 import { useEffect, useRef } from "react";
 
 export type DrawingData = {
@@ -49,7 +49,7 @@ export default function Drawing(props: {
 
                 <div className="drawing-date">
                     {
-                        `${capitalize(MONTHS[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
+                        `${capitalize(MONTH_NAMES[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
                     }
                 </div>
             </div>

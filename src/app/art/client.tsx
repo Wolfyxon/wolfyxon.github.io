@@ -4,7 +4,7 @@ import { MouseEvent, useEffect, useRef, useState } from "react";
 import Drawing, { DrawingData } from "./Drawing";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { capitalize } from "@/util/string";
-import { MONTHS } from "@/util/time";
+import { MONTH_NAMES } from "@/util/time";
 
 const drawings: DrawingData[] = [
     {
@@ -130,7 +130,7 @@ export default function ArtPageClient() {
                         if(!lastDrawing) return;
 
                         const date = new Date(lastDrawing.date);
-                        return `${capitalize(MONTHS[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
+                        return `${capitalize(MONTH_NAMES[date.getMonth()])} ${date.getDate()}, ${date.getFullYear()}`
                     })()}</p>
                     <p>{lastDrawing?.note}</p>
                 </div>
