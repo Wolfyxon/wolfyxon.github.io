@@ -1,5 +1,4 @@
 import Page from "@/layouts/Page";
-import Drawing, { DrawingData } from "./Drawing";
 
 import "./style.css";
 import "@/css/animations.css";

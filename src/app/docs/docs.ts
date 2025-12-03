@@ -1,6 +1,5 @@
 import * as fs from "fs";
 import matter from "gray-matter";
-import { basename } from "path";
 
 const DOCS_PATH = "public/docs";
 
