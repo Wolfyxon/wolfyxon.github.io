@@ -27,7 +27,7 @@ function getHiddenDrawingURLs(): string[] {
             res.push(drawing.src);
         }
     }
-    
+
     return res;
 }
 
@@ -45,6 +45,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
                     "/*ref=*",
                     "/assets/img/icons",
                     "/assets/img/ose",
+                    "/assets/video/bad_apple.mp4",
                     "/assets/img/home/banner.webp",
                     "/3ds-web-stuff/img/logos",
 
