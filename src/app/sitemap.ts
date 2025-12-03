@@ -28,6 +28,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.6,
         },
         {
+            page: "art",
+            priority: 0.9
+        },
+        {
             page: "player",
             priority: 0.5
         },
