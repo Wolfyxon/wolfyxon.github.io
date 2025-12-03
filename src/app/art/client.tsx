@@ -1,53 +1,11 @@
 "use client";
 
 import { MouseEvent, useEffect, useRef, useState } from "react";
-import Drawing, { DrawingData } from "./Drawing";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
+import Drawing from "./Drawing";
+import { DRAWINGS, DrawingData } from "./drawingData";
 import { capitalize } from "@/util/string";
 import { MONTH_NAMES } from "@/util/time";
-
-const drawings: DrawingData[] = [
-    {
-        title: "Fight the Void",
-        date: "2025-11-25",
-        src: "/assets/img/art/Fight_the_Void.webp"
-    },
-    {
-        title: "Passage",
-        date: "2025-11-23",
-        src: "/assets/img/art/Passage.webp",
-        note: "Yeah I reused the pose from Angel of Cyphers"
-    },
-    {
-        title: "Angel of Cyphers",
-        date: "2025-11-21",
-        src: "/assets/img/art/Angel_of_Cyphers.webp"
-    },
-    {
-        title: "Forest Witch",
-        date: "2025-07-11",
-        src: "/assets/img/art/Forest_Witch.webp",
-        note: "I don't really like but don't hate it either. Yes I messed up that arm."
-    },
-    {
-        title: "Arctic Fox",
-        date: "2025-04-21",
-        src: "/assets/img/art/Arctic_Fox.webp",
-        note: ":3"
-    },
-    {
-        title: "Hungarian Parliament",
-        date: "2024-09-24",
-        src: "/assets/img/art/Hungarian_Parliament.webp",
-        note: "Drew this in school for a project."
-    },
-    {
-        title: "3DS Web Stuff Pigeon sprites",
-        date: "2024-03-19",
-        src: "/assets/img/art/3DSWebStuff-Pigeon.webp",
-        note: "Sprites for a Flappy Bird clone on my 3DS browser games site."
-    }
-];
 
 export default function ArtPageClient() {
     const [lastDrawing, setLastDrawing] = useState<DrawingData | null>(null);
@@ -78,9 +36,9 @@ export default function ArtPageClient() {
     function nextDrawing() {
         if(lastDrawingIdRef.current == null) return;
 
-        if(lastDrawingIdRef.current < drawings.length - 1) {
+        if(lastDrawingIdRef.current < DRAWINGS.length - 1) {
             const idx = lastDrawingIdRef.current + 1;
-            openDrawing(drawings[idx], idx)
+            openDrawing(DRAWINGS[idx], idx)
         }
     }
 
@@ -89,7 +47,7 @@ export default function ArtPageClient() {
 
         if(lastDrawingIdRef.current > 0) {
             const idx = lastDrawingIdRef.current - 1;
-            openDrawing(drawings[idx], idx)
+            openDrawing(DRAWINGS[idx], idx)
         }
     }
 
@@ -150,7 +108,7 @@ export default function ArtPageClient() {
 
         <div id="drawings" className="observing anim-obs-fade">
             {
-                drawings.map((v, i) => 
+                DRAWINGS.map((v, i) => 
                     <Drawing 
                         data={v}
                         index={i}

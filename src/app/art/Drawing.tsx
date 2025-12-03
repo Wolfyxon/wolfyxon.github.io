@@ -3,13 +3,7 @@
 import { capitalize } from "@/util/string";
 import { MONTH_NAMES } from "@/util/time";
 import { useEffect, useRef } from "react";
-
-export type DrawingData = {
-    title: string,
-    date: string,
-    src: string,
-    note?: string
-};
+import { DrawingData } from "./drawingData";
 
 export default function Drawing(props: {
     data: DrawingData, 
