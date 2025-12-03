@@ -82,7 +82,7 @@ header nav {
 @media all and (orientation: portrait) {
     header nav {
         justify-content: center;
-        width: 100%;
+        width: 102%;
     }
 }
 
