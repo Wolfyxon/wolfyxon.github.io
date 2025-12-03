@@ -35,6 +35,14 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
     return {
         sitemap: ROOT + "sitemap.xml",
         rules: [
+            /* Global */
+            {
+                userAgent: "*",
+                disallow: [
+                    ...getHiddenDrawingURLs()
+                ]
+            },
+
             /* Search engines */
             {
                 userAgent: [
@@ -53,8 +61,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
                     "/assets/video/bad_apple.mp4",
                     "/assets/img/home/banner.webp",
                     "/3ds-web-stuff/img/logos",
-
-                    ...getHiddenDrawingURLs()
                 ]
             },
 
