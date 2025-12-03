@@ -1,5 +1,5 @@
 import { ROOT } from "@/globalData";
-import { readFileSync, readSync } from "fs";
+import { readFileSync } from "fs";
 import { MetadataRoute } from "next";
 import { DRAWINGS } from "./art/drawingData";
 
