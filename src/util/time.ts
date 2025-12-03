@@ -79,16 +79,3 @@ export function getISODate(date?: Date): string {
 
     return date.toISOString().split('T')[0];
 }
-
-export function getObjectURLBase64(obj: File): Promise<string> {
-    return new Promise((res, rej) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(obj);
-
-        reader.onload = () => {
-            res(reader.result as string);
-        }
-
-        reader.onerror = rej;
-    });
-}
