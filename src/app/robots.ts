@@ -23,7 +23,7 @@ function getHiddenDrawingURLs(): string[] {
     for(let i = 0; i < DRAWINGS.length; i++) {
         const drawing = DRAWINGS[i];
         
-        if(drawing.hideFromSE) {
+        if(drawing.hideFromBots) {
             res.push(drawing.src);
         }
     }

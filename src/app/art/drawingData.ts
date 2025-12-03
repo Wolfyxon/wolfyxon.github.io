@@ -4,7 +4,7 @@ export type DrawingData = {
     date: string,
     src: string,
     note?: string,
-    hideFromSE?: boolean // hide from search engines if it looks meh
+    hideFromBots?: boolean
 };
 
 export const DRAWINGS: DrawingData[] = [
@@ -35,7 +35,7 @@ export const DRAWINGS: DrawingData[] = [
         date: "2025-07-11",
         src: "/assets/img/art/Forest_Witch.webp",
         note: "I don't really like but don't hate it either. Yes I messed up that arm.",
-        hideFromSE: true
+        hideFromBots: true
     },
     {
         title: "Arctic Fox",
