@@ -4,10 +4,7 @@ description: How my drawings are licensed and how you can use them.
 ---
 
 # Introduction
-My artwork is protected by copyright, but that doesn't mean you can't use it in any way.
-Here you can learn all the conditions of sharing and using my art.
-
-This license applies to my drawings.
+Here you can learn all the conditions of sharing and using my drawings.
 
 # Conditions
 ## Allowed
