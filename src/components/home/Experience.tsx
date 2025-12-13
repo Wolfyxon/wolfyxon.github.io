@@ -31,6 +31,7 @@ export default function Experience() {
           <h2>Libraries, frameworks and engines</h2>
           <div className="observing anim-obs-down">
               <Badge icon="software/lib/react.svg" alt="React" />
+              <Badge icon="software/framework/svelte.svg" alt="Svelte" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.webp" alt="NextJS" />
               <Badge icon="software/framework/nodejs.webp" alt="NodeJS" />
