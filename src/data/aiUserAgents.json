@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-12-03",
+  "lastUpdate": "2025-12-13",
   "userAgents": [
     "AI2Bot",
     "AI2Bot-DeepResearchEval",
@@ -17,6 +17,7 @@
     "BuddyBot",
     "Bytespider",
     "CCBot",
+    "Channel3Bot",
     "ChatGLM-Spider",
     "ChatGPT Agent",
     "ChatGPT-User",
@@ -27,6 +28,7 @@
     "CloudVertexBot",
     "Cloudflare-AutoRAG",
     "Cotoyogi",
+    "Crawl4AI",
     "Crawlspace",
     "DataForSeoBot",
     "Datenbank Crawler",
@@ -95,6 +97,7 @@
     "Thinkbot",
     "TikTokSpider",
     "Timpibot",
+    "TwinAgent",
     "VelenPublicWebCrawler",
     "WARDBot",
     "WRTNBot",
