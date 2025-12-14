@@ -30,8 +30,12 @@ const redirects: RedirectEntry[] = [
     {
         aliases: ["centerme", "Centerme", "CenterME", "centreme", "CentreMe"],
         url: "https://wolfyxon.github.io/CenterMe",
+    },
+    {
+        aliases: ["songwrap", "Songwrap", "SongWarp", "songwarp", "Songwrap"],
+        url: "https://wolfyxon.github.io/SongWrap"
     }
-]
+];
 
 function getRedirect(slug: string): RedirectEntry | null {
     for(const r of redirects) {
