@@ -32,7 +32,7 @@ const redirects: RedirectEntry[] = [
         url: "https://wolfyxon.github.io/CenterMe",
     },
     {
-        aliases: ["songwrap", "Songwrap", "SongWarp", "songwarp", "Songwrap"],
+        aliases: ["songwrap", "Songwrap", "song-wrap", "SongWarp", "songwarp", "Songwrap", "song-warp"],
         url: "https://wolfyxon.github.io/SongWrap"
     }
 ];
