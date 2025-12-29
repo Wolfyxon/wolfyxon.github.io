@@ -17,9 +17,9 @@ export default function Page(props: { children: any, category: string, homeUrl?:
             <body>
                 <Header title={props.category} home={props.homeUrl} />
 
-                <div id="main">
+                <main id="main" role="main">
                     {props.children}
-                </div>
+                </main>
 
                 <Footer />
 

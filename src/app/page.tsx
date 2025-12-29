@@ -5,7 +5,6 @@ import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Experience from "@/components/home/Experience";
 import Collaborator from "../components/home/Collaborator";
-import TraitWidget from "@/components/TraitWidget/TraitWidget";
 import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
@@ -31,7 +30,7 @@ const extraHead = <>
 export default function Home() {
   return (
     <Page category="Home" head={extraHead}>
-       <div id="banner">
+       <div id="banner" role="banner">
           <div className="observing anim-obs-left">
             <div id="banner-text">
                   <h1>
