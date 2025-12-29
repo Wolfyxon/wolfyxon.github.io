@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import Project from "./Project";
+import Project from "./Project/Project";
 
 function ProjectList() {
     const elms: ReactElement[] = [];
