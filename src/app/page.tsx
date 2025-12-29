@@ -9,6 +9,7 @@ import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
+import CodeBackground from "@/components/global/CodeBackground/CodeBackground";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
@@ -30,7 +31,9 @@ const extraHead = <>
 export default function Home() {
   return (
     <Page category="Home" head={extraHead}>
-       <div id="banner" role="banner">
+        
+        <div id="banner" role="banner">
+          <CodeBackground file="src/app/page.tsx" />
           <div className="observing anim-obs-left">
             <div id="banner-text">
                   <h1>

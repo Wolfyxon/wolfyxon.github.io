@@ -8,6 +8,7 @@
 #banner {
     height: 30vw;
     position: relative;
+    overflow: hidden;
 }
 
 #banner::before {
@@ -21,7 +22,6 @@
     background-size: 100% 100%;
     animation: slight-flash 5s infinite;
 }
-
 
 #banner > * > * {
     display: inline-block;

@@ -1,0 +1,41 @@
+.code-background {
+    display: block;
+    font-family: monospace;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color2);
+    opacity: 0.6;
+    margin: 5px;
+    z-index: -1;
+    animation: scroll 60s infinite linear;
+    text-align: left;
+    font-size: 150%;
+}
+
+.code-background pre {
+    display: block !important;
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        visibility: visible;
+        transform: translateY(0%);
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-90%);
+    }
+}
