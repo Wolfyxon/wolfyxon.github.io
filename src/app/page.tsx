@@ -87,7 +87,9 @@ export default function Home() {
           </div>
       </div>
 
-      <img src="/assets/img/art/littleWolf.webp" id="wolf" alt="Little wolf" />
+      <a href="/art">
+        <img src="/assets/img/art/littleWolf.webp" id="wolf" alt="Little wolf" />
+      </a>
     </Page>
   );
 }
