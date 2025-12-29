@@ -48,7 +48,6 @@ export default function Home() {
                       <SocialBadge site={websites.youtube} link="@Wolfyxon" />
                       <SocialBadge site={websites.soundcloud} link="Wolfyxon" />
                       <SocialBadge site={websites.discord} link="RztUGCK" />
-                      {/*<SocialBadge site={websites.x} link="Wolfyxon" />*/}
                   </div>
               </div>
 
