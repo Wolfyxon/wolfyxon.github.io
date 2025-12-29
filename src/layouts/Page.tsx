@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-import Footer from "@/components/essential/Footer/Footer";
-import Header from "@/components/essential/Header/Header";
-import ClientWorker from "@/components/essential/ClientWorker";
+import Footer from "@/components/global/Footer/Footer";
+import Header from "@/components/global/Header/Header";
+import ClientWorker from "@/components/global/ClientWorker";
 import Root from "./Root";
 
 import "@/css/fonts/roboto.css";

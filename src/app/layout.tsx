@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ClientWorker from "../components/essential/ClientWorker";
+import ClientWorker from "../components/global/ClientWorker";
 
 import "@/css/global.css";
 import Root from "@/layouts/Root";
