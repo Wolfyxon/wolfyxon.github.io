@@ -91,6 +91,26 @@ function ProjectList() {
     );
 
     registerProject(
+        "SongWrap",
+        "A website for viewing a fancy summary of the songs you listen to.",
+        "assets/img/home/projectThumbnails/SongWrap.webp",
+        [
+            {
+                text: "Visit the site",
+                url: "https://wolfyxon.github.io/SongWrap"
+            },
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/songwrap"
+            },
+            {
+                text: "Audacious plugin",
+                url: "https://github.com/Wolfyxon/AudaciousStats"
+            }
+        ]
+    )
+
+    registerProject(
         "The Great Doors of Door", 
         "A funny Roblox game that was supposed to be a low-effort parody, but then we made it into an emotional story.", 
         "assets/img/home/projectThumbnails/tgdod.webp", 
