@@ -51,23 +51,20 @@ export default function Experience() {
           <div className="observing anim-obs-down">
             {
               [
-                "Web APIs",
                 "Backend",
                 "Frontend",
                 "Databases",
                 "Website SEO & accessibility",
-                "Command line",
                 "Version control",
                 "Low-level programming",
                 "Game development",
                 "Discord bots",
                 "Networking",,
                 "System administration",
-                "Basic electronics",
-                "Basic robotics",
+                "Electronics",
                 "Video & audio editing",
                 "Digital graphics",
-                "Digital music production"                
+                "Digital music"                
               ].map((name) => <Tag key={"field-" + name}>{name}</Tag>)
             }
           </div>
