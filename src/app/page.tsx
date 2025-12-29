@@ -65,34 +65,7 @@ export default function Home() {
 
       <FancyHeading>Experience</FancyHeading>
       <Experience />
-
-      <FancyHeading>Currently</FancyHeading>
-
-      <div id="trait-widgets" className="observing anim-obs-fade">
-        <TraitWidget title="Working on..." icon="/assets/img/icons/google/gear.svg" iconAlt="Gear" id="widget-working">
-          <ul>
-            <li>Random projects</li>
-            <li>Writing a story</li>
-          </ul>
-        </TraitWidget>
-
-        <TraitWidget title="Learning..." icon="/assets/img/icons/google/search.svg" iconAlt="Magnifier" id="widget-learning">
-          <ul>
-            <li>Electronics</li>
-            <li>Embedded systems</li>
-            <li><a href="/art">Drawing</a></li>
-            <li>How to be a human</li>
-          </ul>
-        </TraitWidget>
-
-        <TraitWidget title="Want to..." icon="/assets/img/icons/google/bulb.svg" iconAlt="Lightbulb" id="widget-want-to">
-          <ul>
-            <li>Complete high school</li>
-            <li>Never stop learning</li>
-          </ul>
-        </TraitWidget>
-      </div>
-
+      
       <div id="collaborators">
           <FancyHeading>People I collaborate with</FancyHeading>
 
