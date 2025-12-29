@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-12-13",
+  "lastUpdate": "2025-12-29",
   "userAgents": [
     "AI2Bot",
     "AI2Bot-DeepResearchEval",
@@ -93,6 +93,7 @@
     "ShapBot",
     "Sidetrade indexer bot",
     "Spider",
+    "TavilyBot",
     "TerraCotta",
     "Thinkbot",
     "TikTokSpider",
