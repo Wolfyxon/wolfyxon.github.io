@@ -4,7 +4,7 @@
     width: 300px;
     max-width: 40vw;
     user-select: none;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .wolf.pat {
