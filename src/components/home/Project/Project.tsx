@@ -7,7 +7,9 @@ export default function Project(data: {title: string, description: string, thumb
                 <h2 translate="no">{data.title}</h2>
                 <p>{data.description}</p>
 
-                {data.children}
+                <div className="project-extra">
+                    {data.children}
+                </div>
             </div>
 
             <img 

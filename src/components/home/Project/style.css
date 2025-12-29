@@ -1,8 +1,8 @@
 .project {
+    display: flex;
     border-radius: 10px;
     background: var(--panel-dark);
-    position: relative;
-    min-height: 15vw;
+    min-height: 10vw;
     height: fit-content;
     margin-bottom: 10px;
     border-left: 5px solid var(--color1);
@@ -10,20 +10,18 @@
 
 .project-img {
     height: 100%;
-    max-width: 37%;
-    object-fit: contain;
-    position: absolute;
-    right: 0;
+    max-width: 25%;
+    object-fit: cover;
 }
 
 .project-text {
     padding: 1%;
-    display: inline-block;
+    flex: 1;
     width: 50%;
 }
 
 .project-text p {
-    padding: 3% 0;
+    padding: 10px 0;
 }
 
 .project-text a {
@@ -48,18 +46,27 @@
     font-weight: bold;
 }
 
+.project-extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 5px;
+    padding: 10px;
+}
+
 @media all and (orientation: portrait) {
     .project {
         height: fit-content;
         border-left: none;
+        flex-direction: column-reverse;
     }
 
     .project-text {
         width: 100%;
+        text-align: center;
     }
 
-    .project-text {
-        text-align: center;
+    .project-extra {
+        justify-content: center;
     }
 
     .project-img {
@@ -68,6 +75,5 @@
         width: 100%;
         max-width: 100%;
         height: auto;
-        display: block;
     }
 }
