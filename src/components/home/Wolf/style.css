@@ -4,11 +4,11 @@
     width: 300px;
     max-width: 40vw;
     user-select: none;
-    
+    cursor: pointer;
 }
 
 .wolf.pat {
-    animation: pat 0.75s;
+    animation: pat 0.3s;
 }
 
 @keyframes pat {
