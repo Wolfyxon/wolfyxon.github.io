@@ -1,6 +1,11 @@
 
-#main {
-    margin-bottom: 100px;
+
+#wolf {
+    margin: 0 auto;
+    display: block;
+    margin-top: 100px;
+    width: 300px;
+    max-width: 40vw;
 }
 
 /* -== Banner ==-- */

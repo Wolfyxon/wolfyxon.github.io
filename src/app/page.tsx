@@ -86,6 +86,8 @@ export default function Home() {
               </Collaborator>
           </div>
       </div>
+
+      <img src="/assets/img/art/littleWolf.webp" id="wolf" alt="Little wolf" />
     </Page>
   );
 }
