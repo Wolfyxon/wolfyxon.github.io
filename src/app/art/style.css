@@ -94,7 +94,7 @@
 
 #drawing-view-meta-container {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     gap: 10px;
     position: absolute;
     width: 250px;
