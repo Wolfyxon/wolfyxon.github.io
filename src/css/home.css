@@ -1,11 +1,7 @@
 
 
-#wolf {
-    margin: 0 auto;
-    display: block;
-    margin-top: 100px;
-    width: 300px;
-    max-width: 40vw;
+.wolf {
+    margin-top: 150px !important;
 }
 
 /* -== Banner ==-- */

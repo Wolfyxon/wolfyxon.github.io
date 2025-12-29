@@ -10,6 +10,7 @@ import Page from "@/layouts/Page";
 import "@/css/animations.css";
 import "@/css/home.css";
 import CodeBackground from "@/components/global/CodeBackground/CodeBackground";
+import Wolf from "@/components/home/Wolf/Wolf";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
@@ -86,10 +87,8 @@ export default function Home() {
               </Collaborator>
           </div>
       </div>
-
-      <a href="/art">
-        <img src="/assets/img/art/littleWolf.webp" id="wolf" alt="Little wolf" />
-      </a>
+      
+      <Wolf/>
     </Page>
   );
 }

@@ -1,0 +1,24 @@
+.wolf {
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    max-width: 40vw;
+    user-select: none;
+    
+}
+
+.wolf.pat {
+    animation: pat 0.75s;
+}
+
+@keyframes pat {
+    0% {
+        transform: scaleY(100%) translateY(0);
+    }
+    25% {
+        transform: scaleY(97%) translateY(3%);
+    }
+    100% {
+        transform: scaleY(100%) translateY(0);
+    }
+}
