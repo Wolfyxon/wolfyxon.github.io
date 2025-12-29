@@ -7,7 +7,7 @@ export default function CodeBackground(props: {file: string}) {
     const lines = code.split("\n");
 
     return (
-        <div className="code-background">
+        <div className="code-background" translate="no">
             {lines.map((line, i) => (
                 <pre key={"code-bg-" + i}>
                     {line}
