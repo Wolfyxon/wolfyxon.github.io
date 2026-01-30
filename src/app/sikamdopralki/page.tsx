@@ -5,17 +5,18 @@
 import React from "react";
 import "./style.css";
 
-class Pissing extends React.Component {
-  constructor(props: {}) {
+type PissingProps = { target: string };
+
+class Pissing extends React.Component<PissingProps> {
+  constructor(props: PissingProps) {
     super(props);
-    this.state = {pissTarget: "pralki"};
   }
   
   render() {
-    return <h1>Sikam do {(this.state as any).pissTarget}</h1>
+    return <h1>Sikam do {(this.props as PissingProps).target}</h1>
   }
 }
 
 export default function SikamDoPralki() {
-    return <Pissing />
+    return <Pissing target="pralki"  />
 }
