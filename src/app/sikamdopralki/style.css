@@ -19,6 +19,14 @@ h1 {
   font-weight: 1000%;
 }
 
+
+@media screen and (orientation: portrait) {
+  h1 {
+    font-size: 260%;
+  }
+}
+
+
 @keyframes wiggle-rot {
   0% {
     transform: scaleX(1) rotate(0deg);
