@@ -10,7 +10,7 @@
     z-index: -1;
     animation: scroll 60s infinite linear;
     text-align: left;
-    font-size: 150%;
+    font-size: 100%;
 }
 
 .code-background pre {
