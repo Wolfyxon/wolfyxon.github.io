@@ -9,7 +9,7 @@ import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
-import CodeBackground from "@/components/global/CodeBackground/CodeBackground";
+import CodeBackground from "@/components/home/CodeBackground/CodeBackground";
 import Wolf from "@/components/home/Wolf/Wolf";
 
 export const metadata: Metadata = {
