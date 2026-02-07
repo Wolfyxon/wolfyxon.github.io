@@ -6,15 +6,24 @@ import "./style.css";
 export default function Wolf() {
     const ref = useRef<HTMLImageElement>(null);
 
-    function onClick() {
-        const wolf = ref.current;
+    let patResetTimeout: NodeJS.Timeout | null;
 
+    function onClick() {
+        stopReset();
+
+        const wolf = ref.current;
         wolf!.classList.remove("pat");
-        setTimeout(() => {
+
+        patResetTimeout = setTimeout(() => {
             wolf!.classList.add("pat");
-        }, 12)
-        
-        
+        }, 12);
+    }
+
+    function stopReset() {
+        if(patResetTimeout) {
+            clearInterval(patResetTimeout);
+            patResetTimeout = null
+        }
     }
 
     return (
