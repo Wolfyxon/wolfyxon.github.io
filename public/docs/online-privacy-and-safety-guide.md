@@ -8,6 +8,12 @@ hidden: true
 
 In this guide I'll cover the ways you can better protect your identity and data on the internet without compromising your convenience. 
 
+It will cover:
+- What to never share
+- How your private info can be exposed
+- How companies spy on you and how to prevent that
+- The basic stuff (strong passwords, 2fa blah blah...)
+
 This will not be a *live off grid*, *delete all of your online accounts*, *use the Tor network* but a practical guide that will still allow you to normally use the internet.
 I will also not talk about Linux and open source software here because I'm aware that this is not a viable option for most people even though that's what I use and encourage.
 
