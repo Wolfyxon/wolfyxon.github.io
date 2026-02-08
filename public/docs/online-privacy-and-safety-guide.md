@@ -28,9 +28,22 @@ There are still things you want to watch out for!
 
 # Protecting your information
 
-## Google yourself
+## Search yourself
 Searching for yourself on the internet is the first step to protect your data by identifying what information is public about you.
-Then you can try getting rid of it.
+This is also what a person trying to find your private info would do, so you will know what they're going to do first and be ahead of them.
+
+You can:
+- Google yourself
+- Go through your old posts
+- Search your messages on platforms like Discord
+
+When searching you will want to start from your oldest activity, because you probably started using the internet as a kid who
+did not care about privacy at all.
+
+Considering you probably sent a lot of messages and going through them will be painful, set the filter to show
+images & videos, since that's the most sensitive thing as explained further.
+
+Then you can try getting rid of that information or at least hiding it.
 
 ## Isolate or delete your Facebook account
 It's common knowledge that Facebook collects very large amounts of your data but that data is often not private.
