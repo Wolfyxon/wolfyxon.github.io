@@ -55,7 +55,7 @@ But don't worry, if you use Messenger this will not impact your ability to commu
 ## Be extremely careful with what you share
 
 ### Photos and videos of the outside
-I'm not gonna explain it in detail, you can do your own research. You can see a YouTube channel called *rainbolt* which shows how simple it is.
+I'm not gonna explain it in detail, you can do your own research. You can see a YouTube channel called [RAINBOLT](https://www.youtube.com/@georainbolt) which shows how simple it is.
 
 I'll just say that showing even a small bit of the outside environment is extremely dangerous as there are various methods of finding the exact location of the place showcased on the photo or video.
 
