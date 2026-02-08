@@ -88,6 +88,17 @@ Here are some examples what you need to look for:
 - Browsing & search history
 - Passwords and logins (obviously)
 
+## Delete accounts you don't need
+Why keep something you don't need?
+
+Deleting an account you don't need won't cost you anything and all of the private data you entered will (hopefully) be deleted
+before it can be breached.
+
+You can use tools like https://whatsmyname.app/ to find your accounts by name.
+
+Additionally if you only need an account to do something quick, you can just use a disposable email
+such as https://temp-mail.org and delete that account when you're done.
+
 ## Assume everything may be leaked eventually
 The even the most *secure* companies suffer data breaches leaving data of thousands of users open to cybercriminals.
 
@@ -117,15 +128,6 @@ You should disable that.
 ## Use AI responsibly
 Your conversations with LLMs such as ChatGPT may be reviewed by other people and used for further training.
 You don't want to share any private information with AI models.
-
-## Delete accounts you don't need
-Why keep something you don't need?
-
-Deleting an account you don't need won't cost you anything and all of the private data you entered will (hopefully) be deleted
-before it can be breached and it won't be sold.
-
-Additionally if you only need an account to do something quick, you can just use a disposable email
-such as https://temp-mail.org and delete that account when you're done.
 
 ## Block internet access for apps that don't need it
 Why would a calculator app need internet access?
