@@ -86,7 +86,7 @@ code:not(pre code) {
 .article-page article h5,
 .article-page article h6
 {
-    color: rgb(220, 220, 255);
+    color: rgb(215, 165, 255);
 }
 
 .article-header:not(:empty) {
