@@ -61,6 +61,11 @@ I'll just say that showing even a small bit of the outside environment is extrem
 
 Do not share any photos or videos of the outside world online.
 
+### EXIF data in photos
+Image files contain various hidden metadata such as your camera's serial number, but also sometimes the **location** which is something you don't want.
+
+In your phone's camera app settings make sure to disable location saving. 
+
 ### Your school data
 If you're still going to school, do not share any information about it, such as:
 - Your plan
