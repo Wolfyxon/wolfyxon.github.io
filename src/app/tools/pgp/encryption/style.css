@@ -46,6 +46,11 @@
 }
 
 .accordion.open .accordion-content {
-    max-height: 500px;
-    
+    max-height: 500px;    
+}
+
+.keys-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }

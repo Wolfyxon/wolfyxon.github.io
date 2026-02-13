@@ -174,7 +174,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
             </div>
             <div id="side-settings">
                 <h2>Settings</h2>
-                <div>
+                <div className="keys-container">
                     <label>Public keys</label>
 
                     {
