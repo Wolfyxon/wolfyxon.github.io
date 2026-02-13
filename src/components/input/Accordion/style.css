@@ -16,6 +16,11 @@
     opacity: 0;
 }
 
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+}
+
 .accordion.open .accordion-button {
     border-bottom-width: 1px;
 }
