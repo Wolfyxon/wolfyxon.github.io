@@ -103,4 +103,31 @@ Original file: `CoolGame.zip` | Signature: `CoolGame.zip.sig`
 gpg --verify CoolGame.zip.sig
 ```
 
-[Learn more about verifying files and signatures at the GnuPG website](https://www.gnupg.org/gph/en/manual/x135.html)
+[Learn more about verifying files and signatures on the GnuPG website](https://www.gnupg.org/gph/en/manual/x135.html)
+
+# File encryption & decryption
+
+## Encrypting
+Encryption works by taking the receipent's public key and encrypting your message with it so they can
+decrypt it with their private key.
+
+To encrypt a file using a imported public key, use:
+```
+gpg --output <encrypted file name> --encrypt --receipent <their email> <file to encrypt>
+```
+For example:
+```
+gpg --output encrypted_message.txt.gpg --encrypt --receipent wolfyxon@gmail.com secret_message.txt
+```
+
+## Decrypting
+To decrypt a message using your private key simply run:
+```
+gpg --output <decrypted file name> --decrypt <encrypted file name>
+```
+For example:
+```
+gpg --output secret_message.txt --decrypt encrypted_message.txt.gpg
+```
+
+[Learn more about encryption and decryption on the GnuPG website](https://www.gnupg.org/gph/en/manual/x110.html)
