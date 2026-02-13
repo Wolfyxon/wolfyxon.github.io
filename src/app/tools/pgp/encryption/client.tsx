@@ -1,6 +1,6 @@
  "use client";
 
-import Accordion from "@/components/input/Accordion/Accordion";
+import Accordion, { AccordionButton } from "@/components/input/Accordion/Accordion";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { useEffect, useState } from "react";
 import * as openpgp from "openpgp";
@@ -10,12 +10,25 @@ type KeyData = {
     comment?: string
 }
 
-function Key(props: {keyData: KeyData}) {
+function Key(props: {
+    keyData: KeyData, 
+    removeKey: (key: KeyData) => any
+}) {
     const fingerprint = props.keyData.data.getFingerprint().slice(0, 8);
     const name = `${fingerprint} ${props.keyData.comment ?? ""}`;
 
+    const buttons: AccordionButton[] = [
+        {
+            name: "Delete",
+            icon: "/assets/img/icons/google/delete.svg",
+            onClick: () => {
+                props.removeKey(props.keyData);
+            }
+        }
+    ]
+
     return (
-        <Accordion title={name}>
+        <Accordion title={name} buttons={buttons}>
             <div className="faded">
                 The text may be different from your input, but the key should be the same.
             </div>
@@ -106,6 +119,10 @@ export default function EncryptionPageClient(props: {myKey: string}) {
         addKeyText(keyText);
     }
 
+    function removeKey(key: KeyData) {
+        setKeys(keys.filter((k) => k != key));
+    }
+
     return (<>
         <h1>Encrypt a message using OpenPGP</h1>
         <div id="sides">
@@ -161,7 +178,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                     <label>Public keys</label>
 
                     {
-                        keys.map((r, i) => <Key keyData={r} key={`rec-${i}`} /> )
+                        keys.map((r, i) => <Key keyData={r} key={`rec-${i}`} removeKey={removeKey} /> )
                     }
                 </div>
 
