@@ -33,8 +33,15 @@
     flex: 1;
 }
 
-.accordion.open .accordion-content {
-    max-height: 350px;
+#add-key-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+}
+
+.key-area {
+    height: 200px;
+    max-height: 200px;
 }
 
 .accordion textarea {

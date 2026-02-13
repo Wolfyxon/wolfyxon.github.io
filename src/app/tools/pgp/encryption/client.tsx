@@ -2,18 +2,25 @@
 
 import Accordion from "@/components/input/Accordion/Accordion";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as openpgp from "openpgp";
 
 type KeyData = {
-    key: string,
-    name?: string
+    data: openpgp.Key,
+    comment?: string
 }
 
-function Key(props: {data: KeyData}) {
+function Key(props: {keyData: KeyData}) {
+    const fingerprint = props.keyData.data.getFingerprint().slice(0, 8);
+    const name = `${fingerprint} ${props.keyData.comment ?? ""}`;
+
     return (
-        <Accordion title={props.data.name ?? "..."}>
-            <textarea placeholder="Enter a puiblic key block..." defaultValue={props.data.key} />
+        <Accordion title={name}>
+            <textarea 
+                placeholder="Enter a puiblic key block..." 
+                defaultValue={props.keyData.data.armor()}
+                className="key-area"
+            />
         </Accordion>
     )
 }
@@ -22,19 +29,21 @@ export default function EncryptionPageClient(props: {myKey: string}) {
     const [message, setMessage] = useState("");
     const [encryptedText, setEncryptedText] = useState("");
     const [outdated, setOutdated] = useState(false);
+    const [keyText, setKeytext] = useState("");
 
-    const [keys, setKeys] = useState<KeyData[]>([
-        {
-            key: props.myKey,
-            name: "Wolfyxon"
-        }
-    ]);
+    const [keys, setKeys] = useState<KeyData[]>([]);
+
+    useEffect(() => {
+        openpgp.readKey({armoredKey: props.myKey}).then((key) => {
+            addKey(key, "Wolfyxon");
+        });
+    }, []);
 
     async function encrypt() {
         let keyText = "";
 
         for(const k of keys) {
-            keyText += k.key;
+            keyText += k.data.armor();
         }
 
         const key = await openpgp.readKey({ armoredKey: keyText });
@@ -51,6 +60,24 @@ export default function EncryptionPageClient(props: {myKey: string}) {
 
     function copyToClipboard() {
         navigator.clipboard.writeText(encryptedText);
+    }
+
+    function addKey(key: openpgp.Key, comment?: string) {
+        setKeys((old) => {
+            return [...old, {
+                data: key,
+                comment: comment
+            }]
+        });
+    }
+
+    async function addKeyText(keyText: string, comment?: string) {
+        const data = await openpgp.readKey({armoredKey: keyText});
+        addKey(data, comment);
+    }
+
+    async function addKeyFromInput() {
+        addKeyText(keyText);
     }
 
     return (<>
@@ -104,11 +131,28 @@ export default function EncryptionPageClient(props: {myKey: string}) {
             </div>
             <div id="side-settings">
                 <h2>Settings</h2>
-                <label>Keys</label>
+                <div>
+                    <label>Public keys</label>
 
-                {
-                    keys.map((r, i) => <Key data={r} key={`rec-${i}`} /> )
-                }
+                    {
+                        keys.map((r, i) => <Key keyData={r} key={`rec-${i}`} /> )
+                    }
+                </div>
+
+                <div id="add-key-container">
+                    <label htmlFor="area-add-key">Add new key</label>
+                    <textarea 
+                        id="area-add-key" 
+                        placeholder="Enter a public key block..."
+                        className="key-area"
+                        onChange={(e) => setKeytext(e.target.value)}
+                    />
+                    <ImageButton
+                        img="/assets/img/icons/google/plus.svg"
+                        label="Add public key"
+                        onClick={addKeyFromInput}
+                    />
+                </div>
             </div>
         </div>
     </>);
