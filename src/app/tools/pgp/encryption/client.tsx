@@ -10,7 +10,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                 <h2>Encryption</h2>
                 
                 <label htmlFor="area-text">Your message</label>
-                <textarea id="area-message"></textarea>
+                <textarea id="area-message" placeholder="Type your message to encrypt..."></textarea>
 
                 <ImageButton img="/assets/img/icons/google/check.svg" label="Encrypt" />
             </div>
