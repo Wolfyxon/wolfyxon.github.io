@@ -1,8 +1,32 @@
-"use client";
+ "use client";
 
+import Accordion from "@/components/input/Accordion/Accordion";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
+import { useState } from "react";
+
+type ReceipentData = {
+    key: string,
+    name?: string
+}
+
+function Receipent(props: {data: ReceipentData}) {
+    return (
+        <Accordion title={props.data.name ?? "..."}>
+            <textarea placeholder="Enter a puiblic key block...">
+                {props.data.key}
+            </textarea>
+        </Accordion>
+    )
+}
 
 export default function EncryptionPageClient(props: {myKey: string}) {
+    const [receipents, setReceipents] = useState<ReceipentData[]>([
+        {
+            key: props.myKey,
+            name: "Wolfyxon"
+        }
+    ]);
+
     return (<>
         <h1>Encrypt a message using OpenPGP</h1>
         <div id="sides">
@@ -16,6 +40,10 @@ export default function EncryptionPageClient(props: {myKey: string}) {
             </div>
             <div id="side-receipents">
                 <h2>Receipents</h2>
+
+                {
+                    receipents.map((r, i) => <Receipent data={r} key={`rec-${i}`} /> )
+                }
             </div>
         </div>
     </>);
