@@ -27,6 +27,7 @@ export default function ImageButton(props: {
                 {props.reverse ? null : image}
                 <span className="img-button-label">{props.label}</span>
                 {props.reverse ? image : null}
+                <div></div>
             </div>
         </button>
     );
