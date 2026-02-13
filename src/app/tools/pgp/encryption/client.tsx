@@ -79,11 +79,13 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                         img="/assets/img/icons/google/check.svg" 
                         label="Encrypt"
                         onClick={encrypt}
+                        disabled={receipents.length == 0 || message.length == 0}
                     />
                     <ImageButton 
                         img="/assets/img/icons/google/copy.svg" 
                         label="Copy"
                         onClick={copyToClipboard}
+                        disabled={encryptedText.length == 0}
                     />
                 </div>
 
