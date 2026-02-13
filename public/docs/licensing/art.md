@@ -17,6 +17,7 @@ Here you can learn all the conditions of sharing and using my drawings.
 - **Commercial use**: Selling, using it in paid content
 - **Using it to train AI**
 - **Pretending to be the author**
+- **Modifying the drawings** (except insignificant cropping and stretching, as long as the signature remains visible and readable)
 - **Removing or changing my signature**
 
 ## Permission
