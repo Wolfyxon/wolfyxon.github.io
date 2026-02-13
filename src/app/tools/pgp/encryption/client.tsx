@@ -5,12 +5,12 @@ import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { useState } from "react";
 import * as openpgp from "openpgp";
 
-type ReceipentData = {
+type KeyData = {
     key: string,
     name?: string
 }
 
-function Receipent(props: {data: ReceipentData}) {
+function Key(props: {data: KeyData}) {
     return (
         <Accordion title={props.data.name ?? "..."}>
             <textarea placeholder="Enter a puiblic key block..." defaultValue={props.data.key} />
@@ -23,7 +23,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
     const [encryptedText, setEncryptedText] = useState("");
     const [outdated, setOutdated] = useState(false);
 
-    const [receipents, setReceipents] = useState<ReceipentData[]>([
+    const [keys, setKeys] = useState<KeyData[]>([
         {
             key: props.myKey,
             name: "Wolfyxon"
@@ -33,8 +33,8 @@ export default function EncryptionPageClient(props: {myKey: string}) {
     async function encrypt() {
         let keyText = "";
 
-        for(const rec of receipents) {
-            keyText += rec.key;
+        for(const k of keys) {
+            keyText += k.key;
         }
 
         const key = await openpgp.readKey({ armoredKey: keyText });
@@ -91,7 +91,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                         img="/assets/img/icons/google/check.svg" 
                         label="Encrypt"
                         onClick={encrypt}
-                        disabled={receipents.length == 0 || message.length == 0}
+                        disabled={keys.length == 0 || message.length == 0}
                     />
                     <ImageButton 
                         img="/assets/img/icons/google/copy.svg" 
@@ -102,12 +102,12 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                 </div>
 
             </div>
-            <div id="side-receipents">
+            <div id="side-settings">
                 <h2>Settings</h2>
-                <label>Receipents</label>
+                <label>Keys</label>
 
                 {
-                    receipents.map((r, i) => <Receipent data={r} key={`rec-${i}`} /> )
+                    keys.map((r, i) => <Key data={r} key={`rec-${i}`} /> )
                 }
             </div>
         </div>
