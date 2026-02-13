@@ -26,7 +26,7 @@ export default function SlideShowPage() {
                 <li>Use 'previous' and 'next' buttons to swap between slides</li>
             </ol>
             <p>
-                Also see <a href="/player" target="_blank">Player</a> to control music and slides at the same time.
+                Also see <a href="/tools/player" target="_blank">Player</a> to control music and slides at the same time.
             </p>
         </Page>
     );

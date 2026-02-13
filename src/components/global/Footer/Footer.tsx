@@ -13,8 +13,8 @@ export default function Footer() {
                 </Column>
 
                 <Column title="Utilities">
-                    <a href="/player">Player</a>
-                    <a href="/slideshow">Slideshow</a>
+                    <a href="/tools/player">Player</a>
+                    <a href="/tools/slideshow">Slideshow</a>
                 </Column>
 
                 <Column title="Other">
