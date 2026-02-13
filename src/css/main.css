@@ -117,6 +117,11 @@ textarea:focus {
     border-color: var(--color5);
 }
 
+textarea:disabled {
+    border-color: var(--panel);
+    opacity: 0.9;
+}
+
 /* --== Select dropdowns ==-- */
 
 select {
