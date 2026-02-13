@@ -12,9 +12,7 @@ type ReceipentData = {
 function Receipent(props: {data: ReceipentData}) {
     return (
         <Accordion title={props.data.name ?? "..."}>
-            <textarea placeholder="Enter a puiblic key block...">
-                {props.data.key}
-            </textarea>
+            <textarea placeholder="Enter a puiblic key block..." defaultValue={props.data.key} />
         </Accordion>
     )
 }
