@@ -21,6 +21,7 @@ function Receipent(props: {data: ReceipentData}) {
 export default function EncryptionPageClient(props: {myKey: string}) {
     const [message, setMessage] = useState("");
     const [encryptedText, setEncryptedText] = useState("");
+    const [outdated, setOutdated] = useState(false);
 
     const [receipents, setReceipents] = useState<ReceipentData[]>([
         {
@@ -44,6 +45,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
             encryptionKeys: key
         });
 
+        setOutdated(false);
         setEncryptedText(encrypted);
     }
 
@@ -62,10 +64,21 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                     id="area-message" 
                     placeholder="Type your message to encrypt..."
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={(e) => {
+                        setMessage(e.target.value);
+                        setOutdated(true);
+                    }}
                 />
 
-                <label htmlFor="area-encrypted">Encrypted message</label>
+                
+                <div>
+                    <label htmlFor="area-encrypted">Encrypted message</label>
+                    {
+                        outdated ?
+                        <label style={{color: "var(--color2)"}}> (outdated!)</label>
+                        : null
+                    }
+                </div>
                 <textarea 
                     id="area-encrypted" 
                     placeholder="No data yet..."
@@ -73,7 +86,6 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                     disabled
                 />
                 
-
                 <div id="buttons">
                     <ImageButton 
                         img="/assets/img/icons/google/check.svg" 
