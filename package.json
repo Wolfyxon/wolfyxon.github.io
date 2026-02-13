@@ -15,17 +15,18 @@
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.7.3",
     "next": "16.1.6",
+    "openpgp": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "tsx": "^4.20.6",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }
