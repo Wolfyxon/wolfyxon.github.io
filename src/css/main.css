@@ -106,9 +106,8 @@ textarea {
     padding: 5px;
     border: 2px solid var(--color1);
     border-radius: 2px;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 98.5%;
+    min-width: 98.5%;
     transition: 0.1s;
 }
 
