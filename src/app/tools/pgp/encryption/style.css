@@ -20,6 +20,9 @@
     flex: 1;
 }
 
+#area-encrypted {
+    height: 200px;
+} 
 
 .accordion.open .accordion-content {
     max-height: 350px;
