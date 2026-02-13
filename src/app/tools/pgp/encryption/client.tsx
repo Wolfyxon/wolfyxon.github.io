@@ -16,6 +16,9 @@ function Key(props: {keyData: KeyData}) {
 
     return (
         <Accordion title={name}>
+            <div className="faded">
+                The text may be different from your input, but the key should be the same.
+            </div>
             <textarea 
                 placeholder="Enter a puiblic key block..." 
                 defaultValue={props.keyData.data.armor()}

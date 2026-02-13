@@ -42,9 +42,10 @@
 .key-area {
     height: 200px;
     max-height: 200px;
+    resize: none;
 }
 
-.accordion textarea {
-    height: 350px;
-    resize: none;
+.accordion.open .accordion-content {
+    max-height: 500px;
+    
 }
