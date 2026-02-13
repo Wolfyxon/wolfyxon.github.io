@@ -47,6 +47,10 @@ export default function EncryptionPageClient(props: {myKey: string}) {
         setEncryptedText(encrypted);
     }
 
+    function copyToClipboard() {
+        navigator.clipboard.writeText(encryptedText);
+    }
+
     return (<>
         <h1>Encrypt a message using OpenPGP</h1>
         <div id="sides">
@@ -70,11 +74,19 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                 />
                 
 
-                <ImageButton 
-                    img="/assets/img/icons/google/check.svg" 
-                    label="Encrypt"
-                    onClick={encrypt} 
-                />
+                <div id="buttons">
+                    <ImageButton 
+                        img="/assets/img/icons/google/check.svg" 
+                        label="Encrypt"
+                        onClick={encrypt}
+                    />
+                    <ImageButton 
+                        img="/assets/img/icons/google/copy.svg" 
+                        label="Copy"
+                        onClick={copyToClipboard}
+                    />
+                </div>
+
             </div>
             <div id="side-receipents">
                 <h2>Settings</h2>

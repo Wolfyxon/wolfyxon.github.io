@@ -24,6 +24,15 @@
     height: 200px;
 } 
 
+#buttons {
+    display: flex;
+    gap: 5px;
+}
+
+#buttons > * {
+    flex: 1;
+}
+
 .accordion.open .accordion-content {
     max-height: 350px;
 }
