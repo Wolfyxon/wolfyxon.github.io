@@ -18,7 +18,7 @@ export default function ContactPage() {
                 <h1>Privacy & verification</h1>
                 <p>
                     If you'd like to encrypt your message, please consider encrypting it with
-                    my <a href="/resources/gpg/wolfyxon.txt">public key</a>. <br/>
+                    my <a href="/resources/publicKeys/wolfyxon.txt">public key</a>. <br/>
                     You may also use GPG/PGP to sign your message and prove your identity (if I have your public key already).
                 </p>
                 <p>

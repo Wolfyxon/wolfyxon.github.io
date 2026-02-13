@@ -29,7 +29,7 @@ https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
 
 # Importing
-[Download text version](/resources/gpg/wolfyxon.txt) | [Download binary version (.gpg)](/resources/gpg/wolfyxon.gpg)
+[Download text version](/resources/publicKeys/wolfyxon.txt) | [Download binary version (.gpg)](/resources/publicKeys/wolfyxon.gpg)
 
 
 My key as text:
@@ -63,7 +63,7 @@ gpg --import
 
 ### From URL
 ```
-curl https://wolfyxon.github.io/resources/gpg/wolfyxon.gpg | gpg --import -
+curl https://wolfyxon.github.io/resources/publicKeys/wolfyxon.gpg | gpg --import -
 ```
 
 **NOTE:** Not all Windows versions have `curl` installed by default, so you may want to use an other method or install it first.
