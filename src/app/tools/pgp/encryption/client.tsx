@@ -3,6 +3,7 @@
 import Accordion from "@/components/input/Accordion/Accordion";
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import { useState } from "react";
+import * as openpgp from "openpgp";
 
 type ReceipentData = {
     key: string,
@@ -18,12 +19,33 @@ function Receipent(props: {data: ReceipentData}) {
 }
 
 export default function EncryptionPageClient(props: {myKey: string}) {
+    const [message, setMessage] = useState("");
+    const [encryptedText, setEncryptedText] = useState("");
+
     const [receipents, setReceipents] = useState<ReceipentData[]>([
         {
             key: props.myKey,
             name: "Wolfyxon"
         }
     ]);
+
+    async function encrypt() {
+        let keyText = "";
+
+        for(const rec of receipents) {
+            keyText += rec.key;
+        }
+
+        const key = await openpgp.readKey({ armoredKey: keyText });
+        const msg = await openpgp.createMessage({ text: message });
+
+        const encrypted = await openpgp.encrypt({
+            message: msg,
+            encryptionKeys: key
+        });
+
+        setEncryptedText(encrypted);
+    }
 
     return (<>
         <h1>Encrypt a message using OpenPGP</h1>
@@ -32,14 +54,32 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                 <h2>Encryption</h2>
                 
                 <label htmlFor="area-text">Your message</label>
-                <textarea id="area-message" placeholder="Type your message to encrypt..."></textarea>
+                <textarea 
+                    id="area-message" 
+                    placeholder="Type your message to encrypt..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
 
-                <ImageButton img="/assets/img/icons/google/check.svg" label="Encrypt" />
+                <label htmlFor="area-encrypted">Encrypted message</label>
+                <textarea 
+                    id="area-encrypted" 
+                    placeholder="No data yet..."
+                    value={encryptedText}
+                    disabled
+                />
+                
+
+                <ImageButton 
+                    img="/assets/img/icons/google/check.svg" 
+                    label="Encrypt"
+                    onClick={encrypt} 
+                />
             </div>
             <div id="side-receipents">
                 <h2>Settings</h2>
                 <label>Receipents</label>
-                
+
                 {
                     receipents.map((r, i) => <Receipent data={r} key={`rec-${i}`} /> )
                 }
