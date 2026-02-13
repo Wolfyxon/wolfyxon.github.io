@@ -14,6 +14,7 @@ export type AccordionButton = {
 export default function Accordion(props: {
     title: string, 
     open?: boolean, 
+    overflow?: boolean,
     buttons?: AccordionButton[],
     children: ReactNode
 } & ElmBase) {
@@ -47,8 +48,10 @@ export default function Accordion(props: {
                     }
                 </div>
             </div>
-            <div className="accordion-content">
-                {props.children}
+            <div className="accordion-content-container">
+                <div className={`accordion-content ${props.overflow ? "overflowing" : ""}`}>
+                    {props.children}
+                </div>
             </div>
         </div>
     );

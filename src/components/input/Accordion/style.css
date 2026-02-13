@@ -1,19 +1,27 @@
 
 .accordion {
-    background-color: var(--color6);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .accordion-content {
     transition: 0.1s;
     max-height: 0px;
     padding: 0 20px;
+    background-color: var(--color6);
+    border: 1px solid var(--color5);
     border-bottom: 0px solid var(--color2);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
     opacity: 0;
+    z-index: 1;
+}
+
+.accordion .accordion-content.overflowing {
+    position: absolute;
+    box-shadow: 0 0 30px rgb(27, 27, 27);
 }
 
 .accordion-button {
@@ -27,6 +35,7 @@
     transition: opacity 0.1s, background 0.1s;
     cursor: pointer;
     font-weight: bold;
+    z-index: 2;
 }
 
 .accordion-button label {
