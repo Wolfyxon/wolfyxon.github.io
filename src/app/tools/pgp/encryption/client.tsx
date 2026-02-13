@@ -34,6 +34,7 @@ export default function EncryptionPageClient(props: {myKey: string}) {
     const [encryptedText, setEncryptedText] = useState("");
     const [outdated, setOutdated] = useState(false);
     const [keyText, setKeytext] = useState("");
+    const [keyAddError, setKeyAddError] = useState("");
 
     const [keys, setKeys] = useState<KeyData[]>([]);
 
@@ -75,9 +76,30 @@ export default function EncryptionPageClient(props: {myKey: string}) {
         });
     }
 
+    function keyExists(fingerprint: string): boolean {
+        for(const key of keys) {
+            if(key.data.getFingerprint() == fingerprint) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     async function addKeyText(keyText: string, comment?: string) {
-        const data = await openpgp.readKey({armoredKey: keyText});
-        addKey(data, comment);
+        try {
+            const data = await openpgp.readKey({armoredKey: keyText});
+
+            if(keyExists(data.getFingerprint())) {
+                setKeyAddError("This key is already added");
+                return;
+            }
+
+            addKey(data, comment);
+            setKeyAddError("");
+        } catch(e) {
+            setKeyAddError(`Invalid key: ${e}`);
+        }
     }
 
     async function addKeyFromInput() {
@@ -145,6 +167,8 @@ export default function EncryptionPageClient(props: {myKey: string}) {
 
                 <div id="add-key-container">
                     <label htmlFor="area-add-key">Add new key</label>
+                    <div style={{color: "var(--color2)"}}>{keyAddError}</div>
+                    
                     <textarea 
                         id="area-add-key" 
                         placeholder="Enter a public key block..."
