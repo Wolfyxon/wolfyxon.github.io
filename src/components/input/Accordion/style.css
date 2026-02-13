@@ -17,8 +17,10 @@
 }
 
 .accordion-button {
+    height: 3em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .accordion.open .accordion-button {
@@ -31,4 +33,16 @@
     overflow-y: scroll;
     border-bottom-width: 2px;
     opacity: 1;
+}
+
+.accordion-buttons button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.accordion-buttons button img {
+    height: 100%;
 }
