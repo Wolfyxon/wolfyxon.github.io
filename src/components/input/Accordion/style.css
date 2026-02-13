@@ -21,10 +21,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--color1);
+    border: 2px solid var(--color5);
+    padding: 0 5px;
+    transition: opacity 0.1s, background 0.1s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-button label {
+    cursor: pointer;
+}
+
+.accordion-button:hover {
+    opacity: 0.8;
 }
 
 .accordion.open .accordion-button {
-    border-bottom-width: 1px;
+    background: var(--color5);
+    border-color: var(--color2);
+    border-bottom-width: 0px;   
 }
 
 .accordion.open .accordion-content {

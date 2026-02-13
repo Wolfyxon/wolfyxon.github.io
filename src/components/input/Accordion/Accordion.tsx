@@ -25,21 +25,21 @@ export default function Accordion(props: {
 
     return (
         <div className={classJoin(`accordion ${open ? "open" : ""}`, props.className)} id={props.id}>
-            <button onClick={click} className="accordion-button">
+            <div onClick={click} className="accordion-button">
                 <div></div>
                 <label>{props.title}</label>
                 <div className="accordion-buttons">
                     {
                         props.buttons ?
-                            props.buttons.map(btn =>
-                                <button title={btn.name} onClick={btn.onClick}>
+                            props.buttons.map((btn, i) =>
+                                <button title={btn.name} onClick={btn.onClick} key={"btn-" + i}>
                                     <img src={btn.icon}/>
                                 </button>
                             )
                         : null
                     }
                 </div>
-            </button>
+            </div>
             <div className="accordion-content">
                 {props.children}
             </div>
