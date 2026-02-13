@@ -100,6 +100,23 @@ input[type="text"]:focus {
     outline: none;
 }
 
+textarea {
+    background: var(--panel-dark);
+    color: white;
+    padding: 5px;
+    border: 2px solid var(--color1);
+    border-radius: 2px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    transition: 0.1s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--color5);
+}
+
 /* --== Select dropdowns ==-- */
 
 select {
