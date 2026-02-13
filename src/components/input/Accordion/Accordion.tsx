@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { KeyboardEvent, ReactNode, useRef, useState } from "react";
 
 import "./style.css";
 import { ElmBase, classJoin } from "@/util/dom";
@@ -18,14 +18,21 @@ export default function Accordion(props: {
     children: ReactNode
 } & ElmBase) {
     const [open, setOpen] = useState(props.open ?? false);
-
+    
     function click() {
         setOpen(!open);
     }
 
+    function keydown(e: KeyboardEvent) {
+        if((e.key == "Enter" || e.key == " ") && document.activeElement == e.target) {
+            e.preventDefault();
+            setOpen(!open);
+        }
+    }
+
     return (
         <div className={classJoin(`accordion ${open ? "open" : ""}`, props.className)} id={props.id}>
-            <div onClick={click} className="accordion-button">
+            <div onClick={click} className="accordion-button" tabIndex={0} onKeyDown={keydown}>
                 <div></div>
                 <label>{props.title}</label>
                 <div className="accordion-buttons">
