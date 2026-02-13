@@ -109,6 +109,7 @@ textarea {
     max-width: 98.5%;
     min-width: 98.5%;
     transition: 0.1s;
+    resize: vertical;
 }
 
 textarea:focus {

@@ -19,3 +19,13 @@
 #side-receipents {
     flex: 1;
 }
+
+
+.accordion.open .accordion-content {
+    max-height: 350px;
+}
+
+.accordion textarea {
+    height: 350px;
+    resize: none;
+}
