@@ -23,6 +23,7 @@ function Key(props: {keyData: KeyData}) {
                 placeholder="Enter a puiblic key block..." 
                 defaultValue={props.keyData.data.armor()}
                 className="key-area"
+                disabled
             />
         </Accordion>
     )
