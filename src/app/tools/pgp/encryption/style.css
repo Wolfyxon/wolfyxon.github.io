@@ -1,0 +1,21 @@
+#sides {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#sides > * {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#side-message {
+    flex: 2;
+    min-width: 300px;
+}
+
+#side-receipents {
+    flex: 1;
+}
