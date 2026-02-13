@@ -37,8 +37,9 @@ export default function EncryptionPageClient(props: {myKey: string}) {
                 <ImageButton img="/assets/img/icons/google/check.svg" label="Encrypt" />
             </div>
             <div id="side-receipents">
-                <h2>Receipents</h2>
-
+                <h2>Settings</h2>
+                <label>Receipents</label>
+                
                 {
                     receipents.map((r, i) => <Receipent data={r} key={`rec-${i}`} /> )
                 }
