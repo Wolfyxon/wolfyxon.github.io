@@ -170,6 +170,24 @@ export default function PGPPageClient(props: {myKey: string}) {
                         disabled={encryptedText.length == 0}
                     />
                 </div>
+                
+                <p>
+                    <a href="/docs/info/keys">Key documentation</a>
+                    <span> | </span>
+                    <a href="/resources/publicKeys/wolfyxon.txt">Download my public key</a>
+                    <span> </span>
+                    <a href="/resources/publicKeys/wolfyxon.gpg">(binary)</a>
+                    
+                    <br/><br/>
+
+                    <span className="faded">
+                        If you are worried for your privacy, disconnect the internet and stay offline until you close this site.
+                        An internet connection is only required to load the site.
+                        The encryption works locally in your browser.
+                    </span>
+                </p>
+
+                
 
             </div>
             <div id="side-settings">
