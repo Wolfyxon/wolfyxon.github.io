@@ -42,7 +42,7 @@ function Key(props: {
     )
 }
 
-export default function EncryptionPageClient(props: {myKey: string}) {
+export default function PGPPageClient(props: {myKey: string}) {
     const [message, setMessage] = useState("");
     const [encryptedText, setEncryptedText] = useState("");
     const [outdated, setOutdated] = useState(false);
