@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "Encrypt a message using a public key in the PGP format."
 }
 
-const MY_KEY = fs.readFileSync("public/resources/publicKeys/wolfyxon.txt").toString("utf-8");
+const MY_KEY = fs.readFileSync("public/resources/publicKeys/wolfyxon.asc").toString("utf-8");
 
 export default function PGPPage() {
     return (
