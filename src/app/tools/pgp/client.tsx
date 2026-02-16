@@ -108,6 +108,7 @@ export default function PGPPageClient(props: {myKey: string}) {
                 return;
             }
 
+            setKeytext("");
             addKey(data, comment);
             setKeyAddError("");
         } catch(e) {
@@ -208,6 +209,7 @@ export default function PGPPageClient(props: {myKey: string}) {
                         id="area-add-key" 
                         placeholder="Enter a public key block..."
                         className="key-area"
+                        value={keyText}
                         onChange={(e) => setKeytext(e.target.value)}
                     />
                     <ImageButton
