@@ -120,6 +120,8 @@ For example:
 gpg --output encrypted_message.txt.gpg --encrypt --receipent wolfyxon@gmail.com secret_message.txt
 ```
 
+You can also use [the encryption page](/tools/pgp) on this site.
+
 ## Decrypting
 To decrypt a message using your private key simply run:
 ```
