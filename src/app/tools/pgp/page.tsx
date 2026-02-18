@@ -1,10 +1,10 @@
-import Page from "@/layouts/Page";
+import { Metadata } from "next";
 import * as fs from "node:fs";
+import Page from "@/layouts/Page";
 import PGPPageClient from "./client";
 
 import "./style.css";
 import "@/css/pageInset.css";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "PGP encryption",
