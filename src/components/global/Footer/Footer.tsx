@@ -15,9 +15,10 @@ export default function Footer() {
                 <Column title="Utilities">
                     <a href="/tools/player">Player</a>
                     <a href="/tools/slideshow">Slideshow</a>
+                    <a href="/tools/pgp">PGP</a>
                 </Column>
 
-                <Column title="Other">
+                <Column title="Funny">
                     <a href="/ose">OSE</a>
                     <a href="/archive/lighter/tgdod">Lighter</a>
                 </Column>
