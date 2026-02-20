@@ -44,6 +44,10 @@ export default function Home() {
                       I'm a guy who loves programming and dealing with all kinds of software.
                   </p>
 
+                  <div id="banner-links">
+                    <a href="/about">About</a> | <a href="/about">Docs</a>
+                  </div>
+
                   <div id="socials">
                       <SocialBadge site={websites.github} link="Wolfyxon" />
                       <SocialBadge site={websites.youtube} link="@Wolfyxon" />

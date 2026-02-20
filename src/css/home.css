@@ -36,6 +36,14 @@
 
 #banner-text-about {
     max-width: 800px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#banner-links {
+    opacity: 0.8;
+    font-size: 60%;
+    padding: 10px 0;
 }
 
 #banner-logo {
