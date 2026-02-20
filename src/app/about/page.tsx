@@ -46,9 +46,9 @@ export default function About() {
                         I value peace and silence and often like to disconnect from 
                         the world and hyperfocus on something like coding.
                         
-                        <noindex style={{color: "rgba(0, 0, 0, 0)"}}>
+                        <span style={{color: "rgba(0, 0, 0, 0)"}} data-nosnippet>
                             I'm also autistic btw :3
-                        </noindex>
+                        </span>
                     </p>
                 </section>
 
