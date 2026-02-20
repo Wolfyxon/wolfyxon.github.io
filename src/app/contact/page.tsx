@@ -7,7 +7,7 @@ import Page from "@/layouts/Page";
 
 export default function ContactPage() {
     return (
-        <Page category="contact">
+        <Page category="Contact">
             <ArticlePage title="Contact">
                 <h1>Ways to contact me</h1>
                 <ul>
