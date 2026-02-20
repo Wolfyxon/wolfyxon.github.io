@@ -38,7 +38,7 @@ export default function ArticleNav(data: {title?: string}) {
         
         let current = rootList;
         let currentDepth = 1;
-        const maxDepth = 1; // Do not remove the nesting logic, I may remove this limit in future
+        const maxDepth = 2;
 
         for(let i = 0; i < headings.length; i++) {
             const h = headings[i];
