@@ -28,8 +28,11 @@ export default function About() {
                     <p>
                         I'm also a beginner musician. 
                         I compose digital music and sometimes play on a piano. 
+
+                        <noindex style={{color: "rgba(0, 0, 0, 0)"}}>
+                            I'm also autistic btw :3
+                        </noindex>
                         
-                        <span style={{color: "rgba(0, 0, 0, 0)"}}> I'm also autistic btw :3</span>
                     </p>
                 </section>
 
