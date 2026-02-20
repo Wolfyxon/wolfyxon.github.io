@@ -64,7 +64,7 @@
 .article-nav ul {
     list-style: none;
     padding-left: 0;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 @media all and (orientation: portrait) {
