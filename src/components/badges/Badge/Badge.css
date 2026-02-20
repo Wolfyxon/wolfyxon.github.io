@@ -3,9 +3,9 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-    padding: 1%;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 12px;
     border-radius: 20%;
     background-color: var(--panel);
     transition: 0.2s;
