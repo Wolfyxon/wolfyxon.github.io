@@ -1,4 +1,4 @@
-export default function Person(data: {name: string, thumbnail: string, description: string, website?: string, children: any}) {
+export default function Person(data: {name: string, thumbnail: string, description: string, website?: string, children?: any}) {
     return (
         <div className="observing anim-obs-grow">
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
@@ -7,9 +7,13 @@ export default function Person(data: {name: string, thumbnail: string, descripti
                 <h2 translate="no">{data.name}</h2>
                 <p>{data.description}</p>
 
-                <div className="person-links">
-                    {data.children}
-                </div>
+                {
+                    data.children ?
+                    <div className="person-links">
+                        {data.children}
+                    </div>
+                    : null
+                }
 
                 {
                     data.website ?
