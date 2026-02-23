@@ -56,7 +56,7 @@ export default async function DocsHomePage() {
                     }
                 </div>
                 
-                <h2>External docs</h2>
+                <h2 id="external">External docs</h2>
                 <ul>
                     <li><a href="https://github.com/Wolfyxon/lover/wiki">Lover documentation</a></li>
                     <li><a href="https://github.com/Wolfyxon/GodotTogether/wiki">GodotTogether documentation</a></li>
