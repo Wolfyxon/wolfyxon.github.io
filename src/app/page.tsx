@@ -45,7 +45,7 @@ export default function Home() {
                   </p>
 
                   <div id="banner-links">
-                    <a href="/about">About</a> | <a href="/about">Docs</a>
+                    <a href="/about">About</a> | <a href="/docs">Docs</a>
                   </div>
 
                   <div id="socials">
