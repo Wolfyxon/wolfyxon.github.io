@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             page: "about",
-            priority: 0.8,
+            priority: 0.4,
         },
         {
             page: "terminal",
@@ -29,15 +29,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             page: "art",
-            priority: 0.9
+            priority: 0.8
         },
         {
-            page: "player",
+            page: "tools/player",
             priority: 0.5
         },
         {
-            page: "slideshow",
+            page: "tools/slideshow",
             priority: 0.4
+        },
+        {
+            page: "tools/encryption",
+            priority: 0.5
         },
         {
             page: "ose",
