@@ -228,27 +228,3 @@
     }
     
 }
-
-/*---=== Trait widgets ===---*/
-
-#trait-widgets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#trait-widgets > * {
-    flex: 1;
-}
-
-#widget-working .trait-widget-icon {
-    animation: infinite spin 3s linear;
-}
-
-#widget-learning .trait-widget-icon {
-    animation: infinite nod 1s;
-}
-
-#widget-want-to .trait-widget-icon {
-    animation: infinite jump 1s;
-}
