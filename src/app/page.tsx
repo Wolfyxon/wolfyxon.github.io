@@ -4,7 +4,7 @@ import SocialBadge, { websites } from "../components/badges/SocialBadge";
 import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Experience from "@/components/home/Experience";
-import Collaborator from "../components/home/Collaborator";
+import Person from "../components/home/Person";
 import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
@@ -72,11 +72,11 @@ export default function Home() {
       <FancyHeading>Experience</FancyHeading>
       <Experience />
       
-      <div id="collaborators">
-          <FancyHeading>People I collaborate with</FancyHeading>
+      <div id="people">
+          <FancyHeading>Featured people</FancyHeading>
 
-          <div id="collaborators-list">
-              <Collaborator 
+          <div id="people-list">
+              <Person 
                 name="KaroleusPL" 
                 description="Experienced artist, musician and beginner game developer. Also my best friend."
                 thumbnail="/assets/img/people/karoleus_pl.webp"
@@ -88,7 +88,7 @@ export default function Home() {
                 <SocialBadge site={websites.soundcloud} link="karoleus-PL" />
                 <SocialBadge site={websites.github} link="karoleuspl" />
                 <SocialBadge site={websites.deviantart} link="karoleusyt" />
-              </Collaborator>
+              </Person>
           </div>
       </div>
       

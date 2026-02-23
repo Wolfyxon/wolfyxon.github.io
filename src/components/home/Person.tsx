@@ -1,4 +1,4 @@
-export default function Collaborator(data: {name: string, thumbnail: string, description: string, website?: string, children: any}) {
+export default function Person(data: {name: string, thumbnail: string, description: string, website?: string, children: any}) {
     return (
         <div className="observing anim-obs-grow">
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
@@ -7,13 +7,13 @@ export default function Collaborator(data: {name: string, thumbnail: string, des
                 <h2 translate="no">{data.name}</h2>
                 <p>{data.description}</p>
 
-                <div className="collaborator-links">
+                <div className="person-links">
                     {data.children}
                 </div>
 
                 {
                     data.website ?
-                        <a href={data.website} className="collaborator-website">{data.website}</a>
+                        <a href={data.website} className="person-website">{data.website}</a>
                     : null
                 }
             </div>
