@@ -49,6 +49,7 @@ header > * {
     display: inline-block;
     padding: 2px 10px;
     transform: skew(-20deg);
+    margin-right: 1px;
 }
 
 #header-page-steps > * > * {
