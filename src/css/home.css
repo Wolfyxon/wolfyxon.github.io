@@ -137,10 +137,18 @@
 
 /* --== People ==-- */
 
+#people-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 #people-list > * {
+    flex: 1;
     border-radius: 10px;
     background-color: var(--panel-dark);
-    height: fit-content;
+    min-width: 200px;
+    height: 100px fit-content;
     padding: 1%;
 }
 
