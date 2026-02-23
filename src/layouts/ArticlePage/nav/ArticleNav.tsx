@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 
 import "./style.css";
+import { toKebabCase } from "@/util/string";
 
 export default function ArticleNav(data: {title?: string}) {
     const mainRef = useRef(null);
@@ -11,7 +12,7 @@ export default function ArticleNav(data: {title?: string}) {
     useEffect(() => {
         const nav = navRef.current! as HTMLElement;
 
-        const headings = document.querySelectorAll(".article-page article *:is(h1, h2, h3, h4, h5, h6)");
+        const headings = document.querySelectorAll(".article-page article *:is(h1, h2, h3, h4, h5, h6)") as NodeListOf<HTMLHeadingElement>;
         const links: HTMLAnchorElement[] = [];
 
         const observer = new IntersectionObserver((entires) => {
@@ -66,7 +67,15 @@ export default function ArticleNav(data: {title?: string}) {
                 currentDepth = depth;
             }
 
+            if(!h.id) {
+                const tempId = toKebabCase(h.innerText);
+                console.warn(`Heading '${h.innerText}' has no ID. Assigning '${tempId}'`);
+            
+                h.id = tempId;
+            }
+
             const link = document.createElement("a");
+            
             link.setAttribute("data-heading", i.toString());
             link.href = "#" + h.id;
             link.innerText = h.textContent ?? h.innerHTML;
