@@ -21,23 +21,24 @@
 }
 
 .project-text p {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .project-text a {
     display: inline-block;
-    outline: white 1px solid;
+    outline: var(--panel) 2px solid;
+    border-radius: 5px;
     text-decoration: none;
-    margin-right: 10px;
-    padding: 20px;
-    background: black;
+    margin-right: 5px;
+    padding: 15px;
+    background: var(--panel-very-dark);
     transition: 0.2s;
 }
 
 .project-text a:hover {
-    color: black;
-    background: white;
-    transition: 0.2s;
+    color: white;
+    background: var(--panel);
+    transition: all 0.1s !important;
 }
 
 .project-text a::after {
@@ -57,6 +58,7 @@
     .project {
         height: fit-content;
         border-left: none;
+        align-items: center;
         flex-direction: column-reverse;
     }
 
@@ -70,10 +72,8 @@
     }
 
     .project-img {
-        margin-top: 10vw;
         position: inherit;
         width: 100%;
         max-width: 100%;
-        height: auto;
     }
 }
