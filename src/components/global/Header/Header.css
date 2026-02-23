@@ -41,19 +41,29 @@ header > * {
     transition: 0.1s;
 }
 
-#header-page-title {
-    display: inline-block;
-    background-color: var(--color2);
-    padding: 2px 10px;
+#header-page-steps {
     margin-left: 10px;
+}
+
+#header-page-steps > * {
+    display: inline-block;
+    padding: 2px 10px;
     transform: skew(-20deg);
 }
 
-#header-page-title > * {
+#header-page-steps > * > * {
     padding: 2px;
     font-size: 130%;
     display: inline-block;
     transform: skew(20deg);
+}
+
+#header-page-title {
+    background: var(--color2);
+}
+
+#header-page-sub {
+    background-color: var(--color5);
 }
 
 #header-link-terminal {

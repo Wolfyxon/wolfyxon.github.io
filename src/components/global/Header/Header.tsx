@@ -1,7 +1,7 @@
 import "./Header.css"
 
-export default function Header(props: {title?: string, home?: string}) {
-    return (    
+export default function Header(props: {title?: string, home?: string, sub?: string}) {
+    return (
         <header>
             <div id="header-title">
                 <div>
@@ -9,13 +9,22 @@ export default function Header(props: {title?: string, home?: string}) {
                         Wolfyxon
                     </a>
                     
-                    {
-                        props.title && props.title != "" ? 
-                            <a id="header-page-title" href={props.home ?? "/"}>
-                                <span>{props.title}</span>
-                            </a> 
-                        : null
-                    }
+                    <span id="header-page-steps">
+                        {
+                            props.title && props.title != "" ? 
+                                <a id="header-page-title" href={props.home ?? "/"}>
+                                    <span>{props.title}</span>
+                                </a> 
+                            : null
+                        }
+                        {
+                            props.sub ?
+                                <span id="header-page-sub">
+                                    <span>{props.sub}</span>
+                                </span>
+                            : null
+                        }
+                    </span>
                 </div>
             </div>
             <nav>
