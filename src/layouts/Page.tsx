@@ -8,14 +8,20 @@ import Root from "./Root";
 import "@/css/fonts/roboto.css";
 import "@/css/main.css";
 
-export default function Page(props: { children: any, category: string, homeUrl?: string, head?: ReactNode }) {
+export default function Page(props: { 
+    children: any, 
+    category: string, 
+    homeUrl?: string,
+    sub?: string, 
+    head?: ReactNode 
+}) {
     return (
         <Root>
             <head>
                 {props.head}
             </head>
             <body>
-                <Header title={props.category} home={props.homeUrl} />
+                <Header title={props.category} home={props.homeUrl} sub={props.sub} />
 
                 <main id="main" role="main">
                     {props.children}

@@ -42,7 +42,7 @@ export default async function DocPage(props: {params: any}) {
     );
 
     return (
-        <Page category="Docs" homeUrl="/docs">
+        <Page category="Docs" homeUrl="/docs" sub={doc.title}>
             <ArticlePage title={doc.title} headerElement={header} footerElement={footer}>
                 {doc.markdown}
             </ArticlePage>
