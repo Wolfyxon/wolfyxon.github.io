@@ -1,6 +1,6 @@
 ---
-title: Keys and verifying
-description: How to import my public key and use it to verify releases and signed messages
+title: Encryption & signatures
+description: How to use my public key and use it to verify my signatures and send me encrypted messages.
 ---
 
 # Introduction
