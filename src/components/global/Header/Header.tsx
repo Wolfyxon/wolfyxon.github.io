@@ -22,9 +22,6 @@ export default function Header(data: {title?: string, home?: string}) {
             <a href="/" id="header-link-home">
                     <div>Home</div>
                 </a>
-                <a href="/about" id="header-link-about">
-                    <div>About</div>
-                </a>
                 <a href="/docs" id="header-link-docs">
                     <div>Docs</div>
                 </a>
