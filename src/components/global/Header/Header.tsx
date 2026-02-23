@@ -1,6 +1,6 @@
 import "./Header.css"
 
-export default function Header(data: {title?: string, home?: string}) {
+export default function Header(props: {title?: string, home?: string}) {
     return (    
         <header>
             <div id="header-title">
@@ -10,9 +10,9 @@ export default function Header(data: {title?: string, home?: string}) {
                     </a>
                     
                     {
-                        data.title && data.title != "" ? 
-                            <a id="header-page-title" href={data.home ?? "/"}>
-                                <span>{data.title}</span>
+                        props.title && props.title != "" ? 
+                            <a id="header-page-title" href={props.home ?? "/"}>
+                                <span>{props.title}</span>
                             </a> 
                         : null
                     }
