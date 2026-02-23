@@ -30,3 +30,7 @@ export function capitalize(text: string): string {
     split[0] = split[0].toUpperCase();
     return split.join("");
 }
+
+export function toKebabCase(text: string) {
+    return text.trim().toLowerCase().replace(" ", "-");
+}
