@@ -29,7 +29,7 @@ https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
 
 # Importing
-[Download text version](/resources/publicKeys/wolfyxon.asc) | [Download binary version (.gpg)](/resources/publicKeys/wolfyxon.gpg)
+[Download text version](/resources/publicKeys/wolfyxon.txt) | [Download binary version (.gpg)](/resources/publicKeys/wolfyxon.gpg)
 
 
 My key as text:
@@ -85,7 +85,7 @@ Examples:
 gpg --import Downloads/wolfyxon.gpg
 ```
 ```
-gpg --import C:\Users\CoolPerson\Downloads\wolfyxon.asc
+gpg --import C:\Users\CoolPerson\Downloads\wolfyxon.txt
 ```
 
 
