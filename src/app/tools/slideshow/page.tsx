@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function SlideShowPage() {
     return (
-        <Page category="Slideshow">
+        <Page category="Tools" homeUrl="/tools" sub="Slideshow">
             <h1>Slideshow player</h1>
             <SlideShowPageClient />
 

@@ -15,7 +15,7 @@ const MY_KEY = fs.readFileSync("public/resources/publicKeys/wolfyxon.txt").toStr
 
 export default function PGPPage() {
     return (
-        <Page category="Encryption">
+        <Page category="Tools" homeUrl="/tools" sub="PGP">
             <PGPPageClient myKey={MY_KEY} />
         </Page>
     );

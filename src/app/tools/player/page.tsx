@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function PlayerPage() {
     return (
-        <Page category="Player">
+        <Page category="Tools" homeUrl="/tools" sub="Player">
             <h1>Player</h1>
             <p>{metadata.description} Made for my school.</p>
 
