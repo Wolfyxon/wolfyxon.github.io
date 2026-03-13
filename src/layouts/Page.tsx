@@ -19,6 +19,7 @@ export default function Page(props: {
         <Root>
             <head>
                 {props.head}
+                <meta name="darkreader-lock" />
             </head>
             <body>
                 <Header title={props.category} home={props.homeUrl} sub={props.sub} />
