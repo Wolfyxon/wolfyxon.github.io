@@ -85,7 +85,9 @@ button:active:not(:disabled) {
 
 /* --== Text inputs ==-- */
 
-input[type="text"] {
+input[type="text"],
+input[type="number"]
+{
     background: none;
     color: white;
     font-size: 125%;
@@ -95,7 +97,9 @@ input[type="text"] {
     transition: 0.2s;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus
+{
     border-bottom-color: var(--color3);
     outline: none;
 }
