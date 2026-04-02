@@ -1,173 +1,186 @@
 ---
 title: My dream programming language
-description: How would my programming language look like
+description: My dream programming language blueprint and its unique features.
 ---
 
 # Introduction
-Here's how I would design a large programming language.
+I'm pretty sure every programmer wants to make their own language.
+That includes me. 
 
-Not sure how I would name it though.
+I'm a fan of TypeScript, Rust and C so my language will be similar.
 
-# Baiscs
+# Core principles
+- Strong types
+- Low-level access
+- OOP and trait/interface functionality
+
+# Examples
+## Hello World
 ```
-// This is a comment
-/* also a comment */
+import std::io::println;
 
-print("Hello World")
-```
-
-```
-let some_var = true
-
-print(`Value of some_var is {some_var}`)
-
-if some_var {
-    print("Yay")
-} else {
-    print("Not good")
+func main() {
+    println("Hello World!");
 }
 ```
 
-# Loops
+## Users
 ```
-for i in 5 {
-    print(i)
-}
+import std::io::{print, input};
+import std::exit;
 
-for i in 10..0 {
-    print(i)
-}
-```
+struct User {
+    String name;
+    int age;
 
-```
-let start = OS::unix_time()
-
-while OS::unix_time() < start + 10 {
-    print("tick tock")
-    wait(1)
-}
-
-print("Time's up!")
-```
-
-```
-loop {
-    print("AAAAAAAAAAAAA")
-
-    if random<int>(0, 10) == 0 {
-        break
+    pub func new(name: String, age: int) -> Self {
+        return {
+            name: name,
+            age: age
+        };
     }
 }
-```
 
-# Functions
-
-```
-func hi() {
-    print("hello")
-}
-```
-
-```
-func get_greeting(name: String) -> String {
-    return `Hello, {name}`
+func print_help() {
+    println(
+        "1) Add new user",
+        "2) remove user",
+        "3) Exit program"
+    );
 }
 
-func greet(name: String) {
-    print(get_greeting(name))
+func cmd_add_user(users: &Array<User>) {
+    let name = input("Enter name: ");
+    let age_str = input("Enter age: ");
+
+    let parse_result = int::parse(age_str);
+
+    if !parse_result { // Check if the result is successful
+        println(`Invalid age: {age_str}`);
+        return;
+    }
+
+    // Extract value from the result or crash (but it can't crash because the result was checked)
+    let age = parse_result!;
+
+    users.append(User::new(name, age));
+    println("User added");
 }
-```
 
-# OOP
-```
-class Named {
-    pub name: String
+func cmd_remove_user(users: &Array<User>) {
+    let name = input("Enter user name: ");
 
-    pub func new(name: String) -> Self {
-        return Self {
-            name: name
+    for i in users.len() {
+        if(i.name == name) {
+            users.remove_at(i);
+            return; // End loop and abort function
+        }
+    }
+
+    println(`User '{name} not found!'`);
+}
+
+func query_command(users: &Array<User>) {
+    print_help();
+
+    let command = input("Enter command: ");
+
+    match command {
+        "1": {
+            cmd_add_user(users);
+        },
+        "2": {
+            cmd_remove_user(users);
+        },
+        "3": {
+            println("bye bye");
+            exit();
         }
     }
 }
 
-class User: Named {
-    password: String,
+func main() {
+    let users = Array<User>::new();
 
-    pub func new(name: String, password: String) -> Self {
-        return Self {
-            super::new(),
-            password: password
-        }
-    }
-
-    pub func change_password(&self, current_password: String, new_password: String) -> Result<(), String> {
-        if &self.password != current_password {
-            return Err("Invalid current password")
-        }
-
-        &self.password = new_password
-        return Ok()
+    loop {
+        query_command(&users);
     }
 }
-
-let test_user = User::new("Bob", "password123")
-
-func try_change_password(current_password: String, new_password: String) {
-    test_user.change_password(current_password, new_password).unwrap_or_else((err) => {
-        print(`Failed to change password: {err}`)
-    })
-}
-
-test_user.change_password("pass123", "aaaaaaaaaa")
-test_user.change_password("password123", "bbbbbbbbbbbbb")
 ```
 
-# Enums
+## OS Platform
+My language would have a built in way of getting the OS, but here's how it could be done without that feature.
 
 ```
-enum OsType {
-    Linux,
+import std::fs::{self, File, OpenFlags};
+
+enum Platform {
     Windows,
-    Mac,
+    Linux(Option<String>),
+    MacOS,
+    Unknown
 
-    pub func to_string(&self) -> String {
-        return match &self {
-            Linux => "GNU/Linux",
-            Windows => "Microsoft Windows",
-            Mac => "MacOS"
+    pub fn to_string(&self) {
+        return match self {
+            Windows: "Windows",
+            Linux(distro): distro ?? "Linux"
+        };
+    }
+
+    pub fn get() {
+        if fs::exists("C:\\") {
+            return Windows;
+        }
+
+        if fs::exists("/System") {
+            return MacOS;
+        }
+
+        if fs::exists("/etc/os-release") {
+            let file_res = File::open("/etc/os-release", OpenFlags::Read);
+
+            if !file_res {
+                // Print to stderr
+                eprintln(`error: Unable to open /etc/os-release {file_res.err().to_string()}`);
+                
+                return Linux(None);
+            }
+
+            let distro = parse_os_release(file_res!);
+            return Linux(distro);
+        }
+
+        return Unknown;
+    }
+}
+
+func parse_os_release(file: &File): Option<String> {
+    while !file.is_end() {
+        let line_res = file.read_line();
+
+        if !line_res {
+            eprintln(`error: Failed to read os-release: {line_res.err().to_string()}`);
+            return None;
+        }
+
+        let line = line_res!;
+        let split = line.split("=");
+        
+        let key = split.get(0) ?? "";
+        let value = split.get(1) ?? "";
+        
+        if key == "NAME" {
+            return Some(value);
         }
     }
-
-    // lol
-    pub func get_best() -> Self {
-        return Linux
-    }
+    
+    return None;
 }
 
-print(OsType::get_best())
-print(OsType::Windows)
-```
+func main() {
+    let platform = Platform::get();
 
-# Modules 
-
-Main script
-```
-import utils, math::add
-
-utils::cool_print(add(1, 5))
-```
-
-utils
-```
-pub func cool_print(message: String) {
-    print(`>>>> {message} <<<<`)
+    println(`You're running {platform.to_string()}`);
 }
-```
 
-math
-
-```
-pub func add(a: float, b: float) -> float {
-    return a + b
-}
 ```
