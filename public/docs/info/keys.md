@@ -27,10 +27,14 @@ programs that use the PGP system, also including websites.
 
 https://www.gnupg.org | [downloads](https://www.gnupg.org/download/index.html)
 
+# WARNING
+**PLEASE READ THIS**
+
+Before using my key, <a href="#revocation">check if it hasn't been revoked</a>.
+If it has been revoked. Do not use it as it could be compromised and someone else could be using it to create signatures and decrypt your messages.
 
 # Importing
 [Download text version](/resources/publicKeys/wolfyxon.txt) | [Download binary version (.gpg)](/resources/publicKeys/wolfyxon.gpg)
-
 
 My key as text:
 ```
@@ -88,7 +92,6 @@ gpg --import Downloads/wolfyxon.gpg
 gpg --import C:\Users\CoolPerson\Downloads\wolfyxon.txt
 ```
 
-
 [Learn more about importing keys at the GnuPG website](https://www.gnupg.org/gph/en/manual/x56.html)
 
 # Verifying a file
@@ -133,3 +136,66 @@ gpg --output secret_message.txt --decrypt encrypted_message.txt.gpg
 ```
 
 [Learn more about encryption and decryption on the GnuPG website](https://www.gnupg.org/gph/en/manual/x110.html)
+
+# Revocation
+In a situation when a private key is compromised or should not be used for any other reason, the holder of said private key can create and share a **revokation certificate** that makes the public key invalid.
+
+## Telling if a key is valid
+
+### Checking my key
+To tell if my key has been revoked, check <a href="/resources/messages/revoke.txt">the revocation announcement file</a> on this site.
+If you see a revocation certificate and have my public key imported, import the certificate using:
+```
+curl https://wolfyxon.github.io/resources/messages/revoke.txt | gpg --import
+```
+If the key gets updated, that means the certificate is a valid revocation and that the key has been revoked.
+
+Please also check it in the keyserver I use as explained below.
+
+### From keyserver
+```
+gpg --refresh-keys --keyserver=<keyserver domain name> <fingerprint or email>
+```
+Example:
+```
+gpg --refresh-keys --keyserver=keys.openpgp.org wolfyxon@gmail.com
+```
+
+If you see in the output that it's revoked, it is revoked.
+
+### Local revocation
+**WARNING:** This only checks if a revocation certificate has been applied **on your machine**. It does not check it on the internet.
+It only works AFTER you've refreshed the key from a keyserver or imported a revocation certificate from a file.
+**Do not use it as a verification method.**
+
+To check if a revocation certificate has been applied on your machine to a key, use:
+```
+gpg --list-key <fingerprint or email>
+```
+Example:
+```
+gpg --list-key wolfyxon@gmail.com
+```
+
+## Applying a revocation
+To apply a revocation certificate use:
+```
+gpg --import <path/to/certificate>
+```
+For example
+```
+gpg --import revoke.asc
+```
+
+## Creating a revocation certificate
+To create a revocation certificate for your key, use:
+```
+gpg --output <output/path/to/cert> --gen-revoke <fingerprint or email>
+```
+Example:
+```
+gpg --output revoke.asc --gen-revoke mail@example.com
+```
+
+You'll be met with an interactive setup, then after
+the revocation certificate is generated, you should share it with others to import and revoke your key.

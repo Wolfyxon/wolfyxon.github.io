@@ -1,0 +1,9 @@
+No revocation was submitted.
+If one is submitted here, this whole file be replaced with a public key block with a comment "This is a revokation certificate".
+
+Please also verify it against the keyserver I use:
+
+gpg --refresh-keys --keyserver=keys.openpgp.org
+
+For more information visit:
+https://wolfyxon.github.io/docs/info/keys
