@@ -1,6 +1,6 @@
 ---
 title: Encryption & signatures
-description: How to use my public key and use it to verify my signatures and send me encrypted messages.
+description: How PGP works and how to use my public key for verification & encryption.
 ---
 
 # Introduction
