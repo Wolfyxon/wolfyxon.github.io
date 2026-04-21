@@ -30,7 +30,9 @@ export default function SlideShowControls(props: {
     stopVideo?: () => void,
     loadVideo?: () => any,
     setSlide?: Dispatch<SetStateAction<SlideData | null>>,
-    setMuted?: Dispatch<SetStateAction<boolean>>
+    setMuted?: Dispatch<SetStateAction<boolean>>,
+    videoControls?: boolean,
+    setVideoControls?: Dispatch<SetStateAction<boolean>>
 }) {
     const [slides, setSlides] = useState<SlideData[]>([]);
     const [slideIdx, setSlideIdx] = useState(0);
@@ -260,6 +262,20 @@ export default function SlideShowControls(props: {
         }, len * delay);
     }
 
+    function videoControlsChange(state: boolean, publish?: boolean) {
+        if(props.setVideoControls) {
+            props.setVideoControls(state);
+        }
+
+        if(publish ?? true) {
+            bcRef.current?.postMessage({
+                origin: originRef.current,
+                msg: "videoControls",
+                state: state
+            });
+        }
+    }
+
     useEffect(() => {
         const bc = new BroadcastChannel("slideshow");
         bcRef.current = bc;
@@ -308,6 +324,9 @@ export default function SlideShowControls(props: {
                 case "stopVideo": {
                     stopVideo(false);
                     break;
+                }
+                case "videoControls": {
+                    videoControlsChange(data.state);
                 }
             }
         }
@@ -515,11 +534,19 @@ export default function SlideShowControls(props: {
                     </label>
 
                     <Checkbox label="Lock deleting" checked={lockDelete} onChange={setLockDelete} flat />
+
                     <Checkbox 
                         label="Mute video in this tab" 
                         checked={props.playVideo === undefined}
                         disabled={props.playVideo === undefined}
                         onChange={props.setMuted}
+                        flat
+                    />
+
+                    <Checkbox
+                        label="Enable video controls"
+                        onChange={videoControlsChange}
+                        checked={props.videoControls}
                         flat
                     />
                     
