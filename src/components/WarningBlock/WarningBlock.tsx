@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import "./style.css";
 
-export default function Warning(props: {children: ReactNode, title?: string}) {
+export default function WarningBlock(props: {children: ReactNode, title?: string}) {
     return (
         <div className="warning-block">
             <div className="warning-block-content">
