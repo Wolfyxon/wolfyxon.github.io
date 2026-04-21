@@ -262,7 +262,7 @@ export default function SlideShowControls(props: {
         }, len * delay);
     }
 
-    function videoControlsChange(state: boolean, publish?: boolean) {
+    function setVideoControls(state: boolean, publish?: boolean) {
         if(props.setVideoControls) {
             props.setVideoControls(state);
         }
@@ -326,7 +326,7 @@ export default function SlideShowControls(props: {
                     break;
                 }
                 case "videoControls": {
-                    videoControlsChange(data.state);
+                    setVideoControls(data.state, false);
                 }
             }
         }
@@ -545,7 +545,7 @@ export default function SlideShowControls(props: {
 
                     <Checkbox
                         label="Enable video controls"
-                        onChange={videoControlsChange}
+                        onChange={setVideoControls}
                         checked={props.videoControls}
                         flat
                     />
