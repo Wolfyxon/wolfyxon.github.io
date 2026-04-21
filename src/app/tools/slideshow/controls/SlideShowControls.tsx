@@ -37,6 +37,8 @@ export default function SlideShowControls(props: {
 
     const [navKeys, setNavKeys] = useState("Q & E");
     const [navModifier, setNavModifier] = useState("Shift");
+
+    const [autoplayPolicy, setAutoplayPolicy] = useState<string | null>(null);
     
     const bcRef = useRef<BroadcastChannel | null>(null);
     const originRef = useRef<string | null>(null);
@@ -377,6 +379,16 @@ export default function SlideShowControls(props: {
         }
     }, [navKeys, navModifier, slideIdx, slides]);
 
+    useEffect(() => {
+        const func = (navigator as any).getAutoplayPolicy;
+        
+        if(func) {
+            setInterval(() => {
+                setAutoplayPolicy((navigator as any).getAutoplayPolicy("mediaelement")); // caling the const causes an error
+            }, 2000);
+        }
+    }, []);
+
     const [lockDelete, setLockDelete] = useState(false);
     const [askLeave, setAskLeave] = useState(true);
     const [disableNewIns, setDisableNewIns] = useState(false);
@@ -448,6 +460,19 @@ export default function SlideShowControls(props: {
                     onClick={deleteAll}
                     disabled={lockDelete}
                 />
+            </div>
+            <div className="warning">
+                {
+                    autoplayPolicy ? 
+                    (
+                        autoplayPolicy != "allowed" ?
+                            autoplayPolicy == "allowed-muted" ?
+                            "Please disable mute for autoplay or remotely activated videos won't play with sound"
+                            : "Please enable autoplay or remotely played videos won't work"
+                        : null
+                    )
+                    : null
+                }
             </div>
             <div className="slideshow-video-controls">
                 <ImageButton 
