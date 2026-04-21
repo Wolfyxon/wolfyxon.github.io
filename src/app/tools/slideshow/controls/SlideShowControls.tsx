@@ -9,6 +9,7 @@ import Checkbox from "@/components/input/Checkbox/Checkbox";
 import LeaveBlocker from "@/components/func/LeaveBlocker";
 
 import "./style.css";
+import { handleInput } from "./slideShowControlUtil";
 
 type BroadcastData = {
     msg: string,
@@ -348,54 +349,7 @@ export default function SlideShowControls(props: {
     }, []);
 
     useEffect(() => {
-        const lis = [
-            new EventListener(window, "keydown", (_e) => {
-                const e = _e as KeyboardEvent;
-                const key = e.key.toLowerCase();
-
-                if(inputHandled(e)) {
-                    return;
-                }
-
-                if(navModifier != "None") {
-                    if(navModifier == "Shift" && !e.shiftKey) {
-                        return;
-                    }
-
-                    if(navModifier == "Control" && !e.ctrlKey) {
-                        return;
-                    }
-
-                    if(navModifier == "Alt" && !e.altKey) {
-                        return;
-                    }
-                }
-
-                if(navKeys == "Q & E") {
-                    if(key == "e") {
-                        next();
-                        e.preventDefault();
-                    } else if(key == "q") {
-                        previous();
-                        e.preventDefault();
-                    }
-                }
-
-                if(navKeys == "Arrows") {
-                    if(key == "arrowright") {
-                        next();
-                        e.preventDefault();
-                    } else if(key == "arrowleft") {
-                        previous();
-                        e.preventDefault();
-                    }
-                }
-            })
-        ];
-
-        return () => {
-            lis.forEach(l => l.disconnect());
-        }
+        return handleInput(navModifier, navKeys, next, previous);
     }, [navKeys, navModifier, slideIdx, slides]);
 
     useEffect(() => {
