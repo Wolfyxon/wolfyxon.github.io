@@ -510,7 +510,10 @@ export default function SlideShowControls(props: {
                     
                 </div>
             </Accordion>
-            <a href="/slideshow" target="_blank" aria-disabled={disableNewIns ? true : undefined}>Open new instance for remote control</a>
+
+            <a href="/tools/slideshow" target="_blank" aria-disabled={disableNewIns ? true : undefined}>
+                Open new instance for remote control
+            </a>
         </div>
     );
 }
