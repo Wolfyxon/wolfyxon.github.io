@@ -312,6 +312,7 @@ export default function SlideShowControls(props: {
                 }
                 case "getData": {
                     publishSlides(data.origin);
+                    setSlide(slideIdx, true);
                     break;
                 }
                 case "playVideo": {
