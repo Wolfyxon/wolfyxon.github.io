@@ -8,9 +8,6 @@ function GlobalHead() {
         <meta name="CCBot" content="nofollow" />
         <meta name="robots" content="noai, noimageai" />
         <meta name="tdm-reservation" content="1" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </>)
 }
 
