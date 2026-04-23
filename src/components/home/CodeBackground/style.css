@@ -2,6 +2,8 @@
     display: block;
     font-family: monospace;
     position: absolute;
+    user-select: none;
+    pointer-events: none;
     top: 0;
     left: 0;
     color: var(--color2);
