@@ -310,7 +310,7 @@ export default function SlideShowControls(props: {
                     setSlides(data.slides.map((v: SlideData) => hydrateSlide(v)));
                     break;
                 }
-                case "getSlides": {
+                case "getData": {
                     publishSlides(data.origin);
                     break;
                 }
@@ -343,7 +343,7 @@ export default function SlideShowControls(props: {
         originRef.current = Math.random().toString() + new Date();
 
         bcRef.current?.postMessage({
-            msg: "getSlides",
+            msg: "getData",
             origin: originRef.current,
         });
     }, []);
