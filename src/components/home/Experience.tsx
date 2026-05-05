@@ -51,15 +51,13 @@ export default function Experience() {
           <div className="observing anim-obs-down">
             {
               [
-                "Backend",
-                "Frontend",
+                "Frontend & Backend",
                 "Databases",
                 "Website SEO & accessibility",
-                "Version control",
                 "Low-level programming",
                 "Game development",
                 "Discord bots",
-                "Networking",,
+                "Networking",
                 "System administration",
                 "Electronics",
                 "Video & audio editing",
