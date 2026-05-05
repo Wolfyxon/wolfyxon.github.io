@@ -122,7 +122,7 @@ function ProjectList() {
 
     registerProject(
         "Hero of the Earth",
-        "Discontinued post apocalyptic story game.",
+        "Post apocalyptic story game.",
         "assets/img/home/projectThumbnails/hote.webp",
         [
             {
