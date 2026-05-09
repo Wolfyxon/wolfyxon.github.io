@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-23",
+  "lastUpdate": "2026-05-09",
   "userAgents": [
     "AI2Bot",
     "AI2Bot-DeepResearchEval",
@@ -78,6 +78,7 @@
     "MistralAI-User",
     "MistralAI-User/1.0",
     "MyCentralAIScraperBot",
+    "NagetBot",
     "NotebookLM",
     "NovaAct",
     "OAI-SearchBot",
@@ -136,6 +137,7 @@
     "meta-externalfetcher",
     "meta-webindexer",
     "netEstate Imprint Crawler",
+    "newsai",
     "omgili",
     "omgilibot",
     "panscient.com",
