@@ -34,7 +34,7 @@ export default function Home() {
     <Page category="Home" head={extraHead}>
         
         <div id="banner" role="banner">
-          <CodeBackground file="src/app/page.tsx" />
+          {/*<CodeBackground file="src/app/page.tsx" />*/}
           <div className="observing anim-obs-left">
             <div id="banner-text">
                   <h1>
