@@ -24,7 +24,7 @@ code:not(pre code) {
 
 .article-page {
     animation: fade-in;
-    animation-duration: 1s;
+    animation-duration: 0.25s;
 }
 
 .article-sides {
