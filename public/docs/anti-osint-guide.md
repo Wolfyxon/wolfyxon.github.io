@@ -110,6 +110,7 @@ Imagine you're a bad actor trying to figure out who you are then use that to fin
 - Search your old messages and posts for private information, especially photos. Start with the oldest as you probably used to be dumber.
 - Check your data in Google: **Manage your Google account** -> **Data and privacy**
 - Analyze your social media profiles
+- Find accounts you forgot about using tools like https://whatsmyname.me/
 
 You can also use them on your friends and family to scare them into caring about privacy, but please do it wisely.
 
