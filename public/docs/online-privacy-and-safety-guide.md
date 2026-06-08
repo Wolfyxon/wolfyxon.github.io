@@ -4,6 +4,8 @@ description: My advice how to stay safe and anonymous online
 hidden: true
 ---
 
+<!-- this will be remade -->
+
 # Introduction
 
 In this guide I'll cover the ways you can better protect your identity and data on the internet without compromising your convenience. 
