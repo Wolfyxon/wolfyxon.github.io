@@ -44,5 +44,6 @@ next-env.d.ts
 # other
 temp/
 tmp/
+test/
 *.tmp
 *~
