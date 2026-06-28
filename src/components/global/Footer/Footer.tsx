@@ -21,6 +21,7 @@ export default function Footer() {
                 <Column title="Funny">
                     <a href="/ose">OSE</a>
                     <a href="/archive/lighter/tgdod">Lighter</a>
+                    <a href="/sikamdopralki">pralka</a>
                 </Column>
 
                 <Column title="Contact">
