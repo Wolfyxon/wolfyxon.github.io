@@ -91,6 +91,22 @@ function ProjectList() {
     );
 
     registerProject(
+        "bateria",
+        "Minimal universal battery monitor for Linux, written in C",
+        "assets/img/home/projectThumbnails/bateria.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/bateria"
+            },
+            {
+                text: "Downloads",
+                url: "https://github.com/Wolfyxon/bateria/releases/latest"
+            }
+        ]
+    )
+
+    registerProject(
         "SongWrap",
         "A website for viewing a fancy summary of the songs you listen to.",
         "assets/img/home/projectThumbnails/SongWrap.webp",
