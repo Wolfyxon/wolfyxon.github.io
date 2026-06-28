@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import "./style.css";
 
-export default function Widget(props: {title: string, url?: string, children: ReactNode}) {
+export default function Widget(props: {title: string, url?: string, children?: ReactNode}) {
     const body = (
     <>
         <div className="widget-title-container">
