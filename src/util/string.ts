@@ -32,5 +32,10 @@ export function capitalize(text: string): string {
 }
 
 export function toKebabCase(text: string) {
-    return text.trim().toLowerCase().replace(" ", "-");
+    return text.trim().toLowerCase()
+        .replaceAll(",", "")
+        .replaceAll("'", "")
+        .replaceAll("\"", "")
+        .replaceAll(".", "")
+        .replaceAll(" ", "-");
 }
