@@ -4,6 +4,12 @@ import MailLink from "@/components/links/MailLink";
 import TextLink from "@/components/links/TextLink";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact",
+    description: "Ways to contact me and some extra information"
+}
 
 export default function ContactPage() {
     return (
