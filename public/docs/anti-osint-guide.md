@@ -1,6 +1,6 @@
 ---
 title: anti-OSINT guide
-description: How to protect your private information and identity.
+description: How to protect yourself from being doxxed online.
 hidden: false
 ---
 
@@ -10,7 +10,7 @@ It involves finding and analyzing information from publicly available sources li
 
 It's used by journalists, law enforcement and unfortunetaly bad actors such as stalkers to gather information about people.
 
-This is **NOT** a data privacy guide about VPNs and fancy browser extensions, but a guide how to visibly hide your personal info from bad actors.
+This is **NOT** a data privacy guide about VPNs and fancy browser extensions, but a guide how to visibly protect yourself from **being doxxed**.
 However please note that this guide is for an **average person**. If your life or safety is in danger, you will need way stronger measures.
 
 I believe that every person should share as little information about themselves online as possible so you can't just tell where they live from a simple Google search.
@@ -41,6 +41,14 @@ Here's what you should do:
 - Never share your face
 - Disable location tagging in your Camera app settings
 - Carefully review your photos, videos and screenshots before sharing them
+
+# Your IRL connections
+Do not associate your accounts with the accounts of your family and real life friends (by following, friending or just mentioning them),
+unless they also follow proper privacy practices.
+
+If they follow you and this information is publicly visible, tell them to unfollow you.
+
+Your IRL connections can easily lead to you.
 
 # Place reviews
 If you rated any place on Google Maps or a any other app or website, that's public information.
