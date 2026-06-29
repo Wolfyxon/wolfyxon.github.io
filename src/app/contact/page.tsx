@@ -16,6 +16,8 @@ export default function ContactPage() {
         <Page category="Contact">
             <ArticlePage title="Contact">
                 <h1>Ways to contact me</h1>
+                
+                <h2>Conventional</h2>
                 <ul>
                     <li>Discord server: <TextLink>{DISCORD_INVITE}</TextLink></li>
                     <li>Email: <MailLink>wolfyxon@gmail.com</MailLink></li>
