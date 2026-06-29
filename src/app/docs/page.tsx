@@ -27,7 +27,7 @@ export default async function DocsHomePage() {
                     Each doc can also be viewed as plain markdown text, by adding <b>.md</b> at the end of the URL.
                 </p>
                 <p>
-                    Also see the <a href="/about">about me page</a>.
+                    Also see <a href="/about">about me</a> & <a href="/contact">contact</a>.
                 </p>
 
                 <div id="doc-list">
