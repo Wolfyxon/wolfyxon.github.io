@@ -133,4 +133,6 @@ You can also use them on your friends and family to scare them into caring about
 I hope you learned something from this guide and it helped you protect your identity.
 It's based purely from my experience, so if you have any suggestions, feel free to contact me at [wolfyxon@gmail.com](mailto:wolfyxon@gmail.com).
 
+If you want to be more paranoid, I recommend the [The Hitchhiker's Guide](https://anonymousplanet.net/guide).
+
 Stay safe out there. See ya!
