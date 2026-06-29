@@ -15,6 +15,13 @@ However please note that this guide is for an **average person**. If your life o
 
 I believe that every person should share as little information about themselves online as possible so you can't just tell where they live from a simple Google search.
 
+# Why should I care?
+Well... if you don't, go ahead and post your full name, phone number, home address and social security number (or whatever ID number your country uses, ex. PESEL). Also unlock your phone and give it to a random person on the street.
+
+That's what you may be accidentally doing, except it takes a bit more effort to get this info.
+
+Also if you don't care now, you may want to protect your identity in the future and then regret all the data you've shared that can't be now deleted.
+
 # Common advice
 This is generic starter advice that you'll likely see in other guides, but I want to bring it up before we get to the more specific advice.
 
