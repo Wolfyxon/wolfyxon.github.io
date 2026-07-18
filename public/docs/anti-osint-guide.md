@@ -39,7 +39,8 @@ By analyzing the environment, you can find the exact location where it was taken
 
 This YouTube video: [how to find a street in 2 minutes](https://www.youtube.com/watch?v=rl2Q9xH8e7M) by [RAINBOLT](https://www.youtube.com/@georainbolt) demonstrates it.
 
-I also highly disencourage you from sharing your face as it can be referenced with other photos such as on school social media and can be used to identify you on the street if someone is determinted enough to stalk you.
+Sharing your face is dangerous as it uniquely identifies you and cannot be changed (most of the time).
+If you share your face it could be cross referenced with other photos you appear in (like school photos, your family's social media, photos where you're in the background of) and use that to gather info about you.
 
 Photos sometimes may also have location data attached to them, hidden in the [EXIF](https://en.wikipedia.org/wiki/Exif) data depending on your camera app settings.
 
@@ -59,7 +60,7 @@ Your IRL connections can easily lead to you.
 
 # Place reviews
 If you rated any place on Google Maps or a any other app or website, that's public information.
-Each rating marks a place that you've been too and that makes a clue of where you might live.
+Each rating marks a place that you've been to and that makes a clue of where you might live.
 
 Simply never put comments or ratings on physical locations and if you made any, delete them.
 
