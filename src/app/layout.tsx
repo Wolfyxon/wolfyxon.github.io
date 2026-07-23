@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
-import "@/css/global.css";
 import Root from "@/layouts/Root";
 import React from "react";
+
+import "@/css/global.css";
 
 export const metadata: Metadata = {
   title: {

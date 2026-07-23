@@ -5,12 +5,11 @@ import FancyHeading from "../components/FancyHeading/FancyHeading";
 import ProjectList from "../components/home/ProjectList";
 import Experience from "@/components/home/Experience";
 import Person from "../components/home/Person";
+import Wolf from "@/components/home/Wolf/Wolf";
 import Page from "@/layouts/Page";
 
 import "@/css/animations.css";
 import "@/css/home.css";
-import CodeBackground from "@/components/home/CodeBackground/CodeBackground";
-import Wolf from "@/components/home/Wolf/Wolf";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
