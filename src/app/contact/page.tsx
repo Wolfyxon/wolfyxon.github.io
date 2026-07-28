@@ -20,13 +20,19 @@ export default function ContactPage() {
                 
                 <h2>Conventional</h2>
                 <ul>
-                    <li>Discord server: <TextLink>{DISCORD_INVITE}</TextLink></li>
+                    <li>
+                        Discord server: <TextLink>{DISCORD_INVITE}</TextLink><br/>
+                        <span className="faded">(from there you can send me a private message)</span>
+                    </li>
                     <li>Email: <MailLink>wolfyxon@gmail.com</MailLink></li>
                 </ul>
-
+                <p>
+                    If your message is sensitive, consider encrypting it as explained below.
+                </p>
+            
                 <h2>Unconventional</h2>
                 <p>
-                    You may use these methods in emergencies when you can't use the primary ones.
+                    You may use these examples methods in emergencies when you can't use the primary ones.
                 </p>
                 
                 <ul>
@@ -54,6 +60,10 @@ export default function ContactPage() {
                     Everything is explained in the documentation.
                 </p>
 
+                <p>
+                    You can also use the <a href="/tools/pgp/">online PGP page</a>, but if this site has been compromised, someone could be intercepting your messages,
+                    so be careful.
+                </p>
             </ArticlePage>
         </Page>
     )
