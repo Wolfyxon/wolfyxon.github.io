@@ -1,10 +1,12 @@
+import { Metadata } from "next";
+import { Fragment } from "react";
+
 import Widget from "@/components/Widget/Widget";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
-import { getDocsInCategories } from "./docs";
-import { Metadata } from "next";
-import { Fragment } from "react";
+
 import { capitalize } from "@/util/string";
+import { getDocsInCategories } from "./docs";
 
 import "./style.css";
 

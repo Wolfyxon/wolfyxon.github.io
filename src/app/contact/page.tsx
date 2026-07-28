@@ -1,9 +1,10 @@
-import { DISCORD_INVITE } from "@/globalData";
-
 import MailLink from "@/components/links/MailLink";
 import TextLink from "@/components/links/TextLink";
 import ArticlePage from "@/layouts/ArticlePage/ArticlePage";
 import Page from "@/layouts/Page";
+
+import { DISCORD_INVITE } from "@/globalData";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
