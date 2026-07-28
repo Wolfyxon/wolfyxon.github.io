@@ -11,6 +11,10 @@
     animation: pat 0.3s;
 }
 
+.spin {
+    animation: spin 10s infinite linear;
+}
+
 @keyframes pat {
     0% {
         transform: scaleY(100%) translateY(0);
@@ -20,5 +24,14 @@
     }
     100% {
         transform: scaleY(100%) translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
