@@ -4,6 +4,7 @@ body, html {
 
 body {
   background: url(https://media.tenor.com/6nl3BRukS9MAAAAM/cat-arrival.gif);
+  font-family: 'Times New Roman', Times, serif;
   animation: 300s scroll infinite linear;
   color: gold;
   text-align: center;
