@@ -1,0 +1,23 @@
+.spaghetti {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    opacity: 0;
+    animation: jumpscare 2s;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes jumpscare {
+    0% {
+        opacity: 1;
+        display: unset !important;
+    }
+    100% {
+        opacity: 0;
+        display: unset;
+    }
+}
