@@ -15,15 +15,16 @@ This doc is a brief summary of the license.
 - **Downloading and listening offline**
 - **Remixing**
 
-## Attribution
-The music must be properly attributed. For example you can add
-```
-Used music:
-"Schema Nexus" - Wolfyxon
-```
-in the description of your video or game. 
-It can look however you like as long as it contains the name of the music and my name.  
-
 ## Not allowed:
 - **Pretending you're the author**
 - **Sharing under a different title**
+
+# What's attribution
+Attribution is disclosing what assets you used and who made them.
+
+For example you can add
+```
+Used music:
+"Schema Nexus" by Wolfyxon
+```
+in the description of your video or game.
