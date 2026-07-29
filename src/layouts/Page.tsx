@@ -4,6 +4,7 @@ import Footer from "@/components/global/Footer/Footer";
 import Header from "@/components/global/Header/Header";
 import ClientWorker from "@/components/global/ClientWorker";
 import Root from "./Root";
+import Spaghetti from "@/components/home/Spaghetti/Spaghetti";
 
 import "@/css/fonts/roboto.css";
 import "@/css/main.css";
@@ -23,7 +24,7 @@ export default function Page(props: {
             </head>
             <body>
                 <Header title={props.category} home={props.homeUrl} sub={props.sub} />
-
+                <Spaghetti/>
                 <main id="main" role="main">
                     {props.children}
                 </main>
