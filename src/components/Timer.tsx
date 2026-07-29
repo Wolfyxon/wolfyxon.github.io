@@ -28,6 +28,7 @@ export default function Timer(data: TimerProps) {
 
         function update() {
             if(!itv) return;
+            console.log("upd")
 
             const offset = Math.max(end - Date.now(), 0);
 
@@ -36,8 +37,10 @@ export default function Timer(data: TimerProps) {
                 if(data.onEnd) data.onEnd();
             }
 
+            // TODO: Fix seconds only changing per 2 with very long time
             const replMap: Record<string, number | string> = {
-                "d": Math.floor(offset / (1000 * 60 * 60 * 24)),
+                "y": Math.floor(offset / (1000 * 60 * 60 * 24 * 365)),
+                "d": Math.floor(offset % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24)),
                 "h": Math.floor((offset % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
                 "m": Math.floor((offset % (1000 * 60 * 60)) / (1000 * 60)),
                 "s": Math.floor((offset % (1000 * 60)) / 1000),
