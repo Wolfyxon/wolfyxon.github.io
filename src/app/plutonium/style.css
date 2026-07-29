@@ -1,0 +1,67 @@
+body {
+    margin-top: 50px;
+    background: #222222;
+    color: white;
+    transition: 2s linear;
+}
+
+body, #core {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#top {
+    transform: translate(0, 60px);
+    transition: 0.1s linear;
+}
+
+#screwdriver {
+    transform: translate(-125px, 37px);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#core.slip {
+    --glow-size: 50px;
+    --glow-color: #57c4ff;
+    --glow: drop-shadow(0 0 var(--glow-size) var(--glow-color));
+
+    filter: brightness(200%) var(--glow) var(--glow) var(--glow);
+    animation: critical 0.025s infinite linear;
+}
+
+#core.slip #screwdriver {
+    transform: translate(-150px, 30px);
+}
+
+#core.slip #top {
+    transform: translate(0, 70px);
+}
+
+body:has(.slip) {
+    background: white;
+    color: gray;
+}
+
+@keyframes critical {
+    0% {
+        --glow-size: 50px;
+    }
+
+    50% {
+        --glow-size: 1000px;
+        --glow-color: #60c7ff;
+    }
+
+    100% {
+        --glow-size: 50px;
+    }
+}
