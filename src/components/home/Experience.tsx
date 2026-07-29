@@ -1,7 +1,12 @@
+"use client";
+import { useState } from "react";
+
 import Badge from "../badges/Badge/Badge";
 import Tag from "../badges/Tag/Tag";
 
 export default function Experience() {
+    const [lab, setLab] = useState(false);
+
     return (
         <div id="experience" className="observing anim-obs-down">
         <div id="software">
@@ -30,7 +35,7 @@ export default function Experience() {
 
           <h2>Libraries, frameworks and engines</h2>
           <div className="observing anim-obs-down">
-              <Badge icon="software/lib/react.svg" alt="React" />
+              <Badge icon="software/lib/react.svg" alt="React" onClick={() => {alert("A door opens"); setLab(true)}} />
               <Badge icon="software/framework/svelte.svg" alt="Svelte" />
               <Badge icon="software/framework/vite.svg" alt="Vite" />
               <Badge icon="software/framework/nextjs.webp" alt="NextJS" />
@@ -42,6 +47,12 @@ export default function Experience() {
               <Badge icon="software/framework/rbxstudio.svg" alt="Roblox Studio" />
               <Badge icon="arduino.svg" alt="Arduino" />
               <Badge icon="software/framework/ev3dev.webp" alt="ev3dev" />
+
+              {
+                lab ?
+                <a href="/plutonium" className="semi-hidden">Enter the nuclear laboratory</a>
+                : null
+              }
           </div>
         </div>
 
