@@ -14,6 +14,7 @@ const fs = [
         ]
     },
     
+    "secret-codes.txt",
     "hi.txt"
 ]
 const fsCache = {};
