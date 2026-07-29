@@ -186,6 +186,7 @@ class Command {
         this.description = "";
         this.args = [];
         this.autoAcceptQuitRequest = true;
+        this.hidden = false;
         this.onQuitRequest = () => { return this.autoAcceptQuitRequest; };
     }
 
@@ -214,6 +215,11 @@ class Command {
     setCallback(callback) {
         this.callback = callback;
 
+        return this;
+    }
+
+    hide() {
+        this.hidden = true;
         return this;
     }
 

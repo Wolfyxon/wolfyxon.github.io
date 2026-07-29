@@ -52,7 +52,9 @@ registerCommand(
             echo("Available commands:");
 
             for(const cmd of commands) {
-                echo("  " + cmd.aliases + ": " + cmd.description);
+                if(!cmd.hidden) {
+                    echo("  " + cmd.aliases + ": " + cmd.description);
+                }
             }
 
             echo(" ");
