@@ -11,6 +11,7 @@ export default function Wolf() {
 
     function easterEgg() {
         const audio = new Audio("/assets/audio/ode-to-joy.ogg");
+        audio.loop = true;
         audio.play();
 
         for(const e of document.querySelectorAll("div, footer, nav, a, p, img, span")) {
