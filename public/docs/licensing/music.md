@@ -11,6 +11,7 @@ This doc is a brief summary of the license.
 
 # Conditions
 ## Allowed
+- **Sharing and using with proper attribution:** (Include my name, song title and optionally the source)
 - **Using as background music** such as in YouTube videos and games 
 - **Downloading and listening offline**
 - **Remixing**
