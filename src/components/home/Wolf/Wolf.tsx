@@ -6,16 +6,25 @@ import "./style.css";
 export default function Wolf() {
     const ref = useRef<HTMLImageElement>(null);
     const [clicks, setClicks] = useState(0);
-
+    
     let patResetTimeout: NodeJS.Timeout | null;
 
     function easterEgg() {
+        const audio = new Audio("/assets/audio/ode-to-joy.ogg");
+        audio.play();
+
         for(const e of document.querySelectorAll("div, footer, nav, a, p, img, span")) {
             e.classList.add("spin");
         }
     }
 
     function onClick() {
+        if(clicks < 32) {
+            const audio = new Audio("/assets/audio/freddy-nose.mp3");
+            audio.volume = 0.25;
+            audio.play();
+        }
+
         stopReset();
 
         const wolf = ref.current;
