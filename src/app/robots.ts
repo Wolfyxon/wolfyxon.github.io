@@ -33,7 +33,7 @@ function getHiddenDrawingURLs(): string[] {
 
 export default async function robots(): Promise<MetadataRoute.Robots> {
     return {
-        sitemap: ROOT + "sitemap.xml",
+        /*sitemap: ROOT + "sitemap.xml",*/
         rules: [
             /* Global */
             {
