@@ -5,11 +5,11 @@ export type ElmBase = {
 }
 
 export class EventListener {
-    emitter: HTMLElement | Window;
+    emitter: HTMLElement | Window | Document;
     eventName: string;
     handler: EventListenerOrEventListenerObject;
 
-    constructor(emitter: HTMLElement | Window, eventName: string, handler: EventListenerOrEventListenerObject) {
+    constructor(emitter: HTMLElement | Window | Document, eventName: string, handler: EventListenerOrEventListenerObject) {
         this.emitter = emitter;
         this.eventName = eventName;
         this.handler = handler;
