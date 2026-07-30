@@ -23,7 +23,7 @@ body, #core {
 
 #top {
     transform: translate(0, 60px);
-    transition: 0.1s linear;
+    transition: 0.05s linear;
 }
 
 #screwdriver {
