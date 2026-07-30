@@ -11,7 +11,7 @@ import Page from "@/layouts/Page";
 import "@/css/animations.css";
 import "@/css/home.css";
 import Saul from "@/components/Saul/Saul";
-import LinkHoverEasterEgg from "@/components/home/LinkHoverEasterEgg";
+import LinkHoverEasterEgg from "@/components/home/LinkHoverEasterEgg/LinkHoverEasterEgg";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <Page category="Home" head={extraHead}>
         <Saul/>
-        <LinkHoverEasterEgg/>
+        {/*<LinkHoverEasterEgg/>*/}
         
         <div id="banner" role="banner">
           {/*<CodeBackground file="src/app/page.tsx" />*/}

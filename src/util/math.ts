@@ -21,3 +21,7 @@ export function randi(min: number, max: number): number {
 export function pad(number: number, zeros?: number): string {
     return number.toString().padStart(zeros ?? 2, "0");
 }
+
+export function deg2rad(deg: number) {
+    return deg * Math.PI / 180;
+}
