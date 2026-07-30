@@ -30,6 +30,7 @@ body, #core {
     transform: translate(-125px, 37px);
     transition: 0.4s;
     cursor: pointer;
+    animation: highlight 3s 5s infinite;
 }
 
 #core.slip {
@@ -52,6 +53,19 @@ body, #core {
 body:has(.slip) {
     background: white;
     color: gray;
+}
+
+@keyframes highlight {
+    0% {
+        filter: drop-shadow(0 0 0px white);
+    }
+    10% {
+        filter: drop-shadow(0 0 10px white);
+    }
+    20% {
+        filter: drop-shadow(0 0 0px white);
+    }
+    100% {}
 }
 
 @keyframes critical {
