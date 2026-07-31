@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { angleTo, deg2rad, getDistance, isColliding, randf, Vector2 } from "@/util/math";
 
 import "./style.css";
-import { deg2rad, randf } from "@/util/math";
 
 export default function LinkHoverEasterEgg() {
     const [triggered, setTriggered] = useState(true);
@@ -57,7 +57,7 @@ export default function LinkHoverEasterEgg() {
 
 function RocketCommand() {
     const mapRef = useRef<HTMLDivElement>(null);
-    const rocketsRef = useRef<HTMLDivElement[]>([]);
+    const mousePosRef = useRef<Vector2>({x: 0, y: 0});
 
     function spawnRocket(x: number, y: number, rot: number) {
         const r = document.createElement("div");
@@ -78,7 +78,6 @@ function RocketCommand() {
         `;
 
         mapRef.current!.appendChild(r);
-        rocketsRef.current.push(r);
     }
 
     function spawnRocketRandom() {
@@ -103,8 +102,22 @@ function RocketCommand() {
         r.style.setProperty("--y", y.toString());
     }
 
+    function fire() {
+        const rect = mapRef.current?.getBoundingClientRect();
+
+        if(!rect) {
+            return;
+        }
+
+        const x = rect.width / 2;
+        const y = rect.height - 10;
+
+        spawnRocket(x, y, angleTo(x, y, mousePosRef.current.x, mousePosRef.current.y));
+    }
+
     useEffect(() => {
-        setInterval(spawnRocketRandom, 1000);
+        spawnRocketRandom();
+        setInterval(spawnRocketRandom, 2000);
 
         let lastFrame = Date.now();
         
@@ -113,35 +126,52 @@ function RocketCommand() {
             const delta = now - lastFrame;
             lastFrame = now;
 
-            const rockets = rocketsRef.current;
-            let end = rockets.length;
-
-            const rect = mapRef.current?.getBoundingClientRect();
+            const rockets = mapRef.current!.querySelectorAll(".rocket") as NodeListOf<HTMLDivElement>;
+            const rect = mapRef.current!.getBoundingClientRect();
 
             if(!rect) {
                 return;
             }
 
-            for(let i = 0; i < end; i++) {
-                const r = rockets[i];
+            let collidedRocketIdx = -1;
+
+            for(const r of rockets) {
                 moveRocket(r, 0.1 * delta);
-                
-                const x = parseFloat(r.style.getPropertyValue("--x"))
-                const y = parseFloat(r.style.getPropertyValue("--y"))
+
+                const x = parseFloat(r.style.getPropertyValue("--x"));
+                const y = parseFloat(r.style.getPropertyValue("--y"));
+
+                for(const r2 of rockets) {
+                    if(r == r2) {
+                        continue;
+                    }
+
+                    const x2 = parseFloat(r2.style.getPropertyValue("--x"));
+                    const y2 = parseFloat(r2.style.getPropertyValue("--y"));
+
+                    if(getDistance(x, y, x2, y2) < 5) {
+                        r2.remove();
+                    }
+                }
 
                 if(y > rect.height || x < 0 || x > rect.width) {
-                    rockets.splice(i, 1);
                     r.remove();
-                    
-                    i--;
-                    end--;
 
                     if(y > rect.height) {
                         // boom
                     }
+
+                    continue;
                 }
             }
         });
+
+        document.addEventListener("mousemove", (e) => {
+            mousePosRef.current.x = e.pageX;
+            mousePosRef.current.y = e.pageY;
+        });
+
+        document.addEventListener("mousedown", fire);
     }, []);
 
     return (

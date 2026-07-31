@@ -9,12 +9,15 @@
 }
 
 .rocket-game .init-text {
-    margin-top: 100px;
+    position: absolute;
+    top: 150px;
+    width: 100%;
     font-size: 300%;
     text-align: center;
     font-weight: bold;
     animation: fade-out 3s;
     opacity: 0;
+    user-select: none;
 }
 
 .rockets {
