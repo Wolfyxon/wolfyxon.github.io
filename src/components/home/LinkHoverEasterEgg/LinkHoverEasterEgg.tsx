@@ -11,7 +11,7 @@ export default function LinkHoverEasterEgg() {
     useEffect(() => {
         const parentElms = document.querySelectorAll(".project-extra");
         const order: HTMLElement[] = [];
-        let buf = [];
+        let buf: EventTarget[] = [];
 
         for(let i = 0; i < parentElms.length; i++) {
             const parent = parentElms[i];
@@ -30,8 +30,12 @@ export default function LinkHoverEasterEgg() {
 
         for(const link of order) {
             link.addEventListener("mouseover", (e) => {
-                const link = e.target;
+                const link = e.target!;
                 
+                if(buf.includes(link)) {
+                    return;
+                }
+
                 buf.push(link);
 
                 if(order[buf.length - 1] != link) {
@@ -63,7 +67,7 @@ function RocketCommand() {
 
     const scoreRef = useRef(0);
     const healthRef = useRef(MAX_HEALTH);
-    
+
     const startedRef = useRef(false);
     const [forceRenderCount, setForceRenderCount] = useState(0);
 
