@@ -16,9 +16,9 @@ export default function ContactPage() {
     return (
         <Page category="Contact">
             <ArticlePage title="Contact">
-                <h1>Ways to contact me</h1>
+                <h1 id="ways-to-contact-me">Ways to contact me</h1>
                 
-                <h2>Conventional</h2>
+                <h2 id="conventional">Conventional</h2>
                 <ul>
                     <li>
                         Discord server: <TextLink>{DISCORD_INVITE}</TextLink> | <a href="https://discord.gg/2EBxwVpQGb">[backup link]</a><br/>
@@ -30,7 +30,7 @@ export default function ContactPage() {
                     If your message is sensitive, consider encrypting it as explained below.
                 </p>
             
-                <h2>Unconventional</h2>
+                <h2 id="unconventional">Unconventional</h2>
                 <p>
                     You may use these examples methods when you can't use the primary ones.
                 </p>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                     If something bad happens, I will likely reveal more methods.
                 </p>
 
-                <h1>How to verify my identity</h1>
+                <h1 id="how-to-verify-my-identity">How to verify my identity</h1>
                 <p>
                     If you know me well, simply ask me a few questions you're sure only I would know the answer to.
                 </p>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                     If I refuse to do that, someone could be impersonating me.
                 </p>
 
-                <h1>Encryption</h1>
+                <h1 id="encryption">Encryption</h1>
                 <p>
                     The public key mentioned above may also be used to encrypt files and messages only I will be able to decrypt.
                     Everything is explained in the documentation.
