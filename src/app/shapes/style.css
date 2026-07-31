@@ -1,0 +1,68 @@
+body {
+    background: black;
+    height: 100%;
+}
+
+#shapes {
+    height: 100%;
+}
+
+#shapes > * {
+    position: absolute;
+}
+
+.square {
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
+    background: gray;
+    width: 50px;
+    height: 50px;
+    animation: shake 0.1s infinite linear;
+}
+
+.circle {
+    --rot: 0;
+    --dist: 0;
+    --anim-rot: 0deg;
+    width: 80px;
+    height: 80px;
+    background: green;
+    border-radius: 300px;
+
+    top: 50%;
+    left: 50%;
+    transform: 
+        translate(-25%, -25%) 
+        rotate(calc((var(--rot)) * 1deg))
+        translateX(calc(var(--dist) * 5%))
+    ;
+    animation: spin 30s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-25%, -25%) rotate(10deg);
+    }
+
+    25% {
+        transform: translate(-30%, -25%);
+    }
+
+    25% {
+        transform: translate(-20%, -25%);
+    }
+    
+    100% {
+        transform: translate(-25%, -25%);
+    }
+}
