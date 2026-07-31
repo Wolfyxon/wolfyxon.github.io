@@ -17,6 +17,10 @@
     opacity: 0;
 }
 
+.rockets {
+    height: 100%;
+}
+
 .rocket {
     position: absolute;
     top: 0;

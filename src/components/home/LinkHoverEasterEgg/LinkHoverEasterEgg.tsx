@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import "./style.css";
-import { deg2rad } from "@/util/math";
+import { deg2rad, randf } from "@/util/math";
 
 export default function LinkHoverEasterEgg() {
     const [triggered, setTriggered] = useState(true);
@@ -82,7 +82,13 @@ function RocketCommand() {
     }
 
     function spawnRocketRandom() {
-        spawnRocket(0, 0, deg2rad(45));
+        const rect = mapRef.current?.getBoundingClientRect();
+
+        if(!rect) {
+            return;
+        }
+
+        spawnRocket(randf(rect.width * 0.1, rect.width - (rect.width * 0.1)), -5, deg2rad(90 + randf(-20, 20)));
     }
 
     function moveRocket(r: HTMLDivElement, step: number) {
@@ -90,8 +96,8 @@ function RocketCommand() {
         let y = parseFloat(r.style.getPropertyValue("--y"));
         let rot = parseFloat(r.style.getPropertyValue("--rot"));
 
-        x += Math.sin(rot) * step;
-        y += Math.cos(rot) * step;
+        x += Math.cos(rot) * step;
+        y += Math.sin(rot) * step;
 
         r.style.setProperty("--x", x.toString());
         r.style.setProperty("--y", y.toString());
@@ -110,16 +116,29 @@ function RocketCommand() {
             const rockets = rocketsRef.current;
             let end = rockets.length;
 
+            const rect = mapRef.current?.getBoundingClientRect();
+
+            if(!rect) {
+                return;
+            }
+
             for(let i = 0; i < end; i++) {
                 const r = rockets[i];
                 moveRocket(r, 0.1 * delta);
+                
+                const x = parseFloat(r.style.getPropertyValue("--x"))
+                const y = parseFloat(r.style.getPropertyValue("--y"))
 
-                if(parseFloat(r.style.getPropertyValue("--x")) > 500) {
+                if(y > rect.height || x < 0 || x > rect.width) {
                     rockets.splice(i, 1);
                     r.remove();
                     
                     i--;
                     end--;
+
+                    if(y > rect.height) {
+                        // boom
+                    }
                 }
             }
         });
