@@ -166,6 +166,8 @@ function RocketCommand() {
             return;
         }
 
+        console.log("Goal :0 :44")
+
         startedRef.current = true;
 
         spawnRocketRandom();
