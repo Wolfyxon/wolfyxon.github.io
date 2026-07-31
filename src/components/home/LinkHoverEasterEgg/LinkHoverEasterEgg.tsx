@@ -76,7 +76,7 @@ function RocketCommand() {
         r.classList.add("rocket");
 
         r.style.setProperty("--rot", rot.toString());
-        r.style.setProperty("--speed", speed ? speed.toString() : "0.1");
+        r.style.setProperty("--speed", speed ? speed.toString() : "0.07");
         r.style.setProperty("--x", x.toString());
         r.style.setProperty("--y", y.toString());
         
