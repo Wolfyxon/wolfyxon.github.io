@@ -56,8 +56,15 @@ export default function LinkHoverEasterEgg() {
 }
 
 function RocketCommand() {
+    const MAX_HEALTH = 20;
+
     const mapRef = useRef<HTMLDivElement>(null);
     const mousePosRef = useRef<Vector2>({x: 0, y: 0});
+
+    const scoreRef = useRef(0);
+    const healthRef = useRef(MAX_HEALTH);
+
+    const [forceRenderCount, setForceRenderCount] = useState(0);
 
     function spawnRocket(x: number, y: number, rot: number, speed?: number) {
         const r = document.createElement("div");
@@ -82,6 +89,10 @@ function RocketCommand() {
     }
 
     function spawnRocketRandom() {
+        if(healthRef.current <= 0) {
+            return;
+        }
+
         const rect = mapRef.current?.getBoundingClientRect();
 
         if(!rect) {
@@ -104,6 +115,10 @@ function RocketCommand() {
     }
 
     function fire() {
+        if(healthRef.current <= 0) {
+            return;
+        }
+
         const audio = new Audio("/assets/audio/rockets/fire.wav");
         const rect = mapRef.current?.getBoundingClientRect();
 
@@ -116,6 +131,21 @@ function RocketCommand() {
 
         spawnRocket(x, y, angleTo(x, y, mousePosRef.current.x, mousePosRef.current.y), 0.2);
         audio.play();
+    }
+
+    function gameOver() {
+        mapRef.current!.innerHTML = "";
+
+        setTimeout(() => {
+            healthRef.current = MAX_HEALTH;
+            scoreRef.current = 0;
+
+            forceRender();
+        }, 5000);
+    }
+
+    function forceRender() {
+        setForceRenderCount((old) => old + 1);
     }
 
     useEffect(() => {
@@ -157,6 +187,9 @@ function RocketCommand() {
                     if(getDistance(x, y, x2, y2) < 5) {
                         r2.remove();
                         rocketHitAudio.play();
+
+                        scoreRef.current += 1;
+                        forceRender();
                     }
                 }
 
@@ -167,6 +200,13 @@ function RocketCommand() {
                         mapRef.current!.style.animation = "";
                         setTimeout(() => mapRef.current!.style.animation = "base-hit 0.25s");
                         baseHitAudio.play();
+
+                        healthRef.current -= 1;
+                        forceRender();
+
+                        if(healthRef.current <= 0) {
+                           gameOver();
+                        }
                     }
 
                     continue;
@@ -184,8 +224,19 @@ function RocketCommand() {
 
     return (
         <div className="rocket-game">
+            <div className="stats" data-force-render={forceRenderCount}>
+                <div className="stat-health">Health: {healthRef.current}</div>
+                <div className="stat-score">Score: {scoreRef.current}</div>
+            </div>
+
             <div className="rockets" ref={mapRef}></div>
             <div className="init-text">I see you're bored</div>
+            
+            {
+                healthRef.current <= 0 ?
+                <div className="game-over" data-force-render={forceRenderCount}>GAME OVER</div>
+                : null
+            }
         </div>
     )
 }
