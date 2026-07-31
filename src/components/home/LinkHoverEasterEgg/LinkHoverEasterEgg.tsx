@@ -217,9 +217,9 @@ function RocketCommand() {
             }
         });
 
-        document.addEventListener("mousemove", (e) => {
-            mousePosRef.current.x = e.pageX;
-            mousePosRef.current.y = e.pageY;
+        mapRef.current!.addEventListener("mousemove", (e) => {
+            mousePosRef.current.x = e.x;
+            mousePosRef.current.y = e.y;
         });
 
         document.addEventListener("mousedown", fire);
