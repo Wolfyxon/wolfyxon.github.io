@@ -134,6 +134,9 @@ function RocketCommand() {
     }
 
     function gameOver() {
+        const audio = new Audio("/assets/audio/rockets/game-over.wav");
+        audio.play();
+
         mapRef.current!.innerHTML = "";
 
         setTimeout(() => {
