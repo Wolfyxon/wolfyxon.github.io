@@ -63,7 +63,8 @@ function RocketCommand() {
 
     const scoreRef = useRef(0);
     const healthRef = useRef(MAX_HEALTH);
-
+    
+    const startedRef = useRef(false);
     const [forceRenderCount, setForceRenderCount] = useState(0);
 
     function spawnRocket(x: number, y: number, rot: number, speed?: number) {
@@ -152,6 +153,13 @@ function RocketCommand() {
     }
 
     useEffect(() => {
+        // For some reason this function can run twice
+        if(startedRef.current) {
+            return;
+        }
+
+        startedRef.current = true;
+
         spawnRocketRandom();
         setInterval(spawnRocketRandom, 2000);
 
