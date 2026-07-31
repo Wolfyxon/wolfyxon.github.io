@@ -32,7 +32,7 @@ export default function ContactPage() {
             
                 <h2>Unconventional</h2>
                 <p>
-                    You may use these examples methods in emergencies when you can't use the primary ones.
+                    You may use these examples methods when you can't use the primary ones.
                 </p>
                 
                 <ul>
