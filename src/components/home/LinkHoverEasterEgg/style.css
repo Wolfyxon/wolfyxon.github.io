@@ -47,3 +47,9 @@
         opacity: 0;
     }
 }
+
+@keyframes base-hit {
+    50% {
+        background: #550000bb;
+    }
+}

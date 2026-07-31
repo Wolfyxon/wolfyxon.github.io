@@ -59,11 +59,12 @@ function RocketCommand() {
     const mapRef = useRef<HTMLDivElement>(null);
     const mousePosRef = useRef<Vector2>({x: 0, y: 0});
 
-    function spawnRocket(x: number, y: number, rot: number) {
+    function spawnRocket(x: number, y: number, rot: number, speed?: number) {
         const r = document.createElement("div");
         r.classList.add("rocket");
 
         r.style.setProperty("--rot", rot.toString());
+        r.style.setProperty("--speed", speed ? speed.toString() : "0.1");
         r.style.setProperty("--x", x.toString());
         r.style.setProperty("--y", y.toString());
         
@@ -103,6 +104,7 @@ function RocketCommand() {
     }
 
     function fire() {
+        const audio = new Audio("/assets/audio/rockets/fire.wav");
         const rect = mapRef.current?.getBoundingClientRect();
 
         if(!rect) {
@@ -112,7 +114,8 @@ function RocketCommand() {
         const x = rect.width / 2;
         const y = rect.height - 10;
 
-        spawnRocket(x, y, angleTo(x, y, mousePosRef.current.x, mousePosRef.current.y));
+        spawnRocket(x, y, angleTo(x, y, mousePosRef.current.x, mousePosRef.current.y), 0.2);
+        audio.play();
     }
 
     useEffect(() => {
@@ -120,6 +123,9 @@ function RocketCommand() {
         setInterval(spawnRocketRandom, 2000);
 
         let lastFrame = Date.now();
+
+        const rocketHitAudio = new Audio("/assets/audio/rockets/rocket-hit.wav");
+        const baseHitAudio = new Audio("/assets/audio/rockets/hit.wav");
         
         setInterval(() => {
             const now = Date.now();
@@ -132,11 +138,10 @@ function RocketCommand() {
             if(!rect) {
                 return;
             }
-
-            let collidedRocketIdx = -1;
-
+            
             for(const r of rockets) {
-                moveRocket(r, 0.1 * delta);
+                const speed = parseFloat(r.style.getPropertyValue("--speed"));
+                moveRocket(r, speed * delta);
 
                 const x = parseFloat(r.style.getPropertyValue("--x"));
                 const y = parseFloat(r.style.getPropertyValue("--y"));
@@ -151,6 +156,7 @@ function RocketCommand() {
 
                     if(getDistance(x, y, x2, y2) < 5) {
                         r2.remove();
+                        rocketHitAudio.play();
                     }
                 }
 
@@ -158,7 +164,9 @@ function RocketCommand() {
                     r.remove();
 
                     if(y > rect.height) {
-                        // boom
+                        mapRef.current!.style.animation = "";
+                        setTimeout(() => mapRef.current!.style.animation = "base-hit 0.25s");
+                        baseHitAudio.play();
                     }
 
                     continue;
