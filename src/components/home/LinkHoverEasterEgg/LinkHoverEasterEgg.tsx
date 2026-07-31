@@ -6,7 +6,7 @@ import { angleTo, deg2rad, getDistance, isColliding, randf, Vector2 } from "@/ut
 import "./style.css";
 
 export default function LinkHoverEasterEgg() {
-    const [triggered, setTriggered] = useState(true);
+    const [triggered, setTriggered] = useState(false);
 
     useEffect(() => {
         const parentElms = document.querySelectorAll(".project-extra");
@@ -41,7 +41,7 @@ export default function LinkHoverEasterEgg() {
 
                 if(buf.length == order.length) {
                     buf = [];
-                    alert("Sorry bro this easter egg is still under construction");
+                    setTriggered(true);
                 }
             });
         }
@@ -159,6 +159,7 @@ function RocketCommand() {
 
         const rocketHitAudio = new Audio("/assets/audio/rockets/rocket-hit.wav");
         const baseHitAudio = new Audio("/assets/audio/rockets/hit.wav");
+        const startAudio = new Audio("/assets/audio/rockets/begin.wav");
         
         setInterval(() => {
             const now = Date.now();
@@ -223,6 +224,8 @@ function RocketCommand() {
         });
 
         document.addEventListener("mousedown", fire);
+        
+        startAudio.play();
     }, []);
 
     return (

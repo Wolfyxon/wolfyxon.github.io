@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <Page category="Home" head={extraHead}>
         <Saul/>
-        {/*<LinkHoverEasterEgg/>*/}
+        <LinkHoverEasterEgg/>
         
         <div id="banner" role="banner">
           {/*<CodeBackground file="src/app/page.tsx" />*/}
