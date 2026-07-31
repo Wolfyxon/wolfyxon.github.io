@@ -21,7 +21,7 @@ export default function ContactPage() {
                 <h2>Conventional</h2>
                 <ul>
                     <li>
-                        Discord server: <TextLink>{DISCORD_INVITE}</TextLink><br/>
+                        Discord server: <TextLink>{DISCORD_INVITE}</TextLink> | <a href="https://discord.gg/2EBxwVpQGb">[backup link]</a><br/>
                         <span className="faded">(from there you can send me a private message)</span>
                     </li>
                     <li>Email: <MailLink>wolfyxon@gmail.com</MailLink></li>
