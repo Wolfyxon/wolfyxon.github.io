@@ -144,6 +144,10 @@ function RocketCommand() {
 
         mapRef.current!.innerHTML = "";
 
+        if(scoreRef.current == 44) {
+            window.location.href = "/shapes";
+        }
+
         setTimeout(() => {
             healthRef.current = MAX_HEALTH;
             scoreRef.current = 0;
