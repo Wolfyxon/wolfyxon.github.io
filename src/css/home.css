@@ -129,6 +129,11 @@
     background: var(--panel-dark);
 }
 
+#roblox-studio-badge:hover img {
+    filter: grayscale();
+    transform: rotate(45deg) translateX(5px);
+}
+
 @media all and (orientation: portrait) {
     #experience {
         width: 100%;
