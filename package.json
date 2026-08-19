@@ -12,7 +12,6 @@
     "checksAndUpdates": "npm run cli -- --check-update-robots"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.7.3",
     "next": "16.2.11",
     "openpgp": "^6.3.0",

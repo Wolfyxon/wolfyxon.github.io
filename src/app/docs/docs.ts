@@ -1,5 +1,5 @@
+import { parseMarkdownYaml } from "@/util/mdyaml";
 import * as fs from "fs";
-import matter from "gray-matter";
 
 const DOCS_PATH = "public/docs";
 
@@ -44,15 +44,15 @@ export async function getDocPaths(dir: string = DOCS_PATH): Promise<string[]> {
 
 export async function parseDoc(path: string): Promise<DocData> {
     const text = await fs.readFileSync(path);
-    const mat = matter(text);
+    const parsed = parseMarkdownYaml(text.toString("utf-8"));
     
     const slug = path.replace(DOCS_PATH + "/", "").replace(".md", "").split("/");
 
     return {
-        title: mat.data.title ?? slug,
-        description: mat.data.description ?? "",
-        hidden: mat.data.hidden,
-        markdown: mat.content,
+        title: parsed.data.title ?? slug,
+        description: parsed.data.description ?? "",
+        hidden: parsed.data.hidden,
+        markdown: parsed.content,
         slug: slug,
     };
 }
