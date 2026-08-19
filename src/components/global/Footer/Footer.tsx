@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             
             <p>This website is licensed under <a href="https://github.com/Wolfyxon/wolfyxon.github.io/blob/main/LICENSE">GPL-3.0</a>.</p>
-            <p>Made by Wolfyxon.</p>
+            <p>Made by Wolfyxon. Handcrafted, absolutely no AI.</p>
         </footer>
     );
 }
