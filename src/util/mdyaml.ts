@@ -20,17 +20,35 @@ export function parseMarkdownYaml(text: string): MarkdownYAML {
         const line = lines[i];
         const trimmedLine = line.trim();
 
+        if(line == "") {
+            continue;
+        }
+
         if(trimmedLine == YAML_HEADER_BOUND) {
             if(yamlStartLine == -1) {
                 yamlStartLine = i;
+                continue;
             } else {
                 yamlEndLine = i;
                 break;
             }
         }
 
-        if(yamlStartLine == -1 && trimmedLine != "\n") { // Got text before any YAML data
-            return {
+        if(yamlStartLine != -1) {
+            const split = line.split(":");
+            const key = split[0].trim();
+            let val = split[1];
+            
+            if(val == undefined) {
+                val = "";
+            } else {
+                val = val.trim();
+            }
+
+            data[key] = val;
+        } else {
+            // Got text before any YAML data
+            return { 
                 data: {},
                 content: text
             };
