@@ -7,6 +7,7 @@
     "build": "npm run checksAndUpdates && next build",
     "start": "next start",
     "cli": "npx tsx src/tools/cli.ts",
+    "test": "npm run cli -- --test",
     "robots": "npm run cli -- --update-robots",
     "checksAndUpdates": "npm run cli -- --check-update-robots"
   },
