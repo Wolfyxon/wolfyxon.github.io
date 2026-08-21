@@ -5,18 +5,18 @@ import { parseMarkdownYaml, YAMLData } from "@/util/mdyaml";
 type TestResult = string | undefined | null;
 type TestFunction = (() => TestResult) | (() => Promise<TestResult>);
 
-export async function runUnitTests() {
-    const tests: TestFunction[] = [
-        testKebab,
-        testMdYaml
-    ];
+const TESTS: TestFunction[] = [
+    testKebab,
+    testMdYaml
+];
 
+export async function runUnitTests() {
     let okCount = 0;
     let failCount = 0;
 
     console.log("-- Running unit tests --");
 
-    for(const func of tests) {
+    for(const func of TESTS) {
         let err = null;
         let ok = true;
 
