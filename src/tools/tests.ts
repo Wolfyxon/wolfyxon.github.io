@@ -2,6 +2,7 @@ import * as fs from "fs";
 import { toKebabCase } from "@/util/string";
 import { parseMarkdownYaml, YAMLData } from "@/util/mdyaml";
 import { DRAWINGS } from "@/app/art/drawingData";
+import { exit } from "process";
 
 type TestResult = string | undefined | null;
 type TestFunction = (() => TestResult) | (() => Promise<TestResult>);
@@ -44,6 +45,10 @@ export async function runUnitTests() {
     }
 
     console.log(`\nSuccessful: ${okCount} Failed: ${failCount}`);
+
+    if(failCount != 0) {
+        exit(1);
+    }
 }
 
 function testKebab() {
