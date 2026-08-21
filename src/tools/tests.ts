@@ -1,13 +1,15 @@
 import * as fs from "fs";
 import { toKebabCase } from "@/util/string";
 import { parseMarkdownYaml, YAMLData } from "@/util/mdyaml";
+import { DRAWINGS } from "@/app/art/drawingData";
 
 type TestResult = string | undefined | null;
 type TestFunction = (() => TestResult) | (() => Promise<TestResult>);
 
 const TESTS: TestFunction[] = [
     testKebab,
-    testMdYaml
+    testMdYaml,
+    testArt
 ];
 
 export async function runUnitTests() {
@@ -111,5 +113,20 @@ async function testMdYaml() {
             return `Excessive data key "${k}"`;
         }
     }
-    
+}
+
+function testArt() {
+    for(const drawing of DRAWINGS) {
+        const date = new Date(drawing.date);
+
+        if(isNaN(date as any)) { // isNaN() also checks dates
+            return `Invalid date: '${drawing.date}'. Drawing: '${drawing.title}'`;
+        }
+
+        const src = "public" + drawing.src;
+
+        if(!fs.existsSync(src)) {
+            return `File not found: ${src}`;
+        }
+    }
 }
