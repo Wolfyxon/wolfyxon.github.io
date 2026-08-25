@@ -1,0 +1,23 @@
+body {
+    position: relative;
+}
+
+body * {
+    top: 0;
+    left: 0;
+    position: absolute !important;
+    margin: none !important;
+    padding: none !important;
+    object-fit: fill !important;
+    min-width: none !important;
+    min-height: none !important;
+    max-width: none !important;
+    max-height: none !important;
+    transition: none !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+}
+
+#badapple-video {
+    opacity: 0;
+}
