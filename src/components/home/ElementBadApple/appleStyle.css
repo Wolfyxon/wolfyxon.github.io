@@ -1,0 +1,12 @@
+#apple {
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media all and (orientation: portrait) {
+    #apple {
+        display: none;
+    }
+}

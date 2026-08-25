@@ -12,6 +12,7 @@ import "@/css/animations.css";
 import "@/css/home.css";
 import Saul from "@/components/Saul/Saul";
 import LinkHoverEasterEgg from "@/components/home/LinkHoverEasterEgg/LinkHoverEasterEgg";
+import Apple from "@/components/home/ElementBadApple/Apple";
 
 export const metadata: Metadata = {
   title: "Wolfyxon | My website",
@@ -96,6 +97,7 @@ export default function Home() {
       </div>
       
       <Wolf/>
+      <Apple/>
     </Page>
   );
 }
