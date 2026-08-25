@@ -2,7 +2,7 @@ body {
     position: relative;
 }
 
-body * {
+body:has(#badapple-video) * {
     top: 0;
     left: 0;
     position: absolute !important;

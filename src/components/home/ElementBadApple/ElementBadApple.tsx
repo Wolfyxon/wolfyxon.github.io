@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import "./style.css";
 import { coordToIdx, Rect2 } from "@/util/math";
 import { shuffleArray } from "@/util/arrays";
+
+import "./style.css";
 
 export default function ElementBadApple() {
     const videoRef = useRef<HTMLVideoElement>(null);
     
-    const SIZE = 225;
+    const WIDTH = 300;
+    const HEIGHT = 225;
 
     function calcArea(grid: number[], x: number, y: number): Rect2 {
         const rect = {
@@ -18,14 +20,14 @@ export default function ElementBadApple() {
             h: 1
         };
 
-        grid[coordToIdx(x, y, SIZE)] = 0;
+        grid[coordToIdx(x, y, WIDTH)] = 0;
 
-        while(rect.y + rect.h < SIZE) {
+        while(rect.y + rect.h < HEIGHT) {
             const toClear = [];
             let canExpandHeight = true;
             
             for(let x = rect.x; x < rect.x + rect.w; x++) {
-                const idx = coordToIdx(x, rect.y + rect.h, SIZE);
+                const idx = coordToIdx(x, rect.y + rect.h, WIDTH);
                 const down = grid[idx];
 
                 if(!down) {
@@ -47,12 +49,12 @@ export default function ElementBadApple() {
             rect.h++;
         }
 
-        while(rect.x + rect.w < SIZE) {
+        while(rect.x + rect.w < WIDTH) {
             const toClear = [];
             let canExpandWidth = true;
             
             for(let y = rect.y; y < rect.y + rect.h; y++) {
-                const idx = coordToIdx(rect.x + rect.w, y, SIZE);
+                const idx = coordToIdx(rect.x + rect.w, y, WIDTH);
                 const right = grid[idx];
 
                 if(!right) {
@@ -80,9 +82,9 @@ export default function ElementBadApple() {
     function getAreas(grid: number[]) {
         const areas: Rect2[] = [];
 
-        for(let x = 0; x < SIZE; x++) {
-            for(let y = 0; y < SIZE; y++) {
-                if(!grid[coordToIdx(x, y, SIZE)]) {
+        for(let x = 0; x < WIDTH; x++) {
+            for(let y = 0; y < HEIGHT; y++) {
+                if(!grid[coordToIdx(x, y, WIDTH)]) {
                     continue;
                 }
 
@@ -104,8 +106,8 @@ export default function ElementBadApple() {
         }
 
         const canvas = document.createElement("canvas");
-        canvas.width = SIZE;
-        canvas.height = SIZE;
+        canvas.width = WIDTH;
+        canvas.height = HEIGHT;
         
         const ctx = canvas.getContext("2d")!;
 
@@ -162,14 +164,19 @@ export default function ElementBadApple() {
             document.addEventListener("mousedown", () => {
                 videoRef.current!.play();
             });
-
-            videoRef.current!.play();
         }, 10);
-    });
+
+        setTimeout(() => {
+            console.log("attempt load")
+            videoRef.current!.load();
+        }, 100);
+
+        videoRef.current!.onload = () => {
+            console.log("AAAAAAA")
+        };
+    }, []);
 
     return (<>
-        <video autoPlay ref={videoRef} id="badapple-video">
-            <source src="/assets/video/bad_apple.mp4" type="video/mp4"/>
-        </video>
+        <video autoPlay ref={videoRef} id="badapple-video" src="/assets/video/bad_apple.mp4"/>
     </>);
 }
