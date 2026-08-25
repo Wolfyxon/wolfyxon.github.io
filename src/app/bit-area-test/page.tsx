@@ -141,7 +141,6 @@ export default function BitAreaTestPage() {
         document.body.append(canvas);
 
         setInterval(() => {
-            setAreas([]);
             if(!videoRef.current!.paused) {
                 ctx!.drawImage(videoRef.current as any, 0, 0, canvas.width, canvas.height);
                 const pixels = ctx!.getImageData(0, 0, canvas.width, canvas.height).data;
