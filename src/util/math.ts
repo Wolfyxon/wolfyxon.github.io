@@ -3,6 +3,13 @@ export type Vector2 = {
     y: number
 };
 
+export type Rect2 = {
+    x: number,
+    y: number,
+    w: number,
+    h: number
+};
+
 export function clamp(num: number, min: number, max: number): number {
     if(num < min) return min;
     if(num > max) return max;
@@ -35,6 +42,10 @@ export function angleTo(x1: number, y1: number, x2: number, y2: number) {
     const dy = y2 - y1;
     
     return Math.atan2(dy, dx);
+}
+
+export function coordToIdx(x: number, y: number, width: number): number {
+    return x + y * width;
 }
 
 export function isColliding(x1: number, y1: number, w1: number, h1: number, x2: number, y2: number, w2: number, h2: number) {
