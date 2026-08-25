@@ -23,21 +23,17 @@ function ProjectList() {
     }
 
     registerProject(
-        "Lover",
-        "Command line build system for LÖVE2D.",
-        "assets/img/home/projectThumbnails/lover.webp",
+        "Godot Together",
+        "Experimental Godot plugin for real time collaboration over the network.",
+        "assets/img/home/projectThumbnails/gdt.webp",
         [
             {
                 text: "Source code",
-                url: "https://github.com/Wolfyxon/lover"
+                url: "https://github.com/Wolfyxon/GodotTogether"
             },
             {
                 text: "Wiki",
-                url: "https://github.com/Wolfyxon/lover/wiki"
-            },
-            {
-                text: "Downloads",
-                url: "https://github.com/Wolfyxon/lover/releases/latest"
+                url: "https://github.com/Wolfyxon/GodotTogether/wiki"
             }
         ]
     );
@@ -59,6 +55,26 @@ function ProjectList() {
     );
 
     registerProject(
+        "Lover",
+        "Command line build system for LÖVE2D.",
+        "assets/img/home/projectThumbnails/lover.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/lover"
+            },
+            {
+                text: "Wiki",
+                url: "https://github.com/Wolfyxon/lover/wiki"
+            },
+            {
+                text: "Downloads",
+                url: "https://github.com/Wolfyxon/lover/releases/latest"
+            }
+        ]
+    );
+
+    registerProject(
         "3DS Web stuff",
         "A collection of browser games and tools made for the Nintendo 3DS browser with some DSi support.",
         "assets/img/home/projectThumbnails/3dsWebStuff.webp",
@@ -70,22 +86,6 @@ function ProjectList() {
             {
                 text: "Source code",
                 url: "https://github.com/Wolfyxon/3ds-web-stuff"
-            }
-        ]
-    );
-
-    registerProject(
-        "Godot Together",
-        "Experimental Godot plugin for real time collaboration over the network.",
-        "assets/img/home/projectThumbnails/gdt.webp",
-        [
-            {
-                text: "Source code",
-                url: "https://github.com/Wolfyxon/GodotTogether"
-            },
-            {
-                text: "Wiki",
-                url: "https://github.com/Wolfyxon/GodotTogether/wiki"
             }
         ]
     );
