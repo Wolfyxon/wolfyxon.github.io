@@ -104,7 +104,19 @@ function ProjectList() {
                 url: "https://github.com/Wolfyxon/bateria/releases/latest"
             }
         ]
-    )
+    );
+
+    registerProject(
+        "lockguy",
+        "Simple classical lockscreen for Linux. Also written in C.",
+        "assets/img/home/projectThumbnails/lockguy.webp",
+        [
+            {
+                text: "Source code",
+                url: "https://github.com/Wolfyxon/lockguy"
+            }
+        ]
+    );
 
     registerProject(
         "SongWrap",
@@ -124,7 +136,7 @@ function ProjectList() {
                 url: "https://github.com/Wolfyxon/AudaciousStats"
             }
         ]
-    )
+    );
 
     registerProject(
         "The Great Doors of Door", 
