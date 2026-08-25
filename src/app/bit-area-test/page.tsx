@@ -1,15 +1,17 @@
 "use client";
 
 import { coordToIdx, randi, Rect2 } from "@/util/math";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import "./style.css";
 
 export default function BitAreaTestPage() {
-    const SIZE = 4;
+    const SIZE = 16;
     const [grid, setGrid] = useState<number[]>([]);
     const [areas, setAreas] = useState<Rect2[]>([]);
     const [renders, setRenders] = useState(0);
+
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     function genGrid() {
         const newGrid = [];
@@ -130,6 +132,38 @@ export default function BitAreaTestPage() {
 
     useEffect(() => {
         genGrid();
+
+        const canvas = document.createElement("canvas");
+        canvas.width = SIZE;
+        canvas.height = SIZE;
+
+        const ctx = canvas.getContext("2d");
+        document.body.append(canvas);
+
+        setInterval(() => {
+            setAreas([]);
+            if(!videoRef.current!.paused) {
+                ctx!.drawImage(videoRef.current as any, 0, 0, canvas.width, canvas.height);
+                const pixels = ctx!.getImageData(0, 0, canvas.width, canvas.height).data;
+                
+                for (let i = 0; i < pixels.length; i += 4) {
+                    const r = pixels[i];
+                    const g = pixels[i + 1];
+                    const b = pixels[i + 2];
+                    const brightness = ( 3 * r + 4 * g + b) >>> 3;
+
+                    if(brightness < 60) {
+                        grid[i / 4] = 1;
+                    } else {
+                        grid[i / 4] = 0;
+                    }
+                }
+
+                setGrid(grid);
+                calcAreas(grid);
+            }
+
+        }, 10);
     }, []);
 
     return (
@@ -170,6 +204,9 @@ export default function BitAreaTestPage() {
             <button onClick={clearGrid}>Clear</button>
 
             <div>Area count: {areas.length}</div>
+
+            <video ref={videoRef} src={"/assets/video/bad_apple.mp4"} controls/>
+            
         </main>
     )
 }
