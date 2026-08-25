@@ -1,0 +1,41 @@
+main {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#grid {
+    --cell-size: 50px;
+    position: relative;
+    border: 1px solid black;
+    width: fit-content;
+    line-height: 0;
+}
+
+#grid > * {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#grid .filled {
+    background: gray;
+}
+
+#grid .area {
+    scale: 0.9;
+    position: absolute;
+    pointer-events: none;
+    left: calc(var(--x) * var(--cell-size));
+    top: calc(var(--y) * var(--cell-size));
+    width: calc(var(--cell-size) * var(--w));
+    height: calc(var(--cell-size) * var(--h));
+    
+    opacity: 0.5;
+    border: 1px solid gray;
+}
