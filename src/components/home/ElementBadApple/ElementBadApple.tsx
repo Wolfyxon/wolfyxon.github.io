@@ -152,13 +152,11 @@ export default function ElementBadApple() {
 
                 elm.style.removeProperty("visibility");
                 
-                const SCALE = 2.5;
-                
-                elm.style.width = (area.w * SCALE).toString() + "px";
-                elm.style.height = (area.h * SCALE).toString() + "px";
+                elm.style.width = ((area.w / WIDTH) * 100).toString() + "vw";
+                elm.style.height = ((area.h / HEIGHT) * 100).toString() + "vh";
 
-                elm.style.left = (area.x * SCALE).toString() + "px";
-                elm.style.top = (area.y * SCALE).toString() + "px";
+                elm.style.left = ((area.x / WIDTH) * 100).toString() + "vw";
+                elm.style.top = ((area.y / HEIGHT) * 100).toString() + "vh";
             }
 
             document.addEventListener("mousedown", () => {
