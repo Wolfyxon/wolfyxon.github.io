@@ -46,6 +46,7 @@ export default function Experience() {
               <Badge icon="software/framework/godot.svg" alt="Godot" />
               <Badge icon="software/framework/rbxstudio.svg" alt="Roblox Studio" id="roblox-studio-badge" />
               <Badge icon="arduino.svg" alt="Arduino" />
+              <Badge icon="software/framework/xorg.svg" alt="Xlib" />
               <Badge icon="software/framework/ev3dev.webp" alt="ev3dev" />
 
               {
