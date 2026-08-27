@@ -23,6 +23,11 @@ export default function Apple() {
             ? <ElementBadApple/>
             : null
         }
-        <img src={"/assets/img/apple.webp"} id="apple" onClick={click} alt="Apple" width="50px"/>
+        <img 
+            src={"/assets/img/apple.webp"}
+            id="apple" onClick={click} 
+            title="This apple looks bad..."
+            alt="Apple" width="50px"
+        />
     </>)
 }
