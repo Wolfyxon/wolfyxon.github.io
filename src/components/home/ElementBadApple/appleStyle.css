@@ -3,6 +3,18 @@
     bottom: 2px;
     right: 10px;
     cursor: pointer;
+    transition: 0.1s;
+}
+
+#apple:hover {
+    filter: drop-shadow(0 0 5px black);
+    opacity: 0.9;
+    rotate: 2deg;
+    scale: 1.025;
+}
+
+#apple:active {
+    scale: 0.9;
 }
 
 @media all and (orientation: portrait) {
