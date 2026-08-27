@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { KeyboardEvent, useRef, useState } from "react";
 import "./style.css";
 
 export default function Wolf() {
@@ -42,6 +42,12 @@ export default function Wolf() {
         }, 50);
     }
 
+    function keyDown(e: KeyboardEvent) {
+        if(e.key == "Enter") {
+            onClick();
+        }
+    }
+
     function stopReset() {
         if(patResetTimeout) {
             clearInterval(patResetTimeout);
@@ -52,9 +58,11 @@ export default function Wolf() {
     return (
         <img
             src="/assets/img/art/littleWolf.webp" 
+            tabIndex={0}
             className="wolf"
             alt="Little wolf"
             onClick={onClick}
+            onKeyDown={keyDown}
             ref={ref}
             draggable={false}
         />

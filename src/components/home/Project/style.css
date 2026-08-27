@@ -41,6 +41,10 @@
     transition: all 0.1s !important;
 }
 
+.project-text a:focus {
+    outline-color: gray;
+}
+
 .project-text a::after {
     content: " >";
     margin-left: 10px;

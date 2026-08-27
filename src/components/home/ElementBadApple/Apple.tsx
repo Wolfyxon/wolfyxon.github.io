@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { KeyboardEvent, useState } from "react";
 import ElementBadApple from "./ElementBadApple";
 
 import "./appleStyle.css";
@@ -17,6 +17,12 @@ export default function Apple() {
         window.scrollTo(0, 0);
     }
 
+    function keyDown(e: KeyboardEvent) {
+        if(e.key == "Enter") {
+            click();
+        }
+    }
+
     return (<>
         {
             triggered
@@ -25,9 +31,13 @@ export default function Apple() {
         }
         <img 
             src={"/assets/img/apple.webp"}
-            id="apple" onClick={click} 
+            id="apple" 
+            onClick={click}
+            onKeyDown={keyDown} 
+            tabIndex={0}
             title="This apple looks bad..."
-            alt="Apple" width="50px"
+            alt="Apple" 
+            width="50px"
         />
     </>)
 }
