@@ -76,7 +76,7 @@ function ProjectList() {
 
     registerProject(
         "3DS Web stuff",
-        "A collection of browser games and tools made for the Nintendo 3DS browser with some DSi support.",
+        "A collection of browser games and tools made for the Nintendo 3DS browser with some DSi support. Not Homebrew, just a site!",
         "assets/img/home/projectThumbnails/3dsWebStuff.webp",
         [
             {
