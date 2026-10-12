@@ -18,35 +18,34 @@ export default function ContactPage() {
             <ArticlePage title="Contact">
                 <h1 id="ways-to-contact-me">Ways to contact me</h1>
                 
-                <h2 id="conventional">Conventional</h2>
+                <h2 id="preferred">Preferred</h2>
                 <ul>
                     <li>
-                        Discord server: <TextLink>{DISCORD_INVITE}</TextLink> | <a href="https://discord.gg/2EBxwVpQGb">[backup link]</a><br/>
-                        <span className="faded">(from there you can send me a private message)</span>
+                        Discord server: <TextLink>{DISCORD_INVITE}</TextLink> | <a href="https://discord.gg/2EBxwVpQGb">[backup link]</a>
                     </li>
                     <li>Email: <MailLink>wolfyxon@gmail.com</MailLink></li>
                 </ul>
+                
+                <h2 id="non-preferred">Non preferred</h2>
                 <p>
-                    If your message is sensitive, consider encrypting it as explained below.
-                </p>
-            
-                <h2 id="unconventional">Unconventional</h2>
-                <p>
-                    You may use these examples methods when you can't use the primary ones.
+                    You may use these examples methods when you or me can't use the primary ones.
                 </p>
                 
                 <ul>
-                    <li>Open an issue on any of my <a href="https://github.com/Wolfyxon/">GitHub repositories</a></li>
+                    <li>Open an issue on <a href="https://github.com/Wolfyxon/Wolfyxon/issues">this GitHub repo</a></li>
                     <li>Comment on one of my <a href="https://www.youtube.com/channel/UChIi7TxaLLZQpFTvWgNsvcQ">YouTube videos</a></li>
+                    <li>Matrix: <b>@wolfyxon:matrix.org</b> <span className="faded">(Currently not actively checking. Avoid.)</span></li>
+                    <li className="faded">Signal: (will reveal in an emergency)</li>
                 </ul>
 
                 <p>
-                    If something bad happens, I will likely reveal more methods.
+                    Considering many of these methods involve public channels, consider using encryption if you want the message to be private.
                 </p>
 
-                <h1 id="how-to-verify-my-identity">How to verify my identity</h1>
+                <h1 id="verifying-my-identity">Verifying my identity</h1>
                 <p>
-                    If you know me well, simply ask me a few questions you're sure only I would know the answer to.
+                    If you know me well, simply ask me a few questions you're sure only I would know the answer to, but at the
+                    same time isn't well known.
                 </p>
                 <p>
                     You may also request me to create a signed message that you can verify with my <a href="/resources/publicKeys/wolfyxon.txt">public PGP key</a>.
