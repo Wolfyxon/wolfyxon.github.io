@@ -16,6 +16,25 @@ export const metadata: Metadata = {
 }
 
 export default async function DocsHomePage() {
+    const categorizedDocs = await getDocsInCategories();
+    const infoCategory = categorizedDocs[0];
+
+    infoCategory.docs.unshift({
+        "title": "Contact",
+        "description": "Different ways to contact me and some other extra information.",
+        "markdown": "",
+        slug: ["/contact"]
+    });
+
+
+    infoCategory.docs.unshift({
+        "title": "About me",
+        "description": "Some basic info about me :P",
+        "markdown": "",
+        slug: ["/about"]
+    });
+
+
     return (
         <Page homeUrl="" category="Docs">
             <ArticlePage title="Documentation">
@@ -28,13 +47,10 @@ export default async function DocsHomePage() {
                 <p>
                     Each doc can also be viewed as plain markdown text, by adding <b>.md</b> at the end of the URL.
                 </p>
-                <p>
-                    Also see <a href="/about">about me</a> & <a href="/contact">contact</a>.
-                </p>
-
+                
                 <div id="doc-list">
                     {
-                        (await getDocsInCategories()).map((category) => {
+                        categorizedDocs.map((category) => {
                             return (
                             <Fragment key={category.name}>
                             
