@@ -45,9 +45,9 @@ export default async function DocsHomePage() {
                     It can also serve the purpose of a blog. 
                 </p>
                 <p>
-                    Each doc can also be viewed as plain markdown text, by adding <b>.md</b> at the end of the URL.
+                    Most docs can also be viewed as plain markdown text, by adding <b>.md</b> at the end of the URL.
                 </p>
-                
+
                 <div id="doc-list">
                     {
                         categorizedDocs.map((category) => {
