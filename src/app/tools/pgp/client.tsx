@@ -175,10 +175,8 @@ export default function PGPPageClient(props: {myKey: string}) {
                 <p>
                     <a href="/docs/info/keys">Key documentation</a>
                     <span> | </span>
-                    <a href="/resources/publicKeys/wolfyxon.txt">Download my public key</a>
-                    <span> </span>
-                    <a href="/resources/publicKeys/wolfyxon.gpg">(binary)</a>
-                    
+                    <a href="/assets/pgp.txt">Download my public key</a>
+                                        
                     <br/><br/>
 
                     <span className="faded">

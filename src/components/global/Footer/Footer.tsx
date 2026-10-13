@@ -27,7 +27,7 @@ export default function Footer() {
                 <Column title="Contact">
                     <a href="mailto:wolfyxon@gmail.com" translate="no">wolfyxon@gmail.com</a>
                     <a href={DISCORD_INVITE}>Discord</a>
-                    <a href="/resources/publicKeys/wolfyxon.txt">PGP key</a>
+                    <a href="/assets/pgp.txt">PGP key</a>
                 </Column>
             </div>
             

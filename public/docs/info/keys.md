@@ -34,7 +34,7 @@ Before using my key, <a href="#revocation">check if it hasn't been revoked</a>.
 If it has been revoked. Do not use it as it could be compromised and someone else could be using it to create signatures and decrypt your messages.
 
 # Importing
-[Download text version](/resources/publicKeys/wolfyxon.txt) | [Download binary version (.gpg)](/resources/publicKeys/wolfyxon.gpg)
+[Download text version](/assets/pgp.txt)
 
 My key as text:
 ```
@@ -67,7 +67,7 @@ gpg --import
 
 ### From URL
 ```
-curl https://wolfyxon.github.io/resources/publicKeys/wolfyxon.gpg | gpg --import -
+curl https://wolfyxon.github.io/assets/pgp.txt | gpg --import -
 ```
 
 **NOTE:** Not all Windows versions have `curl` installed by default, so you may want to use an other method or install it first.

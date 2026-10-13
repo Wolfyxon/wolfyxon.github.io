@@ -48,7 +48,7 @@ export default function ContactPage() {
                     same time isn't well known.
                 </p>
                 <p>
-                    You may also request me to create a signed message that you can verify with my <a href="/resources/publicKeys/wolfyxon.txt">public PGP key</a>.
+                    You may also request me to create a signed message that you can verify with my <a href="/assets/pgp.txt">public PGP key</a>.
                     If you don't know how to do that, see the <a href="/docs/info/keys/">documentation page about keys</a>.
                     If I refuse to do that, someone could be impersonating me.
                 </p>
