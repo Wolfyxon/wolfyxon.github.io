@@ -1,4 +1,5 @@
 html {
+    /* Colors */
     --text: #e2e2e2;
     --background: black;
     --panel-bright: #545457; 
@@ -18,6 +19,22 @@ html {
     --special2: #8300FF;
     
     --warning: rgb(255, 153, 0);
+
+    --color1-gradient: linear-gradient(
+        var(--color1),
+        color-mix(in srgb, 
+            var(--color1),
+            black
+        )
+    );
+
+    --panel-dark-gradient: linear-gradient(
+        var(--panel-dark),
+        color-mix(in srgb, 
+            var(--panel-dark),
+            black 40%
+        )
+    );
 }
 
 body, html {

@@ -17,7 +17,7 @@ header > * {
     width: 65%;
     font-size: 70%;
     font-weight: bold;
-    background-color: var(--color1);
+    background: var(--color1-gradient);
     transform: skew(20deg);
     transition: 0.1s;
 }
@@ -81,7 +81,7 @@ header > * {
 
 /* Navigator */
 header nav {
-    background: var(--panel-dark);
+    background: var(--panel-dark-gradient);
     width: 70%;
     height: 50px;
     transform: skew(-20deg);

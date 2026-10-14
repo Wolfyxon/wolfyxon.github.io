@@ -80,7 +80,7 @@
     border-radius: 20px;
     width: 60%;
     height: 2vw;
-    background: var(--panel-dark);
+    background: var(--panel-dark-gradient);
     padding: 1%;
 }
 
@@ -126,7 +126,7 @@
 #software > div {
     height: fit-content;
     padding: 1%;
-    background: var(--panel-dark);
+    background: var(--panel-dark-gradient);
 }
 
 #roblox-studio-badge:hover img {
@@ -151,7 +151,7 @@
 #people-list > * {
     flex: 1;
     border-radius: 10px;
-    background-color: var(--panel-dark);
+    background: var(--panel-dark-gradient);
     min-width: 200px;
     height: 100px fit-content;
     padding: 1%;

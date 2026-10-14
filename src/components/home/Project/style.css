@@ -1,7 +1,7 @@
 .project {
     display: flex;
     border-radius: 10px;
-    background: var(--panel-dark);
+    background: var(--panel-dark-gradient);
     min-height: 10vw;
     height: fit-content;
     margin-bottom: 10px;
