@@ -57,6 +57,7 @@ header > * {
     font-size: 130%;
     display: inline-block;
     transform: skew(20deg);
+    text-shadow: 0px 0px 10px black;
 }
 
 #header-page-title {
