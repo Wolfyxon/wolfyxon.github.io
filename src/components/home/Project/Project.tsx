@@ -31,7 +31,7 @@ export default function Project(props: ProjectProps) {
                 href={Object.entries(props.links)[0][1]}
                 target="_blank"
             >
-                <img className="project-thumbnail" src={props.thumbnail}/>      
+                <img className="project-thumbnail" src={props.thumbnail} alt="Thumbnail"/>      
             </a>   
         </div>
     )
