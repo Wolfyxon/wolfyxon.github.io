@@ -46,7 +46,7 @@ export default function Home() {
                   </h1>
                   <p id="banner-text-about">
                       I love programming and dealing with all kinds of software.
-                      Also into electronics and sometimes art and music.
+                      Also some electronics and sometimes art and music.
                   </p>
 
                   <div id="banner-links">
