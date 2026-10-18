@@ -19,7 +19,7 @@ export default function Project(props: ProjectProps) {
                     {
                         props.links ?
                         Object.entries(props.links).map(([name, url]) => 
-                            <a href={url} key={name}>{name}</a>
+                            <a href={url} key={name} target="_blank">{name}</a>
                         )
                         : null
                     }
