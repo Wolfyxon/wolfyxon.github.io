@@ -6,6 +6,7 @@ import Page from "@/layouts/Page";
 import { DISCORD_INVITE } from "@/globalData";
 
 import { Metadata } from "next";
+import FileContent from "@/components/FileContent";
 
 export const metadata: Metadata = {
     title: "Contact",
@@ -42,27 +43,39 @@ export default function ContactPage() {
                     Considering many of these methods involve public channels, consider using encryption if you want the message to be private.
                 </p>
 
-                <h1 id="verifying-my-identity">Verifying my identity</h1>
-                <p>
-                    If you know me well, simply ask me a few questions you're sure only I would know the answer to, but at the
-                    same time isn't well known.
-                </p>
-                <p>
-                    You may also request me to create a signed message that you can verify with my <a href="/assets/pgp.txt">public PGP key</a>.
-                    If you don't know how to do that, see the <a href="/docs/info/keys/">documentation page about keys</a>.
-                    If I refuse to do that, someone could be impersonating me.
-                </p>
+                <h1>Encryption & verification</h1>
+                <p>Import this PGP key:</p>
 
-                <h1 id="encryption">Encryption</h1>
+                <pre>
+                    <code>
+                        <FileContent path="public/assets/pgp.txt"/>
+                    </code>
+                </pre>
+                <a href="/assets/pgp.txt">Also as text file link</a>
+
                 <p>
-                    The public key mentioned above may also be used to encrypt files and messages only I will be able to decrypt.
-                    Everything is explained in the documentation.
+                    You can use it to send me an encrypted message only I will be able to decrypt, and you can use it to verify my digital signatures.
                 </p>
 
                 <p>
-                    You can also use the <a href="/tools/pgp/">online PGP page</a>, but if this site has been compromised, someone could be intercepting your messages,
-                    so be careful.
+                    <a href="/docs/info/keys/">Documentation page about keys.</a> <br/>
+                    <a href="/tools/pgp">Browser version of PGP</a> (Use carefully! If the site has been hijacked, your messages could be intercepted!)
                 </p>
+
+                <h1>Other ways of proving my identity</h1>
+                <p>
+                    To prove my identity without using cryptography:
+                </p>
+
+                <ul>
+                    <li>Ask me for a codeword or inside joke.</li>
+                    <li>Ask me a very specific question only we both would know the answer to.</li>
+                    <li>Ask me to send some kind of image or other file you think I specifically should have.</li>
+                    <li>Pay attention to my behavior and typing style.</li>
+                    <li>Don't blindly trust voice messages! AI can easily copy someone's voice.</li>
+                </ul> 
+                
+
             </ArticlePage>
         </Page>
     )
