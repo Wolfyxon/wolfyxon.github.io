@@ -33,6 +33,7 @@
 }
 
 .project-thumbnail-container {
+    display: block;
     flex: 0.5;
 }
 
@@ -44,6 +45,7 @@
     mask-image: linear-gradient(90deg, transparent, white, white, white); /* % doesn't work guuuurrrgh */
     object-fit: cover;
     width: 100%;
+    height: 100%;
     transition: 0.2s;
     mask-size: 100%;
 }
