@@ -48,7 +48,7 @@ export default function EncryptionDialog(props: {
                     hasJs ?
                     <div className="encryption-inputs">
                         <p>{status}</p>
-                        <input type="password" ref={passwordRef} className="encryption-input" placeholder="Enter password..."/>
+                        <input type="password" ref={passwordRef} className="encryption-input" placeholder="Enter password..." autoFocus/>
                         <input type="submit" value="Submit"/>
                     </div>
                     : <h2>Please enable JavaScript.</h2>
