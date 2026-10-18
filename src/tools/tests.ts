@@ -3,6 +3,7 @@ import { toKebabCase } from "@/util/string";
 import { parseMarkdownYaml, YAMLData } from "@/util/mdyaml";
 import { DRAWINGS } from "@/app/art/drawingData";
 import { exit } from "process";
+import { cryptoUtil } from "@/util/crypto";
 
 type TestResult = string | undefined | null;
 type TestFunction = (() => TestResult) | (() => Promise<TestResult>);
@@ -10,7 +11,8 @@ type TestFunction = (() => TestResult) | (() => Promise<TestResult>);
 const TESTS: TestFunction[] = [
     testKebab,
     testMdYaml,
-    testArt
+    testArt,
+    testCryptoBuf
 ];
 
 export async function runUnitTests() {
@@ -135,3 +137,34 @@ function testArt() {
         }
     }
 }
+
+async function testCryptoBuf() {
+    const input = new Uint8Array([1, 2, 3, 49, 74]);
+    
+    const validKey = await cryptoUtil.keyFromPassword("HelloWorld");
+    const invalidKey = await cryptoUtil.keyFromPassword("HelloWorld5555555555");
+    
+    const encrypted = await cryptoUtil.encryptChunk(validKey, input);
+
+    const decrypted = await cryptoUtil.decryptChunk(validKey, encrypted);
+    const wrongDecrypted = await cryptoUtil.decryptChunk(invalidKey, encrypted);
+    
+    if(!decrypted) {
+        return "Decryption failed";
+    }
+
+    if(wrongDecrypted) {
+        return "Decryption successful for wrong key";
+    }
+
+    if(decrypted.byteLength != input.length) {
+        return "Size mismatch";
+    }
+
+    for(let i = 0; i < input.length; i++) {
+        if(decrypted[i] != input[i]) {
+            return "Buffers differ"
+        }
+    }
+}
+
