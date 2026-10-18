@@ -1,0 +1,10 @@
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 25px;
+    padding: 5px;
+}
+
