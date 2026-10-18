@@ -22,10 +22,18 @@ export default function EncryptionDialog(props: {
 
     async function submit(e: SubmitEvent) {
         e.preventDefault();
-        
+
+        const password = passwordRef.current!.value;
+
+        if(password.length == 0) {
+            setStatus("Enter password");
+            return;
+        }
+
         setStatus("Decrypting...");
 
-        const key = await cryptoUtil.keyFromPassword(passwordRef.current!.value);
+
+        const key = await cryptoUtil.keyFromPassword(password);
         const decrypted = await cryptoUtil.decryptString(key, props.base64buf);
 
         if(!decrypted) {
