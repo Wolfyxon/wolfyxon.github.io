@@ -14,28 +14,7 @@ export default function EncryptionPage() {
     const passwordRef = useRef<HTMLInputElement>(null);
 
     async function getKey() {
-        const enc = new TextEncoder();
-
-        const keyMaterial = await window.crypto.subtle.importKey(
-            "raw",
-            enc.encode(passwordRef.current!.value),
-            { name: "PBKDF2" },
-            false,
-            ["deriveKey"]
-        );
-
-        return window.crypto.subtle.deriveKey(
-        {
-            name: "PBKDF2",
-            salt: new ArrayBuffer(),
-            iterations: 100000,
-            hash: "SHA-256",
-        },
-        keyMaterial,
-        { name: "AES-GCM", length: 256 },
-        false,
-        ["encrypt", "decrypt"]
-        );
+        return cryptoUtil.keyFromPassword(passwordRef.current!.value);
     }
 
     async function encrypt() {
