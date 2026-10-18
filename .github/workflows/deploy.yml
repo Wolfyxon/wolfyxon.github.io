@@ -53,7 +53,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: 26
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Run tests
