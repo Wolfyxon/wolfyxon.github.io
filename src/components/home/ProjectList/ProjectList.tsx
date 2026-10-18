@@ -60,6 +60,25 @@ export default function ProjectList() {
             />
 
             <Project 
+                title="XShadowBind"
+                description="A Linux X11 key binder that doesn't suck as much."
+                thumbnail="assets/img/home/projectThumbnails/xshadowbind.webp"
+                links={{
+                    "Project page": "https://github.com/Wolfyxon/xshadowbind"
+                }}
+            />
+
+            <Project 
+                title="SongWrap"
+                description="A fancy listening stats site."
+                thumbnail="assets/img/home/projectThumbnails/SongWrap.webp"
+                links={{
+                    "See the site": "https://wolfyxon.github.io/SongWrap",
+                    "Source code": "https://github.com/Wolfyxon/SongWrap"
+                }}
+            />
+
+            <Project 
                 title="The Great Doors of Door"
                 description="A Roblox game that was supposed to be a parody, but instead turned into an emotional story."
                 thumbnail="assets/img/home/projectThumbnails/tgdod.webp"
