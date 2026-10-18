@@ -1,0 +1,19 @@
+
+#encryption-page-main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.buttons > * {
+    flex: 1;
+}
