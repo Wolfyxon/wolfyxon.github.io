@@ -63,7 +63,8 @@ export namespace cryptoUtil {
     }
 
     export async function encryptString(key: CryptoKey, text: string): Promise<string> {
-        const buf = await encryptChunk(key, new TextEncoder().encode(text));
+        const buf =  new Uint8Array(await encryptChunk(key, new TextEncoder().encode(text)));
+        
         return buf.toBase64();
     }
 
