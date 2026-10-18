@@ -12,7 +12,8 @@ const TESTS: TestFunction[] = [
     testKebab,
     testMdYaml,
     testArt,
-    testCryptoBuf
+    testCryptoBuf,
+    testCryptoStr
 ];
 
 export async function runUnitTests() {
@@ -168,3 +169,26 @@ async function testCryptoBuf() {
     }
 }
 
+async function testCryptoStr() {
+    const input = "Hello There\n1234 ąęiłśćńżź\n_=";
+
+    const validKey = await cryptoUtil.keyFromPassword("HelloWorldA");
+    const invalidKey = await cryptoUtil.keyFromPassword("Hello");
+
+    const encrypted = await cryptoUtil.encryptString(validKey, input);
+
+    const decrypted = await cryptoUtil.decryptString(validKey, encrypted);
+    const wrongDecrypted = await cryptoUtil.decryptString(invalidKey, encrypted);
+    
+    if(!decrypted) {
+        return "Decryption failed";
+    }
+
+    if(wrongDecrypted) {
+        return "Decryption successful for wrong key";
+    }
+
+    if(decrypted != input) {
+        return "String mismatch";
+    }
+}

@@ -61,4 +61,24 @@ export namespace cryptoUtil {
             return;
         }
     }
+
+    export async function encryptString(key: CryptoKey, text: string): Promise<string> {
+        const buf = await encryptChunk(key, new TextEncoder().encode(text));
+        return buf.toBase64();
+    }
+
+    export async function decryptString(key: CryptoKey, base64text: string): Promise<string | undefined> {
+        try {
+            const buf = Uint8Array.fromBase64(base64text);
+            const decryptedBuf = await decryptChunk(key, buf);
+
+            if(!decryptedBuf) {
+                return;
+            }
+
+            return new TextDecoder().decode(decryptedBuf);
+        } catch {
+            return;
+        }
+    }
 }
