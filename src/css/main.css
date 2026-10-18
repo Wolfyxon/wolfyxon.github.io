@@ -55,7 +55,9 @@ a[target="_blank"]::after, a[target="blank"]::after {
 
 /* --== Button ==-- */
 
-button {
+button,
+input[type="submit"] 
+{
     border: 2px var(--color2) solid;
     border-radius: 5px;
     font-size: medium;
@@ -68,17 +70,23 @@ button {
     pointer-events: auto;
 }
 
-button:disabled {
+button:disabled,
+input[type="submit"]:disabled
+{
     cursor: default;
     opacity: 0.5;
 }
 
-button:hover:not(:disabled) {
+button:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled)
+{
     opacity: 0.8;
     transition: 0.1s;
 }
 
-button:active:not(:disabled) {
+button:active:not(:disabled),
+input[type="submit"]:active:not(:disabled)
+{
     background: var(--color2);
     transition: 0.3s;
 }
@@ -86,6 +94,7 @@ button:active:not(:disabled) {
 /* --== Text inputs ==-- */
 
 input[type="text"],
+input[type="password"],
 input[type="number"]
 {
     background: none;
@@ -98,6 +107,7 @@ input[type="number"]
 }
 
 input[type="text"]:focus,
+input[type="password"]:focus,
 input[type="number"]:focus
 {
     border-bottom-color: var(--color3);
