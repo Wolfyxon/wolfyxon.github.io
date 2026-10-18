@@ -1,3 +1,18 @@
+export function base64encode(buf: Uint8Array): string {
+    let bin = "";
+
+    for (const byte of buf) {
+        bin += String.fromCharCode(byte);
+    }
+
+    return btoa(bin);
+}
+
+export function base64decode(base64: string): Uint8Array {
+    const bin = atob(base64);
+    return Uint8Array.from(bin, c => c.charCodeAt(0));
+}
+
 export function removeEmpty(strings: string[]): string[] {
     const res = [];
 

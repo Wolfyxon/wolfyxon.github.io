@@ -1,3 +1,5 @@
+import { base64decode, base64encode } from "./string";
+
 export namespace cryptoUtil {
     const DEFAULT_ALG = "AES-GCM";
     const DEFAULT_SALT = "helotheremyfred";
@@ -45,7 +47,7 @@ export namespace cryptoUtil {
         return res;
     }
 
-    export async function decryptChunk(key: CryptoKey, chunk: Uint8Array<ArrayBuffer>): Promise<Uint8Array<ArrayBuffer> | undefined> {
+    export async function decryptChunk(key: CryptoKey, chunk: Uint8Array): Promise<Uint8Array<ArrayBuffer> | undefined> {
         try {
             const iv = chunk.slice(0, 12);
             const encryptedData = chunk.slice(iv.length);
@@ -65,12 +67,12 @@ export namespace cryptoUtil {
     export async function encryptString(key: CryptoKey, text: string): Promise<string> {
         const buf = await encryptChunk(key, new TextEncoder().encode(text));
         
-        return buf.toBase64();
+        return base64encode(buf);
     }
 
     export async function decryptString(key: CryptoKey, base64text: string): Promise<string | undefined> {
         try {
-            const buf = Uint8Array.fromBase64(base64text);
+            const buf = base64decode(base64text);
             const decryptedBuf = await decryptChunk(key, buf);
 
             if(!decryptedBuf) {
