@@ -45,7 +45,8 @@ export default function Home() {
                       Hi, I'm Wolfyxon
                   </h1>
                   <p id="banner-text-about">
-                      I'm a guy who loves programming and dealing with all kinds of software.
+                      I love programming and dealing with all kinds of software.
+                      Also into electronics and sometimes art and music.
                   </p>
 
                   <div id="banner-links">
