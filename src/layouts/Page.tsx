@@ -10,7 +10,7 @@ import "@/css/fonts/roboto.css";
 import "@/css/main.css";
 
 export default function Page(props: { 
-    children: any, 
+    children?: any, 
     category: string, 
     homeUrl?: string,
     sub?: string, 
