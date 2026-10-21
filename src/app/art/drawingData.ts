@@ -9,6 +9,12 @@ export type DrawingData = {
 
 export const DRAWINGS: DrawingData[] = [
     {
+        title: "Expie",
+        date: "2026-10-21",
+        src: "/assets/img/art/Expie.webp",
+        note: "I'm not escaping the allegations."
+    },
+    {
         title: "Chained",
         date: "2026-08-30",
         src: "/assets/img/art/Chained.webp"
