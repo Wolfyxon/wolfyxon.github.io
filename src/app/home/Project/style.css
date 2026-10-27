@@ -80,6 +80,5 @@
 
 .project-sub a:hover {
     background: var(--panel);
-    color: black;
     scale: 1.05;
 }
