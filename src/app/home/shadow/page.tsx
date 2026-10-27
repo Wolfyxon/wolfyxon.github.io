@@ -17,9 +17,9 @@ export default function ShadowHomePage() {
             visible ?
             <HomePage/>
             : 
-            <div>
+            <p>
                 Please enable JavaScript
-            </div>
+            </p>
         }
         
         </>
