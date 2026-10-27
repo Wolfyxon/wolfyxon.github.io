@@ -1,5 +1,3 @@
-import { Metadata } from "next";
-
 import Page from "@/layouts/Page";
 import SocialBadge, { websites } from "@/components/badges/SocialBadge";
 import FancyHeading from "@/components/FancyHeading/FancyHeading";
@@ -14,13 +12,6 @@ import LinkHoverEasterEgg from "./LinkHoverEasterEgg/LinkHoverEasterEgg";
 
 import "@/css/animations.css";
 import "@/css/home.css";
-
-export const metadata: Metadata = {
-  title: "Wolfyxon | My website",
-  description: "Hi, I'm Wolfyxon. I'm a guy who loves programming " +
-               "and dealing with all kinds of software. " +
-               "This is my website, where you can see my projects and other stuff I make."
-}
 
 const extraHead = <>
   <link 
