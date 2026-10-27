@@ -46,7 +46,13 @@ export default function OseHomePage() {
             <h2>Stało się</h2>
             <p>Ten dzień nadszedł. Zablokowali moją własną stronę XDDDDD</p>
 
-            <img src="/assets/img/ose/blocked.webp" width="400px" height="200px" id="screenshot"/>
+            <img 
+                src="/assets/img/ose/blocked.webp" 
+                width="400px" 
+                height="200px" 
+                id="screenshot"
+                alt="Screenshot"
+            />
         </>
     )
 }
