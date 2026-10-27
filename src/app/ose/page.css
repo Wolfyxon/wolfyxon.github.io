@@ -11,3 +11,11 @@ body, html {
     margin-bottom: 5px;
     background-color: silver;
 }
+
+#screenshot {
+    width: 99vw;
+    height: 25vw;
+    max-width: 900px;
+    margin-bottom: 100px;
+    object-fit: contain;
+}

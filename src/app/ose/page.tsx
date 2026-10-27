@@ -42,6 +42,11 @@ export default function OseHomePage() {
                 Nie chciało mi się stylować tej strony. 
                 Po prostu wybierz co chcesz.
             </p>
+
+            <h2>Stało się</h2>
+            <p>Ten dzień nadszedł. Zablokowali moją własną stronę XDDDDD</p>
+
+            <img src="/assets/img/ose/blocked.webp" width="400px" height="200px" id="screenshot"/>
         </>
     )
 }
