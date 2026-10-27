@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 
-import Badge from "../badges/Badge/Badge";
-import Tag from "../badges/Tag/Tag";
+import Badge from "../../components/badges/Badge/Badge";
+import Tag from "../../components/badges/Tag/Tag";
 
 export default function Experience() {
     const [lab, setLab] = useState(false);

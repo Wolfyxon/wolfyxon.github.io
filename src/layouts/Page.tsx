@@ -4,7 +4,7 @@ import Footer from "@/components/global/Footer/Footer";
 import Header from "@/components/global/Header/Header";
 import ClientWorker from "@/components/global/ClientWorker";
 import Root from "./Root";
-import Spaghetti from "@/components/home/Spaghetti/Spaghetti";
+import Spaghetti from "@/app/home/Spaghetti/Spaghetti";
 
 import "@/css/fonts/roboto.css";
 import "@/css/main.css";
