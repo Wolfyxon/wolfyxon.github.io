@@ -12,21 +12,21 @@ export default function Experience() {
         <div id="software">
           <h2>Languages</h2>
           <div className="observing anim-obs-down">
-            <Badge icon="software/lang/rust.webp" alt="Rust" />
-            <Badge icon="software/lang/lua.svg" alt="Lua" />
-            <Badge icon="software/lang/luau.svg" alt="Luau" />
-            <Badge icon="software/framework/godot.svg" alt="GDScript" />
-            <Badge icon="software/lang/java.svg" alt="Java" />
-            <Badge icon="software/lang/python.svg" alt="Python" />
             <Badge icon="software/lang/js.svg" alt="JavaScript" />
             <Badge icon="software/lang/ts.svg" alt="TypeScript" />
             <Badge icon="software/lang/html5.svg" alt="HTML5" />
             <Badge icon="software/lang/css3.svg" alt="CSS3" />
-            <Badge icon="software/lang/go.svg" alt="Go" />
-            <Badge icon="software/lang/php.svg" alt="PHP" />
             <Badge icon="software/lang/c.svg" alt="C" />
             <Badge icon="software/lang/cpp.svg" alt="C++" />
             <Badge icon="software/lang/csharp.svg" alt="C#" />
+            <Badge icon="software/lang/lua.svg" alt="Lua" />
+            <Badge icon="software/lang/luau.svg" alt="Luau" />
+            <Badge icon="software/lang/java.svg" alt="Java" />
+            <Badge icon="software/lang/python.svg" alt="Python" />
+            <Badge icon="software/lang/go.svg" alt="Go" />
+            <Badge icon="software/lang/rust.webp" alt="Rust" />
+            <Badge icon="software/framework/godot.svg" alt="GDScript" />
+            <Badge icon="software/lang/php.svg" alt="PHP" />
             <Badge icon="software/lang/mysql.webp" alt="MySQL" />
             <Badge icon="software/lang/sqlite.svg" alt="SQLite" />
             <Badge icon="software/lang/postgresql.svg" alt="PostgreSQL" />
