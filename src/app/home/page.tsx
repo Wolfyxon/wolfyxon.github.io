@@ -38,7 +38,7 @@ export default function HomePage() {
                   </h1>
                   <p id="banner-text-about">
                       I love programming and dealing with all kinds of software.
-                      Also some electronics and sometimes art and music.
+                      I'm also new to electronics, music and art.
                   </p>
 
                   <div id="banner-links">
