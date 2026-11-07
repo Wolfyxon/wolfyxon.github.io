@@ -36,6 +36,11 @@ export const websites: {[id: string]: WebsiteData} = {
         url: "x.com",
         name: "X (Twitter)",
         icon: "x.webp"
+    },
+    "bluesky": {
+        url: "bsky.app/profile",
+        name: "BlueSky",
+        icon: "BlueSky.svg"
     }
 }
 
