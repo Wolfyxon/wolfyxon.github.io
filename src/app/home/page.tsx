@@ -86,6 +86,18 @@ export default function HomePage() {
                 <SocialBadge site={websites.github} link="karoleuspl" />
                 <SocialBadge site={websites.deviantart} link="karoleusyt" />
               </Person>
+
+              <Person 
+                name="AramCZ" 
+                description="Game developer, Linux and open source enthusiast."
+                thumbnail="/assets/img/people/AramCZ.webp"
+                website="https://aramcz.is-a.dev"
+                >
+                
+                <SocialBadge site={websites.github} link="AramCZdev" />
+                <SocialBadge site={websites.bluesky} link="aramcz.is-a.dev" />
+                <SocialBadge site={websites.youtube} link="@PurpleControllerGames" />
+              </Person>
           </div>
       </div>
       
