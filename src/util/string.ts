@@ -1,3 +1,9 @@
+export const QUOTES = [
+    "\"",
+    "'",
+    "`"
+];
+
 export function base64encode(buf: Uint8Array): string {
     let bin = "";
 
@@ -53,4 +59,18 @@ export function toKebabCase(text: string) {
         .replaceAll("\"", "")
         .replaceAll(".", "")
         .replaceAll(" ", "-");
+}
+
+export function isSurrounded(text: string, bounds: string): boolean {
+    return text.startsWith(bounds) && text.endsWith(bounds);
+}
+
+export function unquote(text: string) {
+    for(const q of QUOTES) {
+        if(isSurrounded(text, q)) {
+            return text.slice(1, text.length - 1);
+        }
+    }
+
+    return text;
 }
