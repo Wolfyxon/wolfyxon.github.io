@@ -57,6 +57,12 @@ export default function About() {
                     <p>
                         Human.
                     </p>
+
+                    <div>
+                        <img src="/assets/img/icons/moodles/confused.webp" width="50px" alt="What?"/>
+                        <img src="/assets/img/icons/moodles/speech.webp" width="50px" alt="uh hello uhh the uh"/>
+                        <img src="/assets/img/icons/moodles/sleep.webp" width="50px" alt="ugh"/>
+                    </div>
                 </section>
             </ArticlePage>
         </Page>
