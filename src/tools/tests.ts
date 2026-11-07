@@ -103,7 +103,10 @@ async function testMdYaml() {
 
     const expectedData: YAMLData = {
         key: "value",
-        a: "b"
+        a: "b",
+        int: 0.1,
+        bool: false,
+        quotes: "-1"
     };
 
     for(const [k, v] of Object.entries(expectedData)) {
@@ -111,7 +114,7 @@ async function testMdYaml() {
             return `Missing '${k}' in data: ${JSON.stringify(parsedMdYaml.data)}`;
         }
 
-        if(parsedMdYaml.data[k] != v) {
+        if(parsedMdYaml.data[k] !== v) {
             return `Value mismatch for ${k}: "${parsedMdYaml.data[k]}" != "${v}"`;
         }
     }
