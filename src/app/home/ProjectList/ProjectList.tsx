@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function ProjectList() {
     return (
-        <div className="project-list">
+        <div className="project-list observing anim-obs-fade">
             <Project 
                 title="GodotTogether"
                 description="A plugin for Godot Engine that allows for real time collaboration, just like Team Create on Roblox."

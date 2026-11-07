@@ -1,6 +1,6 @@
 export default function Person(data: {name: string, thumbnail: string, description: string, website?: string, children?: any}) {
     return (
-        <div className="observing anim-obs-grow">
+        <div className="observing anim-obs-fade">
             <img src={data.thumbnail} alt={data.name + "'s logo"} />
             
             <div>

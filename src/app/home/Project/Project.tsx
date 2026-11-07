@@ -10,7 +10,7 @@ export type ProjectProps = {
 
 export default function Project(props: ProjectProps) {
     return (
-        <div className="project observing anim-obs-fade">
+        <div className="project">
             <div className="project-text">
                 <div className="project-title">{props.title}</div>
                 <div className="project-description">{props.description}</div>

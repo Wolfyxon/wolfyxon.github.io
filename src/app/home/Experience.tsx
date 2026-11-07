@@ -8,7 +8,7 @@ export default function Experience() {
     const [lab, setLab] = useState(false);
 
     return (
-        <div id="experience" className="observing anim-obs-down">
+        <div id="experience" className="">
         <div id="software">
           <h2>Languages</h2>
           <div className="observing anim-obs-down">
