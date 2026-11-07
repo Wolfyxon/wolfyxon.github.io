@@ -1,4 +1,7 @@
+import { isSurrounded, unquote } from "./string";
 
+
+export type ParsableValue = string | number | boolean;
 export type YAMLData = Record<string, any>;
 
 export type MarkdownYAML = {
@@ -7,6 +10,30 @@ export type MarkdownYAML = {
 };
 
 const YAML_HEADER_BOUND = "---";
+
+export function parseStringLine(text: string): ParsableValue {
+    text = text.trim();
+
+    if(isSurrounded(text,"\"") || isSurrounded(text, "'")) {
+        return unquote(text);
+    }
+
+    const asNumber = parseFloat(text);
+    
+    if(!isNaN(asNumber)) {
+        return asNumber;
+    }
+
+    if(text == "true") {
+        return true;
+    }
+
+    if(text == "false") {
+        return false;
+    }
+
+    return text;
+}
 
 export function parseMarkdownYaml(text: string): MarkdownYAML {
     let yamlStartLine = -1;
@@ -37,12 +64,12 @@ export function parseMarkdownYaml(text: string): MarkdownYAML {
         if(yamlStartLine != -1) {
             const split = line.split(":");
             const key = split[0].trim();
-            let val = split[1];
+            let val: ParsableValue = split[1];
             
             if(val == undefined) {
                 val = "";
             } else {
-                val = val.trim();
+                val = parseStringLine(val);
             }
 
             data[key] = val;
