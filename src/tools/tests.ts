@@ -110,7 +110,7 @@ async function testMdYaml() {
     };
 
     for(const [k, v] of Object.entries(expectedData)) {
-        if(!parsedMdYaml.data[k]) {
+        if(parsedMdYaml.data[k] === undefined) {
             return `Missing '${k}' in data: ${JSON.stringify(parsedMdYaml.data)}`;
         }
 
@@ -120,7 +120,7 @@ async function testMdYaml() {
     }
 
     for(const [k, v] of Object.entries(parsedMdYaml.data)) {
-        if(!expectedData[k]) {
+        if(expectedData[k] === undefined) {
             return `Excessive data key "${k}"`;
         }
     }
