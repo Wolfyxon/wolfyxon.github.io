@@ -11,8 +11,15 @@ export default function KkpOsePage() {
             title="OgólnoPOLSKA Sieć"
             heading="Ta strona to eurokołchoz"
             category="Eurokołchoz"
-            dynamicCategory="TUSK GERMANY UKRAINE EUROPEAN_UNION">
-
+            dynamicCategory="TUSK GERMANY UKRAINE EUROPEAN_UNION"
+            
+            blockedByText="Заблокировано механизмом анализа URL-адресов"
+            urlCategoryText="Категория URL:"
+            requestBlockedLongText="Запрос был заблокирован механизмом анализа URL-адресов. Сайт относится к категории заблокированных системой."
+            dynamicCategoryText="Категория в динамическом контент-анализе:"
+            
+            >
+            
             <p>
                 Szczęść Boże, ratuj się kto może. 🧯
             </p>
