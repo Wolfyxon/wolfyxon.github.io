@@ -61,7 +61,7 @@ export default function ProjectList() {
 
             <Project 
                 title="XShadowBind"
-                description="A Linux X11 key binder that doesn't suck as much."
+                description="A Linux X11 key binder that doesn't steal window focus and works in menus."
                 thumbnail="/assets/img/home/projectThumbnails/xshadowbind.webp"
                 links={{
                     "Project page": "https://github.com/Wolfyxon/xshadowbind"
