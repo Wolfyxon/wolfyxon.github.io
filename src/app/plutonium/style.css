@@ -33,6 +33,10 @@ body, #core {
     animation: highlight 3s 5s infinite;
 }
 
+#screwdriver:hover {
+    scale: 1.015;
+}
+
 #core.slip {
     --glow-size: 50px;
     --glow-color: #57c4ff;
