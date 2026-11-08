@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import OsePage from "../OsePage";
-import TextLink from "@/components/links/TextLink";
 
 export const metadata: Metadata = {
-    title: "Ogólnoeuropejska Sieć Antyapplowska"
+    title: ":3"
 }
 
 export default function BkOsePage() {
