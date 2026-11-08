@@ -13,6 +13,7 @@ const dir = "src/app/ose/";
 const best = [
     "gierek",
     "pis",
+    "kkp",
     "sans",
     "smilelandia"
 ];
