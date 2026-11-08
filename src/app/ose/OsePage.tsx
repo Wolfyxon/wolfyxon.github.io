@@ -19,6 +19,11 @@ export type OsePageProps = {
     category: ReactNode,
     dynamicCategory: ReactNode,
     children?: ReactNode
+
+    urlCategoryText?: ReactNode,
+    blockedByText?: ReactNode,
+    requestBlockedLongText?: ReactNode,
+    dynamicCategoryText?: ReactNode
 }
 
 export default function OsePage(data: OsePageProps) {
@@ -41,19 +46,52 @@ export default function OsePage(data: OsePageProps) {
 
         <p>Wygenerowano na wolf841x.ose.net.pl , <Timestamp /> dla adresu 4096:1b3:69420:a7be:2137:17ff:cd02:ff55</p>
         <p>
-            <span className="msg">Zablokowano przez silnik analizy URL</span>
+            <span className="msg">
+                {
+                    data.blockedByText
+                    ? data.blockedByText
+                    : "Zablokowano przez silnik analizy URL"
+                }
+            </span>
         </p>
 
-        <p>Żądanie zostało zablokowane przez silnik analizy URL. Strona WWW należy do kategorii blokowanych przez system.</p>
+        <p>
+            {
+                data.requestBlockedLongText
+                ? data.requestBlockedLongText
+                : "Żądanie zostało zablokowane przez silnik analizy URL. Strona WWW należy do kategorii blokowanych przez system."
+            }
+        </p>
         
         <p>
             <strong>URL: </strong> https://wolfyxon.github.io
         </p>
 
-        <p><strong>Kategoria URL: </strong> {data.category}</p>
+        <p>
+            <strong>
+            {
+                (data.urlCategoryText
+                ? data.urlCategoryText
+                : "Kategoria URL:")
+
+                + " "
+            }
+            </strong> 
+            {data.category}
+        </p>
 
         <p id="cat">
-            <strong>Kategoria z Dynamicznej Analizy Treści: </strong> 
+            <strong>
+            
+            {
+                data.dynamicCategoryText
+                ? data.dynamicCategoryText
+                : "Kategoria z Dynamicznej Analizy Treści:"
+
+                + " "
+            }
+            
+            </strong> 
             <span id="cat-val">{data.dynamicCategory}</span>
         </p>
 
