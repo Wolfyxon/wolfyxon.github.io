@@ -14,7 +14,7 @@ export default function KkpOsePage() {
             dynamicCategory="TUSK GERMANY UKRAINE EUROPEAN_UNION">
 
             <p>
-                Szczęść Boże, ratuj się kto może.
+                Szczęść Boże, ratuj się kto może. 🧯
             </p>
 
             <p>Nie będziesz mi tu na jakieś lewackie niemieckie strony wchodził.</p>
