@@ -9,7 +9,7 @@ export default function LinkHoverEasterEgg() {
     const [triggered, setTriggered] = useState(false);
 
     useEffect(() => {
-        const parentElms = document.querySelectorAll(".project-extra");
+        const parentElms = document.querySelectorAll(".project-sub");
         const order: HTMLElement[] = [];
         let buf: EventTarget[] = [];
 
@@ -17,7 +17,11 @@ export default function LinkHoverEasterEgg() {
             const parent = parentElms[i];
             const links = parent.querySelectorAll("a");
 
-            if(i % 2 == 0) {
+            for(const link of links) {
+                order.push(link);
+            }
+
+            /*if(i % 2 == 0) {
                 for(const link of links) {
                     order.push(link);
                 }
@@ -25,7 +29,7 @@ export default function LinkHoverEasterEgg() {
                 for(let j = links.length - 1; j >= 0; j--) {
                     order.push(links[j]);
                 }
-            }
+            }*/
         }
 
         for(const link of order) {
@@ -50,6 +54,9 @@ export default function LinkHoverEasterEgg() {
             });
         }
 
+        if(order.length == 0) {
+            console.error("Link hover easter egg order is empty!");
+        }
     }, []);
     
     return (<>
