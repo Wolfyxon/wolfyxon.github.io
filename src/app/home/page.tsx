@@ -89,7 +89,7 @@ export default function HomePage() {
 
               <Person 
                 name="AramCZ" 
-                description="Game developer, Linux and open source enthusiast."
+                description="Game developer, Linux and open source enthusiast. Creator of Hell Jump."
                 thumbnail="/assets/img/people/AramCZ.webp"
                 website="https://aramcz.is-a.dev"
                 >
