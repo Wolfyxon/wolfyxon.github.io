@@ -97,12 +97,17 @@ export default function ElementBadApple() {
     }
 
     useEffect(() => {
-        const elms = Array.from(document.querySelectorAll("body *"));
+        const elms = Array.from(document.querySelectorAll("body *:not(script)"));
         shuffleArray(elms);
 
         for(const elm of elms) {
-            (elm as HTMLElement).style.visibility = "none";
-            document.body.appendChild(elm);
+            const html = elm as HTMLElement;
+            
+            html.style.visibility = "none";
+            html.style.minWidth = "0";
+            html.style.minHeight = "0";
+
+            document.body.appendChild(html);
         }
 
         const canvas = document.createElement("canvas");
