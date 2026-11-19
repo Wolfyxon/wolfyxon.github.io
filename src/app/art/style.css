@@ -85,6 +85,19 @@
 #drawing-view > img {
     max-width: 97vw;
     max-height: 97vh;
+    cursor: zoom-in;
+}
+
+#drawing-view.zoomed {
+    align-items: unset;
+    overflow: scroll;
+}
+
+#drawing-view.zoomed > img {
+    height: 200vh;
+    max-height: none;
+    object-fit: cover;
+    cursor: zoom-out;
 }
 
 #drawing-view-close {

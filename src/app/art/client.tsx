@@ -1,20 +1,24 @@
 "use client";
 
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
+
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import Drawing from "./Drawing";
 import { DRAWINGS, DrawingData } from "./drawingData";
 import { capitalize } from "@/util/string";
 import { MONTH_NAMES } from "@/util/time";
+import { EventListener } from "@/util/dom";
 
 export default function ArtPageClient() {
     const [lastDrawing, setLastDrawing] = useState<DrawingData | null>(null);
     const [fullscreenOpen, setFullscreenOpen] = useState(false);
+    const [zoomed, setZoomed] = useState(false);
 
     const lastDrawingIdRef = useRef<number>(null);
     const viewRef = useRef<HTMLDivElement>(null);
 
     function openDrawing(drawing: DrawingData, index: number) {
+        setZoomed(false);
         setLastDrawing(drawing);
         setFullscreenOpen(true);
         history.pushState(null, "", "");
@@ -25,6 +29,7 @@ export default function ArtPageClient() {
     function closeView() {
         lastDrawingIdRef.current = null;
         setFullscreenOpen(false);
+        setZoomed(false);
     }
 
     function viewClicked(e: MouseEvent<HTMLDivElement>) {
@@ -52,9 +57,22 @@ export default function ArtPageClient() {
     }
 
     useEffect(() => {
-        window.addEventListener("keydown", (e) => {
+        const popstate = new EventListener(window, "popstate", (e) => {
+            closeView();
+        });
+
+        const keydown = new EventListener(window, "keydown", (_e) => {
+            const e = _e as any as KeyboardEvent;
+
             if(e.key == "Escape") {
-                closeView();
+                if(zoomed) {
+                    setZoomed(false);
+                    return;
+                }
+
+                if(lastDrawingIdRef.current != null) {
+                    closeView();
+                }
             }
             
             if(lastDrawingIdRef.current != null) {
@@ -65,13 +83,14 @@ export default function ArtPageClient() {
                 if(e.key == "ArrowLeft") {
                     prevDrawing();
                 }
-            }
+            } 
         });
 
-        window.addEventListener("popstate", (e) => {
-            closeView();
-        })
-    }, []);
+        return () => {
+            keydown.disconnect();
+            popstate.disconnect();
+        }
+    });
 
     return (<>
         <div 
@@ -79,6 +98,7 @@ export default function ArtPageClient() {
             ref={viewRef}
             onClick={viewClicked}
             style={fullscreenOpen ? {visibility: "visible", opacity: "1"} : undefined}
+            className={zoomed ? "zoomed" : ""}
         >
             <div id="drawing-view-meta-container">
                 <ImageButton img="/assets/img/icons/google/info.svg" />
@@ -95,7 +115,8 @@ export default function ArtPageClient() {
             </div>
             <img
                 src={lastDrawing?.src}
-                alt={lastDrawing?.title ?? "Image not loaded"} 
+                alt={lastDrawing?.title ?? "Image not loaded"}
+                onClick={() => setZoomed(!zoomed)}
             />
 
             <ImageButton 
