@@ -90,6 +90,7 @@ html:has(#drawing-view[style*="visible"]) {
     max-width: 97vw;
     max-height: 97vh;
     cursor: zoom-in;
+    user-select: none;
 }
 
 #drawing-view.zoomed {

@@ -1,6 +1,6 @@
 "use client";
 
-import { KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
+import { DragEvent, KeyboardEvent, MouseEvent, useEffect, useRef, useState } from "react";
 
 import ImageButton from "@/components/input/ImageButton/ImageButton";
 import Drawing from "./Drawing";
@@ -14,8 +14,13 @@ export default function ArtPageClient() {
     const [fullscreenOpen, setFullscreenOpen] = useState(false);
     const [zoomed, setZoomed] = useState(false);
 
+    const isDraggingRef = useRef(false);
+    const dragStartRef = useRef<[number, number]>([0, 0])
+    const lastDragRef = useRef(0);
+
     const lastDrawingIdRef = useRef<number>(null);
     const viewRef = useRef<HTMLDivElement>(null);
+    
 
     function openDrawing(drawing: DrawingData, index: number) {
         setZoomed(false);
@@ -56,10 +61,51 @@ export default function ArtPageClient() {
         }
     }
 
+    function drawingClicked() {
+        if(isDraggingRef.current) {
+            return;
+        }
+
+        const now = Date.now();
+
+        if(now < lastDragRef.current + 50) {
+            return;
+        }
+
+        setZoomed((prev) => !prev);
+    }
+
+    function dragStart(e: MouseEvent) {
+        dragStartRef.current = [e.clientX, e.clientY];
+        isDraggingRef.current = true;
+    }
+
+    function dragEnd() {
+        isDraggingRef.current = false;
+    }
+
+    function dragOver(e: MouseEvent) {
+        if(!isDraggingRef.current) {
+            return;
+        }
+
+        lastDragRef.current = Date.now();
+
+        const diffX = e.clientX - dragStartRef.current[0];
+        const diffY = e.clientY - dragStartRef.current[1];
+        
+        viewRef.current!.scrollLeft -= diffX;
+        viewRef.current!.scrollTop -= diffY;
+
+        dragStartRef.current = [e.clientX, e.clientY];
+    }
+
     useEffect(() => {
         const popstate = new EventListener(window, "popstate", (e) => {
             closeView();
         });
+
+        const unfocus = new EventListener(window, "mouseout", dragEnd);
 
         const keydown = new EventListener(window, "keydown", (_e) => {
             const e = _e as any as KeyboardEvent;
@@ -89,6 +135,7 @@ export default function ArtPageClient() {
         return () => {
             keydown.disconnect();
             popstate.disconnect();
+            unfocus.disconnect();
         }
     });
 
@@ -116,7 +163,11 @@ export default function ArtPageClient() {
             <img
                 src={lastDrawing?.src}
                 alt={lastDrawing?.title ?? "Image not loaded"}
-                onClick={() => setZoomed(!zoomed)}
+                onClick={drawingClicked}
+                onMouseMoveCapture={dragOver}
+                onMouseDown={dragStart}
+                onMouseUp={dragEnd}
+                draggable={false}
             />
 
             <ImageButton 
