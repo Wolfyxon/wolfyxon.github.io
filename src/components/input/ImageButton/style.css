@@ -13,6 +13,10 @@
     height: 100%;
 }
 
+.img-button-img-container:has(.img-button-label:empty) {
+    gap: 0px;
+}
+
 .img-button-label:not(:empty) {
     padding-right: 5px;
 }
